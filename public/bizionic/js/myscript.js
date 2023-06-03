@@ -1,0 +1,373 @@
+
+
+
+
+
+   $(document).ready(function() {
+
+
+
+
+    AOS.init();
+
+
+     // mobile menu
+
+     $('.menuIcon').on('click', function (e) {
+        $('body').addClass('hidden');
+        $('.main_nav').slideDown();
+    });
+
+    $('.closeNav').on('click', function (e) {
+        $('body').removeClass('hidden');
+        $('.main_nav').slideUp();
+    });
+
+
+
+
+
+    // <!-- feature week slider -->
+    $('.clientBizionic_slider').owlCarousel({
+
+      loop: true,
+      autoplay: true,
+      items: 1,
+      nav: true,
+      autoplayHoverPause: true, 
+      autoplayTimeout: 5100,
+      responsiveClass: true,
+      responsive: {
+          0: {
+              items: 1,
+          },
+          600: {
+              items: 1,
+          },
+          1000: {
+              items: 1,
+
+          },
+          1400: {
+              items: 1,
+
+          }
+      }
+  }); 
+
+
+
+ // clientBizionic_slider slick
+
+  $('.slider-for').slick({
+    slidesToShow: 1,
+    slidesToScroll: 1,
+    arrows: false, 
+    autoplay: false,
+    autoplaySpeed: 3000,
+    adaptiveHeight: true,
+    asNavFor: '.slider-nav'
+  });
+  $('.slider-nav').slick({
+    slidesToShow: 5,
+    slidesToScroll: 1,
+    asNavFor: '.slider-for',
+    dots: false,
+    centerMode:true,
+    focusOnSelect: true,
+    responsive: [
+        {
+          breakpoint: 1024,
+          settings: { 
+            centerMode: true,
+            centerPadding: '40px',
+            slidesToShow: 4
+          }
+        },
+        {
+            breakpoint: 768,
+            settings: {
+              arrows: false,
+              centerMode: true,
+              centerPadding: '40px',
+              slidesToShow: 3
+            }
+          },
+        {
+          breakpoint: 480,
+          settings: {
+            arrows: false,
+            centerMode: true,
+            centerPadding: '40px',
+            slidesToShow: 1
+          }
+        }
+      ]
+  });
+ 6
+
+
+
+
+   // <!-- feature week slider -->
+   $('.meetTeam_slider').owlCarousel({
+
+    loop: true,
+    autoplay: true,
+    items: 1,
+    nav: true,
+    margin:30,
+    autoplayHoverPause: true, 
+    autoplayTimeout: 5100,
+    responsiveClass: true,
+    responsive: {
+        0: {
+            items: 1,
+        },
+        600: {
+            items: 2,
+        },
+        1000: {
+            items: 3,
+
+        },
+        1400: {
+            items: 3,
+
+        }
+    }
+}); 
+
+    
+
+
+ 
+
+
+    // pick popup
+    $('.onclick_forpick span').on('click', function(event) {
+        $('body').addClass('hidden');
+        $("#add_draw_popup").show();
+    });
+    $('.popup_overly').on('click', function(event) {
+        $('body').removeClass('hidden');
+        $(".custom_popup").hide();
+    });
+
+
+
+
+// mobile menu 
+
+  if (screen.width < 1023) {
+      
+    $('.chevRowDown').on('click', function(event) {
+      $(this).parents('.floatingMenu_col').find('.floatingMenu_col_list').slideToggle();
+      $(this).parent('h6').toggleClass('clickH6');
+    });  
+
+
+    // $('.has_nav small').on('click', function(event) {
+    //   $(this).parent('li').find('.floatingMenu').slideToggle();
+    //   $(this).parent('li').toggleClass('rotate_icon');
+    // });  
+
+
+
+  }
+
+
+
+
+
+
+// Submit a form using ajax
+$(function() {
+  $.ajaxSetup({
+      headers: { 'X-CSRF-TOKEN': $('input[name="_token"]').val(), 'X-Requested-With': 'XMLHttpRequest' }
+  });
+
+
+  var form = $('.subscription_form');
+  var success = $('#success');
+  var failure = $('#failure');
+
+  form.submit(function(e) {
+      e.preventDefault();
+
+      var formData = {
+          name: $("#name").val(),
+          email: $("#email").val(),
+          lead_type: $("#lead_type").val(),
+          honeypot: $("#honeypot").val(),
+        };
+
+      $.ajax({
+          url: form.attr('action'),
+          type: form.attr('method'),
+          data: formData,
+          dataType: "json",
+          
+      })
+          .done(function() {
+              $(".subscription_form")[0].reset();
+              success.addClass('show');
+              failure.removeClass('show');
+              console.log('yay')
+          })
+
+          .fail(function() {
+              $(".subscription_form")[0].reset();
+              failure.addClass('show');
+              success.removeClass('show');                            
+              console.log('boo')
+          });
+
+      return false;
+  });
+});
+
+
+// Submit a form using ajax
+$(function() {
+  $.ajaxSetup({
+      headers: { 'X-CSRF-TOKEN': $('input[name="_token"]').val(), 'X-Requested-With': 'XMLHttpRequest' }
+  });
+
+
+  var form = $('.hire_form');
+  var success = $('#hire_success');
+  var failure = $('#hire_failure');
+
+  form.submit(function(e) {
+      e.preventDefault();
+
+      var formData = {
+          name: $("#hire_name").val(),
+          email: $("#hire_email").val(),
+          company: $("#company").val(),
+          phone: $("#phone").val(),
+          message: $("#message").val(),
+          lead_type: $("#hire_lead_type").val(),
+          honeypot: $("#hire_honeypot").val(),
+        };
+
+        console.log('HIre Form', formData);
+
+      $.ajax({
+          url: form.attr('action'),
+          type: form.attr('method'),
+          data: formData,
+          dataType: "json",
+          
+      })
+          .done(function() {
+              $(".hire_form")[0].reset();
+              success.addClass('show');
+              failure.removeClass('show');
+              console.log('yay')
+          })
+
+          .fail(function() {
+              $(".hire_form")[0].reset();
+              failure.addClass('show');
+              success.removeClass('show');                            
+              console.log('boo')
+          });
+
+      return false;
+  });
+}); 
+
+
+
+
+
+    // tabs Order
+
+ $('.markServices_tabsBtn_info ul li a').on('click', function(event) {  
+  event.preventDefault();
+
+  $('.active').removeClass('active');
+  $(this).addClass('active');
+  $('.markServices_tabsInfo_detail').hide();
+  $($(this).attr('href')).show();
+});
+// $('.markServices_tabsBtn_info ul li a:first').trigger('click');
+
+
+   
+
+
+
+});
+
+
+
+
+// sticky header
+
+$(window).scroll(function() {
+    if ($(window).scrollTop() >= 100) {
+        $('.wrapper ').addClass('fixed_header');
+    } else {
+        $('.wrapper ').removeClass('fixed_header');
+    }
+
+
+    
+});
+
+
+var a = 0;
+$(window).scroll(function() {
+
+  var oTop = $('#counter').length ? $('#counter').offset().top - window.innerHeight : 0;
+  if (a == 0 && $(window).scrollTop() > oTop) {
+    $('.counter-value').each(function() {
+      var $this = $(this),
+        countTo = $this.attr('data-count');
+      $({
+        countNum: $this.text()
+      }).animate({
+          countNum: countTo
+        },
+
+        {
+
+          duration: 2000,
+          easing: 'swing',
+          step: function() {
+            $this.text(Math.floor(this.countNum));
+          },
+          complete: function() {
+            $this.text(this.countNum);
+            //alert('finished');
+          }
+
+        });
+    });
+    a = 1;
+  }
+
+});
+
+
+
+
+
+// wow
+
+// wow = new WOW({
+//     animateClass: 'animated',
+//     offset: 100,
+//     callback: function(box) {
+//         console.log("WOW: animating < " + box.tagName.toLowerCase() + ">")
+//     }
+// });
+// wow.init();
+// document.getElementById('moar').onclick = function() {
+//     var section = document.createElement('section');
+//     section.className = 'section--purple wow fadeInDown';
+//     this.parentNode.insertBefore(section, this);
+// };
