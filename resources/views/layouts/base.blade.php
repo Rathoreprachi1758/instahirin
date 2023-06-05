@@ -25,6 +25,7 @@
     <script type="text/javascript" src="/bizionic/js/owl.carousel.js"></script>
     <link rel="stylesheet" href="/bizionic/css/owl.carousel.min.css" />
     <link rel="icon" sizes="96x96" href="/bizionic/images/favicon-96x96.png"> 
+    @vite(['resources/css/app.css', 'resources/js/app.js'])
     
 </head>
 
