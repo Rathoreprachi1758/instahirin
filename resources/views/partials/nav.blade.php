@@ -36,7 +36,8 @@
                         </div> 
                         @endforeach
                     </div>
-                </div>        
+                </div>
+                <small><i class="fa fa-angle-down" aria-hidden="true"></i></small>        
             @endif
         </li>
         @endforeach
