@@ -14,11 +14,15 @@ import { createApp } from 'vue';
  */
 
 const app = createApp({});
+const app2 = createApp({});
 
 import ExampleComponent from './components/ExampleComponent.vue';
-import Experts from './components/Experts.vue';
+import ExpertsComponent from './components/ExpertsComponent.vue';
+import SubscriptionComponent from './components/SubscriptionComponent.vue';
+
 app.component('example-component', ExampleComponent);
-app.component('experts-component', Experts);
+app.component('experts-component', ExpertsComponent);
+app2.component('subscription-component', SubscriptionComponent);
 
 /**
  * The following block of code may be used to automatically register your
@@ -39,3 +43,4 @@ app.component('experts-component', Experts);
  */
 
 app.mount('#app');
+app2.mount('#footer-app');
