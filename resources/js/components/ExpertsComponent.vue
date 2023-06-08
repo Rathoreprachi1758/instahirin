@@ -108,7 +108,7 @@
 <script>
     export default {
         mounted() {
-            console.log('Component mounted.')
+            console.log('Experts Component mounted.')
         }
     }
 </script>
