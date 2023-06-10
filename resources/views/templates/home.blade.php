@@ -424,7 +424,6 @@
 
        <!-- about project section -->
     
-       <experts-comp></experts-comp>
        <div class="aboutProject_section hiretalent">
         <div class="auto_container">
             <div class="aboutProject_section_detail"  >
