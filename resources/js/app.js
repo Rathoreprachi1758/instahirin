@@ -16,11 +16,9 @@ import { createApp } from 'vue';
 const app = createApp({});
 const app2 = createApp({});
 
-import ExampleComponent from './components/ExampleComponent.vue';
 import ExpertsComponent from './components/ExpertsComponent.vue';
 import SubscriptionComponent from './components/SubscriptionComponent.vue';
 
-app.component('example-component', ExampleComponent);
 app.component('experts-component', ExpertsComponent);
 app2.component('subscription-component', SubscriptionComponent);
 
