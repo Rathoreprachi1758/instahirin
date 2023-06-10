@@ -5,14 +5,16 @@ namespace App\Models;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 
-class Subscription extends Model
+class Hire extends Model
 {
     use HasFactory;
-    protected $table = 'subscriptions';
+    protected $table = 'hire';
 
     protected $fillable = [
         'name',
+        'company',
         'email',
-        'opted_out'
+        'phone',
+        'message'
     ];
 }

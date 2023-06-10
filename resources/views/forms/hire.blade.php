@@ -1,7 +1,8 @@
 <div class="custom_tittle text-left">
-    <h2 class="text-white">Hire Talent Now</h2> 
+    <h2 class="text-white">Hire Talent Now</h2>
 </div>
-<div class="alert alert-success  text-center" role="alert" id="hire_success">
+<hire-component></hire-component>
+{{-- <div class="alert alert-success  text-center" role="alert" id="hire_success">
     Thank you for the message. We will contact you shortly.
 </div>
 <div class="alert alert-danger text-center" role="alert" id="hire_failure">
@@ -52,4 +53,4 @@
         </div>
     </div>
 
-</div>
+</div> --}}
