@@ -34,7 +34,7 @@
         <!-- header -->
         <header>
             
-            <div class="header">
+            <div class="header flotNav_added">
                 <div class="auto_container">
                     <div class="header_detail">
                         <div class="main_logo">

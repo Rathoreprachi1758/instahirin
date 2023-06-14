@@ -48,7 +48,7 @@ class Page extends Resource
         return [
             ID::make()->sortable(),
             Text::make('Title','title')->rules('required','min:3,max:255'),
-            Text::make('Slug','slug')->rules('required','min:3,max:255'),
+            Select::make('Slug','slug')->options($this->getAllSlugs())->rules('required'),
             Text::make('Meta Title','meta_title')->rules('min:6,max:255'),
             Text::make('Meta Keywords','meta_keywords')->rules('min:6,max:255'),
             Textarea::make('Meta Description','meta_description')->rules('min:6,max:500'),
@@ -110,5 +110,30 @@ class Page extends Resource
         }
 
         return $fileNames;
+    }
+
+    private function getAllSlugs(){
+       $menus = nova_get_menu_by_slug('header');
+       $menus = (object) $menus['menuItems']; 
+       $flatMenus = [];
+       foreach($menus as $levelOneKey => $levelOneMenu){
+        $flatMenus[$levelOneMenu['data']['slug']] =  $levelOneMenu['name'];
+            foreach($levelOneMenu['children'] as $levelTwoKey => $levelTwoMenu){
+                //array_push($flatMenus,$levelTwoMenu['name']);
+                foreach($levelTwoMenu['children'] as $levelThreeKey => $levelThreeMenu){
+
+                    foreach($levelThreeMenu['children'] as $levelThreeKey => $levelFourMenu){
+                        //array_push($flatMenus,$levelThreeMenu['name']);
+                        foreach($levelFourMenu['children'] as $levelFourKey => $levelFiveMenu){
+                            $slug = $levelOneMenu['data']['slug'].'|'.$levelTwoMenu['data']['slug'].'|'.$levelFourMenu['data']['slug'].'|'.$levelFiveMenu['data']['slug'];
+                            $name = $levelOneMenu['name'].' | '.$levelTwoMenu['name'].' | '.$levelFourMenu['name'].' | '.$levelFiveMenu['name'];
+                            $flatMenus[$slug] =  $name;
+                        }
+                    }
+                }
+            }
+       }
+
+       return $flatMenus;
     }
 }

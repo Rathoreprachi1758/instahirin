@@ -8,6 +8,7 @@ use Outl1ne\MenuBuilder\MenuItemTypes\BaseMenuItemType;
 use Laravel\Nova\Fields\Number;
 use Laravel\Nova\Fields\Image;
 use Laravel\Nova\Fields\Select;
+use File;
 
 class BizionicMenuItemType extends BaseMenuItemType
 {
@@ -43,10 +44,22 @@ class BizionicMenuItemType extends BaseMenuItemType
     {
         return [
             Text::make('Slug','slug'),
-            Boolean::make('Is Action Item','is_action_item'),
             Number::make('Menu Columns','menu_columns')->min(1)->max(4)->step(1),
             Text::make('Menu Icon','menu_icon'),
-            Select::make('Template','template')->options(['home'=>'hom'])
+            Text::make('Custom Class','is_action_item'),
+            Select::make('Template','template')->options(BizionicMenuItemType::getAllTemplates())
         ];
-    }    
+    }
+    private static function getAllTemplates(){
+
+        $files = File::allFiles(base_path().'/resources/views/templates');
+
+        foreach($files as $key=>$file){
+            $fileName = $file->getBasename('.blade.php');
+            $fileNames[$fileName] = $fileName;
+        }
+
+        return $fileNames;
+    }
+
 }

@@ -1,8 +1,5 @@
 
-
-
-
-
+   
    $(document).ready(function() {
 
 
@@ -296,6 +293,20 @@ $(function() {
 // $('.markServices_tabsBtn_info ul li a:first').trigger('click');
 
 
+
+
+
+    // address tabs Order
+
+    $('.adress_tabs a').on('click', function(event) {  
+        event.preventDefault();
+      
+        $('.active').removeClass('active');
+        $(this).addClass('active');
+        $('.addressTab_data').hide();
+        $($(this).attr('href')).show();
+      });
+       $('.adress_tabs a:first').trigger('click');
    
 
 
@@ -353,6 +364,27 @@ $(window).scroll(function() {
 });
 
 
+
+
+
+
+var firstOpen = true;
+var time;
+
+$('#timePicker').datetimepicker({
+  useCurrent: false,
+  format: "hh:mm A"
+}).on('dp.show', function() {
+  if(firstOpen) {
+    time = moment().startOf('day');
+    firstOpen = false;
+  } else {
+    time = "01:00 PM"
+  }
+  
+  $(this).data('DateTimePicker').date(time);
+});
+   
 
 
 

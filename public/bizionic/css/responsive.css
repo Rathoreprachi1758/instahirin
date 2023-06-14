@@ -10,7 +10,9 @@
         right: -30px; 
     }
     
-
+    .innerColum_menu_outer { 
+        padding: 10px 12px 15px 12px; 
+    }
 
 }
 
@@ -20,10 +22,10 @@
     margin-left: 15px 
 } 
 .main_nav ul li.has_nav > a {
-    padding-right: 20px;
+    padding-right: 18px;
 }
 .main_nav ul li a { 
-    font-size: 15px;}
+    font-size: 14px;}
     
 .byNumber_infoText label {
     font-size: 18px;
@@ -42,13 +44,13 @@
 
 
 .aboutBizionic_col_info p span img {
-    height: 55px; 
+    height: 45px; 
 }
 .aboutBizionic_col_info p span {
-    width: 90px;
-    height: 90px;
-    padding: 5px; 
-    margin: 5px 15px 5px 0px;
+    width: 100px;
+    height: 100px;
+    padding: 6px; 
+    margin: 5px 20px 5px 0px;
 }
 
 .aboutBizionic_col_info p { 
@@ -100,10 +102,46 @@
 }
 
 
+.dateTime_range { flex-wrap: wrap;
+}
 
 
+.meetProfile { 
+    display: block;  
+}
+
+.hiringInfo .meetProfile_tittle {
+    width: 100%;
+}
 
 
+.baidu_avatar2 span {
+    max-width: 600px; 
+}
+
+.provider_section .provide_col {
+    padding: 10px !important;
+}
+
+.frList_sec {
+    padding-left: 20px;
+}
+
+.careerPage_inner { 
+    padding: 70px 40px;
+}
+
+
+.hire_me_button:after { 
+    width: 86px;
+    height: 38px; 
+    left: -16px;
+    top: -11px; 
+}
+
+.hire_me_button { 
+    margin: 0px 12px 0px 9px;
+}
 
  
 
@@ -313,7 +351,7 @@ h6 { font-size: 18px; }
     padding-bottom: 20px;
 }
 .copyRight p { 
-    padding-right: 50px;
+    padding-left: 50px;
 }
 .connected_form { 
     padding-right: 40px;
@@ -468,7 +506,7 @@ h6 { font-size: 18px; }
 }
 
 .section2_avatar span { 
-    margin-top: -120px;
+
 }
 .baidu_avatar2 span {
     max-width: 450px;
@@ -479,7 +517,7 @@ h6 { font-size: 18px; }
     max-width: 650px; 
 }
 .baidu_avatar2 span {
-    max-width: 600px; 
+    max-width: 500px; 
 }
 
 
@@ -545,7 +583,7 @@ h6 { font-size: 18px; }
 }
 
 
-.addFile_button { display: block; padding-top: 0px;}
+.addFile_button { display: block; }
 
 .addFile_button p { padding-bottom: 20px; min-width: auto;}
 
@@ -620,6 +658,73 @@ h6 { font-size: 18px; }
 .bizionic_about { 
     padding-top: 0px;
 }
+
+
+.servicesText_list .technology_master_text {
+    padding: 60px 40px; 
+}
+
+.aboutRead_more .aboutBizionic_section_detail {
+    padding: 70px 0px;
+}
+
+.aboutBizionic_col_info h4 { 
+    font-size: 18px;
+}
+
+.aboutRead_more .aboutBizionic_col_info p {
+    display: block;
+}
+
+.aboutRead_more .aboutBizionic_col_info p span {
+    min-width: 110px;
+    min-height: 80px;
+}
+.aboutRead_more .aboutBizionic_col_info {
+    padding: 10px 20px;
+}
+
+.dateTime_range { 
+    flex-wrap: wrap; 
+}
+.dateTime_range .project_form_field {
+    max-width: 100px;
+    min-width: 100px;
+}
+
+.meetProfile { 
+    display: block;  
+}
+
+.hiringInfo .meetProfile_tittle {
+    width: 100%;
+}
+
+
+.talentCheck_list_info { 
+    padding: 60px 0px;
+}
+
+
+.frList_sec ul li p { font-size: 15px;}
+
+
+.careerPage_container { 
+    transform: translateY(-35px);
+}
+
+.careerPage_inner { 
+    padding: 70px 40px;
+}
+.advanceCareer_form { 
+    padding: 25px; 
+}
+
+
+
+
+
+
 
 
 
@@ -863,7 +968,7 @@ h6 { font-size: 18px; }
     justify-content: center;
     flex-flow: column;
 }
-.addFile { padding-bottom: 20px; text-align: center;}
+.addFile { padding-bottom: 20px;  }
 
 .servicesProvided_section_detail { 
     padding: 60px 0px;
@@ -1356,10 +1461,10 @@ h6 { font-size: 18px; }
 }
 
 .services_avatar a img {
-    max-width: 200px; 
+    max-width: 100px; 
 }
 
-.services_avatar { padding-top: 30px;}
+.services_avatar { padding: 50px 25px;}
 
 .services_formOuter .project_form { 
     padding: 50px 20px 50px;
@@ -1422,8 +1527,8 @@ h6 { font-size: 18px; }
     font-size: 16px;
 }
 .bizionic_about p {
-    padding: 8px 0px;
-    font-size: 15px;
+    padding: 3px 0px;
+    font-size: 14px;
 }
 
 .additional_benefits_section {
@@ -1557,6 +1662,176 @@ h6 { font-size: 18px; }
     align-items: flex-start;
     flex-flow: column;
 }
+
+.technologyLook_text { padding: 0px;}
+.technologyForm .addFile_button p {
+    min-width: auto;
+    padding-bottom: 25px;
+    text-align: justify;
+}
+
+.mainBanner_text h6 {
+    font-size: 20px;}
+
+.servicesText_list .technology_master_text {
+    padding: 50px 25px;
+    background: #ebebeb;
+}
+
+
+
+
+.aboutRead_more .aboutBizionic_section_detail {
+    padding: 60px 0px;
+}
+
+.aboutBizionic_col_info h4 { 
+    font-size: 18px;
+}
+
+.aboutRead_more .aboutBizionic_col_info p {
+    display: block;
+}
+
+.aboutRead_more .aboutBizionic_col_info p span {
+    min-width: 110px;
+    min-height: 80px;
+}
+.aboutRead_more .aboutBizionic_col_info {
+    padding: 10px 20px;
+}
+
+
+
+.hireForm_banner_detail { 
+    padding: 60px 0px;
+}
+
+.hireForm_banner_detail .custom_tittle p br { display: none;}
+
+.meetProfile { 
+    display: block;  
+}
+
+.hiringInfo .meetProfile_tittle {
+    width: 100%;
+}
+
+.dateTime_range { 
+    display: block; 
+}
+
+.dateTime_range .project_form_field {
+    max-width: 100%;    margin: 8px 0px !important;
+    min-width: 100%;}
+
+.dateTime_range label { 
+    min-width: 100%;
+    text-align: left !important;
+}
+
+.checkbox-label { 
+    font-size: 13px; 
+}
+
+
+.servicesProvided_info h3 { 
+    font-size: 20px;
+}
+
+
+.talentCheck_list { 
+    margin-top: 0px; 
+}
+
+.talentCheck_list:after { 
+    top: 0px;
+    width: 100%; 
+}
+
+.talentCheckList ul li p { 
+    font-size: 14px;
+}
+.chrckIcon {
+    max-width: 18px; 
+    margin-right: 7px; 
+}
+.verified_icon {
+    max-width: 45px; 
+    margin-left: 5px;
+}
+.frList_sec {
+    padding-left: 0px;
+}
+.frList_sec h4 {
+    color: #fff;
+}
+.frList_sec h4 b {
+    color: #fff;
+}
+
+.frList_sec ul li {
+    color: #fff; 
+    margin-left: 15px;
+}
+
+
+.frList_sec ul li p {
+    color: #fff;
+    text-transform: inherit;
+}
+
+
+
+.careerPage_container { 
+    transform: translateY(0px);
+}
+
+.careerPage_inner { 
+    padding: 50px 25px;
+}
+
+.embark_section_list p { 
+    padding-bottom: 15px;
+    text-align: center;
+}
+
+.lookingWork_list_info .aboutBizionic_col_info p { 
+    font-size: 16px; 
+    flex-flow: column;
+}
+
+.lookingWork_list_info .aboutBizionic_col_info p span { margin-bottom: 20px;}
+
+.lookingWork_list_info .aboutBizionic_col_info h4 {
+    font-size: 18px;
+}
+
+.openPosition_sec .careerPage_inner { 
+    padding: 50px 5px;
+}
+
+.openPosition_sec .custom_tittle { padding-bottom: 10px;}
+
+.openPosition_sec .buildTeam_col { 
+    padding: 40px 20px 30px;
+}
+
+.advanceCareer_form { 
+    padding: 20px; 
+}
+
+.advanceCareer_section { 
+    margin-bottom: 50px;
+}
+
+
+.marketingTalent_info .industryNew_section1_avatar { padding-top: 25px;}
+
+
+
+
+
 
 
 
