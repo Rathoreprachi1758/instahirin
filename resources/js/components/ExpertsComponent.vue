@@ -34,6 +34,9 @@
 
                 <div class="auto_container">
                     <div class="meetTeam_sliderSection">
+                        <div class="showAll_btn">
+                            <a href="#" class="btn_default">Show All</a>
+                        </div>
                         <div class="meetTeam_slider owl-carousel owl-theme">
 
                         <div class="item">

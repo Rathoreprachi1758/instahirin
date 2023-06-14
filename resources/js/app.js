@@ -20,10 +20,12 @@ import ExpertsComponent from './components/ExpertsComponent.vue';
 import SubscriptionComponent from './components/SubscriptionComponent.vue';
 import Hire from './components/HireComponent.vue';
 import ContactUs from './components/ContactUsComponent.vue';
+import ClientsComponent from './components/ClientsComponent.vue';
 
 
 app.component('experts-component', ExpertsComponent);
 app.component('contact-us-component', ContactUs);
+app.component('client-component', ClientsComponent);
 app.component('hire-component', Hire);
 app2.component('subscription-component', SubscriptionComponent);
 
