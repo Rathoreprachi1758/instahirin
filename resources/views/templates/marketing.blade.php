@@ -1,5 +1,5 @@
 
-    <!-- main banner  -->
+<!-- main banner  -->
     <div class="mainBanner_section">
         <div class="auto_container">
             <div class="mainBanner_detail marketMain">
@@ -108,7 +108,7 @@
                         <ul>
                             <li><a href="#tab1" class="active">Marketing & Media</a></li>
                             <li><a href="#tab2">UI/UX Services</a></li>
-                            <li><a href="#tab3">360 eCommerce Solutions</a></li>
+                            <li><a href="#tab3">360 E-Commerce Solutions</a></li>
                         </ul>
                     </div>
                 </div>
@@ -202,7 +202,7 @@
                                 <div class="markServices_tabs_col">
                                     <div class="markServices_tabs_colInfo">
                                         <strong>UI/UX Designs: </strong>
-                                        <p>UI/UX design has become more “trendy”; with the “internet of things.” Our user experience (UX) designers team works to create a product, from branding to design to useability, providing meaningful and
+                                        <p>UI/UX design has become more “trendy”; with the “internet of things.” Our user experience (UX) designers team works to create a product, from branding to design to usability, providing meaningful and
                                             enjoyable user experiences.</p>
                                     </div>
 
@@ -264,7 +264,7 @@
                     <div class="markServices_tabsInfo_detail" id="tab3">
 
                         <h3 class="tabsMarker ecomMarker">
-                            360 eCommerce  <br>  Solutions
+                            360 E-Commerce  <br>  Solutions
                         </h3>
 
                         <div class="row">
@@ -280,7 +280,7 @@
 
                                     <div class="markServices_tabs_colInfo">
                                         <strong>Payment Gateway:</strong>
-                                        <p>We partner with major payment gateway providers and assist brands in managing their eCommerce platform with seamless secured payment solutions integration, enabling the platform to provide services to
+                                        <p>We partner with major payment gateway providers and assist brands in managing their e-Commerce platform with seamless secured payment solutions integration, enabling the platform to provide services to
                                             users across geographic regions.</p>
                                     </div>
 
@@ -360,8 +360,8 @@
             <div class="auto_container">
                 <div class="digital_menu_info">
                     <ul>
-                        <li><a href="#" class="">China</a></li>
-                        <li><a href="#">India</a></li>
+                        <li><a href="/marketing/marketing-services-we-provide/more/china" class="">China</a></li>
+                        <li><a href="/marketing/marketing-services-we-provide/more/india">India</a></li>
                         <li><a href="#goto_market">Global</a></li>
                     </ul>
                 </div>
@@ -424,7 +424,7 @@
                                     Bizionic the go-to platform; we deliver results, not promises.</p>
 
                                 <div class="seeOur text-left">
-                                    <a href="/about-us">READ MORE ABOUT US</a>
+                                    <a href="marketing/marketing-services-we-provide/more/about-us-detail">READ MORE ABOUT US</a>
                                 </div>
                             </div>
                         </div>
@@ -496,22 +496,7 @@
     <!-- our client Bizionic section -->
 
 
-    <div class="clientBizionic_section bg_e5e6e7 clientMarketing">
-        <div class="auto_container">
-            <div class="clientBizionic_section_detail aos-init aos-animate"  data-aos="fade-up" data-aos-duration="500" data-aos-easing="ease-in">
-                <div class="custom_tittle">
-                    <p>Our Asset</p>
-                    <h2>Our Clients</h2> 
-                </div>
- 
-
-
-                <div class="clientBizionic_info ">
-                    
-                </div>
-            </div>
-        </div>
-    </div>
+    <client-component></client-component>
 
 
 
@@ -624,7 +609,7 @@
     <div class="startProj_section marketingStart">
         <div class="auto_container">
             <div class="startProj_section_detail">
-                <span class="rocketAvatar aos-init aos-animate"  ><img src="/bizionic/images/rocket_avatar.png" alt="#" /></span>
+                <span class="rocketAvatar"  ><img src="/bizionic/images/rocket_avatar.png" alt="#" /></span>
                 <div class="row">
                     <div class="col-lg-6 aos-init aos-animate" >
                         <div class="startProj_info text-center">
@@ -653,7 +638,7 @@
    <div class="togather_avatar">
         <div class="togather_avatar_inner">
             <div class="auto_container">
-                <div class="togather_avatar_detail aos-init aos-animate" >
+                <div class="togather_avatar_detail" >
                     <span><img src="/bizionic/images/togather_avatar.png" alt="#" /></span>
                 </div>
             </div>
@@ -670,7 +655,7 @@
         <div class="latestBlog_section">
             <div class="auto_container">
                 <div class="latestBlog_section_detail">
-                    <div class="custom_tittle aos-init aos-animate" >
+                    <div class="custom_tittle " >
                         <h2 class="text-white">Our Latest Blogs</h2>
                     </div>
 
@@ -750,7 +735,7 @@
 
      <div class="servicesProvided_section">
         <div class="auto_container">
-            <div class="servicesProvided_section_detail aos-init aos-animate"  >
+            <div class="servicesProvided_section_detail"  >
                 <div class="servicesProvided_info">
                     <h3 class="text-center">SERVICES</h3>
                     <ul>
@@ -856,8 +841,8 @@
                         <li><a href="#">Banking & Finance</a></li> | 
                         <li><a href="#">Startup Solutions</a></li> | 
                         <li><a href="#">Media & Publishing</a></li> | 
-                        <li><a href="#">Food Ordering Solutions</a></li> | 
-                        <li><a href="#">Train Ticket Booking Solutions</a></li> | 
+                        <li><a href="#">Food & FMCG</a></li> | 
+                                <li><a href="#">E-Commerce</a></li> | 
                     </ul>
                 </div>
             </div>
