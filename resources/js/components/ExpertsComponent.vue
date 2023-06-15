@@ -4,22 +4,8 @@
             <div class="meetTeam_nav_inner">
                 <div class="meetTeam_nav_info">
                     <ul>
-                        <!-- <li>
-                            <a href="/marketing-solutions/china" class=""
-                                >Development & IT</a
-                            >
-                        </li>
-                        <li>
-                            <a href="/marketing-solutions/india"
-                                >Design & Creative</a
-                            >
-                        </li>
-                        <li><a href="#goto_market">Sales & Marketing</a></li> -->
-                        <!-- :href="category.url"  // dynamic category link to take to other page-->
                         <li v-for="category in categories" :key="category.id">
-                            <a @click="selectCategory(category)">{{
-                                category.name
-                            }}</a>
+                            <a @click="selectCategory(category)">{{ category.title }}</a>
                         </li>
                     </ul>
                 </div>
@@ -67,15 +53,15 @@
                 >
                     <div class="meetTeam_info">
                         <div class="meetProfile">
-                            <span><img :src="expert.imageUrl" alt="" /></span>
+                            <span><img :src="`/storage/${expert.avatar}`" alt="" /></span>
                             <div class="meetProfile_tittle">
-                                <strong>{{ expert.name }}</strong>
-                                <p>{{ expert.subtitle }}</p>
+                                <strong>{{ expert.title }}</strong>
+                                <p>{{ expert.sub_title }}</p>
                             </div>
                         </div>
 
                         <div class="descriptionText">
-                            <p>{{ expert.description }}</p>
+                            <p v-html="expert.description"></p>
                         </div>
 
                         <div class="ourExperties">
@@ -83,11 +69,11 @@
                             <div class="ourExperties_list">
                                 <ul>
                                     <li
-                                        v-for="expertise in expert.expertises"
-                                        :key="expertise"
+                                        v-for="experty in expert.experties"
+                                        :key="experty"
                                     >
                                         <span>
-                                            {{ expertise }}
+                                            {{ experty.title }}
                                         </span>
                                     </li>
                                 </ul>
@@ -99,11 +85,11 @@
                             <div class="ourWorked_list">
                                 <ul>
                                     <li
-                                        v-for="workedIn in expert.workedIn"
-                                        :key="workedIn"
+                                        v-for="skill in expert.skills"
+                                        :key="skill"
                                     >
                                         <span>
-                                            {{ workedIn }}
+                                            {{ skill.title }}
                                         </span>
                                     </li>
                                 </ul>
@@ -149,52 +135,7 @@ import axios from "axios";
 export default {
     data() {
         return {
-            experts: [
-                {
-                    id: 1,
-                    name: "Expert 1",
-                    subtitle: "Subtitle 1",
-                    description: "Description 1",
-                    expertises: ["Development & IT", "Expertise B"],
-                    workedIn: ["Tesla", "Company Y"],
-                    experience: "5 years",
-                    availability: "Full-time",
-                    imageUrl: "/bizionic/images/influencer_profile1.png",
-                },
-                {
-                    id: 2,
-                    name: "Expert 2",
-                    subtitle: "Subtitle 2",
-                    description: "Description 2",
-                    expertises: ["Design & Creative", "Expertise B"],
-                    workedIn: ["Apple", "Company Y"],
-                    experience: "5 years",
-                    availability: "Full-time",
-                    imageUrl: "/bizionic/images/influencer_profile4.png",
-                },
-                {
-                    id: 3,
-                    name: "Expert 3",
-                    subtitle: "Subtitle 3",
-                    description: "Description 3",
-                    expertises: ["Sales & Marketing", "Expertise B"],
-                    workedIn: ["Company X", "Meta"],
-                    experience: "5 years",
-                    availability: "Full-time",
-                    imageUrl: "/bizionic/images/influencer_profile3.png",
-                },
-                {
-                    id: 4,
-                    name: "Expert 4",
-                    subtitle: "Subtitle 4",
-                    description: "Description 4",
-                    expertises: ["Finance & Accounting", "Expertise B"],
-                    workedIn: ["MCB", "Company Y"],
-                    experience: "5 years",
-                    availability: "Full-time",
-                    imageUrl: "/bizionic/images/influencer_profile5.png",
-                },
-            ],
+            experts: [{}],
             categories: [
                 {
                     id: 1,
@@ -226,7 +167,7 @@ export default {
     methods: {
         fetchCategories() {
             axios
-                .get("/api/categories")
+                .get("/api/v1/expert_categories")
                 .then((response) => {
                     this.categories = response.data;
                 })
@@ -236,7 +177,7 @@ export default {
         },
         fetchExperts() {
             axios
-                .get("/api/experts")
+                .get("/api/v1/experts")
                 .then((response) => {
                     this.experts = response.data;
                 })
