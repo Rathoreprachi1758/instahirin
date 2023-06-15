@@ -31,9 +31,14 @@
                             type="text"
                             class="form-control"
                             placeholder="Others..."
+                            v-model="searchQuery"
                         />
                         <div class="input-group-append">
-                            <button class="btn btn-secondary" type="button">
+                            <button
+                                class="btn btn-secondary"
+                                type="button"
+                                @click="applySearch"
+                            >
                                 <i class="fa fa-search"></i>
                             </button>
                         </div>
@@ -54,7 +59,7 @@
                 <!-- Expert Section -->
                 <div
                     class="item"
-                    v-for="expert in filteredExperts"
+                    v-for="expert in filteredExpertsByCategory"
                     :key="expert.id"
                 >
                     <div class="meetTeam_info">
@@ -148,7 +153,7 @@ export default {
                     subtitle: "Subtitle 1",
                     description: "Description 1",
                     expertises: ["Development & IT", "Expertise B"],
-                    workedIn: ["Company X", "Company Y"],
+                    workedIn: ["Tesla", "Company Y"],
                     experience: "5 years",
                     availability: "Full-time",
                     imageUrl: "/bizionic/images/influencer_profile1.png",
@@ -159,7 +164,7 @@ export default {
                     subtitle: "Subtitle 2",
                     description: "Description 2",
                     expertises: ["Design & Creative", "Expertise B"],
-                    workedIn: ["Company X", "Company Y"],
+                    workedIn: ["Apple", "Company Y"],
                     experience: "5 years",
                     availability: "Full-time",
                     imageUrl: "/bizionic/images/influencer_profile4.png",
@@ -170,7 +175,7 @@ export default {
                     subtitle: "Subtitle 3",
                     description: "Description 3",
                     expertises: ["Sales & Marketing", "Expertise B"],
-                    workedIn: ["Company X", "Company Y"],
+                    workedIn: ["Company X", "Meta"],
                     experience: "5 years",
                     availability: "Full-time",
                     imageUrl: "/bizionic/images/influencer_profile3.png",
@@ -181,7 +186,7 @@ export default {
                     subtitle: "Subtitle 4",
                     description: "Description 4",
                     expertises: ["Finance & Accounting", "Expertise B"],
-                    workedIn: ["Company X", "Company Y"],
+                    workedIn: ["MCB", "Company Y"],
                     experience: "5 years",
                     availability: "Full-time",
                     imageUrl: "/bizionic/images/influencer_profile5.png",
@@ -203,16 +208,12 @@ export default {
                     name: "Sales & Marketing",
                     url: "#goto_market",
                 },
-                {
-                    id: 4,
-                    name: "Finance & Accounting",
-                    url: "/marketing-solutions/finance",
-                },
             ],
             // categories: [],
             // experts: [],
             // imageUrl: "/bizionic/images/influencer_profile5.png",
             selectedCategory: null,
+            searchQuery: "",
         };
     },
     mounted() {
@@ -243,9 +244,24 @@ export default {
         selectCategory(category) {
             this.selectedCategory = category;
         },
+        applySearch() {
+            const searchQuery = this.searchQuery.trim().toLowerCase();
+            if (searchQuery === "") {
+                return this.filteredExpertsByCategory;
+            }
+            return this.experts.filter((expert) => {
+                const expertisesMatch = expert.expertises.some((expertise) =>
+                    expertise.toLowerCase().includes(searchQuery)
+                );
+                const workedInMatch = expert.workedIn.some((workedIn) =>
+                    workedIn.toLowerCase().includes(searchQuery)
+                );
+                return expertisesMatch || workedInMatch;
+            });
+        },
     },
     computed: {
-        filteredExperts() {
+        filteredExpertsByCategory() {
             if (!this.selectedCategory) {
                 return this.experts;
             }
@@ -253,6 +269,21 @@ export default {
             return this.experts.filter((expert) =>
                 expert.expertises.includes(categoryName)
             );
+        },
+        filteredExpertsBySearch() {
+            const searchQuery = this.searchQuery.trim().toLowerCase();
+            if (searchQuery === "") {
+                return this.filteredExpertsByCategory;
+            }
+            return this.experts.filter((expert) => {
+                const expertisesMatch = expert.expertises.some((expertise) =>
+                    expertise.toLowerCase().includes(searchQuery)
+                );
+                const workedInMatch = expert.workedIn.some((workedIn) =>
+                    workedIn.toLowerCase().includes(searchQuery)
+                );
+                return expertisesMatch || workedInMatch;
+            });
         },
     },
 };
