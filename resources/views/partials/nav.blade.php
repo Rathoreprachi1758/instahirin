@@ -52,7 +52,12 @@
                                                             @if(count($cMenuItem->children))
                                                             <ul>
                                                                 @foreach($cMenuItem->children as $childItemkey => $childMenuItem)
-                                                                <li><a href="{{url("/{$menu->data->slug}/{$cmenu->data->slug}/{$cMenuItem->data->slug}/{$childMenuItem->data->slug}")}}" class="  ">{{$childMenuItem->name}}</a> </li>
+                                                                @php
+                                                                $hasChildMenuItemClass = ($childMenuItem->data->is_action_item) ?  true : false;
+                                                                $childMenuItemClass = ($childMenuItem->data->is_action_item) ?  $childMenuItem->data->is_action_item : '';
+
+                                                                @endphp                                                                
+                                                                <li @class([$childMenuItemClass=>$hasChildMenuItemClass])><a href="{{url("/{$menu->data->slug}/{$cmenu->data->slug}/{$cMenuItem->data->slug}/{$childMenuItem->data->slug}")}}" class="  ">{{$childMenuItem->name}}</a> </li>
                                                                 @endforeach 
                                                             </ul>
                                                             @endif
