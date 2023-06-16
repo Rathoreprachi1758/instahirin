@@ -37,7 +37,7 @@
                             <button
                                 class="btn btn-secondary"
                                 type="button"
-                                @click="applySearch"
+                                @click="filterExperts"
                             >
                                 <i class="fa fa-search"></i>
                             </button>
@@ -57,91 +57,139 @@
                 style="width: 100%; overflow: auto"
             >
                 <!-- Expert Section -->
-                <div
-                    class="item"
-                    v-for="expert in filteredExpertsByCategory"
-                    :key="expert.id"
-                >
-                    <div class="meetTeam_info">
-                        <div class="meetProfile">
-                            <span><img :src="expert.imageUrl" alt="" /></span>
-                            <div class="meetProfile_tittle">
-                                <strong>{{ expert.name }}</strong>
-                                <p>{{ expert.subtitle }}</p>
+                <carousel>
+                    <div
+                        class="item"
+                        v-for="expert in filteredExpertsByCategory"
+                        :key="expert.id"
+                    >
+                        <div class="meetTeam_info">
+                            <div class="meetProfile">
+                                <span
+                                    ><img :src="expert.imageUrl" alt=""
+                                /></span>
+                                <div class="meetProfile_tittle">
+                                    <strong>{{ expert.name }}</strong>
+                                    <p>{{ expert.subtitle }}</p>
+                                </div>
                             </div>
-                        </div>
 
-                        <div class="descriptionText">
-                            <p>{{ expert.description }}</p>
-                        </div>
-
-                        <div class="ourExperties">
-                            <label class="expertTittle">• Expert in</label>
-                            <div class="ourExperties_list">
-                                <ul>
-                                    <li
-                                        v-for="expertise in expert.expertises"
-                                        :key="expertise"
-                                    >
-                                        <span>
-                                            {{ expertise }}
-                                        </span>
-                                    </li>
-                                </ul>
+                            <div class="descriptionText">
+                                <p>{{ expert.description }}</p>
                             </div>
-                        </div>
 
-                        <div class="ourWorked">
-                            <label class="">Also worked with</label>
-                            <div class="ourWorked_list">
-                                <ul>
-                                    <li
-                                        v-for="workedIn in expert.workedIn"
-                                        :key="workedIn"
-                                    >
-                                        <span>
-                                            {{ workedIn }}
-                                        </span>
-                                    </li>
-                                </ul>
+                            <div class="ourExperties">
+                                <label class="expertTittle">• Expert in</label>
+                                <div class="ourExperties_list">
+                                    <ul>
+                                        <li
+                                            v-for="expertise in expert.expertises"
+                                            :key="expertise"
+                                        >
+                                            <span>
+                                                {{ expertise }}
+                                            </span>
+                                        </li>
+                                    </ul>
+                                </div>
                             </div>
-                        </div>
 
-                        <div class="ourExperience">
-                            <div class="ourExperience_col">
-                                <strong>Experience</strong>
-                                <p>{{ expert.experience }}</p>
+                            <div class="ourWorked">
+                                <label class="">Also worked with</label>
+                                <div class="ourWorked_list">
+                                    <ul>
+                                        <li
+                                            v-for="workedIn in expert.workedIn"
+                                            :key="workedIn"
+                                        >
+                                            <span>
+                                                {{ workedIn }}
+                                            </span>
+                                        </li>
+                                    </ul>
+                                </div>
                             </div>
-                            <div class="ourExperience_col">
-                                <strong>Availability</strong>
-                                <p>{{ expert.availability }}</p>
-                            </div>
-                        </div>
 
-                        <div class="hireBtn">
-                            <a href="#" class="btn_default"
-                                >Hire {{ expert.name }}</a
-                            >
+                            <div class="ourExperience">
+                                <div class="ourExperience_col">
+                                    <strong>Experience</strong>
+                                    <p>{{ expert.experience }}</p>
+                                </div>
+                                <div class="ourExperience_col">
+                                    <strong>Availability</strong>
+                                    <p>{{ expert.availability }}</p>
+                                </div>
+                            </div>
+
+                            <div class="hireBtn">
+                                <a href="#" class="btn_default"
+                                    >Hire {{ expert.name }}</a
+                                >
+                            </div>
                         </div>
                     </div>
-                </div>
+                </carousel>
             </div>
         </div>
     </div>
 </template>
 
 <style>
-.meetTeam_slider {
+/* .meetTeam_slider {
     display: flex;
 }
 .meetTeam_slider .item {
-    flex: 0 0 400px; /* Set the width of each employee section */
-    margin-right: 20px; /* Adjust the spacing between employee sections */
+    flex: 0 0 400px;
+    margin-right: 20px;
+} */
+
+.meetTeam_sliderSection {
+    overflow: hidden; /* Hide any overflowing content */
+}
+
+.meetTeam_slider {
+    display: flex; /* Display the experts in a flex container */
+    overflow-x: auto; /* Enable horizontal scrolling */
+    scroll-behavior: smooth; /* Add smooth scrolling behavior */
+}
+
+.meetTeam_slider .item {
+    flex: 0 0 400px; /* Set the width of each expert section */
+    margin-right: 20px; /* Adjust the spacing between expert sections */
+}
+
+/* Hide the scrollbar */
+.meetTeam_slider::-webkit-scrollbar {
+    width: 0;
+    height: 0;
+    background: transparent;
+}
+
+/* Optional: Style the navigation arrows for scrolling */
+.meetTeam_nav .owl-nav .owl-prev,
+.meetTeam_nav .owl-nav .owl-next {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background: #fff;
+    padding: 5px;
+    border-radius: 50%;
+    font-size: 20px;
+    z-index: 1;
+}
+
+.meetTeam_nav .owl-nav .owl-prev {
+    left: 10px;
+}
+
+.meetTeam_nav .owl-nav .owl-next {
+    right: 10px;
 }
 </style>
 
 <script>
 import axios from "axios";
+import { carousel } from "vue-owl-carousel";
 
 export default {
     data() {
@@ -244,12 +292,15 @@ export default {
         selectCategory(category) {
             this.selectedCategory = category;
         },
-        applySearch() {
+        filterExperts() {
             const searchQuery = this.searchQuery.trim().toLowerCase();
-            if (searchQuery === "") {
-                return this.filteredExpertsByCategory;
+
+            if (!searchQuery) {
+                this.filteredExpertsByCategory = this.experts;
+                return;
             }
-            return this.experts.filter((expert) => {
+
+            this.filteredExpertsByCategory = this.experts.filter((expert) => {
                 const expertisesMatch = expert.expertises.some((expertise) =>
                     expertise.toLowerCase().includes(searchQuery)
                 );
@@ -270,21 +321,9 @@ export default {
                 expert.expertises.includes(categoryName)
             );
         },
-        filteredExpertsBySearch() {
-            const searchQuery = this.searchQuery.trim().toLowerCase();
-            if (searchQuery === "") {
-                return this.filteredExpertsByCategory;
-            }
-            return this.experts.filter((expert) => {
-                const expertisesMatch = expert.expertises.some((expertise) =>
-                    expertise.toLowerCase().includes(searchQuery)
-                );
-                const workedInMatch = expert.workedIn.some((workedIn) =>
-                    workedIn.toLowerCase().includes(searchQuery)
-                );
-                return expertisesMatch || workedInMatch;
-            });
-        },
+    },
+    components: {
+        carousel,
     },
 };
 </script>
