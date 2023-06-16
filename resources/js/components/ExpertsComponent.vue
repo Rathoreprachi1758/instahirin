@@ -4,21 +4,9 @@
             <div class="meetTeam_nav_inner">
                 <div class="meetTeam_nav_info">
                     <ul>
-                        <!-- <li>
-                            <a href="/marketing-solutions/china" class=""
-                                >Development & IT</a
-                            >
-                        </li>
-                        <li>
-                            <a href="/marketing-solutions/india"
-                                >Design & Creative</a
-                            >
-                        </li>
-                        <li><a href="#goto_market">Sales & Marketing</a></li> -->
-                        <!-- :href="category.url"  // dynamic category link to take to other page-->
                         <li v-for="category in categories" :key="category.id">
                             <a @click="selectCategory(category)">{{
-                                category.name
+                                category.title
                             }}</a>
                         </li>
                     </ul>
@@ -52,13 +40,16 @@
 
     <div class="auto_container">
         <div class="meetTeam_sliderSection">
+            <div class="showAll_btn">
+                <a href="#" class="btn_default">Show All</a>
+            </div>
             <div
                 class="meetTeam_slider owl-carousel owl-theme"
                 style="width: 100%; overflow: auto"
             >
                 <!-- Expert Section -->
                 <carousel>
-                    <div
+                    <!-- <div
                         class="item"
                         v-for="expert in filteredExpertsByCategory"
                         :key="expert.id"
@@ -73,27 +64,78 @@
                                     <p>{{ expert.subtitle }}</p>
                                 </div>
                             </div>
+                        </div>
+                    </div> -->
 
-                            <div class="descriptionText">
-                                <p>{{ expert.description }}</p>
-                            </div>
-
-                            <div class="ourExperties">
-                                <label class="expertTittle">• Expert in</label>
-                                <div class="ourExperties_list">
-                                    <ul>
-                                        <li
-                                            v-for="expertise in expert.expertises"
-                                            :key="expertise"
-                                        >
-                                            <span>
-                                                {{ expertise }}
-                                            </span>
-                                        </li>
-                                    </ul>
+                    <div
+                        class="item"
+                        v-for="expert in filteredExpertsByCategory"
+                        :key="expert.id"
+                    >
+                        <div class="meetTeam_info">
+                            <div class="meetProfile">
+                                <span
+                                    ><img
+                                        :src="`/storage/${expert.avatar}`"
+                                        alt=""
+                                /></span>
+                                <div class="meetProfile_tittle">
+                                    <strong>{{ expert.title }}</strong>
+                                    <p>{{ expert.sub_title }}</p>
                                 </div>
                             </div>
+                        </div>
+                    </div>
 
+                    <div class="descriptionText">
+                        <p v-html="expert.description"></p>
+                    </div>
+
+                    <div class="ourExperties">
+                        <label class="expertTittle">• Expert in</label>
+                        <div class="ourExperties_list">
+                            <ul>
+                                <li
+                                    v-for="experty in expert.experties"
+                                    :key="experty"
+                                >
+                                    <span>
+                                        {{ experty.title }}
+                                    </span>
+                                </li>
+                            </ul>
+                        </div>
+
+                        <!-- <div class="ourExperties">
+                            <label class="expertTittle">• Expert in</label>
+                            <div class="ourExperties_list">
+                                <ul>
+                                    <li
+                                        v-for="expertise in expert.expertises"
+                                        :key="expertise"
+                                    >
+                                        <span>
+                                            {{ expertise }}
+                                        </span>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div> -->
+                        <div class="ourWorked">
+                            <label class="">Also worked with</label>
+                            <div class="ourWorked_list">
+                                <ul>
+                                    <li
+                                        v-for="skill in expert.skills"
+                                        :key="skill"
+                                    >
+                                        <span>
+                                            {{ skill.title }}
+                                        </span>
+                                    </li>
+                                </ul>
+                            </div>
+                            <!--
                             <div class="ourWorked">
                                 <label class="">Also worked with</label>
                                 <div class="ourWorked_list">
@@ -108,7 +150,7 @@
                                         </li>
                                     </ul>
                                 </div>
-                            </div>
+                            </div> -->
 
                             <div class="ourExperience">
                                 <div class="ourExperience_col">
@@ -194,52 +236,7 @@ import { carousel } from "vue-owl-carousel";
 export default {
     data() {
         return {
-            experts: [
-                {
-                    id: 1,
-                    name: "Expert 1",
-                    subtitle: "Subtitle 1",
-                    description: "Description 1",
-                    expertises: ["Development & IT", "Expertise B"],
-                    workedIn: ["Tesla", "Company Y"],
-                    experience: "5 years",
-                    availability: "Full-time",
-                    imageUrl: "/bizionic/images/influencer_profile1.png",
-                },
-                {
-                    id: 2,
-                    name: "Expert 2",
-                    subtitle: "Subtitle 2",
-                    description: "Description 2",
-                    expertises: ["Design & Creative", "Expertise B"],
-                    workedIn: ["Apple", "Company Y"],
-                    experience: "5 years",
-                    availability: "Full-time",
-                    imageUrl: "/bizionic/images/influencer_profile4.png",
-                },
-                {
-                    id: 3,
-                    name: "Expert 3",
-                    subtitle: "Subtitle 3",
-                    description: "Description 3",
-                    expertises: ["Sales & Marketing", "Expertise B"],
-                    workedIn: ["Company X", "Meta"],
-                    experience: "5 years",
-                    availability: "Full-time",
-                    imageUrl: "/bizionic/images/influencer_profile3.png",
-                },
-                {
-                    id: 4,
-                    name: "Expert 4",
-                    subtitle: "Subtitle 4",
-                    description: "Description 4",
-                    expertises: ["Finance & Accounting", "Expertise B"],
-                    workedIn: ["MCB", "Company Y"],
-                    experience: "5 years",
-                    availability: "Full-time",
-                    imageUrl: "/bizionic/images/influencer_profile5.png",
-                },
-            ],
+            experts: [{}],
             categories: [
                 {
                     id: 1,
@@ -271,7 +268,7 @@ export default {
     methods: {
         fetchCategories() {
             axios
-                .get("/api/categories")
+                .get("/api/v1/expert_categories")
                 .then((response) => {
                     this.categories = response.data;
                 })
@@ -281,7 +278,7 @@ export default {
         },
         fetchExperts() {
             axios
-                .get("/api/experts")
+                .get("/api/v1/experts")
                 .then((response) => {
                     this.experts = response.data;
                 })

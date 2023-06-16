@@ -110,7 +110,7 @@ return [
     |
     */
 
-    'menu_item_model' => Outl1ne\MenuBuilder\Models\MenuItem::class,
+    'menu_item_model' => App\Models\MenuItem::class,
 
 
     /*

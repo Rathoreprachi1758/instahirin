@@ -34,7 +34,7 @@
         <!-- header -->
         <header>
             
-            <div class="header">
+            <div class="header flotNav_added">
                 <div class="auto_container">
                     <div class="header_detail">
                         <div class="main_logo">
@@ -51,27 +51,78 @@
         @yield('content')
         </main>
     <!-- footer -->
-        <footer>
+    <footer>
            <div class="footer ">
                 <div class="footerUp">
-                    <div class="auto_container">
+                    <div class="auto_container ">
                          <div class="footerUp_detail">
                             <div class="row" id="footer-app">
                                 @include('forms.subscription')
-                                <div class="col-lg-4 col-md-5 aos-init aos-animate" data-aos="fade-left" data-aos-duration="1500" data-aos-easing="">
-                                    <div class="bizionic_about">
-                                        <h6>INDIA  -  U.A.E.  -  UKRAINE  -  SINGAPORE </h6>
-                                        <h6>Bizionic Technologies & Marketing Solution Private Limited</h6>
-                                        <p>3rd Floor, Office No 1A, 6-3-1090/B/4,
-                                            The Grand Building, KFC Building, Raj Bhavan Rd,
-                                            Somajiguda, Hyderabad, Telangana 500082</p>
-                                        <!-- <p>Pin Code : 500082</p> -->
-                                        <div class="infoLinks">
-                                            <p class="pr-4"><i class="fa fa-mobile" style="font-size: 20px" aria-hidden="true"></i> <a href="tel:+91 9063756697"> +91 9059360184</a></p>
-                                            <p><i class="fa fa-envelope-o" aria-hidden="true"></i> <a href="mailto:info@bizionictech.com"> info@bizionictech.com</a></p>
+                                <div class="col-lg-4 col-md-5 aos-init aos-animate">
+                                    <div class="bizionic_about"> 
+
+                                        <div class="adress_tabs">
+                                            <a href="#address1">INDIA</a> -
+                                            <a href="#address2">U.A.E</a> -
+                                            <a href="#address3">UKRAINE</a> -
+                                            <a href="#address4">SINGAPORE</a>
                                         </div>
-                                        <!-- <p><a href="http://www.bizionictech.com"> www.bizionictech.com</a></p> -->
-                                        <p>Monday to Friday 9:00 am to 6:00 pm</p>
+
+                                        <!-- india adress -->
+                                        <div class="addressTab_data" id="address1" style="display: block;">
+                                            <h6>Bizionic Technologies & Marketing Solution Private Limited</h6>
+                                            <p>3rd Floor, Office No 1A, 6-3-1090/B/4,
+                                                The Grand Building, KFC Building, Raj Bhavan Rd,
+                                                Somajiguda, Hyderabad, Telangana 500082</p>
+                                            <!-- <p>Pin Code : 500082</p> -->
+                                            <div class="infoLinks">
+                                                <p class="pr-4"><i class="fa fa-mobile" style="font-size: 20px" aria-hidden="true"></i> <a href="tel:+91 9063756697"> +91 9059360184</a></p>
+                                                <p><i class="fa fa-envelope-o" aria-hidden="true"></i> <a href="mailto:info@bizionictech.com"> info@bizionictech.com</a></p>
+                                            </div>
+                                            <!-- <p><a href="http://www.bizionictech.com"> www.bizionictech.com</a></p> -->
+                                            <p>Monday to Friday 9:00 am to 6:00 pm</p>
+                                        </div>
+
+                                        <!-- uae adress  -->
+                                        <div class="addressTab_data" id="address2">
+                                            <h6>Bizionic Technologies & Marketing Solution Private Limited</h6>
+                                            <p>Hub71, 14th floor, Al Khatem Tower, Abu Dhabi Global Market Square Al Maryah Island, Abu Dhabi - U.A.E.</p>
+                                            <!-- <p>Pin Code : 500082</p> -->
+                                            <div class="infoLinks">
+                                                <!-- <p class="pr-4"><i class="fa fa-mobile" style="font-size: 20px" aria-hidden="true"></i> <a href="tel:+91 9063756697"> +91 9059360184</a></p> -->
+                                                <p><i class="fa fa-envelope-o" aria-hidden="true"></i> <a href="mailto:info@bizionictech.com"> info@bizionictech.com</a></p>
+                                            </div>
+                                            <!-- <p><a href="http://www.bizionictech.com"> www.bizionictech.com</a></p> -->
+                                            <p>Monday to Friday 9:00 am to 6:00 pm</p>
+                                        </div>
+
+                                        <!-- ukrain adress  -->
+                                        <div class="addressTab_data" id="address3">
+                                            <h6>Bizionic Technologies & Marketing Solution Private Limited</h6>
+                                            <p>HUB 4.0 PODIL, Yaroslavsky Lane 1/3, Kyiv Ukraine.</p>
+                                            <!-- <p>Pin Code : 500082</p> -->
+                                            <div class="infoLinks">
+                                                <!-- <p class="pr-4"><i class="fa fa-mobile" style="font-size: 20px" aria-hidden="true"></i> <a href="tel:+91 9063756697"> +91 9059360184</a></p> -->
+                                                <p><i class="fa fa-envelope-o" aria-hidden="true"></i> <a href="mailto:info@bizionictech.com"> info@bizionictech.com</a></p>
+                                            </div>
+                                            <!-- <p><a href="http://www.bizionictech.com"> www.bizionictech.com</a></p> -->
+                                            <p>Monday to Friday 9:00 am to 6:00 pm</p>
+                                        </div>
+
+                                        <!-- singapoor adress  -->
+                                        <div class="addressTab_data" id="address4">
+                                            <h6>Bizionic Technologies & Marketing Solution Private Limited</h6>
+                                            <p>230 Victoria Street, Level 15, Bugis Junctions Tower, Singapore 188024.</p>
+                                            <!-- <p>Pin Code : 500082</p> -->
+                                            <div class="infoLinks">
+                                                <!-- <p class="pr-4"><i class="fa fa-mobile" style="font-size: 20px" aria-hidden="true"></i> <a href="tel:+91 9063756697"> +91 9059360184</a></p> -->
+                                                <p><i class="fa fa-envelope-o" aria-hidden="true"></i> <a href="mailto:info@bizionictech.com"> info@bizionictech.com</a></p>
+                                            </div>
+                                            <!-- <p><a href="http://www.bizionictech.com"> www.bizionictech.com</a></p> -->
+                                            <p>Monday to Friday 9:00 am to 6:00 pm</p>
+                                        </div>
+
+                                        
                                     </div>
                                 </div>
                             </div>
