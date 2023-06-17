@@ -39,77 +39,140 @@
     <!--* Expert Slider Section -->
 
     <div class="auto_container">
-        <div class="meetTeam_sliderSection">
-            <div class="showAll_btn">
-                <a href="#" class="btn_default">Show All</a>
-            </div>
-            <carousel :items="2" :margin="10">
-                <div class="item" v-for="(expert, index) in experts" :key="index">
-                    <div class="meetTeam_info">
-                        <div class="meetProfile">
-                            <span><img :src="`/storage/${expert.avatar}`" :alt="expert.title" /></span> 
-                            <div class="meetProfile_tittle">
-                                <strong>{{ expert.title }}</strong>
-                                <p>{{ expert.sub_title }}</p>
-                            </div>
+        <div class="showAll_btn mt-3 pr-3">
+            <a href="#" class="btn_default">Show All</a>
+        </div>
+        <div class="meetTeam_sliderSection pt-0">
+            <!-- <carousel :items="2" :margin="20"> -->
+            <div class="item" v-for="(expert, index) in experts" :key="index">
+                <div class="meetTeam_info ml-2">
+                    <div class="meetProfile">
+                        <span
+                            ><img
+                                :src="`/storage/${expert.avatar}`"
+                                :alt="expert.title"
+                        /></span>
+                        <div class="meetProfile_tittle">
+                            <strong>{{ expert.title }}</strong>
+                            <p>{{ expert.sub_title }}</p>
                         </div>
+                    </div>
 
-                        <div class="descriptionText">
-                            <p v-html="expert.description"></p>
+                    <div class="descriptionText">
+                        <p v-html="expert.description"></p>
+                    </div>
+
+                    <div class="ourExperties">
+                        <label class="expertTittle">• Expert in</label>
+
+                        <div class="ourExperties_list">
+                            <ul>
+                                <li
+                                    v-for="(experty, index) in expert.experties"
+                                    :key="index"
+                                >
+                                    <span>{{ experty.title }}</span>
+                                </li>
+                            </ul>
                         </div>
+                    </div>
 
+                    <div class="ourWorked">
+                        <label class="">Also worked with</label>
 
-                        <div class="ourExperties">
-                            <label class="expertTittle">• Expert in</label>
-
-                            <div class="ourExperties_list">
-                                <ul>
-                                    <li v-for="(experty, index) in expert.experties" :key="index"><span>{{ experty.title }}</span></li>
-                                </ul>
-                            </div>
+                        <div class="ourWorked_list">
+                            <ul>
+                                <li
+                                    v-for="(skill, index) in expert.skills"
+                                    :key="index"
+                                >
+                                    <span>{{ skill.title }}</span>
+                                </li>
+                            </ul>
                         </div>
+                    </div>
 
-
-
-                        <div class="ourWorked">
-                            <label class="">Also worked with</label>
-
-                            <div class="ourWorked_list">
-                                <ul>
-                                    <li v-for="(skill, index) in expert.skills" :key="index"><span>{{ skill.title }}</span></li>
-                                </ul>
-                            </div>
+                    <div class="ourExperience">
+                        <div class="ourExperience_col">
+                            <strong>Experience</strong>
+                            <p>{{ experience }}</p>
                         </div>
-
-
-                        <div class="ourExperience">
-                            <div class="ourExperience_col">
-                                <strong>Experience</strong>
-                                <p>{{ experience }}</p>
-                            </div>
-                            <div class="ourExperience_col">
-                                <strong>Availability</strong>
-                                <p>{{ availability }}</p>
-                            </div>
+                        <div class="ourExperience_col">
+                            <strong>Availability</strong>
+                            <p>{{ availability }}</p>
                         </div>
+                    </div>
 
-
-
-                        <div class="hireBttn">
-                            <a href="temp/hire-form" class=" btn_default">Hire {{ expert.title }}</a>
-                        </div>
-
+                    <div class="hireBttn">
+                        <a href="temp/hire-form" class="btn_default"
+                            >Hire {{ expert.title }}</a
+                        >
                     </div>
                 </div>
-            </carousel>
+            </div>
+            <!-- </carousel> -->
         </div>
     </div>
 </template>
+
+<style lang="scss" scoped>
+/* .meetTeam_slider {
+    display: flex;
+}
+.meetTeam_slider .item {
+    flex: 0 0 400px;
+    margin-right: 20px;
+} */
+
+.meetTeam_sliderSection {
+    overflow: hidden; /* Hide any overflowing content */
+}
+
+.meetTeam_sliderSection {
+    display: flex; /* Display the experts in a flex container */
+    overflow-x: auto; /* Enable horizontal scrolling */
+    scroll-behavior: smooth; /* Add smooth scrolling behavior */
+}
+
+.meetTeam_sliderSection .item {
+    flex: 0 0 400px; /* Set the width of each expert section */
+    margin-right: 20px; /* Adjust the spacing between expert sections */
+}
+
+/* Hide the scrollbar */
+.meetTeam_sliderSection::-webkit-scrollbar {
+    width: 0;
+    height: 0;
+    background: transparent;
+}
+
+/* Optional: Style the navigation arrows for scrolling */
+.meetTeam_nav .owl-nav .owl-prev,
+.meetTeam_nav .owl-nav .owl-next {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background: #fff;
+    padding: 5px;
+    border-radius: 50%;
+    font-size: 20px;
+    z-index: 1;
+}
+
+.meetTeam_nav .owl-nav .owl-prev {
+    left: 10px;
+}
+
+.meetTeam_nav .owl-nav .owl-next {
+    right: 10px;
+}
+</style>
 
 <script>
 import axios from "axios";
 import { carousel } from "vue-owl-carousel";
 
+//import { carousel, slide } from "vue-carousel";
 
 export default {
     data() {
@@ -228,4 +291,3 @@ export default {
     },
 };
 </script>
-
