@@ -17,6 +17,6 @@
     },
     "dependencies": {
         "vue-loader": "^17.0.1",
-        "vue-owl-carousel": "^2.0.3"
+        "vue-owl-carousel": "^2.0.3"      
     }
 }
