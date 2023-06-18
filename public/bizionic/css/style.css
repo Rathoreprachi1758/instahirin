@@ -2756,7 +2756,7 @@ body, html {scroll-behavior: smooth; }
 .servicesFloating_menu .columnSett { width: 100% !important;flex: 0 0 41%  !important;max-width: 41%  !important;}
 .industriesFloating_menu  .columnSett { width: 100% !important;flex: 0 0 57%  !important;max-width: 57%  !important;}    
 
-.clientBizionic_reviews_info p { transform: translateX(-20px);  opacity: 0; min-height: 270px;
+.clientBizionic_reviews_info p { transform: translateX(-20px);  opacity: 1; min-height: 270px;
     transition: all 1s ease;
     -moz-transition: all 1s ease;
     -ms-transition: all 1s ease;

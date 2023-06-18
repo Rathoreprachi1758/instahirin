@@ -58,7 +58,7 @@
                          <div class="footerUp_detail">
                             <div class="row" id="footer-app">
                                 @include('forms.subscription')
-                                <div class="col-lg-4 col-md-5 aos-init aos-animate">
+                                <div class="col-lg-4 col-md-5">
                                     <div class="bizionic_about"> 
 
                                         <div class="adress_tabs">

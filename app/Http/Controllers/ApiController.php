@@ -65,6 +65,6 @@ class ApiController extends Controller
 
     public function clients(Request $request)
     {
-        return response()->json(Client::orderBy('created_at', 'desc')->get(), 200)->header('Content-Type', 'text/json');
+        return response()->json(Client::orderBy('id', 'asc')->get(), 200)->header('Content-Type', 'text/json');
     }
 }

@@ -11,7 +11,7 @@ use Laravel\Nova\Fields\MultiSelect;
 use Laravel\Nova\Fields\Select;
 use Laravel\Nova\Fields\Tag;
 use Laravel\Nova\Fields\Text;
-use Laravel\Nova\Fields\Trix;
+use Laravel\Nova\Fields\TextArea;
 use Laravel\Nova\Fields\File;
 
 class Client extends Resource
@@ -54,7 +54,7 @@ class Client extends Resource
             Text::make('Tag Line','tag_line'),
             Avatar::make('Logo','logo'),
             Boolean::make('Is Published','published'),
-            Trix::make('Testimonial','description'),
+            TextArea::make('Testimonial','description'),
         ];
     }
 
