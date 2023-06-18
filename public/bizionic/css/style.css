@@ -1989,7 +1989,8 @@ body, html {scroll-behavior: smooth; }
 
 .descriptionText { width: 100%; padding-bottom: 40px;}
 
-.descriptionText p { font-size: 14px; color: #414042; text-align: justify; padding-bottom: 0px;}
+.descriptionText p { font-size: 14px; color: #414042; text-align: justify; padding-bottom: 0px;max-height: 112px;min-height: 112px;
+    overflow: hidden;}
 
 
 
@@ -2004,11 +2005,12 @@ body, html {scroll-behavior: smooth; }
 
 .ourExperties_list { width: 100%;}
 
-.ourExperties_list ul { display: flex; flex-wrap: wrap;}
+.ourExperties_list ul { display: flex; flex-wrap: wrap; max-height: 99px; min-height: 99px;
+    overflow: hidden;}
 
 .ourExperties_list ul li { margin-right: 5px; margin-bottom: 6px;}
 
-.ourExperties_list ul li span { background: #efefef; border: 1px solid #c8c8c8; display: block; font-size: 12px; padding: 5px 6px 4px 6px;}
+.ourExperties_list ul li span { background: #efefef; border: 1px solid #c8c8c8; display: block; font-size: 12px; padding: 5px 6px 4px 6px; cursor: pointer;}
 
 
 
@@ -2019,11 +2021,12 @@ body, html {scroll-behavior: smooth; }
 
 .ourWorked_list { width: 100%;}
 
-.ourWorked_list ul { display: flex; flex-wrap: wrap;}
+.ourWorked_list ul { display: flex; flex-wrap: wrap;max-height: 66px;min-height: 66px;
+    overflow: hidden;}
 
 .ourWorked_list ul li { margin-right: 5px; margin-bottom: 6px;}
 
-.ourWorked_list ul li span { background: #fff; border: 1px solid #c8c8c8; display: block; font-size: 12px; padding: 5px 6px 4px 6px;}
+.ourWorked_list ul li span { background: #fff; border: 1px solid #c8c8c8; display: block; font-size: 12px; padding: 5px 6px 4px 6px; cursor: pointer;}
 
 
 
@@ -2080,7 +2083,7 @@ body, html {scroll-behavior: smooth; }
 
 .meetTeam_nav_info ul li { width: 33.33%;}
 
-.meetTeam_nav_info ul li a { padding: 20px 15px; text-align: center; color: #414042; font-size: 18px; display: block; font-family: 'avenirblack';
+.meetTeam_nav_info ul li a { padding: 20px 15px; text-align: center; color: #414042 !important; font-size: 18px; display: block; font-family: 'avenirblack';
 
     transition: all 0.3s ease;
     -moz-transition: all 0.3s ease;
@@ -2090,8 +2093,8 @@ body, html {scroll-behavior: smooth; }
 
 }
 
-.meetTeam_nav_info ul li a:hover {background: url(../images/teamNav_bg.png) no-repeat; background-size: cover; color: #fff;}
-.meetTeam_nav_info ul li a.d_active {background: url(../images/teamNav_bg.png) no-repeat; background-size: cover; color: #fff;}
+.meetTeam_nav_info ul li a:hover {background: url(../images/teamNav_bg.png) no-repeat !important; background-size: cover !important; color: #fff !important;}
+.meetTeam_nav_info ul li a.active {background: url(../images/teamNav_bg.png) no-repeat !important; background-size: cover !important; color: #fff !important;}
 
 
 

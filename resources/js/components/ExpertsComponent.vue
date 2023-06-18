@@ -5,7 +5,7 @@
                 <div class="meetTeam_nav_info">
                     <ul>
                         <li v-for="category in categories" :key="category.id">
-                            <a @click="selectCategory(category)">{{
+                            <a @click="selectCategory(category)" :class="{ active:  (this.selectedCategory && category.id === this.selectedCategory.id) }">{{
                                 category.title
                             }}</a>
                         </li>
@@ -95,11 +95,11 @@
                     <div class="ourExperience">
                         <div class="ourExperience_col">
                             <strong>Experience</strong>
-                            <p>{{ experience }}</p>
+                            <p>{{ expert.experience }}</p>
                         </div>
                         <div class="ourExperience_col">
                             <strong>Availability</strong>
-                            <p>{{ availability }}</p>
+                            <p>{{ expert.availability }}</p>
                         </div>
                     </div>
 
