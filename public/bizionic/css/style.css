@@ -507,6 +507,7 @@ p {
 
 }
 .clientBizionic_partners ul li a:hover { border-color: #000;}
+.clientBizionic_partners ul li a.active { border-color: #000;    background: #f1f1f1;}
 
 .clientBizionic_partners ul li a img { width: 75px; height: 45px; object-fit: contain;}
 
@@ -520,7 +521,7 @@ p {
 
 .clientBizionic_reviews_info p { text-align: right; color: #58595b;}
 
-.clientBizionic_reviews_info strong { text-align: right; display: block;  color: #58595b;}
+.clientBizionic_reviews_info strong { text-align: right; display: block;  color: #58595b;font-family: 'avenirblack'; font-size: 18px;}
 
 
 
@@ -647,6 +648,11 @@ p {
 .bizionic_about p a:hover { text-decoration: none;}
 
 .bizionic_about p  i { margin-right: 8px;  }
+
+.bizionic_about p.addressP {  min-height: 74px;}
+
+
+ 
 
 
 .btn_subcribe .btn_default { background: #cfd1d2; border-radius: 5px; color: #555;}
@@ -1528,7 +1534,7 @@ body, html {scroll-behavior: smooth; }
 
 
 
-.servicesBanner .mainBanner_text  a { max-width: 160px; margin-top: 30px   ;}
+.servicesBanner .mainBanner_text  a { max-width: 160px ;}
 
 .lavrageServices .servicesProvided_info ul  { color: #000; font-size: 18px;font-family: 'avenirmedium'; font-weight: bold;}
 .lavrageServices .servicesProvided_info ul li a { font-size: 20px;font-family: 'avenirmedium'; font-weight: bold;}
@@ -1631,14 +1637,14 @@ body, html {scroll-behavior: smooth; }
     flex-wrap: wrap;
     justify-content: space-between;}
 
-.floatingMenu_col_list ul li { padding: 1px 20px 1px 0px;
+.floatingMenu_col_list ul li { padding: 2px 20px 2px 0px;
     list-style: disc;
     font-size: 14px;
     color: #5a5a5a;
     margin-left: 0px;
     width: 50%;}
 
-.floatingMenu_col_list ul li a { border-bottom: 0px; font-size: 11px; padding-bottom: 0px; padding-right: 0px;font-family: 'avenirmedium'; color: #5a5a5a; }
+.floatingMenu_col_list ul li a { border-bottom: 0px; font-size: 12px; padding-bottom: 0px; padding-right: 0px;font-family: 'avenirmedium'; color: #5a5a5a; }
 
 
 .has_ul { display: flex !important;}
@@ -1954,7 +1960,7 @@ body, html {scroll-behavior: smooth; }
 
 .sofDev_info_text { width: 100%;}
 
-.sofDev_info_text p { padding-bottom: 16px;}
+.sofDev_info_text p { padding-bottom: 10px;}
 
 .sofDev_info_text p strong {font-family: 'avenirblack';}
 
@@ -2710,7 +2716,7 @@ body, html {scroll-behavior: smooth; }
 .innerColum_menu  ul li {  padding: 1px 0px 1px 0px;}
 
 
-.innerColum_menu_outer { width: 100%; height: 100%;border-right: 1px solid #5a5a5a;padding: 10px 20px 15px 20px; min-height: 500px;}
+.innerColum_menu_outer { width: 100%; height: 100%;border-right: 1px solid #5a5a5a;padding: 10px 20px 15px 20px; min-height: 575px;}
 
 .border_0 { border: 0px !important;}
 
@@ -2740,19 +2746,31 @@ body, html {scroll-behavior: smooth; }
 
 
 
+.fldev_info p {
+    padding-bottom: 28px;
+}
 
 
+.marketingFloating_menu .columnSett { width: 100% !important;flex: 0 0 41%  !important;max-width: 41%  !important;}
+.technologyFloating_menu .columnSett { width: 100% !important;flex: 0 0 33%  !important;max-width: 33%  !important;}
+.servicesFloating_menu .columnSett { width: 100% !important;flex: 0 0 41%  !important;max-width: 41%  !important;}
+.industriesFloating_menu  .columnSett { width: 100% !important;flex: 0 0 57%  !important;max-width: 57%  !important;}    
+
+.clientBizionic_reviews_info p { transform: translateX(-20px);  opacity: 0; min-height: 270px;
+    transition: all 1s ease;
+    -moz-transition: all 1s ease;
+    -ms-transition: all 1s ease;
+    -o-transition: all 1s ease;
+    -webkit-transition: all 1s ease;
+}
+.showMe p {transform: translateX(0px); opacity: 1;}
 
 
+.clientBizionic_reviews_info  {  height: 100%;}
 
-
-
-
-
-
-
-
-
+.clientBizionic_reviews  { padding-left: 25px; height: 100%;}
+ 
+.reviewsInner_client  { width: 100%; height: 100%;}
 
 
 

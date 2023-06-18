@@ -45,8 +45,8 @@
                     Marketing Solution’s Privacy Policy, You can withdraw your consent by Contacting us.</p>
 
                 <div class="project_form_submit">
-                    <input type="text" class="hidden" name="lead_type" id="hire_lead_type" value="Hire Now">
-                    <input type="text" class="hidden" name="honeypot" id="honeypot">
+                    <input type="text" class="hidden d-none" name="lead_type" id="hire_lead_type" value="Hire Now">
+                    <input type="text" class="hidden  d-none" name="honeypot" id="honeypot">
                     <input type="submit" value="Augment your Team" class="btn_default" />
                 </div>
             </div>

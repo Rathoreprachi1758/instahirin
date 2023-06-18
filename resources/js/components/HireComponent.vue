@@ -79,14 +79,14 @@
                         <div class="project_form_submit">
                             <input
                                 type="text"
-                                class="hidden"
+                                class="hidden d-none"
                                 name="lead_type"
                                 id="hire_lead_type"
                                 value="Hire Now"
                             />
                             <input
                                 type="text"
-                                class="hidden"
+                                class="hidden  d-none"
                                 name="honeypot"
                                 id="honeypot"
                             />

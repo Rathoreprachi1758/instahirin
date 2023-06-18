@@ -71,7 +71,7 @@
                                         <!-- india adress -->
                                         <div class="addressTab_data" id="address1" style="display: block;">
                                             <h6>Bizionic Technologies & Marketing Solution Private Limited</h6>
-                                            <p>3rd Floor, Office No 1A, 6-3-1090/B/4,
+                                            <p class="addressP">3rd Floor, Office No 1A, 6-3-1090/B/4,
                                                 The Grand Building, KFC Building, Raj Bhavan Rd,
                                                 Somajiguda, Hyderabad, Telangana 500082</p>
                                             <!-- <p>Pin Code : 500082</p> -->
@@ -86,7 +86,7 @@
                                         <!-- uae adress  -->
                                         <div class="addressTab_data" id="address2">
                                             <h6>Bizionic Technologies & Marketing Solution Private Limited</h6>
-                                            <p>Hub71, 14th floor, Al Khatem Tower, Abu Dhabi Global Market Square Al Maryah Island, Abu Dhabi - U.A.E.</p>
+                                            <p class="addressP">Hub71, 14th floor, Al Khatem Tower, Abu Dhabi Global Market Square Al Maryah Island, Abu Dhabi - U.A.E.</p>
                                             <!-- <p>Pin Code : 500082</p> -->
                                             <div class="infoLinks">
                                                 <!-- <p class="pr-4"><i class="fa fa-mobile" style="font-size: 20px" aria-hidden="true"></i> <a href="tel:+91 9063756697"> +91 9059360184</a></p> -->
@@ -99,7 +99,7 @@
                                         <!-- ukrain adress  -->
                                         <div class="addressTab_data" id="address3">
                                             <h6>Bizionic Technologies & Marketing Solution Private Limited</h6>
-                                            <p>HUB 4.0 PODIL, Yaroslavsky Lane 1/3, Kyiv Ukraine.</p>
+                                            <p class="addressP">HUB 4.0 PODIL, Yaroslavsky Lane 1/3, Kyiv Ukraine.</p>
                                             <!-- <p>Pin Code : 500082</p> -->
                                             <div class="infoLinks">
                                                 <!-- <p class="pr-4"><i class="fa fa-mobile" style="font-size: 20px" aria-hidden="true"></i> <a href="tel:+91 9063756697"> +91 9059360184</a></p> -->
@@ -112,7 +112,7 @@
                                         <!-- singapoor adress  -->
                                         <div class="addressTab_data" id="address4">
                                             <h6>Bizionic Technologies & Marketing Solution Private Limited</h6>
-                                            <p>230 Victoria Street, Level 15, Bugis Junctions Tower, Singapore 188024.</p>
+                                            <p class="addressP">230 Victoria Street, Level 15, Bugis Junctions Tower, Singapore 188024.</p>
                                             <!-- <p>Pin Code : 500082</p> -->
                                             <div class="infoLinks">
                                                 <!-- <p class="pr-4"><i class="fa fa-mobile" style="font-size: 20px" aria-hidden="true"></i> <a href="tel:+91 9063756697"> +91 9059360184</a></p> -->
