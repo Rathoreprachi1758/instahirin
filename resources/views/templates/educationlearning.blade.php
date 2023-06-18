@@ -95,7 +95,7 @@
                                 <div class="industryNew_section1_info">
                                     <h3>
                                         <strong>EDUCATION </strong> <br>  <strong class="tittleColor_black">AND</strong> 
-                                        <strong class="">e-LEARNING</strong> 
+                                        <strong class=""> e-LEARNING</strong> 
                                     </h3>
                                     <h5>Get Innovative with e-Learning  </h5>
 

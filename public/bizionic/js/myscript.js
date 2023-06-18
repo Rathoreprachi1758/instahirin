@@ -311,6 +311,22 @@ $(function() {
 
 
 
+
+       // client reviews tabs 
+
+    $('.clientBizionic_partners ul li a').on('click', function(event) {  
+      event.preventDefault();
+    
+      $('.active').removeClass('active');
+      $(this).addClass('active');
+      $('.clientBizionic_reviews_info').hide();
+      $($(this).attr('href')).show();
+      $($(this).attr('href')).addClass('showMe');
+    });
+     $('.clientBizionic_partners ul li  a:first').trigger('click');
+
+
+
 });
 
 

@@ -161,7 +161,7 @@
                 <div class="sofDev_info">
                     <div class="row">
                         <div class="col-lg-6 col-md-6">
-                            <div class="sofDev_info_text">
+                            <div class="sofDev_info_text fldev_info">
                                 <h5>Why Hire Our Software Developers?</h5>
                                 
                                 <p><strong>Expertise:</strong> Our developers are skilled in a wide range of programming languages and technologies, from front-end development with HTML, CSS, and JavaScript to

@@ -93,7 +93,7 @@
                                     <h3>
                                         <small>BANKING </small> <br>  
                                         <small class="tittleColor_black">AND</small> 
-                                        <small>FINANCE</small><br> 
+                                        <small> FINANCE</small><br> 
                                         <strong class="tittleColor_black">SOLUTIONS</strong> 
                                     </h3> 
 
