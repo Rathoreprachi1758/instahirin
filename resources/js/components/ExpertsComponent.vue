@@ -71,7 +71,7 @@
                                     v-for="(experty, index) in expert.experties"
                                     :key="index"
                                 >
-                                    <span>{{ experty.title }}</span>
+                                    <span @click="fetchExpertsByExperty(experty)">{{ experty.title }}</span>
                                 </li>
                             </ul>
                         </div>
@@ -86,7 +86,7 @@
                                     v-for="(skill, index) in expert.skills"
                                     :key="index"
                                 >
-                                    <span>{{ skill.title }}</span>
+                                    <span @click="fetchExpertsBySkill(skill)">{{ skill.title }}</span>
                                 </li>
                             </ul>
                         </div>
@@ -208,10 +208,13 @@ export default {
                     console.error(error);
                 });
         },
+        // Filter Experts by Category
         fetchExpertsByCategory(category) {
-            //category_id
+
+            const requestCategory = { category_id: category.id };
+
             axios
-                .post("/api/v1/experts/category")
+                .post("/api/v1/experts/category", requestCategory)
                 .then((response) => {
                     this.experts = response.data;
                 })
@@ -219,10 +222,14 @@ export default {
                     console.error(error);
                 });
         },
+
+        // Filter Experts by Experty
         fetchExpertsByExperty(experty) {
             // keyword = Java | Node
+            const requestExperty = { keyword: experty.title };
+
             axios
-                .post("/api/v1/experts/experties")
+                .post("/api/v1/experts/experties" , requestExperty)
                 .then((response) => {
                     this.experts = response.data;
                 })
@@ -230,10 +237,13 @@ export default {
                     console.error(error);
                 });
         },
+
+        // Filter Experts by Skill
         fetchExpertsBySkill(skill) {
             //// keyword = Java | Node
+            const requestSkill = { keyword: skill.title };
             axios
-                .post("/api/v1/experts/skills")
+                .post("/api/v1/experts/skills", requestSkill)
                 .then((response) => {
                     this.experts = response.data;
                 })
