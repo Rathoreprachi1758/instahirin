@@ -193,7 +193,7 @@ export default {
                 .get("/api/v1/expert_categories")
                 .then((response) => {
                     this.categories = response.data;
-                    this.selectCategory(this.categories[0]);
+                    this.selectedCategory = this.categories[0];
                 })
                 .catch((error) => {
                     console.error(error);
