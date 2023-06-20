@@ -275,14 +275,13 @@ export default {
                 return;
             }
 
-            this.filteredExpertsByCategory = this.experts.filter((expert) => {
-                const expertisesMatch = expert.expertises.some((expertise) =>
-                    expertise.toLowerCase().includes(searchQuery)
-                );
-                const workedInMatch = expert.workedIn.some((workedIn) =>
-                    workedIn.toLowerCase().includes(searchQuery)
-                );
-                return expertisesMatch || workedInMatch;
+            axios
+                .post("/api/v1/experts/search", { keyword: searchQuery })
+                .then((response) => {
+                this.experts = response.data;
+            })
+                .catch((error) => {
+                console.error(error);
             });
         },
     },
