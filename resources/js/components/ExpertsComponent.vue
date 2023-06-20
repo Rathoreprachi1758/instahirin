@@ -43,7 +43,7 @@
             <a href="#" class="btn_default">Show All</a>
         </div>
         <div class="meetTeam_sliderSection pt-0">
-            <!-- <carousel :items="2" :margin="20"> -->
+            <!-- <carousel :items="1" :margin="20"> -->
             <div class="item" v-for="(expert, index) in experts" :key="index">
                 <div class="meetTeam_info ml-2">
                     <div class="meetProfile">
@@ -170,7 +170,7 @@
 
 <script>
 import axios from "axios";
-import { carousel } from "vue-owl-carousel";
+import { carousel } from 'vue-owl-carousel';
 
 //import { carousel, slide } from "vue-carousel";
 
@@ -269,21 +269,21 @@ export default {
         filterExperts() {
             const searchQuery = this.searchQuery.trim().toLowerCase();
 
-            if (!searchQuery) {
-                this.filteredExpertsByCategory = this.experts;
-                return;
+        if (!searchQuery) {
+            this.fetchExpertsByCategory(this.selectedCategory);
+            return;
             }
 
-            this.filteredExpertsByCategory = this.experts.filter((expert) => {
-                const expertisesMatch = expert.expertises.some((expertise) =>
-                    expertise.toLowerCase().includes(searchQuery)
-                );
-                const workedInMatch = expert.workedIn.some((workedIn) =>
-                    workedIn.toLowerCase().includes(searchQuery)
-                );
-                return expertisesMatch || workedInMatch;
-            });
+        axios
+            .post("/api/v1/experts/search", { keyword: searchQuery })
+            .then((response) => {
+            this.experts = response.data;
+        })
+        .catch((error) => {
+            console.error(error);
+        });
         },
+
     },
     computed: {
         filteredExpertsByCategory() {
