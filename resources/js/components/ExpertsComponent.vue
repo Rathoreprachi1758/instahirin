@@ -44,72 +44,81 @@
         </div>
         <div class="meetTeam_sliderSection pt-0">
             <!-- <carousel :items="2" :margin="20"> -->
-            <div class="item" v-for="(expert, index) in experts" :key="index">
-                <div class="meetTeam_info ml-2">
-                    <div class="meetProfile">
-                        <span
-                            ><img
-                                :src="`/storage/${expert.avatar}`"
-                                :alt="expert.title"
-                        /></span>
-                        <div class="meetProfile_tittle">
-                            <strong>{{ expert.title }}</strong>
-                            <p>{{ expert.sub_title }}</p>
-                        </div>
-                    </div>
+            <carousel :items-to-show="1.5">
+                <slide v-for="(expert, index) in experts" :key="expert">
+                    <div class="item">
+                        <div class="meetTeam_info ml-2">
+                            <div class="meetProfile">
+                                <span
+                                    ><img
+                                        :src="`/storage/${expert.avatar}`"
+                                        :alt="expert.title"
+                                /></span>
+                                <div class="meetProfile_tittle">
+                                    <strong>{{ expert.title }}</strong>
+                                    <p>{{ expert.sub_title }}</p>
+                                </div>
+                            </div>
 
-                    <div class="descriptionText">
-                        <p v-html="expert.description"></p>
-                    </div>
+                            <div class="descriptionText">
+                                <p v-html="expert.description"></p>
+                            </div>
 
-                    <div class="ourExperties">
-                        <label class="expertTittle">• Expert in</label>
+                            <div class="ourExperties">
+                                <label class="expertTittle">• Expert in</label>
 
-                        <div class="ourExperties_list">
-                            <ul>
-                                <li
-                                    v-for="(experty, index) in expert.experties"
-                                    :key="index"
+                                <div class="ourExperties_list">
+                                    <ul>
+                                        <li
+                                            v-for="(experty, index) in expert.experties"
+                                            :key="index"
+                                        >
+                                            <span @click="fetchExpertsByExperty(experty)">{{ experty.title }}</span>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+
+                            <div class="ourWorked">
+                                <label class="">Also worked with</label>
+
+                                <div class="ourWorked_list">
+                                    <ul>
+                                        <li
+                                            v-for="(skill, index) in expert.skills"
+                                            :key="index"
+                                        >
+                                            <span @click="fetchExpertsBySkill(skill)">{{ skill.title }}</span>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+
+                            <div class="ourExperience">
+                                <div class="ourExperience_col">
+                                    <strong>Experience</strong>
+                                    <p>{{ expert.experience }}</p>
+                                </div>
+                                <div class="ourExperience_col">
+                                    <strong>Availability</strong>
+                                    <p>{{ expert.availability }}</p>
+                                </div>
+                            </div>
+
+                            <div class="hireBttn">
+                                <a href="temp/hire-form" class="btn_default"
+                                    >Hire {{ expert.title }}</a
                                 >
-                                    <span @click="fetchExpertsByExperty(experty)">{{ experty.title }}</span>
-                                </li>
-                            </ul>
+                            </div>
                         </div>
                     </div>
-
-                    <div class="ourWorked">
-                        <label class="">Also worked with</label>
-
-                        <div class="ourWorked_list">
-                            <ul>
-                                <li
-                                    v-for="(skill, index) in expert.skills"
-                                    :key="index"
-                                >
-                                    <span @click="fetchExpertsBySkill(skill)">{{ skill.title }}</span>
-                                </li>
-                            </ul>
-                        </div>
-                    </div>
-
-                    <div class="ourExperience">
-                        <div class="ourExperience_col">
-                            <strong>Experience</strong>
-                            <p>{{ expert.experience }}</p>
-                        </div>
-                        <div class="ourExperience_col">
-                            <strong>Availability</strong>
-                            <p>{{ expert.availability }}</p>
-                        </div>
-                    </div>
-
-                    <div class="hireBttn">
-                        <a href="temp/hire-form" class="btn_default"
-                            >Hire {{ expert.title }}</a
-                        >
-                    </div>
-                </div>
-            </div>
+                </slide>
+                <template #addons>
+                <navigation />
+                <pagination />
+                </template>
+            </carousel>    
+            
             <!-- </carousel> -->
         </div>
     </div>
@@ -170,9 +179,8 @@
 
 <script>
 import axios from "axios";
-import { carousel } from "vue-owl-carousel";
-
-//import { carousel, slide } from "vue-carousel";
+import 'vue3-carousel/dist/carousel.css'
+import { Carousel, Slide, Pagination, Navigation } from 'vue3-carousel'
 
 export default {
     data() {
@@ -298,7 +306,10 @@ export default {
         },
     },
     components: {
-        carousel,
+        Carousel,
+        Slide,
+        Pagination,
+        Navigation,
     },
 };
 </script>
