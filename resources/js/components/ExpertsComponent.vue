@@ -43,20 +43,6 @@
             <a href="#" class="btn_default">Show All</a>
         </div>
         <div class="meetTeam_sliderSection pt-0">
-            <!-- <carousel :items="1" :margin="20">
-            <div class="item" v-for="(expert, index) in experts" :key="index">
-                <div class="meetTeam_info ml-2">
-                    <div class="meetProfile">
-                        <span
-                            ><img
-                                :src="`/storage/${expert.avatar}`"
-                                :alt="expert.title"
-                        /></span>
-                        <div class="meetProfile_tittle">
-                            <strong>{{ expert.title }}</strong>
-                            <p>{{ expert.sub_title }}</p>
-                        </div>
-                    </div> -->
             <!-- <carousel :items="2" :margin="20"> -->
             <carousel :items-to-show="2.90">
                 <slide v-for="(expert) in experts" :key="expert">
@@ -133,37 +119,7 @@
                 </template>
             </carousel>
 
-                    <div class="ourWorked">
-                        <label class="">Also worked with</label>
-
-                        <div class="ourWorked_list">
-                            <ul>
-                                <li
-                                    v-for="(skill, index) in expert.skills"
-                                    :key="index"
-                                >
-                                    <span @click="fetchExpertsBySkill(skill)">{{ skill.title }}</span>
-                                </li>
-                            </ul>
-                        </div>
-                    </div>
-
-                    <div class="ourExperience">
-                        <div class="ourExperience_col">
-                            <strong>Experience</strong>
-                            <p>{{ experience }}</p>
-                        </div>
-                        <div class="ourExperience_col">
-                            <strong>Availability</strong>
-                            <p>{{ availability }}</p>
-                        </div>
-                    </div>
-
-                    <div class="hireBttn">
-                        <a href="temp/hire-form" class="btn_default"
-                            >Hire {{ expert.title }}</a
-                        >
-                    </div>
+            <!-- </carousel> -->
         </div>
     </div>
 </template>
@@ -177,53 +133,52 @@
     margin-right: 20px;
 } */
 
-// .meetTeam_sliderSection {
-//     overflow: hidden;
-// }
+.meetTeam_sliderSection {
+    overflow: hidden; /* Hide any overflowing content */
+}
 
-// .meetTeam_sliderSection {
-//     display: flex;
-//     overflow-x: auto;
-//     scroll-behavior: smooth;
-// }
+.meetTeam_sliderSection {
+    display: flex; /* Display the experts in a flex container */
+    overflow-x: auto; /* Enable horizontal scrolling */
+    scroll-behavior: smooth; /* Add smooth scrolling behavior */
+}
 
-// .meetTeam_sliderSection .item {
-//     flex: 0 0 400px;
-//     margin-right: 20px;
-// }
+.meetTeam_sliderSection .item {
+    flex: 0 0 400px; /* Set the width of each expert section */
+    margin-right: 20px; /* Adjust the spacing between expert sections */
+}
 
 /* Hide the scrollbar */
-// .meetTeam_sliderSection::-webkit-scrollbar {
-//     width: 0;
-//     height: 0;
-//     background: transparent;
-// }
+.meetTeam_sliderSection::-webkit-scrollbar {
+    width: 0;
+    height: 0;
+    background: transparent;
+}
 
 /* Optional: Style the navigation arrows for scrolling */
-// .meetTeam_nav .owl-nav .owl-prev,
-// .meetTeam_nav .owl-nav .owl-next {
-//     position: absolute;
-//     top: 50%;
-//     transform: translateY(-50%);
-//     background: #fff;
-//     padding: 5px;
-//     border-radius: 50%;
-//     font-size: 20px;
-//     z-index: 1;
-// }
+.meetTeam_nav .owl-nav .owl-prev,
+.meetTeam_nav .owl-nav .owl-next {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background: #fff;
+    padding: 5px;
+    border-radius: 50%;
+    font-size: 20px;
+    z-index: 1;
+}
 
-// .meetTeam_nav .owl-nav .owl-prev {
-//     left: 10px;
-// }
+.meetTeam_nav .owl-nav .owl-prev {
+    left: 10px;
+}
 
-// .meetTeam_nav .owl-nav .owl-next {
-//     right: 10px;
-// }
+.meetTeam_nav .owl-nav .owl-next {
+    right: 10px;
+}
 </style>
 
 <script>
 import axios from "axios";
-//import { carousel} from 'vue-owl-carousel';
 import 'vue3-carousel/dist/carousel.css'
 import { Carousel, Slide, Pagination, Navigation } from 'vue3-carousel'
 
@@ -323,21 +278,20 @@ export default {
         filterExperts() {
             const searchQuery = this.searchQuery.trim().toLowerCase();
 
-        if (!searchQuery) {
-            this.fetchExpertsByCategory(this.selectedCategory);
-            return;
+            if (!searchQuery) {
+                this.filteredExpertsByCategory = this.experts;
+                return;
             }
 
-        axios
-            .post("/api/v1/experts/search", { keyword: searchQuery })
-            .then((response) => {
-            this.experts = response.data;
-        })
-        .catch((error) => {
-            console.error(error);
-        });
+            axios
+                .post("/api/v1/experts/search", { keyword: searchQuery })
+                .then((response) => {
+                this.experts = response.data;
+            })
+                .catch((error) => {
+                console.error(error);
+            });
         },
-
     },
     computed: {
         filteredExpertsByCategory() {
@@ -355,9 +309,6 @@ export default {
         Slide,
         Pagination,
         Navigation,
-    },
-    props: {
-        msg: String
     },
 };
 </script>
