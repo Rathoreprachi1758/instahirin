@@ -95,7 +95,7 @@
                                 <div class="industryNew_section1_info">
                                     <h3>
                                         <small>FOOD (ORDERING) </small> <br>  
-                                        <small class="tittleColor_black">&</small> 
+                                        <small class="tittleColor_black">& </small> 
                                         <small>BEVERAGE</small><br> 
                                         <strong class="tittleColor_black">SOLUTIONS</strong> 
                                     </h3> 

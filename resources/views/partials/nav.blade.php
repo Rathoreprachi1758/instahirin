@@ -75,7 +75,7 @@
                         </div>
                     </div>
                     @endforeach
-                    <div class=" col-lg-3 col-md-3  pl-0">
+                    <div class=" col-lg-3 col-md-3 columnSett  pl-0">
                         @include('partials.menu_address')
                     </div>
                 </div>

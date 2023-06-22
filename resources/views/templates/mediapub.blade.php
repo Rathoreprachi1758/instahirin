@@ -95,7 +95,7 @@
                                 <div class="industryNew_section1_info">
                                     <h3>
                                         <strong>MEDIA </strong> <br>  <strong class="tittleColor_black">&</strong> 
-                                        <strong class="">PUBLISHING</strong> 
+                                        <strong class=""> PUBLISHING</strong> 
                                     </h3>
 
                                     <h5>Surpass Your Rivals with BIZIONIC</h5>

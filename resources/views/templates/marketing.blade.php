@@ -497,10 +497,7 @@
 
 
     <client-component></client-component>
-
-
-
-
+    
 
     <!-- get connect section -->
 

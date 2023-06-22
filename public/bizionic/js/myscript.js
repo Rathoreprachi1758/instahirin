@@ -311,6 +311,22 @@ $(function() {
 
 
 
+
+       // client reviews tabs 
+
+    $('.clientBizionic_partners ul li a').on('click', function(event) {  
+      event.preventDefault();
+    
+      $('.active').removeClass('active');
+      $(this).addClass('active');
+      $('.clientBizionic_reviews_info').hide();
+      $($(this).attr('href')).show();
+      $($(this).attr('href')).addClass('showMe');
+    });
+     $('.clientBizionic_partners ul li  a:first').trigger('click');
+
+
+
 });
 
 
@@ -371,19 +387,19 @@ $(window).scroll(function() {
 var firstOpen = true;
 var time;
 
-$('#timePicker').datetimepicker({
-  useCurrent: false,
-  format: "hh:mm A"
-}).on('dp.show', function() {
-  if(firstOpen) {
-    time = moment().startOf('day');
-    firstOpen = false;
-  } else {
-    time = "01:00 PM"
-  }
+// $('#timePicker').datetimepicker({
+//   useCurrent: false,
+//   format: "hh:mm A"
+// }).on('dp.show', function() {
+//   if(firstOpen) {
+//     time = moment().startOf('day');
+//     firstOpen = false;
+//   } else {
+//     time = "01:00 PM"
+//   }
   
-  $(this).data('DateTimePicker').date(time);
-});
+//   $(this).data('DateTimePicker').date(time);
+// });
    
 
 
