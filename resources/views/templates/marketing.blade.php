@@ -96,8 +96,8 @@
 
      <div id="goto_market" class="markServices_section aos-init aos-animate" data-aos="fade-up" data-aos-duration="1500" data-aos-easing="ease">
         <div class="custom_tittle">
-            <h2>Our Marketing Services</h2>
-            <p>We Are Your Growth Partners</p>
+            <h2><strong>Our</strong> Marketing Services</h2>
+            <p class="p_color">We Are Your Growth Partners</p>
         </div>
 
 
@@ -346,7 +346,7 @@
         <div class="auto_container">
             <div class="digitalServices_section_detail">
                 <div class="custom_tittle aos-init aos-animate" data-aos="fade-up" data-aos-duration="500" data-aos-easing="ease">
-                    <h2>Indo-China Digital Services</h2>
+                    <h2><strong>Indo-China</strong>  Digital Services</h2>
                     <p class="p_color">Reach Out To 2.80 Billion Market And Audience</p>
                 </div>
 
@@ -380,8 +380,8 @@
         <div class="auto_container">
             <div class="areaIntrest_section_detail aos-init aos-animate" data-aos="zoom-in" data-aos-duration="800" data-aos-easing="ease">
                 <div class="custom_tittle">
-                    <h2>Choose Your Area Of Interest</h2>
-                    <p>We Serve Businesses Of All Sizes And Industries</p>
+                    <h2><strong>Choose Your</strong> Area Of Interest</h2>
+                    <p class="p_color">We Serve Businesses Of All Sizes And Industries</p>
                 </div>
 
 
@@ -404,7 +404,7 @@
         <div class="auto_container">
             <div class="ourStory_section_detail">
                 <div class="custom_tittle aos-init aos-animate" data-aos="fade-up" data-aos-duration="800" data-aos-easing="ease">
-                    <h2>Watch Our Story</h2>
+                    <h2><strong>Watch</strong> Our Story</h2>
                     <p class="p_color">We Are Your Growth Partners</p>
                 </div>
 
@@ -461,8 +461,8 @@
             </div>
 
             <div class="custom_tittle  aos-init aos-animate"   data-aos="fade-up" data-aos-duration="800" data-aos-easing="ease">
-                <p>Portfolio</p>
-                <h2>Our Work</h2>
+                <p class="p_color">Portfolio</p>
+                <h2><strong>Our</strong> Work</h2>
             </div>
 
             <div class="at_bizionic_steps">
@@ -653,7 +653,7 @@
             <div class="auto_container">
                 <div class="latestBlog_section_detail">
                     <div class="custom_tittle " >
-                        <h2 class="text-white">Our Latest Blogs</h2>
+                        <h2 class="text-white"><strong>Our</strong> Latest Blogs</h2>
                     </div>
 
                     <div class="blog_avatar aos-init aos-animate" >

@@ -322,7 +322,7 @@ h6 { font-size: 18px; }
 }
 
 .clientBizionic_reviews { 
-    padding-left: 20px; 
+    padding-left: 0px; 
 }
 .clientBizionic_partners ul li {
     width: 25%;
@@ -354,7 +354,7 @@ h6 { font-size: 18px; }
     padding-left: 50px;
 }
 .connected_form { 
-    padding-right: 40px;
+    padding-right: 0px;
 }
 
 
@@ -446,7 +446,7 @@ h6 { font-size: 18px; }
 }
 
 .clientMarketing .clientBizionic_section_detail {
-    padding-top: 150px;
+    padding-top: 100px;
     padding-bottom: 60px;
 }
 
@@ -721,16 +721,34 @@ h6 { font-size: 18px; }
 }
 
 
+.flotNav_added .header_detail {
+    position: relative;
+}
+
+.frList_sec {
+    padding-left: 0px;
+}
+
+.technology_provides ul li a img {
+    width: 95px;
+    height: 95px;}
 
 
+.technology_provides ul li {
+    padding: 5px 5px;
+}
+.technology_master_list ul li {
+    padding: 15px 0px;
+}
 
+.technologyForm .addFile_button p {
+    min-width: 100%;
+}
+.technologyForm .addFile_button p {
+    min-width: auto;
+}
 
-
-
-
-
-
-
+.openPosition_sec .careerPage_inner { padding: 70px 20px;}
 
 
 
@@ -924,7 +942,7 @@ h6 { font-size: 18px; }
 }
 
 .clientBizionic_info {
-    padding: 25px 20px;
+    padding: 20px 20px;
 }
 
 .clientBizionic_partners ul li {
@@ -1176,7 +1194,7 @@ h6 { font-size: 18px; }
 }
 
 .bizionicWay { 
-    margin-top: -40px;
+    margin-top: 30px;
 }
 .bizionicWay strong { 
     font-size: 20px; 
@@ -1454,10 +1472,10 @@ h6 { font-size: 18px; }
 
 .lavrageServices .servicesProvided_info ul li a { display: block;
     text-align: center;
-    font-size: 15px;}
+    font-size: 13px;}
 
 .lavrageServices .servicesProvided_info ul li {
-    padding: 10px 8px;
+    padding: 7px 7px;
 }
 
 .services_avatar a img {
@@ -1818,7 +1836,7 @@ h6 { font-size: 18px; }
 }
 
 .advanceCareer_form { 
-    padding: 20px; 
+    padding: 15px; 
 }
 
 .advanceCareer_section { 
@@ -1826,7 +1844,90 @@ h6 { font-size: 18px; }
 }
 
 
-.marketingTalent_info .industryNew_section1_avatar { padding-top: 25px;}
+.flotNav_added .header_detail {
+    position: relative;
+}
+
+.talentCheckList .btn_default, .talentCheckList .btn_default_white {
+    max-width: 360px;
+    margin-top: 20px;
+    font-size: 13px; margin-bottom: 20px;
+}
+.talentCheck_list_info {
+    width: 100%;
+    padding: 60px 0px 10px 0px;
+}
+
+
+.clientBizionic_info .row { flex-flow: column-reverse;}
+
+.clientBizionic_partners { margin-top: 20px; overflow-x: auto; margin-bottom: 0px;}
+
+.clientBizionic_partners ul { 
+    flex-wrap: inherit;
+    width: 2500px;
+}
+
+.chinaPage .mainBanner_text span { 
+    margin-top: -60px;
+    margin-bottom: 40px;
+}
+
+.chinaAgency_list ul li { 
+    margin-left: 15px;
+}
+
+.chinaAgency_list ul li p {
+    font-size: 15px; padding-bottom: 10px;
+}
+
+
+.chinaAgency_list { padding-bottom: 40px;}
+
+.provider_section .industryNew_section2_cols { 
+    transform: translateY(-60px);
+}
+
+.industryNew_section2_info .custom_tittle { padding-bottom: 0px;}
+
+.marketingTalent_info .custom_tittle p {
+    font-size: 15px;
+    line-height: 1.6;
+}
+.marketing_talent_section { 
+    margin-bottom: 50px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
