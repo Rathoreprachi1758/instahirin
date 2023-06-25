@@ -1,5 +1,6 @@
 <div class="main_nav">
-    <a href="javascript:void(0)" class="closeNav">&nbsp;</a>
+    <a href="javascript:void(0)" class="closeNav">&nbsp;</a> 
+    
     <ul>
         @foreach($menus as $key => $menu)
         @php

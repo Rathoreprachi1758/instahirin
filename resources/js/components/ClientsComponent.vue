@@ -23,11 +23,13 @@
                         <div class="col-lg-6 col-md-6">
                             <div class="clientBizionic_reviews">
                                 <div class="reviewsInner_client">
-                                        <div v-for="(client, index) in clients" :key="client.id" class="clientBizionic_reviews_info" :id="`cl_logo_${index+1}`" :style="{display:client.display}">
+                                    <div v-for="(client, index) in clients" :key="client.id" class="clientBizionic_reviews_info" :id="`cl_logo_${index+1}`" :style="{display:client.display}">
+                                        <div class="reviewInner">
                                             <span><i class="fa fa-quote-left" aria-hidden="true"></i></span>
                                             <p>{{ client.description }}</p>
                                             <strong>{{ client.title }}</strong>
                                         </div> 
+                                    </div>
                                 </div>
                             </div>
                         </div>

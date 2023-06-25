@@ -39,7 +39,7 @@
     <!--* Expert Slider Section -->
 
     <div class="auto_container">
-        <div class="showAll_btn mt-3 pr-3">
+        <div class="showAll_btn mt-3 ">
             <a href="#" class="btn_default">Show All</a>
         </div>
         <div class="meetTeam_sliderSection pt-0">
@@ -47,7 +47,7 @@
             <carousel :items-to-show="2.90">
                 <slide v-for="(expert) in experts" :key="expert">
                     <div class="item">
-                        <div class="meetTeam_info ml-2">
+                        <div class="meetTeam_info">
                             <div class="meetProfile">
                                 <span
                                     ><img
@@ -129,8 +129,7 @@
     display: flex;
 }
 .meetTeam_slider .item {
-    flex: 0 0 400px;
-    margin-right: 20px;
+    
 } */
 
 .meetTeam_sliderSection {

@@ -515,11 +515,13 @@ p {
 .clientBizionic_reviews {  width: 100%; height: 100%; padding-left: 50px; position: relative;}
 
 
-.clientBizionic_reviews_info { width: 100%;background: #fff;padding: 50px 40px; position: relative; }
+.clientBizionic_reviews_info { width: 100%;background: #fff;padding:40px 30px; position: relative; }
 
-.clientBizionic_reviews_info span { font-size: 48px; display: block; padding-bottom: 30px;}
+.clientBizionic_reviews_info span {     font-size: 40px;
+    display: block;
+    padding-bottom: 10px;}
 
-.clientBizionic_reviews_info p { text-align: right; color: #58595b;}
+.clientBizionic_reviews_info p {   color: #58595b; padding-bottom: 25px; text-align: justify;line-height: 1.5;}
 
 .clientBizionic_reviews_info strong { text-align: right; display: block;  color: #58595b;font-family: 'avenirblack'; font-size: 18px;}
 
@@ -840,7 +842,7 @@ p {
 
 .markServices_tabsBtn_info ul li { width: 33.33%;}
 
-.markServices_tabsBtn_info ul li a { padding: 25px 20px; text-align: center; color: #414042; font-size: 18px; display: block; font-family: 'avenirblack';
+.markServices_tabsBtn_info ul li a { padding: 25px 20px; text-align: center; color: #414042; font-size: 18px; display: block; 
 
     transition: all 0.3s ease;
     -moz-transition: all 0.3s ease;
@@ -850,8 +852,8 @@ p {
 
 }
 
-.markServices_tabsBtn_info ul li a:hover {background: url(../images/hoverBg.png) no-repeat; background-size: cover; color: #fff;}
-.markServices_tabsBtn_info ul li a.active {background: url(../images/hoverBg.png) no-repeat; background-size: cover; color: #fff;}
+.markServices_tabsBtn_info ul li a:hover {background: url(../images/hoverBg.png) no-repeat; background-size: cover; color: #fff;font-family: 'avenirblack';}
+.markServices_tabsBtn_info ul li a.active {background: url(../images/hoverBg.png) no-repeat; background-size: cover; color: #fff;font-family: 'avenirblack';}
 
 
 
@@ -921,7 +923,7 @@ p {
 
 .digital_menu_info ul li { width: 33.33%;}
 
-.digital_menu_info ul li a { padding: 22px 20px; text-align: center; color: #414042; font-size: 22px; display: block; font-family: 'avenirblack';
+.digital_menu_info ul li a { padding: 22px 20px; text-align: center; color: #414042; font-size: 22px; display: block;
 
     transition: all 0.3s ease;
     -moz-transition: all 0.3s ease;
@@ -931,8 +933,8 @@ p {
 
 }
 
-.digital_menu_info ul li a:hover {background: url(../images/hoverBg.png) no-repeat; background-size: cover; color: #fff;}
-.digital_menu_info ul li a.d_active {background: url(../images/hoverBg.png) no-repeat; background-size: cover; color: #fff;}
+.digital_menu_info ul li a:hover {background: url(../images/hoverBg.png) no-repeat; background-size: cover; color: #fff; font-family: 'avenirblack';}
+.digital_menu_info ul li a.d_active {background: url(../images/hoverBg.png) no-repeat; background-size: cover; color: #fff; font-family: 'avenirblack';}
 
 
 
@@ -956,7 +958,7 @@ p {
 
 .seeOur { width: 100%; text-align: center;}
 
-.seeOur a { display: inline-block; color: #04060d; font-size: 20px;font-family: 'avenirblack';
+.seeOur a { display: inline-block; color: #04060d; font-size: 20px;
 
     transition: all 0.3s ease;
     -moz-transition: all 0.3s ease;
@@ -966,7 +968,7 @@ p {
 
 }
 
-.seeOur a:hover { color:#16509b}
+.seeOur a:hover { color:#16509b;font-family: 'avenirblack';}
 
 
 
@@ -986,11 +988,14 @@ p {
 .ourStory_section_fl .btn_default { display: inline-block; font-size: 24px; text-transform: uppercase;font-family: 'avenirblack'; padding: 6px 15px 4px;
     line-height: 1; margin-bottom: 25px; min-width: auto;}
 
-.ourStory_section_fl h4 { color: #16509b; padding-bottom: 15px;}
+.ourStory_section_fl h4 { padding-bottom: 15px;}
 
 .ourStory_section_fl p { text-align: justify; color: #000; line-height: 1.7;}
 
 .ourStory_section_fl .seeOur a { color: #414042}
+.ourStory_section_fl .seeOur a:hover { text-decoration: underline !important; font-family: 'avenirmedium' !important;}
+
+
 
 
 
@@ -1412,9 +1417,9 @@ p {
 
 .howWork_text_info { width: calc(100% - 30px); padding-left: 40px; padding-right: 30px;}
 
-.howWork_text_info  h4 { color: #fff;font-family: 'avenirmedium'; padding-bottom: 10px;}
+.howWork_text_info  h4 { color: #fff;  padding-bottom: 10px;}
 
-.howWork_text_info  p { color: #fff; line-height: 1.8; font-size: 15px;}
+.howWork_text_info  p { color: #fff; line-height: 1.8; font-size: 17px;}
 
 .howWork_text_info p b { font-family: 'avenirblack';}
 
@@ -1933,7 +1938,7 @@ body, html {scroll-behavior: smooth; }
 .buildTeam_section_detail { width: 100%; padding: 0px 0px 20px;transform: translateY(-50px);}
 
 
-.buildTeam_col { width: 100%; background: #e0e0e0; padding: 40px 25px 20px; height: 100%;}
+.buildTeam_col { width: 100%; background: #fff; padding: 40px 25px 20px; height: 100%;}
 
 .buildTeam_col span { margin-bottom: 25px; display: block;}
 
@@ -1951,7 +1956,7 @@ body, html {scroll-behavior: smooth; }
 /* software dev section */
 
 
-.softDev_section { width: 100%; background: #fff; position: relative; border-bottom: 2px solid #000;}
+.softDev_section { width: 100%; background: #fff; position: relative; }
 
 .softDev_section_detail { width: 100%; padding: 70px 0px;}
 
@@ -1978,7 +1983,7 @@ body, html {scroll-behavior: smooth; }
 
 .meetTeam_sliderSection { width: 100%;   padding: 45px 0px; position: relative;}
 
-.meetTeam_info { width: 100%; height: 100%; background: #fff; padding: 35px 25px 20px;}
+.meetTeam_info { width: 100%; height: 100%; background: #fff; padding: 35px 25px 20px; margin: 0px !important;}
 
 
 .meetProfile { width: 100%; display: flex; align-items: center; padding-bottom: 30px;;}
@@ -2201,7 +2206,7 @@ body, html {scroll-behavior: smooth; }
 .aboutContact .btn_default_white { background: #fff !important;}
 
 .mainBanner_text .btn_default_white { max-width: 170px; margin-top: 15px;}
-.howWork_section .btn_default_white { max-width: 170px; margin-top: 25px;}
+.howWork_section .btn_default_white { max-width: 170px; margin-top: 35px;}
 
 .showAll_btn { width: 100%; display: flex; justify-content: flex-end; padding-bottom: 20px;}
 
@@ -2588,7 +2593,8 @@ body, html {scroll-behavior: smooth; }
 .lookingWork_section { width: 100%;}
 
 .lookingWork_list { width: 100%;}
-.lookingWork_list h3 { width: 100%;font-family: 'avenirmedium';}
+.lookingWork_list h3 { font-family: 'avenirmedium';}
+.lookingWork_list h3 strong {  font-family: 'avenirblack';}
 
 
 
@@ -2599,10 +2605,10 @@ body, html {scroll-behavior: smooth; }
 }
 
 .lookingWork_list_info .aboutBizionic_col_info p { display: flex; font-size: 17px; padding-bottom: 0px;}
-.lookingWork_list_info .aboutBizionic_col_info p span { min-width: 110px; min-height: 110px;}
+.lookingWork_list_info .aboutBizionic_col_info p span { width: 95px;height: 95px; min-width: 95px;   margin: 5px 16px 5px 0px;}
 
 .lookingWork_list_info .aboutBizionic_col_info p span img {
-    height: 55px; 
+    height: 45px; 
 }
 
 
@@ -2621,8 +2627,8 @@ body, html {scroll-behavior: smooth; }
 
 .openPosition_sec .buildTeam_col p { padding-bottom: 25px; font-size: 15px; min-height: 170px;}
 
-.openPosition_sec .btn_default { max-width: 150px; margin: auto;
-    padding: 10px 15px;}
+.openPosition_sec .btn_default { max-width: 140px; margin: auto; min-width: 140px;
+    padding: 8px 15px;}
 
 
 .advanceCareer_section { width: 100%; margin-bottom: 80px;}    
@@ -2756,7 +2762,7 @@ body, html {scroll-behavior: smooth; }
 .servicesFloating_menu .columnSett { width: 100% !important;flex: 0 0 41%  !important;max-width: 41%  !important;}
 .industriesFloating_menu  .columnSett { width: 100% !important;flex: 0 0 57%  !important;max-width: 57%  !important;}    
 
-.clientBizionic_reviews_info p { transform: translateX(-20px);  opacity: 1; min-height: 270px;
+.clientBizionic_reviews_info p {   opacity: 1;  
     transition: all 1s ease;
     -moz-transition: all 1s ease;
     -ms-transition: all 1s ease;
@@ -2768,22 +2774,25 @@ body, html {scroll-behavior: smooth; }
 
 .clientBizionic_reviews_info  {  height: 100%;}
 
-.clientBizionic_reviews  { padding-left: 25px; height: 100%;}
+.clientBizionic_reviews  { padding-left: 0px; height: 100%;}
  
 .reviewsInner_client  { width: 100%; height: 100%;}
 
 
+.reviewInner {    display: flex;
+    flex-flow: column;
+    justify-content: center;
+    height: 100%; width: 100%;}
 
 
+.meetTeam_sliderSection .item { margin: 0px !important;}
+
+.carousel__slide {  
+     justify-content: flex-start !important}
 
 
-
-
-
-
-
-
-
+.carousel { text-align: left !important;}
+ 
 
 
 

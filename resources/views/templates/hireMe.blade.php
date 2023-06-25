@@ -59,7 +59,7 @@
            <div class="embark_section">
                 <div class="careerPage_inner">
                     <div class="custom_tittle">
-                        <h2 class="text-white">Embark An Exciting Career Journey with BIZIONIC</h2>
+                        <h2 class="text-white"><strong>Embark An Exciting Career Journey with BIZIONIC</strong></h2>
                         <p class="text-justify text-white">At BIZIONIC, we believe in pushing boundaries, challenging norms, and shaping the "How work should be in the future of the Technologies and Marketing Domain." We are a trailblazing company that thrives on the passion and dedication of our exceptional team members, contributors, partners, and stakeholders.</p>
                     </div>
 
@@ -69,20 +69,8 @@
                             <li>
                                 <div class="row">
                                     <div class="col-lg-8 col-md-7">
-                                        <p>For Employees, start your career with Bizionic.</p>
-                                    </div>
-
-                                    <div class="col-lg-4 col-md-5">
-                                        <a href="#" class="btn_default_white">Join Team Bizionic</a>
-                                    </div>
-                                </div>
-                            </li>
-
-
-                            <li>
-                                <div class="row">
-                                    <div class="col-lg-8 col-md-7">
-                                        <p>For Talent, start your career Via Bizionic.</p>
+                                        <p>For Talent & Freelancers. Find Your Success,
+	                                        Better Work, and Better Pay on the Global Stage.</p>
                                     </div>
 
                                     <div class="col-lg-4 col-md-5">
@@ -95,19 +83,63 @@
                             <li>
                                 <div class="row">
                                     <div class="col-lg-8 col-md-7">
-                                        <p>For Employers, remotely Hire Teams across the Globe.</p>
+                                        <p>Looking for Employment with Bizionic Technologies.</p>
                                     </div>
 
                                     <div class="col-lg-4 col-md-5">
-                                        <a href="#" class="btn_default_white">Hire Now</a>
+                                        <a href="#" class="btn_default_white">Join Team Bizionic</a>
                                     </div>
                                 </div>
                             </li>
+
                         </ul>
                     </div>
                 </div>
            </div>
 
+
+
+           <!-- marketing_talent section -->
+
+           <div class="marketing_talent_section bg_fff ">
+
+                <div class="careerPage_inner">
+                    <div class="industryNew_section1 marketingTalent_info">
+                        <div class="row align-items-center">
+                            <div class="col-lg-6 col-md-12 aos-init " data-aos="fade-right" data-aos-duration="1000" data-aos-easing="ease">
+                                <div class="custom_tittle">
+                                    <h2 class="text-left"><strong>For</strong>  Tech <strong>and</strong> Marketing Talent</h2>
+
+                                        <p class="text-left p_color"><b>Be your own Boss.</b>  Get a job of your choice. Locate employment with your top employers, and choose a working arrangement such as remote, hybrid, part- or full-time, freelancing, or project-based.</p>
+                                        <p class="text-left p_color"><b>Bizionic</b> offers a variety of working options for talent and talent seekers, guaranteeing that everyone upholds their end of the bargain, the customers receive the required projects under Bizionic's supervision, and the talent is assured of payment by the terms of the contract. There is always a disconnect between the parties' expectations in the freelancing and remote working models; Bizionic bridges that gap by giving the parties access to a trustworthy, knowledgeable, and experienced mediator and ecosystem to guarantee project completion and obligation fulfillment.</p>
+                                </div>
+                            </div>
+
+
+                            <div class="col-lg-6 col-md-12 pb-3 aos-init " data-aos="fade-left" data-aos-duration="1000" data-aos-easing="ease">
+                                <div class="industryNew_section1_avatar">
+                                    <span><img src="/bizionic/images/marketing_talent_img1.png" alt="#" /></span>
+                                </div>
+                            </div>
+                        </div>
+
+
+
+                        <div class="row align-items-center pt-2">
+                            <div class="col-lg-12 col-md-12 aos-init " data-aos="fade-right" data-aos-duration="1500" data-aos-easing="ease">
+                                <div class="custom_tittle p-0">
+                                    <h2 class="text-left"><strong>Find</strong> Work Now: </h2>
+
+                                        <p class="text-left p_color">Get employed at your terms, desired companies, time, hours and working conditions.</p>
+                                        <a href="#" class="btn_default">Let's Get You Onboarded</a>
+                                </div>
+                            </div> 
+                        </div>
+                    </div>
+
+                </div>
+
+                </div>
 
 
 
@@ -117,11 +149,11 @@
            <div class="lookingWork_section bg_fff">
                 <div class="careerPage_inner">
                     <div class="custom_tittle">
-                        <h2 class="text-left"><strong>For Tech & Marketing Talent</strong> <br>  looking <strong>to</strong>  Work <strong>at BIZIONIC</strong> </h2>
+                        <h2 class="text-left"><strong>For</strong> Tech <strong>and</strong> Marketing Talent <br>  looking <strong>to</strong>  Work <strong>at BIZIONIC</strong> </h2>
                     </div>
 
                     <div class="lookingWork_list">
-                        <h3>Why Work with Bizionic:</h3>
+                        <h3>Why <strong>Work</strong> with Bizionic:</h3>
 
                         <div class="lookingWork_list_info">
                             <div class="row">
@@ -213,7 +245,7 @@
                     <div class="careerPage_inner">
                         <div class="row">
                             <div class="custom_tittle">
-                                <h2><strong>Current Open Positions:</strong></h2>
+                                <h2 class="text-left p-0"><strong>Current</strong> Open Positions:</h2>
                             </div>
                         </div>
                         <div class="row">
@@ -280,10 +312,10 @@
 
             <!-- advance career section -->
 
-            <div class="advanceCareer_section bg_fff">
+            <div class="advanceCareer_section mb-0 bg_fff">
                 <div class="careerPage_inner">
                     <div class="custom_tittle">
-                        <h2 class="text-left"><strong>Advance Your Career with BIZIONIC:</strong></h2>
+                        <h2 class="text-left">Advance Your Career <strong>with BIZIONIC:</strong></h2>
                         <p class="p_color text-left pb-2">Join our team of the brightest tech talents and let’s create awesome solutions together!</p>
                     </div>
 
@@ -343,47 +375,7 @@
 
 
 
-            <!-- marketing_talent section -->
-
-            <div class="marketing_talent_section bg_fff">
-
-                <div class="careerPage_inner">
-                    <div class="industryNew_section1 marketingTalent_info">
-                        <div class="row align-items-center">
-                            <div class="col-lg-6 col-md-12 aos-init " data-aos="fade-right" data-aos-duration="1000" data-aos-easing="ease">
-                                <div class="custom_tittle">
-                                    <h2 class="text-left"><strong>For Tech & Marketing Talent</strong> </h2>
-
-                                        <p class="text-left p_color"><b>Be your own Boss.</b>  Get a job of your choice. Locate employment with your top employers, and choose a working arrangement such as remote, hybrid, part- or full-time, freelancing, or project-based.</p>
-                                        <p class="text-left p_color">Bizionic offers a variety of working options for talent and talent seekers, guaranteeing that everyone upholds their end of the bargain, the customers receive the required projects under Bizionic's supervision, and the talent is assured of payment by the terms of the contract. There is always a disconnect between the parties' expectations in the freelancing and remote working models; Bizionic bridges that gap by giving the parties access to a trustworthy, knowledgeable, and experienced mediator and ecosystem to guarantee project completion and obligation fulfillment.</p>
-                                </div>
-                            </div>
-
-
-                            <div class="col-lg-6 col-md-12 pb-3 aos-init " data-aos="fade-left" data-aos-duration="1000" data-aos-easing="ease">
-                                <div class="industryNew_section1_avatar">
-                                    <span><img src="/bizionic/images/marketing_talent_img1.png" alt="#" /></span>
-                                </div>
-                            </div>
-                        </div>
-
-
-
-                        <div class="row align-items-center pt-2">
-                            <div class="col-lg-12 col-md-12 aos-init " data-aos="fade-right" data-aos-duration="1500" data-aos-easing="ease">
-                                <div class="custom_tittle p-0">
-                                    <h2 class="text-left"><strong>Find Work Now:</strong> </h2>
-
-                                        <p class="text-left p_color">Get employed at your terms, desired companies, time, hours and working conditions.</p>
-                                        <a href="#" class="btn_default">Let's Get You Onboarded</a>
-                                </div>
-                            </div> 
-                        </div>
-                    </div>
-
-                </div>
-
-            </div>
+            
 
 
 
@@ -391,7 +383,7 @@
 
             <!-- marketing_talent section -->
 
-            <div class="marketing_talent_section bg_fff m-0">
+            <div class="marketing_talent_section bg_fff m-0 d-none">
 
                 <div class="careerPage_inner">
                     <div class="industryNew_section1 marketingTalent_info">
@@ -432,7 +424,7 @@
 
             <!-- blobalsection -->
 
-            <div class="buildTeam_section openPosition_sec globalSection">
+            <div class="buildTeam_section openPosition_sec globalSection  d-none">
                 <div class="auto_container">
                     <div class="careerPage_inner"> 
                         <div class="row">

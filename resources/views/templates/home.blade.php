@@ -398,12 +398,12 @@
     <!-- meet team sectin  -->
 
 
-    <div class="meetTeam_section">
+    <div class="meetTeam_section d-none">
         
         <div class="meetTeam_section_detail">
 
 
-        <div class="auto_container">
+            <div class="auto_container">
                     <div class="custom_tittle">
                         <h2 class="">"Hire Now" <strong>with BIZIONIC</strong> </h2>
                         <h6 class="d-none">Acquire Global Talent in Minutes</h6>
@@ -540,14 +540,11 @@
     
     </div>
 
-     <!-- our client Bizionic section -->
 
-    <client-component></client-component>
 
        <!-- about project section -->
     
-
-       <div class="aboutProject_section hiretalent">
+    <div class="aboutProject_section hiretalent">
         <div class="auto_container">
             <div class="aboutProject_section_detail"  >
 
@@ -567,16 +564,22 @@
 
             </div>
         </div>
-        </div>
+    </div>
+
+
+
+      <!-- our client Bizionic section -->
+
+      <client-component></client-component>
 
 
 
 
+ 
+    
+        <!-- Services provided section -->
 
-
-
-     <!-- Services provided section -->
-
-     @include('partials.services')     
+     
+        @include('partials.services')     
      
 
