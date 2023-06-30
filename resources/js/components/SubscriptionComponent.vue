@@ -5,14 +5,16 @@
             <div
                 class="alert alert-success text-center"
                 role="alert"
-                id="success"
+                id="subscribe_success"
+                ref="successMessage"
             >
                 Thank you to subscribe. We will contact you shortly.
             </div>
             <div
                 class="alert alert-danger text-center"
                 role="alert"
-                id="failure"
+                id="subscribe_failure"
+                ref="failureMessage"
             >
                 Sorry! There is some problem sending your query at the moment,
                 Please try again.
@@ -96,7 +98,15 @@
     </div>
 </template>
 
+<style>
+/* #success,
+#failure {
+    display: none;
+} */
+</style>
+
 <script>
+import axios from 'axios';
 export default {
     // mounted() {
     //     console.log("Subscription Component mounted.");
@@ -119,18 +129,26 @@ export default {
                     // console.log(response);
 
                     if (response.status === 200) {
-                        document.getElementById("success").style.display =
-                            "block";
-                        document.getElementById("failure").style.display =
-                            "none";
+                        this.showSuccessMessage();
                         this.subscribe.name = "";
                         this.subscribe.email = "";
                     }
                 })
                 .catch((error) => {
-                    document.getElementById("success").style.display = "none";
-                    document.getElementById("failure").style.display = "block";
+                    this.showFailureMessage();
                 });
+        },
+        showSuccessMessage() {
+            this.$refs.successMessage.style.display = "block";
+            setTimeout(() => {
+                this.$refs.successMessage.style.display = "none";
+            }, 3000);
+        },
+        showFailureMessage() {
+            this.$refs.failureMessage.style.display = "block";
+            setTimeout(() => {
+                this.$refs.failureMessage.style.display = "none";
+            }, 3000);
         },
     },
 };
