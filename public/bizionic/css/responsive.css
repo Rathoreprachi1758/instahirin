@@ -124,7 +124,7 @@
 }
 
 .frList_sec {
-    padding-left: 20px;
+     
 }
 
 .careerPage_inner { 
@@ -142,6 +142,95 @@
 .hire_me_button { 
     margin: 0px 12px 0px 9px;
 }
+
+.postRequirment_avatar span img { 
+    height: 100%;
+    object-fit: cover;
+}
+
+.postRequirment_avatar span  { 
+    height: 100%; 
+}
+
+.postRequirment_avatar   { 
+    height: 100%; 
+}
+.instaHirin_section .howWork_section {
+    padding-left: 0px;
+}
+
+
+
+.aboutUs_bgSection {
+    background-position-x: 78% !important;}
+
+.aboutUs_bgSection .mainBanner_text { 
+    padding-top: 0px;
+}
+
+.bNumber { 
+    padding-left: 35px;
+}
+.bNumber .byNumber_infoText label {
+    font-size: 14px; 
+    text-align: center;
+}
+
+.coreTabs ul li a {
+    padding: 15px 10px; 
+    font-size: 14px; 
+}
+
+.coreTabs_data_show { 
+    padding: 25px; 
+}
+
+.coreTabs_data_text ul {
+    margin-left: 30px;
+}
+.sourceModel_colHead h5 { 
+    font-size: 18px; 
+}
+.sourceModel_colHead {
+    min-height: 72px; 
+    padding: 15px 20px;
+}
+
+.sourceModel_inner { 
+    padding: 35px 25px;
+}
+.connectText h3 { 
+    line-height: 1.6;
+    padding-bottom: 25px;
+    font-size: 22px;
+}
+
+.indust_work_col a span img { 
+    width: 65px;
+    height: 65px; 
+}
+.indust_work_col a strong { 
+    font-size: 15px; 
+}
+.protectPrivacy span {
+    font-size: 13px; 
+    padding: 10px 10px;
+}
+.protectPrivacy span img {
+    width: 18px; 
+    margin-right: 5px;
+}
+.project_form_field input { 
+    padding: 11px 15px; 
+    font-size: 12px;
+}
+.project_form_field { 
+    margin: 10px 0px;
+}
+.tellUs_sec p { 
+    font-size: 16px!important;}
+
+
 
  
 
@@ -726,7 +815,7 @@ h6 { font-size: 18px; }
 }
 
 .frList_sec {
-    padding-left: 0px;
+    padding: 35px 25px;
 }
 
 .technology_provides ul li a img {
@@ -749,6 +838,140 @@ h6 { font-size: 18px; }
 }
 
 .openPosition_sec .careerPage_inner { padding: 70px 20px;}
+
+
+.instaHirin_banner_info { 
+    padding: 25px; position: relative;    margin-top: -110px;
+}
+
+.instaHirin_banner_inner { padding: 0px;}
+
+.hireIn_input { margin: 0px !important;}
+
+.postRequirment_section_detail .row { flex-flow:  column-reverse;}
+
+.postRequirment_section_detail .row .col-lg-6 { padding: 0px 15px !important;}
+ 
+.talentCheckList ul { margin-left: 0px !important; margin-bottom: 30px !important;}
+
+.talentCheckList ul li p { 
+    font-size: 15px;
+}
+.chrckIcon {
+    max-width: 16px; 
+    margin-right: 6px;
+    padding-top: 3px;
+}
+
+.verified_icon {
+    max-width: 55px; 
+    margin-left: 5px;
+}
+
+.instaHirin_section { 
+    padding: 35px 25px; 
+}
+
+.instaHirin_section .howWork_section {
+    padding-left: 0px;
+}
+
+.instaHirin_section .howWork_section ul li {
+    padding-bottom: 20px;
+}
+
+.instaHirin_section .howWork_text_info h4 { 
+    font-size: 18px;
+}
+
+.biz_brief {
+    width: 100%;
+    padding: 50px 20px;
+}
+.requireForm_lable strong {
+    display: block;
+    padding-top: 10px;
+}
+
+.instaRequire_info .custom_tittle p { 
+    padding: 15px 0px;
+    line-height: 1.5;
+    font-size: 16px;
+}
+.instaRequire_info {
+    padding-left: 0px; 
+}
+
+
+
+.aboutUs_bgSection .mainBanner_text { 
+    padding-top: 0px;
+}
+
+.aboutUs_bgSection .mainBanner_text {
+    min-height: auto;}
+
+.aboutUs_bgSection { 
+    background-position-x: 70%;
+}
+
+.who_we_are_section::after { display: none;}
+
+.bNumber { padding: 0px; padding-top: 30px;}
+
+.bNumber .custom_tittle h2 { padding-bottom: 0px !important;}
+
+.bNumber .byNumber_infoText label {
+    font-size: 18px;}
+
+.bNumber .byNumber_infoText p {
+    font-size: 15px;}
+
+
+.coreTabs { overflow-x: auto;}
+
+.coreTabs ul { width: 1200px;}
+
+.coreTabs_data_show { 
+    padding: 30px;}
+
+.coreTabs_data_text ul {
+    margin-left: 30px;
+}
+
+.sourceModel_inner { 
+    padding: 40px 25px;
+}
+
+.connectText {
+    width: 100%; 
+    padding: 50px 50px 20px; 
+    min-height: 520px;
+}
+.indust_work_col { 
+    min-height: 220px;
+}
+.indust_work_col a strong { 
+    font-size: 15px; 
+}
+.coreTabs_data_text {
+    width: 100%;
+    padding-right: 0px;
+}
+.tellUs_sec::after { display: none;}
+
+
+.tellUs_sec .coreTabs_data_text { padding-bottom: 40px;}
+
+.addFile { padding-bottom: 20px;}
+
+
+
+
+
+
+
+
 
 
 
@@ -1069,7 +1292,8 @@ h6 { font-size: 18px; }
 
 
 .aboutBizionic_section_detail .custom_tittle h4 { 
-    font-size: 17px;
+    font-size: 16px;
+    line-height: 1.5;
 }
 
 .aboutBizionic_col_info p span img {
@@ -1507,7 +1731,7 @@ h6 { font-size: 18px; }
 
 .biz_brief {
     width: 100%;
-    padding: 50px 25px;
+    padding: 50px 20px;
 }
 
 .biz_brief_info ul li strong {
@@ -1901,36 +2125,164 @@ h6 { font-size: 18px; }
 
 
 
+.instaHirin_banner_info { position: relative;    padding: 20px;}
+
+.instaHirin_banner_inner { 
+    padding-left: 0px;  padding-bottom: 10px;
+}
+.hireIn_minForm { 
+    display: block;
+}
+
+.hireIn_input {
+    width: 100%;}
+
+.hireIn_btn {
+    padding-left: 0px;
+}
+.meetTeam_nav { 
+    margin-top: 40px;
+}
+
+.postRequirment_section_detail .row .col-lg-6 { padding: 0px;}
+
+.postRequirment_section { 
+    padding: 50px 0px;
+}
+.postRequirment_text { 
+    padding: 20px; 
+}
+
+.talentCheckList ul { margin: 0px !important;}
+
+.talentCheckList ul li {
+    padding: 10px 0px;
+    width: 100%;
+}
+.globalTalent_list .row .col-lg-6 { padding-right: 15px !important;padding-left: 15px !important;}
+
+.frList_sec { background: none !important; padding: 30px 0px;}
+.frList_sec h4 {
+    color: #000;
+}
+.frList_sec h4 br { display: none;}
+.frList_sec ul li {
+    color: #000; 
+}
+.frList_sec ul li p {
+    color: #000;
+    text-transform: inherit;
+}
+
+.frList_sec h4 b {
+    color: #000;
+}
+.instaHirin_section { 
+    padding: 30px 20px; 
+}
+.instaHirin_section .howWork_section {
+    padding-left: 0px;
+}
+
+.instaRequire_info {
+    padding-left: 0px;  
+}
+
+.hireFormSetting .row .col-lg-5 { padding-right: 15px !important;padding-left: 15px !important;}
+
+.requireForm_lable strong { 
+    padding-top: 10px;
+}
+.col-lg-1 .text-center { margin: 0px !important; text-align: left !important; padding-left: 15px ;}
 
 
 
 
 
+.aboutUs_bgSection .mainBanner_text { 
+    padding-top: 0px;
+}
+.aboutUs_bgSection { 
+    background-position-x: 72%;
+}
+.who_we_are_section::after { display: none;}
 
+.who_we_are_detail { 
+    padding: 60px 0px;
+}
 
+.bNumber { 
+    padding-left: 0px;
+    padding-top: 50px;
+}
 
+.bNumber .custom_tittle h2 { padding-bottom: 0px !important;}
 
+.at_bizionic_bottomTittle { 
+    padding-bottom: 20px;
+}
+.at_bizionic_steps { 
+    padding-bottom: 30px;
+    padding-top: 0px;
+}
+.ourEndProcess_section_detail { 
+    padding: 60px 0px;
+}
 
+.coreTabs { 
+    overflow-x: auto;
+}
 
+.coreTabs ul { 
+    width: 1100px;
+}
+.coreTabs ul li a {
+    padding: 15px 10px; 
+    font-size: 14px; 
+}
 
+.coreTabs_data_show { 
+    padding: 20px;}
 
+.coreTabs_data_text { 
+    padding-right: 0px;
+}
 
+.coreTabs_data_text ul {
+    margin-left: 20px;
+}
 
+.coreTabs_data_text ul li p { text-align: left; font-size: 14px;}
 
+.sourceModel_inner { 
+    padding: 25px;
+}
 
+.sourceModel_colHead {
+    min-height: auto;}
 
+.sourceModel_colHead h5 { font-size: 16px;}
 
+.sourceModel_list ul li p  {text-align: left; font-size: 14px;}
 
+.connectText { 
+    padding: 40px 20px 20px; 
+    min-height: 470px;
+}
 
+.sourcingModel_section { 
+    padding-bottom: 40px;
+}
 
+.indust_work_section::after { 
+    height: 330px; 
+}
 
+.indust_work_sectionDetail { 
+    padding: 0px 0px 60px;
+}
 
-
-
-
-
-
-
+.tellUs_sec::after { display: none;}
 
 
 
