@@ -12,6 +12,9 @@ export default defineConfig({
             refresh: true,
         }),
         vue({
+            compilerOptions: {
+                isCustomElement: (tag) => tag === 'carousel',
+            },
             template: {
                 transformAssetUrls: {
                     base: null,

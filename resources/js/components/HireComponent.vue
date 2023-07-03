@@ -1,10 +1,10 @@
 <template>
     <div class="connected_form_info">
-        <div class="alert alert-success text-center" role="alert" id="success">
+        <div class="alert alert-success text-center" role="alert" id="success" ref="successMessage">
             Thank you for the message. We will contact you shortly.
         </div>
 
-        <div class="alert alert-danger text-center" role="alert" id="failure">
+        <div class="alert alert-danger text-center" role="alert" id="failure" ref="failureMessage">
             Sorry! There is some problem sending your query at the moment,
             Please try again.
         </div>
@@ -123,10 +123,11 @@ export default {
                 .post("/hire", this.hireForm)
                 .then((response) => {
                     if (response.status == 200) {
-                        document.getElementById("success").style.display =
-                            "block";
-                        document.getElementById("failure").style.display =
-                            "none";
+                        // document.getElementById("success").style.display =
+                        //     "block";
+                        // document.getElementById("failure").style.display =
+                        //     "none";
+                        this.showSuccessMessage();
                         this.hireForm = {
                             name: "",
                             company: "",
@@ -137,9 +138,22 @@ export default {
                     }
                 })
                 .catch((error) => {
-                    document.getElementById("success").style.display = "none";
-                    document.getElementById("failure").style.display = "block";
+                    this.showFailureMessage();
+                    // document.getElementById("success").style.display = "none";
+                    // document.getElementById("failure").style.display = "block";
                 });
+        },
+        showSuccessMessage() {
+            this.$refs.successMessage.style.display = "block";
+            setTimeout(() => {
+                this.$refs.successMessage.style.display = "none";
+            }, 3000);
+        },
+        showFailureMessage() {
+            this.$refs.failureMessage.style.display = "block";
+            setTimeout(() => {
+                this.$refs.failureMessage.style.display = "none";
+            }, 3000);
         },
     },
 };

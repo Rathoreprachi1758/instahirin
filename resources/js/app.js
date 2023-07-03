@@ -29,6 +29,9 @@ app.component('client-component', ClientsComponent);
 app.component('hire-component', Hire);
 app2.component('subscription-component', SubscriptionComponent);
 
+// import ExampleComponent from './components/ExampleComponent.vue';
+// app.component('example-component', ExampleComponent);
+
 /**
  * The following block of code may be used to automatically register your
  * Vue components. It will recursively scan this directory for the Vue
