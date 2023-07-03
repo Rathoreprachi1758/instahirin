@@ -44,7 +44,7 @@
         </div>
         <div class="meetTeam_sliderSection pt-0">
             <!-- <carousel :items="2" :margin="20"> -->
-            <carousel :items-to-show="2.90">
+            <carousel :items-to-show="3" >
                 <slide v-for="(expert) in experts" :key="expert">
                     <div class="item">
                         <div class="meetTeam_info">
