@@ -230,6 +230,21 @@
 .tellUs_sec p { 
     font-size: 16px!important;}
 
+.indP_col {
+    padding: 16px 15px;
+}
+
+.indPortfolioText { 
+    font-size: 20px; 
+}
+
+
+
+
+
+
+
+
 
 
  
@@ -967,11 +982,21 @@ h6 { font-size: 18px; }
 
 
 
+.indP_col {
+    padding: 15px 10px;
+}
 
-
-
-
-
+.indPortfolioText { 
+    font-size: 18px; 
+}
+.indPortfolioText b {
+    width: 30px;
+    height: 25px; 
+    font-size: 15px;
+}
+.technology_master_detail {
+    padding: 60px 0px;
+}
 
 
 
@@ -2286,8 +2311,11 @@ h6 { font-size: 18px; }
 
 
 
-
-
+.indP_col {
+    padding: 25px 15px;
+}
+.indPortfolioText { 
+    font-size: 20px;}
 
 
 
