@@ -48,8 +48,8 @@
             <div class="auto_container">
                 <div class="technology_master_detail">
                     <div class="custom_tittle pt-2">
-                        <h2>Utilize Our Top Software Services<br>
-                            to Expand Your Business  </h2> 
+                        <h2> <strong>Utilize Our</strong> Top Software Services <strong>to<br>
+                             Expand Your Business</strong>   </h2> 
                     </div>
 
 
@@ -93,18 +93,20 @@
                     <div class="industryNew_section1">
                         <div class="row align-items-center">
                             <div class="col-lg-6 col-md-6 aos-init " data-aos="fade-right" data-aos-duration="1000" data-aos-easing="ease">
-                                <div class="industryNew_section1_info">
-                                    <h3>
-                                        <small>AUTOMOTIVE </small> <br>  
-                                        <strong class="tittleColor_black">SOLUTION</strong> 
-                                    </h3>
+                                <div class="custom_tittle text-left">
+                                    <h2>
+                                        AUTOMOTIVE SOLUTION
+                                    </h2>
 
-                                        <p>High levels of innovation and adaptability are the driving forces behind the automobile sector. Technology advancements has given the industry
+                                        <p class="text-justify p_color">High levels of innovation and adaptability are the driving forces behind the automobile sector. Technology advancements has given the industry
                                             necessary tools to save costs, improve quality and productivity, simplify
                                             compliance, and provide end-to-end automotive solutions.</p>
-                                        <p>At BIZIONIC, we offer unrivalled services, solutions, and technology for
+                                        <p class="text-justify p_color">At BIZIONIC, we offer unrivalled services, solutions, and technology for
                                             enhancing productivity, cutting expenses, and assisting our international
                                             clients in maximising the value of their worldwide assets.</p>
+                                        
+                                        <a href="#" class="btn_default mt-2">Get a Free Consultation</a>
+                                        
                                     
                                 </div>
                             </div>
@@ -124,140 +126,147 @@
 
                     <div class="industryNew_section2_info aos-init  b2c_colSection" data-aos="fade-up" data-aos-duration="1500" data-aos-easing="ease">
                         <div class="custom_tittle">
-                            <h2>Automotive Solutions, BIZIONIC Delivered</h2> 
+                            <h2>Automotive Solutions <strong>We Deliver</strong></h2> 
                         </div>
 
-                        <div class="industryNew_section2_cols">
-                            <div class="row">
-                                <div class="col-lg-3 col-md-4 provide_col">
-                                    <div class="industryNew_section2_colsInfo">
-                                        <span><img src="/bizionic/images/motive_icon1.png" alt="#" /></span>
-                                        <h6>Cloud Based <br>
-                                            Solution </h6> 
-                                    </div>
-                                </div> 
-                                <div class="col-lg-3 col-md-4 provide_col">
-                                    <div class="industryNew_section2_colsInfo">
-                                        <span><img src="/bizionic/images/motive_icon2.png" alt="#" /></span>
-                                        <h6>Sale, Rental and Lease</h6> 
-                                    </div>
-                                </div> 
-                                <div class="col-lg-3 col-md-4 provide_col">
-                                    <div class="industryNew_section2_colsInfo">
-                                        <span><img src="/bizionic/images/motive_icon3.png" alt="#" /></span>
-                                        <h6>Insurance Application</h6>
-                                    </div>
-                                </div> 
-                                <div class="col-lg-3 col-md-4 provide_col">
-                                    <div class="industryNew_section2_colsInfo">
-                                        <span><img src="/bizionic/images/motive_icon4.png" alt="#" /></span>
-                                        <h6>Enterprise Garage <br>
-                                            Management</h6> 
-                                    </div>
-                                </div> 
-
-
-
-
-                                <div class="col-lg-3 col-md-4 provide_col">
-                                    <div class="industryNew_section2_colsInfo">
-                                        <span><img src="/bizionic/images/motive_icon5.png" alt="#" /></span>
-                                        <h6>B2B and B2C <br>
-                                            Parts Ordering Platform</h6> 
-                                    </div>
-                                </div> 
-                                <div class="col-lg-3 col-md-4 provide_col">
-                                    <div class="industryNew_section2_colsInfo">
-                                        <span><img src="/bizionic/images/motive_icon6.png" alt="#" /></span>
-                                        <h6>Import and Export <br>
-                                            Vehicle Solution</h6>
-                                    </div>
-                                </div> 
-                                <div class="col-lg-3 col-md-4 provide_col">
-                                    <div class="industryNew_section2_colsInfo">
-                                        <span><img src="/bizionic/images/motive_icon7.png" alt="#" /></span>
-                                        <h6>Enterprise Fleet <br>
-                                            Management Solution</h6>
-                                    </div>
-                                </div> 
-                                <div class="col-lg-3 col-md-4 provide_col">
-                                    <div class="industryNew_section2_colsInfo">
-                                        <span><img src="/bizionic/images/motive_icon8.png" alt="#" /></span>
-                                        <h6>On Board Diagnostic (OBD) <br>
-                                            Application</h6> 
-                                    </div>
-                                </div> 
-
-
-
-
-                                <div class="col-lg-3 col-md-4 provide_col">
-                                    <div class="industryNew_section2_colsInfo">
-                                        <span><img src="/bizionic/images/motive_icon9.png" alt="#" /></span>
-                                        <h6>Car Damage <br>
-                                            and <br>
-                                            Glass Repair Solutionicon</h6> 
-                                    </div>
-                                </div> 
-                                <div class="col-lg-3 col-md-4 provide_col">
-                                    <div class="industryNew_section2_colsInfo">
-                                        <span><img src="/bizionic/images/motive_icon10.png" alt="#" /></span>
-                                        <h6>Dealer Network <br>
-                                            and <br>
-                                            Automotive Parts <br>
-                                            Management</h6> 
-                                    </div>
-                                </div> 
-                                <div class="col-lg-3 col-md-4 provide_col">
-                                    <div class="industryNew_section2_colsInfo">
-                                        <span><img src="/bizionic/images/motive_icon11.png" alt="#" /></span>
-                                        <h6>Search Nearby Car <br>
-                                            Showrooms or Centers</h6> 
-                                    </div>
-                                </div> 
-                                <div class="col-lg-3 col-md-4 provide_col">
-                                    <div class="industryNew_section2_colsInfo">
-                                        <span><img src="/bizionic/images/motive_icon12.png" alt="#" /></span>
-                                        <h6>Games for  <br>
-                                            Leading Luxury Cars</h6> 
-                                    </div>
-                                </div> 
-
-
-
-
-                                <div class="col-lg-3 col-md-4 provide_col">
-                                    <div class="industryNew_section2_colsInfo">
-                                        <span><img src="/bizionic/images/motive_icon13.png" alt="#" /></span>
-                                        <h6>Car Entertainment</h6> 
-                                    </div>
-                                </div> 
-                                <div class="col-lg-3 col-md-4 provide_col">
-                                    <div class="industryNew_section2_colsInfo">
-                                        <span><img src="/bizionic/images/motive_icon14.png" alt="#" /></span>
-                                        <h6>Wheels And Trims</h6> 
-                                    </div>
-                                </div> 
-                                <div class="col-lg-3 col-md-4 provide_col">
-                                    <div class="industryNew_section2_colsInfo">
-                                        <span><img src="/bizionic/images/motive_icon15.png" alt="#" /></span>
-                                        <h6>Limousines</h6> 
-                                    </div>
-                                </div> 
-                                <div class="col-lg-3 col-md-4 provide_col">
-                                    <div class="industryNew_section2_colsInfo">
-                                        <span><img src="/bizionic/images/motive_icon16.png" alt="#" /></span>
-                                        <h6>Executive Cars</h6> 
-                                    </div>
-                                </div> 
-                            </div>
-                        </div>
+                        
                     </div>
 
                 </div>
             </div>
         </div>
 
+
+
+        <div class="provider_section">
+            <div class="auto_container">
+                <div class="industryNew_section2_cols">
+                    <div class="row">
+                        <div class="col-lg-3 col-md-4 provide_col">
+                            <div class="industryNew_section2_colsInfo">
+                                <span><img src="/bizionic/images/motive_icon1.png" alt="#" /></span>
+                                <h6>Cloud Based <br>
+                                    Solution </h6> 
+                            </div>
+                        </div> 
+                        <div class="col-lg-3 col-md-4 provide_col">
+                            <div class="industryNew_section2_colsInfo">
+                                <span><img src="/bizionic/images/motive_icon2.png" alt="#" /></span>
+                                <h6>Sale, Rental and Lease</h6> 
+                            </div>
+                        </div> 
+                        <div class="col-lg-3 col-md-4 provide_col">
+                            <div class="industryNew_section2_colsInfo">
+                                <span><img src="/bizionic/images/motive_icon3.png" alt="#" /></span>
+                                <h6>Insurance Application</h6>
+                            </div>
+                        </div> 
+                        <div class="col-lg-3 col-md-4 provide_col">
+                            <div class="industryNew_section2_colsInfo">
+                                <span><img src="/bizionic/images/motive_icon4.png" alt="#" /></span>
+                                <h6>Enterprise Garage <br>
+                                    Management</h6> 
+                            </div>
+                        </div> 
+
+
+
+
+                        <div class="col-lg-3 col-md-4 provide_col">
+                            <div class="industryNew_section2_colsInfo">
+                                <span><img src="/bizionic/images/motive_icon5.png" alt="#" /></span>
+                                <h6>B2B and B2C <br>
+                                    Parts Ordering Platform</h6> 
+                            </div>
+                        </div> 
+                        <div class="col-lg-3 col-md-4 provide_col">
+                            <div class="industryNew_section2_colsInfo">
+                                <span><img src="/bizionic/images/motive_icon6.png" alt="#" /></span>
+                                <h6>Import and Export <br>
+                                    Vehicle Solution</h6>
+                            </div>
+                        </div> 
+                        <div class="col-lg-3 col-md-4 provide_col">
+                            <div class="industryNew_section2_colsInfo">
+                                <span><img src="/bizionic/images/motive_icon7.png" alt="#" /></span>
+                                <h6>Enterprise Fleet <br>
+                                    Management Solution</h6>
+                            </div>
+                        </div> 
+                        <div class="col-lg-3 col-md-4 provide_col">
+                            <div class="industryNew_section2_colsInfo">
+                                <span><img src="/bizionic/images/motive_icon8.png" alt="#" /></span>
+                                <h6>On Board Diagnostic (OBD) <br>
+                                    Application</h6> 
+                            </div>
+                        </div> 
+
+
+
+
+                        <div class="col-lg-3 col-md-4 provide_col">
+                            <div class="industryNew_section2_colsInfo">
+                                <span><img src="/bizionic/images/motive_icon9.png" alt="#" /></span>
+                                <h6>Car Damage <br>
+                                    and <br>
+                                    Glass Repair Solutionicon</h6> 
+                            </div>
+                        </div> 
+                        <div class="col-lg-3 col-md-4 provide_col">
+                            <div class="industryNew_section2_colsInfo">
+                                <span><img src="/bizionic/images/motive_icon10.png" alt="#" /></span>
+                                <h6>Dealer Network <br>
+                                    and <br>
+                                    Automotive Parts <br>
+                                    Management</h6> 
+                            </div>
+                        </div> 
+                        <div class="col-lg-3 col-md-4 provide_col">
+                            <div class="industryNew_section2_colsInfo">
+                                <span><img src="/bizionic/images/motive_icon11.png" alt="#" /></span>
+                                <h6>Search Nearby Car <br>
+                                    Showrooms or Centers</h6> 
+                            </div>
+                        </div> 
+                        <div class="col-lg-3 col-md-4 provide_col">
+                            <div class="industryNew_section2_colsInfo">
+                                <span><img src="/bizionic/images/motive_icon12.png" alt="#" /></span>
+                                <h6>Games for  <br>
+                                    Leading Luxury Cars</h6> 
+                            </div>
+                        </div> 
+
+
+
+
+                        <div class="col-lg-3 col-md-4 provide_col">
+                            <div class="industryNew_section2_colsInfo">
+                                <span><img src="/bizionic/images/motive_icon13.png" alt="#" /></span>
+                                <h6>Car Entertainment</h6> 
+                            </div>
+                        </div> 
+                        <div class="col-lg-3 col-md-4 provide_col">
+                            <div class="industryNew_section2_colsInfo">
+                                <span><img src="/bizionic/images/motive_icon14.png" alt="#" /></span>
+                                <h6>Wheels And Trims</h6> 
+                            </div>
+                        </div> 
+                        <div class="col-lg-3 col-md-4 provide_col">
+                            <div class="industryNew_section2_colsInfo">
+                                <span><img src="/bizionic/images/motive_icon15.png" alt="#" /></span>
+                                <h6>Limousines</h6> 
+                            </div>
+                        </div> 
+                        <div class="col-lg-3 col-md-4 provide_col">
+                            <div class="industryNew_section2_colsInfo">
+                                <span><img src="/bizionic/images/motive_icon16.png" alt="#" /></span>
+                                <h6>Executive Cars</h6> 
+                            </div>
+                        </div> 
+                    </div>
+                </div>
+            </div>
+        </div>
 
 
         <!-- Additional benefits section -->
@@ -269,30 +278,32 @@
                 <div class="additional_benefits_section_detail bg_f2f2f2 b2b_process">
                     
 
-                    <div class="additional_benefits_list">
-                        <div class="row align-items-center">
-                            <div class="col-lg-6 col-md-6 aos-init " data-aos="fade-right" data-aos-duration="1000" data-aos-easing="ease">
-                                <div class="custom_tittle text-left">
-                                    <h2>Features We Promise To Provide: </h2> 
-                                </div>
-                                <div class="additional_benefits_text">
-                                    <ul>
-                                        <li><p>Designing the Website with New Graphics</p></li>
-                                        <li><p>A Powerful Back-end to Manage the Massive Business</p></li>
-                                        <li><p>An Uniform Setup for Several Websites (CMS)</p></li>
-                                        <li><p>Administration of Payment Gateways</p></li>
-                                        <li><p>Management of Warehouses and Logistics</p></li>
-                                        <li><p>Automotive Rental Solutions</p></li>
-                                        <li><p>Framework for Fully Automated Operations for Leasing Businesses and Garages</p></li>
-                                        <li><p>Access to Several Platforms Allowing Users to Examine Products, Compare them,
-                                            and Purchase Insurance and Real-time Car Tracking</p></li> 
-                                    </ul>
+                    <div class="additional_benefits_list automotiveList">
+                        <div class="row">
+                            <div class="col-lg-7 col-md-6 aos-init " data-aos="fade-right" data-aos-duration="1000" data-aos-easing="ease">
+                            <div class="b2bInnerText">
+                                    <div class="custom_tittle text-left">
+                                        <h2><strong>Features We Promise To Provide:</strong> </h2> 
+                                    </div>
+                                    <div class="additional_benefits_text">
+                                        <ul>
+                                            <li><p>Designing the Website with New Graphics</p></li>
+                                            <li><p>A Powerful Back-end to Manage the Massive Business</p></li>
+                                            <li><p>An Uniform Setup for Several Websites (CMS)</p></li>
+                                            <li><p>Administration of Payment Gateways</p></li>
+                                            <li><p>Management of Warehouses and Logistics</p></li>
+                                            <li><p>Automotive Rental Solutions</p></li>
+                                            <li><p>Framework for Fully Automated Operations for Leasing Businesses and Garages</p></li>
+                                            <li><p>Access to Several Platforms Allowing Users to Examine Products, Compare them,
+                                                and Purchase Insurance and Real-time Car Tracking</p></li> 
+                                        </ul>
+                                    </div>
                                 </div>
                             </div>
 
 
 
-                            <div class="col-lg-6 col-md-6 aos-init " data-aos="fade-left" data-aos-duration="1000" data-aos-easing="ease">
+                            <div class="col-lg-5 col-md-6 aos-init " data-aos="fade-left" data-aos-duration="1000" data-aos-easing="ease">
                                 <div class="process_avatar">
                                     <span><img src="/bizionic/images/keyMotive_avatar.png" alt="#" /></span>
                                 </div>

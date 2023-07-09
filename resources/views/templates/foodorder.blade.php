@@ -47,8 +47,8 @@
             <div class="auto_container">
                 <div class="technology_master_detail">
                     <div class="custom_tittle pt-2">
-                        <h2>Utilize Our Top Software Services<br>
-                            to Expand Your Business  </h2> 
+                        <h2> <strong>Utilize Our</strong> Top Software Services <strong>to<br>
+                             Expand Your Business</strong>   </h2> 
                     </div>
 
 
@@ -92,23 +92,24 @@
                     <div class="industryNew_section1">
                         <div class="row align-items-center">
                             <div class="col-lg-6 col-md-6 aos-init " data-aos="fade-right" data-aos-duration="1000" data-aos-easing="ease">
-                                <div class="industryNew_section1_info">
-                                    <h3>
-                                        <small>FOOD (ORDERING) </small> <br>  
-                                        <small class="tittleColor_black">& </small> 
-                                        <small>BEVERAGE</small><br> 
-                                        <strong class="tittleColor_black">SOLUTIONS</strong> 
-                                    </h3> 
+                                <div class="custom_tittle text-left">
+                                    <h2>
+                                        FOOD <strong>AND</strong> FMCG <br>  
+                                        SOLUTIONS 
+                                    </h2> 
 
-                                        <p>The food and beverage sector is always growing as more and more,
+                                        <p class="p_color text-justify">The food and beverage sector is always growing as more and more,
                                             companies are using technological advancements to keep one step ahead of the competition. Thousands of websites and mobile apps exist nowadays that are entirely focused on offering a food and beverage service to a wider
                                             customer base.</p>
-                                            <p>We at BIZIONIC with a significant amount of experience in this field, have
+                                            <p class="p_color text-justify">We at BIZIONIC with a significant amount of experience in this field, have
                                                 offered a variety of high-end services, including App Development,
                                                 Shopping Cart Integration, Payment Gateway Integration, Social Media
                                                 Integration, and much more. To guarantee that you will have a higher
                                                 customer retention, our services integrate the most cutting-edge
                                                 technologies with the best user experiences.</p>
+
+                                        <a href="#" class="btn_default mt-2">Get a Free Consultation</a>
+                                        
                                     
                                 </div>
                             </div>
@@ -128,160 +129,11 @@
 
                     <div class="industryNew_section2_info aos-init b2c_colSection " data-aos="fade-up" data-aos-duration="1500" data-aos-easing="ease">
                         <div class="custom_tittle">
-                            <h2>Together, We Create The Perfect Partnership</h2> 
-                            <p>You concentrate on the clients, and we'll focus on expanding your business.</p>
+                            <h2>Together, <strong>We Create The</strong> Perfect Partnership</h2> 
+                            <p class="p_color">You concentrate on the clients, and we'll focus on expanding your business.</p>
                         </div>
 
-                        <div class="industryNew_section2_cols">
-                            <div class="row justify-content-center">
-                                <div class="col-lg-3 col-md-6 provide_col">
-                                    <div class="industryNew_section2_colsInfo">
-                                        <span><img src="/bizionic/images/food_icon1.png" alt="#" /></span>
-                                        <h6>Front Website</h6> 
-                                        <p class="text-justify">First things first, we code and design
-                                            your website's frontend.</p>
-                                    </div>
-                                </div>
-                                <div class="col-lg-3 col-md-6 provide_col">
-                                    <div class="industryNew_section2_colsInfo">
-                                        <span><img src="/bizionic/images/food_icon2.png" alt="#" /></span>
-                                        <h6>Customer App</h6> 
-                                        <p class="text-justify">Customers find apps more appealing
-                                            because they can easily access them.</p>
-                                    </div>
-                                </div>
-                                <div class="col-lg-3 col-md-6 provide_col">
-                                    <div class="industryNew_section2_colsInfo">
-                                        <span><img src="/bizionic/images/food_icon3.png" alt="#" /></span>
-                                        <h6>Merchant App</h6> 
-                                        <p class="text-justify">For both companies and individuals,
-                                            we develop cloud-based mobile
-                                            point-of-sale (mPOS) solutions.</p>
-                                    </div>
-                                </div>
-                                <div class="col-lg-3 col-md-6 provide_col">
-                                    <div class="industryNew_section2_colsInfo">
-                                        <span><img src="/bizionic/images/food_icon4.png" alt="#" /></span>
-                                        <h6>POS Integration</h6> 
-                                        <p class="text-justify">Integrating a system that will allow card
-                                            payments and receipts for customers.</p>
-                                    </div>
-                                </div>
-                                
-                                
-
-                                <div class="col-lg-3 col-md-6 provide_col">
-                                    <div class="industryNew_section2_colsInfo">
-                                        <span><img src="/bizionic/images/food_icon5.png" alt="#" /></span>
-                                        <h6>Branch Management</h6> 
-                                        <p class="text-justify">You can manage staff and branch
-                                            information using our management
-                                            solutions.</p>
-                                    </div>
-                                </div>
-                                <div class="col-lg-3 col-md-6 provide_col">
-                                    <div class="industryNew_section2_colsInfo">
-                                        <span><img src="/bizionic/images/food_icon6.png" alt="#" /></span>
-                                        <h6>Order Management</h6> 
-                                        <p class="text-justify">We can create codes to ease the
-                                            execution of the order procedure.</p>
-                                    </div>
-                                </div>
-                                <div class="col-lg-3 col-md-6 provide_col">
-                                    <div class="industryNew_section2_colsInfo">
-                                        <span><img src="/bizionic/images/food_icon7.png" alt="#" /></span>
-                                        <h6>Category Management</h6> 
-                                        <p class="text-justify">Making sections or categories for your
-                                            products will speed up online shopping.</p>
-                                    </div>
-                                </div>
-                                <div class="col-lg-3 col-md-6 provide_col">
-                                    <div class="industryNew_section2_colsInfo">
-                                        <span><img src="/bizionic/images/food_icon8.png" alt="#" /></span>
-                                        <h6>Product Management</h6> 
-                                        <p class="text-justify">Managing the products effectively will
-                                            help your business succeed.</p>
-                                    </div>
-                                </div>
-
-
-
-
-                                <div class="col-lg-3 col-md-6 provide_col">
-                                    <div class="industryNew_section2_colsInfo">
-                                        <span><img src="/bizionic/images/food_icon9.png" alt="#" /></span>
-                                        <h6>Discount & Coupon <br>
-                                            Management</h6> 
-                                        <p class="text-justify">For the convenience of your business,
-                                            you can handle discounts and coupons.</p>
-                                    </div>
-                                </div>
-                                <div class="col-lg-3 col-md-6 provide_col">
-                                    <div class="industryNew_section2_colsInfo">
-                                        <span><img src="/bizionic/images/food_icon10.png" alt="#" /></span>
-                                        <h6>Content Management</h6> 
-                                        <p class="text-justify">The content of your product can be
-                                            successfully and easily managed using
-                                            a CMS.</p>
-                                    </div>
-                                </div>
-                                <div class="col-lg-3 col-md-6 provide_col">
-                                    <div class="industryNew_section2_colsInfo">
-                                        <span><img src="/bizionic/images/food_icon11.png" alt="#" /></span>
-                                        <h6>Payment Gateway Integration</h6> 
-                                        <p class="text-justify">Leveraging our flawless systems, let your customers select their preferred
-                                            method of payment.</p>
-                                    </div>
-                                </div>
-                                <div class="col-lg-3 col-md-6 provide_col">
-                                    <div class="industryNew_section2_colsInfo">
-                                        <span><img src="/bizionic/images/food_icon12.png" alt="#" /></span>
-                                        <h6>Social Media Integration</h6> 
-                                        <p class="text-justify">At every stage of the development
-                                            lifecycle, products are planned,
-                                            promoted, and marketed.</p>
-                                    </div>
-                                </div>
-
-
-
-
-
-                                <div class="col-lg-3 col-md-6 provide_col">
-                                    <div class="industryNew_section2_colsInfo">
-                                        <span><img src="/bizionic/images/food_icon13.png" alt="#" /></span>
-                                        <h6>Database Management</h6> 
-                                        <p class="text-justify">Within your business, you may safely
-                                            manage all of your vital data.</p>
-                                    </div>
-                                </div>
-                                <div class="col-lg-3 col-md-6 provide_col">
-                                    <div class="industryNew_section2_colsInfo">
-                                        <span><img src="/bizionic/images/food_icon14.png" alt="#" /></span>
-                                        <h6>Sales Report</h6> 
-                                        <p class="text-justify">For your business, create sales reports to compute the sales over a period of time.</p>
-                                    </div>
-                                </div>
-                                <div class="col-lg-3 col-md-6 provide_col">
-                                    <div class="industryNew_section2_colsInfo">
-                                        <span><img src="/bizionic/images/food_icon15.png" alt="#" /></span>
-                                        <h6>Customer Management</h6> 
-                                        <p class="text-justify">Manage all customer information, both new and old, effectively to grow
-                                            your business.</p>
-                                    </div>
-                                </div>
-                                <div class="col-lg-3 col-md-6 provide_col">
-                                    <div class="industryNew_section2_colsInfo">
-                                        <span><img src="/bizionic/images/food_icon16.png" alt="#" /></span>
-                                        <h6>Customisation</h6> 
-                                        <p class="text-justify">Any solution can be tailored and
-                                            customised to meet the demands of
-                                            your business.</p>
-                                    </div>
-                                </div>
-                            </div>
-
-                        </div>
+                        
                     </div>
 
                 </div>
@@ -291,6 +143,160 @@
 
 
 
+        <div class="provider_section">
+            <div class="auto_container">
+                <div class="industryNew_section2_cols">
+                    <div class="row justify-content-center">
+                        <div class="col-lg-3 col-md-6 provide_col">
+                            <div class="industryNew_section2_colsInfo">
+                                <span><img src="/bizionic/images/food_icon1.png" alt="#" /></span>
+                                <h6>Front Website</h6> 
+                                <p class="text-justify">First things first, we code and design
+                                    your website's frontend.</p>
+                            </div>
+                        </div>
+                        <div class="col-lg-3 col-md-6 provide_col">
+                            <div class="industryNew_section2_colsInfo">
+                                <span><img src="/bizionic/images/food_icon2.png" alt="#" /></span>
+                                <h6>Customer App</h6> 
+                                <p class="text-justify">Customers find apps more appealing
+                                    because they can easily access them.</p>
+                            </div>
+                        </div>
+                        <div class="col-lg-3 col-md-6 provide_col">
+                            <div class="industryNew_section2_colsInfo">
+                                <span><img src="/bizionic/images/food_icon3.png" alt="#" /></span>
+                                <h6>Merchant App</h6> 
+                                <p class="text-justify">For both companies and individuals,
+                                    we develop cloud-based mobile
+                                    point-of-sale (mPOS) solutions.</p>
+                            </div>
+                        </div>
+                        <div class="col-lg-3 col-md-6 provide_col">
+                            <div class="industryNew_section2_colsInfo">
+                                <span><img src="/bizionic/images/food_icon4.png" alt="#" /></span>
+                                <h6>POS Integration</h6> 
+                                <p class="text-justify">Integrating a system that will allow card
+                                    payments and receipts for customers.</p>
+                            </div>
+                        </div>
+                        
+                        
+
+                        <div class="col-lg-3 col-md-6 provide_col">
+                            <div class="industryNew_section2_colsInfo">
+                                <span><img src="/bizionic/images/food_icon5.png" alt="#" /></span>
+                                <h6>Branch Management</h6> 
+                                <p class="text-justify">You can manage staff and branch
+                                    information using our management
+                                    solutions.</p>
+                            </div>
+                        </div>
+                        <div class="col-lg-3 col-md-6 provide_col">
+                            <div class="industryNew_section2_colsInfo">
+                                <span><img src="/bizionic/images/food_icon6.png" alt="#" /></span>
+                                <h6>Order Management</h6> 
+                                <p class="text-justify">We can create codes to ease the
+                                    execution of the order procedure.</p>
+                            </div>
+                        </div>
+                        <div class="col-lg-3 col-md-6 provide_col">
+                            <div class="industryNew_section2_colsInfo">
+                                <span><img src="/bizionic/images/food_icon7.png" alt="#" /></span>
+                                <h6>Category Management</h6> 
+                                <p class="text-justify">Making sections or categories for your
+                                    products will speed up online shopping.</p>
+                            </div>
+                        </div>
+                        <div class="col-lg-3 col-md-6 provide_col">
+                            <div class="industryNew_section2_colsInfo">
+                                <span><img src="/bizionic/images/food_icon8.png" alt="#" /></span>
+                                <h6>Product Management</h6> 
+                                <p class="text-justify">Managing the products effectively will
+                                    help your business succeed.</p>
+                            </div>
+                        </div>
+
+
+
+
+                        <div class="col-lg-3 col-md-6 provide_col">
+                            <div class="industryNew_section2_colsInfo">
+                                <span><img src="/bizionic/images/food_icon9.png" alt="#" /></span>
+                                <h6>Discount & Coupon <br>
+                                    Management</h6> 
+                                <p class="text-justify">For the convenience of your business,
+                                    you can handle discounts and coupons.</p>
+                            </div>
+                        </div>
+                        <div class="col-lg-3 col-md-6 provide_col">
+                            <div class="industryNew_section2_colsInfo">
+                                <span><img src="/bizionic/images/food_icon10.png" alt="#" /></span>
+                                <h6>Content Management</h6> 
+                                <p class="text-justify">The content of your product can be
+                                    successfully and easily managed using
+                                    a CMS.</p>
+                            </div>
+                        </div>
+                        <div class="col-lg-3 col-md-6 provide_col">
+                            <div class="industryNew_section2_colsInfo">
+                                <span><img src="/bizionic/images/food_icon11.png" alt="#" /></span>
+                                <h6>Payment Gateway Integration</h6> 
+                                <p class="text-justify">Leveraging our flawless systems, let your customers select their preferred
+                                    method of payment.</p>
+                            </div>
+                        </div>
+                        <div class="col-lg-3 col-md-6 provide_col">
+                            <div class="industryNew_section2_colsInfo">
+                                <span><img src="/bizionic/images/food_icon12.png" alt="#" /></span>
+                                <h6>Social Media Integration</h6> 
+                                <p class="text-justify">At every stage of the development
+                                    lifecycle, products are planned,
+                                    promoted, and marketed.</p>
+                            </div>
+                        </div>
+
+
+
+
+
+                        <div class="col-lg-3 col-md-6 provide_col">
+                            <div class="industryNew_section2_colsInfo">
+                                <span><img src="/bizionic/images/food_icon13.png" alt="#" /></span>
+                                <h6>Database Management</h6> 
+                                <p class="text-justify">Within your business, you may safely
+                                    manage all of your vital data.</p>
+                            </div>
+                        </div>
+                        <div class="col-lg-3 col-md-6 provide_col">
+                            <div class="industryNew_section2_colsInfo">
+                                <span><img src="/bizionic/images/food_icon14.png" alt="#" /></span>
+                                <h6>Sales Report</h6> 
+                                <p class="text-justify">For your business, create sales reports to compute the sales over a period of time.</p>
+                            </div>
+                        </div>
+                        <div class="col-lg-3 col-md-6 provide_col">
+                            <div class="industryNew_section2_colsInfo">
+                                <span><img src="/bizionic/images/food_icon15.png" alt="#" /></span>
+                                <h6>Customer Management</h6> 
+                                <p class="text-justify">Manage all customer information, both new and old, effectively to grow
+                                    your business.</p>
+                            </div>
+                        </div>
+                        <div class="col-lg-3 col-md-6 provide_col">
+                            <div class="industryNew_section2_colsInfo">
+                                <span><img src="/bizionic/images/food_icon16.png" alt="#" /></span>
+                                <h6>Customisation</h6> 
+                                <p class="text-justify">Any solution can be tailored and
+                                    customised to meet the demands of
+                                    your business.</p>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
 
 
 
