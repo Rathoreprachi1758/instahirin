@@ -47,8 +47,8 @@
             <div class="auto_container">
                 <div class="technology_master_detail">
                     <div class="custom_tittle pt-2">
-                        <h2>Utilize Our Top Software Services<br>
-                            to Expand Your Business  </h2> 
+                    <h2> <strong>Utilize Our</strong> Top Software Services <strong>to<br>
+                             Expand Your Business</strong>   </h2> 
                     </div>
 
 
@@ -92,16 +92,19 @@
                     <div class="industryNew_section1">
                         <div class="row align-items-center">
                             <div class="col-lg-6 col-md-6 aos-init " data-aos="fade-right" data-aos-duration="1000" data-aos-easing="ease">
-                                <div class="industryNew_section1_info">
-                                    <h3>
-                                        <small>HEALTHCARE </small> <br>  
-                                        <strong class="tittleColor_black">SOLUTIONS</strong> 
-                                    </h3>
+                                <div class="custom_tittle text-left">
+                                    <h2>
+                                    HEALTHCARE SOLUTIONS
+                                    </h2>
 
-                                        <p>In modern days the healthcare industry is undergoing dramatic changes whilst primarily focusing on improving the quality of care being delivered. In order to be successful within this ever demanding industry, it is essential to manage all patient medical information with an efficient management
+                                    <h5>Bizionic, Keeping the Dignity of Healthcare Sector</h5>
+                                        <p class="text-justify p_color">In modern days the healthcare industry is undergoing dramatic changes whilst primarily focusing on improving the quality of care being delivered. In order to be successful within this ever demanding industry, it is essential to manage all patient medical information with an efficient management
                                             system, and most importantly with confidential security.</p>
-                                            <p>Here at BIZIONIC, we use our agile IT infrastructure and strategic initiatives, to help you to deliver a better quality of services, at affordable prices. Our team of avid developers and designers can help you to create efficient and
+                                            <p class="text-justify p_color">Here at BIZIONIC, we use our agile IT infrastructure and strategic initiatives, to help you to deliver a better quality of services, at affordable prices. Our team of avid developers and designers can help you to create efficient and
                                                 effective solution models to help your business truly flourish.</p>
+
+                                                <a href="#" class="btn_default mt-2">Get a Free Consultation</a>
+                                        
                                     
                                 </div>
                             </div>
@@ -121,67 +124,73 @@
 
                     <div class="industryNew_section2_info aos-init b2c_colSection " data-aos="fade-up" data-aos-duration="1500" data-aos-easing="ease">
                         <div class="custom_tittle">
-                            <h2>Healthcare Solutions, From BIZIONIC</h2> 
-                            <p>Keeping the Dignity of Healthcare</p>
+                            <h2>Healthcare Solutions, <strong>From BIZIONIC</strong></h2>  
                         </div>
 
-                        <div class="industryNew_section2_cols">
-                            <div class="row">
-                                <div class="col-lg-4 col-md-6 provide_col">
-                                    <div class="industryNew_section2_colsInfo">
-                                        <span><img src="/bizionic/images/health_icon1.png" alt="#" /></span>
-                                        <h6>Patient and <br>
-                                            Appointment Register</h6> 
-                                    </div>
-                                </div>
-                                <div class="col-lg-4 col-md-6 provide_col">
-                                    <div class="industryNew_section2_colsInfo">
-                                        <span><img src="/bizionic/images/health_icon2.png" alt="#" /></span>
-                                        <h6>Patient History with <br>
-                                            Last Appointments and <br>
-                                            Prescription History</h6> 
-                                    </div>
-                                </div>
-                                <div class="col-lg-4 col-md-6 provide_col">
-                                    <div class="industryNew_section2_colsInfo">
-                                        <span><img src="/bizionic/images/health_icon3.png" alt="#" /></span>
-                                        <h6>Calendar To View <br>
-                                            Appointment Schedules</h6> 
-                                    </div>
-                                </div> 
-
-
-
-                                <div class="col-lg-4 col-md-6 provide_col">
-                                    <div class="industryNew_section2_colsInfo">
-                                        <span><img src="/bizionic/images/health_icon4.png" alt="#" /></span>
-                                        <h6>Patient and Appointment <br>
-                                            Reporting Features</h6> 
-                                    </div>
-                                </div>
-                                <div class="col-lg-4 col-md-6 provide_col">
-                                    <div class="industryNew_section2_colsInfo">
-                                        <span><img src="/bizionic/images/health_icon5.png" alt="#" /></span>
-                                        <h6>An Admin Section To <br>
-                                            Control Website Content <br>
-                                            and Admin Activities</h6> 
-                                    </div>
-                                </div>
-                                <div class="col-lg-4 col-md-6 provide_col">
-                                    <div class="industryNew_section2_colsInfo">
-                                        <span><img src="/bizionic/images/health_icon6.png" alt="#" /></span>
-                                        <h6>Expert Team For <br>
-                                            Module & Features Suggestions</h6> 
-                                    </div>
-                                </div> 
-                            </div>
-                        </div>
+                        
                     </div>
 
                 </div>
             </div>
         </div>
 
+
+
+        <div class="provider_section">
+            <div class="auto_container">
+                <div class="industryNew_section2_cols">
+                    <div class="row">
+                        <div class="col-lg-4 col-md-6 provide_col">
+                            <div class="industryNew_section2_colsInfo">
+                                <span><img src="/bizionic/images/health_icon1.png" alt="#" /></span>
+                                <h6>Patient and <br>
+                                    Appointment Register</h6> 
+                            </div>
+                        </div>
+                        <div class="col-lg-4 col-md-6 provide_col">
+                            <div class="industryNew_section2_colsInfo">
+                                <span><img src="/bizionic/images/health_icon2.png" alt="#" /></span>
+                                <h6>Patient History with <br>
+                                    Last Appointments and <br>
+                                    Prescription History</h6> 
+                            </div>
+                        </div>
+                        <div class="col-lg-4 col-md-6 provide_col">
+                            <div class="industryNew_section2_colsInfo">
+                                <span><img src="/bizionic/images/health_icon3.png" alt="#" /></span>
+                                <h6>Calendar To View <br>
+                                    Appointment Schedules</h6> 
+                            </div>
+                        </div> 
+
+
+
+                        <div class="col-lg-4 col-md-6 provide_col">
+                            <div class="industryNew_section2_colsInfo">
+                                <span><img src="/bizionic/images/health_icon4.png" alt="#" /></span>
+                                <h6>Patient and Appointment <br>
+                                    Reporting Features</h6> 
+                            </div>
+                        </div>
+                        <div class="col-lg-4 col-md-6 provide_col">
+                            <div class="industryNew_section2_colsInfo">
+                                <span><img src="/bizionic/images/health_icon5.png" alt="#" /></span>
+                                <h6>An Admin Section To <br>
+                                    Control Website Content <br>
+                                    and Admin Activities</h6> 
+                            </div>
+                        </div>
+                        <div class="col-lg-4 col-md-6 provide_col">
+                            <div class="industryNew_section2_colsInfo">
+                                <span><img src="/bizionic/images/health_icon6.png" alt="#" /></span>
+                                <h6>Expert Team For <br>
+                                    Module & Features Suggestions</h6> 
+                            </div>
+                        </div> 
+                    </div>
+                </div>
+            </div>
+        </div>
 
 
         <!-- Additional benefits section -->
@@ -194,26 +203,28 @@
                     
 
                     <div class="additional_benefits_list">
-                        <div class="row align-items-center">
-                            <div class="col-lg-6 col-md-6 aos-init " data-aos="fade-right" data-aos-duration="1000" data-aos-easing="ease">
-                                <div class="custom_tittle text-left">
-                                    <h2>Digital Healthcare Key Features:</h2> 
-                                </div>
-                                <div class="additional_benefits_text">
-                                    <ul>
-                                        <li><p>Patient outcome will Improve.</p></li>
-                                        <li><p>Clinical proficiency will increase.</p></li>
-                                        <li><p>The rate of productivity will rise.</p></li>
-                                        <li><p>There will be new competencies added.</p></li>
-                                        <li><p>New coaching techniques will be employed.</p></li>
-                                        <li><p>Organizational and professional boundaries will deplete.</p></li> 
-                                    </ul>
+                        <div class="row">
+                            <div class="col-lg-7 col-md-6 aos-init " data-aos="fade-right" data-aos-duration="1000" data-aos-easing="ease">
+                                <div class="b2bInnerText">
+                                    <div class="custom_tittle text-left">
+                                        <h2><strong>Digital Healthcare Key Features:</strong></h2> 
+                                    </div>
+                                    <div class="additional_benefits_text">
+                                        <ul>
+                                            <li><p>Patient outcome will Improve.</p></li>
+                                            <li><p>Clinical proficiency will increase.</p></li>
+                                            <li><p>The rate of productivity will rise.</p></li>
+                                            <li><p>There will be new competencies added.</p></li>
+                                            <li><p>New coaching techniques will be employed.</p></li>
+                                            <li><p>Organizational and professional boundaries will deplete.</p></li> 
+                                        </ul>
+                                    </div>
                                 </div>
                             </div>
 
 
 
-                            <div class="col-lg-6 col-md-6 aos-init " data-aos="fade-left" data-aos-duration="1000" data-aos-easing="ease">
+                            <div class="col-lg-5 col-md-6 aos-init " data-aos="fade-left" data-aos-duration="1000" data-aos-easing="ease">
                                 <div class="process_avatar">
                                     <span><img src="/bizionic/images/healthFeature_avatar.png" alt="#" /></span>
                                 </div>
