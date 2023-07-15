@@ -107,7 +107,7 @@
 
                             <div class="col-lg-6 col-md-6 aos-init " data-aos="fade-left" data-aos-duration="1000" data-aos-easing="ease">
                                 <div class="industryNew_section1_avatar">
-                                    <span><img src="/bizionic/images/train_avatar.png" alt="#" /></span>
+                                    <span><img src="/bizionic/images/indPortfolio_img12.png" alt="#" /></span>
                                 </div>
                             </div>
                         </div>

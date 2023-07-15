@@ -47,8 +47,8 @@
             <div class="auto_container">
                 <div class="technology_master_detail">
                     <div class="custom_tittle pt-2">
-                        <h2>Utilize Our Top Software Services<br>
-                            to Expand Your Business  </h2> 
+                    <h2> <strong>Utilize Our</strong> Top Software Services <strong>to<br>
+                             Expand Your Business</strong>   </h2> 
                     </div>
 
 
@@ -92,18 +92,17 @@
                     <div class="industryNew_section1">
                         <div class="row align-items-center">
                             <div class="col-lg-6 col-md-6 aos-init " data-aos="fade-right" data-aos-duration="1000" data-aos-easing="ease">
-                                <div class="industryNew_section1_info">
-                                    <h3>
-                                        <small>BUSINESS  </small> TO  <br> 
-                                        <small class="">COMSUMER (B2C)</small> <br>
-                                        <strong class="tittleColor_black">SOLUTIONS</strong> 
-                                    </h3>
+                                <div class="custom_tittle text-left">
+                                    <h2>
+                                        2C SOLUTIONS<br>
+                                        <strong>(BUSINESS TO CONSUMER)</strong> 
+                                    </h2>
 
                                     <h5>Helping Your Business To Reach Its Potential</h5>
-                                        <p>With rich, dynamic and customer oriented B2C solutions, BIZIONIC is in a strong position to assist all kind of business efficiently. We can help our
+                                        <p class="text-justify p_color">With rich, dynamic and customer oriented B2C solutions, BIZIONIC is in a strong position to assist all kind of business efficiently. We can help our
                                             clients achieve significant business growth through the medium of our
                                             services and extensive industry experience.</p>
-                                            <p>With a team of experts specializing in providing effective B2C solutions, we can provide the best insights, consultancy, and services at affordable prices. Our designed systems solution are fully responsive and ensures that the
+                                            <p class="text-justify p_color">With a team of experts specializing in providing effective B2C solutions, we can provide the best insights, consultancy, and services at affordable prices. Our designed systems solution are fully responsive and ensures that the
                                                 customers receive the same engaging experience from every device.</p>
                                     
                                 </div>
@@ -124,75 +123,83 @@
 
                     <div class="industryNew_section2_info aos-init b2c_colSection " data-aos="fade-up" data-aos-duration="1500" data-aos-easing="ease">
                         <div class="custom_tittle">
-                            <h2>From Simple To Complex Requirements, <br>
-                                Our B2C Solutions Outshine In Competition!</h2> 
+                            <h2><strong>From</strong> Simple To Complex <strong>Requirements,</strong> <br>
+                            <strong>Our</strong> B2C Solutions <strong>Outshine In Competition!</strong></h2> 
                         </div>
 
-                        <div class="industryNew_section2_cols">
-                            <div class="row">
-                                <div class="col-lg-3 col-md-4 provide_col">
-                                    <div class="industryNew_section2_colsInfo">
-                                        <span><img src="/bizionic/images/b2c_icon1.png" alt="#" /></span>
-                                        <h6>Pre-Order <br>
-                                            Management</h6> 
-                                    </div>
-                                </div>
-                                <div class="col-lg-3 col-md-4 provide_col">
-                                    <div class="industryNew_section2_colsInfo">
-                                        <span><img src="/bizionic/images/b2c_icon2.png" alt="#" /></span>
-                                        <h6>Wish-List <br>
-                                            Statement</h6> 
-                                    </div>
-                                </div>
-                                <div class="col-lg-3 col-md-4 provide_col">
-                                    <div class="industryNew_section2_colsInfo">
-                                        <span><img src="/bizionic/images/b2c_icon3.png" alt="#" /></span>
-                                        <h6>Social Media <br>
-                                            Promotions</h6> 
-                                    </div>
-                                </div>
-                                <div class="col-lg-3 col-md-4 provide_col">
-                                    <div class="industryNew_section2_colsInfo">
-                                        <span><img src="/bizionic/images/b2c_icon4.png" alt="#" /></span>
-                                        <h6>Product <br>
-                                            Recommendations</h6> 
-                                    </div>
-                                </div>
+                        
+                    </div>
+
+                </div>
+            </div>
+        </div>
 
 
 
-                                <div class="col-lg-3 col-md-4 provide_col">
-                                    <div class="industryNew_section2_colsInfo">
-                                        <span><img src="/bizionic/images/b2c_icon5.png" alt="#" /></span>
-                                        <h6>Offline Product <br>
-                                            Management</h6> 
-                                    </div>
-                                </div>
-                                <div class="col-lg-3 col-md-4 provide_col">
-                                    <div class="industryNew_section2_colsInfo">
-                                        <span><img src="/bizionic/images/b2c_icon6.png" alt="#" /></span>
-                                        <h6>Customize Product <br>
-                                            Using Designing Tool</h6> 
-                                    </div>
-                                </div>
-                                <div class="col-lg-3 col-md-4 provide_col">
-                                    <div class="industryNew_section2_colsInfo">
-                                        <span><img src="/bizionic/images/b2c_icon7.png" alt="#" /></span>
-                                        <h6>Quickbooks <br>
-                                            Integration</h6> 
-                                    </div>
-                                </div>
-                                <div class="col-lg-3 col-md-4 provide_col">
-                                    <div class="industryNew_section2_colsInfo">
-                                        <span><img src="/bizionic/images/b2c_icon8.png" alt="#" /></span>
-                                        <h6>Shipping <br>
-                                            Methods</h6> 
-                                    </div>
-                                </div>
+        <div class="provider_section">
+            <div class="auto_container">
+                <div class="industryNew_section2_cols">
+                    <div class="row">
+                        <div class="col-lg-3 col-md-4 provide_col">
+                            <div class="industryNew_section2_colsInfo">
+                                <span><img src="/bizionic/images/b2c_icon1.png" alt="#" /></span>
+                                <h6>Pre-Order <br>
+                                    Management</h6> 
+                            </div>
+                        </div>
+                        <div class="col-lg-3 col-md-4 provide_col">
+                            <div class="industryNew_section2_colsInfo">
+                                <span><img src="/bizionic/images/b2c_icon2.png" alt="#" /></span>
+                                <h6>Wish-List <br>
+                                    Statement</h6> 
+                            </div>
+                        </div>
+                        <div class="col-lg-3 col-md-4 provide_col">
+                            <div class="industryNew_section2_colsInfo">
+                                <span><img src="/bizionic/images/b2c_icon3.png" alt="#" /></span>
+                                <h6>Social Media <br>
+                                    Promotions</h6> 
+                            </div>
+                        </div>
+                        <div class="col-lg-3 col-md-4 provide_col">
+                            <div class="industryNew_section2_colsInfo">
+                                <span><img src="/bizionic/images/b2c_icon4.png" alt="#" /></span>
+                                <h6>Product <br>
+                                    Recommendations</h6> 
+                            </div>
+                        </div>
+
+
+
+                        <div class="col-lg-3 col-md-4 provide_col">
+                            <div class="industryNew_section2_colsInfo">
+                                <span><img src="/bizionic/images/b2c_icon5.png" alt="#" /></span>
+                                <h6>Offline Product <br>
+                                    Management</h6> 
+                            </div>
+                        </div>
+                        <div class="col-lg-3 col-md-4 provide_col">
+                            <div class="industryNew_section2_colsInfo">
+                                <span><img src="/bizionic/images/b2c_icon6.png" alt="#" /></span>
+                                <h6>Customize Product <br>
+                                    Using Designing Tool</h6> 
+                            </div>
+                        </div>
+                        <div class="col-lg-3 col-md-4 provide_col">
+                            <div class="industryNew_section2_colsInfo">
+                                <span><img src="/bizionic/images/b2c_icon7.png" alt="#" /></span>
+                                <h6>Quickbooks <br>
+                                    Integration</h6> 
+                            </div>
+                        </div>
+                        <div class="col-lg-3 col-md-4 provide_col">
+                            <div class="industryNew_section2_colsInfo">
+                                <span><img src="/bizionic/images/b2c_icon8.png" alt="#" /></span>
+                                <h6>Shipping <br>
+                                    Methods</h6> 
                             </div>
                         </div>
                     </div>
-
                 </div>
             </div>
         </div>
@@ -206,8 +213,8 @@
         <div class="additional_benefits_section">
             <div class="auto_container">
                 <div class="additional_benefits_section_detail bg_f2f2f2 aos-init " data-aos="fade-up" data-aos-duration="1000" data-aos-easing="ease">
-                    <div class="custom_tittle text-left">
-                        <h2>B2C Key Features:</h2> 
+                    <div class="custom_tittle text-left pb-0">
+                        <h2><strong>B2C Key Features:</strong></h2> 
                     </div>
 
                     <div class="additional_benefits_list">

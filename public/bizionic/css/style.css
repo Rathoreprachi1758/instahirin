@@ -1779,14 +1779,14 @@ body, html {scroll-behavior: smooth; }
 
 .additional_benefits_section_detail .custom_tittle { padding-bottom: 10px;}
 
-.additional_benefits_section_detail .custom_tittle h2  { color: #16509b; padding-bottom: 10px;}
+/* .additional_benefits_section_detail .custom_tittle h2  { color: #16509b; padding-bottom: 10px;} */
 
 
 .additional_benefits_text { width: 100%;}
 
 .additional_benefits_text ul { margin-left: 25px; color: #000;}
 
-.additional_benefits_text ul li { padding: 15px 0px; list-style: disc; font-size: 20px;}
+.additional_benefits_text ul li { padding: 7px 0px; list-style: disc; font-size: 20px;}
 
 .additional_benefits_text ul li p { padding: 0px;}
 
@@ -2486,7 +2486,8 @@ body, html {scroll-behavior: smooth; }
    filter: grayscale(100%); cursor: pointer;
    transition: all 1s ease; 
 }
-.provider_section .industryNew_section2_colsInfo h6 {font-family: 'avenirmedium'; text-transform: uppercase; text-align: center;    color: #000029;}
+.provider_section .industryNew_section2_colsInfo h6 {font-family: 'avenirmedium'; text-transform: uppercase; text-align: center;    color: #000029;font-size: 16px;
+    line-height: 1.5;}
 
 .provider_section .industryNew_section2_colsInfo { 
     border: 0px solid #bbbdbf;
@@ -3151,27 +3152,27 @@ body, html {scroll-behavior: smooth; }
 .indPortfolio_col a:hover .indPortfolioText b { color: #19437a; border-color: #19437a;}
 
 
+.b2b_process { padding: 0px;}
+
+.b2b_process .process_avatar { background: #fafafa; height: 100%;}
+
+.b2b_process .process_avatar span { height: 100%; display: flex; align-items: center; justify-content: center;}
+
+.b2b_process .process_avatar span img { max-width: 350px;}
+
+
+.b2bInnerText { width: 100%; padding: 60px 40px;}
+
+.b2bInnerText .additional_benefits_text ul { display: flex; flex-wrap: wrap;}
+
+.b2bInnerText .additional_benefits_text ul li { width: 50%;}
 
 
 
+.provider_section .industryNew_section2_colsInfo h6 a {color: #000029;}
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+.automotiveList .additional_benefits_text ul li { width: 100% !important;}
 
 
 

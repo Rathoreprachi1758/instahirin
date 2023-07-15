@@ -48,8 +48,8 @@
             <div class="auto_container">
                 <div class="technology_master_detail">
                     <div class="custom_tittle pt-2">
-                        <h2>Utilize Our Top Software Services<br>
-                            to Expand Your Business  </h2> 
+                    <h2> <strong>Utilize Our</strong> Top Software Services <strong>to<br>
+                             Expand Your Business</strong>   </h2> 
                     </div>
 
 
@@ -93,19 +93,19 @@
                     <div class="industryNew_section1">
                         <div class="row align-items-center">
                             <div class="col-lg-6 col-md-6 aos-init " data-aos="fade-right" data-aos-duration="1000" data-aos-easing="ease">
-                                <div class="industryNew_section1_info">
-                                    <h3>
-                                        <strong>TRAVEL </strong> <strong class="tittleColor_black">&</strong> <br>  
-                                        <strong class="">HOSPITALITY</strong> <br> 
-                                        <small class="tittleColor_black">MANAGEMENT</small><br> 
-                                        <small class="tittleColor_black">SOFTWARE</small>
-                                    </h3>
+                                <div class="custom_tittle text-left">
+                                    <h2>
+                                        TRAVEL <strong>AND</strong> HOSPITALITY<br> <strong>MANAGEMENT SOFTWARE</strong>
+                                    </h2>
 
-                                        <p>Travel agencies are usually in need of a few types of software. A typical travel agent's daily tasks usually involve scheduling, creating tour programmes, providing consultation services, booking activities, negotiating with vendors, creating personalised tours, and locating the best fare for a client's budget. Of course, none of this has to be completed manually or using an
+                                        <p class="text-justify p_color">Travel agencies are usually in need of a few types of software. A typical travel agent's daily tasks usually involve scheduling, creating tour programmes, providing consultation services, booking activities, negotiating with vendors, creating personalised tours, and locating the best fare for a client's budget. Of course, none of this has to be completed manually or using an
                                             Excel spreadsheet.</p>
-                                        <p>Serving over 150+ travel clients, many of whom are international brands,
+                                        <p class="text-justify p_color">Serving over 150+ travel clients, many of whom are international brands,
                                             BIZIONIC have significant experience in design and development of
                                             bespoke solutions for the travel and hospitality industry.</p>
+
+                                            <a href="#" class="btn_default mt-2">Get a Free Consultation</a>
+                                        
                                     
                                 </div>
                             </div>
@@ -125,71 +125,79 @@
 
                     <div class="industryNew_section2_info aos-init  b2c_colSection" data-aos="fade-up" data-aos-duration="1500" data-aos-easing="ease">
                         <div class="custom_tittle">
-                            <h2>The Travel Solutions, BIZIONIC Provides</h2> 
+                            <h2><strong>The</strong> Travel Solutions, <strong>BIZIONIC Provides</strong></h2> 
                         </div>
 
-                        <div class="industryNew_section2_cols">
-                            <div class="row">
-                                <div class="col-lg-3 col-md-4 provide_col">
-                                    <div class="industryNew_section2_colsInfo">
-                                        <span><img src="/bizionic/images/travel_icon1.png" alt="#" /></span>
-                                        <h6><a href="#">Hotel Booking <br>
-                                            Search Engine</a></h6> 
-                                    </div>
-                                </div> 
-                                <div class="col-lg-3 col-md-4 provide_col">
-                                    <div class="industryNew_section2_colsInfo">
-                                        <span><img src="/bizionic/images/travel_icon2.png" alt="#" /></span>
-                                        <h6><a href="#">Flight Booking <br>
-                                            Search Engine</a></h6> 
-                                    </div>
-                                </div> 
-                                <div class="col-lg-3 col-md-4 provide_col">
-                                    <div class="industryNew_section2_colsInfo">
-                                        <span><img src="/bizionic/images/travel_icon3.png" alt="#" /></span>
-                                        <h6><a href="#">Cruise Booking <br>
-                                            Search Engine</a></h6> 
-                                    </div>
-                                </div> 
-                                <div class="col-lg-3 col-md-4 provide_col">
-                                    <div class="industryNew_section2_colsInfo">
-                                        <span><img src="/bizionic/images/travel_icon4.png" alt="#" /></span>
-                                        <h6><a href="#">Car <br>
-                                            Rental / Hire</a></h6> 
-                                    </div>
-                                </div> 
-                                
-                                
-
-
-                                <div class="col-lg-3 col-md-4 provide_col">
-                                    <div class="industryNew_section2_colsInfo">
-                                        <span><img src="/bizionic/images/travel_icon5.png" alt="#" /></span>
-                                        <h6><a href="#">Travel Insurance</a></h6> 
-                                    </div>
-                                </div> 
-                                <div class="col-lg-3 col-md-4 provide_col">
-                                    <div class="industryNew_section2_colsInfo">
-                                        <span><img src="/bizionic/images/travel_icon6.png" alt="#" /></span>
-                                        <h6><a href="#">Successful Agents</a></h6> 
-                                    </div>
-                                </div> 
-                                <div class="col-lg-3 col-md-4 provide_col">
-                                    <div class="industryNew_section2_colsInfo">
-                                        <span><img src="/bizionic/images/travel_icon7.png" alt="#" /></span>
-                                        <h6><a href="#">Transfers</a></h6> 
-                                    </div>
-                                </div> 
-                                <div class="col-lg-3 col-md-4 provide_col">
-                                    <div class="industryNew_section2_colsInfo">
-                                        <span><img src="/bizionic/images/travel_icon8.png" alt="#" /></span>
-                                        <h6><a href="#">Travel Extras</a></h6> 
-                                    </div>
-                                </div> 
-                            </div>
-                        </div>
+                        
                     </div>
 
+                </div>
+            </div>
+        </div>
+
+
+
+        <div class="provider_section">
+            <div class="auto_container">
+                <div class="industryNew_section2_cols">
+                    <div class="row">
+                        <div class="col-lg-3 col-md-4 provide_col">
+                            <div class="industryNew_section2_colsInfo">
+                                <span><img src="/bizionic/images/travel_icon1.png" alt="#" /></span>
+                                <h6><a href="#">Hotel Booking <br>
+                                    Search Engine</a></h6> 
+                            </div>
+                        </div> 
+                        <div class="col-lg-3 col-md-4 provide_col">
+                            <div class="industryNew_section2_colsInfo">
+                                <span><img src="/bizionic/images/travel_icon2.png" alt="#" /></span>
+                                <h6><a href="#">Flight Booking <br>
+                                    Search Engine</a></h6> 
+                            </div>
+                        </div> 
+                        <div class="col-lg-3 col-md-4 provide_col">
+                            <div class="industryNew_section2_colsInfo">
+                                <span><img src="/bizionic/images/travel_icon3.png" alt="#" /></span>
+                                <h6><a href="#">Cruise Booking <br>
+                                    Search Engine</a></h6> 
+                            </div>
+                        </div> 
+                        <div class="col-lg-3 col-md-4 provide_col">
+                            <div class="industryNew_section2_colsInfo">
+                                <span><img src="/bizionic/images/travel_icon4.png" alt="#" /></span>
+                                <h6><a href="#">Car <br>
+                                    Rental / Hire</a></h6> 
+                            </div>
+                        </div> 
+                        
+                        
+
+
+                        <div class="col-lg-3 col-md-4 provide_col">
+                            <div class="industryNew_section2_colsInfo">
+                                <span><img src="/bizionic/images/travel_icon5.png" alt="#" /></span>
+                                <h6><a href="#">Travel Insurance</a></h6> 
+                            </div>
+                        </div> 
+                        <div class="col-lg-3 col-md-4 provide_col">
+                            <div class="industryNew_section2_colsInfo">
+                                <span><img src="/bizionic/images/travel_icon6.png" alt="#" /></span>
+                                <h6><a href="#">Successful Agents</a></h6> 
+                            </div>
+                        </div> 
+                        <div class="col-lg-3 col-md-4 provide_col">
+                            <div class="industryNew_section2_colsInfo">
+                                <span><img src="/bizionic/images/travel_icon7.png" alt="#" /></span>
+                                <h6><a href="#">Transfers</a></h6> 
+                            </div>
+                        </div> 
+                        <div class="col-lg-3 col-md-4 provide_col">
+                            <div class="industryNew_section2_colsInfo">
+                                <span><img src="/bizionic/images/travel_icon8.png" alt="#" /></span>
+                                <h6><a href="#">Travel Extras</a></h6> 
+                            </div>
+                        </div> 
+                    </div>
                 </div>
             </div>
         </div>
@@ -209,7 +217,7 @@
                         <div class="row align-items-center">
                             <div class="col-lg-4 col-md-6 aos-init " data-aos="fade-right" data-aos-duration="1000" data-aos-easing="ease">
                                 <div class="custom_tittle text-left">
-                                    <h2>Main Features:</h2> 
+                                    <h2><strong>Main Features:</strong></h2> 
                                 </div>
                                 <div class="additional_benefits_text">
                                     <ul>

@@ -48,8 +48,8 @@
             <div class="auto_container">
                 <div class="technology_master_detail">
                     <div class="custom_tittle pt-2">
-                        <h2>Utilize Our Top Software Services<br>
-                            to Expand Your Business  </h2> 
+                    <h2> <strong>Utilize Our</strong> Top Software Services <strong>to<br>
+                             Expand Your Business</strong>   </h2> 
                     </div>
 
 
@@ -93,19 +93,19 @@
                     <div class="industryNew_section1">
                         <div class="row align-items-center">
                             <div class="col-lg-6 col-md-6 aos-init " data-aos="fade-right" data-aos-duration="1000" data-aos-easing="ease">
-                                <div class="industryNew_section1_info">
-                                    <h3>
-                                        <strong>REAL ESTATE</strong>  <br> 
-                                        <strong class="tittleColor_black">SOLUTIONS</strong> <br>
-                                        FOR ALL YOUR NEEDS!
-                                    </h3>
+                                <div class="custom_tittle text-left">
+                                    <h2>REAL ESTATE SOLUTIONS <br>
+                                    <strong>FOR ALL YOUR NEEDS!</strong>
+                                    </h2>
 
-                                        <p>The Property Sector, which includes the subsectors as Housing, Retail,
+                                        <p class="p_color text-justify">The Property Sector, which includes the subsectors as Housing, Retail,
                                             Hospitality, and Commercial, is a fast growing industry in the world. The need for property management systems is quickly rising as well. At
                                             BIZIONIC, we are ready to assist you facilitate and grow your business with
                                             our innovative IT solutions.</p>
-                                            <p>We have collaborated with various industry leaders over the years and given them solutions that help them effectively manage their properties, tenants, and revenue. With our experience and knowledge, we pledge to reduce your stress by offering high-performance solutions that will improve your business
+                                            <p class="p_color text-justify">We have collaborated with various industry leaders over the years and given them solutions that help them effectively manage their properties, tenants, and revenue. With our experience and knowledge, we pledge to reduce your stress by offering high-performance solutions that will improve your business
                                                 and make it more easier.</p>
+
+                                        <a href="#" class="btn_default mt-2">Get a Free Consultation</a>
                                     
                                 </div>
                             </div>
@@ -125,93 +125,101 @@
 
                     <div class="industryNew_section2_info aos-init " data-aos="fade-up" data-aos-duration="1500" data-aos-easing="ease">
                         <div class="custom_tittle">
-                            <h2>Why Choose BIZIONIC?</h2>
-                            <p class="">Because We Can Create High Quality Custom Real Estate Solutions <br>
+                            <h2>Why Choose <strong>BIZIONIC?</strong></h2>
+                            <p class="p_color">Because We Can Create High Quality Custom Real Estate Solutions
                                 to Suit Your Business Needs!</p>
                         </div>
 
-                        <div class="industryNew_section2_cols">
-                            <div class="row">
-                                <div class="col-lg-3 col-md-6 provide_col">
-                                    <div class="industryNew_section2_colsInfo">
-                                        <span><img src="/bizionic/images/estateIcon_1.png" alt="#" /></span>
-                                        <h6>Outstanding Designs</h6>
-                                        <p>Our designs reflect the talent of some of the top web designers in the profession. Over the years, we have created a tonne of incredible websites, and we love to
-                                            showcase them.</p>
-                                    </div>
-                                </div>
-                                <div class="col-lg-3 col-md-6 provide_col">
-                                    <div class="industryNew_section2_colsInfo">
-                                        <span><img src="/bizionic/images/estateIcon_2.png" alt="#" /></span>
-                                        <h6>Responsive Websites</h6>
-                                        <p>All of our websites and CRM products are responsive. This implies that all
-                                            desktop, tablet, and mobile devices will
-                                            display your website properly.</p>
-                                    </div>
-                                </div>
-                                <div class="col-lg-3 col-md-6 provide_col">
-                                    <div class="industryNew_section2_colsInfo">
-                                        <span><img src="/bizionic/images/estateIcon_3.png" alt="#" /></span>
-                                        <h6>CRM Lead Management</h6>
-                                        <p>You can manage all of your prospects
-                                            in one place with our CRM lead
-                                            management platform, which is a web-based management solution you
-                                            can operate on any device.</p>
-                                    </div>
-                                </div>
-                                <div class="col-lg-3 col-md-6 provide_col">
-                                    <div class="industryNew_section2_colsInfo">
-                                        <span><img src="/bizionic/images/estateIcon_4.png" alt="#" /></span>
-                                        <h6>Content Management</h6>
-                                        <p>Our specially developed Content
-                                            Management System (CMS) allows
-                                            you to manage pages, listings, and
-                                            much more.</p>
-                                    </div>
-                                </div>
-
-
-
-                                <div class="col-lg-3 col-md-6 provide_col">
-                                    <div class="industryNew_section2_colsInfo">
-                                        <span><img src="/bizionic/images/estateIcon_5.png" alt="#" /></span>
-                                        <h6>SEO Frienadly</h6>
-                                        <p>With the help of our system, you can fully customise each page of your
-                                            website and fully optimise it for search
-                                            engine rankings.</p>
-                                    </div>
-                                </div>
-                                <div class="col-lg-3 col-md-6 provide_col">
-                                    <div class="industryNew_section2_colsInfo">
-                                        <span><img src="/bizionic/images/estateIcon_6.png" alt="#" /></span>
-                                        <h6>Powerful Blog</h6>
-                                        <p>Every intelligent solution comes with a dynamic blog where you can post your ideas and thoughts about real estate
-                                            trends, the market and more.</p>
-                                    </div>
-                                </div>
-                                <div class="col-lg-3 col-md-6 provide_col">
-                                    <div class="industryNew_section2_colsInfo">
-                                        <span><img src="/bizionic/images/estateIcon_7.png" alt="#" /></span>
-                                        <h6>Powerful IDX</h6>
-                                        <p>Choose from one of our many IDX
-                                            solutions to help your website's visitors discover the ideal home they're
-                                            looking for.</p>
-                                    </div>
-                                </div>
-                                <div class="col-lg-3 col-md-6 provide_col">
-                                    <div class="industryNew_section2_colsInfo">
-                                        <span><img src="/bizionic/images/estateIcon_8.png" alt="#" /></span>
-                                        <h6>Excellent Support</h6>
-                                        <p>From the beginning of the project all
-                                            the way to the launch and even beyond, we are here to assist you with your
-                                            website.</p>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
+                        
                     </div>
 
                 </div>
+            </div>
+        </div>
+
+
+
+        <div class="provider_section">
+            <div class="auto_container">
+            <div class="industryNew_section2_cols">
+                <div class="row">
+                    <div class="col-lg-3 col-md-6 provide_col">
+                        <div class="industryNew_section2_colsInfo">
+                            <span><img src="/bizionic/images/estateIcon_1.png" alt="#" /></span>
+                            <h6>3D WALKTHROUGHS</h6>
+                            <p>Our designs reflect the talent of some of the top web designers in the profession. Over the years, we have created a tonne of incredible websites, and we love to
+                                showcase them.</p>
+                        </div>
+                    </div>
+                    <div class="col-lg-3 col-md-6 provide_col">
+                        <div class="industryNew_section2_colsInfo">
+                            <span><img src="/bizionic/images/estateIcon_2.png" alt="#" /></span>
+                            <h6>Responsive Websites</h6>
+                            <p>All of our websites and CRM products are responsive. This implies that all
+                                desktop, tablet, and mobile devices will
+                                display your website properly.</p>
+                        </div>
+                    </div>
+                    <div class="col-lg-3 col-md-6 provide_col">
+                        <div class="industryNew_section2_colsInfo">
+                            <span><img src="/bizionic/images/estateIcon_3.png" alt="#" /></span>
+                            <h6>CRM Lead Management</h6>
+                            <p>You can manage all of your prospects
+                                in one place with our CRM lead
+                                management platform, which is a web-based management solution you
+                                can operate on any device.</p>
+                        </div>
+                    </div>
+                    <div class="col-lg-3 col-md-6 provide_col">
+                        <div class="industryNew_section2_colsInfo">
+                            <span><img src="/bizionic/images/estateIcon_4.png" alt="#" /></span>
+                            <h6>Content Management</h6>
+                            <p>Our specially developed Content
+                                Management System (CMS) allows
+                                you to manage pages, listings, and
+                                much more.</p>
+                        </div>
+                    </div>
+
+
+
+                    <div class="col-lg-3 col-md-6 provide_col">
+                        <div class="industryNew_section2_colsInfo">
+                            <span><img src="/bizionic/images/estateIcon_5.png" alt="#" /></span>
+                            <h6>SEO Frienadly</h6>
+                            <p>With the help of our system, you can fully customise each page of your
+                                website and fully optimise it for search
+                                engine rankings.</p>
+                        </div>
+                    </div>
+                    <div class="col-lg-3 col-md-6 provide_col">
+                        <div class="industryNew_section2_colsInfo">
+                            <span><img src="/bizionic/images/estateIcon_6.png" alt="#" /></span>
+                            <h6>Powerful Blog</h6>
+                            <p>Every intelligent solution comes with a dynamic blog where you can post your ideas and thoughts about real estate
+                                trends, the market and more.</p>
+                        </div>
+                    </div>
+                    <div class="col-lg-3 col-md-6 provide_col">
+                        <div class="industryNew_section2_colsInfo">
+                            <span><img src="/bizionic/images/estateIcon_7.png" alt="#" /></span>
+                            <h6>Powerful IDX</h6>
+                            <p>Choose from one of our many IDX
+                                solutions to help your website's visitors discover the ideal home they're
+                                looking for.</p>
+                        </div>
+                    </div>
+                    <div class="col-lg-3 col-md-6 provide_col">
+                        <div class="industryNew_section2_colsInfo">
+                            <span><img src="/bizionic/images/estateIcon_8.png" alt="#" /></span>
+                            <h6>Excellent Support</h6>
+                            <p>From the beginning of the project all
+                                the way to the launch and even beyond, we are here to assist you with your
+                                website.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
             </div>
         </div>
 
@@ -225,8 +233,8 @@
             <div class="auto_container">
                 <div class="additional_benefits_section_detail bg_f2f2f2 aos-init " data-aos="fade-up" data-aos-duration="1000" data-aos-easing="ease">
                     <div class="custom_tittle text-left">
-                        <h2>Additional Benefits:</h2>
-                        <h6>For our clients, we always go above and beyond!</h6>
+                        <h2><strong>Additional Benefits:</strong></h2>
+                        <h6><strong>For our clients, we always go above and beyond!</strong></h6>
                     </div>
 
                     <div class="additional_benefits_list">

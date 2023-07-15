@@ -46,8 +46,8 @@
             <div class="auto_container">
                 <div class="technology_master_detail">
                     <div class="custom_tittle pt-2">
-                        <h2>Utilize Our Top Software Services<br>
-                            to Expand Your Business  </h2> 
+                        <h2> <strong>Utilize Our</strong> Top Software Services <strong>to<br>
+                             Expand Your Business</strong>   </h2> 
                     </div>
 
 
