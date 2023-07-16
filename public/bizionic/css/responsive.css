@@ -998,8 +998,13 @@ h6 { font-size: 18px; }
     padding: 60px 0px;
 }
 
-
-
+.b2bInnerText { 
+    padding: 40px;
+}
+.process_avatar { 
+    padding: 0px 25px;
+}
+.servicesProvided_info ul { justify-content: flex-start; margin-left: 15px ;}
 
 
 
@@ -2316,6 +2321,34 @@ h6 { font-size: 18px; }
 }
 .indPortfolioText { 
     font-size: 20px;}
+
+
+
+.b2bInnerText { 
+    padding: 0px 0px 25px;
+}
+
+.banking_section_change .industryNew_section2_cols {
+    transform: translate(0);
+}
+
+.banking_section_change .industryNew_section_detail {
+    padding: 60px 0px 50px;
+}
+
+.provider_section .servicesProvided_info { 
+    padding: 30px 20px 30px;
+}
+.provider_section .servicesProvided_info ul {
+    margin-left: 15px;
+}
+
+.provider_section .servicesProvided_info ul li { 
+    font-size: 15px; 
+}
+
+.servicesProvided_info ul { justify-content: flex-start;}
+
 
 
 

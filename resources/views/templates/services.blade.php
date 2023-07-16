@@ -25,7 +25,7 @@
 
                             <h6>Bizionic, Your Software Solution’s Partner</h6>
 
-                            <a href="#" class="btn_default_white">Contact Us</a>
+                            <a href="/get-a-free-consultation" class="btn_default_white">Contact Us</a>
                     </div>
 
 

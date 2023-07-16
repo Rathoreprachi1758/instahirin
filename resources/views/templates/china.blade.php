@@ -192,7 +192,7 @@
                     <div class="col-lg-7 col-md-7">
                         <div class="marketServices_text aos-init aos-animate"  data-aos="fade-right" data-aos-duration="800" data-aos-easing="ease-in">
                             <h4>Get Free Proposal Now</h4> 
-                            <a href="#" class="btn_default_white">Contact Us</a>
+                            <a href="/get-a-free-consultation" class="btn_default_white">Contact Us</a>
 
                                 <span class="influencerAvatar"><img src="/bizionic/images/perposal_map.png" alt="#" /></span>
                         </div>

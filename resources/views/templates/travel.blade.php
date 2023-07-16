@@ -22,7 +22,7 @@
                                 successful long-term client relationships. In keeping with industry standards, we provide a wide range of software solutions services which meet all your needs and grow
                                 your business.</p>
 
-                                <a href="#" class="btn_default_white">Contact Us</a>
+                                <a href="/get-a-free-consultation" class="btn_default_white">Contact Us</a>
                         </div>
 
 
@@ -56,20 +56,20 @@
 
                     <div class="servicesProvided_info aos-init aos-animate  pb-0" data-aos="fade-up" data-aos-duration="800" data-aos-easing="ease-out-cubic"> 
                         <ul>
-                            <li><a href="#">Startup Solutions</a></li> |
-                            <li><a href="#">Real Estate</a></li> |
-                            <li><a href="#">B2B Solutions</a></li> |  <br>
+                            <li><a href="/industries/industries-we-serve/industries/startups">Startup Solutions</a></li> |
+                            <li><a href="/industries/industries-we-serve/industries/real-estate">Real Estate</a></li> |
+                            <li><a href="/industries/industries-we-serve/industries/b2b-solutions">B2B Solutions</a></li> | 
+                            <li><a href="/industries/industries-we-serve/industries/b2c-solutions">B2C Solutions</a></li> | 
 
-                            <li><a href="#">Healthcare</a></li> |  
-                            <li><a href="#">Travel & Hospitality </a></li> | 
-                            <li><a href="#">Banking & Finance</a></li> |<br>
+                            <li><a href="/industries/industries-we-serve/industries/healthcare">Healthcare</a></li> |  
+                            <li><a href="/industries/industries-we-serve/industries/travel-and-hospitality">Travel & Hospitality </a></li> | 
+                            <li><a href="/industries/industries-we-serve/industries/banking-and-finance">Banking & Finance</a></li> |<br>
 
-                            <li><a href="#">Media & Publishing</a></li> | 
-                            <li><a href="#">Education and E-Learning</a></li> | 
-                            <li><a href="#">Food Ordering Solutions</a></li> | <br>
-
-                            <li><a href="#">Automotive Solutions </a></li> |
-                            <li><a href="#">Train Ticket Booking Solutions</a></li> 
+                            <li><a href="/industries/industries-we-serve/industries/media-and-publishing">Media & Publishing</a></li> | 
+                            <li><a href="/industries/industries-we-serve/industries/education-and-e-Learning">Education and E-Learning</a></li> | 
+                            <li><a href="/industries/industries-we-serve/industries/food-and-fmcg">Food & FMCG</a></li> | 
+                            <li><a href="/industries/industries-we-serve/industries/automotive">Automotive</a></li> | 
+                            <li><a href="/industries/industries-we-serve/industries/e-commerce">E-Commerce</a></li> 
                         </ul>
                     </div>
 
@@ -104,7 +104,7 @@
                                             BIZIONIC have significant experience in design and development of
                                             bespoke solutions for the travel and hospitality industry.</p>
 
-                                            <a href="#" class="btn_default mt-2">Get a Free Consultation</a>
+                                            <a href="/get-a-free-consultation" class="btn_default mt-2">Get a Free Consultation</a>
                                         
                                     
                                 </div>

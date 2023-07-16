@@ -317,7 +317,7 @@ p {
 }
 
 .main_nav .btn_default { color: #fff !important; min-width: 120px !important; padding: 10px 10px !important; line-height: 1.2 !important;font-family: 'avenirmedium' !important;
-     border-width: 1px !important;     transform: translateY(-15px);}
+     border-width: 1px !important;     transform: translateY(-15px); font-size: 12px;}
 
 .main_nav ul li:hover > a { color: #000; }
 .main_nav ul li:hover > a small { color: #000; transform: rotate(180deg); }
@@ -1770,6 +1770,9 @@ body, html {scroll-behavior: smooth; }
 
 .tittleColor_black {color: #000029 !important;}
 
+.ecomIcon_icon { left: -100px; top: 360px;}
+.ecomIcon_icon img { max-width: 460px;}
+
 
 
 
@@ -2549,7 +2552,7 @@ body, html {scroll-behavior: smooth; }
 
 
 
-.hire_me_button { position: relative; color: #fff !important;  background: #19437a; padding: 7px 12px 4px 12px !important; 
+.hire_me_button { position: relative; color: #fff !important;  background: #19437a; padding: 7px 12px 4px 12px !important;  font-size: 12px !important;
     border-radius: 5px; color: #fff; transform: translateY(-14px); font-family: 'avenirmedium' !important}
 .hire_me_button:hover { background: #122b4c;}
 /* .hire_me_button:after {
@@ -2741,11 +2744,14 @@ body, html {scroll-behavior: smooth; }
 
 .labs_location_info { width: 100%; padding-bottom: 30px;}
 
-.labs_location_info h6 { font-size: 18px; padding-bottom: 10px;}
+.labs_location_info h5 { font-size: 18px; padding-bottom: 10px;}
 .labs_location_info p { font-size: 14px; padding-bottom: 0px;}
 .labs_location_info p a { padding-bottom: 0px !important; display: inline-block !important; font-family: 'avenirmedium' !important;font-size: 14px !important;color: #000029 !important;}
 
 .labs_location_info p a:hover { text-decoration: underline;}
+
+.labs_location_info h6 { font-size: 16px; padding-bottom: 0px; padding-top: 7px;}
+.labs_location_info h6 strong {font-family: 'avenirmedium';font-size: 16px;}
 
 
 
@@ -3175,10 +3181,43 @@ body, html {scroll-behavior: smooth; }
 .automotiveList .additional_benefits_text ul li { width: 100% !important;}
 
 
+.onBankingPage .bankCol_head  { display: block;}
+
+.onBankingPage .industryNew_section2_colsInfo span { margin-bottom: 20px !important;}
+
+.onBankingPage .industryNew_section2_colsInfo span img {
+    max-height: 55px;}
+
+.onBankingPage .industryNew_section2_colsInfo h6  { width: 100% !important; text-align: center !important;}
 
 
+.BankingTittle_outer { width: 100%; background: #fff;}
 
+.BankingTittle_outer .custom_tittle { padding-top: 70px; padding-bottom: 40px;}
 
+.banking_section_change .industryNew_section_detail { padding: 70px 0px 50px;}
+
+.banking_section_change .industryNew_section2_cols { transform: translate(0);}
+
+.banking_section_change .industryNew_section2_colsInfo { background: #f2f2f2;}
+
+.banking_section_change { position: relative;}
+.banking_section_change .provider_section { background: #fff; position: relative;}
+
+.banking_section_change .provider_section::after  { content: ''; width: 100%; background: url(../images/latestBlog_bg.png) top center no-repeat; background-size: cover; position: absolute; left: 0px;
+    top: 0px; height: 230px;
+} 
+
+.provider_section .servicesProvided_info { background: #f2f2f2; padding: 50px 40px 50px; }
+
+.provider_section .servicesProvided_info ul li {
+    padding: 5px 35px 5px 12px;
+    font-size: 15px;
+    color: #000;
+    list-style: disc;
+}
+
+.provider_section .servicesProvided_info ul {margin-left: 30px;}
 
 
 

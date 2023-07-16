@@ -22,7 +22,7 @@
 
                                 <h6 class="py-4">Bizionic, One Platform for All Your Industrial Software Needs.</h6>
 
-                                <a href="#" class="btn_default_white">Contact Us</a>
+                                <a href="/get-a-free-consultation" class="btn_default_white">Contact Us</a>
                         </div>
 
 
@@ -57,7 +57,8 @@
                         <div class="row">
                             <div class="col-lg-4 col-md-4 indP_col">
                                 <div class="indPortfolio_col">
-                                    <a href="#">
+                                    <a href="/industries/industries-we-serve/industries/startups">
+
                                         <span class="indPortfolio_avatar"><img src="/bizionic/images/indPortfolio_img1.png" alt="#" /></span> 
 
                                         <strong class="indPortfolioText">
@@ -70,7 +71,7 @@
 
                             <div class="col-lg-4 col-md-4 indP_col">
                                 <div class="indPortfolio_col">
-                                    <a href="#">
+                                    <a href="/industries/industries-we-serve/industries/real-estate">
                                         <span class="indPortfolio_avatar"><img src="/bizionic/images/indPortfolio_img2.png" alt="#" /></span> 
 
                                         <strong class="indPortfolioText">
@@ -83,7 +84,7 @@
 
                             <div class="col-lg-4 col-md-4 indP_col">
                                 <div class="indPortfolio_col">
-                                    <a href="#">
+                                    <a href="/industries/industries-we-serve/industries/b2b-solutions">
                                         <span class="indPortfolio_avatar"><img src="/bizionic/images/indPortfolio_img3.png" alt="#" /></span> 
 
                                         <strong class="indPortfolioText">
@@ -98,7 +99,7 @@
 
                             <div class="col-lg-4 col-md-4 indP_col">
                                 <div class="indPortfolio_col">
-                                    <a href="#">
+                                    <a href="/industries/industries-we-serve/industries/b2c-solutions">
                                         <span class="indPortfolio_avatar"><img src="/bizionic/images/indPortfolio_img4.png" alt="#" /></span> 
 
                                         <strong class="indPortfolioText">
@@ -111,7 +112,7 @@
 
                             <div class="col-lg-4 col-md-4 indP_col">
                                 <div class="indPortfolio_col">
-                                    <a href="#">
+                                    <a href="/industries/industries-we-serve/industries/healthcare">
                                         <span class="indPortfolio_avatar"><img src="/bizionic/images/indPortfolio_img5.png" alt="#" /></span> 
 
                                         <strong class="indPortfolioText">
@@ -124,7 +125,7 @@
 
                             <div class="col-lg-4 col-md-4 indP_col">
                                 <div class="indPortfolio_col">
-                                    <a href="#">
+                                    <a href="/industries/industries-we-serve/industries/travel-and-hospitality">
                                         <span class="indPortfolio_avatar"><img src="/bizionic/images/indPortfolio_img6.png" alt="#" /></span> 
 
                                         <strong class="indPortfolioText">
@@ -138,7 +139,7 @@
 
                             <div class="col-lg-4 col-md-4 indP_col">
                                 <div class="indPortfolio_col">
-                                    <a href="#">
+                                    <a href="/industries/industries-we-serve/industries/banking-and-finance">
                                         <span class="indPortfolio_avatar"><img src="/bizionic/images/indPortfolio_img7.png" alt="#" /></span> 
 
                                         <strong class="indPortfolioText">
@@ -151,7 +152,7 @@
 
                             <div class="col-lg-4 col-md-4 indP_col">
                                 <div class="indPortfolio_col">
-                                    <a href="#">
+                                    <a href="/industries/industries-we-serve/industries/media-and-publishing">
                                         <span class="indPortfolio_avatar"><img src="/bizionic/images/indPortfolio_img8.png" alt="#" /></span> 
 
                                         <strong class="indPortfolioText">
@@ -164,7 +165,7 @@
 
                             <div class="col-lg-4 col-md-4 indP_col">
                                 <div class="indPortfolio_col">
-                                    <a href="#">
+                                    <a href="/industries/industries-we-serve/industries/education-and-e-Learning">
                                         <span class="indPortfolio_avatar"><img src="/bizionic/images/indPortfolio_img9.png" alt="#" /></span> 
 
                                         <strong class="indPortfolioText">
@@ -179,7 +180,7 @@
 
                             <div class="col-lg-4 col-md-4 indP_col">
                                 <div class="indPortfolio_col">
-                                    <a href="#">
+                                    <a href="/industries/industries-we-serve/industries/food-and-fmcg">
                                         <span class="indPortfolio_avatar"><img src="/bizionic/images/indPortfolio_img10.png" alt="#" /></span> 
 
                                         <strong class="indPortfolioText">
@@ -192,7 +193,7 @@
 
                             <div class="col-lg-4 col-md-4 indP_col">
                                 <div class="indPortfolio_col">
-                                    <a href="#">
+                                    <a href="/industries/industries-we-serve/industries/automotive">
                                         <span class="indPortfolio_avatar"><img src="/bizionic/images/indPortfolio_img11.png" alt="#" /></span> 
 
                                         <strong class="indPortfolioText">
@@ -205,7 +206,7 @@
 
                             <div class="col-lg-4 col-md-4 indP_col">
                                 <div class="indPortfolio_col">
-                                    <a href="#">
+                                    <a href="/industries/industries-we-serve/industries/e-commerce">
                                         <span class="indPortfolio_avatar"><img src="/bizionic/images/indPortfolio_img12.png" alt="#" /></span> 
 
                                         <strong class="indPortfolioText">

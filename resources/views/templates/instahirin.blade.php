@@ -54,7 +54,7 @@
                                     <p class="text-white">Our specialized Talent Scouting and Acquisition Team at<br>
                                     <b>Bizionic InstaHirin</b> with scout the Globe to provide you <br>
                                         with the required "TALENT" within 24/Hours. </p>
-                                    <a href="#" class="btn_default_white mt-2">Post Your Requirement</a>
+                                    <a href="/hire/developer/developers-other/instaRequirement" class="btn_default_white mt-2">Post Your Requirement</a>
                                 </div>
                             </div>
                         </div>

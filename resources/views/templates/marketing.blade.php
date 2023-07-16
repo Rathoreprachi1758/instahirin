@@ -620,7 +620,7 @@
 
                     <div class="col-lg-6 aos-init aos-animate" >
                         <div class="startProj_info text-center"> 
-                            <a href="#" class="btn_default">Contact Now</a>
+                            <a href="/get-a-free-consultation" class="btn_default">Contact Now</a>
                         </div>
                     </div>
                 </div>

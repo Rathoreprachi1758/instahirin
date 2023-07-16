@@ -21,7 +21,7 @@
                                 successful long-term client relationships. In keeping with industry standards, we provide a wide range of software solutions services which meet all your needs and grow
                                 your business.</p>
 
-                                <a href="#" class="btn_default_white">Contact Us</a>
+                                <a href="/get-a-free-consultation" class="btn_default_white">Contact Us</a>
                         </div>
 
 
@@ -47,28 +47,28 @@
             <div class="auto_container">
                 <div class="technology_master_detail">
                     <div class="custom_tittle pt-2">
-                        <h2>Utilize Our Top Software Services<br>
-                            to Expand Your Business  </h2> 
+                    <h2> <strong>Utilize Our</strong> Top Software Services <strong>to<br>
+                             Expand Your Business</strong>   </h2> 
                     </div>
 
 
 
                     <div class="servicesProvided_info aos-init aos-animate  pb-0" data-aos="fade-up" data-aos-duration="800" data-aos-easing="ease-out-cubic"> 
                         <ul>
-                            <li><a href="#">Startup Solutions</a></li> |
-                            <li><a href="#">Real Estate</a></li> |
-                            <li><a href="#">B2B Solutions</a></li> |  <br>
+                            <li><a href="/industries/industries-we-serve/industries/startups">Startup Solutions</a></li> |
+                            <li><a href="/industries/industries-we-serve/industries/real-estate">Real Estate</a></li> |
+                            <li><a href="/industries/industries-we-serve/industries/b2b-solutions">B2B Solutions</a></li> | 
+                            <li><a href="/industries/industries-we-serve/industries/b2c-solutions">B2C Solutions</a></li> | 
 
-                            <li><a href="#">Healthcare</a></li> |  
-                            <li><a href="#">Travel & Hospitality </a></li> | 
-                            <li><a href="#">Banking & Finance</a></li> |<br>
+                            <li><a href="/industries/industries-we-serve/industries/healthcare">Healthcare</a></li> |  
+                            <li><a href="/industries/industries-we-serve/industries/travel-and-hospitality">Travel & Hospitality </a></li> | 
+                            <li><a href="/industries/industries-we-serve/industries/banking-and-finance">Banking & Finance</a></li> |<br>
 
-                            <li><a href="#">Media & Publishing</a></li> | 
-                            <li><a href="#">Education and E-Learning</a></li> | 
-                            <li><a href="#">Food Ordering Solutions</a></li> | <br>
-
-                            <li><a href="#">Automotive Solutions </a></li> |
-                            <li><a href="#">Train Ticket Booking Solutions</a></li> 
+                            <li><a href="/industries/industries-we-serve/industries/media-and-publishing">Media & Publishing</a></li> | 
+                            <li><a href="/industries/industries-we-serve/industries/education-and-e-Learning">Education and E-Learning</a></li> | 
+                            <li><a href="/industries/industries-we-serve/industries/food-and-fmcg">Food & FMCG</a></li> | 
+                            <li><a href="/industries/industries-we-serve/industries/automotive">Automotive</a></li> | 
+                            <li><a href="/industries/industries-we-serve/industries/e-commerce">E-Commerce</a></li> 
                         </ul>
                     </div>
 
@@ -85,22 +85,25 @@
 
         <div class="industryNew_section  bg_f2f2f2">
             <div class="auto_container">
-                <div class="pageSection_icon startUp_icon"><img src="/bizionic/images/trainIcon.png" alt="#" /></div>
+                <div class="pageSection_icon ecomIcon_icon"><img src="/bizionic/images/trainIcon.png" alt="#" /></div>
                 <div class="industryNew_section_detail">
 
 
                     <div class="industryNew_section1">
                         <div class="row align-items-center">
                             <div class="col-lg-6 col-md-6 aos-init " data-aos="fade-right" data-aos-duration="1000" data-aos-easing="ease">
-                                <div class="industryNew_section1_info">
-                                    <h3>
-                                        <small>TRAIN TICKET </small> <br>  
-                                        <strong class="tittleColor_black">BOOKING</strong> 
-                                    </h3>
+                                <div class="custom_tittle text-left">
+                                    <h2>
+                                    E-COMMERCE SOLUTIONS 
+                                    </h2>
 
-                                        <p>It can be difficult these days to find the right train tickets at the right cost. At BIZIONIC, we make use of cutting-edge technology to assist our clients in finding the best deals on a variety of train tickets and rail passes. Choose from an unrivalled range of cities and destinations to design your own
-                                            special rail experience.</p>
+                                        <p class="p_color text-justify">
+                                            eCommerce is a most demanding platform in the technology transformation space, offering organizations the opportunity to create new revenue streams from global customers, expand into new markets, and improve their operational efficiency.
+                                        </p>
+                                        <p class="p_color text-justify">Bizionic is a experienced and trusted provider of high performance eCommerce software solutions. Our eCommerce platform is a widely acclaimed, enterprise grade solution that has been robustly developed to suit the most demanding bespoke business requirements. Our eCommerce solutions are 100% XHTML compliant, that means your site is free from codes and errors, which benefits in better search engine ranking, greater visibility, and more sales-producing traffic.</p>
                                     
+                                        <a href="/get-a-free-consultation" class="btn_default mt-2">Get a Free Consultation</a>
+
                                 </div>
                             </div>
 
@@ -119,77 +122,82 @@
 
                     <div class="industryNew_section2_info aos-init " data-aos="fade-up" data-aos-duration="1500" data-aos-easing="ease">
                         <div class="custom_tittle">
-                            <h2>The Services, BIZIONIC Offered</h2> 
+                            <h2><strong>The</strong> Services, <strong>BIZIONIC Offered</strong></h2> 
                         </div>
 
-                        <div class="industryNew_section2_cols">
-                            <div class="row">
-                                <div class="col-lg-4 col-md-6 provide_col">
-                                    <div class="industryNew_section2_colsInfo">
-                                        <span><img src="/bizionic/images/train_icon1.png" alt="#" /></span>
-                                        <h6><a href="#">STRONG AND FLEXIBLE <br>
-                                            BACK-END MANAGEMENT</a></h6>
-                                        <p>It takes less time and is more economical to get all
-                                            the information simultaneously from the same spot.</p>
-                                    </div>
-                                </div>
-                                <div class="col-lg-4 col-md-6 provide_col">
-                                    <div class="industryNew_section2_colsInfo">
-                                        <span><img src="/bizionic/images/train_icon2.png" alt="#" /></span>
-                                        <h6><a href="#">ONE TRACK SYSTEM <br>
-                                            FOR DIFFERENT API’S
-                                            </a></h6>
-                                        <p>The numerous XML live feeds are retrieved by the
-                                            one track system from several rail operators.</p>
-                                    </div>
-                                </div>
-                                <div class="col-lg-4 col-md-6 provide_col">
-                                    <div class="industryNew_section2_colsInfo">
-                                        <span><img src="/bizionic/images/train_icon3.png" alt="#" /></span>
-                                        <h6><a href="#">WIDGET FOR THE RAIL <br>
-                                            TICKET INTEGRATION</a></h6>
-                                        <p>We provide a widget that can be easily added to any
-                                            website, allowing for hassle-free booking.</p>
-                                    </div>
-                                </div> 
+                        
+                    </div>
+
+                </div>
+            </div>
+        </div>
+
+
+        <div class="provider_section">
+            <div class="auto_container">
+                <div class="industryNew_section2_cols">
+                    <div class="row">
+                        <div class="col-lg-3 col-md-6 provide_col">
+                            <div class="industryNew_section2_colsInfo">
+                                <span><img src="/bizionic/images/train_icon4.png" alt="#" /></span>
+                                <h6><a href="#">PLATFORM</a></h6>
+                                <p>Beyond helping you decide the best and appropriate platform, we customize and make the store unique as per your business value.</p>
+                            </div>
+                        </div>
+                        <div class="col-lg-3 col-md-6 provide_col">
+                            <div class="industryNew_section2_colsInfo">
+                                <span><img src="/bizionic/images/ecom_icon2.png" alt="#" /></span>
+                                <h6><a href="#">USER INTERFACE</a></h6>
+                                <p>By anticipating what users might look for, we create interface elements that are intuitive and navigated easily.</p>
+                            </div>
+                        </div>
+                        <div class="col-lg-3 col-md-6 provide_col">
+                            <div class="industryNew_section2_colsInfo">
+                                <span><img src="/bizionic/images/ecom_icon3.png" alt="#" /></span>
+                                <h6><a href="#">SHOPPING EXPERIENCE</a></h6>
+                                <p>Easy add to cart, wishlist, simplified checkout, flexible payment gateway options, and more for enhanced shopping experiences.</p>
+                            </div>
+                        </div> 
+                        <div class="col-lg-3 col-md-6 provide_col">
+                            <div class="industryNew_section2_colsInfo">
+                                <span><img src="/bizionic/images/estateIcon_2.png" alt="#" /></span>
+                                <h6><a href="#">RESPONSIVE WEBSITES</a></h6>
+                                <p>All of our websites and CRM products are responsive. This implies that all desktop, tablet, and mobile devices will display your website properly.</p>
+                            </div>
+                        </div> 
 
 
 
-                                <div class="col-lg-4 col-md-6 provide_col">
-                                    <div class="industryNew_section2_colsInfo">
-                                        <span><img src="/bizionic/images/train_icon4.png" alt="#" /></span>
-                                        <h6><a href="#">GLOBAL FOR <br>
-                                            DIFFERENT DIVISIONS</a></h6>
-                                        <p>Worldwide for several divisions (UK, US, NZ, AUS),
-                                            we offer a special system for every division.</p>
-                                    </div>
-                                </div>
-                                <div class="col-lg-4 col-md-6 provide_col">
-                                    <div class="industryNew_section2_colsInfo">
-                                        <span><img src="/bizionic/images/train_icon5.png" alt="#" /></span>
-                                        <h6><a href="#">CREATED SINGLE ENVIRONMENT <br>
-                                            TO RUN MULTIPLE SITES (CMS)</a></h6>
-                                        <p>We provide centralised code for building a single
-                                            environment so that the website administrator can build multiple websites without having to copy the
-                                            code for each one individually.</p>
-                                    </div>
-                                </div>
-                                <div class="col-lg-4 col-md-6 provide_col">
-                                    <div class="industryNew_section2_colsInfo">
-                                        <span><img src="/bizionic/images/train_icon6.png" alt="#" /></span>
-                                        <h6><a href="#">CONFIGURATION <br>
-                                            WITH VARIOUS PSPS</a></h6>
-                                        <p>A common platform for payment gateways that
-                                            supports multiple PSPs, including SecurePay,
-                                            WorldPay, Ogone, and many others.
-                                            Security-relat- ed reasons led to the implementation
-                                            of 128-bit encryption technology.</p>
-                                    </div>
-                                </div>
+
+                        <div class="col-lg-3 col-md-6 provide_col">
+                            <div class="industryNew_section2_colsInfo">
+                                <span><img src="/bizionic/images/train_icon1.png" alt="#" /></span>
+                                <h6><a href="#">STRONG AND FLEXIBLE BACK-END MANAGEMENT</a></h6>
+                                <p>It takes less time through strong back-end management to notify that which products are selling well and ensuring that stock levels of these goods are increased.</p>
+                            </div>
+                        </div> 
+                        <div class="col-lg-3 col-md-6 provide_col">
+                            <div class="industryNew_section2_colsInfo">
+                                <span><img src="/bizionic/images/ecom_icon6.png" alt="#" /></span>
+                                <h6><a href="#">SOCIAL MEDIA INTEGRATION</a></h6>
+                                <p>Get extensive social media benefits through online product sharing on Twitter, Facebook, Instagram, and, etc.</p>
+                            </div>
+                        </div>
+                        <div class="col-lg-3 col-md-6 provide_col">
+                            <div class="industryNew_section2_colsInfo">
+                                <span><img src="/bizionic/images/estateIcon_5.png" alt="#" /></span>
+                                <h6><a href="#">E-MARKETING / SEO FRIENDLY</a></h6>
+                                <p>Just focus on your content. Our SEO technique is out of the box with zero plugins to worry about.</p>
+                            </div>
+                        </div>
+                        <div class="col-lg-3 col-md-6 provide_col">
+                            <div class="industryNew_section2_colsInfo">
+                                <span><img src="/bizionic/images/ecom_icon8.png" alt="#" /></span>
+                                <h6><a href="#">EASIER TO MEASURE</a></h6>
+                                <p>eCcommerce websites are remarkably measurable and trackable. You can see statistics such as, where visitors to your site come from, how people find your store, the number of orders processed, which products are popular, and much more.</p>
                             </div>
                         </div>
                     </div>
-
                 </div>
             </div>
         </div>
@@ -205,34 +213,31 @@
                 <div class="additional_benefits_section_detail bg_f2f2f2 b2b_process">
                     
 
-                    <div class="additional_benefits_list">
-                        <div class="row align-items-center">
-                            <div class="col-lg-6 col-md-6 aos-init " data-aos="fade-right" data-aos-duration="1000" data-aos-easing="ease">
-                                <div class="custom_tittle text-left">
-                                    <h2>Features We Promise To Provide:</h2> 
-                                </div>
-                                <div class="additional_benefits_text">
-                                    <ul>
-                                        <li><p>Designing the Website with New Graphics</p></li>
-                                        <li><p>A Powerful Back-end to Handle the Massive Business</p></li>
-                                        <li><p>Discover and Buy Tickets</p></li>
-                                        <li><p>Management of Multiple Passes</p></li>
-                                        <li><p>Purchasing in Bulk for the Corporate Sector</p></li>
-                                        <li><p>For all Divisions, a Single Track System</p></li>
-                                        <li><p>Rail Ticket Integration Widget</p></li>
-                                        <li><p>An Uniform setting for Several Websites (CMS)</p></li>
-                                        <li><p>Management of Payment Processors</p></li>
-                                        <li><p>Tool for Online Printing</p></li>
-                                        <li><p>Server Administration</p></li>
-                                    </ul>
+                    <div class="additional_benefits_list automotiveList">
+                        <div class="row">
+                            <div class="col-lg-7 col-md-6 aos-init " data-aos="fade-right" data-aos-duration="1000" data-aos-easing="ease">
+                                <div class="b2bInnerText">
+                                    <div class="custom_tittle text-left">
+                                        <h2><strong>Features We Promise To Provide:</strong></h2> 
+                                    </div>
+                                    <div class="additional_benefits_text">
+                                        <ul>
+                                            <li><p>Upload new products without HTML code knowledge.</p></li>
+                                            <li><p>Change pricing on your products to accommodate specials and wholesale customers.</p></li>
+                                            <li><p>Create marketing newsletters to build customer loyalty and repeat business.</p></li>
+                                            <li><p>Calculate Shipping through integration with FedEx, UPS and USPS.</p></li>
+                                            <li><p>Process credit card transactions securely.</p></li>
+                                            <li><p>Manage your inventory, and more.</p></li>
+                                        </ul>
+                                    </div>
                                 </div>
                             </div>
 
 
 
-                            <div class="col-lg-6 col-md-6 aos-init " data-aos="fade-left" data-aos-duration="1000" data-aos-easing="ease">
+                            <div class="col-lg-5 col-md-6 aos-init " data-aos="fade-left" data-aos-duration="1000" data-aos-easing="ease">
                                 <div class="process_avatar">
-                                    <span><img src="/bizionic/images/featProvide_avatar.png" alt="#" /></span>
+                                    <span><img src="/bizionic/images/eccomerce_feature.png" alt="#" /></span>
                                 </div>
                             </div>
                         </div>

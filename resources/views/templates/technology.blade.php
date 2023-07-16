@@ -25,7 +25,7 @@
                             productivity and bring economic and social benefits.</p>
                         <h6>Increase your business success with technology!</h6>
 
-                        <a href="#" class="btn_default_white">Enquire Now</a>
+                        <a href="/get-a-free-consultation" class="btn_default_white">Enquire Now</a>
 
                     </div>
 
