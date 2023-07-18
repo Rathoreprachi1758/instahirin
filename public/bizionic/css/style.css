@@ -90,7 +90,7 @@ input[type='submit'] {
     -webkit-appearance: none;
     appearance: none;
     outline: none;
-    cursor: pointer; font-family: 'avenirmedium';;
+    cursor: pointer !important; font-family: 'avenirmedium';
 }
 
 button {
@@ -2334,7 +2334,7 @@ body, html {scroll-behavior: smooth; }
 }
 
 .hiringInfo .descriptionText p {
-    font-size: 16px;
+    font-size: 17px;
     color: #fff; 
 }
 
@@ -3218,6 +3218,58 @@ body, html {scroll-behavior: smooth; }
 }
 
 .provider_section .servicesProvided_info ul {margin-left: 30px;}
+
+
+
+
+.bizionicTeam_section {width: 100%; background: url(../images/latestBlog_bg.png) bottom center no-repeat; background-size: cover; padding-bottom: 80px;}
+
+.bizionicTeam_section_detail { width: 100%; padding: 70px 50px;}
+
+.bizionicTeam_main { width: 100%;}
+
+.bizionicTeam_mainInfo { width: 100%;}
+.bizionicTeam_mainInfo .row { flex-flow: row-reverse;}
+
+.bizionicTeam_profile { width: 100%; padding-top: 80px;}
+.bizionicTeam_profile span { width: 100%;display: block;}
+.bizionicTeam_profile span img  { width: 100%;display: block; border: 15px solid #e3e3e3; max-width: 320px; margin: auto;}
+
+.bizionicTeam_mainInfo_text { width: 100%; padding-right: 50px;}
+
+.bizionicTeam_mainInfo_text p { font-size: 18px;}
+.bizionicTeam_mainInfo_text h3 { color: #16509b;}
+
+.bizionicTeam_mainInfo_text .custom_tittle { padding-bottom: 0px;}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
