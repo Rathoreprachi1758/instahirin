@@ -1,7 +1,7 @@
 <div class="bizionicTeam_page">
 
 <!-- bizionicTeam_page section 1 -->
-    <div class="bizionicTeam_section">
+    <div class="bizionicTeam_section teamSec2">
         <div class="auto_container">
             <div class="bizionicTeam_section_detail bg_f2f2f2">
                 <div class="bizionicTeam_main">
@@ -60,7 +60,7 @@
 
 
 <!-- bizionicTeam_page section 1 -->
-<div class="bizionicTeam_section">
+<div class="bizionicTeam_section ">
     <div class="auto_container">
         <div class="bizionicTeam_section_detail bg_f2f2f2">
             <div class="bizionicTeam_main">
@@ -112,12 +112,371 @@
 
 
 
+<!-- bizionic list team  -->
+<div class="bizionic_team_list">
+    <div class="auto_container">
+        <div class="bizionic_team_list_detail">
+            <div class="hireForm_banner"> 
+                <div class="hireForm_banner_detail">
+                    <div class="custom_tittle">
+                        <p class="text-white p-0">Our <b><i>Bizionic Knight</i></b> is ready and armed to wage your Technology Development battle with
+                            Unmatched Expertise, Unwavering Determination, and Cutting-Edge solutions that Conquer
+                            Challenges and deliver Triumphant Success.</p>
+                    </div>
+                </div>        
+            </div>
+
+
+            <div class="bizionic_teamList">
+                <div class="row">
+                    <!-- row 1 -->
+                    <div class="col-lg-2 col-md-2 col-sm-4 team_col">
+                        <a href="#"><img src="/bizionic/images/team_img1.png" alt="#" /></a>
+                    </div>
+                    <div class="col-lg-2 col-md-2 col-sm-4 team_col">
+                        <a href="#"><img src="/bizionic/images/team_img2.png" alt="#" /></a>
+                    </div>
+                    <div class="col-lg-2 col-md-2 col-sm-4 team_col">
+                        <a href="#"><img src="/bizionic/images/team_img3.png" alt="#" /></a>
+                    </div>
+                    <div class="col-lg-2 col-md-2 col-sm-4 team_col">
+                        <a href="#"><img src="/bizionic/images/team_img4.png" alt="#" /></a>
+                    </div>
+                    <div class="col-lg-2 col-md-2 col-sm-4 team_col">
+                        <a href="#"><img src="/bizionic/images/team_img5.png" alt="#" /></a>
+                    </div>
+                    <div class="col-lg-2 col-md-2 col-sm-4 team_col">
+                        <a href="#"><img src="/bizionic/images/team_img6.png" alt="#" /></a>
+                    </div>
+
+
+
+                    <!-- row 2 -->
+                    <div class="col-lg-2 col-md-2 col-sm-4 team_col">
+                        <a href="#"><img src="/bizionic/images/team_img7.png" alt="#" /></a>
+                    </div>
+                    <div class="col-lg-2 col-md-2 col-sm-4 team_col">
+                        <a href="#"><img src="/bizionic/images/team_img8.png" alt="#" /></a>
+                    </div>
+                    <div class="col-lg-2 col-md-2 col-sm-4 team_col">
+                        <a href="#"><img src="/bizionic/images/team_img9.png" alt="#" /></a>
+                    </div>
+                    <div class="col-lg-2 col-md-2 col-sm-4 team_col">
+                        <a href="#"><img src="/bizionic/images/team_img10.png" alt="#" /></a>
+                    </div>
+                    <div class="col-lg-2 col-md-2 col-sm-4 team_col">
+                        <a href="#"><img src="/bizionic/images/team_img11.png" alt="#" /></a>
+                    </div>
+                    <div class="col-lg-2 col-md-2 col-sm-4 team_col">
+                        <a href="#"><img src="/bizionic/images/team_img12.png" alt="#" /></a>
+                    </div>
+
+
+
+                    <!-- row 3 -->
+                    <div class="col-lg-2 col-md-2 col-sm-4 team_col">
+                        <a href="#"><img src="/bizionic/images/team_img13.png" alt="#" /></a>
+                    </div>
+                    <div class="col-lg-2 col-md-2 col-sm-4 team_col">
+                        <a href="#"><img src="/bizionic/images/team_img14.png" alt="#" /></a>
+                    </div>
+                    <div class="col-lg-2 col-md-2 col-sm-4 team_col">
+                        <a href="#"><img src="/bizionic/images/team_img15.png" alt="#" /></a>
+                    </div>
+                    <div class="col-lg-2 col-md-2 col-sm-4 team_col">
+                        <a href="#"><img src="/bizionic/images/team_img16.png" alt="#" /></a>
+                    </div>
+                    <div class="col-lg-2 col-md-2 col-sm-4 team_col">
+                        <a href="#"><img src="/bizionic/images/team_img17.png" alt="#" /></a>
+                    </div>
+                    <div class="col-lg-2 col-md-2 col-sm-4 team_col">
+                        <a href="#"><img src="/bizionic/images/team_img18.png" alt="#" /></a>
+                    </div>
+
+
+
+
+                    <!-- row 4 -->
+                    <div class="col-lg-2 col-md-2 col-sm-4 team_col">
+                        <a href="#"><img src="/bizionic/images/team_img19.png" alt="#" /></a>
+                    </div>
+                    <div class="col-lg-2 col-md-2 col-sm-4 team_col">
+                        <a href="#"><img src="/bizionic/images/team_img20.png" alt="#" /></a>
+                    </div>
+                    <div class="col-lg-2 col-md-2 col-sm-4 team_col">
+                        <a href="#"><img src="/bizionic/images/team_img21.png" alt="#" /></a>
+                    </div>
+                    <div class="col-lg-2 col-md-2 col-sm-4 team_col">
+                        <a href="#"><img src="/bizionic/images/team_img22.png" alt="#" /></a>
+                    </div>
+                    <div class="col-lg-2 col-md-2 col-sm-4 team_col">
+                        <a href="#"><img src="/bizionic/images/team_img23.png" alt="#" /></a>
+                    </div>
+                    <div class="col-lg-2 col-md-2 col-sm-4 team_col">
+                        <a href="#"><img src="/bizionic/images/team_img24.png" alt="#" /></a>
+                    </div>
+
+
+
+
+
+                    <!-- row 5 -->
+                    <div class="col-lg-2 col-md-2 col-sm-4 team_col">
+                        <a href="#"><img src="/bizionic/images/team_img25.png" alt="#" /></a>
+                    </div>
+                    <div class="col-lg-2 col-md-2 col-sm-4 team_col">
+                        <a href="#"><img src="/bizionic/images/team_img26.png" alt="#" /></a>
+                    </div>
+                    <div class="col-lg-2 col-md-2 col-sm-4 team_col">
+                        <a href="#"><img src="/bizionic/images/team_img27.png" alt="#" /></a>
+                    </div>
+                    <div class="col-lg-2 col-md-2 col-sm-4 team_col">
+                        <a href="#"><img src="/bizionic/images/team_img28.png" alt="#" /></a>
+                    </div>
+                    <div class="col-lg-2 col-md-2 col-sm-4 team_col">
+                        <a href="#"><img src="/bizionic/images/team_img29.png" alt="#" /></a>
+                    </div>
+                    <div class="col-lg-2 col-md-2 col-sm-4 team_col">
+                        <a href="#"><img src="/bizionic/images/team_img30.png" alt="#" /></a>
+                    </div>
+
+
+
+
+
+                    <!-- row 6 -->
+                    <div class="col-lg-2 col-md-2 col-sm-4 team_col">
+                        <a href="#"><img src="/bizionic/images/team_img31.png" alt="#" /></a>
+                    </div>
+                    <div class="col-lg-2 col-md-2 col-sm-4 team_col">
+                        <a href="#"><img src="/bizionic/images/team_img32.png" alt="#" /></a>
+                    </div>
+                    <div class="col-lg-2 col-md-2 col-sm-4 team_col">
+                        <a href="#"><img src="/bizionic/images/team_img33.png" alt="#" /></a>
+                    </div>
+                    <div class="col-lg-2 col-md-2 col-sm-4 team_col">
+                        <a href="#"><img src="/bizionic/images/team_img34.png" alt="#" /></a>
+                    </div>
+                    <div class="col-lg-2 col-md-2 col-sm-4 team_col">
+                        <a href="#"><img src="/bizionic/images/team_img35.png" alt="#" /></a>
+                    </div>
+                    <div class="col-lg-2 col-md-2 col-sm-4 team_col">
+                        <a href="#"><img src="/bizionic/images/team_img36.png" alt="#" /></a>
+                    </div>
+
+
+
+                    <!-- row 7 -->
+                    <div class="col-lg-2 col-md-2 col-sm-4 team_col">
+                        <a href="#"><img src="/bizionic/images/team_img37.png" alt="#" /></a>
+                    </div>
+                    <div class="col-lg-2 col-md-2 col-sm-4 team_col">
+                        <a href="#"><img src="/bizionic/images/team_img38.png" alt="#" /></a>
+                    </div>
+                    <div class="col-lg-2 col-md-2 col-sm-4 team_col">
+                        <a href="#"><img src="/bizionic/images/team_img39.png" alt="#" /></a>
+                    </div>
+                    <div class="col-lg-2 col-md-2 col-sm-4 team_col">
+                        <a href="#"><img src="/bizionic/images/team_img40.png" alt="#" /></a>
+                    </div>
+                    <div class="col-lg-2 col-md-2 col-sm-4 team_col">
+                        <a href="#"><img src="/bizionic/images/team_img41.png" alt="#" /></a>
+                    </div>
+                    <div class="col-lg-2 col-md-2 col-sm-4 team_col">
+                        <a href="#"><img src="/bizionic/images/team_img42.png" alt="#" /></a>
+                    </div>
+
+
+
+                    <!-- row 8 -->
+                    <div class="col-lg-2 col-md-2 col-sm-4 team_col">
+                        <a href="#"><img src="/bizionic/images/team_img43.png" alt="#" /></a>
+                    </div>
+                    <div class="col-lg-2 col-md-2 col-sm-4 team_col">
+                        <a href="#"><img src="/bizionic/images/team_img44.png" alt="#" /></a>
+                    </div>
+                    <div class="col-lg-2 col-md-2 col-sm-4 team_col">
+                        <a href="#"><img src="/bizionic/images/team_img45.png" alt="#" /></a>
+                    </div>
+                    <div class="col-lg-2 col-md-2 col-sm-4 team_col">
+                        <a href="#"><img src="/bizionic/images/team_img46.png" alt="#" /></a>
+                    </div>
+                    <div class="col-lg-2 col-md-2 col-sm-4 team_col">
+                        <a href="#"><img src="/bizionic/images/team_img47.png" alt="#" /></a>
+                    </div>
+                    <div class="col-lg-2 col-md-2 col-sm-4 team_col">
+                        <a href="#"><img src="/bizionic/images/team_img48.png" alt="#" /></a>
+                    </div>
+
+
+
+
+                    <!-- row 9 -->
+                    <div class="col-lg-2 col-md-2 col-sm-4 team_col">
+                        <a href="#"><img src="/bizionic/images/team_img49.png" alt="#" /></a>
+                    </div>
+                    <div class="col-lg-2 col-md-2 col-sm-4 team_col">
+                        <a href="#"><img src="/bizionic/images/team_img50.png" alt="#" /></a>
+                    </div>
+                    <div class="col-lg-2 col-md-2 col-sm-4 team_col">
+                        <a href="#"><img src="/bizionic/images/team_img51.png" alt="#" /></a>
+                    </div>
+                    <div class="col-lg-2 col-md-2 col-sm-4 team_col">
+                        <a href="#"><img src="/bizionic/images/team_img52.png" alt="#" /></a>
+                    </div>
+                    <div class="col-lg-2 col-md-2 col-sm-4 team_col">
+                        <a href="#"><img src="/bizionic/images/team_img53.png" alt="#" /></a>
+                    </div>
+                    <div class="col-lg-2 col-md-2 col-sm-4 team_col">
+                        <a href="#"><img src="/bizionic/images/team_img54.png" alt="#" /></a>
+                    </div>
+
+
+
+
+                    <!-- row 10 -->
+                    <div class="col-lg-2 col-md-2 col-sm-4 team_col">
+                        <a href="#"><img src="/bizionic/images/team_img55.png" alt="#" /></a>
+                    </div>
+                    <div class="col-lg-2 col-md-2 col-sm-4 team_col">
+                        <a href="#"><img src="/bizionic/images/team_img56.png" alt="#" /></a>
+                    </div>
+                    <div class="col-lg-2 col-md-2 col-sm-4 team_col">
+                        <a href="#"><img src="/bizionic/images/team_img57.png" alt="#" /></a>
+                    </div>
+                    <div class="col-lg-2 col-md-2 col-sm-4 team_col">
+                        <a href="#"><img src="/bizionic/images/team_img58.png" alt="#" /></a>
+                    </div>
+                    <div class="col-lg-2 col-md-2 col-sm-4 team_col">
+                        <a href="#"><img src="/bizionic/images/team_img59.png" alt="#" /></a>
+                    </div>
+                    <div class="col-lg-2 col-md-2 col-sm-4 team_col">
+                        <a href="#"><img src="/bizionic/images/team_img60.png" alt="#" /></a>
+                    </div>
+
+
+
+
+                    <!-- row 11 -->
+                    <div class="col-lg-2 col-md-2 col-sm-4 team_col">
+                        <a href="#"><img src="/bizionic/images/team_img61.png" alt="#" /></a>
+                    </div>
+                    <div class="col-lg-2 col-md-2 col-sm-4 team_col">
+                        <a href="#"><img src="/bizionic/images/team_img62.png" alt="#" /></a>
+                    </div>
+                    <div class="col-lg-2 col-md-2 col-sm-4 team_col">
+                        <a href="#"><img src="/bizionic/images/team_img63.png" alt="#" /></a>
+                    </div>
+                    <div class="col-lg-2 col-md-2 col-sm-4 team_col">
+                        <a href="#"><img src="/bizionic/images/team_img64.png" alt="#" /></a>
+                    </div>
+                    <div class="col-lg-2 col-md-2 col-sm-4 team_col">
+                        <a href="#"><img src="/bizionic/images/team_img65.png" alt="#" /></a>
+                    </div>
+                    <div class="col-lg-2 col-md-2 col-sm-4 team_col">
+                        <a href="#"><img src="/bizionic/images/team_img66.png" alt="#" /></a>
+                    </div>
+
+
+
+                    <!-- row 12 -->
+                    <div class="col-lg-2 col-md-2 col-sm-4 team_col">
+                        <a href="#"><img src="/bizionic/images/team_img67.png" alt="#" /></a>
+                    </div>
+                    <div class="col-lg-2 col-md-2 col-sm-4 team_col">
+                        <a href="#"><img src="/bizionic/images/team_img68.png" alt="#" /></a>
+                    </div>
+                    <div class="col-lg-2 col-md-2 col-sm-4 team_col">
+                        <a href="#"><img src="/bizionic/images/team_img69.png" alt="#" /></a>
+                    </div>
+                    <div class="col-lg-2 col-md-2 col-sm-4 team_col">
+                        <a href="#"><img src="/bizionic/images/team_img70.png" alt="#" /></a>
+                    </div>
+                    <div class="col-lg-2 col-md-2 col-sm-4 team_col">
+                        <a href="#"><img src="/bizionic/images/team_img71.png" alt="#" /></a>
+                    </div>
+                    <div class="col-lg-2 col-md-2 col-sm-4 team_col">
+                        <a href="#"><img src="/bizionic/images/team_img72.png" alt="#" /></a>
+                    </div>
+
+
+
+
+                    <!-- row 13 -->
+                    <div class="col-lg-2 col-md-2 col-sm-4 team_col">
+                        <a href="#"><img src="/bizionic/images/team_img73.png" alt="#" /></a>
+                    </div>
+                    <div class="col-lg-2 col-md-2 col-sm-4 team_col">
+                        <a href="#"><img src="/bizionic/images/team_img74.png" alt="#" /></a>
+                    </div>
+                    <div class="col-lg-2 col-md-2 col-sm-4 team_col">
+                        <a href="#"><img src="/bizionic/images/team_img75.png" alt="#" /></a>
+                    </div>
+                    <div class="col-lg-2 col-md-2 col-sm-4 team_col">
+                        <a href="#"><img src="/bizionic/images/team_img76.png" alt="#" /></a>
+                    </div>
+                    <div class="col-lg-2 col-md-2 col-sm-4 team_col">
+                        <a href="#"><img src="/bizionic/images/team_img77.png" alt="#" /></a>
+                    </div>
+                    <div class="col-lg-2 col-md-2 col-sm-4 team_col">
+                        <a href="#"><img src="/bizionic/images/team_img78.png" alt="#" /></a>
+                    </div>
+
+
+
+
+                    <!-- row 14 -->
+                    <div class="col-lg-2 col-md-2 col-sm-4 team_col">
+                        <a href="#"><img src="/bizionic/images/team_img79.png" alt="#" /></a>
+                    </div>
+                    <div class="col-lg-2 col-md-2 col-sm-4 team_col">
+                        <a href="#"><img src="/bizionic/images/team_img80.png" alt="#" /></a>
+                    </div>
+                    <div class="col-lg-2 col-md-2 col-sm-4 team_col">
+                        <a href="#"><img src="/bizionic/images/team_img81.png" alt="#" /></a>
+                    </div>
+                    <div class="col-lg-2 col-md-2 col-sm-4 team_col">
+                        <a href="#"><img src="/bizionic/images/team_img82.png" alt="#" /></a>
+                    </div>
+                    <div class="col-lg-2 col-md-2 col-sm-4 team_col">
+                        <a href="#"><img src="/bizionic/images/team_img83.png" alt="#" /></a>
+                    </div>
+                    <div class="col-lg-2 col-md-2 col-sm-4 team_col">
+                        <a href="#"><img src="/bizionic/images/team_img84.png" alt="#" /></a>
+                    </div>
+
+
+
+
+                    <!-- row 15 -->
+                    <div class="col-lg-2 col-md-2 col-sm-4 team_col">
+                        <a href="#"><img src="/bizionic/images/team_img85.png" alt="#" /></a>
+                    </div>
+                    <div class="col-lg-2 col-md-2 col-sm-4 team_col">
+                        <a href="#"><img src="/bizionic/images/team_img86.png" alt="#" /></a>
+                    </div>
+                    <div class="col-lg-2 col-md-2 col-sm-4 team_col">
+                        <a href="#"><img src="/bizionic/images/team_img87.png" alt="#" /></a>
+                    </div>
+                    <div class="col-lg-2 col-md-2 col-sm-4 team_col">
+                        <a href="#"><img src="/bizionic/images/team_img88.png" alt="#" /></a>
+                    </div>
+                    <div class="col-lg-2 col-md-2 col-sm-4 team_col">
+                        <a href="#"><img src="/bizionic/images/team_img89.png" alt="#" /></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
  
 
  <!-- section cindustries 4 -->
 
 
- <div class="indust_work_section">
+ <div class="indust_work_section onTeamPage">
     <div class="auto_container">
         <div class="indust_work_sectionDetail">
             <div class="custom_tittle">

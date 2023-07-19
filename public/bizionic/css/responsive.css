@@ -238,7 +238,9 @@
     font-size: 20px; 
 }
 
-
+.bizionicTeam_mainInfo_text { 
+    padding-right: 20px;
+}
 
 
 
@@ -1005,6 +1007,48 @@ h6 { font-size: 18px; }
     padding: 0px 25px;
 }
 .servicesProvided_info ul { justify-content: flex-start; margin-left: 15px ;}
+
+.bizionicTeam_mainInfo_text { 
+    padding-right: 0px;
+}
+.bizionicTeam_section_detail { 
+    padding: 50px 25px;
+}
+
+.bizionicTeam_section.teamSec2 {
+    padding-bottom: 60px;
+}
+
+.onTeamPage .indust_work_sectionDetail {
+    padding: 60px 0px;
+}
+
+.indust_work_sectionDetail { 
+    padding: 60px 0px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -2348,6 +2392,41 @@ h6 { font-size: 18px; }
 }
 
 .servicesProvided_info ul { justify-content: flex-start;}
+
+.bizionicTeam_section_detail { 
+    padding: 50px 20px;
+}
+
+.bizionicTeam_mainInfo .row {
+    flex-flow: wrap;
+}
+.bizionicTeam_profile { padding-top: 0px; padding-bottom: 25px;}
+
+.bizionicTeam_mainInfo_text { 
+    padding-right: 0px;
+}
+
+.bizionic_team_list_detail .hireForm_banner_detail {
+    padding: 40px 25px; 
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
