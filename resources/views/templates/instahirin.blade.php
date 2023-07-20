@@ -329,7 +329,7 @@
             </div>
 
 
-        <!-- blobalsection -->
+        <!-- globalsection -->
 
             <div class="buildTeam_section openPosition_sec globalSection  ">
                 <div class="auto_container">
