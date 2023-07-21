@@ -73,79 +73,62 @@
                     <div class="row justify-content-center">
                         <div class="col-lg-3 col-md-6 provide_col">
                             <div class="industryNew_section2_colsInfo">
-                                <span><img src="/bizionic/images/ruby_icon1.png" alt="#" /></span>
-                                <h6>WEB APPLICATION DEVELOPMENT</h6>
-                                <p>Ruby on Rails developers use the Ruby on Rails framework to build full-stack web applications. They leverage Rails' conventions, scaffolding, and built-in features to handle routing, database interactions, user authentication, and front-end integration. Ruby on Rails follows the principle of convention over configuration, allowing developers to focus on application logic rather than repetitive tasks.</p>
+                                <span><img src="/bizionic/images/golang_icon1.png" alt="#" /></span>
+                                <h6>SERVER-SIDE DEVELOPMENT</h6>
+                                <p>Golang is widely used for building server-side applications and microservices. Go's built-in concurrency support and lightweight goroutines suit it for handling concurrent requests and managing high-traffic loads. In addition, GoLang developers leverage frameworks like Gin, Echo, or Revel to create APIs, handle routing, and interact with databases.</p>
                             </div>
                         </div>
                         <div class="col-lg-3 col-md-6 provide_col">
                             <div class="industryNew_section2_colsInfo">
-                                <span><img src="/bizionic/images/ruby_icon2.png" alt="#" /></span>
-                                <h6>RAPID PROTOTYPING</h6>
-                                <p>Ruby on Rails is known for its ability to facilitate rapid prototyping. Ruby on Rails developers can quickly build functional prototypes and minimum viable products (MVPs) to validate ideas and gather user feedback. In addition, the framework's simplicity and code generation capabilities speed up the development process, allowing for faster iterations.</p>
+                                <span><img src="/bizionic/images/golang_icon2.png" alt="#" /></span>
+                                <h6>WEB DEVELOPMENT</h6>
+                                <p>GoLang developers can build web applications using Go's standard library or frameworks. GoLang's simplicity and performance make it an attractive choice for developing web services, RESTful APIs, or real-time applications. In addition, GoLang developers often integrate third-party libraries and tools for authentication, session management, or data serialization.</p>
                             </div>
                         </div>
                         <div class="col-lg-3 col-md-6 provide_col">
                             <div class="industryNew_section2_colsInfo">
-                                <span><img src="/bizionic/images/ruby_icon3.png" alt="#" /></span>
-                                <h6>CONTENT MANAGEMENT SYSTEMS (CMS)</h6>
-                                <p>Ruby on Rails developers work with Ruby-based CMS platforms built on the framework, such as Radiant CMS or Refinery CMS. They customize and extend these CMS solutions to meet specific content management requirements, including creating custom themes, plugins, and modules.</p>
+                                <span><img src="/bizionic/images/golang_icon3.png" alt="#" /></span>
+                                <h6>DISTRIBUTED SYSTEMS</h6>
+                                <p>GoLang is well-suited for developing distributed systems and applications that require high scalability and fault tolerance. GoLang developers utilize Go's concurrency features and frameworks like etcd or Consul to build distributed systems, service discovery mechanisms, or coordination tools.</p>
                             </div>
                         </div>
                         <div class="col-lg-3 col-md-6 provide_col">
                             <div class="industryNew_section2_colsInfo">
-                                <span><img src="/bizionic/images/ruby_icon4.png" alt="#" /></span>
-                                <h6>API DEVELOPMENT</h6>
-                                <p>Ruby on Rails developers build APIs (Application Programming Interfaces) using the framework's features and best practices. They design and develop RESTful APIs to enable data exchange and integration with other applications or client-side frameworks. Ruby on Rails provides tools and conventions for building well-structured and maintainable APIs.</p>
-                            </div>
-                        </div>
-
-
-
-
-                        <div class="col-lg-3 col-md-6 provide_col">
-                            <div class="industryNew_section2_colsInfo">
-                                <span><img src="/bizionic/images/ruby_icon5.png" alt="#" /></span>
-                                <h6>E-COMMERCE PLATFORMS</h6>
-                                <p>Ruby on Rails developers build e-commerce platforms and online marketplaces using frameworks like Spree Commerce or Solidus. They implement features such as product management, shopping cart functionality, payment gateway integration, order processing, and inventory management.</p>
-                            </div>
-                        </div>
-                        <div class="col-lg-3 col-md-6 provide_col">
-                            <div class="industryNew_section2_colsInfo">
-                                <span><img src="/bizionic/images/ruby_icon6.png" alt="#" /></span>
-                                <h6>BUSINESS APPLICATIONS</h6>
-                                <p>Ruby on Rails developers build custom business applications that streamline internal processes and workflows. They develop applications for customer relationship management (CRM), project management, inventory management, HR management, and other business-specific needs.</p>
-                            </div>
-                        </div>
-                        <div class="col-lg-3 col-md-6 provide_col">
-                            <div class="industryNew_section2_colsInfo">
-                                <span><img src="/bizionic/images/ruby_icon7.png" alt="#" /></span>
-                                <h6>SOCIAL NETWORKING AND PLATFORM</h6>
-                                <p>Ruby on Rails is used in the development of social networking platforms, online communities, and discussion forums. Ruby on Rails developers leverage the framework's capabilities to build user-friendly interfaces, handle user authentication and authorization, and implement features such as user profiles, news feeds, and messaging.</p>
-                            </div>
-                        </div>
-                        <div class="col-lg-3 col-md-6 provide_col">
-                            <div class="industryNew_section2_colsInfo">
-                                <span><img src="/bizionic/images/ruby_icon8.png" alt="#" /></span>
-                                <h6>PROJECT MANAGEMENT SYSTEMS</h6>
-                                <p>Ruby on Rails developers build collaborative tools, project management systems, and team collaboration platforms. They create features such as task management, document sharing, real-time communication, and file collaboration to enhance team productivity and collaboration.</p>
+                                <span><img src="/bizionic/images/golang_icon4.png" alt="#" /></span>
+                                <h6>NETWORKING APPLICATIONS</h6>
+                                <p>GoLang developers utilize Go's networking libraries to build network-intensive applications, such as TCP/IP servers, HTTP servers, or network proxies. Go's standard library provides robust support for networking protocols and allows developers to create efficient and reliable network applications.</p>
                             </div>
                         </div>
 
 
 
+
                         <div class="col-lg-3 col-md-6 provide_col">
                             <div class="industryNew_section2_colsInfo">
-                                <span><img src="/bizionic/images/ruby_icon9.png" alt="#" /></span>
-                                <h6>STARTUP DEVELOPMENT</h6>
-                                <p>Ruby on Rails is popular among startups due to its efficiency, speed of development, and scalability. Ruby on Rails developers contribute to the development of innovative startups, building scalable web applications and providing technical expertise to help bring startup ideas to life.</p>
+                                <span><img src="/bizionic/images/golang_icon5.png" alt="#" /></span>
+                                <h6>COMMAND-LINE TOOLS</h6>
+                                <p>GoLang is often used to build command-line tools and utilities. Go's simplicity, fast compilation, and static binaries make it a convenient choice for creating command-line interfaces (CLIs) and tools for data processing, file manipulation, or system administration.</p>
                             </div>
                         </div>
                         <div class="col-lg-3 col-md-6 provide_col">
                             <div class="industryNew_section2_colsInfo">
-                                <span><img src="/bizionic/images/ruby_icon10.png" alt="#" /></span>
-                                <h6>OPEN-SOURCE CONTRIBUTIONS</h6>
-                                <p>Ruby on Rails developers actively contribute to the Ruby on Rails community by developing and maintaining open-source gems, libraries, and plugins. They participate in improving and evolving the Ruby on Rails ecosystem by sharing code, contributing to documentation, and collaborating with other developers.</p>
+                                <span><img src="/bizionic/images/golang_icon6.png" alt="#" /></span>
+                                <h6>CLOUD NATIVE DEVELOPMENT</h6>
+                                <p>GoLang has gained popularity in cloud-native development and containerized environments. GoLang developers use Go to build applications that can be quickly packaged into containers and deployed on cloud platforms like Kubernetes. In addition, GoLang's small memory footprint and fast startup time suit it to build lightweight and scalable microservices.</p>
+                            </div>
+                        </div>
+                        <div class="col-lg-3 col-md-6 provide_col">
+                            <div class="industryNew_section2_colsInfo">
+                                <span><img src="/bizionic/images/golang_icon7.png" alt="#" /></span>
+                                <h6>SYSTEM PROGRAMMING</h6>
+                                <p>GoLang developers can utilize Go's low-level capabilities to build system-level software, such as network daemons, device drivers, or operating system components. Go's ability to interface with C libraries allows integration with existing systems or performance-critical tasks.</p>
+                            </div>
+                        </div>
+                        <div class="col-lg-3 col-md-6 provide_col">
+                            <div class="industryNew_section2_colsInfo">
+                                <span><img src="/bizionic/images/golang_icon8.png" alt="#" /></span>
+                                <h6>BLOCKCHAIN/CRYPTOCURRENCY DEVELOPMENT</h6>
+                                <p>GoLang is used to develop blockchain applications and cryptocurrency-related projects. GoLang's efficiency, concurrency features, and cryptographic libraries make it a suitable language for building blockchain networks, smart contracts, or cryptocurrency systems.</p>
                             </div>
                         </div>
 
@@ -157,8 +140,8 @@
 
                     <div class="row px-3">
                         <div class="custom_tittle pt-5 pb-0">
-                            <p class="text-justify text-white">Ruby on Rails developers play a crucial role in building web applications, CMS platforms, APIs, and e-commerce solutions. Their expertise in the Ruby on Rails framework allows them to leverage its powerful features, maintain code quality, and deliver efficient and scalable applications in various domains.</p>
-                            <p class="pb-0 text-justify text-white">Let Bizionic Technologies assist you in better understanding your project need and hire experienced, qualified, and prescreened Ruby on Rails Developers. <b>Kindly provide us with your brief requirement.</b></p>
+                            <p class="text-justify text-white">Overall, GoLang developers leverage the language's simplicity, performance, and built-in concurrency to build a wide range of applications, from server-side to networking and distributed systems. Go's focus on clarity, readability, and scalability makes it a preferred choice for projects that require efficient and concurrent software development.</p>
+                            <p class="pb-0 text-justify text-white">Let Bizionic Technologies assist you in better understanding your project need and hire experienced, qualified, and prescreened GoLang Developers. <b>Kindly provide us with your brief requirement.</b></p>
                         </div>
                     </div>
                 </div>

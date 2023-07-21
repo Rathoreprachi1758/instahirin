@@ -3285,15 +3285,22 @@ body, html {scroll-behavior: smooth; }
 
 
 
+.onHire_immerPage .provider_section .industryNew_section2_colsInfo h6 {font-family: 'avenirblack'; font-size: 14px;}
 
+.onHire_immerPage .industryNew_section2_colsInfo p { font-size: 14px; }
 
+.onHire_immerPage .provider_section .industryNew_section2_colsInfo span img {
+    max-height: 50px;}
 
+.onHire_immerPage .industryNew_section1 .btn_default {
+    max-width: 330px;
+}
+.onHire_immerPage .provider_section .industryNew_section2_colsInfo {
+    border: 0px solid #bbbdbf;
+    padding: 40px 20px 20px 20px;
+}
 
-
-
-
-
-
+.custom_tittle h2 { line-height: 1.4;}
 
 
 
