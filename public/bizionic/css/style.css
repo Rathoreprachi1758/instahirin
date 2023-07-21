@@ -166,7 +166,7 @@ h1 {
 
 h2 {
     color: #000029;
-    font-size: 32px;
+    font-size: 30px;
     padding-bottom: 20px;font-family: 'avenirblack';
 }
 
@@ -2404,7 +2404,7 @@ body, html {scroll-behavior: smooth; }
     -moz-transition: all 0.3s ease-out;
     -ms-transition: all 0.3s ease-out;
     -o-transition: all 0.3s ease-out;
-    border: 1px solid #bcbec0;  
+    border: 1px solid #bcbec0;  min-width: 22px;
 }
 
 
@@ -3264,6 +3264,35 @@ body, html {scroll-behavior: smooth; }
 .team_col a img {  display: block; width: 100%;}
 
 .onTeamPage .indust_work_sectionDetail { padding-top: 80px;}
+
+
+
+.onhire_innerPages { padding-right: 0px;}
+
+.onhire_innerPages .custom_tittle p { font-size: 18px; line-height: 1.7; padding: 15px 0px;}
+
+.onhire_innerPages .abt_list li { padding: 7px 0px;}
+.onhire_innerPages .abt_list li p { padding: 0px;}
+
+
+.onFormCheck  label { display: inline-block;  vertical-align: top; margin: 6px 0px; color: #000; }
+
+.onFormCheck span { display: inline-block; transform: translateY(5px);}
+
+.onFormCheck  label a { text-decoration: underline !important; color: #000;}
+
+.onFormCheck  label a:hover { text-decoration: none !important;}
+
+
+
+
+
+
+
+
+
+
+
 
 
 
