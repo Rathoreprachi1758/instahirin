@@ -3293,7 +3293,7 @@ body, html {scroll-behavior: smooth; }
     max-height: 50px;}
 
 .onHire_immerPage .industryNew_section1 .btn_default {
-    max-width: 330px;
+    max-width: 330px; display: inline-block;
 }
 .onHire_immerPage .provider_section .industryNew_section2_colsInfo {
     border: 0px solid #bbbdbf;
