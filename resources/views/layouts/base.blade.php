@@ -38,7 +38,7 @@
                 <div class="auto_container">
                     <div class="header_detail">
                         <div class="main_logo">
-                            <a href="#"><img src="/bizionic/images/logo.png" alt="#" /></a>
+                            <a href="/hire"><img src="/bizionic/images/logo.png" alt="#" /></a>
                         </div>
                         <div class="menuIcon"></div>
                         @include('partials.nav')
@@ -134,7 +134,7 @@
                     <div class="auto_container">
                         <div class="footerBottom_detail">
                             <div class="main_logo">
-                                <a href="#"><img src="/bizionic/images/footerLogo.png" alt="#" /></a>
+                                <a href="/hire"><img src="/bizionic/images/footerLogo.png" alt="#" /></a>
                             </div>
                             <div class="copyRight">
                                 <p>Copyright © 2022 Bizionic Technologies and Marketing Solutions Pvt. Ltd. All Rights Reserved.</p>

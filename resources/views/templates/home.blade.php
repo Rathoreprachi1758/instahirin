@@ -26,7 +26,7 @@
                                     development services. BIZIONIC is based in the City of Hyderabad, India; the city is among the global Information Technology (IT) centers with a deep pool of experienced and proficient Developers and Marketers. BIZIONIC is well-versed in various industries and techs, so we can help you find the
                                     right match quickly and efficiently.</p>
 
-                                    <a href="#" class="btn_default_white">Hire Talent</a>
+                                    <a href="/hire" class="btn_default_white">Hire Talent</a>
                         </div>
 
 
@@ -380,7 +380,7 @@
                             </ul>
 
                             <h6 class="text-white p-0 mb-2">Your skilled and motivated team is ready to embark on the project.</h6>
-                            <a href="#" class="btn_default_white">Get Connected</a>
+                            <a href="/get-a-free-consultation" class="btn_default_white">Get Connected</a>
                         </div>
                     </div>
                     <div class="col-lg-5 col-md-5">

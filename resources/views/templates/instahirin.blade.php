@@ -18,15 +18,17 @@
                             and Qualified Pool of Professionals across the <b>GLOBE</b>.</p>
                     </div>
 
-                    <div class="hireIn_minForm">
-                        <div class="hireIn_input project_form_field">
-                            <i class="fa fa-search" aria-hidden="true"></i>
-                            <input type="text" value="" placeholder="Search Java, PHP, Laravel, Android, iOS...." />
+                    <form action="" method="get">
+                        <div class="hireIn_minForm">
+                            <div class="hireIn_input project_form_field">
+                                <i class="fa fa-search" aria-hidden="true"></i>
+                                <input type="text" value="" placeholder="Search Java, PHP, Laravel, Android, iOS...." />
+                            </div>
+                            <div class="hireIn_btn">
+                                <input type="submit" value="Hire in Minutes" formaction="/hire/developer/developers-other/instaRequirement" />
+                            </div>
                         </div>
-                        <div class="hireIn_btn">
-                            <input type="submit" value="Hire in Minutes" />
-                        </div>
-                    </div>
+                    </form>
                 </div>
             </div>
         </div>   
@@ -54,7 +56,7 @@
                                     <p class="text-white">Our specialized Talent Scouting and Acquisition Team at<br>
                                     <b>Bizionic InstaHirin</b> with scout the Globe to provide you <br>
                                         with the required "TALENT" within 24/Hours. </p>
-                                    <a href="#" class="btn_default_white mt-2">Post Your Requirement</a>
+                                    <a href="/hire/developer/developers-other/instaRequirement" class="btn_default_white mt-2">Post Your Requirement</a>
                                 </div>
                             </div>
                         </div>
@@ -159,7 +161,7 @@
                                             </ul>
 
 
-                                            <a href="#" class="btn_default_white  m-auto">Talent Onboarding Assessment Process</a>
+                                            <a href="/hire-me" class="btn_default_white  m-auto">Talent Onboarding Assessment Process</a>
                                         </div>
                                     </div>
 
@@ -304,7 +306,7 @@
                                         <p class="text-left p_color">The entire talent pool that Bizionic sources are vetted, prescreened, and authenticated, including the verification of academic credentials, prior work experience, projects, and technical expertise, as well as for any criminal or other background checks. A dedicated project management team is also assigned to each project to guarantee timely completion and immediate replacements if required. This provides the parties access to a dependable, skilled, and experienced mediator and ecosystem to ensure project completion and obligation fulfillment.</p>
                             
                                         <h6 class="font-italic p_color text-left my-2">Bizionic fills the global remote working ecosystem gap.</h6>
-                                        <a href="#" class="btn_default">Hire Talent Globally</a>
+                                        <a href="/InstaHirin" class="btn_default">Hire Talent Globally</a>
 
                                     </div>
                             </div>
@@ -327,7 +329,7 @@
             </div>
 
 
-        <!-- blobalsection -->
+        <!-- globalsection -->
 
             <div class="buildTeam_section openPosition_sec globalSection  ">
                 <div class="auto_container">

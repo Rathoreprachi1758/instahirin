@@ -23,7 +23,7 @@
                             together.</p>
 
 
-                            <a href="#" class="btn_default_white mt-5">Contact Us </a>
+                            <a href="/get-a-free-consultation" class="btn_default_white mt-5">Contact Us </a>
                     </div>
                 </div>
             </div>
@@ -657,7 +657,7 @@
                             <div class="connect_col">
                                 <div class="connectText">
                                     <h3><strong>Connect</strong> with <strong>Us</strong><br> and we will provide<br> you with the best<br> <strong>Solutions!</strong></h3>
-                                    <a href="#" class="btn_default">Contact Now</a>
+                                    <a href="/get-a-free-consultation" class="btn_default">Contact Now</a>
 
 
                                     <span class="connectRoc"><img src="/bizionic/images/rocket_avatar.png" alt="#" /></span>
@@ -693,7 +693,7 @@
                 <div class="row">
                     <div class="col-lg-3 col-md-4 indCol">
                         <div class="indust_work_col">
-                            <a href="#">
+                            <a href="/industries/industries-we-serve/industries/startups">
                                 <span><img src="/bizionic/images/industriesIcon_1.png" alt="#" /></span>
                                 <strong>Startup’s</strong>
                             </a>
@@ -702,7 +702,7 @@
 
                     <div class="col-lg-3 col-md-4 indCol">
                         <div class="indust_work_col">
-                            <a href="#">
+                            <a href="/industries/industries-we-serve/industries/real-estate">
                                 <span><img src="/bizionic/images/industriesIcon_2.png" alt="#" /></span>
                                 <strong>REAL ESTATE</strong>
                             </a>
@@ -711,7 +711,7 @@
 
                     <div class="col-lg-3 col-md-4 indCol">
                         <div class="indust_work_col">
-                            <a href="#">
+                            <a href="/industries/industries-we-serve/industries/b2b-solutions">
                                 <span><img src="/bizionic/images/industriesIcon_3.png" alt="#" /></span>
                                 <strong>B2B SOLUTIONS</strong>
                             </a>
@@ -720,7 +720,7 @@
 
                     <div class="col-lg-3 col-md-4 indCol">
                         <div class="indust_work_col">
-                            <a href="#">
+                            <a href="/industries/industries-we-serve/industries/b2c-solutions">
                                 <span><img src="/bizionic/images/industriesIcon_4.png" alt="#" /></span>
                                 <strong>B2C SOLUTIONS</strong>
                             </a>
@@ -732,7 +732,7 @@
 
                     <div class="col-lg-3 col-md-4 indCol">
                         <div class="indust_work_col">
-                            <a href="#">
+                            <a href="/industries/industries-we-serve/industries/healthcare">
                                 <span><img src="/bizionic/images/industriesIcon_5.png" alt="#" /></span>
                                 <strong>HEALTHCARE</strong>
                             </a>
@@ -741,7 +741,7 @@
 
                     <div class="col-lg-3 col-md-4 indCol">
                         <div class="indust_work_col">
-                            <a href="#">
+                            <a href="/industries/industries-we-serve/industries/travel-and-hospitality">
                                 <span><img src="/bizionic/images/industriesIcon_6.png" alt="#" /></span>
                                 <strong>TRAVEL & HOSPITALITY</strong>
                             </a>
@@ -750,7 +750,7 @@
 
                     <div class="col-lg-3 col-md-4 indCol">
                         <div class="indust_work_col">
-                            <a href="#">
+                            <a href="/industries/industries-we-serve/industries/banking-and-finance">
                                 <span><img src="/bizionic/images/industriesIcon_7.png" alt="#" /></span>
                                 <strong>BANKING & FINANCE</strong>
                             </a>
@@ -759,7 +759,7 @@
 
                     <div class="col-lg-3 col-md-4 indCol">
                         <div class="indust_work_col">
-                            <a href="#">
+                            <a href="/industries/industries-we-serve/industries/media-and-publishing">
                                 <span><img src="/bizionic/images/industriesIcon_8.png" alt="#" /></span>
                                 <strong>MEDIA & PUBLISHING</strong>
                             </a>
@@ -770,7 +770,7 @@
 
                     <div class="col-lg-3 col-md-4 indCol">
                         <div class="indust_work_col">
-                            <a href="#">
+                            <a href="/industries/industries-we-serve/industries/education-and-e-Learning">
                                 <span><img src="/bizionic/images/industriesIcon_9.png" alt="#" /></span>
                                 <strong>EDUCATION AND E-LEARNING</strong>
                             </a>
@@ -779,7 +779,7 @@
 
                     <div class="col-lg-3 col-md-4 indCol">
                         <div class="indust_work_col">
-                            <a href="#">
+                            <a href="/industries/industries-we-serve/industries/food-and-fmcg">
                                 <span><img src="/bizionic/images/industriesIcon_10.png" alt="#" /></span>
                                 <strong>FOOD & FMCG</strong>
                             </a>
@@ -788,7 +788,7 @@
 
                     <div class="col-lg-3 col-md-4 indCol">
                         <div class="indust_work_col">
-                            <a href="#">
+                            <a href="/industries/industries-we-serve/industries/automotive">
                                 <span><img src="/bizionic/images/industriesIcon_11.png" alt="#" /></span>
                                 <strong>AUTOMOTIVE</strong>
                             </a>
@@ -798,7 +798,7 @@
 
                     <div class="col-lg-3 col-md-4 indCol">
                         <div class="indust_work_col">
-                            <a href="#">
+                            <a href="/industries/industries-we-serve/industries/e-commerce">
                                 <span><img src="/bizionic/images/industriesIcon_12.png" alt="#" /></span>
                                 <strong>E-COMMERCE</strong>
                             </a>
