@@ -32,7 +32,7 @@
 
                             <h6 class="font-italic mt-3">Bizionic, Startup's to Unicorn's Lab</h6>
 
-                                    <a href="#" class="btn_default_white">Join Our Team</a>
+                                    <a href="/industries/industries-we-serve/industries/bizionic-team" class="btn_default_white">Join Our Team</a>
                         </div>
 
 
@@ -87,7 +87,7 @@
                                     </div>
 
                                     <div class="col-lg-4 col-md-5">
-                                        <a href="#" class="btn_default_white">Join Team Bizionic</a>
+                                        <a href="/industries/industries-we-serve/industries/bizionic-team" class="btn_default_white">Join Team Bizionic</a>
                                     </div>
                                 </div>
                             </li>

@@ -40,7 +40,7 @@
 
     <div class="auto_container">
         <div class="showAll_btn mt-3 ">
-            <a href="#" class="btn_default">Show All</a>
+            <a href="/hire/developer/developers-other/hirin-view-all" class="btn_default">Show All</a>
         </div>
         <div class="meetTeam_sliderSection pt-0">
             <!-- <carousel :items="2" :margin="20"> -->
