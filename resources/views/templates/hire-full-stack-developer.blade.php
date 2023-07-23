@@ -71,28 +71,28 @@
                     <div class="row justify-content-center">
                         <div class="col-lg-3 col-md-6 provide_col">
                             <div class="industryNew_section2_colsInfo">
-                                <span><img src="/bizionic/images/hubspot_icon1.png" alt="#" /></span>
+                                <span><img src="/bizionic/images/fullStack_icon1.png" alt="#" /></span>
                                 <h6>WEB APPLICATION DEVELOPMENT</h6>
                                 <p>Full-stack developers have the skills to handle both front-end and back-end development for web applications. They can design and implement the user interface using HTML, CSS, and JavaScript frameworks and develop server-side logic using programming languages like JavaScript (Node.js), Python, or Ruby.</p>
                             </div>
                         </div>
                         <div class="col-lg-3 col-md-6 provide_col">
                             <div class="industryNew_section2_colsInfo">
-                                <span><img src="/bizionic/images/hubspot_icon2.png" alt="#" /></span>
+                                <span><img src="/bizionic/images/fullStack_icon2.png" alt="#" /></span>
                                 <h6>DATABASE DESIGN AND INTEGRATION</h6>
                                 <p>Full-stack developers work with databases to design schemas, create tables, and manage data storage and retrieval. They interact with databas- es using query languages like SQL or NoSQL and integrate them with the application's back end, ensuring proper data handling and storage.</p>
                             </div>
                         </div>
                         <div class="col-lg-3 col-md-6 provide_col">
                             <div class="industryNew_section2_colsInfo">
-                                <span><img src="/bizionic/images/hubspot_icon3.png" alt="#" /></span>
+                                <span><img src="/bizionic/images/fullStack_icon3.png" alt="#" /></span>
                                 <h6>SERVER-SIDE DEVELOPMENT</h6>
                                 <p>Full-stack developers build the back-end components of web applications, which handle the business logic, data processing, and integration with external systems. They work with server-side frameworks like Express.js (Node.js), Django (Python), or Ruby on Rails to develop APIs, implement authentication and authorization mechanisms, and handle data validation and manipulation.</p>
                             </div>
                         </div>
                         <div class="col-lg-3 col-md-6 provide_col">
                             <div class="industryNew_section2_colsInfo">
-                                <span><img src="/bizionic/images/hubspot_icon4.png" alt="#" /></span>
+                                <span><img src="/bizionic/images/fullStack_icon4.png" alt="#" /></span>
                                 <h6>FRONT-END DEVELOPMENT</h6>
                                 <p>Full-stack developers create the user interface and user experience using HTML, CSS, and JavaScript frameworks like React, Angular, or Vue.js. They design responsive layouts, implement interactivity, and ensure cross-browser compatibility, delivering a seamless and engaging user experience.</p>
                             </div>
@@ -103,28 +103,28 @@
 
                         <div class="col-lg-3 col-md-6 provide_col">
                             <div class="industryNew_section2_colsInfo">
-                                <span><img src="/bizionic/images/hubspot_icon5.png" alt="#" /></span>
+                                <span><img src="/bizionic/images/fullStack_icon5.png" alt="#" /></span>
                                 <h6>API DEVELOPMENT AND INTEGRATION</h6>
                                 <p>Full-stack developers design and develop APIs (Application Programming Interfaces) that enable communication between different web application components or external systems. They define API endpoints, handle request and response formats (such as JSON or XML), and integrate APIs with front-end and back-end components.</p>
                             </div>
                         </div>
                         <div class="col-lg-3 col-md-6 provide_col">
                             <div class="industryNew_section2_colsInfo">
-                                <span><img src="/bizionic/images/hubspot_icon6.png" alt="#" /></span>
+                                <span><img src="/bizionic/images/fullStack_icon6.png" alt="#" /></span>
                                 <h6>VERSION CONTROL AND DEPLOYMENT</h6>
                                 <p>Full-stack developers utilize version control systems like Git to manage code repositories, track changes, and collaborate with team members. They are responsible for deploying web applications to production environments, ensuring proper configuration and smooth deployment processes.</p>
                             </div>
                         </div> 
                         <div class="col-lg-3 col-md-6 provide_col">
                             <div class="industryNew_section2_colsInfo">
-                                <span><img src="/bizionic/images/hubspot_icon7.png" alt="#" /></span>
+                                <span><img src="/bizionic/images/fullStack_icon7.png" alt="#" /></span>
                                 <h6>PROBLEM SOLVING AND TROUBLESHOOTING</h6>
                                 <p>Full-stack developers possess strong problem-solving skills and can troubleshoot issues that may arise in both front-end and back-end components. They diagnose and resolve bugs, optimize performance, and ensure the smooth operation of web applications.</p>
                             </div>
                         </div> 
                         <div class="col-lg-3 col-md-6 provide_col">
                             <div class="industryNew_section2_colsInfo">
-                                <span><img src="/bizionic/images/hubspot_icon8.png" alt="#" /></span>
+                                <span><img src="/bizionic/images/fullStack_icon8.png" alt="#" /></span>
                                 <h6>PROJECT MANAGEMENT AND COLLABORATION</h6>
                                 <p>Full-stack developers often take on project management responsibilities, working closely with stakeholders, designers, and other developers. They participate in requirement gathering, provide technical insights, and collaborate on project planning and execution.</p>
                             </div>
