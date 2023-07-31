@@ -322,7 +322,7 @@
                     <div class="alert alert-danger text-center" role="alert" id="career_failure"> Sorry! There is some problem sending your query at the moment, Please try again. </div>
                     <form id="career_form" method="POST" action="{{ route('career') }}" onsubmit="return false" enctype="multipart/form-data">
                     @csrf
-                        <div class="advanceCareer_form">
+                        <div class="advanceCareer_form hi-there" >
                             <div class="row">
                                 <div class="col-lg-6 col-md-6">
                                     <div class="advanceCareer_form_fl">
