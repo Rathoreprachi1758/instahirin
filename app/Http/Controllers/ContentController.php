@@ -6,6 +6,8 @@ use App\Models\Hire;
 use App\Models\Lead;
 use App\Models\Page;
 use App\Models\Subscription;
+use App\Models\HireRequest;
+use App\Models\Career;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Cache;
 
@@ -124,7 +126,7 @@ class ContentController extends Controller
         ]);
 
         // Create a new instance of the ContactUs model
-        $hireForm = new Hire();
+        $hireForm = new HireRequest();
 
         // Set the form data from the validated request
         $hireForm->name = $validatedData['name'];
@@ -135,6 +137,46 @@ class ContentController extends Controller
 
         // Save the form data
         $hireForm->save();
+
+        // Return a response indicating success
+        return response()->json(['message' => 'Form submitted successfully']);
+    }
+
+    //* Career Form Submission
+    public function career(Request $request)
+    {
+        // dd($request->all());
+        // Validate the request data, including the uploaded file
+        $validatedData = $request->validate([
+            'name' => 'required',
+            'email' => 'required|email',
+            'linkedin_profile' => 'required',
+            'note' => 'required',
+            'document' => 'required|file',
+        ]);
+
+        // Create a new instance of the ContactUs model
+        $formData = new Career();
+
+        // Set the form data from the validated request
+        $formData->name = $validatedData['name'];
+        $formData->email = $validatedData['email'];
+        $formData->linkedin_profile = $validatedData['linkedin_profile'];
+        $formData->note = $validatedData['note'];
+
+        // Process and store the uploaded file
+        if ($request->hasFile('document')) {
+            $file = $request->file('document');
+            $filename = $file->getClientOriginalName();
+            $file->storeAs('bizionic/images', $filename, 'public');
+            $formData->document = $filename;
+        }
+
+        $formData->status = isset($validatedData['status']) ? $validatedData['status'] : 'New';
+
+
+        // Save the form data
+        $formData->save();
 
         // Return a response indicating success
         return response()->json(['message' => 'Form submitted successfully']);

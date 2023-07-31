@@ -18,14 +18,17 @@ use App\Http\Controllers\ContentController;
 
 Route::get('/{levelOneSlug?}/{levelTwoSlug?}/{levelThreeSlug?}/{levelFourSlug?}', 'App\Http\Controllers\ContentController@index')->name('index');
 
-//ContactUs Form Submission
+// ContactUs Form Submission
 Route::post('/submit-form', [App\Http\Controllers\ContentController::class, 'store'])->name('submit-form');
 
-//Subscribe Form Submission
+// Subscribe Form Submission
 Route::post('/subscribe', [App\Http\Controllers\ContentController::class, 'subscription'])->name('subscribe');
 
 // Hire Form Submission
 Route::post('/hire', [ContentController::class, 'hire'])->name('hire');
+
+// Career Form Submission
+Route::post('/career', [ContentController::class, 'career'])->name('career');
 
 Auth::routes();
 
