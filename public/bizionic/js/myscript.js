@@ -278,6 +278,40 @@ $(function() {
 
 
 // Submit a form using ajax
+       $("#hire_developer").on('submit',(function(e) {
+           var form = $('#hire_developer');
+           var success = $('#hire_success');
+           var failure = $('#hire_failure');
+
+           $.ajax({
+               url: form.attr('action'),
+               type: form.attr('method'),
+               data: new FormData(this),
+               dataType: "json",
+               contentType: false,
+               cache: false,
+               processData:false,
+
+           })
+               .done(function() {
+                   $("#hire_developer")[0].reset();
+                   success.addClass('show');
+                   failure.removeClass('show');
+                   console.log('yay')
+               })
+
+               .fail(function() {
+                   $("#hire_developer")[0].reset();
+                   failure.addClass('show');
+                   success.removeClass('show');
+                   console.log('boo')
+               });
+
+           return false;
+
+       }));
+
+// Submit a form using ajax
        $("#career_form").on('submit',(function(e) {
            var form = $('#career_form');
            var success = $('#career_success');

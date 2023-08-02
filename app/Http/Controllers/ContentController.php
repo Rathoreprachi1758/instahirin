@@ -30,7 +30,7 @@ class ContentController extends Controller
         }
 
         $menusResponse = Cache::get('menus', nova_get_menu_by_slug('header'));
-
+//        echo "<pre>";print_r($menusResponse['menuItems']);exit;
         return view('welcome', [
             'title' => 'Title',
             'description' => 'Desc',
@@ -117,26 +117,129 @@ class ContentController extends Controller
     {
         // dd($request->all());
         // Validate the request data, including the uploaded file
-        $validatedData = $request->validate([
-            'name' => 'required',
-            'company' => 'required',
-            'email' => 'required|email',
-            'phone' => 'required',
-            'message' => 'required',
-        ]);
+        if(isset($request->hiring_type) && !isset($request->company_info)){
+            $validatedData = $request->validate([
+                'name' => 'required',
+                'company' => 'required',
+                'email' => 'required|email',
+                'phone' => 'required',
+                'document' => 'required|file',
+                'website' => '',
+                'message' => '',
+                'address' => '',
+                'from_date' => '',
+                'to_date' => '',
+                'from_time' => '',
+                'to_time' => '',
+                'virtual_assistance_call' => '',
+                'availability_date' => '',
+                'availability_time_from' => '',
+                'availability_time_to' => '',
+            ]);
 
-        // Create a new instance of the ContactUs model
-        $hireForm = new HireRequest();
+            // Create a new instance of the Hire Request model
+            $formData = new HireRequest();
 
-        // Set the form data from the validated request
-        $hireForm->name = $validatedData['name'];
-        $hireForm->company = $validatedData['company'];
-        $hireForm->email = $validatedData['email'];
-        $hireForm->phone = $validatedData['phone'];
-        $hireForm->message = $validatedData['message'];
+            // Set the form data from the validated request
+            $formData->name = $validatedData['name'];
+            $formData->company = $validatedData['company'];
+            $formData->email = $validatedData['email'];
+            $formData->phone = $validatedData['phone'];
+            $formData->website = $validatedData['website'];
+            $formData->message = $validatedData['message'];
+            $formData->address = $validatedData['address'];
+            $formData->from_date = $validatedData['from_date'];
+            $formData->to_date = $validatedData['to_date'];
+            $formData->from_time = $validatedData['from_time'];
+            $formData->to_time = $validatedData['to_time'];
+            $formData->priority = 'normal';
+            $formData->virtual_assistance_call = isset($validatedData['virtual_assistance_call'])?'Yes':'No';
+            $formData->availability_date = $validatedData['availability_date'];
+            $formData->availability_time_from = $validatedData['availability_time_from'];
+            $formData->availability_time_to = $validatedData['availability_time_to'];
 
-        // Save the form data
-        $hireForm->save();
+            // Process and store the uploaded file
+            if ($request->hasFile('document')) {
+                $file = $request->file('document');
+                $filename = $file->getClientOriginalName();
+                $file->storeAs('bizionic/images', $filename, 'public');
+                $formData->document = $filename;
+            }
+            $formData->save();
+        }
+        else if(isset($request->company_info)){
+            $validatedData = $request->validate([
+                'name' => 'required',
+                'company' => 'required',
+                'email' => 'required|email',
+                'phone' => 'required',
+                'document' => 'required|file',
+                'company_info' => '',
+                'website' => '',
+                'message' => '',
+                'address' => '',
+                'from_date' => '',
+                'to_date' => '',
+                'from_time' => '',
+                'to_time' => '',
+                'virtual_assistance_call' => '',
+                'availability_date' => '',
+                'availability_time_from' => '',
+                'availability_time_to' => '',
+            ]);
+
+            // Create a new instance of the Hire Request model
+            $formData = new HireRequest();
+
+            // Set the form data from the validated request
+            $formData->name = $validatedData['name'];
+            $formData->company = $validatedData['company'];
+            $formData->company_info = $validatedData['company_info'];
+            $formData->email = $validatedData['email'];
+            $formData->phone = $validatedData['phone'];
+            $formData->website = $validatedData['website'];
+            $formData->message = $validatedData['message'];
+            $formData->address = $validatedData['address'];
+            $formData->from_date = $validatedData['from_date'];
+            $formData->to_date = $validatedData['to_date'];
+            $formData->from_time = $validatedData['from_time'];
+            $formData->to_time = $validatedData['to_time'];
+            $formData->priority = 'insta';
+            $formData->virtual_assistance_call = isset($validatedData['virtual_assistance_call'])?'Yes':'No';
+            $formData->availability_date = $validatedData['availability_date'];
+            $formData->availability_time_from = $validatedData['availability_time_from'];
+            $formData->availability_time_to = $validatedData['availability_time_to'];
+
+            // Process and store the uploaded file
+            if ($request->hasFile('document')) {
+                $file = $request->file('document');
+                $filename = $file->getClientOriginalName();
+                $file->storeAs('bizionic/images', $filename, 'public');
+                $formData->document = $filename;
+            }
+            $formData->save();
+        }
+        else{
+            $validatedData = $request->validate([
+                'name' => 'required',
+                'company' => 'required',
+                'email' => 'required|email',
+                'phone' => 'required',
+                'message' => 'required',
+            ]);
+
+            // Create a new instance of the Hire Request model
+            $formData = new HireRequest();
+
+            // Set the form data from the validated request
+            $formData->name = $validatedData['name'];
+            $formData->company = $validatedData['company'];
+            $formData->email = $validatedData['email'];
+            $formData->phone = $validatedData['phone'];
+            $formData->message = $validatedData['message'];
+
+            $formData->save();
+        }
 
         // Return a response indicating success
         return response()->json(['message' => 'Form submitted successfully']);

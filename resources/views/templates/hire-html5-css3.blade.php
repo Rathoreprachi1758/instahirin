@@ -1,10 +1,10 @@
-   
+
    <div class="bg_cfd1d2">
 
- 
-   
+
+
    <!-- main banner img -->
-   
+
    <div class="mainBanner_layout">
     <span><img src="/bizionic/images/hire_main_banner.png" alt="#" /></span>
    </div>
@@ -29,9 +29,9 @@
 
                                         <p class="p_color text-justify">Bizionic Technologies HTML5/CSS3 developers specialize in front-end web development using HTML5 and CSS3 technologies.</p>
                                         <p class="p_color text-justify">They are responsible for creating web page structure, layout, and visual styling, ensuring a compelling and user-friendly experience.</p>
-                                           
+
                                         <a href="/get-a-free-consultation" class="btn_default mt-2">Hire HTML5/CSS3 Developer</a>
-                                    
+
                                 </div>
                             </div>
 
@@ -53,7 +53,7 @@
                             <h3><strong>Here are some key areas where</strong> HTML5/CSS3 <strong>developers are used:</strong></h2>
                         </div>
 
-                        
+
                     </div>
 
                 </div>
@@ -161,7 +161,7 @@
                     <div class="row ">
                         <div class="col-lg-4 col-md-5  aos-init " data-aos="fade-right" data-aos-duration="800" data-aos-easing="ease-out-cubic">
                             <div class="biz_brief onhire_innerPages">
-                                
+
                                 <div class="hiringInfo">
 
                                     <div class="custom_tittle text-left pb-0">
@@ -181,10 +181,10 @@
                                             </div>
                                         <p class=" text-justify text-white">We invite You to a “No-Obligation Meeting” with the candidate to assess their expertise, skillset, and suitability for your Project requirements. This meeting will provide an opportunity to comprehensively evaluate their qualifications and technical proficiency, ensuring their alignment with your needs.</p>
                                         <p class=" text-justify text-white pb-0">Through this meeting, you can administer an assessment test to thoroughly evaluate their abilities and determine their technical capabilities.</p>
-                                    </div>   
+                                    </div>
 
                                 </div>
-                                
+
                             </div>
                         </div>
                         <div class="col-lg-8 col-md-7   aos-init " data-aos="fade-left" data-aos-duration="800" data-aos-easing="ease-out-cubic">
@@ -193,38 +193,42 @@
                                     <h3 class="p_color pb-5">Hire HTML5/CSS3 Developers:</h3>
                                     <p class="p-0">Please fill the form and our representative will get back to you.</p>
                                 </div>
+                                <div class="alert alert-success text-center" role="alert" id="hire_success"> Thank you for the message. We will contact you shortly. </div>
+                                <div class="alert alert-danger text-center" role="alert" id="hire_failure"> Sorry! There is some problem sending your query at the moment, Please try again. </div>
 
-                                <div class="project_form">
+                                <form action="{{ route('hire') }}" method="POST" enctype="multipart/form-data" id="hire_developer" onsubmit="return false;">
+                                @csrf
+                                    <div class="project_form">
                                     <div class="row">
                                         <div class="col-lg-6 col-md-12">
                                             <div class="project_form_field">
-                                                <input type="text" value="" placeholder="Name*" />
+                                                <input type="text" value="" placeholder="Name*" name="name" id="name"/>
                                             </div>
                                         </div>
 
                                         <div class="col-lg-6 col-md-12">
                                             <div class="project_form_field">
-                                                <input type="text" value="" placeholder="Phone / Skype / Whatsapp" />
+                                                <input type="text" value="" placeholder="Phone / Skype / Whatsapp" name="phone" id="phone"/>
                                             </div>
                                         </div>
                                         <div class="col-lg-6 col-md-12">
                                             <div class="project_form_field">
-                                                <input type="text" value="" placeholder="Company Name " />
+                                                <input type="text" value="" placeholder="Company Name " name="company" id="company" />
                                             </div>
                                         </div>
                                         <div class="col-lg-6 col-md-12">
                                             <div class="project_form_field">
-                                                <input type="text" value="" placeholder="Enter business email*" />
+                                                <input type="text" value="" placeholder="Enter business email*" name="email" id="email"/>
                                             </div>
                                         </div>
                                         <div class="col-lg-6 col-md-12">
                                             <div class="project_form_field">
-                                                <input type="text" value="" placeholder="Website (if Available)" />
+                                                <input type="text" value="" placeholder="Website (if Available)" name="website" id="website" />
                                             </div>
                                         </div>
                                         <div class="col-lg-6 col-md-12">
                                             <div class="project_form_field">
-                                                <input type="text" value="" placeholder="Address" />
+                                                <input type="text" value="" placeholder="Address" name="address" id="address" />
                                             </div>
                                         </div>
 
@@ -232,20 +236,20 @@
 
                                         <div class="col-lg-12 col-md-12">
                                             <div class="project_form_textarea">
-                                                <textarea placeholder=" How can we help you*"></textarea>
+                                                <textarea placeholder=" How can we help you*" name="message" id="message"></textarea>
                                             </div>
                                         </div>
 
 
                                         <div class="col-lg-12 col-md-12">
                                             <div class="project_form_select">
-                                                <select class="form-select" aria-label="Default select example">
-                                                    <option selected>Hire Periods (Full Time, Part Time, Daily, Weekly, Periods) Please Select</option>
-                                                    <option value="1">Hire Dedicated</option>
-                                                    <option value="2">Hire Developers</option> 
+                                                <select class="form-select" aria-label="Default select example" name="hiring_type" id="hiring_type" required>
+                                                    <option value="" selected>Hire Periods (Full Time, Part Time, Daily, Weekly, Periods) Please Select</option>
+                                                    <option value="Dedicated">Hire Dedicated</option>
+                                                    <option value="Developer">Hire Developers</option>
                                                 </select>
                                             </div>
-                                        </div> 
+                                        </div>
 
 
 
@@ -253,23 +257,23 @@
                                             <div class="dateTime_range">
                                                 <label>From</label>
                                                 <div class="project_form_field">
-                                                    <input type="text" value="" placeholder="Calendar"  >
+                                                    <input type="date" value="" placeholder="Calendar" name="from_date" >
                                                 </div>
 
 
                                                 <label class="text-center">To</label>
                                                 <div class="project_form_field mr-3">
-                                                    <input type="text" value="" placeholder="Calendar">
+                                                    <input type="date" value="" placeholder="Calendar" name="to_date">
                                                 </div>
 
 
-                                                
+
                                                 <div class="project_form_field ml-3">
-                                                    <input type="text" value="" placeholder="Time" id="timePicker" />
+                                                    <input type="text" value="" placeholder="Time" id="timePicker" name="from_time"/>
                                                 </div>
                                                 <label class="text-center">To</label>
                                                 <div class="project_form_field">
-                                                    <input type="text" value="" placeholder="Time">
+                                                    <input type="text" value="" placeholder="Time" name="to_time">
                                                 </div>
 
 
@@ -287,7 +291,7 @@
                                         <div class="col-lg-12 col-md-12">
                                             <div class="scheduleCheckbox onFormCheck">
                                                 <label class="checkbox-label">
-                                                    <input type="checkbox">
+                                                    <input type="checkbox" name="virtual_assistance_call" value="Yes">
                                                     <span class="checkbox-custom rectangular"></span>
                                                     Schedule an Virtual Assistance Call
                                                 </label>
@@ -301,19 +305,19 @@
                                             <div class="dateTime_range">
                                                 <label style="min-width: 90px;">Availability</label>
                                                 <div class="project_form_field">
-                                                    <input type="text" value="" placeholder="Calendar"  >
+                                                    <input type="date" value="" placeholder="Calendar" name="availability_date" >
                                                 </div>
 
-        
 
 
-                                                
+
+
                                                 <div class="project_form_field ml-5">
-                                                    <input type="text" value="" placeholder="Time" id="timePicker" />
+                                                    <input type="text" value="" placeholder="Time" id="timePicker" name="availability_time_from"/>
                                                 </div>
                                                 <label class="text-center">To</label>
                                                 <div class="project_form_field">
-                                                    <input type="text" value="" placeholder="Time">
+                                                    <input type="text" value="" placeholder="Time" name="availability_time_to">
                                                 </div>
 
 
@@ -325,14 +329,14 @@
                                             </div>
                                         </div>
 
-                                        
+
 
                                         <div class="col-lg-12 col-md-12">
                                             <div class="addFile_button onHiredetailPage">
                                                 <div class="addFile">
                                                     <strong>Upload supporting documents. if have!</strong>
-                                                    <input type="file" />
-                                                </div> 
+                                                    <input type="file" name="document" />
+                                                </div>
                                             </div>
                                         </div>
 
@@ -355,14 +359,15 @@
                                         </div>
 
 
-                                        <div class="col-lg-12 col-md-12"> 
+                                        <div class="col-lg-12 col-md-12">
                                             <div class="project_form_submit pt-4">
                                                 <input type="submit" value="Get a No-Obligation Meeting" class="btn_default" />
-                                            </div> 
+                                            </div>
                                         </div>
 
                                     </div>
                                 </div>
+                                </form>
                             </div>
                         </div>
                     </div>
@@ -374,17 +379,17 @@
 
     </div>
 
- 
 
 
 
- 
+
+
 
 
      <!-- Services provided section -->
 
 
-     @include('partials.services') 
+     @include('partials.services')
 
 
 

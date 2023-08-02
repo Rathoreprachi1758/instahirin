@@ -8,7 +8,7 @@
                     Zero Cost to Meet Talent, Hire Top Talent In Minutes, and Unlock Cost Savings through Smart Hiring.</p>
             </div>
         </div>
-      </div>          
+      </div>
 </div>
 
 
@@ -21,7 +21,7 @@
             <div class="row ">
                 <div class="col-lg-4 col-md-5  aos-init " data-aos="fade-right" data-aos-duration="800" data-aos-easing="ease-out-cubic">
                     <div class="biz_brief">
-                        
+
                         <div class="hiringInfo">
 
                             <div class="hireFormTittle">
@@ -29,7 +29,7 @@
                             </div>
 
                             <div class="meetProfile">
-                                <span><img src="/assets/meetprofile_avatar.png" alt=""></span> 
+                                <span><img src="/assets/meetprofile_avatar.png" alt=""></span>
                                 <div class="meetProfile_tittle">
                                     <strong>ANDJELA HUSSAINI</strong>
                                     <p>Digital Marketing Expert</p>
@@ -65,7 +65,7 @@
 
 
                         </div>
-                        
+
                     </div>
                 </div>
                 <div class="col-lg-8 col-md-7   aos-init " data-aos="fade-left" data-aos-duration="800" data-aos-easing="ease-out-cubic">
@@ -74,38 +74,41 @@
                             <h3 class="p_color pb-5">For Employers, Hiring For</h3>
                             <p class="p-0">Please fill the form and our representative will get back to you.</p>
                         </div>
-
+                        <div class="alert alert-success text-center" role="alert" id="hire_success"> Thank you for the message. We will contact you shortly. </div>
+                        <div class="alert alert-danger text-center" role="alert" id="hire_failure"> Sorry! There is some problem sending your query at the moment, Please try again. </div>
+                        <form action="{{ route('hire') }}" method="POST" enctype="multipart/form-data" id="hire_developer" onsubmit="return false;">
+                            @csrf
                         <div class="project_form">
                             <div class="row">
                                 <div class="col-lg-6 col-md-12">
                                     <div class="project_form_field">
-                                        <input type="text" value="" placeholder="Name*" />
+                                        <input type="text" value="" placeholder="Name*" id="name" name="name"/>
                                     </div>
                                 </div>
 
                                 <div class="col-lg-6 col-md-12">
                                     <div class="project_form_field">
-                                        <input type="text" value="" placeholder="Phone / Skype / Whatsapp" />
+                                        <input type="text" value="" placeholder="Phone / Skype / Whatsapp" name="phone" id="phone"/>
                                     </div>
                                 </div>
                                 <div class="col-lg-6 col-md-12">
                                     <div class="project_form_field">
-                                        <input type="text" value="" placeholder="Company Name " />
+                                        <input type="text" value="" placeholder="Company Name " name="company"/>
                                     </div>
                                 </div>
                                 <div class="col-lg-6 col-md-12">
                                     <div class="project_form_field">
-                                        <input type="text" value="" placeholder="Enter business email*" />
+                                        <input type="text" value="" placeholder="Enter business email*" name="email"/>
                                     </div>
                                 </div>
                                 <div class="col-lg-6 col-md-12">
                                     <div class="project_form_field">
-                                        <input type="text" value="" placeholder="Website (if Available)" />
+                                        <input type="text" value="" placeholder="Website (if Available)" name="website"/>
                                     </div>
                                 </div>
                                 <div class="col-lg-6 col-md-12">
                                     <div class="project_form_field">
-                                        <input type="text" value="" placeholder="Address" />
+                                        <input type="text" value="" placeholder="Address" name="address"/>
                                     </div>
                                 </div>
 
@@ -113,25 +116,25 @@
 
                                 <div class="col-lg-12 col-md-12">
                                     <div class="project_form_textarea">
-                                        <textarea placeholder="Brief company information..."></textarea>
+                                        <textarea placeholder="Brief company information..." name="company_info"></textarea>
                                     </div>
                                 </div>
                                 <div class="col-lg-12 col-md-12">
                                     <div class="project_form_textarea">
-                                        <textarea placeholder="Brief project information..."></textarea>
+                                        <textarea placeholder="Brief project information..." name="message"></textarea>
                                     </div>
                                 </div>
 
 
                                 <div class="col-lg-12 col-md-12">
                                     <div class="project_form_select">
-                                        <select class="form-select" aria-label="Default select example">
-                                            <option selected>Hire Periods (Full Time, Part Time, Daily, Weekly, Periods) Please Select</option>
-                                            <option value="1">Hire Dedicated</option>
-                                            <option value="2">Hire Developers</option> 
+                                        <select class="form-select" aria-label="Default select example" name="hiring_type" required>
+                                            <option value="" selected>Hire Periods (Full Time, Part Time, Daily, Weekly, Periods) Please Select</option>
+                                            <option value="Dedicated">Hire Dedicated</option>
+                                            <option value="Developer">Hire Developers</option>
                                           </select>
                                     </div>
-                                </div> 
+                                </div>
 
 
 
@@ -139,23 +142,23 @@
                                     <div class="dateTime_range">
                                         <label>From</label>
                                         <div class="project_form_field">
-                                            <input type="text" value="" placeholder="Calendar"  >
+                                            <input type="text" value="" placeholder="Calendar"  name="from_date">
                                         </div>
 
 
                                         <label class="text-center">To</label>
                                         <div class="project_form_field mr-3">
-                                            <input type="text" value="" placeholder="Calendar">
+                                            <input type="text" value="" placeholder="Calendar" name="to_date">
                                         </div>
 
 
-                                        
+
                                         <div class="project_form_field ml-3">
-                                            <input type="text" value="" placeholder="Time" id="timePicker" />
+                                            <input type="text" value="" placeholder="Time" id="timePicker" name="from_time"/>
                                         </div>
                                         <label class="text-center">To</label>
                                         <div class="project_form_field">
-                                            <input type="text" value="" placeholder="Time">
+                                            <input type="text" value="" placeholder="Time" name="to_time">
                                         </div>
 
 
@@ -172,7 +175,7 @@
 
                                 <div class="col-lg-12 col-md-12">
                                     <div class="scheduleCheckbox">
-                                        <label class="checkbox-label">
+                                        <label class="checkbox-label" name="virtual_assistance_call" value="Yes">
                                             <input type="checkbox">
                                             <span class="checkbox-custom rectangular"></span>
                                             Schedule an Virtual Assistance Call
@@ -187,19 +190,19 @@
                                     <div class="dateTime_range">
                                         <label style="min-width: 90px;">Availability</label>
                                         <div class="project_form_field">
-                                            <input type="text" value="" placeholder="Calendar"  >
+                                            <input type="text" value="" placeholder="Calendar" name="availability_date" >
                                         </div>
 
- 
 
 
-                                        
+
+
                                         <div class="project_form_field ml-5">
-                                            <input type="text" value="" placeholder="Time" id="timePicker" />
+                                            <input type="text" value="" placeholder="Time" id="timePicker" name="availability_time_from"/>
                                         </div>
                                         <label class="text-center">To</label>
                                         <div class="project_form_field">
-                                            <input type="text" value="" placeholder="Time">
+                                            <input type="text" value="" placeholder="Time" name="availability_time_to">
                                         </div>
 
 
@@ -211,13 +214,13 @@
                                     </div>
                                 </div>
 
-                                
+
 
                                 <div class="col-lg-12 col-md-12">
                                     <div class="addFile_button onHiredetailPage">
                                         <div class="addFile">
                                             <strong>Upload supporting documents. if have!</strong>
-                                            <input type="file" />
+                                            <input type="file" name="document"/>
                                         </div>
 
                                         <div class="project_form_submit">
@@ -226,7 +229,9 @@
                                     </div>
                                 </div>
                             </div>
+
                         </div>
+                        </form>
                     </div>
                 </div>
             </div>
@@ -284,7 +289,7 @@
                     <li><a href="#">Enterprise Portal Solution</a></li> |
                     <li><a href="#">Magenta Enterprise Solution</a></li> |
                     <li><a href="#">Cloud Computing</a></li> |
-                    <li><a href="#">Conversion Rate Optimisation</a></li> | 
+                    <li><a href="#">Conversion Rate Optimisation</a></li> |
                 </ul>
             </div>
 
@@ -293,55 +298,55 @@
             <div class="servicesProvided_info">
                 <h3 class="text-center">TECHNOLOGIES</h3>
                 <ul>
-                    <li><a href="#">ASP.NET</a></li> | 
-                    <li><a href="#">C#</a></li> | 
-                    <li><a href="#">DNN</a></li> | 
-                    <li><a href="#">Xamarin</a></li> | 
-                    <li><a href="#">PHP</a></li> | 
-                    <li><a href="#">cakePHP</a></li> | 
-                    <li><a href="#">Laravel</a></li> | 
-                    <li><a href="#">Yll</a></li> | 
-                    <li><a href="#">Zend</a></li> | 
-                    <li><a href="#">Symfony</a></li> | 
+                    <li><a href="#">ASP.NET</a></li> |
+                    <li><a href="#">C#</a></li> |
+                    <li><a href="#">DNN</a></li> |
+                    <li><a href="#">Xamarin</a></li> |
+                    <li><a href="#">PHP</a></li> |
+                    <li><a href="#">cakePHP</a></li> |
+                    <li><a href="#">Laravel</a></li> |
+                    <li><a href="#">Yll</a></li> |
+                    <li><a href="#">Zend</a></li> |
+                    <li><a href="#">Symfony</a></li> |
 
-                    <li><a href="#">ROR</a></li> | 
-                    <li><a href="#">Java</a></li> | 
-                    <li><a href="#">Angular JS</a></li> | 
-                    <li><a href="#">Node JS</a></li> | 
-                    <li><a href="#">React Native</a></li> | 
-                    <li><a href="#">MEAN Stack</a></li> | 
-                    <li><a href="#">Drupal</a></li> | 
-                    <li><a href="#">MS Dynamics CRM</a></li> | 
-                    <li><a href="#">Salesforce</a></li> | 
-                    <li><a href="#">Sugar CRM</a></li> | 
+                    <li><a href="#">ROR</a></li> |
+                    <li><a href="#">Java</a></li> |
+                    <li><a href="#">Angular JS</a></li> |
+                    <li><a href="#">Node JS</a></li> |
+                    <li><a href="#">React Native</a></li> |
+                    <li><a href="#">MEAN Stack</a></li> |
+                    <li><a href="#">Drupal</a></li> |
+                    <li><a href="#">MS Dynamics CRM</a></li> |
+                    <li><a href="#">Salesforce</a></li> |
+                    <li><a href="#">Sugar CRM</a></li> |
 
-                    <li><a href="#">Codeigniter</a></li> | 
-                    <li><a href="#">Shopify</a></li> | 
-                    <li><a href="#">SharePoint</a></li> | 
-                    <li><a href="#">Android</a></li> | 
-                    <li><a href="#">iOS</a></li> | 
-                    <li><a href="#">SEO Experts</a></li> | 
-                    <li><a href="#">Sugar CRM</a></li> | 
-                    <li><a href="#">Website Designer</a></li> | 
-                    <li><a href="#">Database Developer</a></li> | 
-                    <li><a href="#">Umbraco</a></li> | 
+                    <li><a href="#">Codeigniter</a></li> |
+                    <li><a href="#">Shopify</a></li> |
+                    <li><a href="#">SharePoint</a></li> |
+                    <li><a href="#">Android</a></li> |
+                    <li><a href="#">iOS</a></li> |
+                    <li><a href="#">SEO Experts</a></li> |
+                    <li><a href="#">Sugar CRM</a></li> |
+                    <li><a href="#">Website Designer</a></li> |
+                    <li><a href="#">Database Developer</a></li> |
+                    <li><a href="#">Umbraco</a></li> |
 
-                    <li><a href="#">WordPress</a></li> | 
-                    <li><a href="#">Craft</a></li> | 
-                    <li><a href="#">Magento</a></li> | 
-                    <li><a href="#">Magento 2</a></li> | 
-                    <li><a href="#">Quality Analyst</a></li> | 
-                    <li><a href="#">Unity 3D</a></li> | 
-                    <li><a href="#">Joomla</a></li> | 
-                    <li><a href="#">MongoDB</a></li> | 
-                    <li><a href="#">Opencart</a></li> | 
-                    <li><a href="#">Python</a></li> | 
+                    <li><a href="#">WordPress</a></li> |
+                    <li><a href="#">Craft</a></li> |
+                    <li><a href="#">Magento</a></li> |
+                    <li><a href="#">Magento 2</a></li> |
+                    <li><a href="#">Quality Analyst</a></li> |
+                    <li><a href="#">Unity 3D</a></li> |
+                    <li><a href="#">Joomla</a></li> |
+                    <li><a href="#">MongoDB</a></li> |
+                    <li><a href="#">Opencart</a></li> |
+                    <li><a href="#">Python</a></li> |
 
-                    <li><a href="#">WooCommerce</a></li> | 
-                    <li><a href="#">BigCommerce</a></li> | 
-                    <li><a href="#">NopCommerce</a></li> | 
-                    <li><a href="#">VirtueMart</a></li> | 
-                    <li><a href="#">Zencart</a></li> | 
+                    <li><a href="#">WooCommerce</a></li> |
+                    <li><a href="#">BigCommerce</a></li> |
+                    <li><a href="#">NopCommerce</a></li> |
+                    <li><a href="#">VirtueMart</a></li> |
+                    <li><a href="#">Zencart</a></li> |
                 </ul>
             </div>
 
@@ -350,17 +355,17 @@
             <div class="servicesProvided_info p-0">
                 <h3 class="text-center">INDUSTRIES</h3>
                 <ul>
-                    <li><a href="#">Real Estate</a></li> | 
-                    <li><a href="#">Travel & Hospitality</a></li> | 
-                    <li><a href="#">B2B Solutions</a></li> | 
-                    <li><a href="#">B2C Solutions</a></li> | 
-                    <li><a href="#">Healthcare</a></li> | 
-                    <li><a href="#">Education & e-Learning</a></li> | 
-                    <li><a href="#">Banking & Finance</a></li> | 
-                    <li><a href="#">Startup Solutions</a></li> | 
-                    <li><a href="#">Media & Publishing</a></li> | 
-                    <li><a href="#">Food & FMCG</a></li> | 
-                                <li><a href="#">E-Commerce</a></li> | 
+                    <li><a href="#">Real Estate</a></li> |
+                    <li><a href="#">Travel & Hospitality</a></li> |
+                    <li><a href="#">B2B Solutions</a></li> |
+                    <li><a href="#">B2C Solutions</a></li> |
+                    <li><a href="#">Healthcare</a></li> |
+                    <li><a href="#">Education & e-Learning</a></li> |
+                    <li><a href="#">Banking & Finance</a></li> |
+                    <li><a href="#">Startup Solutions</a></li> |
+                    <li><a href="#">Media & Publishing</a></li> |
+                    <li><a href="#">Food & FMCG</a></li> |
+                                <li><a href="#">E-Commerce</a></li> |
                 </ul>
             </div>
         </div>
