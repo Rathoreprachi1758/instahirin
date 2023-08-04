@@ -42,7 +42,8 @@ class NovaServiceProvider extends NovaApplicationServiceProvider
     {
         Gate::define('viewNova', function ($user) {
             return in_array($user->email, [
-                //
+                'admin@bizionic.com',
+                'admin@gmail.com',
             ]);
         });
     }
@@ -69,7 +70,7 @@ class NovaServiceProvider extends NovaApplicationServiceProvider
         return [
             // ...
             \Outl1ne\MenuBuilder\MenuBuilder::make()
-    
+
             // Optional customization
             ->title('Menus') // Define a new name for sidebar
             ->icon('adjustments') // Customize menu icon, supports heroicons
