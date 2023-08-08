@@ -861,53 +861,7 @@
                     </div>
 
                     <div class="project_form progForm_bg">
-                        <div class="row">
-                            <div class="col-lg-6 col-md-6">
-                                <div class="project_form_field">
-                                    <input type="text" value="" placeholder="Name*" />
-                                </div>
-                            </div>
-                            <div class="col-lg-6 col-md-6">
-                                <div class="project_form_field">
-                                    <div class="protectPrivacy">
-                                        <span>
-                                            <img src="/bizionic/images/protect_icon.png" alt="#" />
-                                            Your privacy is protected
-                                        </span>
-                                    </div>
-                                </div>
-                            </div>
-
-                            <div class="col-lg-6 col-md-6">
-                                <div class="project_form_field">
-                                    <input type="text" value="" placeholder="Enter business email" />
-                                </div>
-                            </div>
-                            <div class="col-lg-6 col-md-6">
-                                <div class="project_form_field">
-                                    <input type="text" value="" placeholder="Phone / Skype / Whatsapp" />
-                                </div>
-                            </div>
-
-
-                            <div class="col-lg-12 col-md-12">
-                                <div class="project_form_textarea">
-                                    <textarea placeholder="Tell us more*"></textarea>
-                                </div>
-                            </div>
-
-                            <div class="col-lg-12 col-md-12">
-                                <div class="addFile_button">
-                                    <div class="addFile">
-                                        <input type="file" class="text-white" />
-                                    </div>
-
-                                    <div class="project_form_submit">
-                                        <input type="submit" value="Send" class="btn_default_white" />
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
+                        @include('forms.about')
                     </div>
 
 

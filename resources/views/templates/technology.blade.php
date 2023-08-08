@@ -374,47 +374,7 @@
                 <div class="col-lg-7 col-md-7   aos-init aos-animate" data-aos="fade-left" data-aos-duration="800" data-aos-easing="ease-out-cubic">  
 
                 <div class="project_form">
-                    <div class="row">
-                        <div class="col-lg-6 col-md-12">
-                            <div class="project_form_field">
-                                <input type="text" value="" placeholder="Name*" />
-                            </div>
-                        </div>
-                        <div class="col-lg-6 col-md-12">
-                            <div class="project_form_field">
-                                <input type="text" value="" placeholder="Company*" />
-                            </div>
-                        </div>
-
-                        <div class="col-lg-6 col-md-12">
-                            <div class="project_form_field">
-                                <input type="text" value="" placeholder="Enter business email" />
-                            </div>
-                        </div>
-                        <div class="col-lg-6 col-md-12">
-                            <div class="project_form_field">
-                                <input type="text" value="" placeholder="Phone / Skype / Whatsapp" />
-                            </div>
-                        </div>
-
-
-                        <div class="col-lg-12 col-md-12">
-                            <div class="project_form_textarea">
-                                <textarea placeholder="How can we help...*"></textarea>
-                            </div>
-                        </div>
-
-                        <div class="col-lg-12 col-md-12">
-                            <div class="addFile_button techn_textSett">
-                                <p>By clicking on “Augment your Team”, you agree to Bizionic Technologies and
-                                    Marketing Solution’s Privacy Policy, You can withdraw your consent by Contacting us.</p>
-
-                                <div class="project_form_submit">
-                                    <input type="submit" value="Enquire Now" class="btn_default_white" />
-                                </div>
-                            </div>
-                        </div>
-                    </div>
+                    @include('forms.hire')
                 </div>
 
 

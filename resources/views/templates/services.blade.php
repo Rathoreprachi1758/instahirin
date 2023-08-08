@@ -346,45 +346,8 @@
 
             <div class="project_form aos-init aos-animate" data-aos="fade-up" data-aos-duration="800" data-aos-easing="ease-out-cubic">
                 
-                <div class="servicesForm">
-                    <p class="text-center">If you have an idea in mind of how to enhance your <b>business processes,</b>  don’t hesitate <br>
-                        to <b>contact us</b>  and discover more about <b>our technologies!</b> </p>
-                    <div class="row">
-                        <div class="col-lg-6 col-md-12">
-                            <div class="project_form_field">
-                                <input type="text" value="" placeholder="Name*" />
-                            </div>
-                        </div>
-
-                        <div class="col-lg-6 col-md-12">
-                            <div class="project_form_field">
-                                <input type="text" value="" placeholder="Phone / Skype / Whatsapp" id="phone" />
-                            </div>
-                        </div>
-                        
-
-                        <div class="col-lg-6 col-md-12">
-                            <div class="project_form_field">
-                                <input type="text" value="" placeholder="Enter business email" />
-                            </div>
-                        </div> 
-
-
-                        <div class="col-lg-12 col-md-12">
-                            <div class="project_form_textarea">
-                                <textarea placeholder="How can we help...*"></textarea>
-                            </div>
-                        </div>
-
-                        <div class="col-lg-12 col-md-12">
-                            <div class="addFile_button "> 
-
-                                <div class="project_form_submit">
-                                    <input type="submit" value="Contact Us" class="btn_default" />
-                                </div>
-                            </div>
-                        </div>
-                    </div>
+                <div class="servicesForm">                    
+                    @include('forms.contact')
                 </div>
             </div> 
 
