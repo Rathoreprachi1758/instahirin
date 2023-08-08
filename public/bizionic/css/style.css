@@ -53,6 +53,10 @@ label {
     margin: 0px
 }
 
+.page-dev{
+    text-transform: capitalize;
+}
+
 input,
 textarea,
 select {

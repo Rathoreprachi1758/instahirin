@@ -297,14 +297,20 @@ $(function() {
                    $("#hire_developer")[0].reset();
                    success.addClass('show');
                    failure.removeClass('show');
-                   console.log('yay')
+                   console.log('yay');
+                   $('html, body').animate({
+                        scrollTop: ($("#hire_success").offset().top - 150)
+                    }, 100);
                })
 
                .fail(function() {
-                   $("#hire_developer")[0].reset();
+                   // $("#hire_developer")[0].reset();
                    failure.addClass('show');
                    success.removeClass('show');
-                   console.log('boo')
+                   console.log('boo');
+                   $('html, body').animate({
+                        scrollTop: ($("#hire_failure").offset().top - 150)
+                    }, 100);
                });
 
            return false;
