@@ -54,7 +54,7 @@ class Client extends Resource
             Text::make('Tag Line','tag_line'),
             Avatar::make('Logo','logo'),
             Boolean::make('Is Published','published'),
-            Trim::make('Testimonial','description'),
+            TextArea::make('Testimonial','description'),
         ];
     }
 
