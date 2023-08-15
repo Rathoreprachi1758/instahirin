@@ -2,13 +2,14 @@
 
 namespace App\Nova;
 
+
 use Laravel\Nova\Fields\ID;
 use Laravel\Nova\Http\Requests\NovaRequest;
 use Laravel\Nova\Fields\Avatar;
 use Laravel\Nova\Fields\Boolean;
+
 use Laravel\Nova\Fields\Text;
 use Laravel\Nova\Fields\TextArea;
-
 
 class Client extends Resource
 {
@@ -17,7 +18,7 @@ class Client extends Resource
      *
      * @var class-string<\App\Models\Client>
      */
-    public static $model = \App\Models\Client::class; 
+    public static $model = \App\Models\Client::class;
 
     /**
      * The single value that should be used to represent the resource when being displayed.
@@ -32,7 +33,7 @@ class Client extends Resource
      * @var array
      */
     public static $search = [
-        'id','title','tag_line',
+        'id','title','sub_title','tag_line',
     ];
 
     /**
@@ -50,7 +51,7 @@ class Client extends Resource
             Text::make('Tag Line','tag_line'),
             Avatar::make('Logo','logo'),
             Boolean::make('Is Published','published'),
-            TextArea::make('Testimonial','description'),
+            TextArea::make('Description','description'),
         ];
     }
 
