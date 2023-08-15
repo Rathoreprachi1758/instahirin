@@ -174,7 +174,13 @@
   }
 
 
+// grid list code 
 
+
+    $('.grid_list a ').on('click', function (e) {
+      $(this).parents('.grid_listing_outer').toggleClass('showListView');
+
+  });
 
 
 
@@ -350,6 +356,42 @@ $(function() {
             return false;
 
        }));
+
+// Submit a form using ajax
+       $("#insta_form").on('submit',(function(e) {
+           var form = $('#insta_form');
+           var success = $('#insta_success');
+           var failure = $('#insta_failure');
+
+           $.ajax({
+               url: form.attr('action'),
+               type: form.attr('method'),
+               data: new FormData(this),
+               dataType: "json",
+               contentType: false,
+               cache: false,
+               processData:false,
+
+           })
+               .done(function() {
+                   $("#insta_form")[0].reset();
+                   success.addClass('show');
+                   failure.removeClass('show');
+                   console.log('yay')
+               })
+
+               .fail(function() {
+
+                   failure.addClass('show');
+                   success.removeClass('show');
+                   console.log('boo')
+               });
+
+            return false;
+
+       }));
+
+
 
        // tabs Order
 

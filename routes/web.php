@@ -26,6 +26,8 @@ Route::post('/subscribe', [App\Http\Controllers\ContentController::class, 'subsc
 
 // Hire Form Submission
 Route::post('/hire', [ContentController::class, 'hire'])->name('hire');
+Route::post('/insta-hirin-requirements', [ContentController::class, 'instaHirinRequirements'])->name('instaHirinRequirements');
+Route::post('/insta-hirin-onboard', [ContentController::class, 'instaHirinOnboard'])->name('instaHirinOnboard');
 
 // Career Form Submission
 Route::post('/career', [ContentController::class, 'career'])->name('career');
@@ -33,3 +35,5 @@ Route::post('/career', [ContentController::class, 'career'])->name('career');
 Auth::routes();
 
 Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
+
+Route::get('/hire/developer/developers-other/HireForm/{id}',[ContentController::class, 'hireExpert'])->name('hireExpert');

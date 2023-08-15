@@ -125,7 +125,7 @@
 
                     <div class="industryNew_section2_info aos-init " data-aos="fade-up" data-aos-duration="1500" data-aos-easing="ease">
                         <div class="custom_tittle">
-                            <h2><strong>Start-Up</strong>  Solutions BIZIONIC Provides</h2>
+                            <h2>Start-Up  <strong>Solutions BIZIONIC Provides</strong></h2>
                         </div>
 
                         
@@ -146,7 +146,7 @@
                         <div class="col-lg-3 col-md-6 provide_col">
                             <div class="industryNew_section2_colsInfo">
                                 <span><img src="/bizionic/images/bizProvide_icon1.png" alt="#" /></span>
-                                <h6>#1. Business Analysis</h6>
+                                <h6>Business Analysis</h6>
                                 <p>We collaborate with you to analyze
                                     and understand your business and
                                     objectives. Then, we assist you in
@@ -157,7 +157,7 @@
                         <div class="col-lg-3 col-md-6 provide_col">
                             <div class="industryNew_section2_colsInfo">
                                 <span><img src="/bizionic/images/bizProvide_icon2.png" alt="#" /></span>
-                                <h6>#2. Specifications </h6>
+                                <h6>Specifications </h6>
                                 <p>Once our expert analysts has
                                     understood the requirements, we can work closely together and help you create the functional specifications to help your business achieve all
                                     development goals.</p>
@@ -166,7 +166,7 @@
                         <div class="col-lg-3 col-md-6 provide_col">
                             <div class="industryNew_section2_colsInfo">
                                 <span><img src="/bizionic/images/bizProvide_icon3.png" alt="#" /></span>
-                                <h6>#3. Web Development</h6>
+                                <h6>Web Development</h6>
                                 <p>From providing a platform for your
                                     business on the web, we can help. We are experts not only to create websites but also back office systems to keep your business streamlined and give you
                                     the edge on the competition.</p>
@@ -175,7 +175,7 @@
                         <div class="col-lg-3 col-md-6 provide_col">
                             <div class="industryNew_section2_colsInfo">
                                 <span><img src="/bizionic/images/bizProvide_icon4.png" alt="#" /></span>
-                                <h6>#4. Mobile App Development</h6>
+                                <h6>Mobile App Development</h6>
                                 <p>The growth of the digital world is
                                     increasing due to mobile access. We'll discuss about what you need from mobile app development to keep your users engaged. We can also deploy apps using Virtual Reality (VR) and
                                     Augmented Reality (AR).</p>
@@ -187,7 +187,7 @@
                         <div class="col-lg-3 col-md-6 provide_col">
                             <div class="industryNew_section2_colsInfo">
                                 <span><img src="/bizionic/images/bizProvide_icon5.png" alt="#" /></span>
-                                <h6>#5. Software Development</h6>
+                                <h6>Software Development</h6>
                                 <p>We also provides Internet of Things
                                     (IoT) software applications utilising
                                     automation, apps to take advantage of wearables & watches, and also SBC
@@ -197,7 +197,7 @@
                         <div class="col-lg-3 col-md-6 provide_col">
                             <div class="industryNew_section2_colsInfo">
                                 <span><img src="/bizionic/images/bizProvide_icon6.png" alt="#" /></span>
-                                <h6>#6. Security, Server
+                                <h6>Security, Server
                                     Management and Server
                                     & Network Support</h6>
                                 <p>Experts to configure your server, and give you the best environment to easily
@@ -207,7 +207,7 @@
                         <div class="col-lg-3 col-md-6 provide_col">
                             <div class="industryNew_section2_colsInfo">
                                 <span><img src="/bizionic/images/bizProvide_icon7.png" alt="#" /></span>
-                                <h6>#7. Digital Marketing</h6>
+                                <h6>Digital Marketing</h6>
                                 <p>Ensure others about your advantages. We will help you stand out from the
                                     crowd and get found.</p>
                             </div>
@@ -215,7 +215,7 @@
                         <div class="col-lg-3 col-md-6 provide_col">
                             <div class="industryNew_section2_colsInfo">
                                 <span><img src="/bizionic/images/bizProvide_icon8.png" alt="#" /></span>
-                                <h6>#8. Support</h6>
+                                <h6>Support</h6>
                                 <p>Once the system is operational, our
                                     supporto not come to an end.
                                     Additionally, we can assist with the
@@ -233,41 +233,13 @@
 
 
 
-       <!-- about project section -->
+    <!-- about project section -->
+    @include('forms.contact_section')
+
+    <!-- our client Bizionic section -->
+    <client-component></client-component>
+
     
-
-       <div class="aboutProject_section services_formOuter  formBg_industries">
-        <div class="auto_container">
-            <div class="aboutProject_section_detail"  >
-
-                <div class="custom_tittle">
-                    <h2 class=""><strong>We love to</strong> create software <strong> and find simple <br>
-                        solutions to complex challenges</strong> </h2> 
-                </div>
-
-
-                <div class="project_form aos-init aos-animate" data-aos="fade-up" data-aos-duration="800" data-aos-easing="ease-out-cubic">
-                    
-                    <div class="servicesForm">                    
-                        @include('forms.contact')
-                    </div>
-                </div> 
-
-
-
-            </div>
-        </div>
-        </div>
-
-
-
-
-        <client-component></client-component>
-
-
-
-
-
      <!-- Services provided section -->
 
 

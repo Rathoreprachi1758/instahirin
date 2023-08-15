@@ -32,7 +32,7 @@
 
                             <h6 class="font-italic mt-3">Bizionic, Startup's to Unicorn's Lab</h6>
 
-                                    <a href="/industries/industries-we-serve/industries/bizionic-team" class="btn_default_white">Join Our Team</a>
+                                    <a href="/bizionic-team" class="btn_default_white">Join Our Team</a>
                         </div>
 
 
@@ -87,7 +87,7 @@
                                     </div>
 
                                     <div class="col-lg-4 col-md-5">
-                                        <a href="/industries/industries-we-serve/industries/bizionic-team" class="btn_default_white">Join Team Bizionic</a>
+                                        <a href="/bizionic-team" class="btn_default_white">Join Team Bizionic</a>
                                     </div>
                                 </div>
                             </li>
@@ -249,59 +249,16 @@
                             </div>
                         </div>
                         <div class="row">
+
+                            @foreach($jobs as $key=>$job)
                             <div class="col-lg-4 col-md-6 buildCol">
                                 <div class="buildTeam_col">
-                                    <strong>1. TECHNOLOGY SPECIALIST:</strong>
-                                    <p>Develop and implement innovative technology solutions, leveraging your expertise in web development, mobile applications, data analytics, and emerging technologies.</p>
-                                        <a href="#" class="btn_default">Apply Now</a>
+                                    <strong>{{$key+1}}. {{$job->title}}:</strong>
+                                    {!!$job->description!!}
+                                    <a href="#careerPage_inner_zone" class="btn_default">Apply Now</a>
                                 </div>
                             </div>
-
-
-                            <div class="col-lg-4 col-md-6 buildCol">
-                                <div class="buildTeam_col">
-                                    <strong>2. DIGITAL MARKETING MANAGER:</strong>
-                                    <p>Drive strategic digital marketing initiatives, including SEO, SEM, social media, content marketing, and analytics. Lead and optimize campaign performance to achieve client objectives.</p>
-                                        <a href="#" class="btn_default">Apply Now</a>
-                                </div>
-                            </div>
-
-
-                            <div class="col-lg-4 col-md-6 buildCol">
-                                <div class="buildTeam_col">
-                                    <strong>3. UX/UI Designer:</strong>
-                                    <p>Create exceptional user experiences by designing intuitive interfaces, conducting user research, and collaborating with cross-functional teams to deliver visually appealing and user-friendly designs.</p>
-                                        <a href="#" class="btn_default">Apply Now</a>
-                                </div>
-                            </div>
-
-
-
-
-                            <div class="col-lg-4 col-md-6 buildCol">
-                                <div class="buildTeam_col">
-                                    <strong>4. DATA ANALYST:</strong>
-                                    <p>Utilize data-driven insights to uncover trends, identify opportunities, and support data-backed decision-making. Analyze marketing campaigns, customer behavior, and market research to drive business growth.</p>
-                                        <a href="#" class="btn_default">Apply Now</a>
-                                </div>
-                            </div>
-
-                            <div class="col-lg-4 col-md-6 buildCol">
-                                <div class="buildTeam_col">
-                                    <strong>5. ACCOUNT MANAGER:</strong>
-                                    <p>Cultivate and maintain strong client relationships, serving as their main point of contact. Develop and execute strategic plans to achieve client goals and ensure client satisfaction.</p>
-                                        <a href="#" class="btn_default">Apply Now</a>
-                                </div>
-                            </div>
-
-                            <div class="col-lg-4 col-md-6 buildCol">
-                                <div class="buildTeam_col">
-                                    <strong>6. FULL STACK DEVELOPER:</strong>
-                                    <p>We seek a skilled and experienced Full Stack Developer to join our team. As a Full Stack Developer, you will develop and maintain our web applications' front-end and back-end components.</p>
-                                        <a href="#" class="btn_default">Apply Now</a>
-                                </div>
-                            </div>
-
+                            @endforeach
 
                         </div>
                     </div>
@@ -313,7 +270,7 @@
             <!-- advance career section -->
 
             <div class="advanceCareer_section mb-0 bg_fff">
-                <div class="careerPage_inner">
+                <div class="careerPage_inner" id="careerPage_inner_zone">
                     <div class="custom_tittle">
                         <h2 class="text-left">Advance Your Career <strong>with BIZIONIC:</strong></h2>
                         <p class="p_color text-left pb-2">Join our team of the brightest tech talents and let’s create awesome solutions together!</p>

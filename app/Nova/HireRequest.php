@@ -11,7 +11,7 @@ use Laravel\Nova\Fields\Trix;
 use Laravel\Nova\Fields\Date;
 use Laravel\Nova\Fields\Boolean;
 use Laravel\Nova\Http\Requests\NovaRequest;
-
+use Laravel\Nova\Fields\BelongsTo;
 
 class HireRequest extends Resource
 {
@@ -35,7 +35,7 @@ class HireRequest extends Resource
      * @var array
      */
     public static $search = [
-        'id',
+        'id', 'title'
     ];
 
     /**
@@ -48,6 +48,7 @@ class HireRequest extends Resource
     {
         return [
             ID::make()->sortable(),
+            BelongsTo::make('Expert','expert')->noPeeking()->filterable()->nullable(),
             Text::make('Name','name')->rules('required','min:6,max:255'),
             Text::make('Email','email')->rules('required','min:6,max:255'),
             Text::make('Phone','phone')->rules('required','min:6,max:255'),

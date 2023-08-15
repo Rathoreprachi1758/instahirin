@@ -106,7 +106,7 @@
                             </div>
 
                             <div class="hireBttn">
-                                <a href="/hire/developer/developers-other/HireForm" class="btn_default"
+                                <a :href=" '/hire/developer/developers-other/HireForm/' + expert.id" class="btn_default" 
                                     >Hire {{ expert.title }}</a
                                 >
                             </div>

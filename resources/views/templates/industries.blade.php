@@ -88,7 +88,7 @@
                                         <span class="indPortfolio_avatar"><img src="/bizionic/images/indPortfolio_img3.png" alt="#" /></span> 
 
                                         <strong class="indPortfolioText">
-                                            <small>B2B Solutionss</small>
+                                            <small>B2B Solutions</small>
                                             <b><i class="fa fa-long-arrow-right" aria-hidden="true"></i></b>
                                         </strong>
                                     </a>
@@ -225,88 +225,17 @@
             </div>
         </div>
 
+    <!-- contact section -->
+    @include('forms.contact_section')
 
-
- 
-
-
-
-
-       <!-- about project section -->
-    
-
-       <div class="aboutProject_section bg_f2f2f2 services_formOuter">
-        <div class="auto_container">
-            <div class="aboutProject_section_detail"  >
-
-                <div class="custom_tittle">
-                    <h2 class=""><strong>We love to</strong> create software <strong>and find simple <br>
-                        solutions to complex challenges </strong></h2> 
-                </div>
-
-
-                <div class="project_form bg_fff aos-init aos-animate" data-aos="fade-up" data-aos-duration="800" data-aos-easing="ease-out-cubic">
-                    
-                    <div class="servicesForm ">
-                        <p class="text-center">If you have an idea in mind of how to enhance your <b>business processes,</b> don’t hesitate <br>
-                            to <b>contact us</b> and discover more about our technologies!</p>
-                        <div class="row">
-                            <div class="col-lg-6 col-md-12">
-                                <div class="project_form_field">
-                                    <input type="text" value="" placeholder="Name*" />
-                                </div>
-                            </div>
-
-                            <div class="col-lg-6 col-md-12">
-                                <div class="project_form_field">
-                                    <input type="text" value="" placeholder="Phone / Skype / Whatsapp" id="phone" />
-                                </div>
-                            </div>
-                            
-
-                            <div class="col-lg-6 col-md-12">
-                                <div class="project_form_field">
-                                    <input type="text" value="" placeholder="Enter business email" />
-                                </div>
-                            </div> 
-
-
-                            <div class="col-lg-12 col-md-12">
-                                <div class="project_form_textarea">
-                                    <textarea placeholder="How can we help...*"></textarea>
-                                </div>
-                            </div>
-
-                            <div class="col-lg-12 col-md-12">
-                                <div class="addFile_button "> 
-
-                                    <div class="project_form_submit">
-                                        <input type="submit" value="Contact Us" class="btn_default" />
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div> 
-
-
-
-            </div>
-        </div>
-        </div>
-
-
-
-         <!-- our client Bizionic section -->
-
-
+    <!-- our client Bizionic section -->
     <client-component></client-component>
 
 
 
-     <!-- Services provided section -->
+    <!-- Services provided section -->
 
 
-     @include('partials.services') 
+    @include('partials.services') 
 
 

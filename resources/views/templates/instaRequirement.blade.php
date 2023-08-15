@@ -60,14 +60,18 @@
                                 <h3 class="p_color pb-3"><strong>Post</strong> Project / Job Details:</h3>
                                 <p class="p-0">Please provides initials information and our representive will get back to you.</p>
                             </div>
-
+                            <div class="alert alert-success text-center" role="alert" id="hire_success"> Thank you for the message. We will contact you shortly. </div>
+                            <div class="alert alert-danger text-center" role="alert" id="hire_failure"> Sorry! There is some problem sending your query at the moment, Please try again. </div>
+                            <form action="{{ route('instaHirinRequirements') }}" method="POST" enctype="multipart/form-data" id="hire_developer" onsubmit="return false;">
+                            @csrf 
+                            
                             <div class="project_form">
                                 <div class="row">
                                     <div class="col-lg-6 col-md-12">
                                         <div class="requireForm_lable">
                                             <strong class="req_lable">Position Title:</strong>
                                             <div class="project_form_field">
-                                                <input type="text" value="" placeholder="" />
+                                                <input type="text" value="" name="position_title" id="position_title" placeholder="IOS App Development" />
                                             </div>
                                         </div>
                                     </div>
@@ -75,10 +79,10 @@
                                         <div class="requireForm_lable">
                                             <strong class="req_lable">Work Mode:</strong>
                                             <div class="project_form_select">
-                                                <select class="form-select" aria-label="Default select example">
+                                                <select class="form-select" name="work_mode" id="work_mode" aria-label="Default select example">
                                                     <option selected></option>
-                                                    <option value="1">Hire Dedicated</option>
-                                                    <option value="2">Hire Developers</option> 
+                                                    <option value="In Office">In Office</option>
+                                                    <option value="Remote">Remote</option> 
                                                 </select>
                                             </div>
                                         </div>
@@ -92,7 +96,7 @@
                                         <div class="requireForm_lable">
                                             <strong class="req_lable">Skills / Project Descriptions:</strong>
                                             <div class="project_form_textarea">
-                                                <textarea placeholder="...."></textarea>
+                                                <textarea placeholder="...."  name="project_description" id="project_description"></textarea>
                                             </div>
                                         </div>
                                     </div>
@@ -104,7 +108,7 @@
                                         <div class="requireForm_lable">
                                             <strong class="req_lable">Key Skills:</strong>
                                             <div class="project_form_field">
-                                                <input type="text" value="" placeholder="" />
+                                                <input type="text" value="" placeholder="Specify the key skills required"  name="key_skills" id="key_skills"/>
                                             </div>
                                         </div>
                                     </div>
@@ -113,16 +117,17 @@
 
                                     <div class="col-lg-12 col-md-12">
                                         <div class="requireForm_lable">
-                                            <strong class="req_lable">Key Skills:</strong> 
+                                            <strong class="req_lable">Work Experience (Years):</strong> 
                                         </div>
                                     </div>
-                                    <div class="col-lg-2 col-md-3">
+                                    <div class="col-lg-3 col-md-3">
                                         <div class="requireForm_lable"> 
                                             <div class="project_form_select">
-                                                <select class="form-select" aria-label="Default select example">
-                                                    <option selected></option>
-                                                    <option value="1">Hire Dedicated</option>
-                                                    <option value="2">Hire Developers</option> 
+                                                <select class="form-select" aria-label="Default select example" name="min_experience" id="min_experience">
+                                                    <option selected value="">Min</option>
+                                                    @for($i = 1;$i<16;$i++)
+                                                    <option value="{{$i}}">{{$i}}</option>
+                                                    @endfor  
                                                 </select>
                                             </div>
                                         </div>
@@ -130,13 +135,14 @@
                                     <div class="col-lg-1 col-md-1 p-0">
                                         <label class="text-center d-block mt-3">To</label>
                                     </div>
-                                    <div class="col-lg-2 col-md-3">
+                                    <div class="col-lg-3 col-md-3">
                                         <div class="requireForm_lable"> 
                                             <div class="project_form_select">
-                                                <select class="form-select" aria-label="Default select example">
-                                                    <option selected></option>
-                                                    <option value="1">Hire Dedicated</option>
-                                                    <option value="2">Hire Developers</option> 
+                                                <select class="form-select" aria-label="Default select example" name="max_experience" id="max_experience">
+                                                    <option selected value="">Max</option>
+                                                    @for($i = 1;$i<16;$i++)
+                                                    <option value="{{$i}}">{{$i}}</option>
+                                                    @endfor 
                                                 </select>
                                             </div>
                                         </div>
@@ -149,10 +155,10 @@
                                         <div class="requireForm_lable">
                                             <strong class="req_lable">Employment Role/Type:</strong>
                                             <div class="project_form_select">
-                                                <select class="form-select" aria-label="Default select example">
-                                                    <option selected></option>
-                                                    <option value="1">Hire Dedicated</option>
-                                                    <option value="2">Hire Developers</option> 
+                                                <select class="form-select" aria-label="Default select example" name="employment_type" id="employment_type">
+                                                    <option selected>Full Time, Permanent</option>
+                                                    <option >Part Time</option>
+                                                    <option >Remote</option> 
                                                 </select>
                                             </div>
                                         </div>
@@ -170,10 +176,9 @@
                                     <div class="col-lg-2 col-md-4">
                                         <div class="requireForm_lable"> 
                                             <div class="project_form_select">
-                                                <select class="form-select" aria-label="Default select example">
-                                                    <option selected></option>
-                                                    <option value="1">Hire Dedicated</option>
-                                                    <option value="2">Hire Developers</option> 
+                                                <select class="form-select" aria-label="Default select example" name="salary_currency" id="salary_currency">
+                                                    <option selected>$</option>
+                                                    
                                                 </select>
                                             </div>
                                         </div>
@@ -181,14 +186,14 @@
                                     <div class="col-lg-5 col-md-4">
                                         <div class="requireForm_lable"> 
                                             <div class="project_form_field">
-                                                <input type="text" value="" placeholder="" />
+                                                <input type="text" value="" placeholder="Min Annual Salary"  name="min_salary" id="min_salary"/>
                                             </div>
                                         </div>
                                     </div>
                                     <div class="col-lg-5 col-md-4">
                                         <div class="requireForm_lable"> 
                                             <div class="project_form_field">
-                                                <input type="text" value="" placeholder="" />
+                                                <input type="text" value="" placeholder="Max Annual Salary"  name="max_salary" id="max_salary"/>
                                             </div>
                                         </div>
                                     </div>
@@ -200,18 +205,17 @@
                                         <div class="requireForm_lable">
                                             <strong class="req_lable">Location:</strong>
                                             <div class="project_form_field">
-                                                <input type="text" value="" placeholder="" />
+                                                <input type="text" value="" placeholder="Add Location"  name="location" id="location"/>
                                             </div>
                                         </div>
                                     </div>
                                     <div class="col-lg-12 col-md-12">
                                         <div class="requireForm_lable">
-                                            <strong class="req_lable">Educational Qualificatvion:</strong>
+                                            <strong class="req_lable">Educational Qualification:</strong>
                                             <div class="project_form_select">
-                                                <select class="form-select" aria-label="Default select example">
-                                                    <option selected></option>
-                                                    <option value="1">Hire Dedicated</option>
-                                                    <option value="2">Hire Developers</option> 
+                                                <select class="form-select" aria-label="Default select example" name="education_qualification" id="education_qualification">
+                                                    <option selected>Post Graduation</option>
+                                                    <option >Graduation</option> 
                                                 </select>
                                             </div>
                                         </div>
@@ -225,19 +229,15 @@
                                         <div class="requireForm_lable">
                                             <strong class="req_lable">Company Name:</strong>
                                             <div class="project_form_field">
-                                                <input type="text" value="" placeholder="" />
+                                                <input type="text" value="" placeholder=""  name="company_name" id="company_name"/>
                                             </div>
                                         </div>
                                     </div>
                                     <div class="col-lg-6 col-md-12">
                                         <div class="requireForm_lable">
                                             <strong class="req_lable">Company Website:</strong>
-                                            <div class="project_form_select">
-                                                <select class="form-select" aria-label="Default select example">
-                                                    <option selected></option>
-                                                    <option value="1">Hire Dedicated</option>
-                                                    <option value="2">Hire Developers</option> 
-                                                </select>
+                                            <div class="project_form_field">
+                                                <input type="text" value="" placeholder=""  name="company_website" id="company_website"/>
                                             </div>
                                         </div>
                                     </div>
@@ -248,9 +248,9 @@
 
                                     <div class="col-lg-6 col-md-12">
                                         <div class="requireForm_lable">
-                                            <strong class="req_lable">Contact Pterson:</strong>
+                                            <strong class="req_lable">Contact Person:</strong>
                                             <div class="project_form_field">
-                                                <input type="text" value="" placeholder="" />
+                                                <input type="text" value="" placeholder=""  name="contact_person" id="contact_person"/>
                                             </div>
                                         </div>
                                     </div>
@@ -258,7 +258,7 @@
                                         <div class="requireForm_lable">
                                             <strong class="req_lable">Email Address:</strong>
                                             <div class="project_form_field">
-                                                <input type="text" value="" placeholder="" />
+                                                <input type="text" value="" placeholder=""  name="email" id="email"/>
                                             </div>
                                         </div>
                                     </div>
@@ -274,10 +274,10 @@
                                     <div class="col-lg-6 col-md-12">
                                         <div class="requireForm_lable"> 
                                             <div class="project_form_select">
-                                                <select class="form-select" aria-label="Default select example">
-                                                    <option selected></option>
-                                                    <option value="1">Hire Dedicated</option>
-                                                    <option value="2">Hire Developers</option> 
+                                                <select class="form-select" aria-label="Default select example" name="contact_no_country_code" id="contact_no_country_code">
+                                                    
+                                                    <option value="+91">+91</option> 
+                                                    <option value="+1">+1</option>
                                                 </select>
                                             </div>
                                         </div>
@@ -285,7 +285,7 @@
                                     <div class="col-lg-6 col-md-12">
                                         <div class="requireForm_lable"> 
                                             <div class="project_form_field">
-                                                <input type="text" value="" placeholder="" />
+                                                <input type="text" value="" placeholder="Mobile / Whatsapp"  name="contact_no" id="contact_no"/>
                                             </div>
                                         </div>
                                     </div>
@@ -298,7 +298,7 @@
                                         <div class="requireForm_lable">
                                             <strong class="req_lable">Company Details:</strong>
                                             <div class="project_form_textarea">
-                                                <textarea placeholder="...."></textarea>
+                                                <textarea placeholder="...." name="company_details" id="company_details"></textarea>
                                             </div>
                                         </div>
                                     </div>
@@ -306,26 +306,22 @@
                                         <div class="requireForm_lable">
                                             <strong class="req_lable">Company Address:</strong>
                                             <div class="project_form_textarea">
-                                                <textarea placeholder="...."></textarea>
+                                                <textarea placeholder="...." name="company_address" id="company_address"></textarea>
                                             </div>
                                         </div>
                                     </div>
-
- 
-
-                                    
 
                                     <div class="col-lg-12 col-md-12">
                                         <div class="addFile_button onHiredetailPage">
                                             <div class="addFile">
                                                 <strong>Upload supporting documents, if have:</strong>
-                                                <input type="file" />
+                                                <input type="file"  name="document" id="document"/>
                                             </div>
 
 
                                             <div class="scheduleCheckbox onrequireForm">
                                                 <label class="checkbox-label">
-                                                    <input type="checkbox">
+                                                    <input type="checkbox"  name="notify" id="notify">
                                                     <span class="checkbox-custom rectangular"></span>
                                                     Notify me about Al-recommended applicants.
                                                 </label>
@@ -345,6 +341,8 @@
 
                                 </div>
                             </div>
+
+                            </form>
                         </div>
                     </div>
                 </div>

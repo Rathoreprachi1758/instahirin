@@ -551,9 +551,11 @@
 
                 <div class="row">
                     <div class="col-lg-8 col-md-9 "> 
-
-                    @include('forms.hire')     
-                    <!-- HIre Form -->
+                        <div class="custom_tittle text-left">
+                            <h2 class="text-white"><strong>Connect</strong> with Bizionic</h2>
+                        </div>
+                        @include('forms.hire')     
+                        <!-- HIre Form -->
 
 
                 </div>

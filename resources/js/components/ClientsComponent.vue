@@ -3,8 +3,8 @@
         <div class="auto_container">
             <div class="clientBizionic_section_detail aos-init aos-animate"  data-aos="fade-up" data-aos-duration="500" data-aos-easing="ease-in">
             <div class="custom_tittle">
-                    <h2><b>These are some of our</b> amazing clients,</h2>
-                    <h2><b>and this is what they</b> have to say...</h2>
+                    <h2 class="pb-1"><b>These are some of our</b> satisfied clients,</h2>
+                    <h2><b>and this is what they have to say...</b></h2>
                 </div>
                 <div class="clientBizionic_info">
                     <div class="row">

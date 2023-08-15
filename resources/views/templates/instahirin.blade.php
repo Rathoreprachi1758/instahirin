@@ -36,7 +36,7 @@
 
 
 
-
+    
     <experts-component></experts-component>
 
 
@@ -306,7 +306,7 @@
                                         <p class="text-left p_color">The entire talent pool that Bizionic sources are vetted, prescreened, and authenticated, including the verification of academic credentials, prior work experience, projects, and technical expertise, as well as for any criminal or other background checks. A dedicated project management team is also assigned to each project to guarantee timely completion and immediate replacements if required. This provides the parties access to a dependable, skilled, and experienced mediator and ecosystem to ensure project completion and obligation fulfillment.</p>
                             
                                         <h6 class="font-italic p_color text-left my-2">Bizionic fills the global remote working ecosystem gap.</h6>
-                                        <a href="/InstaHirin" class="btn_default">Hire Talent Globally</a>
+                                        <a href="/InstaHirin" class="btn_default d-none">Hire Talent Globally</a>
 
                                     </div>
                             </div>

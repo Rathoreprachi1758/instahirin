@@ -374,7 +374,7 @@
                 <div class="col-lg-7 col-md-7   aos-init aos-animate" data-aos="fade-left" data-aos-duration="800" data-aos-easing="ease-out-cubic">  
 
                 <div class="project_form">
-                    @include('forms.hire')
+                    @include('forms.enquire')
                 </div>
 
 

@@ -18,18 +18,16 @@
                 <div class="industryNew_section_detail">
 
 
-                    <div class="industryNew_section1">
+                    <div class="industryNew_section1 pb-0">
                         <div class="row align-items-center">
                             <div class="col-lg-6 col-md-6 aos-init " data-aos="fade-right" data-aos-duration="1000" data-aos-easing="ease">
-                                <div class=" custom_tittle text-left">
-                                    <h1>QA SOFTWARE ENGINEER</h1>
-                                    <h2 class="">
-                                    TESTS <strong>AND</strong> ASSURES THE QUALITY <strong>OF SOFTWARES, WEBSITES, APPS, PROGRAMS, AND MORE, TO</strong> FIX THE BUGS AND ISSUES.
-                                    </h2>
+                                <div class=" custom_tittle text-left pb-0">
+                                    <h1><strong>LOOKING FOR</strong> OTHER TECHNOLOGY?</h1>
+                                    
 
-                                        <p class="p_color text-justify">QA testers or analysts dive deep into a program or software to uncover bugs and issues. Bizionic Technologies QA (Quality Assurance) software engineers are highly skilled in software testing and quality assurance using contemporary technologies.</p>
+                                        <p class="p_color text-justify">Welcome to Bizionic Technologies, where innovation and creativity converge to create cutting-edge technological solutions. As a forward-thinking technology development company, we are committed to empowering businesses and individuals with the "new-age" and "emerging" cutting-edge and transformative wave of technologies that can revolutionize how businesses operate, and individuals interact with technology. These technologies continually evolve, leading to new applications and capabilities previously considered beyond reach.</p>
                                            <br>
-                                        <a href="/get-a-free-consultation" class="btn_default mt-2">Hire QA Software Engineer</a>
+                                        <a href="/get-a-free-consultation" class="btn_default mt-2">Contact Now</a>
                                     
                                 </div>
                             </div>
@@ -37,25 +35,14 @@
 
                             <div class="col-lg-6 col-md-6 aos-init " data-aos="fade-left" data-aos-duration="1000" data-aos-easing="ease">
                                 <div class="industryNew_section1_avatar">
-                                    <span><img src="/bizionic/images/qa_avatar.png" alt="#" /></span>
+                                    <span><img src="/bizionic/images/looking_avatar.png" alt="#" /></span>
                                 </div>
                             </div>
                         </div>
                     </div>
 
 
-
-
-
-                    <div class="industryNew_section2_info aos-init " data-aos="fade-up" data-aos-duration="1500" data-aos-easing="ease">
-                        <div class="custom_tittle">
-                            <h3><strong>Here are some key areas where   </strong> QA  <strong>software engineers are commonly used:</strong></h2>
-                              
-                            
-                        </div>
-
-                        
-                    </div>
+ 
 
                 </div>
             </div>
@@ -65,97 +52,65 @@
 
 
 
-        <div class="provider_section">
+        <div class="provider_section otherTechnologySection">
             <div class="auto_container">
-                <div class="industryNew_section2_cols">
-                    <div class="row justify-content-center">
-                        <div class="col-lg-3 col-md-6 provide_col">
-                            <div class="industryNew_section2_colsInfo">
-                                <span><img src="/bizionic/images/qa_icon1.png" alt="#" /></span>
-                                <h6>TEST PLANNING AND STRATEGY</h6>
-                                <p>QA software engineers are involved in creating test plans and strategies for software projects. They collaborate with stakeholders, software developers, and project managers to identify testing objectives, define test scope, and determine the appropriate testing techniques and methodologies.</p>
+                <div class="aboutBizionic_section_detail">
+                    <div class="custom_tittle aos-init aos-animate"  data-aos="fade-zoom-in" data-aos-duration="300" data-aos-easing="linear">
+                        <h2 class="text-white text-left">Bizionic, <strong>Startups to Unicorn’s Lab</strong> </h2>
+                    </div>
+
+                    <div class="aboutBizionic_col">
+                        <div class="row">
+
+                            <div class="col-lg-6 col-md-6 aos-init aos-animate"  data-aos="fade-right" data-aos-duration="500" data-aos-easing="">
+                                 
+
+
+                                <div class="aboutBizionic_col_info">
+                                    <p><span><img src="/bizionic/images/lookingSec_icon1.png" alt="#" /></span> 
+                                    <strong>OUR VISION:</strong>
+                                    We aim to catalyze technological advancement, pioneering solutions that redefine industries and improve lives. We aim to be recognized as a leading technology
+                                    development company globally, empowering our clients to stay ahead in the digital era.</p>
+                                </div>
+
+                                <div class="aboutBizionic_col_info">
+                                    <p><span><img src="/bizionic/images/lookingSec_icon2.png" alt="#" /></span> 
+                                    <strong>OUR EXPERTISE:</strong>
+                                    We specialize in a diverse range of "new-age" and "emerging" technologies, including but not limited to:</p>
+                                    
+                                    <p><b>Artificial Intelligence (AI) and Machine Learning (ML):</b> Our AI and ML solutions harness the power of data to drive predictive analytics, natural language processing, computer vision, and intelligent automation.</p>
+                                    <p><b>Internet of Things (IoT):</b> We design and develop smart and connected solutions that enable seamless interactions between devices and humans, transforming businesses across various industries.</p>
+                                    <p><b>Blockchain Technology:</b> Our blockchain expertise empowers clients with decentralized and secure solutions for digital transactions, supply chain management, and identity verification.</p>
+                                    <p><b>Cloud Computing:</b> We leverage the scalability and flexibility of cloud infrastructure to deploy robust applications and ensure seamless data storage and processing.</p>
+                                    <p><b>Data Science and Analytics:</b> Our data experts leverage data insights to provide valuable business intelligence, enabling data-driven decision-making and strategic planning.</p>
+                                </div>
                             </div>
-                        </div>
-                        <div class="col-lg-3 col-md-6 provide_col">
-                            <div class="industryNew_section2_colsInfo">
-                                <span><img src="/bizionic/images/qa_icon2.png" alt="#" /></span>
-                                <h6>TEST DESIGN AND DOCUMENTATION</h6>
-                                <p>QA software engineers design test cases, test scenarios, and test scripts based on project requirements and specifications. They document test procedures, expected results, and test data to ensure comprehensive test coverage. They may also create and maintain test documentation, such as test plans and reports.</p>
+
+
+
+
+                            <div class="col-lg-6 col-md-6 aos-init aos-animate"  data-aos="fade-left" data-aos-duration="500" data-aos-easing="">
+                                <div class="aboutBizionic_col_info">
+                                    <p><span><img src="/bizionic/images/lookingSec_icon3.png" alt="#" /></span> 
+                                    <strong>Our Mission:</strong>
+                                    At Bizionic Technologies, we aim to deliver innovative, scalable, and sustainable technology solutions that address complex challenges and opportunities. We strive to foster
+                                    a culture of collaboration, curiosity, and excellence to drive continuous improvement in everything we do.</p>
+                                </div>
+
+                                <div class="aboutBizionic_col_info">
+                                    <p><span><img src="/bizionic/images/lookingSec_icon4.png" alt="#" /></span> 
+                                    <strong>OUR APPROACH:</strong>
+                                    We follow a comprehensive and collaborative approach to technology development:</p>
+                                    
+                                    <p><b>Understanding Client Needs:</b>  We prioritize understanding our client's unique requirements, business objectives, and challenges to tailor solutions that align with their vision.</p>
+                                    <p><b>Innovation and Creativity:</b>  Our talented technologists and developers embrace innovation and creativity to deliver custom-made solutions that stand out in the market.</p>
+                                    <p><b>Agile Methodology:</b>  We adopt agile development practices to ensure rapid and iterative project execution, promoting flexibility and adaptability throughout the development lifecycle.</p>
+                                    <p><b>Quality Assurance:</b>  Our commitment to quality is unwavering. We conduct rigorous testing and quality assurance procedures to ensure our deliverables meet the highest standards.</p>
+                                    <p><b>Customer Satisfaction:</b>  Customer satisfaction is at the heart of our opera- tions. We believe in forging strong partnerships and providing exceptional customer support to ensure lasting success.</p>
+                                </div>
                             </div>
-                        </div>
-                        <div class="col-lg-3 col-md-6 provide_col">
-                            <div class="industryNew_section2_colsInfo">
-                                <span><img src="/bizionic/images/qa_icon3.png" alt="#" /></span>
-                                <h6>TEST AUTOMATION</h6>
-                                <p>QA software engineers develop automated test scripts and frameworks to streamline and accelerate testing. They use tools and technologies like Selenium, Appium, or JUnit to automate functional, regression, and performance tests. In addition, they write code to simulate user interactions, validate software functionality, and verify system behavior.</p>
-                            </div>
-                        </div>
-                        <div class="col-lg-3 col-md-6 provide_col">
-                            <div class="industryNew_section2_colsInfo">
-                                <span><img src="/bizionic/images/qa_icon4.png" alt="#" /></span>
-                                <h6>TEST EXECUTION AND DEFECT MANAGEMENT</h6>
-                                <p>QA software engineers execute tests, record test results, and track defects using bug tracking and test management systems. They conduct functional, integration, and system tests to identify software defects, inconsistencies, and performance issues. They collaborate with developers to investigate and resolve identified deficiencies.</p>
-                            </div>
-                        </div>
 
 
-
-
-                        <div class="col-lg-3 col-md-6 provide_col">
-                            <div class="industryNew_section2_colsInfo">
-                                <span><img src="/bizionic/images/qa_icon5.png" alt="#" /></span>
-                                <h6>PERFORMANCE TESTING</h6>
-                                <p>QA software engineers perform performance testing to evaluate software applications' responsiveness, scalability, and stability. They use tools like JMeter or LoadRunner to simulate user load and measure system performance under different conditions. They analyze performance metrics and identify areas for optimization and improvement.</p>
-                            </div>
-                        </div>
-                        <div class="col-lg-3 col-md-6 provide_col">
-                            <div class="industryNew_section2_colsInfo">
-                                <span><img src="/bizionic/images/qa_icon6.png" alt="#" /></span>
-                                <h6>SECURITY TESTING</h6>
-                                <p>QA software engineers conduct security testing to identify vulnerabilities and potential security risks in software applications. They perform penetration testing, vulnerability scanning, and code reviews to ensure the application complies with security standards and best practices.</p>
-                            </div>
-                        </div> 
-                        <div class="col-lg-3 col-md-6 provide_col">
-                            <div class="industryNew_section2_colsInfo">
-                                <span><img src="/bizionic/images/qa_icon7.png" alt="#" /></span>
-                                <h6>CONTINUOUS INTEGRATION / DELIVERY (CI/CD)</h6>
-                                <p>QA software engineers contribute to implementing CI/CD pipelines, ensuring that automated tests are integrated into the software development process. They collaborate with software developers and DevOps teams to establish quality gates and ensure the continuous delivery of high-quality software.</p>
-                            </div>
-                        </div> 
-                        <div class="col-lg-3 col-md-6 provide_col">
-                            <div class="industryNew_section2_colsInfo">
-                                <span><img src="/bizionic/images/qa_icon8.png" alt="#" /></span>
-                                <h6>COMPATIBILITY AND USABILITY TESTING</h6>
-                                <p>QA software engineers test software applications for compatibility across different platforms, devices, and browsers. They also evaluate the user experience and usability of the software, ensuring that it meets the needs of end-users and complies with usability guidelines.</p>
-                            </div>
-                        </div>  
-
-
-
-                        <div class="col-lg-3 col-md-6 provide_col">
-                            <div class="industryNew_section2_colsInfo">
-                                <span><img src="/bizionic/images/qa_icon9.png" alt="#" /></span>
-                                <h6>AGILE DEVELOPMENT PRACTICES</h6>
-                                <p>QA software engineers play a vital role in Agile development methodologies, such as Scrum or Kanban. They actively participate in sprint planning, daily stand-ups, and sprint reviews. In addition, they collaborate closely with the development team to maintain quality throughout the iterative development process.</p>
-                            </div>
-                        </div> 
-                        <div class="col-lg-3 col-md-6 provide_col">
-                            <div class="industryNew_section2_colsInfo">
-                                <span><img src="/bizionic/images/qa_icon10.png" alt="#" /></span>
-                                <h6>QUALITY ASSURANCE PROCESS IMPROVEMENT</h6>
-                                <p>QA software engineers contribute to improving the overall quality assurance process by identifying areas for enhancement and implementing best practices. They provide feedback and suggestions for process improvement, adopt new testing techniques and tools, and promote a quality culture within the software development team.</p>
-                            </div>
-                        </div>  
-
-
-                        
-
-
-
-                    <div class="row px-4">
-                        <div class="custom_tittle pt-5 pb-0">
-                            <p class="text-justify text-white">QA software engineers are essential in ensuring software applications' quality, reliability, and performance. They apply their expertise in testing methodologies, automation, and quality assurance processes to deliver software that meets the highest quality and user satisfaction standards.</p>
-                            <p class="pb-0 text-justify text-white">Let Bizionic Technologies assist you in better understanding your project need and hire experienced, qualified, and prescreened QA Software Engineers.  <b>Kindly provide us with your brief requirement.</b></p>
                         </div>
                     </div>
                 </div>
@@ -169,8 +124,36 @@
 
                 <div class="contactUs_detail">
 
-                    <!-- form here  -->
-                    @include('forms.hire_talent')
+                    <div class="row ">
+                            <div class="col-lg-4 col-md-5  aos-init " data-aos="fade-right" data-aos-duration="800" data-aos-easing="ease-out-cubic">
+                                <div class="biz_brief onhire_innerPages">
+                                    
+                                    <div class="hiringInfo">
+
+                                        <div class="custom_tittle text-left pb-0">
+                                            <h3 class="text-white"><strong>Why Choose</strong> Bizionic Technologies?</h3>
+                                            <p class=" text-justify text-white">BIZIONIC has a reputation for conducting intensive project requirement research and pre-screening the candidates to present the right talent to satisfy our customers' project requirements. Our Development Team at BIZIONIC are well-versed in the foundational knowledge and prerequisites needed as per customer’s project.</p>
+                                            <h5 class="text-white pt-2 font-italic">Hiring from Bizionic provides several advantages:</h5>
+                                                
+                                            <p class="text-white text-justify pb-1 pt-1"><b>Expert Team:</b> Our team comprises seasoned professionals with diverse technological expertise, ensuring holistic solutions for complex challenges.</p>
+                                            <p class="text-white text-justify pb-1 pt-1"><b>Custom Solutions:</b> We offer tailor-made solutions that address specific client needs, ensuring maximum efficiency and scalability.</p>
+                                            <p class="text-white text-justify pb-1 pt-1"><b>Timely Delivery:</b> We are dedicated to delivering projects on time without compromising quality.</p>
+                                            <p class="text-white text-justify pb-1 pt-1"><b>Client-Centric Approach:</b> Our client-centric approach means prioritizing our client's success and satisfaction above all else.</p>
+                                            <p class="text-white text-justify  pt-1"><b>End-to-End Services:</b> From conceptualization to implementation and support, we provide end-to-end services covering every technology development aspect.</p>
+                                            
+                                            <p class=" text-justify text-white pt-2">We invite You to a “No-Obligation Meeting” with the candidate to assess their expertise, skillset, and suitability for your Project requirements. This meeting will provide an opportunity to comprehensively evaluate their qualifications and technical proficiency, ensuring their alignment with your needs.</p>
+                                            <p class=" text-justify text-white pb-0">Through this meeting, you can administer an assessment test to thoroughly evaluate their abilities and determine their technical capabilities.</p>
+                                        </div>   
+
+                                    </div>
+                                    
+                                </div>
+                            </div>
+                            <div class="col-lg-8 col-md-7   aos-init " data-aos="fade-left" data-aos-duration="800" data-aos-easing="ease-out-cubic">
+                                <!-- form here -->
+                                @include('forms.hire_talent_other')
+                            </div>
+                        </div>
 
 
                 </div>

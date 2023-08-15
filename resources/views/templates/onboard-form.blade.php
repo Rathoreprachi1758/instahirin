@@ -197,6 +197,10 @@
                             </div>
 
                             <div class="col-lg-7 col-md-7 frForm_sec">
+                                <div class="alert alert-success text-center" role="alert" id="hire_success"> Thank you for the message. We will contact you shortly. </div>
+                                <div class="alert alert-danger text-center" role="alert" id="hire_failure"> Sorry! There is some problem sending your query at the moment, Please try again. </div>
+                                <form action="{{ route('instaHirinOnboard') }}" method="POST" enctype="multipart/form-data" id="hire_developer" onsubmit="return false;">
+                                @csrf 
                                 <div class="mainForm_fr">
                                     <div class="custom_tittle text-left">
                                         <h2><strong>Open the door to</strong> endless working <strong>opportunities with Bizionic InstaHirin.</strong></h2>
@@ -207,7 +211,7 @@
                                             <div class="onForm_col">
                                                     <strong>Full Name</strong>
                                                 <div class="project_form_field">
-                                                    <input type="text" placeholder="" />
+                                                    <input type="text" placeholder="" name="name" id="name" />
                                                 </div>
                                             </div>
                                         </div>
@@ -215,7 +219,7 @@
                                             <div class="onForm_col">
                                                     <strong>Contact Details</strong>
                                                 <div class="project_form_field">
-                                                    <input type="text" placeholder="" />
+                                                    <input type="text" placeholder="" name="contact_details" id="contact_details"  />
                                                 </div>
                                             </div>
                                         </div>
@@ -226,7 +230,7 @@
                                             <div class="onForm_col">
                                                     <strong>Email Address</strong>
                                                 <div class="project_form_field">
-                                                    <input type="text" placeholder="" />
+                                                    <input type="text" placeholder="" name="email" id="email"  />
                                                 </div>
                                             </div>
                                         </div>
@@ -234,7 +238,7 @@
                                             <div class="onForm_col">
                                                     <strong>Current Location</strong>
                                                 <div class="project_form_field">
-                                                    <input type="text" placeholder="" />
+                                                    <input type="text" placeholder="" name="current_location" id="current_location"  />
                                                 </div>
                                             </div>
                                         </div>
@@ -245,7 +249,7 @@
                                             <div class="onForm_col">
                                                     <strong>Talent and Skills Brief Description (Max 100 words):</strong>
                                                     <div class="project_form_textarea">
-                                                        <textarea placeholder=""></textarea>
+                                                        <textarea placeholder="" name="skills_description" id="skills_description" ></textarea>
                                                     </div>
                                             </div>
                                         </div>
@@ -255,7 +259,7 @@
                                             <div class="onForm_col">
                                                     <strong>Current Title:</strong>
                                                 <div class="project_form_field">
-                                                    <input type="text" placeholder="" />
+                                                    <input type="text" placeholder=""  name="current_title" id="current_title" />
                                                 </div>
                                             </div>
                                         </div>
@@ -266,10 +270,10 @@
                                             <div class="onForm_col">
                                                     <strong>Total Work Experience:</strong>
                                                     <div class="project_form_select">
-                                                        <select class="form-select" aria-label="Default select example">
-                                                            <option selected>Years</option>
-                                                            <option value="1">Hire Dedicated</option>
-                                                            <option value="2">Hire Developers</option> 
+                                                        <select class="form-select" aria-label="Default select example" name="experience_year" id="experience_year" >
+                                                            <option selected value="">Years</option>
+                                                            <option value="1">1</option>
+                                                            <option value="2">2</option> 
                                                         </select>
                                                     </div>
                                             </div>
@@ -278,10 +282,10 @@
                                             <div class="onForm_col">
                                                     <strong></strong>
                                                     <div class="project_form_select">
-                                                        <select class="form-select" aria-label="Default select example">
-                                                            <option selected>Month</option>
-                                                            <option value="1">Hire Dedicated</option>
-                                                            <option value="2">Hire Developers</option> 
+                                                        <select class="form-select" aria-label="Default select example" name="experience_month" id="experience_month" >
+                                                            <option selected value="">Month</option>
+                                                            <option value="1">1</option>
+                                                            <option value="2">2</option> 
                                                         </select>
                                                     </div>
                                             </div>
@@ -295,7 +299,7 @@
                                                     <strong>Key Skills</strong>
                                                     <div class="keySkils_info">
                                                         <div class="project_form_textarea">
-                                                            <textarea placeholder="Add skills (150 characters allowed)"></textarea>
+                                                            <textarea name="key_skills" id="key_skills"  placeholder="Add skills (150 characters allowed)"></textarea>
                                                         </div>
                                                         <div class="suggested_keySkills">
                                                             <strong>Suggested key skills</strong>
@@ -321,7 +325,7 @@
                                                     <strong>Expert In:</strong>
                                                     <div class="keySkils_info">
                                                         <div class="project_form_textarea">
-                                                            <textarea placeholder="Mention the area of you expertise"></textarea>
+                                                            <textarea name="expert_in" id="expert_in"  placeholder="Mention the area of you expertise"></textarea>
                                                         </div>
                                                         <div class="suggested_keySkills"> 
                                                             <ul>
@@ -344,7 +348,7 @@
                                                     <strong>Also Work With:</strong>
                                                     <div class="keySkils_info">
                                                         <div class="project_form_textarea">
-                                                            <textarea placeholder="Mention the area of you expertise"></textarea>
+                                                            <textarea  name="also_work_with" id="also_work_with" placeholder="Mention the area of you expertise"></textarea>
                                                         </div>
                                                         <div class="suggested_keySkills"> 
                                                             <ul>
@@ -367,7 +371,7 @@
                                             <div class="onForm_col">
                                                     <strong>Working Since:</strong>
                                                 <div class="project_form_field">
-                                                    <input type="text" placeholder="" />
+                                                    <input type="date" placeholder=""  name="working_since_date" id="working_since_date" />
                                                 </div>
                                             </div>
                                         </div>
@@ -375,7 +379,7 @@
                                             <div class="onForm_col">
                                                     <strong></strong>
                                                 <div class="project_form_field">
-                                                    <input type="text" placeholder="" />
+                                                    <input type="date" placeholder=""  name="working_since_date2" id="working_since_date2" />
                                                 </div>
                                             </div>
                                         </div>
@@ -388,10 +392,9 @@
                                             <div class="onForm_col">
                                                     <strong>Annual Salary:</strong>
                                                     <div class="project_form_select">
-                                                        <select class="form-select" aria-label="Default select example">
-                                                            <option selected>Years</option>
-                                                            <option value="1">Hire Dedicated</option>
-                                                            <option value="2">Hire Developers</option> 
+                                                        <select class="form-select" name="annual_salary_currency" id="annual_salary_currency"  aria-label="Default select example">
+                                                            <option selected>$</option>
+                                                            <option >INR</option>
                                                         </select>
                                                     </div>
                                             </div>
@@ -400,10 +403,10 @@
                                             <div class="onForm_col">
                                                     <strong></strong>
                                                     <div class="project_form_select">
-                                                        <select class="form-select" aria-label="Default select example">
-                                                            <option selected>Month</option>
-                                                            <option value="1">Hire Dedicated</option>
-                                                            <option value="2">Hire Developers</option> 
+                                                        <select class="form-select" name="annual_salary" id="annual_salary"  aria-label="Default select example">
+                                                            <option selected>Between 1,00,000 - 2,50,000</option>
+                                                            <option>Between 2,50,000 - 5,00,000</option>
+                                                            <option>Between 5,00,000 - 10,00,000</option> 
                                                         </select>
                                                     </div>
                                             </div>
@@ -416,10 +419,10 @@
                                             <div class="onForm_col">
                                                     <strong>Mention Your Highest Qualification:</strong>
                                                     <div class="project_form_select">
-                                                        <select class="form-select" aria-label="Default select example">
-                                                            <option selected>Master/Post-Graduation</option>
-                                                            <option value="1">Hire Dedicated</option>
-                                                            <option value="2">Hire Developers</option> 
+                                                        <select class="form-select" name="highest_qualification" id="highest_qualification"  aria-label="Default select example">
+                                                            <option selected>Post Graduation</option>
+                                                            <option >Graduation</option>
+                                                             
                                                         </select>
                                                     </div>
                                             </div>
@@ -432,7 +435,7 @@
                                                 <strong>Upload Your Documents:</strong>
                                                     <div class="addFile_section">
                                                         <div class="addFile">
-                                                            <input type="file">  
+                                                            <input type="file" name="document[]" id="document" >  
                                                             <strong class="p-0 pt-2">(File size max 5 MB)</strong>
                                                         </div>
                                                         <div class="addDeleteBtn p-0">
@@ -483,10 +486,10 @@
                                             <div class="onForm_col">
                                                     <strong>Availability</strong>
                                                     <div class="project_form_select">
-                                                        <select class="form-select" aria-label="Default select example">
-                                                            <option selected>Full Time, PartTime, Daily, Weekly, Monthly, Hours, Project-Base, etc.</option>
-                                                            <option value="1">Hire Dedicated</option>
-                                                            <option value="2">Hire Developers</option> 
+                                                        <select class="form-select" name="availability" id="availability"  aria-label="Default select example">
+                                                            <option selected value="">Full Time, PartTime, Daily, Weekly, Monthly, Hours, Project-Base, etc.</option>
+                                                            <option >Full Time</option>
+                                                            <option >Part Time</option> 
                                                         </select>
                                                     </div>
                                             </div>
@@ -497,7 +500,7 @@
                                         <div class="col-lg-12 col-md-12">
                                             <div class="dateTime_range"> 
                                                 <div class="project_form_field">
-                                                    <input type="text" value="" placeholder="Calendar"  >
+                                                    <input type="text" name="availability_date" value="" id="availability_date"  placeholder="Calendar"  >
                                                 </div>
 
 
@@ -506,11 +509,11 @@
 
                                                 
                                                 <div class="project_form_field ml-3">
-                                                    <input type="text" value="" placeholder="Time" id="timePicker" />
+                                                    <input type="text" value="" name="availability_time_from" id="availability_time_from"  placeholder="Time" id="timePicker" />
                                                 </div>
                                                 <label class="text-center">To</label>
                                                 <div class="project_form_field">
-                                                    <input type="text" value="" placeholder="Time">
+                                                    <input type="text" value="" name="availability_time_to" id="availability_time_to"  placeholder="Time">
                                                 </div>
 
 
@@ -533,7 +536,7 @@
                                                         <strong>Add preferences to get relevant job recommendations & make your profile stronger.</strong>
                                                         <strong>Resume Headline:</strong>
                                                         <div class="project_form_textarea">
-                                                            <textarea placeholder=" Add resume headline and preferences to make your profile stronger and get relevant job recommendations."></textarea>
+                                                            <textarea name="resume_headline" id="resume_headline"  placeholder=" Add resume headline and preferences to make your profile stronger and get relevant job recommendations."></textarea>
                                                         </div>
 
                                                         <br>
@@ -560,6 +563,7 @@
 
                                     </div>
                                 </div>
+                                </form>
                             </div>
                         </div>
                     </div>

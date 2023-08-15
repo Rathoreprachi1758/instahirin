@@ -523,7 +523,7 @@
                                 <strong>View our Team <br>
                                     of Experts </strong>
                                 <b class="spratorLine"></b>
-                                <a href="#">Our Team</a>
+                                <a href="/bizionic-team">Our Team</a>
                             </div>
                         </div>
 
@@ -536,7 +536,7 @@
                                 <strong>See our ever expanding <br>
                                     social community  </strong>
                                 <b class="spratorLine"></b>
-                                <a href="#">Connect With Us </a>
+                                <a href="/get-a-free-consultation">Connect With Us </a>
                             </div>
                         </div>
 

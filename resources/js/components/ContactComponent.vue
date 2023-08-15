@@ -21,14 +21,15 @@
                         />
                     </div>
                 </div>
+                
                 <div class="col-lg-6 col-md-12">
                     <div class="project_form_field">
                         <input
                             type="text"
-                            v-model="hireForm.company"
-                            name="company"
-                            id="company"
-                            placeholder="Company*"
+                            v-model="hireForm.phone"
+                            name="phone"
+                            id="phone"
+                            placeholder="Phone / Skype / Whatsapp"
                         />
                     </div>
                 </div>
@@ -41,17 +42,6 @@
                             name="email"
                             id="hire_email"
                             placeholder="Enter business email"
-                        />
-                    </div>
-                </div>
-                <div class="col-lg-6 col-md-12">
-                    <div class="project_form_field">
-                        <input
-                            type="text"
-                            v-model="hireForm.phone"
-                            name="phone"
-                            id="phone"
-                            placeholder="Phone / Skype / Whatsapp"
                         />
                     </div>
                 </div>
@@ -108,7 +98,6 @@ export default {
         return {
             hireForm: {
                 name: "",
-                company: "",
                 email: "",
                 phone: "",
                 message: "",
@@ -128,7 +117,6 @@ export default {
                         this.showSuccessMessage();
                         this.hireForm = {
                             name: "",
-                            company: "",
                             email: "",
                             phone: "",
                             message: "",

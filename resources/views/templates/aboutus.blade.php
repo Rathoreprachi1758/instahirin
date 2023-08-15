@@ -202,7 +202,7 @@
             </div>
 
             <div class="teamBttn">
-                <a href="#" class="btn_default">Bizionic Team</a>
+                <a href="/bizionic-team" class="btn_default">Bizionic Team</a>
             </div>
         </div>
     </div>

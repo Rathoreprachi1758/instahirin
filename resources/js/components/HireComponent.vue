@@ -93,7 +93,7 @@
                             <input
                                 type="submit"
                                 value="Augment your Team"
-                                class="btn_default"
+                                class="btn_default submit-button"
                                 @click="hire"
                             />
                         </div>

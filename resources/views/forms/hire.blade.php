@@ -1,6 +1,4 @@
-<div class="custom_tittle text-left">
-    <h2 class="text-white">Hire Talent Now</h2>
-</div>
+
 <hire-component></hire-component>
 {{-- <div class="alert alert-success  text-center" role="alert" id="hire_success">
     Thank you for the message. We will contact you shortly.

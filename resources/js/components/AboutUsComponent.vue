@@ -68,39 +68,6 @@
                         </div>
                     </div>
 
-                    <div class="col-lg-6 col-md-12">
-                        <div class="project_form_select">
-                            <select
-                                class="form-select"
-                                aria-label="Default select example"
-                                v-model="formData.hiring_type"
-                                name="hiring_type"
-                                id="hiring_type"
-                            >
-                             <!-- <option disabled selected>Select hiring type</option> -->
-                                <option value="dedicated_developer">Hire Dedicated Developers</option>
-                                <option value="dedicated">Hire Dedicated</option>
-                                <option value="developers">Hire Developers</option>
-                            </select>
-                        </div>
-                    </div>
-
-                    <div class="col-lg-6 col-md-12">
-                        <div class="project_form_select">
-                            <select
-                                class="form-select"
-                                aria-label="Default select example"
-                                v-model="formData.budget"
-                                name="budget"
-                                id="budget"
-                            >
-                                <option value="below_10K">Below $10K</option>
-                                <option value="dedicated">Hire Dedicated</option>
-                                <option value="developers">Hire Developers</option>
-                            </select>
-                        </div>
-                    </div>
-
                     <div class="col-lg-12 col-md-12">
                         <div class="project_form_textarea">
                             <textarea
@@ -143,8 +110,6 @@ export default {
                 name: "",
                 email: "",
                 phone: "",
-                hiring_type: "dedicated_developer",
-                budget: "below_10K",
                 details: "",
                 document: null,
             },
@@ -164,8 +129,6 @@ export default {
             form.append("name", this.formData.name);
             form.append("email", this.formData.email);
             form.append("phone", this.formData.phone);
-            form.append("hiring_type", this.formData.hiring_type);
-            form.append("budget", this.formData.budget);
             form.append("details", this.formData.details);
             form.append("document", this.formData.document);
 

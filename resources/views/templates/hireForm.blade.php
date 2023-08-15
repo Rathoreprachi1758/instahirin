@@ -29,36 +29,44 @@
                             </div>
 
                             <div class="meetProfile">
-                                <span><img src="/assets/meetprofile_avatar.png" alt=""></span>
+                                <span><img src="/storage/{{$expert->avatar}}" alt=""></span>
                                 <div class="meetProfile_tittle">
-                                    <strong>ANDJELA HUSSAINI</strong>
-                                    <p>Digital Marketing Expert</p>
+                                    <strong>{{$expert->title}}</strong>
+                                    <p>{{$expert->sub_title}}</p>
                                 </div>
                             </div>
 
                             <div class="descriptionText">
-                                <p>Andjela is a Digital Marketing Expert with 12+ years of experience in digital marketing and a deep understanding of various digital marketing channels such as SEO, PPC Advertising, SMM, Email Marketing, Content Marketing, and Mobile Marketing.</p>
+                                <p>{{$expert->decription}}</p>
                             </div>
 
 
                             <div class="employee_data">
                                 <strong>EXPERT IN:</strong>
-                                <p>SEO, PPC Advertising, SMM, Email Marketing, Content Marketing, Mobile Marketing</p>
+                                <p>
+                                    @foreach($expert->experties as $experty)
+                                        {{$experty->title}}, 
+                                    @endforeach
+                                </p>
                             </div>
 
                             <div class="employee_data">
                                 <strong>ALSO WORK WITH:</strong>
-                                <p>JQuery, Inventory, Java, MySQL, Business Intelligence</p>
+                                <p>
+                                    @foreach($expert->skills as $skill)
+                                        {{$skill->title}}, 
+                                    @endforeach
+                                </p>
                             </div>
 
                             <div class="employee_data">
                                 <strong>EXPERIENCE:</strong>
-                                <p>12+ years</p>
+                                <p>{{$expert->experience}}</p>
                             </div>
 
                             <div class="employee_data">
                                 <strong>AVAILABILITY:</strong>
-                                <p>Full Time, Part Time, Daily, Weekly, Periods</p>
+                                <p>{{$expert->availability}}</p>
                             </div>
 
 
@@ -83,6 +91,7 @@
                                 <div class="col-lg-6 col-md-12">
                                     <div class="project_form_field">
                                         <input type="text" value="" placeholder="Name*" id="name" name="name"/>
+                                        <input type="text" value="{{ $expert->id }}" name="expert_id" id="expert_id" hidden readonly>
                                     </div>
                                 </div>
 
