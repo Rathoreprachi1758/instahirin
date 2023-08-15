@@ -37,7 +37,7 @@
                             </div>
 
                             <div class="descriptionText">
-                                <p>{{$expert->decription}}</p>
+                                <p>{{$expert->description}}</p>
                             </div>
 
 
