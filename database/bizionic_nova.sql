@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1:3306
--- Generation Time: Aug 02, 2023 at 05:11 AM
+-- Generation Time: Aug 15, 2023 at 03:45 PM
 -- Server version: 10.4.10-MariaDB
 -- PHP Version: 7.4.26
 
@@ -51,7 +51,7 @@ CREATE TABLE IF NOT EXISTS `action_events` (
   KEY `action_events_target_type_target_id_index` (`target_type`,`target_id`),
   KEY `action_events_batch_id_model_type_model_id_index` (`batch_id`,`model_type`,`model_id`),
   KEY `action_events_user_id_index` (`user_id`)
-) ENGINE=InnoDB AUTO_INCREMENT=203 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=212 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
 --
 -- Dumping data for table `action_events`
@@ -261,7 +261,16 @@ INSERT INTO `action_events` (`id`, `batch_id`, `user_id`, `name`, `actionable_ty
 (199, '99b6d50f-f967-4d02-bf81-8432647959e3', 1, 'Update', 'App\\Models\\Page', 27, 'App\\Models\\Page', 27, 'App\\Models\\Page', 27, '', 'finished', '', '2023-07-23 04:42:56', '2023-07-23 04:42:56', '{\"slug\":\"bizionic-team\"}', '{\"slug\":\"industries|industries-we-serve|industries|bizionic-team\"}'),
 (200, '99b6d811-ce4c-4fbf-95ec-cc0dac387dad', 1, 'Update', 'App\\Models\\Page', 76, 'App\\Models\\Page', 76, 'App\\Models\\Page', 76, '', 'finished', '', '2023-07-23 04:51:21', '2023-07-23 04:51:21', '{\"slug\":\"hire|developer|developers-other|looking-for-other-technology?\"}', '{\"slug\":\"hire|developer|developers-other|looking-for-other-technology\"}'),
 (201, '99bedcaf-b5fa-4576-bea1-3a9899e6f86e', 1, 'Create', 'App\\Models\\User', 2, 'App\\Models\\User', 2, 'App\\Models\\User', 2, '', 'finished', '', '2023-07-27 04:30:53', '2023-07-27 04:30:53', NULL, '{\"name\":\"Admin\",\"email\":\"admin@gmail.com\",\"updated_at\":\"2023-07-27T09:30:51.000000Z\",\"created_at\":\"2023-07-27T09:30:51.000000Z\",\"id\":2}'),
-(202, '99bee950-166b-4313-86eb-367b31ad4dd9', 1, 'Create', 'App\\Models\\HireRequest', 2, 'App\\Models\\HireRequest', 2, 'App\\Models\\HireRequest', 2, '', 'finished', '', '2023-07-27 05:06:11', '2023-07-27 05:06:11', NULL, '{\"name\":\"John  Wick\",\"email\":\"wick@gmail.com\",\"phone\":\"090012310\",\"company\":\"John Wick\",\"message\":\"<div>Hi guyz<\\/div>\",\"updated_at\":\"2023-07-27T10:06:11.000000Z\",\"created_at\":\"2023-07-27T10:06:11.000000Z\",\"id\":2}');
+(202, '99bee950-166b-4313-86eb-367b31ad4dd9', 1, 'Create', 'App\\Models\\HireRequest', 2, 'App\\Models\\HireRequest', 2, 'App\\Models\\HireRequest', 2, '', 'finished', '', '2023-07-27 05:06:11', '2023-07-27 05:06:11', NULL, '{\"name\":\"John  Wick\",\"email\":\"wick@gmail.com\",\"phone\":\"090012310\",\"company\":\"John Wick\",\"message\":\"<div>Hi guyz<\\/div>\",\"updated_at\":\"2023-07-27T10:06:11.000000Z\",\"created_at\":\"2023-07-27T10:06:11.000000Z\",\"id\":2}'),
+(203, '99dd75b9-86aa-4426-be36-b1d29d86dcf3', 2, 'Update', 'App\\Models\\HireRequest', 5, 'App\\Models\\HireRequest', 5, 'App\\Models\\HireRequest', 5, '', 'finished', '', '2023-08-11 09:33:39', '2023-08-11 09:33:39', '{\"document\":\"1.pdf\"}', '{\"document\":\"2Bb4eZTjajwrcMXzWUAC8fq8Q3f5JMIn0G0oHBii.png\"}'),
+(204, '99ddc414-a353-4d7d-b9fa-517780b40c62', 2, 'Create', 'App\\Models\\InstaHirinRequirement', 1, 'App\\Models\\InstaHirinRequirement', 1, 'App\\Models\\InstaHirinRequirement', 1, '', 'finished', '', '2023-08-11 13:12:45', '2023-08-11 13:12:45', NULL, '{\"position_title\":\"Et enim consequuntur\",\"work_mode\":\"Nesciunt voluptatib\",\"project_description\":\"Officia magnam cumqu\",\"key_skills\":\"Itaque dolorem labor\",\"employment_type\":\"Dedicated\",\"salary_range_from\":\"Aliquam totam incidu\",\"salary_range_to\":\"Cillum id accusamus\",\"location\":\"Voluptatem laborum\",\"education_qualification\":\"Masters\",\"company_name\":\"Alvarado and Delacruz Associates\",\"company_website\":\"Ferrell and Prince Trading\",\"contact_person\":\"Nemo architecto sint\",\"email\":\"jipidilo@mailinator.com\",\"contact_no\":\"Amet dolore molesti\",\"company_details\":\"Kirkland and Burks Inc\",\"company_address\":\"Shaw Kent Associates\",\"document\":\"y64umBLfFiGjiqE4x79qVSkTw2BozW3nqgY2ruuO.png\",\"notify\":\"Yes\",\"status\":\"New\",\"updated_at\":\"2023-08-11T18:12:43.000000Z\",\"created_at\":\"2023-08-11T18:12:43.000000Z\",\"id\":1}'),
+(205, '99ddc7f2-733a-4b55-aeb4-dfd914e6b789', 2, 'Create', 'App\\Models\\InstaHirinOnboard', 1, 'App\\Models\\InstaHirinOnboard', 1, 'App\\Models\\InstaHirinOnboard', 1, '', 'finished', '', '2023-08-11 13:23:33', '2023-08-11 13:23:33', NULL, '{\"name\":\"Geraldine White\",\"contact_details\":\"Non omnis at molesti\",\"email\":\"gudiwil@mailinator.com\",\"current_location\":\"Veritatis repellendu\",\"skills_description\":\"Necessitatibus itaqu\",\"current_title\":\"Minim dolor magna re\",\"experience_year\":\"3\",\"experience_month\":\"2\",\"highest_qualification\":\"Doctorate\",\"key_skills\":\"Laborum Odit nostru\",\"expert_in\":\"Magni non sequi impe\",\"also_work_with\":\"Amet nulla reprehen\",\"working_since_year\":\"2021\",\"working_since_month\":\"3\",\"annual_salary\":\"Non dolor ex eius di\",\"availability\":\"Yes\",\"availability_date\":\"2002-02-22\",\"availability_time_from\":\"Quod mollit nihil qu\",\"availability_time_to\":\"Reprehenderit labor\",\"resume_headline\":\"Ipsa magnam commodo\",\"status\":\"Reviewed\",\"updated_at\":\"2023-08-11T18:23:33.000000Z\",\"created_at\":\"2023-08-11T18:23:33.000000Z\",\"id\":1}'),
+(206, '99e31ad4-b27c-4120-84b5-d78d070d3b01', 2, 'Create', 'App\\Models\\Job', 1, 'App\\Models\\Job', 1, 'App\\Models\\Job', 1, '', 'finished', '', '2023-08-14 04:54:28', '2023-08-14 04:54:28', NULL, '{\"title\":\"TECHNOLOGY SPECIALIST\",\"description\":\"<div>Develop and implement innovative technology solutions, leveraging your expertise in web development, mobile applications, data analytics, and emerging technologies.<\\/div>\",\"status\":\"Open\",\"updated_at\":\"2023-08-14T09:54:26.000000Z\",\"created_at\":\"2023-08-14T09:54:26.000000Z\",\"id\":1}'),
+(207, '99e31af4-9671-47bf-8a01-14b6a2729a4a', 2, 'Create', 'App\\Models\\Job', 2, 'App\\Models\\Job', 2, 'App\\Models\\Job', 2, '', 'finished', '', '2023-08-14 04:54:48', '2023-08-14 04:54:48', NULL, '{\"title\":\"DIGITAL MARKETING MANAGER\",\"description\":\"<div>Drive strategic digital marketing initiatives, including SEO, SEM, social media, content marketing, and analytics. Lead and optimize campaign performance to achieve client objectives.<\\/div>\",\"status\":\"Open\",\"updated_at\":\"2023-08-14T09:54:48.000000Z\",\"created_at\":\"2023-08-14T09:54:48.000000Z\",\"id\":2}'),
+(208, '99e31b0e-3022-40ea-a5f1-2f6c22984432', 2, 'Create', 'App\\Models\\Job', 3, 'App\\Models\\Job', 3, 'App\\Models\\Job', 3, '', 'finished', '', '2023-08-14 04:55:05', '2023-08-14 04:55:05', NULL, '{\"title\":\"UX\\/UI DESIGNER\",\"description\":\"<div>Create exceptional user experiences by designing intuitive interfaces, conducting user research, and collaborating with cross-functional teams to deliver visually appealing and user-friendly designs.<\\/div>\",\"status\":\"Open\",\"updated_at\":\"2023-08-14T09:55:05.000000Z\",\"created_at\":\"2023-08-14T09:55:05.000000Z\",\"id\":3}'),
+(209, '99e31b22-3930-46bf-b3ac-759dbab48023', 2, 'Create', 'App\\Models\\Job', 4, 'App\\Models\\Job', 4, 'App\\Models\\Job', 4, '', 'finished', '', '2023-08-14 04:55:18', '2023-08-14 04:55:18', NULL, '{\"title\":\"DATA ANALYST\",\"description\":\"<div>Utilize data-driven insights to uncover trends, identify opportunities, and support data-backed decision-making. Analyze marketing campaigns, customer behavior, and market research to drive business growth.<\\/div>\",\"status\":\"Open\",\"updated_at\":\"2023-08-14T09:55:18.000000Z\",\"created_at\":\"2023-08-14T09:55:18.000000Z\",\"id\":4}'),
+(210, '99e31b36-fbc1-4f10-911f-8946f817c2e2', 2, 'Create', 'App\\Models\\Job', 5, 'App\\Models\\Job', 5, 'App\\Models\\Job', 5, '', 'finished', '', '2023-08-14 04:55:32', '2023-08-14 04:55:32', NULL, '{\"title\":\"ACCOUNT MANAGER\",\"description\":\"<div>Cultivate and maintain strong client relationships, serving as their main point of contact. Develop and execute strategic plans to achieve client goals and ensure client satisfaction.<\\/div>\",\"status\":\"Open\",\"updated_at\":\"2023-08-14T09:55:32.000000Z\",\"created_at\":\"2023-08-14T09:55:32.000000Z\",\"id\":5}'),
+(211, '99e31b75-48a4-4d8b-a52b-139a82415ff6', 2, 'Create', 'App\\Models\\Job', 6, 'App\\Models\\Job', 6, 'App\\Models\\Job', 6, '', 'finished', '', '2023-08-14 04:56:12', '2023-08-14 04:56:12', NULL, '{\"title\":\"FULL STACK DEVELOPER\",\"description\":\"<div>We seek a skilled and experienced Full Stack Developer to join our team. As a Full Stack Developer, you will develop and maintain our web applications\' front-end and back-end components.<\\/div>\",\"status\":\"Open\",\"updated_at\":\"2023-08-14T09:56:12.000000Z\",\"created_at\":\"2023-08-14T09:56:12.000000Z\",\"id\":6}');
 
 -- --------------------------------------------------------
 
@@ -281,14 +290,15 @@ CREATE TABLE IF NOT EXISTS `careers` (
   `created_at` timestamp NULL DEFAULT NULL,
   `updated_at` timestamp NULL DEFAULT NULL,
   PRIMARY KEY (`id`)
-) ENGINE=MyISAM AUTO_INCREMENT=2 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+) ENGINE=MyISAM AUTO_INCREMENT=3 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
 --
 -- Dumping data for table `careers`
 --
 
 INSERT INTO `careers` (`id`, `name`, `email`, `linkedin_profile`, `note`, `document`, `status`, `created_at`, `updated_at`) VALUES
-(1, 'Adrian Greene', 'xybifivy@mailinator.com', 'Quis deleniti tenetu', 'Quaerat incidunt do', '1.png', 'New', '2023-07-27 06:29:27', '2023-07-27 06:29:27');
+(1, 'Adrian Greene', 'xybifivy@mailinator.com', 'Quis deleniti tenetu', 'Quaerat incidunt do', '1.png', 'New', '2023-07-27 06:29:27', '2023-07-27 06:29:27'),
+(2, 'Martina Keith', 'fysizo@mailinator.com', 'Veniam rerum velit', 'Enim omnis quasi cul', '1.pdf', 'New', '2023-08-02 01:37:27', '2023-08-02 01:37:27');
 
 -- --------------------------------------------------------
 
@@ -640,7 +650,7 @@ CREATE TABLE IF NOT EXISTS `hire_requests` (
   `created_at` timestamp NULL DEFAULT NULL,
   `updated_at` timestamp NULL DEFAULT NULL,
   PRIMARY KEY (`id`)
-) ENGINE=MyISAM AUTO_INCREMENT=6 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+) ENGINE=MyISAM AUTO_INCREMENT=21 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
 --
 -- Dumping data for table `hire_requests`
@@ -649,7 +659,173 @@ CREATE TABLE IF NOT EXISTS `hire_requests` (
 INSERT INTO `hire_requests` (`id`, `expert_id`, `name`, `company`, `email`, `phone`, `website`, `address`, `company_info`, `message`, `hiring_type`, `priority`, `document`, `from_date`, `to_date`, `from_time`, `to_time`, `virtual_assistance_call`, `availability_date`, `availability_time_from`, `availability_time_to`, `created_at`, `updated_at`) VALUES
 (4, NULL, 'Yasir Vaughn', 'Melendez and Rodriquez Inc', 'ciguqa@mailinator.com', '+1 (939) 652-1845', 'https://www.taqeruzyjyz.co', 'Molestias duis nisi', 'Sint nihil dolore c', 'Minus eos ipsum con', NULL, 'insta', '1.pdf', '1982-05-04 00:00:00', '2010-01-01 00:00:00', 'Quisquam tenetur ill', 'Quae laboris dolore', 'No', '2009-02-28 00:00:00', 'Facere et facilis es', 'Veniam in quo conse', '2023-08-01 06:54:59', '2023-08-01 06:54:59'),
 (3, NULL, 'Odysseus Parsons', 'Campbell Steele Traders', 'fypuzi@mailinator.com', '+1 (533) 378-5412', 'https://www.nohomuv.mobi', 'Ea natus rerum occae', NULL, 'Minus atque quae arc', 'Developer', 'normal', '1.png', '1985-09-21', '1985-09-21', 'Quas fuga Amet aut', 'Dolore enim inventor', 'Yes', '1985-09-21', 'Aut illo aute numqua', 'Voluptatem incidunt', '2023-08-01 06:32:27', '2023-08-01 06:32:27'),
-(5, NULL, 'Chastity Shaffer', 'Fry and Graves Trading', 'kigi@mailinator.com', '+1 (488) 718-9956', 'https://www.hoxa.cm', 'Dolorem quae volupta', 'Nemo odio tenetur ip', 'Officia at sit ut a', NULL, 'insta', '1.pdf', '1996-08-19 00:00:00', '2003-12-29 00:00:00', 'Sint dolor non illum', 'Tenetur recusandae', 'No', '1974-09-23 00:00:00', 'Maiores deserunt et', 'Reiciendis ullam vol', '2023-08-01 06:55:39', '2023-08-01 06:55:39');
+(5, NULL, 'Chastity Shaffer', 'Fry and Graves Trading', 'kigi@mailinator.com', '+1 (488) 718-9956', 'https://www.hoxa.cm', 'Dolorem quae volupta', 'Nemo odio tenetur ip', 'Officia at sit ut a', NULL, 'insta', '2Bb4eZTjajwrcMXzWUAC8fq8Q3f5JMIn0G0oHBii.png', '1996-08-19 00:00:00', '2003-12-29 00:00:00', 'Sint dolor non illum', 'Tenetur recusandae', 'No', '1974-09-23 00:00:00', 'Maiores deserunt et', 'Reiciendis ullam vol', '2023-08-01 06:55:39', '2023-08-11 09:33:39'),
+(6, NULL, 'Lacota Ingram', 'Kramer Valencia Associates', 'zemewi@mailinator.com', '+1 (304) 807-5067', 'https://www.wajolofyquzil.us', 'Commodo dolor qui ex', 'Voluptatem quia eos', 'Perferendis cupidata', NULL, 'insta', '1.pdf', '2003-06-22 00:00:00', '1976-07-25 00:00:00', 'In fugit et distinc', 'Magnam accusantium c', 'No', '1989-03-31 00:00:00', 'Dolorum est magni a', 'Tempor sunt sequi as', '2023-08-02 01:36:11', '2023-08-02 01:36:11'),
+(7, NULL, 'Preston Mccullough', 'Butler and Little Inc', 'gunekeza@mailinator.com', '+1 (363) 245-1364', 'https://www.rawaximywegeq.me.uk', 'Quam velit ea eius q', NULL, 'Eaque omnis voluptat', NULL, 'normal', '1.png', '1973-12-23 00:00:00', '1997-03-27 00:00:00', 'Sed nihil et vitae n', 'Ex omnis ea ad volup', 'Yes', '1995-10-27 00:00:00', 'Molestiae excepteur', 'Et a magna obcaecati', '2023-08-07 07:27:48', '2023-08-07 07:27:48'),
+(8, NULL, 'Shannon Chambers', 'Gay and Stevenson Trading', 'cekyj@mailinator.com', '+1 (265) 755-6478', 'https://www.qahun.mobi', 'Doloribus asperiores', NULL, 'Molestias rem assume', NULL, 'normal', '1.pdf', '2019-11-30 00:00:00', '2004-10-08 00:00:00', 'In omnis qui fuga S', 'Porro corrupti ipsa', 'No', '2014-03-09 00:00:00', 'Esse harum dolor re', 'Incididunt consequun', '2023-08-07 07:42:34', '2023-08-07 07:42:34'),
+(9, NULL, 'Chase Haley', 'Levine Browning LLC', 'genonunez@mailinator.com', '+1 (584) 566-6431', NULL, NULL, NULL, 'Architecto ut volupt', NULL, 'normal', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, '2023-08-08 02:47:18', '2023-08-08 02:47:18'),
+(10, NULL, 'Lana Maldonado', 'Avila and Peck Plc', 'dykyh@mailinator.com', '+1 (854) 545-5977', NULL, NULL, NULL, 'Est commodo tenetur', NULL, 'normal', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, '2023-08-08 02:48:11', '2023-08-08 02:48:11'),
+(11, NULL, 'Cedric Medina', 'Delaney and Langley Inc', 'qugepobid@mailinator.com', '+1 (716) 526-4098', NULL, NULL, NULL, 'Ad debitis nihil ape', NULL, 'normal', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, '2023-08-08 03:12:42', '2023-08-08 03:12:42'),
+(12, NULL, 'Georgia Johnston', 'Reyes Nguyen Co', 'kakyla@mailinator.com', '+1 (739) 816-2338', NULL, NULL, NULL, 'Est voluptatem sequi', NULL, 'normal', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, '2023-08-08 03:18:32', '2023-08-08 03:18:32'),
+(13, NULL, 'Jena Gonzales', 'Wright Mcknight Trading', 'tagamoca@mailinator.com', '+1 (445) 306-5253', NULL, NULL, NULL, 'Vel maiores obcaecat', NULL, 'normal', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, '2023-08-08 04:18:27', '2023-08-08 04:18:27'),
+(14, NULL, 'Sean Love', 'Good Sutton Plc', 'gofuxuz@mailinator.com', '+1 (296) 153-5094', NULL, NULL, NULL, 'Earum dolorum ut tem', NULL, 'normal', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, '2023-08-08 04:20:19', '2023-08-08 04:20:19'),
+(15, NULL, 'Harrison Mcgowan', 'Chavez and Cruz Associates', 'pijodi@mailinator.com', '+1 (536) 431-1071', NULL, NULL, NULL, 'Recusandae Voluptas', NULL, 'normal', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, '2023-08-13 08:41:03', '2023-08-13 08:41:03'),
+(16, NULL, 'Chancellor Rowe', '-', 'levym@mailinator.com', '+1 (744) 436-7119', NULL, NULL, NULL, 'Iure dolor totam mag', NULL, 'normal', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, '2023-08-13 08:44:04', '2023-08-13 08:44:04'),
+(17, NULL, 'Fiona Spencer', '-', 'nariremuku@mailinator.com', '+1 (167) 851-9167', NULL, NULL, NULL, 'Voluptatum sed accus', NULL, 'normal', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, '2023-08-13 08:54:10', '2023-08-13 08:54:10'),
+(18, 1, 'Shea Cannon', 'Rich and Dale Inc', 'giny@mailinator.com', '+1 (816) 412-8308', 'https://www.badaqoquguq.in', 'Atque ipsum qui dolo', 'Sapiente dolor et au', 'Aliquip quia aut ab', NULL, 'insta', '1.pdf', '1984-07-04 00:00:00', '2008-12-16 00:00:00', 'Atque sunt adipisci', 'Sint omnis esse modi', 'No', '2013-11-28 00:00:00', 'Dolorum in beatae qu', 'Labore ea aute dolor', '2023-08-15 06:46:08', '2023-08-15 06:46:08'),
+(19, 3, 'Olga Diaz', 'Walker and Oliver Traders', 'fozebyma@mailinator.com', '+1 (167) 551-3415', 'https://www.xohuxibyh.org.au', 'Quam nostrum dolores', 'Dicta explicabo Cul', 'Qui qui consectetur', NULL, 'insta', '1.pdf', '1990-05-29 00:00:00', '2005-05-21 00:00:00', 'Voluptas voluptatem', 'Est ut in debitis au', 'No', '1991-04-14 00:00:00', 'Pariatur Hic quod o', 'Quas duis in harum s', '2023-08-15 07:03:17', '2023-08-15 07:03:17'),
+(20, NULL, 'Samson Boone', 'Santos and Hancock Traders', 'wysozesi@mailinator.com', '+1 (363) 207-8526', 'https://www.hixubeduwisenef.cc', 'Architecto beatae do', NULL, 'Natus doloremque lab', NULL, 'normal', '1.pdf', '2010-08-25 00:00:00', '2019-06-17 00:00:00', 'Ea voluptatem Beata', 'Reprehenderit fugit', 'Yes', '2018-07-16 00:00:00', 'Quo ex sit reprehend', 'Porro aut dolorem do', '2023-08-15 07:04:03', '2023-08-15 07:04:03');
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `insta_hirin_onboards`
+--
+
+DROP TABLE IF EXISTS `insta_hirin_onboards`;
+CREATE TABLE IF NOT EXISTS `insta_hirin_onboards` (
+  `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT,
+  `name` varchar(255) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+  `contact_details` varchar(255) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+  `email` varchar(255) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+  `current_location` varchar(255) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+  `skills_description` varchar(255) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+  `current_title` varchar(255) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+  `experience_year` varchar(255) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+  `experience_month` varchar(255) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+  `key_skills` varchar(255) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+  `expert_in` varchar(255) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+  `also_work_with` varchar(255) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+  `working_since_date` varchar(255) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+  `working_since_date2` varchar(255) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+  `annual_salary_currency` varchar(50) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+  `annual_salary` varchar(255) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+  `highest_qualification` varchar(255) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+  `notice_period` varchar(255) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+  `availability` varchar(255) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+  `availability_date` varchar(255) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+  `availability_time_from` varchar(255) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+  `availability_time_to` varchar(255) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+  `resume_headline` varchar(255) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+  `status` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL DEFAULT 'New',
+  `created_at` timestamp NULL DEFAULT NULL,
+  `updated_at` timestamp NULL DEFAULT NULL,
+  PRIMARY KEY (`id`)
+) ENGINE=MyISAM AUTO_INCREMENT=10 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+
+--
+-- Dumping data for table `insta_hirin_onboards`
+--
+
+INSERT INTO `insta_hirin_onboards` (`id`, `name`, `contact_details`, `email`, `current_location`, `skills_description`, `current_title`, `experience_year`, `experience_month`, `key_skills`, `expert_in`, `also_work_with`, `working_since_date`, `working_since_date2`, `annual_salary_currency`, `annual_salary`, `highest_qualification`, `notice_period`, `availability`, `availability_date`, `availability_time_from`, `availability_time_to`, `resume_headline`, `status`, `created_at`, `updated_at`) VALUES
+(1, 'Nadine Wong', 'Sit quis error magn', 'bipovajeja@mailinator.com', 'Sit in consectetur', 'Perspiciatis id ad', 'Architecto ab in off', '2', '1', 'Nemo et nostrud veni', 'Exercitation dolores', 'Vitae nostrum quo co', '1993-10-03', '1993-07-18', '$', 'Between 2,50,000 - 5,00,000', 'Graduation', '-', 'Part Time', '1993-02-13 00:00:00', 'Voluptas nulla iusto', 'Et ullam autem aut m', 'Repudiandae numquam', 'New', '2023-08-13 14:19:25', '2023-08-13 14:19:25'),
+(2, 'Gemma Christian', 'Culpa qui quia conse', 'zilul@mailinator.com', 'Dolor ad sint natus', 'Dolor veritatis eos', 'Velit voluptates aut', '2', '2', 'Non neque in nihil d', 'Sapiente proident e', 'Tempore possimus h', '2008-10-03', '1985-08-01', '$', 'Between 2,50,000 - 5,00,000', 'Post Graduation', '-', 'Full Time', '2021-01-09 00:00:00', 'Quo voluptate omnis', 'Alias sequi doloribu', 'Error quas perspicia', 'New', '2023-08-13 14:21:24', '2023-08-13 14:21:24'),
+(3, 'Raphael Rivers', 'Eius aut cum sit qu', 'dyvoc@mailinator.com', 'Consequatur Aut min', 'Aliquam velit qui re', 'Ea quaerat dolorem i', '2', '1', 'Veniam in molestiae', 'Consectetur volupta', 'Omnis elit rerum at', '1994-02-21', '1983-07-04', 'INR', 'Between 1,00,000 - 2,50,000', 'Graduation', '-', 'Part Time', '2020-07-26 00:00:00', 'Dolore molestiae off', 'Sint vero nesciunt', 'Ducimus laboris qui', 'New', '2023-08-14 04:31:36', '2023-08-14 04:31:36'),
+(4, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, '$', 'Between 1,00,000 - 2,50,000', 'Post Graduation', '-', NULL, NULL, NULL, NULL, NULL, 'New', '2023-08-14 04:31:54', '2023-08-14 04:31:54'),
+(5, 'Wylie Erickson', 'In magni adipisci ni', 'qifozexyd@mailinator.com', 'In deserunt voluptas', 'Reprehenderit beatae', 'Dolor enim Nam aut q', '2', '2', 'Ex modi voluptas des', 'Aute magna doloribus', 'Numquam quia enim ea', '2013-09-28', '1993-10-14', 'INR', 'Between 1,00,000 - 2,50,000', 'Graduation', '-', 'Full Time', '1978-06-08 00:00:00', 'Sunt repudiandae sit', 'Ea dolore incidunt', 'Autem quia omnis id', 'New', '2023-08-14 04:32:38', '2023-08-14 04:32:38'),
+(6, 'Yolanda Lang', 'Vero et doloribus an', 'zutigire@mailinator.com', 'Sint saepe quos eum', 'Perspiciatis aut ut', 'Tempora est ut simi', '1', '1', 'Dolor placeat non s', 'Est reprehenderit ni', 'Voluptatem delectus', '1998-04-21', '2001-04-12', '$', 'Between 2,50,000 - 5,00,000', 'Graduation', '-', 'Part Time', '2021-04-04 00:00:00', 'Consequatur Earum e', 'Culpa velit reprehen', 'Molestiae tempore d', 'New', '2023-08-14 04:33:37', '2023-08-14 04:33:37'),
+(7, 'Yolanda Lang', 'Vero et doloribus an', 'zutigire@mailinator.com', 'Sint saepe quos eum', 'Perspiciatis aut ut', 'Tempora est ut simi', '1', '1', 'Dolor placeat non s', 'Est reprehenderit ni', 'Voluptatem delectus', '1998-04-21', '2001-04-12', '$', 'Between 2,50,000 - 5,00,000', 'Graduation', '-', 'Part Time', '2021-04-04 00:00:00', 'Consequatur Earum e', 'Culpa velit reprehen', 'Molestiae tempore d', 'New', '2023-08-14 04:34:04', '2023-08-14 04:34:04'),
+(8, 'Yolanda Lang', 'Vero et doloribus an', 'zutigire@mailinator.com', 'Sint saepe quos eum', 'Perspiciatis aut ut', 'Tempora est ut simi', '1', '1', 'Dolor placeat non s', 'Est reprehenderit ni', 'Voluptatem delectus', '1998-04-21', '2001-04-12', '$', 'Between 2,50,000 - 5,00,000', 'Graduation', '-', 'Part Time', '2021-04-04 00:00:00', 'Consequatur Earum e', 'Culpa velit reprehen', 'Molestiae tempore d', 'New', '2023-08-14 04:34:38', '2023-08-14 04:34:38'),
+(9, 'Yolanda Lang', 'Vero et doloribus an', 'zutigire@mailinator.com', 'Sint saepe quos eum', 'Perspiciatis aut ut', 'Tempora est ut simi', '1', '1', 'Dolor placeat non s', 'Est reprehenderit ni', 'Voluptatem delectus', '1998-04-21', '2001-04-12', '$', 'Between 2,50,000 - 5,00,000', 'Graduation', '-', 'Part Time', '2021-04-04 00:00:00', 'Consequatur Earum e', 'Culpa velit reprehen', 'Molestiae tempore d', 'New', '2023-08-14 04:34:55', '2023-08-14 04:34:55');
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `insta_hirin_onboard_documents`
+--
+
+DROP TABLE IF EXISTS `insta_hirin_onboard_documents`;
+CREATE TABLE IF NOT EXISTS `insta_hirin_onboard_documents` (
+  `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT,
+  `insta_hirin_onboard_id` int(10) UNSIGNED NOT NULL,
+  `document` varchar(255) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+  `created_at` timestamp NULL DEFAULT NULL,
+  `updated_at` timestamp NULL DEFAULT NULL,
+  PRIMARY KEY (`id`)
+) ENGINE=MyISAM AUTO_INCREMENT=3 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+
+--
+-- Dumping data for table `insta_hirin_onboard_documents`
+--
+
+INSERT INTO `insta_hirin_onboard_documents` (`id`, `insta_hirin_onboard_id`, `document`, `created_at`, `updated_at`) VALUES
+(1, 8, 'ai logo.png', '2023-08-14 04:34:38', '2023-08-14 04:34:38'),
+(2, 9, 'ai logo.png', '2023-08-14 04:34:55', '2023-08-14 04:34:55');
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `insta_hirin_requirements`
+--
+
+DROP TABLE IF EXISTS `insta_hirin_requirements`;
+CREATE TABLE IF NOT EXISTS `insta_hirin_requirements` (
+  `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT,
+  `position_title` varchar(255) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+  `work_mode` varchar(255) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+  `project_description` varchar(255) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+  `key_skills` varchar(255) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+  `min_experience` varchar(255) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+  `max_experience` varchar(255) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+  `employment_type` varchar(255) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+  `salary_currency` varchar(255) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+  `min_salary` varchar(255) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+  `max_salary` varchar(255) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+  `location` varchar(255) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+  `education_qualification` varchar(255) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+  `company_name` varchar(255) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+  `company_website` varchar(255) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+  `contact_person` varchar(255) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+  `email` varchar(255) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+  `contact_no_country_code` varchar(255) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+  `contact_no` varchar(255) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+  `company_details` varchar(255) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+  `company_address` varchar(255) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+  `document` varchar(255) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+  `notify` varchar(255) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+  `status` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL DEFAULT 'New',
+  `created_at` timestamp NULL DEFAULT NULL,
+  `updated_at` timestamp NULL DEFAULT NULL,
+  PRIMARY KEY (`id`)
+) ENGINE=MyISAM AUTO_INCREMENT=4 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+
+--
+-- Dumping data for table `insta_hirin_requirements`
+--
+
+INSERT INTO `insta_hirin_requirements` (`id`, `position_title`, `work_mode`, `project_description`, `key_skills`, `min_experience`, `max_experience`, `employment_type`, `salary_currency`, `min_salary`, `max_salary`, `location`, `education_qualification`, `company_name`, `company_website`, `contact_person`, `email`, `contact_no_country_code`, `contact_no`, `company_details`, `company_address`, `document`, `notify`, `status`, `created_at`, `updated_at`) VALUES
+(1, 'Dolorem maiores sed', 'In Office', 'Amet beatae laudant', 'Laborum Cupidatat v', '10', '1', 'Part Time', '$', 'Saepe earum ea exerc', 'Vitae qui non ad nos', 'Est quis fugiat repe', 'Graduation', 'Becker and Carson Inc', 'Wade and Baker Trading', 'Fugiat corrupti sed', 'qusoq@mailinator.com', '+1', 'Nesciunt tenetur pa', 'Est dolore magni vel', 'Dolorem pariatur Lo', NULL, 'on', 'New', '2023-08-13 13:41:09', '2023-08-13 13:41:09'),
+(2, 'Vel reprehenderit a', 'Remote', 'Natus dolorem dolore', 'Necessitatibus odio', '2', '11', 'Remote', '$', 'Dolores officiis off', 'Cupiditate et quibus', 'Quis tenetur culpa q', 'Post Graduation', 'Stephenson and Mueller Co', 'Mitchell and Dixon Traders', 'Et quae commodo cons', 'pekyfifavi@mailinator.com', '+91', 'Eaque aliquam sit in', 'Minima commodi beata', 'Et architecto numqua', '1.pdf', 'on', 'New', '2023-08-13 13:41:20', '2023-08-13 13:41:20'),
+(3, 'Et ex magna temporib', 'In Office', 'Aliquip aliquam id', 'Commodo rem voluptat', '8', '13', 'Remote', '$', 'Eiusmod ex culpa ha', 'Qui consequatur qui', 'Aut in aute voluptat', 'Graduation', 'Nicholson and Farley Co', 'Wiggins Townsend Trading', 'Libero in nesciunt', 'lidyvuwa@mailinator.com', '+91', 'Iste laboriosam ess', 'Aut velit in dolorum', 'Dolor perferendis do', '1.pdf', 'on', 'New', '2023-08-13 13:42:28', '2023-08-13 13:42:28');
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `jobs`
+--
+
+DROP TABLE IF EXISTS `jobs`;
+CREATE TABLE IF NOT EXISTS `jobs` (
+  `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT,
+  `title` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL,
+  `description` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL,
+  `status` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL DEFAULT 'Open',
+  `created_at` timestamp NULL DEFAULT NULL,
+  `updated_at` timestamp NULL DEFAULT NULL,
+  PRIMARY KEY (`id`)
+) ENGINE=MyISAM AUTO_INCREMENT=7 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+
+--
+-- Dumping data for table `jobs`
+--
+
+INSERT INTO `jobs` (`id`, `title`, `description`, `status`, `created_at`, `updated_at`) VALUES
+(1, 'TECHNOLOGY SPECIALIST', '<div>Develop and implement innovative technology solutions, leveraging your expertise in web development, mobile applications, data analytics, and emerging technologies.</div>', 'Open', '2023-08-14 04:54:26', '2023-08-14 04:54:26'),
+(2, 'DIGITAL MARKETING MANAGER', '<div>Drive strategic digital marketing initiatives, including SEO, SEM, social media, content marketing, and analytics. Lead and optimize campaign performance to achieve client objectives.</div>', 'Open', '2023-08-14 04:54:48', '2023-08-14 04:54:48'),
+(3, 'UX/UI DESIGNER', '<div>Create exceptional user experiences by designing intuitive interfaces, conducting user research, and collaborating with cross-functional teams to deliver visually appealing and user-friendly designs.</div>', 'Open', '2023-08-14 04:55:05', '2023-08-14 04:55:05'),
+(4, 'DATA ANALYST', '<div>Utilize data-driven insights to uncover trends, identify opportunities, and support data-backed decision-making. Analyze marketing campaigns, customer behavior, and market research to drive business growth.</div>', 'Open', '2023-08-14 04:55:18', '2023-08-14 04:55:18'),
+(5, 'ACCOUNT MANAGER', '<div>Cultivate and maintain strong client relationships, serving as their main point of contact. Develop and execute strategic plans to achieve client goals and ensure client satisfaction.</div>', 'Open', '2023-08-14 04:55:32', '2023-08-14 04:55:32'),
+(6, 'FULL STACK DEVELOPER', '<div>We seek a skilled and experienced Full Stack Developer to join our team. As a Full Stack Developer, you will develop and maintain our web applications\' front-end and back-end components.</div>', 'Open', '2023-08-14 04:56:12', '2023-08-14 04:56:12');
 
 -- --------------------------------------------------------
 
@@ -672,7 +848,7 @@ CREATE TABLE IF NOT EXISTS `leads` (
   `created_at` timestamp NULL DEFAULT NULL,
   `updated_at` timestamp NULL DEFAULT NULL,
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB AUTO_INCREMENT=4 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=6 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
 --
 -- Dumping data for table `leads`
@@ -681,7 +857,9 @@ CREATE TABLE IF NOT EXISTS `leads` (
 INSERT INTO `leads` (`id`, `name`, `email`, `phone`, `hiring_type`, `budget`, `lead_type`, `details`, `document`, `status`, `created_at`, `updated_at`) VALUES
 (1, 'Demo', 'demo@gmail.com', '090013123', 'developers', 'dedicated', 'Consultation', 'Hi', '1.png', 'New', '2023-07-26 04:40:41', '2023-07-26 04:40:41'),
 (2, 'dd', 'dd@d.com', '2131231', 'dedicated_developer', 'below_10K', 'Consultation', 'a', 'eShare BRD Review.docx', 'New', '2023-07-26 04:47:17', '2023-07-26 04:47:17'),
-(3, 'Indira Shields', 'wuximuq@mailinator.com', '+1 (877) 698-1152', 'dedicated', 'developers', 'Consultation', 'Nesciunt quis conse', '1.png', 'New', '2023-07-27 06:00:16', '2023-07-27 06:00:16');
+(3, 'Indira Shields', 'wuximuq@mailinator.com', '+1 (877) 698-1152', 'dedicated', 'developers', 'Consultation', 'Nesciunt quis conse', '1.png', 'New', '2023-07-27 06:00:16', '2023-07-27 06:00:16'),
+(4, 'Norman Hewitt', 'xarixe@mailinator.com', '+1 (541) 125-4469', 'dedicated_developer', 'developers', 'Consultation', 'Placeat tempor dolo', '1.pdf', 'New', '2023-08-08 01:31:37', '2023-08-08 01:31:37'),
+(5, 'Francis Haney', 'cupigovaky@mailinator.com', '+1 (254) 574-1955', NULL, NULL, 'Consultation', 'Similique velit dist', '1.png', 'New', '2023-08-13 08:31:34', '2023-08-13 08:31:34');
 
 -- --------------------------------------------------------
 
@@ -695,7 +873,7 @@ CREATE TABLE IF NOT EXISTS `migrations` (
   `migration` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL,
   `batch` int(11) NOT NULL,
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB AUTO_INCREMENT=30 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=37 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
 --
 -- Dumping data for table `migrations`
@@ -727,7 +905,11 @@ INSERT INTO `migrations` (`id`, `migration`, `batch`) VALUES
 (25, '2014_10_12_100000_create_password_resets_table', 6),
 (26, '2023_06_10_175636_create_hire_table', 6),
 (28, '2023_07_27_103104_create_careers_table', 8),
-(29, '2023_07_27_094743_create_hire_requests_table', 9);
+(29, '2023_07_27_094743_create_hire_requests_table', 9),
+(33, '2023_08_10_182811_create_insta_hirin_onboards_table', 10),
+(34, '2023_08_10_182824_create_insta_hirin_requirements_table', 10),
+(35, '2023_08_10_182919_create_insta_hirin_onboard_documents_table', 10),
+(36, '2023_08_14_094144_create_jobs_table', 11);
 
 -- --------------------------------------------------------
 
@@ -798,7 +980,7 @@ CREATE TABLE IF NOT EXISTS `nova_menu_menu_items` (
   `slug` varchar(255) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
   PRIMARY KEY (`id`),
   KEY `nova_menu_menu_items_menu_id_foreign` (`menu_id`)
-) ENGINE=InnoDB AUTO_INCREMENT=358 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=388 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
 --
 -- Dumping data for table `nova_menu_menu_items`
@@ -810,7 +992,7 @@ INSERT INTO `nova_menu_menu_items` (`id`, `menu_id`, `name`, `locale`, `class`, 
 (4, 1, 'Services', 'en_US', 'App\\MenuItemTypes\\BizionicMenuItemType', NULL, '_self', '{\"slug\": \"services\", \"template\": \"home\", \"menu_icon\": null, \"menu_columns\": null, \"is_action_item\": null}', NULL, 5, 1, '2023-05-27 10:44:14', '2023-06-26 05:58:08', 1, NULL),
 (5, 1, 'Industries', 'en_US', 'App\\MenuItemTypes\\BizionicMenuItemType', NULL, '_self', '{\"slug\": \"industries\", \"template\": \"home\", \"menu_icon\": null, \"menu_columns\": null, \"is_action_item\": null}', NULL, 6, 1, '2023-05-27 10:44:34', '2023-06-26 05:58:08', 1, NULL),
 (6, 1, 'About Us', 'en_US', 'App\\MenuItemTypes\\BizionicMenuItemType', NULL, '_self', '{\"slug\": \"about-us\", \"template\": \"home\", \"menu_columns\": null, \"is_action_item\": \"0\"}', NULL, 1, 1, '2023-05-27 10:44:42', '2023-06-26 05:58:08', 1, NULL),
-(7, 1, 'Get a free Consultation', 'en_US', 'App\\MenuItemTypes\\BizionicMenuItemType', NULL, '_self', '{\"slug\": \"get-a-free-consultation\", \"template\": \"home\", \"menu_icon\": null, \"menu_columns\": \"1\", \"is_action_item\": \"btn_default\"}', NULL, 9, 1, '2023-05-27 10:45:15', '2023-07-23 04:40:26', 1, NULL),
+(7, 1, 'Get a free Consultation', 'en_US', 'App\\MenuItemTypes\\BizionicMenuItemType', NULL, '_self', '{\"slug\": \"get-a-free-consultation\", \"template\": \"home\", \"menu_icon\": null, \"menu_columns\": \"1\", \"is_action_item\": \"btn_default\"}', NULL, 10, 1, '2023-05-27 10:45:15', '2023-08-07 13:19:18', 1, NULL),
 (8, 1, 'DEVELOPERS', 'en_US', 'App\\MenuItemTypes\\BizionicMenuItemType', NULL, '_self', '{\"slug\": \"developer\", \"template\": null, \"menu_icon\": \"hirenav_icon1.png\", \"menu_columns\": null, \"is_action_item\": \"col-lg-6 col-md-6 pr-0\"}', 1, 1, 1, '2023-05-27 10:45:38', '2023-06-14 03:49:29', 1, NULL),
 (16, 1, 'BACK-END DEVELOPMENT', 'en_US', 'App\\MenuItemTypes\\BizionicMenuItemType', NULL, '_self', '{\"slug\": \"back-end-development\", \"template\": null, \"menu_icon\": null, \"menu_columns\": null, \"is_action_item\": \"col-lg-4  col-md-4 pr-0\"}', 287, 2, 1, '2023-06-13 03:56:10', '2023-06-14 05:28:07', 1, NULL),
 (17, 1, 'Hire Node.js Developers', 'en_US', 'App\\MenuItemTypes\\BizionicMenuItemType', NULL, '_self', '{\"slug\": \"hire-node-js-developers\", \"template\": \"backend-nodeJs\", \"menu_icon\": null, \"menu_columns\": null, \"is_action_item\": \"0\"}', 16, 1, 1, '2023-06-13 03:57:07', '2023-07-21 06:03:07', 1, NULL),
@@ -862,38 +1044,38 @@ INSERT INTO `nova_menu_menu_items` (`id`, `menu_id`, `name`, `locale`, `class`, 
 (72, 1, 'MARKETERS', 'en_US', 'App\\MenuItemTypes\\BizionicMenuItemType', NULL, '_self', '{\"slug\": \"marketers\", \"template\": null, \"menu_icon\": null, \"menu_columns\": null, \"is_action_item\": \"col-lg-3 col-md-3  p-0\"}', 1, 2, 1, '2023-06-13 06:32:31', '2023-06-14 06:02:28', 1, NULL),
 (73, 1, 'MARKETING TEAM AUGMENTATION', 'en_US', 'App\\MenuItemTypes\\BizionicMenuItemType', NULL, '_self', '{\"slug\": \"marketing-team-augmentation\", \"template\": null, \"menu_icon\": null, \"menu_columns\": null, \"is_action_item\": \"col-lg-6  col-md-6 pr-0\"}', 290, 1, 1, '2023-06-13 06:33:37', '2023-06-14 05:31:54', 1, NULL),
 (74, 1, 'OTHER', 'en_US', 'App\\MenuItemTypes\\BizionicMenuItemType', NULL, '_self', '{\"slug\": \"marketers-other\", \"template\": null, \"menu_icon\": null, \"menu_columns\": null, \"is_action_item\": \"col-lg-6 col-md-6 pr-0\"}', 290, 2, 1, '2023-06-13 06:35:46', '2023-06-14 05:32:00', 1, NULL),
-(75, 1, 'Looking for Other Marketing Skills?', 'en_US', 'App\\MenuItemTypes\\BizionicMenuItemType', NULL, '_self', '{\"slug\": \"looking-for-other-marketing-skills\", \"template\": null, \"menu_icon\": null, \"menu_columns\": null, \"is_action_item\": \"0\"}', 74, 1, 1, '2023-06-13 06:36:25', '2023-06-13 06:36:52', 1, NULL),
-(76, 1, 'Marketing Manager', 'en_US', 'App\\MenuItemTypes\\BizionicMenuItemType', NULL, '_self', '{\"slug\": \"marketing-manager\", \"template\": null, \"menu_icon\": null, \"menu_columns\": null, \"is_action_item\": \"0\"}', 73, 1, 1, '2023-06-13 06:37:10', '2023-06-13 06:37:25', 1, NULL),
-(77, 1, 'Digital Marketing Specialist', 'en_US', 'App\\MenuItemTypes\\BizionicMenuItemType', NULL, '_self', '{\"slug\": \"digital-marketing-specialist\", \"template\": null, \"menu_icon\": null, \"menu_columns\": null, \"is_action_item\": \"0\"}', 73, 2, 1, '2023-06-13 06:37:33', '2023-06-13 06:37:57', 1, NULL),
-(78, 1, 'SEM (Search Engine Marketing) Specialist', 'en_US', 'App\\MenuItemTypes\\BizionicMenuItemType', NULL, '_self', '{\"slug\": \"sem-search-engine-marketing-specialist\", \"template\": null, \"menu_icon\": null, \"menu_columns\": null, \"is_action_item\": \"0\"}', 73, 3, 1, '2023-06-13 06:38:11', '2023-06-13 06:38:45', 1, NULL),
-(79, 1, 'SEO (Search Engine Optimization) Specialist', 'en_US', 'App\\MenuItemTypes\\BizionicMenuItemType', NULL, '_self', '{\"slug\": \"sem-search-engine-optimization-specialist\", \"template\": null, \"menu_icon\": null, \"menu_columns\": null, \"is_action_item\": \"0\"}', 73, 4, 1, '2023-06-13 06:38:49', '2023-06-13 06:39:17', 1, NULL),
-(80, 1, 'PPC (Pay-Per-Click) Google Ads Specialist', 'en_US', 'App\\MenuItemTypes\\BizionicMenuItemType', NULL, '_self', '{\"slug\": \"ppc-pay-per-click-google-ads-specialist\", \"template\": null, \"menu_icon\": null, \"menu_columns\": null, \"is_action_item\": \"0\"}', 73, 5, 1, '2023-06-13 06:40:02', '2023-06-13 06:40:49', 1, NULL),
-(81, 1, 'Social Media Manager', 'en_US', 'App\\MenuItemTypes\\BizionicMenuItemType', NULL, '_self', '{\"slug\": \"social-media-manager\", \"template\": null, \"menu_icon\": null, \"menu_columns\": null, \"is_action_item\": \"0\"}', 73, 6, 1, '2023-06-13 06:40:57', '2023-06-13 06:41:19', 1, NULL),
-(82, 1, 'Content Marketer', 'en_US', 'App\\MenuItemTypes\\BizionicMenuItemType', NULL, '_self', '{\"slug\": \"content-marketer\", \"template\": null, \"menu_icon\": null, \"menu_columns\": null, \"is_action_item\": \"0\"}', 73, 7, 1, '2023-06-13 06:43:06', '2023-06-13 06:43:22', 1, NULL),
-(83, 1, 'Product Marketing Manager', 'en_US', 'App\\MenuItemTypes\\BizionicMenuItemType', NULL, '_self', '{\"slug\": \"product-marketing-manager\", \"template\": null, \"menu_icon\": null, \"menu_columns\": null, \"is_action_item\": \"0\"}', 73, 8, 1, '2023-06-13 06:43:32', '2023-06-13 06:43:52', 1, NULL),
-(84, 1, 'Influencer Marketer', 'en_US', 'App\\MenuItemTypes\\BizionicMenuItemType', NULL, '_self', '{\"slug\": \"influencer-marketer\", \"template\": null, \"menu_icon\": null, \"menu_columns\": null, \"is_action_item\": \"0\"}', 73, 9, 1, '2023-06-13 06:44:06', '2023-06-13 06:44:23', 1, NULL),
-(85, 1, 'Market Research Analyst', 'en_US', 'App\\MenuItemTypes\\BizionicMenuItemType', NULL, '_self', '{\"slug\": \"market-research-analyst\", \"template\": null, \"menu_icon\": null, \"menu_columns\": null, \"is_action_item\": \"0\"}', 73, 10, 1, '2023-06-13 06:44:32', '2023-06-13 06:44:51', 1, NULL),
-(86, 1, 'Public Relations (PR) Specialist', 'en_US', 'App\\MenuItemTypes\\BizionicMenuItemType', NULL, '_self', '{\"slug\": \"public-relations-pr-specialist\", \"template\": null, \"menu_icon\": null, \"menu_columns\": null, \"is_action_item\": \"0\"}', 73, 11, 1, '2023-06-13 06:45:01', '2023-06-13 06:45:26', 1, NULL),
-(87, 1, 'Email Marketing Specialist', 'en_US', 'App\\MenuItemTypes\\BizionicMenuItemType', NULL, '_self', '{\"slug\": \"email-marketing-specialist\", \"template\": null, \"menu_icon\": null, \"menu_columns\": null, \"is_action_item\": \"0\"}', 73, 12, 1, '2023-06-13 06:45:37', '2023-06-13 06:45:54', 1, NULL),
-(88, 1, 'Marketing Coordinator', 'en_US', 'App\\MenuItemTypes\\BizionicMenuItemType', NULL, '_self', '{\"slug\": \"marketing-coordinator\", \"template\": null, \"menu_icon\": null, \"menu_columns\": null, \"is_action_item\": \"0\"}', 73, 13, 1, '2023-06-13 06:46:03', '2023-06-13 06:46:20', 1, NULL),
-(89, 1, 'Marketing Communications Specialist', 'en_US', 'App\\MenuItemTypes\\BizionicMenuItemType', NULL, '_self', '{\"slug\": \"marketing-communications-specialist\", \"template\": null, \"menu_icon\": null, \"menu_columns\": null, \"is_action_item\": \"0\"}', 73, 14, 1, '2023-06-13 06:46:31', '2023-06-13 06:46:51', 1, NULL),
+(75, 1, 'Looking for Other Marketing Skills?', 'en_US', 'App\\MenuItemTypes\\BizionicMenuItemType', NULL, '_self', '{\"slug\": \"looking-for-other-marketing-skills\", \"template\": \"marketer-looking-other-technology\", \"menu_icon\": null, \"menu_columns\": null, \"is_action_item\": \"0\"}', 74, 1, 1, '2023-06-13 06:36:25', '2023-07-31 13:17:34', 1, NULL),
+(76, 1, 'Marketing Manager', 'en_US', 'App\\MenuItemTypes\\BizionicMenuItemType', NULL, '_self', '{\"slug\": \"marketing-manager\", \"template\": \"hire-marketing-manager\", \"menu_icon\": null, \"menu_columns\": null, \"is_action_item\": \"0\"}', 73, 1, 1, '2023-06-13 06:37:10', '2023-07-27 13:14:51', 1, NULL),
+(77, 1, 'Digital Marketing Specialist', 'en_US', 'App\\MenuItemTypes\\BizionicMenuItemType', NULL, '_self', '{\"slug\": \"digital-marketing-specialist\", \"template\": \"hire-digital-marketing-specialist\", \"menu_icon\": null, \"menu_columns\": null, \"is_action_item\": \"0\"}', 73, 2, 1, '2023-06-13 06:37:33', '2023-07-27 13:37:20', 1, NULL),
+(78, 1, 'SEM (Search Engine Marketing) Specialist', 'en_US', 'App\\MenuItemTypes\\BizionicMenuItemType', NULL, '_self', '{\"slug\": \"sem-search-engine-marketing-specialist\", \"template\": \"hire-sem-specialist\", \"menu_icon\": null, \"menu_columns\": null, \"is_action_item\": \"0\"}', 73, 3, 1, '2023-06-13 06:38:11', '2023-07-27 14:18:24', 1, NULL),
+(79, 1, 'SEO (Search Engine Optimization) Specialist', 'en_US', 'App\\MenuItemTypes\\BizionicMenuItemType', NULL, '_self', '{\"slug\": \"seo-search-engine-optimization-specialist\", \"template\": \"hire-seo-specialist\", \"menu_icon\": null, \"menu_columns\": null, \"is_action_item\": \"0\"}', 73, 4, 1, '2023-06-13 06:38:49', '2023-07-28 00:40:51', 1, NULL),
+(80, 1, 'PPC (Pay-Per-Click) Google Ads Specialist', 'en_US', 'App\\MenuItemTypes\\BizionicMenuItemType', NULL, '_self', '{\"slug\": \"ppc-pay-per-click-google-ads-specialist\", \"template\": \"hire-pay-per-click-specialist\", \"menu_icon\": null, \"menu_columns\": null, \"is_action_item\": \"0\"}', 73, 5, 1, '2023-06-13 06:40:02', '2023-07-28 01:19:48', 1, NULL),
+(81, 1, 'Social Media Manager', 'en_US', 'App\\MenuItemTypes\\BizionicMenuItemType', NULL, '_self', '{\"slug\": \"social-media-manager\", \"template\": \"hire-social-media-manager\", \"menu_icon\": null, \"menu_columns\": null, \"is_action_item\": \"0\"}', 73, 6, 1, '2023-06-13 06:40:57', '2023-07-28 01:34:21', 1, NULL),
+(82, 1, 'Content Marketer', 'en_US', 'App\\MenuItemTypes\\BizionicMenuItemType', NULL, '_self', '{\"slug\": \"content-marketer\", \"template\": \"hire-content-marketer\", \"menu_icon\": null, \"menu_columns\": null, \"is_action_item\": \"0\"}', 73, 7, 1, '2023-06-13 06:43:06', '2023-07-28 01:53:25', 1, NULL),
+(83, 1, 'Product Marketing Manager', 'en_US', 'App\\MenuItemTypes\\BizionicMenuItemType', NULL, '_self', '{\"slug\": \"product-marketing-manager\", \"template\": \"hire-product-marketing-manager\", \"menu_icon\": null, \"menu_columns\": null, \"is_action_item\": \"0\"}', 73, 8, 1, '2023-06-13 06:43:32', '2023-07-28 02:10:00', 1, NULL),
+(84, 1, 'Influencer Marketer', 'en_US', 'App\\MenuItemTypes\\BizionicMenuItemType', NULL, '_self', '{\"slug\": \"influencer-marketer\", \"template\": \"hire-influencer-marketer\", \"menu_icon\": null, \"menu_columns\": null, \"is_action_item\": \"0\"}', 73, 9, 1, '2023-06-13 06:44:06', '2023-07-28 02:22:39', 1, NULL),
+(85, 1, 'Market Research Analyst', 'en_US', 'App\\MenuItemTypes\\BizionicMenuItemType', NULL, '_self', '{\"slug\": \"market-research-analyst\", \"template\": \"hire-market-research-analyst\", \"menu_icon\": null, \"menu_columns\": null, \"is_action_item\": \"0\"}', 73, 10, 1, '2023-06-13 06:44:32', '2023-07-28 05:18:13', 1, NULL),
+(86, 1, 'Public Relations (PR) Specialist', 'en_US', 'App\\MenuItemTypes\\BizionicMenuItemType', NULL, '_self', '{\"slug\": \"public-relations-pr-specialist\", \"template\": \"hire-public-relations-specialist\", \"menu_icon\": null, \"menu_columns\": null, \"is_action_item\": \"0\"}', 73, 11, 1, '2023-06-13 06:45:01', '2023-07-28 05:37:55', 1, NULL),
+(87, 1, 'Email Marketing Specialist', 'en_US', 'App\\MenuItemTypes\\BizionicMenuItemType', NULL, '_self', '{\"slug\": \"email-marketing-specialist\", \"template\": \"hire-email-marketing-specialist\", \"menu_icon\": null, \"menu_columns\": null, \"is_action_item\": \"0\"}', 73, 12, 1, '2023-06-13 06:45:37', '2023-07-28 05:54:52', 1, NULL),
+(88, 1, 'Marketing Coordinator', 'en_US', 'App\\MenuItemTypes\\BizionicMenuItemType', NULL, '_self', '{\"slug\": \"marketing-coordinator\", \"template\": \"hire-marketing-coordinator\", \"menu_icon\": null, \"menu_columns\": null, \"is_action_item\": \"0\"}', 73, 13, 1, '2023-06-13 06:46:03', '2023-07-28 06:15:04', 1, NULL),
+(89, 1, 'Marketing Communications Specialist', 'en_US', 'App\\MenuItemTypes\\BizionicMenuItemType', NULL, '_self', '{\"slug\": \"marketing-communications-specialist\", \"template\": \"hire-marketing-communications-specialist\", \"menu_icon\": null, \"menu_columns\": null, \"is_action_item\": \"0\"}', 73, 14, 1, '2023-06-13 06:46:31', '2023-07-28 06:30:43', 1, NULL),
 (90, 1, 'spacer', 'en_US', 'App\\MenuItemTypes\\BizionicMenuItemType', NULL, '_self', '{\"slug\": \"for-marketers\", \"template\": null, \"menu_icon\": null, \"menu_columns\": null, \"is_action_item\": \"col-lg-6 col-md-6 pr-0\"}', 291, 1, 1, '2023-06-13 06:48:45', '2023-06-14 05:33:01', 1, NULL),
-(91, 1, 'Paid Advertising Specialist', 'en_US', 'App\\MenuItemTypes\\BizionicMenuItemType', NULL, '_self', '{\"slug\": \"paid-advertising-specialist\", \"template\": null, \"menu_icon\": null, \"menu_columns\": null, \"is_action_item\": \"0\"}', 90, 1, 1, '2023-06-13 06:48:45', '2023-06-13 06:50:04', 1, NULL),
-(92, 1, 'Brand Manager', 'en_US', 'App\\MenuItemTypes\\BizionicMenuItemType', NULL, '_self', '{\"slug\": \"brand-manager\", \"template\": null, \"menu_icon\": null, \"menu_columns\": null, \"is_action_item\": \"0\"}', 90, 2, 1, '2023-06-13 06:51:57', '2023-06-13 06:52:14', 1, NULL),
-(93, 1, 'Graphic Designer', 'en_US', 'App\\MenuItemTypes\\BizionicMenuItemType', NULL, '_self', '{\"slug\": \"graphic-designer\", \"template\": null, \"menu_icon\": null, \"menu_columns\": null, \"is_action_item\": \"0\"}', 90, 3, 1, '2023-06-13 06:52:27', '2023-06-13 06:52:43', 1, NULL),
-(94, 1, 'UI UX Designer', 'en_US', 'App\\MenuItemTypes\\BizionicMenuItemType', NULL, '_self', '{\"slug\": \"ui-ux-designer\", \"template\": null, \"menu_icon\": null, \"menu_columns\": null, \"is_action_item\": \"0\"}', 90, 4, 1, '2023-06-13 06:53:01', '2023-06-13 06:53:22', 1, NULL),
-(95, 1, 'Web Designer', 'en_US', 'App\\MenuItemTypes\\BizionicMenuItemType', NULL, '_self', '{\"slug\": \"web-designer\", \"template\": null, \"menu_icon\": null, \"menu_columns\": null, \"is_action_item\": \"0\"}', 90, 5, 1, '2023-06-13 06:53:34', '2023-06-13 06:53:49', 1, NULL),
-(96, 1, 'Motion Designer', 'en_US', 'App\\MenuItemTypes\\BizionicMenuItemType', NULL, '_self', '{\"slug\": \"motion-designer\", \"template\": null, \"menu_icon\": null, \"menu_columns\": null, \"is_action_item\": \"0\"}', 90, 6, 1, '2023-06-13 06:57:18', '2023-06-13 06:57:42', 1, NULL),
-(97, 1, 'Product Designer', 'en_US', 'App\\MenuItemTypes\\BizionicMenuItemType', NULL, '_self', '{\"slug\": \"product-designer\", \"template\": null, \"menu_icon\": null, \"menu_columns\": null, \"is_action_item\": \"0\"}', 90, 7, 1, '2023-06-13 06:57:46', '2023-06-13 06:58:10', 1, NULL),
-(98, 1, 'Brand Designer', 'en_US', 'App\\MenuItemTypes\\BizionicMenuItemType', NULL, '_self', '{\"slug\": \"brand-designer\", \"template\": null, \"menu_icon\": null, \"menu_columns\": null, \"is_action_item\": \"0\"}', 90, 8, 1, '2023-06-13 06:58:22', '2023-06-13 06:58:35', 1, NULL),
-(99, 1, 'UX Researcher', 'en_US', 'App\\MenuItemTypes\\BizionicMenuItemType', NULL, '_self', '{\"slug\": \"ux-researcher\", \"template\": null, \"menu_icon\": null, \"menu_columns\": null, \"is_action_item\": \"0\"}', 90, 9, 1, '2023-06-13 06:58:39', '2023-06-13 06:59:01', 1, NULL),
-(100, 1, 'User Experience (UX) Designer', 'en_US', 'App\\MenuItemTypes\\BizionicMenuItemType', NULL, '_self', '{\"slug\": \"user-experience-ux-designer\", \"template\": null, \"menu_icon\": null, \"menu_columns\": null, \"is_action_item\": \"0\"}', 90, 10, 1, '2023-06-13 06:59:10', '2023-06-13 06:59:37', 1, NULL),
-(101, 1, 'Visual Designer', 'en_US', 'App\\MenuItemTypes\\BizionicMenuItemType', NULL, '_self', '{\"slug\": \"visual-designer\", \"template\": null, \"menu_icon\": null, \"menu_columns\": null, \"is_action_item\": \"0\"}', 90, 11, 1, '2023-06-13 06:59:46', '2023-06-13 07:00:06', 1, NULL),
-(102, 1, 'Print Designer', 'en_US', 'App\\MenuItemTypes\\BizionicMenuItemType', NULL, '_self', '{\"slug\": \"print-designer\", \"template\": null, \"menu_icon\": null, \"menu_columns\": null, \"is_action_item\": \"0\"}', 90, 12, 1, '2023-06-13 07:00:15', '2023-06-13 07:00:30', 1, NULL),
-(103, 1, 'Exhibition Designer', 'en_US', 'App\\MenuItemTypes\\BizionicMenuItemType', NULL, '_self', '{\"slug\": \"exhibition-designer\", \"template\": null, \"menu_icon\": null, \"menu_columns\": null, \"is_action_item\": \"0\"}', 90, 13, 1, '2023-06-13 07:00:40', '2023-06-13 07:00:56', 1, NULL),
-(104, 1, 'Packaging Designer', 'en_US', 'App\\MenuItemTypes\\BizionicMenuItemType', NULL, '_self', '{\"slug\": \"packaging-designer\", \"template\": null, \"menu_icon\": null, \"menu_columns\": null, \"is_action_item\": \"0\"}', 90, 14, 1, '2023-06-13 07:01:05', '2023-06-13 07:01:21', 1, NULL),
+(91, 1, 'Paid Advertising Specialist', 'en_US', 'App\\MenuItemTypes\\BizionicMenuItemType', NULL, '_self', '{\"slug\": \"paid-advertising-specialist\", \"template\": \"hire-paid-advertising-specialist\", \"menu_icon\": null, \"menu_columns\": null, \"is_action_item\": \"0\"}', 90, 1, 1, '2023-06-13 06:48:45', '2023-07-28 07:17:50', 1, NULL),
+(92, 1, 'Brand Manager', 'en_US', 'App\\MenuItemTypes\\BizionicMenuItemType', NULL, '_self', '{\"slug\": \"brand-manager\", \"template\": \"hire-brand-manager\", \"menu_icon\": null, \"menu_columns\": null, \"is_action_item\": \"0\"}', 90, 2, 1, '2023-06-13 06:51:57', '2023-07-28 07:30:15', 1, NULL),
+(93, 1, 'Graphic Designer', 'en_US', 'App\\MenuItemTypes\\BizionicMenuItemType', NULL, '_self', '{\"slug\": \"graphic-designer\", \"template\": \"hire-graphic-designer\", \"menu_icon\": null, \"menu_columns\": null, \"is_action_item\": \"0\"}', 90, 3, 1, '2023-06-13 06:52:27', '2023-07-28 07:42:07', 1, NULL),
+(94, 1, 'UI UX Designer', 'en_US', 'App\\MenuItemTypes\\BizionicMenuItemType', NULL, '_self', '{\"slug\": \"ui-ux-designer\", \"template\": \"hire-ui-ux-designer\", \"menu_icon\": null, \"menu_columns\": null, \"is_action_item\": \"0\"}', 90, 4, 1, '2023-06-13 06:53:01', '2023-07-28 11:09:29', 1, NULL),
+(95, 1, 'Web Designer', 'en_US', 'App\\MenuItemTypes\\BizionicMenuItemType', NULL, '_self', '{\"slug\": \"web-designer\", \"template\": \"hire-web-designer\", \"menu_icon\": null, \"menu_columns\": null, \"is_action_item\": \"0\"}', 90, 5, 1, '2023-06-13 06:53:34', '2023-07-28 12:20:10', 1, NULL),
+(96, 1, 'Motion Designer', 'en_US', 'App\\MenuItemTypes\\BizionicMenuItemType', NULL, '_self', '{\"slug\": \"motion-designer\", \"template\": \"hire-motion-designer\", \"menu_icon\": null, \"menu_columns\": null, \"is_action_item\": \"0\"}', 90, 6, 1, '2023-06-13 06:57:18', '2023-07-28 12:37:52', 1, NULL),
+(97, 1, 'Product Designer', 'en_US', 'App\\MenuItemTypes\\BizionicMenuItemType', NULL, '_self', '{\"slug\": \"product-designer\", \"template\": \"hire-product-designer\", \"menu_icon\": null, \"menu_columns\": null, \"is_action_item\": \"0\"}', 90, 7, 1, '2023-06-13 06:57:46', '2023-07-28 12:50:12', 1, NULL),
+(98, 1, 'Brand Designer', 'en_US', 'App\\MenuItemTypes\\BizionicMenuItemType', NULL, '_self', '{\"slug\": \"brand-designer\", \"template\": \"hire-brand-designer\", \"menu_icon\": null, \"menu_columns\": null, \"is_action_item\": \"0\"}', 90, 8, 1, '2023-06-13 06:58:22', '2023-07-28 13:02:20', 1, NULL),
+(99, 1, 'UX Researcher', 'en_US', 'App\\MenuItemTypes\\BizionicMenuItemType', NULL, '_self', '{\"slug\": \"ux-researcher\", \"template\": \"hire-ux-researcher\", \"menu_icon\": null, \"menu_columns\": null, \"is_action_item\": \"0\"}', 90, 9, 1, '2023-06-13 06:58:39', '2023-07-28 13:28:24', 1, NULL),
+(100, 1, 'User Experience (UX) Designer', 'en_US', 'App\\MenuItemTypes\\BizionicMenuItemType', NULL, '_self', '{\"slug\": \"user-experience-ux-designer\", \"template\": \"hire-user-experience-ux-designer\", \"menu_icon\": null, \"menu_columns\": null, \"is_action_item\": \"0\"}', 90, 10, 1, '2023-06-13 06:59:10', '2023-07-28 13:46:03', 1, NULL),
+(101, 1, 'Visual Designer', 'en_US', 'App\\MenuItemTypes\\BizionicMenuItemType', NULL, '_self', '{\"slug\": \"visual-designer\", \"template\": \"hire-visual-designer\", \"menu_icon\": null, \"menu_columns\": null, \"is_action_item\": \"0\"}', 90, 11, 1, '2023-06-13 06:59:46', '2023-07-28 13:55:33', 1, NULL),
+(102, 1, 'Print Designer', 'en_US', 'App\\MenuItemTypes\\BizionicMenuItemType', NULL, '_self', '{\"slug\": \"print-designer\", \"template\": \"hire-print-designer\", \"menu_icon\": null, \"menu_columns\": null, \"is_action_item\": \"0\"}', 90, 12, 1, '2023-06-13 07:00:15', '2023-07-28 14:04:35', 1, NULL),
+(103, 1, 'Exhibition Designer', 'en_US', 'App\\MenuItemTypes\\BizionicMenuItemType', NULL, '_self', '{\"slug\": \"exhibition-designer\", \"template\": \"hire-exhibition-designer\", \"menu_icon\": null, \"menu_columns\": null, \"is_action_item\": \"0\"}', 90, 13, 1, '2023-06-13 07:00:40', '2023-07-29 02:51:01', 1, NULL),
+(104, 1, 'Packaging Designer', 'en_US', 'App\\MenuItemTypes\\BizionicMenuItemType', NULL, '_self', '{\"slug\": \"packaging-designer\", \"template\": \"hire-packaging-designer\", \"menu_icon\": null, \"menu_columns\": null, \"is_action_item\": \"0\"}', 90, 14, 1, '2023-06-13 07:01:05', '2023-07-29 03:22:00', 1, NULL),
 (105, 1, 'Technologies', 'en_US', 'App\\MenuItemTypes\\BizionicMenuItemType', NULL, '_self', '{\"slug\": \"technology\", \"template\": \"home\", \"menu_icon\": null, \"menu_columns\": null, \"is_action_item\": null}', NULL, 4, 1, '2023-06-13 12:51:53', '2023-06-26 05:58:57', 1, NULL),
-(106, 1, 'Hire Me', 'en_US', 'App\\MenuItemTypes\\BizionicMenuItemType', NULL, '_self', '{\"slug\": \"hire-me\", \"template\": \"home\", \"menu_icon\": null, \"menu_columns\": null, \"is_action_item\": \"hire_me_button\"}', NULL, 8, 1, '2023-06-13 12:52:22', '2023-06-26 05:58:08', 1, NULL),
+(106, 1, 'Hire Me', 'en_US', 'App\\MenuItemTypes\\BizionicMenuItemType', NULL, '_self', '{\"slug\": \"hire-me\", \"template\": \"home\", \"menu_icon\": null, \"menu_columns\": null, \"is_action_item\": \"hire_me_button\"}', NULL, 9, 1, '2023-06-13 12:52:22', '2023-08-07 13:19:18', 1, NULL),
 (107, 1, 'MARKETING SERVICES WE PROVIDE', 'en_US', 'App\\MenuItemTypes\\BizionicMenuItemType', NULL, '_self', '{\"slug\": \"marketing-services-we-provide\", \"template\": \"marketing\", \"menu_icon\": null, \"menu_columns\": null, \"is_action_item\": \"col-lg-7 col-md-7 pr-0\"}', 3, 1, 1, '2023-06-14 02:08:51', '2023-06-14 04:28:47', 1, NULL),
 (108, 1, 'MARKETING & MEDIA', 'en_US', 'App\\MenuItemTypes\\BizionicMenuItemType', NULL, '_self', '{\"slug\": \"marketing-and-media\", \"template\": \"marketing\", \"menu_icon\": null, \"menu_columns\": null, \"is_action_item\": \"0\"}', 292, 1, 1, '2023-06-14 02:09:38', '2023-06-14 05:34:42', 1, NULL),
 (109, 1, 'UI/UX SERVICES', 'en_US', 'App\\MenuItemTypes\\BizionicMenuItemType', NULL, '_self', '{\"slug\": \"ui-ux-services\", \"template\": \"marketing\", \"menu_icon\": null, \"menu_columns\": null, \"is_action_item\": \"0\"}', 292, 2, 1, '2023-06-14 02:10:04', '2023-06-14 05:34:43', 1, NULL),
@@ -956,7 +1138,7 @@ INSERT INTO `nova_menu_menu_items` (`id`, `menu_id`, `name`, `locale`, `class`, 
 (166, 1, 'Education and E-Learning', 'en_US', 'App\\MenuItemTypes\\BizionicMenuItemType', NULL, '_self', '{\"slug\": \"education-and-e-Learning\", \"template\": \"home\", \"menu_icon\": null, \"menu_columns\": null, \"is_action_item\": \"0\"}', 157, 9, 1, '2023-06-14 02:55:41', '2023-07-04 12:30:48', 1, NULL),
 (167, 1, 'Food & FMCG', 'en_US', 'App\\MenuItemTypes\\BizionicMenuItemType', NULL, '_self', '{\"slug\": \"food-and-fmcg\", \"template\": \"home\", \"menu_icon\": null, \"menu_columns\": null, \"is_action_item\": \"0\"}', 157, 10, 1, '2023-06-14 02:56:10', '2023-06-14 02:56:34', 1, NULL),
 (168, 1, 'Automotive', 'en_US', 'App\\MenuItemTypes\\BizionicMenuItemType', NULL, '_self', '{\"slug\": \"automotive\", \"template\": \"home\", \"menu_icon\": null, \"menu_columns\": null, \"is_action_item\": \"0\"}', 157, 11, 1, '2023-06-14 02:56:40', '2023-06-14 02:56:50', 1, NULL),
-(169, 1, 'E-Commerce', 'en_US', 'App\\MenuItemTypes\\BizionicMenuItemType', NULL, '_self', '{\"slug\": \"e-commerce\", \"template\": \"eCommerce\", \"menu_icon\": null, \"menu_columns\": null, \"is_action_item\": \"0\"}', 157, 12, 1, '2023-06-14 02:56:57', '2023-07-23 04:31:46', 1, NULL),
+(169, 1, 'E-Commerce', 'en_US', 'App\\MenuItemTypes\\BizionicMenuItemType', NULL, '_self', '{\"slug\": \"e-commerce\", \"template\": \"eCommerce\", \"menu_icon\": null, \"menu_columns\": null, \"is_action_item\": \"0\"}', 157, 12, 1, '2023-06-14 02:56:57', '2023-08-07 13:19:53', 1, NULL),
 (170, 1, 'WEB', 'en_US', 'App\\MenuItemTypes\\BizionicMenuItemType', NULL, '_self', '{\"slug\": \"web\", \"template\": \"home\", \"menu_icon\": null, \"menu_columns\": null, \"is_action_item\": \"0\"}', 297, 1, 1, '2023-06-14 02:58:19', '2023-06-14 05:41:46', 1, NULL),
 (171, 1, 'DIGITAL MARKETING', 'en_US', 'App\\MenuItemTypes\\BizionicMenuItemType', NULL, '_self', '{\"slug\": \"digital-marketing\", \"template\": \"home\", \"menu_icon\": null, \"menu_columns\": null, \"is_action_item\": \"0\"}', 297, 2, 1, '2023-06-14 02:58:38', '2023-06-14 05:41:48', 1, NULL),
 (172, 1, 'SEO', 'en_US', 'App\\MenuItemTypes\\BizionicMenuItemType', NULL, '_self', '{\"slug\": \"seo\", \"template\": \"home\", \"menu_icon\": null, \"menu_columns\": null, \"is_action_item\": \"0\"}', 297, 3, 1, '2023-06-14 02:59:05', '2023-06-14 05:41:55', 1, NULL),
@@ -964,11 +1146,11 @@ INSERT INTO `nova_menu_menu_items` (`id`, `menu_id`, `name`, `locale`, `class`, 
 (174, 1, 'APP', 'en_US', 'App\\MenuItemTypes\\BizionicMenuItemType', NULL, '_self', '{\"slug\": \"app\", \"template\": \"home\", \"menu_icon\": null, \"menu_columns\": null, \"is_action_item\": \"0\"}', 298, 1, 1, '2023-06-14 02:59:45', '2023-06-14 05:42:33', 1, NULL),
 (175, 1, 'CLOUD & HOSTING', 'en_US', 'App\\MenuItemTypes\\BizionicMenuItemType', NULL, '_self', '{\"slug\": \"cloud-and-hosting\", \"template\": \"home\", \"menu_icon\": null, \"menu_columns\": null, \"is_action_item\": \"0\"}', 298, 2, 1, '2023-06-14 03:00:02', '2023-06-14 13:15:53', 1, NULL),
 (176, 1, 'GAMES', 'en_US', 'App\\MenuItemTypes\\BizionicMenuItemType', NULL, '_self', '{\"slug\": \"games\", \"template\": \"home\", \"menu_icon\": null, \"menu_columns\": null, \"is_action_item\": \"0\"}', 298, 3, 1, '2023-06-14 03:00:22', '2023-06-14 13:18:28', 1, NULL),
-(187, 1, 'Magento', 'en_US', 'App\\MenuItemTypes\\BizionicMenuItemType', NULL, '_self', '{\"slug\": \"magento\", \"template\": \"home\", \"menu_icon\": null, \"menu_columns\": null, \"is_action_item\": \"0\"}', 146, 1, 1, '2023-06-14 03:02:25', '2023-06-14 03:02:37', 1, NULL),
+(187, 1, 'Magento', 'en_US', 'App\\MenuItemTypes\\BizionicMenuItemType', NULL, '_self', '{\"slug\": \"magento\", \"template\": \"home\", \"menu_icon\": null, \"menu_columns\": null, \"is_action_item\": \"0\"}', 146, 1, 1, '2023-06-14 03:02:25', '2023-06-14 03:02:37', 1, NULL);
+INSERT INTO `nova_menu_menu_items` (`id`, `menu_id`, `name`, `locale`, `class`, `value`, `target`, `data`, `parent_id`, `order`, `enabled`, `created_at`, `updated_at`, `nestable`, `slug`) VALUES
 (188, 1, 'Shopify', 'en_US', 'App\\MenuItemTypes\\BizionicMenuItemType', NULL, '_self', '{\"slug\": \"shopify\", \"template\": \"home\", \"menu_icon\": null, \"menu_columns\": null, \"is_action_item\": \"0\"}', 146, 2, 1, '2023-06-14 03:02:47', '2023-06-14 03:02:58', 1, NULL),
 (189, 1, 'Core PHP', 'en_US', 'App\\MenuItemTypes\\BizionicMenuItemType', NULL, '_self', '{\"slug\": \"core-php\", \"template\": \"home\", \"menu_icon\": null, \"menu_columns\": null, \"is_action_item\": \"0\"}', 147, 1, 1, '2023-06-14 03:03:07', '2023-06-14 03:03:19', 1, NULL),
-(190, 1, 'Cake PHP', 'en_US', 'App\\MenuItemTypes\\BizionicMenuItemType', NULL, '_self', '{\"slug\": \"cake-php\", \"template\": \"home\", \"menu_icon\": null, \"menu_columns\": null, \"is_action_item\": \"0\"}', 147, 2, 1, '2023-06-14 03:03:22', '2023-06-14 03:03:32', 1, NULL);
-INSERT INTO `nova_menu_menu_items` (`id`, `menu_id`, `name`, `locale`, `class`, `value`, `target`, `data`, `parent_id`, `order`, `enabled`, `created_at`, `updated_at`, `nestable`, `slug`) VALUES
+(190, 1, 'Cake PHP', 'en_US', 'App\\MenuItemTypes\\BizionicMenuItemType', NULL, '_self', '{\"slug\": \"cake-php\", \"template\": \"home\", \"menu_icon\": null, \"menu_columns\": null, \"is_action_item\": \"0\"}', 147, 2, 1, '2023-06-14 03:03:22', '2023-06-14 03:03:32', 1, NULL),
 (191, 1, 'Laravel', 'en_US', 'App\\MenuItemTypes\\BizionicMenuItemType', NULL, '_self', '{\"slug\": \"laravel\", \"template\": \"home\", \"menu_icon\": null, \"menu_columns\": null, \"is_action_item\": \"0\"}', 147, 3, 1, '2023-06-14 03:03:38', '2023-06-14 03:03:49', 1, NULL),
 (192, 1, 'Flash Games', 'en_US', 'App\\MenuItemTypes\\BizionicMenuItemType', NULL, '_self', '{\"slug\": \"flash-games\", \"template\": \"home\", \"menu_icon\": null, \"menu_columns\": null, \"is_action_item\": \"0\"}', 148, 1, 1, '2023-06-14 03:04:01', '2023-06-14 03:04:15', 1, NULL),
 (193, 1, 'Unity 3D', 'en_US', 'App\\MenuItemTypes\\BizionicMenuItemType', NULL, '_self', '{\"slug\": \"unity-3d\", \"template\": \"home\", \"menu_icon\": null, \"menu_columns\": null, \"is_action_item\": \"0\"}', 148, 2, 1, '2023-06-14 03:04:21', '2023-06-14 03:04:32', 1, NULL),
@@ -1112,12 +1294,35 @@ INSERT INTO `nova_menu_menu_items` (`id`, `menu_id`, `name`, `locale`, `class`, 
 (348, 1, '3D Art', 'en_US', 'App\\MenuItemTypes\\BizionicMenuItemType', NULL, '_self', '{\"slug\": \"3d-art\", \"template\": \"home\", \"menu_icon\": null, \"menu_columns\": null, \"is_action_item\": \"0\"}', 176, 3, 1, '2023-06-14 13:21:20', '2023-06-14 13:21:34', 1, NULL),
 (349, 1, 'Virtual Reality (VR)', 'en_US', 'App\\MenuItemTypes\\BizionicMenuItemType', NULL, '_self', '{\"slug\": \"virtual-reality-vr\", \"template\": \"home\", \"menu_icon\": null, \"menu_columns\": null, \"is_action_item\": \"0\"}', 176, 4, 1, '2023-06-14 13:21:44', '2023-06-14 13:22:11', 1, NULL),
 (350, 1, 'Augmented Reality(AR)', 'en_US', 'App\\MenuItemTypes\\BizionicMenuItemType', NULL, '_self', '{\"slug\": \"augmented-reality-ar\", \"template\": \"home\", \"menu_icon\": null, \"menu_columns\": null, \"is_action_item\": \"0\"}', 176, 5, 1, '2023-06-14 13:22:21', '2023-06-14 13:22:44', 1, NULL),
-(351, 1, 'Insta Hirin', 'en_US', 'App\\MenuItemTypes\\BizionicMenuItemType', NULL, '_self', '{\"slug\": \"InstaHirin\", \"template\": \"instahirin\", \"menu_icon\": null, \"menu_columns\": null, \"is_action_item\": \"hire_me_button\"}', NULL, 7, 1, '2023-06-25 08:07:42', '2023-06-26 05:58:08', 1, NULL),
+(351, 1, 'Notification Center', 'en_US', 'App\\MenuItemTypes\\BizionicMenuItemType', NULL, '_self', '{\"slug\": \"notification-center\", \"template\": \"notification-center\", \"menu_icon\": null, \"menu_columns\": null, \"is_action_item\": \"font-weight-bold\"}', NULL, 7, 1, '2023-06-25 08:07:42', '2023-08-08 12:24:30', 1, NULL),
 (352, 1, 'Insta Requirement Form', 'en_US', 'App\\MenuItemTypes\\BizionicMenuItemType', NULL, '_self', '{\"slug\": \"instaRequirement\", \"template\": \"instaRequirement\", \"menu_icon\": null, \"menu_columns\": null, \"is_action_item\": \"d-none\"}', 67, 2, 1, '2023-06-28 10:40:08', '2023-06-28 10:41:11', 1, NULL),
 (353, 1, 'Hire Form', 'en_US', 'App\\MenuItemTypes\\BizionicMenuItemType', NULL, '_self', '{\"slug\": \"HireForm\", \"template\": \"hireForm\", \"menu_icon\": null, \"menu_columns\": null, \"is_action_item\": \"d-none\"}', 67, 3, 1, '2023-07-17 12:03:04', '2023-07-17 12:04:31', 1, NULL),
-(354, 1, 'Bizionic Team', 'en_US', 'App\\MenuItemTypes\\BizionicMenuItemType', NULL, '_self', '{\"slug\": \"bizionic-team\", \"template\": \"bizionicTeam\", \"menu_icon\": null, \"menu_columns\": null, \"is_action_item\": \"d-none\"}', 157, 13, 1, '2023-07-18 12:01:35', '2023-07-23 04:41:20', 1, NULL),
+(354, 1, 'Bizionic Team', 'en_US', 'App\\MenuItemTypes\\BizionicMenuItemType', NULL, '_self', '{\"slug\": \"bizionic-team\", \"template\": \"bizionicTeam\", \"menu_icon\": null, \"menu_columns\": null, \"is_action_item\": \"d-none\"}', 157, 13, 1, '2023-07-18 12:01:35', '2023-08-07 13:19:53', 1, NULL),
 (355, 1, 'Insta Hirin View All', 'en_US', 'App\\MenuItemTypes\\BizionicMenuItemType', NULL, '_self', '{\"slug\": \"hirin-view-all\", \"template\": \"instahirinViewAll\", \"menu_icon\": null, \"menu_columns\": null, \"is_action_item\": \"d-none\"}', 67, 5, 1, '2023-07-20 13:52:38', '2023-07-23 01:24:12', 1, NULL),
-(357, 1, 'insta Hirin Onboard Form', 'en_US', 'App\\MenuItemTypes\\BizionicMenuItemType', NULL, '_self', '{\"slug\": \"instaHirin Onboard Form\", \"template\": \"onboard-form\", \"menu_icon\": null, \"menu_columns\": null, \"is_action_item\": \"d-none\"}', 67, 4, 1, '2023-07-23 01:24:12', '2023-07-23 01:28:19', 1, NULL);
+(357, 1, 'insta Hirin Onboard Form', 'en_US', 'App\\MenuItemTypes\\BizionicMenuItemType', NULL, '_self', '{\"slug\": \"instaHirin Onboard Form\", \"template\": \"onboard-form\", \"menu_icon\": null, \"menu_columns\": null, \"is_action_item\": \"d-none\"}', 67, 4, 1, '2023-07-23 01:24:12', '2023-07-23 01:28:19', 1, NULL),
+(358, 1, 'Insta Hirin', 'en_US', 'App\\MenuItemTypes\\BizionicMenuItemType', NULL, '_self', '{\"slug\": \"InstaHirin\", \"template\": \"instahirin\", \"menu_icon\": null, \"menu_columns\": null, \"is_action_item\": \"hire_me_button\"}', NULL, 8, 1, '2023-08-01 13:27:58', '2023-08-07 13:19:18', 1, NULL),
+(361, 1, 'Segment', 'en_US', 'App\\MenuItemTypes\\BizionicMenuItemType', NULL, '_self', '{\"slug\": \"segment\", \"template\": null, \"menu_icon\": null, \"menu_columns\": null, \"is_action_item\": \"col-lg-12  col-md-12\"}', 360, 1, 1, '2023-08-07 13:08:46', '2023-08-07 13:08:46', 1, NULL),
+(362, 1, 'spacer', 'en_US', 'App\\MenuItemTypes\\BizionicMenuItemType', NULL, '_self', '{\"slug\": \"industries\", \"template\": \"home\", \"menu_icon\": null, \"menu_columns\": null, \"is_action_item\": \"0\"}', 361, 1, 1, '2023-08-07 13:08:47', '2023-08-07 13:08:47', 1, NULL),
+(363, 1, 'Startups', 'en_US', 'App\\MenuItemTypes\\BizionicMenuItemType', NULL, '_self', '{\"slug\": \"startups\", \"template\": \"home\", \"menu_icon\": null, \"menu_columns\": null, \"is_action_item\": \"0\"}', 362, 1, 1, '2023-08-07 13:08:47', '2023-08-07 13:08:47', 1, NULL),
+(364, 1, 'Real Estate', 'en_US', 'App\\MenuItemTypes\\BizionicMenuItemType', NULL, '_self', '{\"slug\": \"real-estate\", \"template\": \"home\", \"menu_icon\": null, \"menu_columns\": null, \"is_action_item\": \"0\"}', 362, 2, 1, '2023-08-07 13:08:47', '2023-08-07 13:08:47', 1, NULL),
+(365, 1, 'B2B Solutions', 'en_US', 'App\\MenuItemTypes\\BizionicMenuItemType', NULL, '_self', '{\"slug\": \"b2b-solutions\", \"template\": \"home\", \"menu_icon\": null, \"menu_columns\": null, \"is_action_item\": \"0\"}', 362, 3, 1, '2023-08-07 13:08:47', '2023-08-07 13:08:47', 1, NULL),
+(366, 1, 'B2C Solutions', 'en_US', 'App\\MenuItemTypes\\BizionicMenuItemType', NULL, '_self', '{\"slug\": \"b2c-solutions\", \"template\": \"home\", \"menu_icon\": null, \"menu_columns\": null, \"is_action_item\": \"0\"}', 362, 4, 1, '2023-08-07 13:08:47', '2023-08-07 13:08:47', 1, NULL),
+(367, 1, 'Healthcare', 'en_US', 'App\\MenuItemTypes\\BizionicMenuItemType', NULL, '_self', '{\"slug\": \"healthcare\", \"template\": \"home\", \"menu_icon\": null, \"menu_columns\": null, \"is_action_item\": \"0\"}', 362, 5, 1, '2023-08-07 13:08:47', '2023-08-07 13:08:47', 1, NULL),
+(368, 1, 'Travel & Hospitality', 'en_US', 'App\\MenuItemTypes\\BizionicMenuItemType', NULL, '_self', '{\"slug\": \"travel-and-hospitality\", \"template\": \"home\", \"menu_icon\": null, \"menu_columns\": null, \"is_action_item\": \"0\"}', 362, 6, 1, '2023-08-07 13:08:47', '2023-08-07 13:08:47', 1, NULL),
+(369, 1, 'Banking & Finance', 'en_US', 'App\\MenuItemTypes\\BizionicMenuItemType', NULL, '_self', '{\"slug\": \"banking-and-finance\", \"template\": \"home\", \"menu_icon\": null, \"menu_columns\": null, \"is_action_item\": \"0\"}', 362, 7, 1, '2023-08-07 13:08:47', '2023-08-07 13:08:47', 1, NULL),
+(370, 1, 'Media & Publishing', 'en_US', 'App\\MenuItemTypes\\BizionicMenuItemType', NULL, '_self', '{\"slug\": \"media-and-publishing\", \"template\": \"home\", \"menu_icon\": null, \"menu_columns\": null, \"is_action_item\": \"0\"}', 362, 8, 1, '2023-08-07 13:08:47', '2023-08-07 13:08:47', 1, NULL),
+(371, 1, 'Education and E-Learning', 'en_US', 'App\\MenuItemTypes\\BizionicMenuItemType', NULL, '_self', '{\"slug\": \"education-and-e-Learning\", \"template\": \"home\", \"menu_icon\": null, \"menu_columns\": null, \"is_action_item\": \"0\"}', 362, 9, 1, '2023-08-07 13:08:47', '2023-08-07 13:08:47', 1, NULL),
+(372, 1, 'Food & FMCG', 'en_US', 'App\\MenuItemTypes\\BizionicMenuItemType', NULL, '_self', '{\"slug\": \"food-and-fmcg\", \"template\": \"home\", \"menu_icon\": null, \"menu_columns\": null, \"is_action_item\": \"0\"}', 362, 10, 1, '2023-08-07 13:08:47', '2023-08-07 13:08:47', 1, NULL),
+(373, 1, 'Automotive', 'en_US', 'App\\MenuItemTypes\\BizionicMenuItemType', NULL, '_self', '{\"slug\": \"automotive\", \"template\": \"home\", \"menu_icon\": null, \"menu_columns\": null, \"is_action_item\": \"0\"}', 362, 11, 1, '2023-08-07 13:08:47', '2023-08-07 13:08:47', 1, NULL),
+(374, 1, 'E-Commerce', 'en_US', 'App\\MenuItemTypes\\BizionicMenuItemType', NULL, '_self', '{\"slug\": \"e-commerce\", \"template\": \"eCommerce\", \"menu_icon\": null, \"menu_columns\": null, \"is_action_item\": \"0\"}', 362, 12, 1, '2023-08-07 13:08:47', '2023-08-07 13:08:47', 1, NULL);
+INSERT INTO `nova_menu_menu_items` (`id`, `menu_id`, `name`, `locale`, `class`, `value`, `target`, `data`, `parent_id`, `order`, `enabled`, `created_at`, `updated_at`, `nestable`, `slug`) VALUES
+(375, 1, 'Bizionic Team', 'en_US', 'App\\MenuItemTypes\\BizionicMenuItemType', NULL, '_self', '{\"slug\": \"bizionic-team\", \"template\": \"bizionicTeam\", \"menu_icon\": null, \"menu_columns\": null, \"is_action_item\": \"d-none\"}', 362, 13, 1, '2023-08-07 13:08:47', '2023-08-07 13:08:47', 1, NULL),
+(382, 1, 'Mobile Push Notifications', 'en_US', 'App\\MenuItemTypes\\BizionicMenuItemType', NULL, '_self', '{\"slug\": \"mobile-push-notifications\", \"template\": \"mobile-push-notification\", \"menu_icon\": null, \"menu_columns\": null, \"is_action_item\": \"d-none\"}', 157, 14, 1, '2023-08-08 12:30:29', '2023-08-08 12:31:30', 1, NULL),
+(383, 1, 'Web Push Notifications', 'en_US', 'App\\MenuItemTypes\\BizionicMenuItemType', NULL, '_self', '{\"slug\": \"web-push-notifications\", \"template\": \"web-push-notification\", \"menu_icon\": null, \"menu_columns\": null, \"is_action_item\": \"d-none\"}', 157, 15, 1, '2023-08-08 13:11:17', '2023-08-08 13:23:41', 1, NULL),
+(384, 1, 'In App Notifications', 'en_US', 'App\\MenuItemTypes\\BizionicMenuItemType', NULL, '_self', '{\"slug\": \"in-app-push-notifications\", \"template\": \"in-app-push-notification\", \"menu_icon\": null, \"menu_columns\": null, \"is_action_item\": \"d-none\"}', 157, 16, 1, '2023-08-08 13:46:40', '2023-08-08 13:47:38', 1, NULL),
+(385, 1, 'Email Notifications', 'en_US', 'App\\MenuItemTypes\\BizionicMenuItemType', NULL, '_self', '{\"slug\": \"email-notifications\", \"template\": \"email-notification\", \"menu_icon\": null, \"menu_columns\": null, \"is_action_item\": \"d-none\"}', 157, 17, 1, '2023-08-10 12:25:30', '2023-08-10 12:26:06', 1, NULL),
+(386, 1, 'SMS Notifications', 'en_US', 'App\\MenuItemTypes\\BizionicMenuItemType', NULL, '_self', '{\"slug\": \"sms-notifications\", \"template\": \"sms-notification\", \"menu_icon\": null, \"menu_columns\": null, \"is_action_item\": \"d-none\"}', 157, 18, 1, '2023-08-10 12:44:36', '2023-08-10 12:45:12', 1, NULL),
+(387, 1, 'Journey Notifications', 'en_US', 'App\\MenuItemTypes\\BizionicMenuItemType', NULL, '_self', '{\"slug\": \"journey-notifications\", \"template\": \"journey-notification\", \"menu_icon\": null, \"menu_columns\": null, \"is_action_item\": \"d-none\"}', 157, 19, 1, '2023-08-10 13:19:47', '2023-08-10 13:20:20', 1, NULL);
 
 -- --------------------------------------------------------
 
@@ -1177,7 +1382,7 @@ CREATE TABLE IF NOT EXISTS `pages` (
   `updated_at` timestamp NULL DEFAULT NULL,
   PRIMARY KEY (`id`),
   UNIQUE KEY `pages_slug_unique` (`slug`)
-) ENGINE=InnoDB AUTO_INCREMENT=88 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=124 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
 --
 -- Dumping data for table `pages`
@@ -1210,7 +1415,7 @@ INSERT INTO `pages` (`id`, `title`, `slug`, `meta_title`, `meta_keywords`, `meta
 (24, 'Automotive', 'industries|industries-we-serve|industries|automotive', 'Meta Title', 'Meta Keywords', 'Meta Description', 'automotive', '2023-07-04 12:28:13', '2023-07-04 12:28:13'),
 (25, 'E-Commerce', 'industries|industries-we-serve|industries|e-commerce', 'Meta Title', 'Meta Keywords', 'Meta Description', 'eCommerce', '2023-07-04 12:29:26', '2023-07-23 04:33:21'),
 (26, 'Hire Form', 'hire|developer|developers-other|HireForm', 'Meta Title', 'Meta Keywords', 'Meta Description', 'hireForm', '2023-07-17 12:05:17', '2023-07-17 12:05:17'),
-(27, 'Bizionic Team', 'industries|industries-we-serve|industries|bizionic-team', 'Meta Title', 'Meta Keywords', 'Meta Description', 'bizionicTeam', '2023-07-18 12:03:23', '2023-07-23 04:42:56'),
+(27, 'Bizionic Team', 'bizionic-team', 'Meta Title', 'Meta Keywords', 'Meta Description', 'bizionicTeam', '2023-07-18 12:03:23', '2023-07-23 04:42:56'),
 (28, 'Insta Hirin View All', 'hire|developer|developers-other|hirin-view-all', 'Meta Title', 'Meta Keywords', 'Meta Description', 'instahirinViewAll', '2023-07-20 13:57:31', '2023-07-20 13:57:31'),
 (29, 'Hire Html5 Css3 Developer', 'hire|developer|front-end-developement|hire-html5-css3-developer', 'Meta Title', 'Meta Keywords', 'Meta Description', 'hire-html5-css3', '2023-07-20 14:21:08', '2023-07-20 14:21:08'),
 (30, 'Hire Angular Developers', 'hire|developer|front-end-developement|hire-angular-developers', 'Meta Title', 'Meta Keywords', 'Meta Description', 'hire-angular', '2023-07-21 01:46:19', '2023-07-21 01:46:19'),
@@ -1258,7 +1463,43 @@ INSERT INTO `pages` (`id`, `title`, `slug`, `meta_title`, `meta_keywords`, `meta
 (73, 'Hire Full Stack Developers', 'hire|developer|other-developers|hire-full-stack-developers', 'Meta Title', 'Meta Keywords', 'Meta Description', 'hire-full-stack-developer', '2023-07-22 15:32:19', '2023-07-22 15:32:19'),
 (74, 'Hire QA Software Engineers', 'hire|developer|other-developers|hire-software-engineers', 'Meta Title', 'Meta Keywords', 'Meta Description', 'hire-qa-engineer-developer', '2023-07-23 00:42:37', '2023-07-23 00:42:37'),
 (76, 'Looking for Other Technology?', 'hire|developer|developers-other|looking-for-other-technology', 'Meta Title', 'Meta Keywords', 'Meta Description', 'developer-looking-other-technology', '2023-07-23 01:04:45', '2023-07-23 04:51:21'),
-(87, 'insta Hirin Onboard Form', 'hire|developer|developers-other|instaHirin Onboard Form', 'Meta Title', 'Meta Keywords', 'Meta Description', 'onboard-form', '2023-07-23 01:28:58', '2023-07-23 01:28:58');
+(87, 'insta Hirin Onboard Form', 'hire|developer|developers-other|instaHirin Onboard Form', 'Meta Title', 'Meta Keywords', 'Meta Description', 'onboard-form', '2023-07-23 01:28:58', '2023-07-23 01:28:58'),
+(88, 'Marketing Manager', 'hire|marketers|marketing-team-augmentation|marketing-manager', 'Meta Title', 'Meta Keywords', 'Meta Description', 'hire-marketing-manager', '2023-07-27 13:15:33', '2023-07-27 13:15:33'),
+(89, 'Digital Marketing Specialist', 'hire|marketers|marketing-team-augmentation|digital-marketing-specialist', 'Meta Title', 'Meta Keywords', 'Meta Description', 'hire-digital-marketing-specialist', '2023-07-27 13:38:27', '2023-07-27 13:38:27'),
+(90, 'SEM (Search Engine Marketing) Specialist', 'hire|marketers|marketing-team-augmentation|sem-search-engine-marketing-specialist', 'Meta Title', 'Meta Keywords', 'Meta Description', 'hire-sem-specialist', '2023-07-27 14:19:08', '2023-07-27 14:19:08'),
+(91, 'SEO (Search Engine Optimization) Specialist', 'hire|marketers|marketing-team-augmentation|seo-search-engine-optimization-specialist', 'Meta Title', 'Meta Keywords', 'Meta Description', 'hire-seo-specialist', '2023-07-28 00:43:13', '2023-07-28 00:43:13'),
+(92, 'PPC (Pay-Per-Click) Google Ads Specialist', 'hire|marketers|marketing-team-augmentation|ppc-pay-per-click-google-ads-specialist', 'Meta Title', 'Meta Keywords', 'Meta Description', 'hire-pay-per-click-specialist', '2023-07-28 01:20:39', '2023-07-28 01:20:39'),
+(93, 'Social Media Manager', 'hire|marketers|marketing-team-augmentation|social-media-manager', 'Meta Title', 'Meta Keywords', 'Meta Description', 'hire-social-media-manager', '2023-07-28 01:35:03', '2023-07-28 01:35:03'),
+(94, 'Content Marketer', 'hire|marketers|marketing-team-augmentation|content-marketer', 'Meta Title', 'Meta Keywords', 'Meta Description', 'hire-content-marketer', '2023-07-28 01:54:08', '2023-07-28 01:54:08'),
+(95, 'Product Marketing Manager', 'hire|marketers|marketing-team-augmentation|product-marketing-manager', 'Meta Title', 'Meta Keywords', 'Meta Description', 'hire-product-marketing-manager', '2023-07-28 02:10:43', '2023-07-28 02:10:43'),
+(96, 'Influencer Marketer', 'hire|marketers|marketing-team-augmentation|influencer-marketer', 'Meta Title', 'Meta Keywords', 'Meta Description', 'hire-influencer-marketer', '2023-07-28 02:23:34', '2023-07-28 02:23:34'),
+(97, 'Market Research Analyst', 'hire|marketers|marketing-team-augmentation|market-research-analyst', 'Meta Title', 'Meta Keywords', 'Meta Description', 'hire-market-research-analyst', '2023-07-28 05:19:08', '2023-07-28 05:19:08'),
+(98, 'Public Relations (PR) Specialist', 'hire|marketers|marketing-team-augmentation|public-relations-pr-specialist', 'Meta Title', 'Meta Keywords', 'Meta Description', 'hire-public-relations-specialist', '2023-07-28 05:39:02', '2023-07-28 05:39:02'),
+(99, 'Email Marketing Specialist', 'hire|marketers|marketing-team-augmentation|email-marketing-specialist', 'Meta Title', 'Meta Keywords', 'Meta Description', 'hire-email-marketing-specialist', '2023-07-28 05:55:58', '2023-07-28 05:55:58'),
+(100, 'Marketing Coordinator', 'hire|marketers|marketing-team-augmentation|marketing-coordinator', 'Meta Title', 'Meta Keywords', 'Meta Description', 'hire-marketing-coordinator', '2023-07-28 06:15:43', '2023-07-28 06:15:43'),
+(101, 'Marketing Communications Specialist', 'hire|marketers|marketing-team-augmentation|marketing-communications-specialist', 'Meta Title', 'Meta Keywords', 'Meta Description', 'hire-marketing-communications-specialist', '2023-07-28 06:32:11', '2023-07-28 06:32:11'),
+(102, 'Paid Advertising Specialist', 'hire|marketers|for-marketers|paid-advertising-specialist', 'Meta Title', 'Meta Keywords', 'Meta Description', 'hire-paid-advertising-specialist', '2023-07-28 07:18:46', '2023-07-28 07:18:46'),
+(103, 'Brand Manager', 'hire|marketers|for-marketers|brand-manager', 'Meta Title', 'Meta Keywords', 'Meta Description', 'hire-brand-manager', '2023-07-28 07:31:12', '2023-07-28 07:31:12'),
+(104, 'Graphic Designer', 'hire|marketers|for-marketers|graphic-designer', 'Meta Title', 'Meta Keywords', 'Meta Description', 'hire-graphic-designer', '2023-07-28 07:43:09', '2023-07-28 07:43:09'),
+(105, 'UI UX Designer', 'hire|marketers|for-marketers|ui-ux-designer', 'Meta Title', 'Meta Keywords', 'Meta Description', 'hire-ui-ux-designer', '2023-07-28 11:10:50', '2023-07-28 11:10:50'),
+(106, 'Web Designer', 'hire|marketers|for-marketers|web-designer', 'Meta Title', 'Meta Keywords', 'Meta Description', 'hire-web-designer', '2023-07-28 12:20:50', '2023-07-28 12:20:50'),
+(107, 'Motion Designer', 'hire|marketers|for-marketers|motion-designer', 'Meta Title', 'Meta Keywords', 'Meta Description', 'hire-motion-designer', '2023-07-28 12:38:29', '2023-07-28 12:38:29'),
+(108, 'Product Designer', 'hire|marketers|for-marketers|product-designer', 'Meta Title', 'Meta Keywords', 'Meta Description', 'hire-product-designer', '2023-07-28 12:50:59', '2023-07-28 12:50:59'),
+(109, 'Brand Designer', 'hire|marketers|for-marketers|brand-designer', 'Meta Title', 'Meta Keywords', 'Meta Description', 'hire-brand-designer', '2023-07-28 13:03:05', '2023-07-28 13:03:05'),
+(110, 'UX Researcher', 'hire|marketers|for-marketers|ux-researcher', 'Meta Title', 'Meta Keywords', 'Meta Description', 'hire-ux-researcher', '2023-07-28 13:29:36', '2023-07-28 13:29:36'),
+(111, 'User Experience (UX) Designer', 'hire|marketers|for-marketers|user-experience-ux-designer', 'Meta Title', 'Meta Keywords', 'Meta Description', 'hire-user-experience-ux-designer', '2023-07-28 13:46:49', '2023-07-28 13:46:49'),
+(112, 'Visual Designer', 'hire|marketers|for-marketers|visual-designer', 'Meta Title', 'Meta Keywords', 'Meta Description', 'hire-visual-designer', '2023-07-28 13:56:13', '2023-07-28 13:56:13'),
+(113, 'Print Designer', 'hire|marketers|for-marketers|print-designer', 'Meta Title', 'Meta Keywords', 'Meta Description', 'hire-print-designer', '2023-07-28 14:05:16', '2023-07-28 14:05:16'),
+(114, 'Exhibition Designer', 'hire|marketers|for-marketers|exhibition-designer', 'Meta Title', 'Meta Keywords', 'Meta Description', 'hire-exhibition-designer', '2023-07-29 02:51:53', '2023-07-29 02:51:53'),
+(115, 'Packaging Designer', 'hire|marketers|for-marketers|packaging-designer', 'Meta Title', 'Meta Keywords', 'Meta Description', 'hire-packaging-designer', '2023-07-29 03:22:20', '2023-07-29 03:22:20'),
+(116, 'Looking for Other Marketing Skills?', 'hire|marketers|marketers-other|looking-for-other-marketing-skills', 'Meta Title', 'Meta Keywords', 'Meta Description', 'marketer-looking-other-technology', '2023-07-31 13:18:27', '2023-07-31 13:18:27'),
+(117, 'Notification Center', 'notification-center', 'Meta Title', 'Meta Keywords', 'Meta Description', 'notification-center', '2023-08-01 13:32:27', '2023-08-01 13:32:27'),
+(118, 'Mobile Push Notifications', 'notification-center|mobile-push-notifications', 'Meta Title', 'Meta Keywords', 'Meta Description', 'mobile-push-notification', '2023-08-07 13:21:04', '2023-08-07 13:21:04'),
+(119, 'Web Push Notifications', 'notification-center|web-push-notifications', 'Meta Title', 'Meta Keywords', 'Meta Description', 'web-push-notification', '2023-08-08 13:24:50', '2023-08-08 13:24:50'),
+(120, 'In App Notifications', 'notification-center|in-app-push-notifications', 'Meta Title', 'Meta Keywords', 'Meta Description', 'in-app-push-notification', '2023-08-08 13:48:30', '2023-08-08 13:48:30'),
+(121, 'Email Notifications', 'notification-center|email-notifications', 'Meta Title', 'Meta Keywords', 'Meta Description', 'email-notification', '2023-08-10 12:27:21', '2023-08-10 12:27:21'),
+(122, 'SMS Notifications', 'notification-center|sms-notifications', 'Meta Title', 'Meta Keywords', 'Meta Description', 'sms-notification', '2023-08-10 12:45:56', '2023-08-10 12:45:56'),
+(123, 'Journey Notifications', 'notification-center|journey-notifications', 'Meta Title', 'Meta Keywords', 'Meta Description', 'journey-notification', '2023-08-10 13:21:01', '2023-08-10 13:21:01');
 
 -- --------------------------------------------------------
 
