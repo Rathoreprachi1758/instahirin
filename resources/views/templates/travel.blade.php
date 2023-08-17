@@ -22,7 +22,7 @@
                                 successful long-term client relationships. In keeping with industry standards, we provide a wide range of software solutions services which meet all your needs and grow
                                 your business.</p>
 
-                                <a href="#" class="btn_default_white">Contact Us</a>
+                                <a href="/get-a-free-consultation" class="btn_default_white">Contact Us</a>
                         </div>
 
 
@@ -48,28 +48,28 @@
             <div class="auto_container">
                 <div class="technology_master_detail">
                     <div class="custom_tittle pt-2">
-                        <h2>Utilize Our Top Software Services<br>
-                            to Expand Your Business  </h2> 
+                    <h2> <strong>Utilize Our</strong> Top Software Services <strong>to<br>
+                             Expand Your Business</strong>   </h2> 
                     </div>
 
 
 
                     <div class="servicesProvided_info aos-init aos-animate  pb-0" data-aos="fade-up" data-aos-duration="800" data-aos-easing="ease-out-cubic"> 
                         <ul>
-                            <li><a href="#">Startup Solutions</a></li> |
-                            <li><a href="#">Real Estate</a></li> |
-                            <li><a href="#">B2B Solutions</a></li> |  <br>
+                            <li><a href="/industries/industries-we-serve/industries/startups">Startup Solutions</a></li> |
+                            <li><a href="/industries/industries-we-serve/industries/real-estate">Real Estate</a></li> |
+                            <li><a href="/industries/industries-we-serve/industries/b2b-solutions">B2B Solutions</a></li> | 
+                            <li><a href="/industries/industries-we-serve/industries/b2c-solutions">B2C Solutions</a></li> | 
 
-                            <li><a href="#">Healthcare</a></li> |  
-                            <li><a href="#">Travel & Hospitality </a></li> | 
-                            <li><a href="#">Banking & Finance</a></li> |<br>
+                            <li><a href="/industries/industries-we-serve/industries/healthcare">Healthcare</a></li> |  
+                            <li><a href="/industries/industries-we-serve/industries/travel-and-hospitality">Travel & Hospitality </a></li> | 
+                            <li><a href="/industries/industries-we-serve/industries/banking-and-finance">Banking & Finance</a></li> |<br>
 
-                            <li><a href="#">Media & Publishing</a></li> | 
-                            <li><a href="#">Education and E-Learning</a></li> | 
-                            <li><a href="#">Food Ordering Solutions</a></li> | <br>
-
-                            <li><a href="#">Automotive Solutions </a></li> |
-                            <li><a href="#">Train Ticket Booking Solutions</a></li> 
+                            <li><a href="/industries/industries-we-serve/industries/media-and-publishing">Media & Publishing</a></li> | 
+                            <li><a href="/industries/industries-we-serve/industries/education-and-e-Learning">Education and E-Learning</a></li> | 
+                            <li><a href="/industries/industries-we-serve/industries/food-and-fmcg">Food & FMCG</a></li> | 
+                            <li><a href="/industries/industries-we-serve/industries/automotive">Automotive</a></li> | 
+                            <li><a href="/industries/industries-we-serve/industries/e-commerce">E-Commerce</a></li> 
                         </ul>
                     </div>
 
@@ -93,19 +93,19 @@
                     <div class="industryNew_section1">
                         <div class="row align-items-center">
                             <div class="col-lg-6 col-md-6 aos-init " data-aos="fade-right" data-aos-duration="1000" data-aos-easing="ease">
-                                <div class="industryNew_section1_info">
-                                    <h3>
-                                        <strong>TRAVEL </strong> <strong class="tittleColor_black">&</strong> <br>  
-                                        <strong class="">HOSPITALITY</strong> <br> 
-                                        <small class="tittleColor_black">MANAGEMENT</small><br> 
-                                        <small class="tittleColor_black">SOFTWARE</small>
-                                    </h3>
+                                <div class="custom_tittle text-left">
+                                    <h2>
+                                        TRAVEL <strong>AND</strong> HOSPITALITY<br> <strong>MANAGEMENT SOFTWARE</strong>
+                                    </h2>
 
-                                        <p>Travel agencies are usually in need of a few types of software. A typical travel agent's daily tasks usually involve scheduling, creating tour programmes, providing consultation services, booking activities, negotiating with vendors, creating personalised tours, and locating the best fare for a client's budget. Of course, none of this has to be completed manually or using an
+                                        <p class="text-justify p_color">Travel agencies are usually in need of a few types of software. A typical travel agent's daily tasks usually involve scheduling, creating tour programmes, providing consultation services, booking activities, negotiating with vendors, creating personalised tours, and locating the best fare for a client's budget. Of course, none of this has to be completed manually or using an
                                             Excel spreadsheet.</p>
-                                        <p>Serving over 150+ travel clients, many of whom are international brands,
+                                        <p class="text-justify p_color">Serving over 150+ travel clients, many of whom are international brands,
                                             BIZIONIC have significant experience in design and development of
                                             bespoke solutions for the travel and hospitality industry.</p>
+
+                                            <a href="/get-a-free-consultation" class="btn_default mt-2">Get a Free Consultation</a>
+                                        
                                     
                                 </div>
                             </div>
@@ -125,71 +125,79 @@
 
                     <div class="industryNew_section2_info aos-init  b2c_colSection" data-aos="fade-up" data-aos-duration="1500" data-aos-easing="ease">
                         <div class="custom_tittle">
-                            <h2>The Travel Solutions, BIZIONIC Provides</h2> 
+                            <h2><strong>The</strong> Travel Solutions, <strong>BIZIONIC Provides</strong></h2> 
                         </div>
 
-                        <div class="industryNew_section2_cols">
-                            <div class="row">
-                                <div class="col-lg-3 col-md-4 provide_col">
-                                    <div class="industryNew_section2_colsInfo">
-                                        <span><img src="/bizionic/images/travel_icon1.png" alt="#" /></span>
-                                        <h6><a href="#">Hotel Booking <br>
-                                            Search Engine</a></h6> 
-                                    </div>
-                                </div> 
-                                <div class="col-lg-3 col-md-4 provide_col">
-                                    <div class="industryNew_section2_colsInfo">
-                                        <span><img src="/bizionic/images/travel_icon2.png" alt="#" /></span>
-                                        <h6><a href="#">Flight Booking <br>
-                                            Search Engine</a></h6> 
-                                    </div>
-                                </div> 
-                                <div class="col-lg-3 col-md-4 provide_col">
-                                    <div class="industryNew_section2_colsInfo">
-                                        <span><img src="/bizionic/images/travel_icon3.png" alt="#" /></span>
-                                        <h6><a href="#">Cruise Booking <br>
-                                            Search Engine</a></h6> 
-                                    </div>
-                                </div> 
-                                <div class="col-lg-3 col-md-4 provide_col">
-                                    <div class="industryNew_section2_colsInfo">
-                                        <span><img src="/bizionic/images/travel_icon4.png" alt="#" /></span>
-                                        <h6><a href="#">Car <br>
-                                            Rental / Hire</a></h6> 
-                                    </div>
-                                </div> 
-                                
-                                
-
-
-                                <div class="col-lg-3 col-md-4 provide_col">
-                                    <div class="industryNew_section2_colsInfo">
-                                        <span><img src="/bizionic/images/travel_icon5.png" alt="#" /></span>
-                                        <h6><a href="#">Travel Insurance</a></h6> 
-                                    </div>
-                                </div> 
-                                <div class="col-lg-3 col-md-4 provide_col">
-                                    <div class="industryNew_section2_colsInfo">
-                                        <span><img src="/bizionic/images/travel_icon6.png" alt="#" /></span>
-                                        <h6><a href="#">Successful Agents</a></h6> 
-                                    </div>
-                                </div> 
-                                <div class="col-lg-3 col-md-4 provide_col">
-                                    <div class="industryNew_section2_colsInfo">
-                                        <span><img src="/bizionic/images/travel_icon7.png" alt="#" /></span>
-                                        <h6><a href="#">Transfers</a></h6> 
-                                    </div>
-                                </div> 
-                                <div class="col-lg-3 col-md-4 provide_col">
-                                    <div class="industryNew_section2_colsInfo">
-                                        <span><img src="/bizionic/images/travel_icon8.png" alt="#" /></span>
-                                        <h6><a href="#">Travel Extras</a></h6> 
-                                    </div>
-                                </div> 
-                            </div>
-                        </div>
+                        
                     </div>
 
+                </div>
+            </div>
+        </div>
+
+
+
+        <div class="provider_section">
+            <div class="auto_container">
+                <div class="industryNew_section2_cols">
+                    <div class="row">
+                        <div class="col-lg-3 col-md-4 provide_col">
+                            <div class="industryNew_section2_colsInfo">
+                                <span><img src="/bizionic/images/travel_icon1.png" alt="#" /></span>
+                                <h6><a href="#">Hotel Booking <br>
+                                    Search Engine</a></h6> 
+                            </div>
+                        </div> 
+                        <div class="col-lg-3 col-md-4 provide_col">
+                            <div class="industryNew_section2_colsInfo">
+                                <span><img src="/bizionic/images/travel_icon2.png" alt="#" /></span>
+                                <h6><a href="#">Flight Booking <br>
+                                    Search Engine</a></h6> 
+                            </div>
+                        </div> 
+                        <div class="col-lg-3 col-md-4 provide_col">
+                            <div class="industryNew_section2_colsInfo">
+                                <span><img src="/bizionic/images/travel_icon3.png" alt="#" /></span>
+                                <h6><a href="#">Cruise Booking <br>
+                                    Search Engine</a></h6> 
+                            </div>
+                        </div> 
+                        <div class="col-lg-3 col-md-4 provide_col">
+                            <div class="industryNew_section2_colsInfo">
+                                <span><img src="/bizionic/images/travel_icon4.png" alt="#" /></span>
+                                <h6><a href="#">Car <br>
+                                    Rental / Hire</a></h6> 
+                            </div>
+                        </div> 
+                        
+                        
+
+
+                        <div class="col-lg-3 col-md-4 provide_col">
+                            <div class="industryNew_section2_colsInfo">
+                                <span><img src="/bizionic/images/travel_icon5.png" alt="#" /></span>
+                                <h6><a href="#">Travel Insurance</a></h6> 
+                            </div>
+                        </div> 
+                        <div class="col-lg-3 col-md-4 provide_col">
+                            <div class="industryNew_section2_colsInfo">
+                                <span><img src="/bizionic/images/travel_icon6.png" alt="#" /></span>
+                                <h6><a href="#">Successful Agents</a></h6> 
+                            </div>
+                        </div> 
+                        <div class="col-lg-3 col-md-4 provide_col">
+                            <div class="industryNew_section2_colsInfo">
+                                <span><img src="/bizionic/images/travel_icon7.png" alt="#" /></span>
+                                <h6><a href="#">Transfers</a></h6> 
+                            </div>
+                        </div> 
+                        <div class="col-lg-3 col-md-4 provide_col">
+                            <div class="industryNew_section2_colsInfo">
+                                <span><img src="/bizionic/images/travel_icon8.png" alt="#" /></span>
+                                <h6><a href="#">Travel Extras</a></h6> 
+                            </div>
+                        </div> 
+                    </div>
                 </div>
             </div>
         </div>
@@ -209,7 +217,7 @@
                         <div class="row align-items-center">
                             <div class="col-lg-4 col-md-6 aos-init " data-aos="fade-right" data-aos-duration="1000" data-aos-easing="ease">
                                 <div class="custom_tittle text-left">
-                                    <h2>Main Features:</h2> 
+                                    <h2><strong>Main Features:</strong></h2> 
                                 </div>
                                 <div class="additional_benefits_text">
                                     <ul>
@@ -280,76 +288,11 @@
         </div>
 
 
+    <!-- about project section -->
+    @include('forms.contact_section')
 
-
-
-       <!-- about project section -->
-    
-
-       <div class="aboutProject_section services_formOuter">
-        <div class="auto_container">
-            <div class="aboutProject_section_detail"  >
-
-                <div class="custom_tittle">
-                    <h2 class="text-white">We love to create software and find simple <br>
-                        solutions to complex challenges </h2> 
-                </div>
-
-
-                <div class="project_form aos-init aos-animate" data-aos="fade-up" data-aos-duration="800" data-aos-easing="ease-out-cubic">
-                    
-                    <div class="servicesForm">
-                        <p class="text-center">If you have an idea in mind of how to enhance your business processes, don’t hesitate <br>
-                            to contact us and discover more about our technologies!</p>
-                        <div class="row">
-                            <div class="col-lg-6 col-md-12">
-                                <div class="project_form_field">
-                                    <input type="text" value="" placeholder="Name*" />
-                                </div>
-                            </div>
-
-                            <div class="col-lg-6 col-md-12">
-                                <div class="project_form_field">
-                                    <input type="text" value="" placeholder="Phone / Skype / Whatsapp" id="phone" />
-                                </div>
-                            </div>
-                            
-
-                            <div class="col-lg-6 col-md-12">
-                                <div class="project_form_field">
-                                    <input type="text" value="" placeholder="Enter business email" />
-                                </div>
-                            </div> 
-
-
-                            <div class="col-lg-12 col-md-12">
-                                <div class="project_form_textarea">
-                                    <textarea placeholder="How can we help...*"></textarea>
-                                </div>
-                            </div>
-
-                            <div class="col-lg-12 col-md-12">
-                                <div class="addFile_button "> 
-
-                                    <div class="project_form_submit">
-                                        <input type="submit" value="Contact Us" class="btn_default" />
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div> 
-
-
-
-            </div>
-        </div>
-        </div>
-
-
-
-
-
+    <!-- our client Bizionic section -->
+    <client-component></client-component>
 
      <!-- Services provided section -->
 

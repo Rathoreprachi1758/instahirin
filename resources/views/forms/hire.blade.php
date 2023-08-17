@@ -1,7 +1,6 @@
-<div class="custom_tittle text-left">
-    <h2 class="text-white">Hire Talent Now</h2> 
-</div>
-<div class="alert alert-success  text-center" role="alert" id="hire_success">
+
+<hire-component></hire-component>
+{{-- <div class="alert alert-success  text-center" role="alert" id="hire_success">
     Thank you for the message. We will contact you shortly.
 </div>
 <div class="alert alert-danger text-center" role="alert" id="hire_failure">
@@ -44,12 +43,12 @@
                     Marketing Solution’s Privacy Policy, You can withdraw your consent by Contacting us.</p>
 
                 <div class="project_form_submit">
-                    <input type="text" class="hidden" name="lead_type" id="hire_lead_type" value="Hire Now">
-                    <input type="text" class="hidden" name="honeypot" id="honeypot">
+                    <input type="text" class="hidden d-none" name="lead_type" id="hire_lead_type" value="Hire Now">
+                    <input type="text" class="hidden  d-none" name="honeypot" id="honeypot">
                     <input type="submit" value="Augment your Team" class="btn_default" />
                 </div>
             </div>
         </div>
     </div>
 
-</div>
+</div> --}}

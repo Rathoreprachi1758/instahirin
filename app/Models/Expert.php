@@ -6,6 +6,7 @@ use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Database\Eloquent\Relations\BelongsTo;
 use Illuminate\Database\Eloquent\Relations\BelongsToMany;
+use Illuminate\Database\Eloquent\Relations\hasMany;
 
 class Expert extends Model
 {
@@ -21,5 +22,9 @@ class Expert extends Model
 
     public function expertCategory():BelongsTo{
         return $this->belongsTo(ExpertCategory::class);
+    }
+
+    public function hireRequests():HasMany{
+        return $this->hasMany(Expert::class);
     }
 }

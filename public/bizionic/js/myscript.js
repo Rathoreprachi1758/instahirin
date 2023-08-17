@@ -1,8 +1,5 @@
 
 
-
-
-
    $(document).ready(function() {
 
 
@@ -34,7 +31,7 @@
       autoplay: true,
       items: 1,
       nav: true,
-      autoplayHoverPause: true, 
+      autoplayHoverPause: true,
       autoplayTimeout: 5100,
       responsiveClass: true,
       responsive: {
@@ -53,7 +50,7 @@
 
           }
       }
-  }); 
+  });
 
 
 
@@ -62,7 +59,7 @@
   $('.slider-for').slick({
     slidesToShow: 1,
     slidesToScroll: 1,
-    arrows: false, 
+    arrows: false,
     autoplay: false,
     autoplaySpeed: 3000,
     adaptiveHeight: true,
@@ -78,7 +75,7 @@
     responsive: [
         {
           breakpoint: 1024,
-          settings: { 
+          settings: {
             centerMode: true,
             centerPadding: '40px',
             slidesToShow: 4
@@ -117,7 +114,7 @@
     items: 1,
     nav: true,
     margin:30,
-    autoplayHoverPause: true, 
+    autoplayHoverPause: true,
     autoplayTimeout: 5100,
     responsiveClass: true,
     responsive: {
@@ -136,12 +133,12 @@
 
         }
     }
-}); 
-
-    
+});
 
 
- 
+
+
+
 
 
     // pick popup
@@ -157,27 +154,33 @@
 
 
 
-// mobile menu 
+// mobile menu
 
   if (screen.width < 1023) {
-      
+
     $('.chevRowDown').on('click', function(event) {
       $(this).parents('.floatingMenu_col').find('.floatingMenu_col_list').slideToggle();
       $(this).parent('h6').toggleClass('clickH6');
-    });  
+    });
 
 
     // $('.has_nav small').on('click', function(event) {
     //   $(this).parent('li').find('.floatingMenu').slideToggle();
     //   $(this).parent('li').toggleClass('rotate_icon');
-    // });  
+    // });
 
 
 
   }
 
 
+// grid list code 
 
+
+    $('.grid_list a ').on('click', function (e) {
+      $(this).parents('.grid_listing_outer').toggleClass('showListView');
+
+  });
 
 
 
@@ -207,7 +210,7 @@ $(function() {
           type: form.attr('method'),
           data: formData,
           dataType: "json",
-          
+
       })
           .done(function() {
               $(".subscription_form")[0].reset();
@@ -219,7 +222,7 @@ $(function() {
           .fail(function() {
               $(".subscription_form")[0].reset();
               failure.addClass('show');
-              success.removeClass('show');                            
+              success.removeClass('show');
               console.log('boo')
           });
 
@@ -259,7 +262,7 @@ $(function() {
           type: form.attr('method'),
           data: formData,
           dataType: "json",
-          
+
       })
           .done(function() {
               $(".hire_form")[0].reset();
@@ -271,21 +274,128 @@ $(function() {
           .fail(function() {
               $(".hire_form")[0].reset();
               failure.addClass('show');
-              success.removeClass('show');                            
+              success.removeClass('show');
               console.log('boo')
           });
 
       return false;
   });
-}); 
+});
+
+
+// Submit a form using ajax
+       $("#hire_developer").on('submit',(function(e) {
+           var form = $('#hire_developer');
+           var success = $('#hire_success');
+           var failure = $('#hire_failure');
+
+           $.ajax({
+               url: form.attr('action'),
+               type: form.attr('method'),
+               data: new FormData(this),
+               dataType: "json",
+               contentType: false,
+               cache: false,
+               processData:false,
+
+           })
+               .done(function() {
+                   $("#hire_developer")[0].reset();
+                   success.addClass('show');
+                   failure.removeClass('show');
+                   console.log('yay');
+                   $('html, body').animate({
+                        scrollTop: ($("#hire_success").offset().top - 150)
+                    }, 100);
+               })
+
+               .fail(function() {
+                   // $("#hire_developer")[0].reset();
+                   failure.addClass('show');
+                   success.removeClass('show');
+                   console.log('boo');
+                   $('html, body').animate({
+                        scrollTop: ($("#hire_failure").offset().top - 150)
+                    }, 100);
+               });
+
+           return false;
+
+       }));
+
+// Submit a form using ajax
+       $("#career_form").on('submit',(function(e) {
+           var form = $('#career_form');
+           var success = $('#career_success');
+           var failure = $('#career_failure');
+
+           $.ajax({
+               url: form.attr('action'),
+               type: form.attr('method'),
+               data: new FormData(this),
+               dataType: "json",
+               contentType: false,
+               cache: false,
+               processData:false,
+
+           })
+               .done(function() {
+                   $("#career_form")[0].reset();
+                   success.addClass('show');
+                   failure.removeClass('show');
+                   console.log('yay')
+               })
+
+               .fail(function() {
+                   $("#career_form")[0].reset();
+                   failure.addClass('show');
+                   success.removeClass('show');
+                   console.log('boo')
+               });
+
+            return false;
+
+       }));
+
+// Submit a form using ajax
+       $("#insta_form").on('submit',(function(e) {
+           var form = $('#insta_form');
+           var success = $('#insta_success');
+           var failure = $('#insta_failure');
+
+           $.ajax({
+               url: form.attr('action'),
+               type: form.attr('method'),
+               data: new FormData(this),
+               dataType: "json",
+               contentType: false,
+               cache: false,
+               processData:false,
+
+           })
+               .done(function() {
+                   $("#insta_form")[0].reset();
+                   success.addClass('show');
+                   failure.removeClass('show');
+                   console.log('yay')
+               })
+
+               .fail(function() {
+
+                   failure.addClass('show');
+                   success.removeClass('show');
+                   console.log('boo')
+               });
+
+            return false;
+
+       }));
 
 
 
+       // tabs Order
 
-
-    // tabs Order
-
- $('.markServices_tabsBtn_info ul li a').on('click', function(event) {  
+ $('.markServices_tabsBtn_info ul li a').on('click', function(event) {
   event.preventDefault();
 
   $('.active').removeClass('active');
@@ -296,7 +406,52 @@ $(function() {
 // $('.markServices_tabsBtn_info ul li a:first').trigger('click');
 
 
-   
+
+
+
+    // address tabs Order
+
+    $('.adress_tabs a').on('click', function(event) {
+        event.preventDefault();
+
+        $('.active').removeClass('active');
+        $(this).addClass('active');
+        $('.addressTab_data').hide();
+        $($(this).attr('href')).show();
+      });
+       $('.adress_tabs a:first').trigger('click');
+
+
+
+
+
+       // client reviews tabs
+
+    $('.clientBizionic_partners ul li a').on('click', function(event) {
+      event.preventDefault();
+
+      $('.active').removeClass('active');
+      $(this).addClass('active');
+      $('.clientBizionic_reviews_info').hide();
+      $($(this).attr('href')).show();
+      $($(this).attr('href')).addClass('showMe');
+    });
+     $('.clientBizionic_partners ul li  a:first').trigger('click');
+
+
+
+
+    //  core services tab
+
+     $('.coreTabs ul li a').on('click', function(event) {
+      event.preventDefault();
+
+      $('.active').removeClass('active');
+      $(this).addClass('active');
+      $('.coreTabs_data_show').hide();
+      $($(this).attr('href')).show();
+    });
+     $('.coreTabs ul li a:first').trigger('click');
 
 
 
@@ -315,7 +470,7 @@ $(window).scroll(function() {
     }
 
 
-    
+
 });
 
 
@@ -352,6 +507,27 @@ $(window).scroll(function() {
 
 });
 
+
+
+
+
+
+var firstOpen = true;
+var time;
+
+// $('#timePicker').datetimepicker({
+//   useCurrent: false,
+//   format: "hh:mm A"
+// }).on('dp.show', function() {
+//   if(firstOpen) {
+//     time = moment().startOf('day');
+//     firstOpen = false;
+//   } else {
+//     time = "01:00 PM"
+//   }
+
+//   $(this).data('DateTimePicker').date(time);
+// });
 
 
 

@@ -2,17 +2,14 @@
 
 namespace App\Nova;
 
-use Illuminate\Http\Request;
+
 use Laravel\Nova\Fields\ID;
 use Laravel\Nova\Http\Requests\NovaRequest;
 use Laravel\Nova\Fields\Avatar;
 use Laravel\Nova\Fields\Boolean;
-use Laravel\Nova\Fields\MultiSelect;
-use Laravel\Nova\Fields\Select;
-use Laravel\Nova\Fields\Tag;
+
 use Laravel\Nova\Fields\Text;
-use Laravel\Nova\Fields\Trix;
-use Laravel\Nova\Fields\File;
+use Laravel\Nova\Fields\TextArea;
 
 class Client extends Resource
 {
@@ -54,7 +51,7 @@ class Client extends Resource
             Text::make('Tag Line','tag_line'),
             Avatar::make('Logo','logo'),
             Boolean::make('Is Published','published'),
-            Trix::make('Testimonial','description'),
+            //TextArea::make('Description','description'),
         ];
     }
 

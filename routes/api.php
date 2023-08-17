@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\ApiController;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
 
@@ -16,4 +17,15 @@ use Illuminate\Support\Facades\Route;
 
 Route::middleware('auth:sanctum')->get('/user', function (Request $request) {
     return $request->user();
+});
+
+
+Route::prefix('v1')->group(function () {
+    Route::get('/expert_categories',[ApiController::class,'expert_categories']);
+    Route::get('/experts',[ApiController::class,'experts']);
+    Route::post('/experts/search',[ApiController::class,'experts_search']);
+    Route::post('/experts/category',[ApiController::class,'experts_by_category']);
+    Route::post('/experts/experties',[ApiController::class,'experts_by_experties']);
+    Route::post('/experts/skills',[ApiController::class,'experts_by_skills']);
+    Route::get('/clients',[ApiController::class,'clients']);
 });
