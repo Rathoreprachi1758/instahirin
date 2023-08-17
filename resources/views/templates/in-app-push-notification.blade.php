@@ -27,7 +27,7 @@
 
                     <div class="col-lg-5 col-md-6 aos-init " data-aos="fade-left" data-aos-duration="1000" data-aos-easing="ease">
                         <div class="marketing_banner_fr">
-                            <span><img src="/bizionic/images/push_web_avatar.png" alt="#" /></span> 
+                            <span><img src="/bizionic/images/push_in_app_avatar.png" alt="#" /></span> 
                         </div>
                     </div>
                 </div> 
@@ -51,25 +51,27 @@
 
             <div class="innerpages_tabsModify_inner">
                 <div class="custom_tittle">
-                    <h2><strong>Trust the</strong> Market Leader <strong>in</strong> Web Push</h2>
+                    <h2>Engage Every User <strong>You Have While They're Online</strong></h2>
 
-                    <p class="p_color text-justify">Optimise your customer engagement strategy by acquiring users back to your site while they are browsing other sites. Visitors can subscribe to web push alerts with a single click. No personal information needs to be entered. According to research, web push notifications have a thirtyfold higher conversion rate than email. Best of all, online push notifications look like native mobile push notifications on many smartphones, with no app required, allowing you to contact users in a mobile-first manner.</p>
-                <h5 class="font-italic text-left p-0"><strong>Common Use Cases for Browser Push:</strong></h5>
+                    <p class="p_color text-justify">Welcome new users, describe new features, give offers, and more! Deploy Bizionic's effective targeting to tailor collaboration to specific audience segments or to send messages in anticipation of user behaviour. All of your users will receive your updates, even those who have not signed up for push notifications. According to studies, in-app messages increase app retention by 27%.</p>
+                <h5 class="font-italic text-left p-0"><strong>In-App Messages For Every Situation:</strong></h5>
                 </div>
 
 
                 <!-- section core 2 -->
 
-                <div class="coreServices_section">
+                <div class="coreServices_section smsTabs">
                     
 
                     <div class="coreServices_sectionDetail">
                         <div class="coreTabs">
                             <ul>
-                                <li><a href="#coreTab1">New Blog Post</a> </li>
-                                <li><a href="#coreTab2">Mentions & Followers</a></li>
-                                <li><a href="#coreTab3">Abandoned Cart Reminder</a></li>
-                                <li><a href="#coreTab4">Announcements</a></li> 
+                                <li><a href="#coreTab1">E-Commerce</a> </li>
+                                <li><a href="#coreTab2">Surveys</a></li>
+                                <li><a href="#coreTab3">Offers</a></li>
+                                <li><a href="#coreTab4">Permission Prompts</a></li> 
+                                <li><a href="#coreTab5">Referrals</a></li> 
+                                <li><a href="#coreTab6">Ratings</a></li> 
                             </ul>
                         </div>
 
@@ -81,16 +83,15 @@
                                 <div class="row">
                                     <div class="col-lg-8 col-md-7">
                                         <div class="coreTabs_data_text">
-                                            <h5>INCREASE YOUR FOLLOWERS </h5>
-                                            <p>Automate your messages to be sent out whenever new content is published, and make each notification specific to your target audience's preferences.</p>
-                                            <p>Our platform supports sending desktop push notifications and browser notifications via Google Chrome, Safari, Firefox, and more.</p>
+                                            <h5>INCREASE YOUR REVENUE </h5>
+                                            <p>Boost conversions with Bizionic's abandoned cart notifications and alerts for best-selling items. Achieve 4X increased conversions with in-app messaging. Effortlessly create eye-catching interstitials for all your applications in minutes. Take your marketing to the next level with Bizionic's powerful features.</p>
                                         </div>
                                     </div>
 
 
                                     <div class="col-lg-4 col-md-5">
                                         <div class="coreTabs_data_avatar">
-                                            <span><img src="/bizionic/images/push_web_tab1.png" alt="#" /></span>
+                                            <span><img src="/bizionic/images/push_in_app_tab1.png" alt="#" /></span>
                                         </div>
                                     </div>
                                 </div>
@@ -103,9 +104,8 @@
                                 <div class="row">
                                     <div class="col-lg-8 col-md-7">
                                         <div class="coreTabs_data_text">
-                                            <h5>INCREASE YOUR AUDIENCES  </h5>
-                                            <p>Set up automated messages to appear when your user receives a new follower, direct message, or upvote.</p>
-                                            <p>Our platform supports sending desktop push notifications and browser notifications via Google Chrome, Safari, Firefox, and more.</p>
+                                            <h5>KNOWS WHAT PEOPLE SAYS  </h5>
+                                            <p>Gather customer feedback effortlessly with Bizionic's fast surveys and polls without redirecting users. Create captivating interstitials for your applications in minutes, enhancing user engagement and experience. With Bizionic's user-friendly features, you improve customer interactions and boost your app's appeal.</p>
                                              
                                         </div>
                                     </div>
@@ -113,7 +113,7 @@
 
                                     <div class="col-lg-4 col-md-5">
                                         <div class="coreTabs_data_avatar">
-                                            <span><img src="/bizionic/images/push_web_tab2.png" alt="#" /></span>
+                                            <span><img src="/bizionic/images/push_in_app_tab2.png" alt="#" /></span>
                                         </div>
                                     </div>
                                 </div>
@@ -126,9 +126,8 @@
                                 <div class="row">
                                     <div class="col-lg-8 col-md-7">
                                         <div class="coreTabs_data_text">
-                                            <h5>REDUCE ABANDONMENT </h5>
-                                            <p>Reduce cart abandonment by delivering a kind reminder when someone adds an item to their cart but fails to checkout.</p>
-                                            <p>Our platform supports sending desktop push notifications and browser notifications via Google Chrome, Safari, Firefox, and more.</p>
+                                            <h5>PROMOTIONS, DISCOUNTS AND DEALS </h5>
+                                            <p>Drive user retention with Bizionic's promotions, discounts, and exclusive deals. Entice users to return and leave a lasting impression by offering unique discounts and exclusive prizes. Create eye-catching interstitials for your applications in minutes, captivating users and enhancing their experience. With Bizionic, take your promotions to new heights and keep users coming back for more.</p>
                                              
                                         </div>
                                     </div>
@@ -136,7 +135,7 @@
 
                                     <div class="col-lg-4 col-md-5">
                                         <div class="coreTabs_data_avatar">
-                                            <span><img src="/bizionic/images/push_web_tab3.png" alt="#" /></span>
+                                            <span><img src="/bizionic/images/push_in_app_tab3.png" alt="#" /></span>
                                         </div>
                                     </div>
                                 </div>
@@ -149,16 +148,57 @@
                                 <div class="row">
                                     <div class="col-lg-8 col-md-7">
                                         <div class="coreTabs_data_text">
-                                            <h5>MAXIMIZE YOUR REVENUE </h5>
-                                            <p>Share a limited-time offer or new product announcement to increase conversion.</p>
-                                            <p>Our platform supports sending desktop push notifications and browser notifications via Google Chrome, Safari, Firefox, and more.</p>
+                                            <h5>INCREASE YOU AUDIENCES </h5>
+                                            <p>Boost your subscriber count by requesting location and push permissions from users. Offer valuable information about what you'll be sending them, building trust and interest. Create captivating interstitials for your applications in minutes with Bizionic, enhancing user engagement and visual appeal. Empower your marketing efforts with Bizionic's user-friendly features for better results.</p>
                                         </div>
                                     </div>
 
 
                                     <div class="col-lg-4 col-md-5">
                                         <div class="coreTabs_data_avatar">
-                                            <span><img src="/bizionic/images/push_web_tab4.png" alt="#" /></span>
+                                            <span><img src="/bizionic/images/push_in_app_tab4.png" alt="#" /></span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+
+
+                            <!-- core tab5 -->
+                            <div class="coreTabs_data_show" id="coreTab5">
+                                <div class="row">
+                                    <div class="col-lg-8 col-md-7">
+                                        <div class="coreTabs_data_text">
+                                            <h5>INVITES FAMILY & FRIENDS </h5>
+                                            <p>Encourage organic growth prospects by requesting users to refer their friends and community. Leverage the power of word of mouth to expand your reach and user base. Create captivating interstitials for all your applications in minutes with Bizionic, ensuring visually appealing and effective promotions. Empower your app's growth with Bizionic's seamless referral features and unlock the potential of user-driven marketing.</p>
+                                        </div>
+                                    </div>
+
+
+                                    <div class="col-lg-4 col-md-5">
+                                        <div class="coreTabs_data_avatar">
+                                            <span><img src="/bizionic/images/push_in_app_tab5.png" alt="#" /></span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+
+
+                            <!-- core tab6 -->
+                            <div class="coreTabs_data_show" id="coreTab6">
+                                <div class="row">
+                                    <div class="col-lg-8 col-md-7">
+                                        <div class="coreTabs_data_text">
+                                            <h5>IMPROVE YOUR APP RANKING </h5>
+                                            <p>Capture positive user experiences by requesting app ratings after a positive encounter. Improve your app ranking and witness a flood of 5-star reviews! Create captivating interstitials for all your applications in minutes with Bizionic, ensuring visually appealing and effective prompts. Enhance your app's reputation and drive growth with Bizionic's user-friendly features for app rating requests.</p>
+                                        </div>
+                                    </div>
+
+
+                                    <div class="col-lg-4 col-md-5">
+                                        <div class="coreTabs_data_avatar">
+                                            <span><img src="/bizionic/images/push_in_app_tab6.png" alt="#" /></span>
                                         </div>
                                     </div>
                                 </div>

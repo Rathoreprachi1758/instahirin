@@ -95,8 +95,7 @@
                                 id="budget"
                             >
                                 <option value="below_10K">Below $10K</option>
-                                <option value="dedicated">Hire Dedicated</option>
-                                <option value="developers">Hire Developers</option>
+                                <option value="above_10K">Above $10K</option>
                             </select>
                         </div>
                     </div>

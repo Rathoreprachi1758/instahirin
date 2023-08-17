@@ -35,7 +35,7 @@
                                     <p>{{$expert->sub_title}}</p>
                                 </div>
                             </div>
-
+                            
                             <div class="descriptionText">
                                 <p>{{$expert->description}}</p>
                             </div>
@@ -139,8 +139,11 @@
                                     <div class="project_form_select">
                                         <select class="form-select" aria-label="Default select example" name="hiring_type" required>
                                             <option value="" selected>Hire Periods (Full Time, Part Time, Daily, Weekly, Periods) Please Select</option>
-                                            <option value="Dedicated">Hire Dedicated</option>
-                                            <option value="Developer">Hire Developers</option>
+                                            <option >Full Time</option>
+                                            <option >Part Time</option>
+                                            <option >Daily</option>
+                                            <option >Weekly</option>
+                                            <option >Period</option>
                                           </select>
                                     </div>
                                 </div>

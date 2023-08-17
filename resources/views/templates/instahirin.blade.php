@@ -3,7 +3,7 @@
     <!-- insta hirin banner  -->
 
 
-    <div class="instaHirin_banner">
+    <div class="instaHirin_banner pb-5">
         <div class="auto_container">
             <div class="instaHirin_banner_inner">
                 <span class="instaHirin_banner_avatar anim_bouncing"><img src="/bizionic/images/insta_banner_avatar.png" alt="#" /></span>
@@ -35,7 +35,205 @@
     </div>
 
 
+    <!-- onboard skills section  -->
 
+    <div class="seamlessLimitless_section skilled_setting_outer">
+        <div class="auto_container">
+            <div class="seamlessLimitless_section_detail">
+                <div class="onboardSkilled_section">
+
+                <div class="onboardSkill_options">
+                    <div class="custom_tittle">
+                        <h2><strong>Onboard,</strong> Skilled Experts <strong>Providing</strong> Innovative Business Solutions</h2>
+                    </div>
+
+                    <div class="nativeSupport_list skilled_setting">
+                    <ul>
+                        <li>
+                            <a href="#">
+                                <img src="/bizionic/images/skillOption_icon1.png" alt="#" />
+
+                                <strong>Freelancers</strong>
+                            </a>
+                        </li> 
+                        <li>
+                            <a href="#">
+                                <img src="/bizionic/images/skillOption_icon2.png" alt="#" />
+
+                                <strong>Project-Base</strong>
+                            </a>
+                        </li> 
+                        <li>
+                            <a href="#">
+                                <img src="/bizionic/images/skillOption_icon3.png" alt="#" />
+
+                                <strong>Full-Time</strong>
+                            </a>
+                        </li> 
+                        <li>
+                            <a href="#">
+                                <img src="/bizionic/images/skillOption_icon4.png" alt="#" />
+
+                                <strong>Part-Time</strong>
+                            </a>
+                        </li> 
+                        <li>
+                            <a href="#">
+                                <img src="/bizionic/images/skillOption_icon5.png" alt="#" />
+
+                                <strong>Contract Base</strong>
+                            </a>
+                        </li> 
+                        <li>
+                            <a href="#">
+                                <img src="/bizionic/images/skillOption_icon6.png" alt="#" />
+
+                                <strong>Monthly</strong>
+                            </a>
+                        </li> 
+                        <li>
+                            <a href="#">
+                                <img src="/bizionic/images/skillOption_icon7.png" alt="#" />
+
+                                <strong>Weekly</strong>
+                            </a>
+                        </li> 
+                        <li>
+                            <a href="#">
+                                <img src="/bizionic/images/skillOption_icon8.png" alt="#" />
+
+                                <strong>Daily-Bases</strong>
+                            </a>
+                        </li> 
+                        <li>
+                            <a href="#">
+                                <img src="/bizionic/images/skillOption_icon9.png" alt="#" />
+
+                                <strong>Hourly</strong>
+                            </a>
+                        </li> 
+
+
+
+                    </ul>
+                </div>
+                </div>
+
+
+
+                <div class="nativeSupport_list skilled_setting">
+                    <ul>
+                        <li>
+                            <a href="#">
+                                <img src="/bizionic/images/hirinSkill_icon1.png" alt="#" />
+
+                                <strong>Web developer</strong>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#">
+                                <img src="/bizionic/images/hirinSkill_icon2.png" alt="#" />
+
+                                <strong>Front-end Technologies</strong>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#">
+                                <img src="/bizionic/images/hirinSkill_icon3.png" alt="#" />
+
+                                <strong>Backend Development</strong>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#">
+                                <img src="/bizionic/images/hirinSkill_icon4.png" alt="#" />
+
+                                <strong>iOS Development</strong>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#">
+                                <img src="/bizionic/images/hirinSkill_icon5.png" alt="#" />
+
+                                <strong>Android Developer</strong>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#">
+                                <img src="/bizionic/images/hirinSkill_icon6.png" alt="#" />
+
+                                <strong>UI/UX Designer</strong>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#">
+                                <img src="/bizionic/images/hirinSkill_icon7.png" alt="#" />
+
+                                <strong>Digital Marketing</strong>
+                            </a>
+                        </li>
+
+
+
+
+
+
+                        <li>
+                            <a href="#">
+                                <img src="/bizionic/images/hirinSkill_icon8.png" alt="#" />
+
+                                <strong>Content Creator</strong>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#">
+                                <img src="/bizionic/images/hirinSkill_icon9.png" alt="#" />
+
+                                <strong>SEO Specialist</strong>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#">
+                                <img src="/bizionic/images/hirinSkill_icon10.png" alt="#" />
+
+                                <strong>Graphic & Design</strong>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#">
+                                <img src="/bizionic/images/hirinSkill_icon11.png" alt="#" />
+
+                                <strong>SMM Specialist</strong>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#">
+                                <img src="/bizionic/images/hirinSkill_icon12.png" alt="#" />
+
+                                <strong>Video & Animation</strong>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#">
+                                <img src="/bizionic/images/hirinSkill_icon13.png" alt="#" />
+
+                                <strong>PPC Specialist</strong>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#">
+                                <img src="/bizionic/images/hirinSkill_icon14.png" alt="#" style="width:84px; height:84px; margin-bottom:0px" /> 
+                            </a>
+                        </li>
+
+
+
+                    </ul>
+                </div>
+                </div>
+            </div>
+        </div>
+    </div>
     
     <experts-component></experts-component>
 

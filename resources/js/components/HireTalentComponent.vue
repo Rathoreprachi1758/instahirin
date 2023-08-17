@@ -5,6 +5,7 @@
         <div class="col-lg-6 col-md-12">
             <div class="project_form_field">
                 <input type="text" value="" placeholder="Name*" name="name" id="name"/>
+                <input type="text" value="" name="source" id="source" hidden readonly/>
             </div>
         </div>
 
@@ -46,9 +47,12 @@
         <div class="col-lg-12 col-md-12">
             <div class="project_form_select">
                 <select class="form-select" aria-label="Default select example" name="hiring_type" id="hiring_type" required>
-                    <option value="" selected>Hire Periods (Full Time, Part Time, Daily, Weekly, Periods) Please Select</option>
-                    <option value="Dedicated">Hire Dedicated</option>
-                    <option value="Developer">Hire Developers</option>
+                    <option value="" selected >Hire Periods (Full Time, Part Time, Daily, Weekly, Periods) Please Select</option>
+                    <option >Full Time</option>
+                    <option >Part Time</option>
+                    <option >Daily</option>
+                    <option >Weekly</option>
+                    <option >Period</option>
                 </select>
             </div>
         </div>
@@ -95,7 +99,7 @@
                 <label class="checkbox-label">
                     <input type="checkbox" name="virtual_assistance_call" value="Yes">
                     <span class="checkbox-custom rectangular"></span>
-                    Schedule an Virtual Assistance Call
+                    Schedule a Virtual Interview
                 </label>
             </div>
         </div>
@@ -184,9 +188,16 @@
 
 import axios from 'axios';
 export default {
-    // mounted() {
-    //     console.log("Subscription Component mounted.");
-    // },
+     mounted() {
+        var pathArray = window.location.pathname.split('/');
+        var page = pathArray[pathArray.length - 1];
+        var pageText = page.replaceAll("-", " ");
+
+        $('.page-dev').html(pageText);
+        console.log("Hire Talent Component mounted.");
+        document.getElementById('source').value = pageText;
+        console.log($('#source').val());
+     },
     data() {
         return {
             subscribe: {
@@ -228,10 +239,7 @@ export default {
         },
     },
 };
-var pathArray = window.location.pathname.split('/');
-var page = pathArray[pathArray.length - 1];
-var pageText = page.replaceAll("-", " ");
 
-$('.page-dev').html(pageText);
+
 
 </script>

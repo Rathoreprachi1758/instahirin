@@ -184,6 +184,7 @@ class ContentController extends Controller
                 'to_date' => '',
                 'from_time' => '',
                 'to_time' => '',
+                'source' => '',
                 'virtual_assistance_call' => '',
                 'availability_date' => '',
                 'availability_time_from' => '',
@@ -206,6 +207,7 @@ class ContentController extends Controller
             $formData->from_time = $validatedData['from_time'];
             $formData->to_time = $validatedData['to_time'];
             $formData->priority = 'normal';
+            $formData->source = $validatedData['source'];
             $formData->virtual_assistance_call = isset($validatedData['virtual_assistance_call'])?'Yes':'No';
             $formData->availability_date = $validatedData['availability_date'];
             $formData->availability_time_from = $validatedData['availability_time_from'];
@@ -234,6 +236,7 @@ class ContentController extends Controller
                 'address' => '',
                 'from_date' => '',
                 'to_date' => '',
+                'source' => '',
                 'from_time' => '',
                 'to_time' => '',
                 'virtual_assistance_call' => '',
@@ -262,6 +265,7 @@ class ContentController extends Controller
                 $formData->expert_id = $request->expert_id;
             }
             $formData->priority = 'insta';
+            $formData->source = $validatedData['source'];
             $formData->virtual_assistance_call = isset($validatedData['virtual_assistance_call'])?'Yes':'No';
             $formData->availability_date = $validatedData['availability_date'];
             $formData->availability_time_from = $validatedData['availability_time_from'];
@@ -316,7 +320,7 @@ class ContentController extends Controller
 
             $formData->save();
         }
-
+        
         // Return a response indicating success
         return response()->json(['message' => 'Form submitted successfully']);
     }

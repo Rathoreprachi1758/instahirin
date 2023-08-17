@@ -12,7 +12,7 @@
                     </ul>
                 </div>
 
-                <div class="otherSearch">
+                <div class="otherSearch d-none">
                     <!-- Another variation with a button -->
                     <div class="input-group">
                         <input

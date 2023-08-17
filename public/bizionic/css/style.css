@@ -1489,13 +1489,14 @@ body, html {scroll-behavior: smooth; }
 .technology_master_list ul li {padding: 35px 0px;}
 .technology_master_list ul li:last-child {padding-bottom: 20px;}
 
-.technology_master_info { background: #f2f2f2;  padding: 80px 40px;  box-shadow: 4px 4px 5px #ccc; overflow: hidden; }
+.technology_master_info { background: #f2f2f2;  padding: 60px 40px;  box-shadow: 4px 4px 5px #ccc; overflow: hidden; }
 
 .technology_master_info .row {  align-items: center; }
 
-.technology_master_text { width: 100%; padding: 0px 20px;}
+.technology_master_text { width: 100%; padding: 0px 20px 25px;}
 
 .technology_master_text p { padding: 0px; line-height: 1.7; text-align: justify;}
+.technology_master_text p b {font-family: 'avenirblack';}
 
 .technology_master_text h3 { font-family: 'avenirmedium'; font-size: 22px; text-transform: uppercase;}
 
@@ -1980,7 +1981,6 @@ body, html {scroll-behavior: smooth; }
 .buildTeam_col strong {font-family: 'avenirblack'; display: block; padding-bottom: 10px; font-size: 18px; color: #000; text-align: center; text-transform: uppercase;}
 
 .buildTeam_col p { padding: 0px;font-family: 'avenirmedium'; text-align: justify; line-height: 1.6;}
-.buildTeam_col div { padding: 0px;font-family: 'avenirmedium'; text-align: justify; line-height: 1.6;}
 
 
 
@@ -2669,7 +2669,6 @@ body, html {scroll-behavior: smooth; }
 .openPosition_sec .buildTeam_col strong {width: 100%;font-family: 'avenirmedium'; font-size: 17px; text-transform: uppercase; text-align: left;}
 
 .openPosition_sec .buildTeam_col p { padding-bottom: 25px; font-size: 15px; min-height: 170px;}
-.openPosition_sec .buildTeam_col div { padding-bottom: 25px; font-size: 15px; min-height: 170px;}
 
 .openPosition_sec .btn_default { max-width: 140px; margin: auto; min-width: 140px;
     padding: 8px 15px;}
@@ -3702,6 +3701,62 @@ body, html {scroll-behavior: smooth; }
 .smsTabs  .coreTabs ul li {
     width: 16.6% !important;
 }
+
+
+.skilled_setting  ul li {border: .5px solid #dadadb;}
+.skilled_setting  ul li a { background: #f9f9f9; padding: 50px 10px; text-align: center;;}
+.skilled_setting  ul li a img {  width: 45px; height: 45px;  object-fit: contain; margin: auto; display: block;margin-bottom: 20px;}
+
+.skilled_setting  ul li:nth-of-type(2n) a { background: #efefef; pointer-events: painted;}
+
+.skilled_setting  ul li a strong {color: #414042;}
+
+
+.onboardSkilled_section { width: 100%; background: #fff; border-top: 6px solid #155099;}
+
+.onboardSkill_options { width: 100%; padding: 60px 50px 40px;}
+
+
+.onboardSkill_options .skilled_setting ul li { border: 0px !important; width: 11.11% !important;}
+.onboardSkill_options .skilled_setting ul li a { background: none !important; border: 0px !important; padding: 0px !important;}
+
+.onboardSkill_options .skilled_setting ul li a img {
+    width: 42px;
+    height: 42px;}
+
+.onboardSkill_options .skilled_setting ul li a:hover::after { display: none;}
+
+
+.onboardSkill_options .skilled_setting {padding-top: 10px;}
+
+.skilled_setting_outer::after { background-color: #fff;}
+
+
+
+
+.setting_list ul li .technology_master_info .row { flex-flow: wrap !important;}
+.setting_list ul li .technology_provides ul {
+    justify-content: flex-start !important;
+}
+
+.setting_list .technology_provides ul li a img { padding: 5px;}
+
+.newTecnologyList { background: none; padding: 0px; box-shadow: none; overflow: unset;}
+
+.technology_master_inner {background: #f2f2f2;
+    padding: 60px 40px; height: 100%;
+    box-shadow: 4px 4px 5px #ccc;}
+
+.newTecnologyList .row { align-items: unset;}
+
+
+
+
+
+
+
+
+
 
 
 
