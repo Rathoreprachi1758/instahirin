@@ -2,69 +2,11 @@
 
 
 
-<div class="viewAll_search">
-  <div class="auto_container">
-    <div class="viewAll_search_bar otherSearch">
-      <div data-v-4a0f0584="" class="input-group">
-        <input data-v-4a0f0584="" type="text" class="form-control" placeholder="Others...">
-        <div data-v-4a0f0584="" class="input-group-append">
-          <button data-v-4a0f0584="" class="btn btn-secondary" type="button">
-            <i data-v-4a0f0584="" class="fa fa-search"></i>
-          </button>
-        </div>
-      </div>
-    </div>
-  </div>
-</div>
 
 
 
-<div class="grid_listing_outer ">
-
-  <div class="viewall_sort">
-    <div class="auto_container">
-      <div class="viewall_sort_detail">
-        <div class="row">
-          <div class="col-lg-6 col-md-6">
-            <div class="viewall_tillte">
-              <div class="custom_tittle text-left p-0">
-                <h2 class="p-0">View <strong>All</strong></h2>
-              </div>
-            </div>
-          </div>
 
 
-          <div class="col-lg-6 col-md-6">
-            <div class="sortting_view">
-              <div class="grid_list">
-                <a href="javascript:void(0)" class="btn_default">
-                  <span class="gridView"><i class="fa fa-th-large" aria-hidden="true"></i> Grid</span>
-                  <span class="listView"><i class="fa fa-th-list" aria-hidden="true"></i> List</span>
-                </a>
-              </div>
-
-
-              <div class="project_form_select">
-                  <select class="form-select" aria-label="Default select example">
-                      <option selected>All(200)</option>
-                      <option value="1">All(100)</option>
-                      <option value="2">All(50)</option> 
-                  </select>
-              </div>
-              <div class="project_form_select">
-                  <select class="form-select" aria-label="Default select example">
-                      <option selected>Sort By</option>
-                      <option value="1">All(100)</option>
-                      <option value="2">All(50)</option> 
-                  </select>
-              </div>
-            </div>
-          </div>
-        
-        </div>
-      </div>
-    </div>
-  </div>
 
 
   <experts-list-component></experts-list-component>

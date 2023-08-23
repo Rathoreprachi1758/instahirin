@@ -32,7 +32,7 @@
 
                             <h6 class="font-italic mt-3">Bizionic, Startup's to Unicorn's Lab</h6>
 
-                                    <a href="/bizionic-team" class="btn_default_white">Join Our Team</a>
+                                    <a href="#careerPage_inner_zone" class="btn_default_white">Join Team Bizionic</a>
                         </div>
 
 
@@ -74,7 +74,7 @@
                                     </div>
 
                                     <div class="col-lg-4 col-md-5">
-                                        <a href="#" class="btn_default_white">Let’s Get You Onboarded</a>
+                                        <a href="/hire/developer/developers-other/instaHirin%20Onboard%20Form" class="btn_default_white">Let’s Get You Onboarded</a>
                                     </div>
                                 </div>
                             </li>
@@ -87,7 +87,7 @@
                                     </div>
 
                                     <div class="col-lg-4 col-md-5">
-                                        <a href="/bizionic-team" class="btn_default_white">Join Team Bizionic</a>
+                                        <a href="#careerPage_inner_zone" class="btn_default_white">Join Team Bizionic</a>
                                     </div>
                                 </div>
                             </li>
@@ -131,7 +131,7 @@
                                     <h2 class="text-left"><strong>Find</strong> Work Now: </h2>
 
                                         <p class="text-left p_color">Get employed at your terms, desired companies, time, hours and working conditions.</p>
-                                        <a href="#" class="btn_default">Let's Get You Onboarded</a>
+                                        <a href="/hire/developer/developers-other/instaHirin%20Onboard%20Form" class="btn_default">Let's Get You Onboarded</a>
                                 </div>
                             </div>
                         </div>

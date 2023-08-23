@@ -60,7 +60,17 @@ class HireRequest extends Resource
             Text::make('Address','address')->hideFromIndex(),
             Text::make('Company','company')->rules('required','min:6,max:255')->hideFromIndex(),
             Trix::make('Company Info','company_info')->hideFromIndex(),
-            Select::make('Hiring Type','hiring_type')->options(['Full Time'=>'Full Time','Part Time'=>'Part Time','Daily'=>'Daily','Weekly'=>'Weekly','Period'=>'Period'])->displayUsingLabels()->filterable()->hideFromIndex(),
+            Select::make('Hiring Type','hiring_type')->options(
+                [   'Full Time'=>'Full Time',
+                    'Part Time'=>'Part Time',
+                    "Daily Bases"=>"Daily Bases",
+                    'Weekly'=>'Weekly',
+                    'Period'=>'Period',
+                    "Freelance"=>"Freelance",
+                    "Project Base"=>"Project Base",
+                    "Contract Base"=>"Contract Base",
+                    'Hourly'=>'Hourly'
+                ])->displayUsingLabels()->filterable()->hideFromIndex(),
             Select::make('Priority','priority')->options(['normal'=>'Normal','insta'=>'Insta'])->displayUsingLabels()->filterable(),
             Date::make('From Date','from_date')->rules('nullable', 'date_format:Y-m-d')->hideFromIndex(),
             Date::make('To Date','to_date')->rules('nullable', 'date_format:Y-m-d')->hideFromIndex(),

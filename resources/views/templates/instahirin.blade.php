@@ -1,239 +1,9 @@
 <div class="insta_hirin_page "> 
 
-    <!-- insta hirin banner  -->
+    
 
 
-    <div class="instaHirin_banner pb-5">
-        <div class="auto_container">
-            <div class="instaHirin_banner_inner">
-                <span class="instaHirin_banner_avatar anim_bouncing"><img src="/bizionic/images/insta_banner_avatar.png" alt="#" /></span>
-
-                <div class="instaHirin_banner_info">
-                    <div class="custom_tittle text-left">
-                        <h2 class="p-0"><strong>Introducing</strong> “Hire Talent in <br>
-                            Minutes” <strong>and</strong> "Hire Beyond Borders"</h2>
-                        <h3 class="pt-1 pb-2"><strong>Revolutionize your</strong> Recruitment Process!</h3>
-                        <p class="p_color p-0"><b>Hire with Confidence.</b> Hire the right Talent instantly from
-                            an Unlimited, Prescreened, Assessed, Verified, Evaluated,
-                            and Qualified Pool of Professionals across the <b>GLOBE</b>.</p>
-                    </div>
-
-                    <form action="" method="get">
-                        <div class="hireIn_minForm">
-                            <div class="hireIn_input project_form_field">
-                                <i class="fa fa-search" aria-hidden="true"></i>
-                                <input type="text" value="" placeholder="Search Java, PHP, Laravel, Android, iOS...." />
-                            </div>
-                            <div class="hireIn_btn">
-                                <input type="submit" value="Hire in Minutes" formaction="/hire/developer/developers-other/instaRequirement" />
-                            </div>
-                        </div>
-                    </form>
-                </div>
-            </div>
-        </div>   
-    </div>
-
-
-    <!-- onboard skills section  -->
-
-    <div class="seamlessLimitless_section skilled_setting_outer">
-        <div class="auto_container">
-            <div class="seamlessLimitless_section_detail">
-                <div class="onboardSkilled_section">
-
-                <div class="onboardSkill_options">
-                    <div class="custom_tittle">
-                        <h2><strong>Onboard,</strong> Skilled Experts <strong>Providing</strong> Innovative Business Solutions</h2>
-                    </div>
-
-                    <div class="nativeSupport_list skilled_setting">
-                    <ul>
-                        <li>
-                            <a href="#">
-                                <img src="/bizionic/images/skillOption_icon1.png" alt="#" />
-
-                                <strong>Freelancers</strong>
-                            </a>
-                        </li> 
-                        <li>
-                            <a href="#">
-                                <img src="/bizionic/images/skillOption_icon2.png" alt="#" />
-
-                                <strong>Project-Base</strong>
-                            </a>
-                        </li> 
-                        <li>
-                            <a href="#">
-                                <img src="/bizionic/images/skillOption_icon3.png" alt="#" />
-
-                                <strong>Full-Time</strong>
-                            </a>
-                        </li> 
-                        <li>
-                            <a href="#">
-                                <img src="/bizionic/images/skillOption_icon4.png" alt="#" />
-
-                                <strong>Part-Time</strong>
-                            </a>
-                        </li> 
-                        <li>
-                            <a href="#">
-                                <img src="/bizionic/images/skillOption_icon5.png" alt="#" />
-
-                                <strong>Contract Base</strong>
-                            </a>
-                        </li> 
-                        <li>
-                            <a href="#">
-                                <img src="/bizionic/images/skillOption_icon6.png" alt="#" />
-
-                                <strong>Monthly</strong>
-                            </a>
-                        </li> 
-                        <li>
-                            <a href="#">
-                                <img src="/bizionic/images/skillOption_icon7.png" alt="#" />
-
-                                <strong>Weekly</strong>
-                            </a>
-                        </li> 
-                        <li>
-                            <a href="#">
-                                <img src="/bizionic/images/skillOption_icon8.png" alt="#" />
-
-                                <strong>Daily-Bases</strong>
-                            </a>
-                        </li> 
-                        <li>
-                            <a href="#">
-                                <img src="/bizionic/images/skillOption_icon9.png" alt="#" />
-
-                                <strong>Hourly</strong>
-                            </a>
-                        </li> 
-
-
-
-                    </ul>
-                </div>
-                </div>
-
-
-
-                <div class="nativeSupport_list skilled_setting">
-                    <ul>
-                        <li>
-                            <a href="#">
-                                <img src="/bizionic/images/hirinSkill_icon1.png" alt="#" />
-
-                                <strong>Web developer</strong>
-                            </a>
-                        </li>
-                        <li>
-                            <a href="#">
-                                <img src="/bizionic/images/hirinSkill_icon2.png" alt="#" />
-
-                                <strong>Front-end Technologies</strong>
-                            </a>
-                        </li>
-                        <li>
-                            <a href="#">
-                                <img src="/bizionic/images/hirinSkill_icon3.png" alt="#" />
-
-                                <strong>Backend Development</strong>
-                            </a>
-                        </li>
-                        <li>
-                            <a href="#">
-                                <img src="/bizionic/images/hirinSkill_icon4.png" alt="#" />
-
-                                <strong>iOS Development</strong>
-                            </a>
-                        </li>
-                        <li>
-                            <a href="#">
-                                <img src="/bizionic/images/hirinSkill_icon5.png" alt="#" />
-
-                                <strong>Android Developer</strong>
-                            </a>
-                        </li>
-                        <li>
-                            <a href="#">
-                                <img src="/bizionic/images/hirinSkill_icon6.png" alt="#" />
-
-                                <strong>UI/UX Designer</strong>
-                            </a>
-                        </li>
-                        <li>
-                            <a href="#">
-                                <img src="/bizionic/images/hirinSkill_icon7.png" alt="#" />
-
-                                <strong>Digital Marketing</strong>
-                            </a>
-                        </li>
-
-
-
-
-
-
-                        <li>
-                            <a href="#">
-                                <img src="/bizionic/images/hirinSkill_icon8.png" alt="#" />
-
-                                <strong>Content Creator</strong>
-                            </a>
-                        </li>
-                        <li>
-                            <a href="#">
-                                <img src="/bizionic/images/hirinSkill_icon9.png" alt="#" />
-
-                                <strong>SEO Specialist</strong>
-                            </a>
-                        </li>
-                        <li>
-                            <a href="#">
-                                <img src="/bizionic/images/hirinSkill_icon10.png" alt="#" />
-
-                                <strong>Graphic & Design</strong>
-                            </a>
-                        </li>
-                        <li>
-                            <a href="#">
-                                <img src="/bizionic/images/hirinSkill_icon11.png" alt="#" />
-
-                                <strong>SMM Specialist</strong>
-                            </a>
-                        </li>
-                        <li>
-                            <a href="#">
-                                <img src="/bizionic/images/hirinSkill_icon12.png" alt="#" />
-
-                                <strong>Video & Animation</strong>
-                            </a>
-                        </li>
-                        <li>
-                            <a href="#">
-                                <img src="/bizionic/images/hirinSkill_icon13.png" alt="#" />
-
-                                <strong>PPC Specialist</strong>
-                            </a>
-                        </li>
-                        <li>
-                            <a href="#">
-                                <img src="/bizionic/images/hirinSkill_icon14.png" alt="#" style="width:84px; height:84px; margin-bottom:0px" /> 
-                            </a>
-                        </li>
-
-
-
-                    </ul>
-                </div>
-                </div>
-            </div>
-        </div>
-    </div>
+    
     
     <experts-component></experts-component>
 
@@ -359,7 +129,7 @@
                                             </ul>
 
 
-                                            <a href="/hire-me" class="btn_default_white  m-auto">Talent Onboarding Assessment Process</a>
+                                            <a href="/hire/developer/developers-other/instaHirin%20Onboard%20Form" class="btn_default_white  m-auto">Talent Onboarding Assessment Process</a>
                                         </div>
                                     </div>
 
@@ -407,7 +177,7 @@
                                     </ul>
 
 
-                                    <a href="#" class="btn_default_white">Revolutionize Your Talent Acquisition Journey!</a>
+                                    <a href="/hire/developer/developers-other/instaRequirement" class="btn_default_white">Revolutionize Your Talent Acquisition Journey!</a>
                                 </div>
                             </div>
 

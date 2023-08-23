@@ -139,16 +139,17 @@
                                     <div class="project_form_select">
                                         <select class="form-select" aria-label="Default select example" name="hiring_type" required>
                                             <option value="" selected>Hire Periods (Full Time, Part Time, Daily, Weekly, Periods) Please Select</option>
+                                            <option >Freelance</option>
+                                            <option >Project Base</option>
                                             <option >Full Time</option>
                                             <option >Part Time</option>
-                                            <option >Daily</option>
+                                            <option >Contract Base</option>
+                                            <option >Daily Bases</option>
                                             <option >Weekly</option>
-                                            <option >Period</option>
+                                            <option >Hourly</option>
                                           </select>
                                     </div>
                                 </div>
-
-
 
                                 <div class="col-lg-12 col-md-12">
                                     <div class="dateTime_range">

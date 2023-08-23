@@ -16,8 +16,10 @@
         "vue": "^3.2.37"
     },
     "dependencies": {
+        "laravel-vue-pagination": "^4.1.1",
         "vue-loader": "^17.0.1",
         "vue-owl-carousel": "^2.0.3",
+        "vue-resource": "^1.5.3",
         "vue3-carousel": "^0.3.1"
     }
 }
