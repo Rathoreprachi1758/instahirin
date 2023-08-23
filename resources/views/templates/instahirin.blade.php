@@ -129,7 +129,7 @@
                                             </ul>
 
 
-                                            <a href="/hire/developer/developers-other/instaHirin%20Onboard%20Form" class="btn_default_white  m-auto">Talent Onboarding Assessment Process</a>
+                                            <a href="/instaHirin/talent-onboard-process" class="btn_default_white  m-auto">Talent Onboarding Assessment Process</a>
                                         </div>
                                     </div>
 
@@ -177,7 +177,7 @@
                                     </ul>
 
 
-                                    <a href="/hire/developer/developers-other/instaRequirement" class="btn_default_white">Revolutionize Your Talent Acquisition Journey!</a>
+                                    <a href="/instaHirin/global-talent" class="btn_default_white">Revolutionize Your Talent Acquisition Journey!</a>
                                 </div>
                             </div>
 
