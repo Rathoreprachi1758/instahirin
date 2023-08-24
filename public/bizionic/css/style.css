@@ -1065,7 +1065,7 @@ p {
 
 .clientMarketing .custom_tittle h2{ color: #000029;}
 
-.clientMarketing .clientBizionic_section_detail  { padding-top: 100px; padding-bottom: 100px;}
+.clientMarketing .clientBizionic_section_detail  { padding-top: 200px; padding-bottom: 100px;}
 
 .clientMarketing .clientBizionic_info { background: #939598;}
 
@@ -2137,6 +2137,13 @@ body, html {scroll-behavior: smooth; }
     -webkit-transition: all 0.3s ease;
 
 }
+
+.consult_btn { width: 100%; padding-top: 0px; padding-bottom: 70px; display: flex; justify-content:center;}
+
+.meetTeam_nav_inner .otherSearch { display: none;}
+.meetTeam_nav_inner .meetTeam_nav_info { width: 100%;}
+.meetTeam_nav_inner .meetTeam_nav_info ul { justify-content: space-between;}
+.meetTeam_nav_inner .meetTeam_nav_info ul li { width: auto;}
 
 .meetTeam_nav_info ul li a:hover {background: url(../images/teamNav_bg.png) no-repeat !important; background-size: cover !important; color: #fff !important;}
 .meetTeam_nav_info ul li a.active {background: url(../images/teamNav_bg.png) no-repeat !important; background-size: cover !important; color: #fff !important; font-family: 'avenirblack'}
@@ -3748,6 +3755,97 @@ body, html {scroll-behavior: smooth; }
     box-shadow: 4px 4px 5px #ccc;}
 
 .newTecnologyList .row { align-items: unset;}
+
+
+
+
+
+
+.talentOnboard_page .hireForm_banner_detail .custom_tittle { padding: 0px 60px;}
+
+.talentOnboard_page .hireForm_banner_detail .custom_tittle p { padding: 10px 0px !important;}
+
+.talentOnboard_page .hireForm_banner_detail { padding-bottom: 170px; padding-top: 150px;}
+
+
+.talentOnboard_page_detail { width: 100%; max-width: 1100px; margin: auto;transform: translateY(-110px);}
+
+
+.talent_vetting_head {background: url(../images/onboard_tittle_bg.png) bottom center no-repeat;background-size: cover; width: 100%; padding: 70px 40px 30px;}
+
+.talent_vetting_head .custom_tittle p {
+    font-size: 18px; 
+    line-height: 1.8;
+    padding: 0px;
+}
+
+.vettingList_section { width: 100%; padding: 60px 40px; background: #fff;overflow: hidden;}
+
+.vettingList_info .instaHirin_section { padding: 0px;}
+
+.vettingList_info .howWork_text_info h4 { 
+    font-size: 20px;
+}
+
+.vettingList_infoBullets { width: 100%;}
+
+.vettingList_infoBullets p { color: #000029; padding-bottom: 0px;}
+
+.vettingList_infoBullets ul { padding-top: 10px; padding-left: 30px;}
+
+.vettingList_infoBullets ul li { padding:  0px; list-style: disc;font-size: 18px;}
+.vettingList_infoBullets ul li::before { display: none;}
+
+.vettingList_infoBullets ul li p { color: #000029; padding: 0px; padding-left: 20px;line-height: 1.6;}
+
+
+.vettingList_text { width: 100%; padding-top: 25px;}
+
+.vettingList_text .custom_tittle { padding: 0px;}
+.vettingList_text .custom_tittle p { padding: 5px 0px;}
+
+
+.talentProcess_section { width: 100%; padding: 60px 40px; background: #fff; overflow: hidden;}
+
+.talentProcess_bullets { width: 100%; display: flex;}
+
+.talentProcess_bullets  span { width: 115px; height: 115px; padding: 10px; display: flex; 
+    align-items: center; justify-content: center; background: #e6e7e8; float: left; margin: 10px 10px 5px 0px; min-width: 115px;}
+
+.talentProcess_bullets  span img { height: 55px; object-fit: contain;}
+
+.talentProcess_section .aboutBizionic_col_info { min-height: 230px;}
+
+.talentProcess_section .aboutBizionic_col_info p { font-size: 16px;}
+
+.talentProcess_section .aboutBizionic_col_info h4 { font-size: 20px;}
+
+
+
+
+.global_talent_quotes { width: 100%; }
+
+.global_talent_quotesCol { width: 100%; padding: 10px 0px; position: relative;}
+
+.global_talent_quotesCol p { font-size: 20px; padding: 0px; text-align: justify;}
+.global_talent_quotesCol p b { font-family: 'avenirblack';}
+
+
+.quoteFl {color: #e6e6e6;
+    font-size: 60px;
+    position: absolute;
+    top: -40px;}
+
+.quoteFr {color: #e6e6e6;
+    font-size: 60px;
+    position: absolute;
+    bottom: -40px; right: 0px;}
+
+
+
+
+
+
 
 
 

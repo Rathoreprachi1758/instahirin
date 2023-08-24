@@ -331,6 +331,9 @@
                         </div>
                     </div>
 
+                    <div class="consult_btn">
+                        <a href="/get-a-free-consultation" class="btn_default mt-2">Get a Free Consultation</a>
+                    </div>
                 </div>
             </div>
         </div>
