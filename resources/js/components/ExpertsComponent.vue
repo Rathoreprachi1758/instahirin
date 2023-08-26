@@ -17,18 +17,16 @@
                             and Qualified Pool of Professionals across the <b>GLOBE</b>.</p>
                     </div>
 
-                    <form action="" method="get">
+                    <form action="/hire/developer/developers-other/hirin-view-all" method="get">
                         <div class="hireIn_minForm">
                             <div class="hireIn_input project_form_field">
                                 <i class="fa fa-search" aria-hidden="true"></i>
-                                <input type="text"  placeholder="Search Java, PHP, Laravel, Android, iOS...." v-model="searchQuery"/>
+                                <input type="text" name="query" placeholder="Search Java, PHP, Laravel, Android, iOS...." v-model="searchQuery"/>
                             </div>
                             <div class="hireIn_btn">
                                 <input
                                     class=""
-                                    type="button"
-                                    @click="filterExperts"
-                                
+                                    type="submit"
                                     value='🔍 Hire In Minutes'
                                 />
 
@@ -378,15 +376,16 @@
 }
 
 .meetTeam_sliderSection {
-    display: flex; /* Display the experts in a flex container */
+    /* Display the experts in a flex container */
     overflow-x: auto; /* Enable horizontal scrolling */
     scroll-behavior: smooth; /* Add smooth scrolling behavior */
 }
 
 .meetTeam_sliderSection .item {
-    flex: 0 0 400px; /* Set the width of each expert section */
-    margin-right: 20px; /* Adjust the spacing between expert sections */
+    // flex: 0 0 400px; /* Set the width of each expert section */
+     /* Adjust the spacing between expert sections */ width: 100%;
 }
+.carousel__slide { padding: 0px 10px !important; display: block !important;}
 
 /* Hide the scrollbar */
 .meetTeam_sliderSection::-webkit-scrollbar {
@@ -415,6 +414,7 @@
 .meetTeam_nav .owl-nav .owl-next {
     right: 10px;
 }
+
 </style>
 
 <script>

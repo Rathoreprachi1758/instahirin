@@ -1065,7 +1065,7 @@ p {
 
 .clientMarketing .custom_tittle h2{ color: #000029;}
 
-.clientMarketing .clientBizionic_section_detail  { padding-top: 200px; padding-bottom: 100px;}
+.clientMarketing .clientBizionic_section_detail  { padding-top: 100px; padding-bottom: 100px;}
 
 .clientMarketing .clientBizionic_info { background: #939598;}
 
@@ -2122,7 +2122,7 @@ body, html {scroll-behavior: smooth; }
 
 .meetTeam_nav_inner { width: 100%; display: flex; align-items: center;}
 
-.meetTeam_nav_info  { width: 100%;}
+.meetTeam_nav_info  { width: 70%;}
 
 .meetTeam_nav_info ul { display: flex;}
 
@@ -2137,13 +2137,6 @@ body, html {scroll-behavior: smooth; }
     -webkit-transition: all 0.3s ease;
 
 }
-
-.consult_btn { width: 100%; padding-top: 0px; padding-bottom: 70px; display: flex; justify-content:center;}
-
-.meetTeam_nav_inner .otherSearch { display: none;}
-.meetTeam_nav_inner .meetTeam_nav_info { width: 100%;}
-.meetTeam_nav_inner .meetTeam_nav_info ul { justify-content: space-between;}
-.meetTeam_nav_inner .meetTeam_nav_info ul li { width: auto;}
 
 .meetTeam_nav_info ul li a:hover {background: url(../images/teamNav_bg.png) no-repeat !important; background-size: cover !important; color: #fff !important;}
 .meetTeam_nav_info ul li a.active {background: url(../images/teamNav_bg.png) no-repeat !important; background-size: cover !important; color: #fff !important; font-family: 'avenirblack'}
@@ -2838,10 +2831,10 @@ body, html {scroll-behavior: smooth; }
     height: 100%; width: 100%;}
 
 
-.meetTeam_sliderSection .item { margin: 0px !important;}
+/* .meetTeam_sliderSection .item { margin: 0px !important;} */
 
-.carousel__slide {  
-     justify-content: flex-start !important}
+/* .carousel__slide {  
+     justify-content: flex-start !important} */
 
 
 .carousel { text-align: left !important;}
@@ -3843,13 +3836,20 @@ body, html {scroll-behavior: smooth; }
 
 
 
+.meetTeam_nav_inner .otherSearch { display: none;}
+.meetTeam_nav_inner .meetTeam_nav_info { width: 100%;}
+.meetTeam_nav_inner .meetTeam_nav_info ul { justify-content: space-between;}
+.meetTeam_nav_inner .meetTeam_nav_info ul li { width: auto;}
 
 
+.consult_btn { width: 100%; padding-top: 0px; padding-bottom: 70px; display: flex; justify-content: center;}
 
+.consult_btn .btn_default { background-color: #19437a; color: #fff;
+    padding: 15px 15px; 
+    font-size: 16px; 
+    min-width: 260px;}
 
-
-
-
+.consult_btn .btn_default:hover {background-color: #0f2849;}
 
 
 

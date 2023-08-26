@@ -4,6 +4,7 @@
         <div class="viewAll_search_bar otherSearch">
           <div data-v-4a0f0584="" class="input-group">
             <input 
+                id="searchQuery" 
                 data-v-4a0f0584="" 
                 type="text" 
                 class="form-control" 
@@ -215,6 +216,12 @@ export default {
     mounted() {
         this.fetchCategories();
         this.fetchExperts();
+        let uri = window.location.search.substring(1); 
+        let params = new URLSearchParams(uri);
+        this.searchQuery = params.get("query");
+        if(params.get("query")){
+            this.filterExperts();
+        }
     },
     methods: {
         fetchCategories() {
@@ -299,6 +306,7 @@ export default {
         filterExperts() {
             const searchQuery = this.searchQuery.trim().toLowerCase();
             console.log(searchQuery);
+            console.log('we');
             if (!searchQuery) {
                 this.filteredExpertsByCategory = this.experts;
                 return;
