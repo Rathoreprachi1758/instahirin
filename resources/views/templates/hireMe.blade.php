@@ -32,7 +32,7 @@
 
                             <h6 class="font-italic mt-3">Bizionic, Startup's to Unicorn's Lab</h6>
 
-                                    <a href="#careerPage_inner_zone" class="btn_default_white">Join Team Bizionic</a>
+                                    <a href="/bizionic-team" class="btn_default_white">Bizionic Team</a>
                         </div>
 
 

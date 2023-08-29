@@ -24,12 +24,13 @@ class ApiController extends Controller
     public function experts_search(Request $request)
     {
         // Validation if keyword is not found
-        $keyword = $request->input('keyword');
+        $keyword = explode(',',$request->input('keyword'));
+        $keyword = explode(' ',implode(',',$keyword));
 
         return response()->json(Expert::with(['experties', 'skills'])->whereHas('experties', function ($query) use ($keyword) {
-            $query->where('title', $keyword);
+            $query->whereIn('title', $keyword);
         })->orWhereHas('skills', function ($query) use ($keyword) {
-            $query->where('title', $keyword);
+            $query->whereIn('title', $keyword);
         })->orderBy('created_at', 'desc')->get(), 200)->header('Content-Type', 'text/json');
     }
 
