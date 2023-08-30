@@ -3844,6 +3844,18 @@ body, html {scroll-behavior: smooth; }
 
 .consult_btn { width: 100%; padding-top: 0px; padding-bottom: 70px; display: flex; justify-content: center;}
 
+
+
+.getFree .protectPrivacy span {border: 1px solid #bcbec0;      font-size: 14px;  color: #000000; background-color: #969696;}
+
+.marketingFormSetting .contactUs_detail {
+    background: url(../images/latestBlog_bg.png) bottom center no-repeat;
+    background-size: cover;
+}
+
+
+/* #gotoContact { scroll-margin-top: -50px; scroll-padding-top: 100px;} */
+
 .consult_btn .btn_default { background-color: #19437a; color: #fff;
     padding: 15px 15px; 
     font-size: 16px; 
@@ -3852,11 +3864,7 @@ body, html {scroll-behavior: smooth; }
 .consult_btn .btn_default:hover {background-color: #0f2849;}
 
 
-
-
-
-
-
+.hireFloating_menu  .col-lg-3.col-md-3  .floatingMenu_info .innerColum_menu_outer { border:0px !important; padding-right: 0px !important;}
 
 
 
