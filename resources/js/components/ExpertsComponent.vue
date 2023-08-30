@@ -244,7 +244,12 @@
                 <div class="meetTeam_nav_info">
                     <ul>
                         <li v-for="category in categories" :key="category.id">
-                            <a @click="selectCategory(category)" :class="{ active:  (this.selectedCategory && category.id === this.selectedCategory.id) }">{{
+                            
+                            <a v-if="category.id === 1" @click="selectCategory(category)" class="active" >{{
+                                category.title
+                            }}</a>
+
+                            <a v-if="category.id != 1" @click="selectCategory(category)"  :class="{ active:  (this.selectedCategory && category.id === this.selectedCategory.id) }">{{
                                 category.title
                             }}</a>
                         </li>
@@ -391,7 +396,7 @@
 .meetTeam_sliderSection::-webkit-scrollbar {
     width: 0;
     height: 0;
-    background: transparent;
+    gbackground: transparent;
 }
 
 /* Optional: Style the navigation arrows for scrolling */
