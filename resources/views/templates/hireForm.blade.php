@@ -36,8 +36,8 @@
                                 </div>
                             </div>
                             
-                            <div class="descriptionText">
-                                <p>{{$expert->description}}</p>
+                            <div class="descriptionText" style="color: #fff;">
+                                {!! $expert->description !!}
                             </div>
 
 
@@ -155,27 +155,27 @@
                                     <div class="dateTime_range">
                                         <label>From</label>
                                         <div class="project_form_field">
-                                            <input type="text" value="" placeholder="Calendar"  name="from_date">
+                                            <input type="date" value="" placeholder="Calendar"  name="from_date">
                                         </div>
 
 
                                         <label class="text-center">To</label>
                                         <div class="project_form_field mr-3">
-                                            <input type="text" value="" placeholder="Calendar" name="to_date">
+                                            <input type="date" value="" placeholder="Calendar" name="to_date">
                                         </div>
 
 
 
-                                        <div class="project_form_field ml-3">
+                                        <div class="project_form_field ml-3 d-none">
                                             <input type="text" value="" placeholder="Time" id="timePicker" name="from_time"/>
                                         </div>
-                                        <label class="text-center">To</label>
-                                        <div class="project_form_field">
+                                        <label class="text-center d-none">To</label>
+                                        <div class="project_form_field d-none">
                                             <input type="text" value="" placeholder="Time" name="to_time">
                                         </div>
 
 
-                                        <div class="addDeleteBtn">
+                                        <div class="addDeleteBtn d-none">
                                             <a href="javascript:void(0)" class="p_color"><i class="fa fa-plus-circle" aria-hidden="true"></i></a>
                                             <a href="javascript:void(0)" class="text-danger"><i class="fa fa-times-circle" aria-hidden="true"></i></a>
                                         </div>
@@ -203,7 +203,7 @@
                                     <div class="dateTime_range">
                                         <label style="min-width: 90px;">Availability</label>
                                         <div class="project_form_field">
-                                            <input type="text" value="" placeholder="Calendar" name="availability_date" >
+                                            <input type="date" value="" placeholder="Calendar" name="availability_date" >
                                         </div>
 
 
@@ -211,15 +211,15 @@
 
 
                                         <div class="project_form_field ml-5">
-                                            <input type="text" value="" placeholder="Time" id="timePicker" name="availability_time_from"/>
+                                            <input type="time" value="" placeholder="Time" id="timePicker" name="availability_time_from"/>
                                         </div>
                                         <label class="text-center">To</label>
                                         <div class="project_form_field">
-                                            <input type="text" value="" placeholder="Time" name="availability_time_to">
+                                            <input type="time" value="" placeholder="Time" name="availability_time_to">
                                         </div>
 
 
-                                        <div class="addDeleteBtn">
+                                        <div class="addDeleteBtn d-none">
                                             <a href="javascript:void(0)" class="p_color"><i class="fa fa-plus-circle" aria-hidden="true"></i></a>
                                             <a href="javascript:void(0)" class="text-danger"><i class="fa fa-times-circle" aria-hidden="true"></i></a>
                                         </div>

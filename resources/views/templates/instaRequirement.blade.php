@@ -82,7 +82,12 @@
                                                 <select class="form-select" name="work_mode" id="work_mode" aria-label="Default select example">
                                                     <option selected></option>
                                                     <option value="In Office">In Office</option>
-                                                    <option value="Remote">Remote</option> 
+                                                    <option value="Remote">Remote</option>
+                                                    <option value="Hybrid">Hybrid</option>
+                                                    <option value="Flexi Work">Flexi Work</option>
+                                                    <option value="Job Sharing">Job Sharing</option>
+                                                    <option value="Limited Contract">Limited Contract</option>
+
                                                 </select>
                                             </div>
                                         </div>
@@ -156,9 +161,17 @@
                                             <strong class="req_lable">Employment Role/Type:</strong>
                                             <div class="project_form_select">
                                                 <select class="form-select" aria-label="Default select example" name="employment_type" id="employment_type">
-                                                    <option selected>Full Time, Permanent</option>
-                                                    <option >Part Time</option>
-                                                    <option >Remote</option> 
+                                                    <option selected>Full Time</option>
+                                                    <option >Part-Time</option>
+                                                    <option >Project Base</option>
+                                                    <option >Hourly</option>
+                                                    <option >On-Site</option>
+                                                    <option >Freelancing</option>
+                                                    <option >Contract</option>
+                                                    <option >Shift</option>
+                                                    <option >Consulting</option>
+                                                    <option >Volunteer</option>
+                                                    <option >Internships</option>
                                                 </select>
                                             </div>
                                         </div>
@@ -214,8 +227,10 @@
                                             <strong class="req_lable">Educational Qualification:</strong>
                                             <div class="project_form_select">
                                                 <select class="form-select" aria-label="Default select example" name="education_qualification" id="education_qualification">
-                                                    <option selected>Post Graduation</option>
-                                                    <option >Graduation</option> 
+                                                    <option selected>Any</option>
+                                                    <option >Graduate</option> 
+                                                    <option >Postgraduate</option> 
+                                                    <option >Doctorate</option> 
                                                 </select>
                                             </div>
                                         </div>
@@ -268,7 +283,7 @@
 
                                     <div class="col-lg-12 col-md-12">
                                         <div class="requireForm_lable">
-                                            <strong class="req_lable">Contact #:</strong> 
+                                            <strong class="req_lable">Contact:</strong> 
                                         </div>
                                     </div>
                                     <div class="col-lg-6 col-md-12">
