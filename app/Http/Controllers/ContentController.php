@@ -333,8 +333,8 @@ class ContentController extends Controller
         $validatedData = $request->validate([
             'name' => 'required',
             'email' => 'required|email',
-            'linkedin_profile' => 'required',
-            'note' => 'required',
+            'linkedin_profile' => '',
+            'note' => '',
             'document' => 'required|file',
         ]);
 
