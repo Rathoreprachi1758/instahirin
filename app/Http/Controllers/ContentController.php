@@ -173,10 +173,10 @@ class ContentController extends Controller
             
             $validatedData = $request->validate([
                 'name' => 'required',
-                'company' => 'required',
+                'company' => '',
                 'email' => 'required|email',
-                'phone' => 'required',
-                'document' => 'required|file',
+                'phone' => '',
+                'document' => 'file',
                 'website' => '',
                 'message' => '',
                 'address' => '',
@@ -226,10 +226,10 @@ class ContentController extends Controller
             // dd('we are here');
             $validatedData = $request->validate([
                 'name' => 'required',
-                'company' => 'required',
+                'company' => '',
                 'email' => 'required|email',
-                'phone' => 'required',
-                'document' => 'required|file',
+                'phone' => '',
+                'document' => 'file',
                 'company_info' => '',
                 'website' => '',
                 'message' => '',
@@ -283,7 +283,7 @@ class ContentController extends Controller
             $validatedData = $request->validate([
                 'name' => 'required',
                 'email' => 'required|email',
-                'phone' => 'required',
+                'phone' => '',
                 'message' => 'required',
             ]);
 
@@ -302,9 +302,9 @@ class ContentController extends Controller
         else{
             $validatedData = $request->validate([
                 'name' => 'required',
-                'company' => 'required',
+                'company' => '',
                 'email' => 'required|email',
-                'phone' => 'required',
+                'phone' => '',
                 'message' => 'required',
             ]);
 
