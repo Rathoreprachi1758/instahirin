@@ -152,6 +152,12 @@
                                 </div>
 
                                 <div class="col-lg-12 col-md-12">
+                                    <div class="requireForm_lable">
+                                        <strong>Hiring Period </strong>
+                                    </div>
+                                </div>
+
+                                <div class="col-lg-12 col-md-12">
                                     <div class="dateTime_range">
                                         <label>From</label>
                                         <div class="project_form_field">

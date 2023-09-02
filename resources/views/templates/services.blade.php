@@ -155,9 +155,7 @@
                                     <div class="col-lg-8 col-md-7 aos-init aos-animate serviceColumn" data-aos="fade-left" data-aos-duration="1000" data-aos-easing="ease">
                                         <div class="technology_master_text">
                                             <h4>Virtual Reality (VR) Software Development:</h4>
-                                            <p>Bringing even the craziest ideas to life. Virtual reality is excellent for both leisure and professional
-                                                applications, and we are familiar with the most effective ways to integrate this technology for
-                                                your business.</p>
+                                            <p>Bringing even the craziest ideas to life. Virtual reality is excellent for both leisure and professional applications, and we are familiar with the most effective ways to integrate this technology into your business.</p>
                                                 <p>BIZIONIC can help you with top-notch VR software development so that you can realise your boldest ideas. To make sure you get the most out of your product, we dispel myths, challenge prejudices, and constantly pursue the best quality. You may be guaranteed to receive a solution that is suited to your
                                                     demands and requirements thanks to our skilled team of VR developers.</p>
                                         </div>
@@ -180,7 +178,7 @@
                                             <h4>Augmented Reality (AR) App Development:</h4>
                                             <p>Augmented Reality (AR) has become a real game changer in the world of tech. With the rising number of AR users, industry stakeholders must embrace the potential of new technology to raise engagement,
                                                 increase sales, and improve customer experience. Choose the top-notch augmented reality
-                                                develop- ment services provided by BIZIONIC to help your business succeed and surpass your rivals.</p>
+                                                development services provided by BIZIONIC to help your business succeed and surpass your rivals.</p>
                                         </div>
                                     </div>
 
@@ -220,7 +218,7 @@
                                         <div class="technology_master_text">
                                             <h4>Quality Assurance:</h4>
                                             <p>Creating an innovative product is only the first step toward success. No matter how skilled the
-                                                develop- ers are, errors will always occur, Bugs, errors and other problems, might spoil the whole user experi- ence which would be a complete disaster. Trust on BIZIONIC, a leading QA company, and we'll
+                                                developers are, errors will always occur, Bugs, errors and other problems, might spoil the whole user experience which would be a complete disaster. Trust BIZIONIC, a leading QA company, and we'll
                                                 make sure that your software fulfils your clients' expectations and performs flawlessly.</p>
                                         </div>
                                     </div>
@@ -263,8 +261,8 @@
                                             <p>Modern software is smarter than you can imagine. By analysing data, innovative technologies can reveal
                                                 patterns, learn, and improve themselves by its own.</p>
                                                 <p>Machine learning is no longer a buzzword in the world of tech. It is an effective tool that helps
-                                                    business- es to overcome obstacles, improve processes, and simplify the customer experience. Make a
-                                                    contribu- tion to the machine learning revolution by using a product that BIZIONIC experts created!</p>
+                                                    businesses to overcome obstacles, improve processes, and simplify the customer experience. Make a
+                                                    contribution to the machine learning revolution by using a product that BIZIONIC experts created!</p>
                                         </div>
                                     </div>
 
@@ -303,7 +301,7 @@
                                     <div class="col-lg-8 col-md-7 aos-init aos-animate serviceColumn" data-aos="fade-right" data-aos-duration="2400" data-aos-easing="ease">
                                         <div class="technology_master_text">
                                             <h4>Blockchain and Web3 Development:</h4>
-                                            <p>Start your web3 journey now. With our broad developer resources, we have you covered whether you're new to blockchain or an experienced user. Utilize our flexible APIs, robust analytics, and exper- tise to
+                                            <p>Start your web3 journey now. With our broad developer resources, we have you covered whether you're new to blockchain or an experienced user. Utilize our flexible APIs, robust analytics, and expertise to
                                                 develop Web3 apps quickly and profitably.</p>
                                         </div>
                                     </div>

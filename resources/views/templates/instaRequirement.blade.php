@@ -186,6 +186,15 @@
                                             <strong class="req_lable">Salary Range (Enter the Salary offered for this Job/Project):</strong> 
                                         </div>
                                     </div>
+
+
+
+
+                                    <div class="col-lg-12 col-md-12">
+                                        <div class="requireForm_lable">
+                                            <strong class="req_lable">Monthly / Project:</strong> 
+                                        </div>
+                                    </div>
                                     <div class="col-lg-2 col-md-4">
                                         <div class="requireForm_lable"> 
                                             <div class="project_form_select">
@@ -199,14 +208,84 @@
                                     <div class="col-lg-5 col-md-4">
                                         <div class="requireForm_lable"> 
                                             <div class="project_form_field">
-                                                <input type="text" value="" placeholder="Min Annual Salary"  name="min_salary" id="min_salary"/>
+                                                <input type="text" value="" placeholder="Min"  name="min_salary" id="min_salary"/>
                                             </div>
                                         </div>
                                     </div>
                                     <div class="col-lg-5 col-md-4">
                                         <div class="requireForm_lable"> 
                                             <div class="project_form_field">
-                                                <input type="text" value="" placeholder="Max Annual Salary"  name="max_salary" id="max_salary"/>
+                                                <input type="text" value="" placeholder="Max"  name="max_salary" id="max_salary"/>
+                                            </div>
+                                        </div>
+                                    </div>
+
+
+
+
+
+
+                                    <div class="col-lg-12 col-md-12">
+                                        <div class="requireForm_lable">
+                                            <strong class="req_lable">Yearly:</strong> 
+                                        </div>
+                                    </div>
+                                    <div class="col-lg-2 col-md-4">
+                                        <div class="requireForm_lable"> 
+                                            <div class="project_form_select">
+                                                <select class="form-select" aria-label="Default select example" name="salary_currency" id="salary_currency">
+                                                    <option selected>$</option>
+                                                    
+                                                </select>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-lg-5 col-md-4">
+                                        <div class="requireForm_lable"> 
+                                            <div class="project_form_field">
+                                                <input type="text" value="" placeholder="Min"  name="min_salary" id="min_salary"/>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-lg-5 col-md-4">
+                                        <div class="requireForm_lable"> 
+                                            <div class="project_form_field">
+                                                <input type="text" value="" placeholder="Max"  name="max_salary" id="max_salary"/>
+                                            </div>
+                                        </div>
+                                    </div>
+
+
+
+
+
+
+                                    <div class="col-lg-12 col-md-12">
+                                        <div class="requireForm_lable">
+                                            <strong class="req_lable">Hourly:</strong> 
+                                        </div>
+                                    </div>
+                                    <div class="col-lg-2 col-md-4">
+                                        <div class="requireForm_lable"> 
+                                            <div class="project_form_select">
+                                                <select class="form-select" aria-label="Default select example" name="salary_currency" id="salary_currency">
+                                                    <option selected>$</option>
+                                                    
+                                                </select>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-lg-5 col-md-4">
+                                        <div class="requireForm_lable"> 
+                                            <div class="project_form_field">
+                                                <input type="text" value="" placeholder="Min"  name="min_salary" id="min_salary"/>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-lg-5 col-md-4">
+                                        <div class="requireForm_lable"> 
+                                            <div class="project_form_field">
+                                                <input type="text" value="" placeholder="Max"  name="max_salary" id="max_salary"/>
                                             </div>
                                         </div>
                                     </div>

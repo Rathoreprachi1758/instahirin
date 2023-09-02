@@ -346,8 +346,23 @@ $(function() {
                    console.log('yay')
                })
 
-               .fail(function() {
-                   $("#career_form")[0].reset();
+               .fail(function(result) {
+
+                   var errors = result.responseJSON.errors;
+                   console.log(errors )
+                   
+                   var message = '';
+                   if(errors.name){
+                    message += ' '+errors.name;
+                   }
+                   if(errors.email){
+                    message += ' '+errors.email;
+                   }
+                   if(errors.document){
+                    message += ' '+errors.document;
+                   }
+                   
+                   $('#career_failure').html('Error! '+ message);
                    failure.addClass('show');
                    success.removeClass('show');
                    console.log('boo')
