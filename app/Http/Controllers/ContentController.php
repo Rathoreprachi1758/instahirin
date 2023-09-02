@@ -194,6 +194,8 @@ class ContentController extends Controller
             // Create a new instance of the Hire Request model
             $formData = new HireRequest();
 
+
+
             // Set the form data from the validated request
             $formData->name = $validatedData['name'];
             $formData->company = $validatedData['company'];
@@ -207,7 +209,7 @@ class ContentController extends Controller
             $formData->from_time = $validatedData['from_time'];
             $formData->to_time = $validatedData['to_time'];
             $formData->priority = 'normal';
-            $formData->source = $validatedData['source'];
+            $formData->source = ($formData->source) ? $validatedData['source'] : '';
             $formData->virtual_assistance_call = isset($validatedData['virtual_assistance_call'])?'Yes':'No';
             $formData->availability_date = $validatedData['availability_date'];
             $formData->availability_time_from = $validatedData['availability_time_from'];
