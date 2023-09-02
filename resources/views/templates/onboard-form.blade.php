@@ -559,6 +559,75 @@
 
 
 
+                                        <!-- new contract section  -->
+
+                                        <div class="col-lg-12 col-md-12">
+                                            <div class="onForm_col noticePeriod">
+                                                    <strong>How to Global Audience You would Like to See Your Profile Headline</strong>
+
+                                                    <div class="suggested_keySkills">
+                                                        <h6 class="font-normal">Contract Terms</h6>
+                                                        <strong class="payOption">Payment Option</strong>
+
+
+                                                        <div class="contract_card">
+                                                            <div class="contractCard_info">
+                                                                <div class="row">
+                                                                    <div class="col-lg-6 col-md-6">
+                                                                        <label class="card">
+                                                                            <input name="plan" class="radio" type="radio" checked>
+                                                                            
+                                                                            <span class="plan-details">
+                                                                                <small class="categoryHighlight">Popular</small>
+                                                                            <span class="plan-type"><i class="fa fa-clock-o" aria-hidden="true"></i></span>
+                                                                            <span class="plan-cost">Hourly Rate</span>
+                                                                            <span>Get paid for number of hours<br> worked.</span> 
+                                                                            </span>
+                                                                        </label>
+
+
+                                                                        <div class="monthlyYearly_btn">
+                                                                            <button>Monthly Rate</button>
+                                                                        </div>
+
+                                                                        <div class="rate_edits">
+                                                                            <strong>Paid by hour:</strong>
+                                                                            <small>$33/hr <b><i class="fa fa-pencil" aria-hidden="true"></i></b></small>
+                                                                        </div>
+                                                                    </div>
+
+
+                                                                        <div class="col-lg-6 col-md-6">
+                                                                            <label class="card">
+                                                                                <input name="plan" class="radio" type="radio">
+                                                                                <span class="plan-details" aria-hidden="true">
+                                                                                <small class="categoryHighlight" style="opacity:0">Popular</small>
+                                                                                <span class="plan-type"><i class="fa fa-tag" aria-hidden="true"></i></span>
+                                                                                <span class="plan-cost">Fixed Payment</span> 
+                                                                                <span>Get pay monthly or as project<br> milestone is completed.</span>
+                                                                                </span>
+                                                                            </label>
+
+
+                                                                            <div class="monthlyYearly_btn">
+                                                                                <button>Get pay fixed price for the project</button>
+                                                                            </div>
+
+                                                                            <div class="rate_edits">
+                                                                                <strong>Paid by project:</strong>
+                                                                                <small>$60/project <b><i class="fa fa-pencil" aria-hidden="true"></i></b></small>
+                                                                            </div>
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                          
+                                                    </div>
+                                            </div>
+                                        </div>
+
+
+
                                         <div class="col-lg-12 col-md-12">
                                             <div class="onForm_col noticePeriod">
                                                     <strong>How to Global Audience You would Like to See Your Profile Headline</strong>

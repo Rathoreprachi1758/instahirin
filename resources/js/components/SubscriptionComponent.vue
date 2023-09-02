@@ -68,7 +68,7 @@
                 />
                 <input
                     type="submit"
-                    value="SUBCRIBE"
+                    value="SUBSCRIBE"
                     class="btn_default d-inline"
                     @click="subscription"
                 />
