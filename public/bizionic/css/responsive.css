@@ -83,10 +83,10 @@
 
 
 .mainBanner_text h3 b {
-    font-size: 60px; 
+    font-size: 38px; 
 }
 .industryNew_section1_info h3 strong {
-    font-size: 48px; 
+    font-size: 28px; 
 }
 
 .buildTeam_col { 
@@ -220,13 +220,13 @@
     width: 18px; 
     margin-right: 5px;
 }
-.project_form_field input { 
+/* .project_form_field input { 
     padding: 11px 15px; 
     font-size: 12px;
 }
 .project_form_field { 
     margin: 10px 0px;
-}
+} */
 .tellUs_sec p { 
     font-size: 16px!important;}
 
@@ -385,6 +385,101 @@
 
 .innerColum_menu strong { 
     font-size: 12px;}
+
+
+
+
+
+.hireMain .row { align-items: flex-start;}
+
+.quick_links { 
+    padding-top: 0px;
+}
+
+.markServices_section .custom_tittle {
+    padding: 70px 0px 30px;
+}
+.markServices_tabsInfo_detail { 
+    padding: 70px 0px 30px 0px; 
+}
+
+.aboutRead_more .aboutBizionic_section_detail {
+    padding: 80px 0px 0px 0px;
+}
+
+.technologyBanner .mainBanner_text h3 b {
+    font-size: 38px; 
+}
+
+.technologyBanner .mainBanner_text h3 {
+    font-size: 28px; 
+}
+
+.technology_master_text { 
+    padding: 0px 5px 25px;
+}
+
+.technologyForm .addFile_button p {
+    min-width: auto;
+}
+
+.industryNew_section1 .row { align-items: flex-start !important;}
+
+.onboardSkill_options { 
+    padding: 60px 40px 40px;
+}
+
+.skilled_setting ul li a { 
+    padding: 35px 5px; 
+}
+
+.skilled_setting ul li a strong { 
+    font-size: 12px;
+}
+
+.meetTeam_sliderSection .meetProfile { display: flex;}
+
+.viewAll_listing .meetProfile { display: flex;}
+
+.instaHirin_banner_inner { 
+    padding-bottom: 150px;
+}
+
+.onboardPage .provider_section .industryNew_section2_cols {
+    transform: translateY(-50px);
+}
+
+.listTop_technology ul li { 
+    padding: 16px 15px;
+}
+
+.onHire_immerPage .industryNew_section2_cols .custom_tittle { padding-left: 15px; padding-right: 15px;}
+
+.biz_brief_info ul li { 
+    font-size: 18px; 
+    padding: 14px 0px;
+}
+
+.biz_brief_info ul li strong {
+    font-size: 18px;}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
  
 
@@ -586,11 +681,11 @@ h6 { font-size: 18px; }
 }
 
 .connected_form_info ul li { 
-    padding: 0px 10px;
+     
 }
 
 .connected_form_info ul { 
-    margin: 0px -10px;
+    margin: 0px ;
     padding-bottom: 20px;
 }
 .copyRight p { 
@@ -710,7 +805,7 @@ h6 { font-size: 18px; }
     height: 35px; 
 }
 
-.marketingStart .btn_default  { margin-top: 60px;}
+.marketingStart .btn_default  { margin-top: 30px;}
 
 .togather_avatar_detail span { 
     max-width: 500px; 
@@ -978,10 +1073,17 @@ h6 { font-size: 18px; }
 
 
 .technology_provides ul li {
-    padding: 5px 5px;
+    padding: 5px 5px !important;
+}
+.technology_provides ul {
+    margin: 0px -5px !important;
 }
 .technology_master_list ul li {
     padding: 15px 0px;
+}
+
+.technology_master_text { 
+    padding: 0px 0px 25px;
 }
 
 .technologyForm .addFile_button p {
@@ -1184,6 +1286,175 @@ h6 { font-size: 18px; }
 
 .innerColum_menu strong { 
     font-size: 12px;}
+
+
+
+
+.hireMain .row { align-items: flex-start;}
+
+.aboutBizionic_section_detail { padding-bottom: 50px;}
+
+.quick_links { 
+    padding-top: 0px;
+}
+
+.sourcingModel_section { padding-bottom: 0px;}
+
+.servicesForm .project_form_field {
+    padding: 0px 0px;
+}
+.servicesForm .project_form_textarea {
+    padding: 0px 0px;
+}
+
+.marketingStart .startProj_info h3 { 
+    font-size: 48px;}
+
+.marketingStart .rocketAvatar {
+    max-width: 600px; 
+}
+
+.latestBlog_section_detail { 
+    padding: 70px 0px 50px;
+}
+
+
+.newTecnologyList .technology_master_inner { margin:0px 0px !important;;}
+.newTecnologyList .col-md-12 { margin:15px 0px !important;;}
+
+.newTecnologyList { padding: 0px !important;}
+
+.keySuccess_col { 
+    padding: 0px 10px;
+}
+
+.nativeSupport_list ul li {
+    width: 20%;
+}
+
+.seamlessLimitless_fl { 
+    padding: 50px 30px;
+}
+.seamlessLimitless_fr span { 
+    padding: 30px; 
+}
+
+.seamlessLimitless_fl .custom_tittle p {
+    font-size: 17px; 
+    line-height: 1.6;
+}
+
+.innerNofification_pages .mainBanner_detail { 
+    padding: 50px 30px 30px;
+}
+
+.notification_banner { 
+    padding-bottom: 50px;
+}
+.onboardSkill_options .skilled_setting ul li { 
+    width: 20% !important;
+    padding: 12px 0px !important;
+}
+
+.onboardSkill_options .custom_tittle { padding-bottom: 0px;}
+
+.skilled_setting ul li a { 
+    padding: 30px 5px; 
+    font-size: 12px;
+}
+
+.meetTeam_info { 
+    padding: 35px 18px 20px; 
+}
+
+.meetTeam_sliderSection .meetProfile { display: flex; align-items: flex-start;}
+
+.meetTeam_sliderSection .hireBttn .btn_default { 
+    font-size: 12px;
+}
+
+.viewAll_search_bar { width: 90% !important; margin: auto !important; padding: 50px 20px 0px !important;}
+
+.viewAll_listing > ul > li { 
+    width: 50%;
+}
+
+.talentOnboard_page_detail {
+    width: 90%; 
+}
+
+.talentOnboard_page .hireForm_banner_detail {
+    padding-bottom: 150px;
+    padding-top: 100px;
+}
+
+.talentOnboard_page .hireForm_banner_detail .custom_tittle {
+    padding: 0px 30px;
+}
+
+.talentProcess_bullets { 
+     
+}
+
+.talentProcess_bullets span {  margin-bottom: 20px;width: 80px;
+    height: 80px; 
+    min-width: 80px;}
+.talentProcess_bullets span img {
+    height: 35px; 
+}
+.talentProcess_section .aboutBizionic_col_info h4 {
+    font-size: 15px;
+}
+.talentProcess_section .aboutBizionic_col_info p {
+    font-size: 14px;
+}
+
+.global_talent_quotesCol p {
+    font-size: 16px;}
+
+.onboardPage .postRequirment_text { padding:70px 30px 110px;}
+
+.onboardPage .provider_section .industryNew_section2_cols {
+    padding: 0px 10px 0px;
+}
+
+.mainForm_fl .talentCheck_list_info { 
+    padding: 50px 25px;
+}
+.mainForm_fl .talentCheckList h4 { 
+    font-size: 24px;
+    line-height: 1.6;
+}
+.mainForm_fl .talentCheckList ul li p { 
+    flex-wrap: nowrap;
+}
+
+.mainForm_fr { 
+    padding: 50px 25px;}
+
+.listOf_topTechnologies { 
+    padding: 50px 25px;
+}
+
+.listTop_technology ul li { 
+    padding: 18px 15px;
+}
+
+.industryNew_section_detail { 
+    padding: 70px 0px;
+}
+
+.marketingFormSetting .row { align-items: flex-start !important;}
+
+.industryNew_section1 .row { align-items: flex-start !important;}
+
+
+
+
+
+
+
+
 
 
 
@@ -1439,7 +1710,7 @@ h6 { font-size: 18px; }
     justify-content: center;
     flex-flow: column;
 }
-.addFile { padding-bottom: 20px;  }
+.addFile { padding-bottom: 20px; margin: auto; }
 
 .servicesProvided_section_detail { 
     padding: 60px 0px;
@@ -1469,7 +1740,7 @@ h6 { font-size: 18px; }
     padding: 0px 0px; 
 }
 
-.btn_subcribe  { text-align: left !important;}
+.btn_subcribe  { text-align: left !important; padding-bottom: 0px;}
 
 .bizionic_about { 
     padding-top: 40px;
@@ -1493,7 +1764,9 @@ h6 { font-size: 18px; }
     left: -12px; 
 }
 
-
+.quick_links ul li {
+    padding: 5px 0px;
+}
 
 
 
@@ -1659,7 +1932,7 @@ h6 { font-size: 18px; }
 }
 
 .clientMarketing .clientBizionic_section_detail {
-    padding-top: 100px;
+    padding-top: 70px;
     padding-bottom: 60px;
 }
 
@@ -1971,7 +2244,7 @@ h6 { font-size: 18px; }
     font-size: 15px; }
 
 .biz_brief_info ul li { 
-    padding: 20px 0px;
+    padding: 12px 0px;
 }
 
 .contactForm_page { 
@@ -2393,7 +2666,7 @@ h6 { font-size: 18px; }
 
 .frList_sec { background: none !important; padding: 30px 0px;}
 .frList_sec h4 {
-    color: #000;
+    color: #000;    font-size: 28px;
 }
 .frList_sec h4 br { display: none;}
 .frList_sec ul li {
@@ -2568,6 +2841,298 @@ h6 { font-size: 18px; }
 
 
 .onHire_immerPage .provider_section .row .custom_tittle { padding-top: 25px !important;}
+
+
+
+.marketServices_fr { padding-top: 25px;}
+
+
+.quick_links { 
+    padding-top: 45px;
+}
+
+.quick_links h5 { 
+    padding-bottom: 15px; 
+    font-size: 18px;
+}
+
+.newTecnologyList { padding: 0px !important;padding-right: 0px !important;}
+
+.newTecnologyList .technology_master_inner {padding: 40px 20px !important; margin: 0px !important; }
+
+.newTecnologyList .ml-4 { margin-top: 40px !important; margin-bottom: 10px !important;}
+
+
+.notification_banner .mainBanner_detail {
+    padding: 0px 0px;
+}
+
+.notification_banner .mainBanner_section { 
+    background-size: cover;
+}
+
+.notification_banner .marketing_banner_fr { padding-top: 0px; padding-bottom: 50px;}
+
+.notification_banner { 
+    padding-bottom: 0px;
+}
+
+.keySuccess_col { 
+    padding: 20px 0px;
+}
+
+.nativeSupport_list ul li {
+    width: 33.33%;
+}
+
+.seamlessLimitless_section_detail { 
+    padding: 60px 0px;
+}
+
+.seamlessLimitless_fl { 
+    padding: 40px 25px;
+}
+
+
+.seamlessLimitless_fr span { 
+    padding: 25px; 
+}
+
+.onboardSkill_options { 
+    padding: 40px 25px 40px;
+}
+
+.onboardSkill_options .skilled_setting {
+    padding-top: 0px;
+}
+
+.onboardSkill_options .skilled_setting ul li { 
+    width: 33.33% !important;
+    padding: 9px 5px;
+}
+
+.onboardSkill_options .custom_tittle h2 { padding: 0px;}
+
+.skilled_setting  ul li {
+    width: 50% !important;
+}
+
+.skilled_setting ul li a { 
+    padding: 30px 5px;}
+
+.skilled_setting ul li a img {
+    width: 40px;
+    height: 40px; 
+    margin-bottom: 15px;
+}
+
+.skilled_setting ul li a strong { 
+    font-size: 13px;
+    line-height: 1.2; 
+    min-height: 40px;
+}
+
+.carousel__slide { width: 100% !important;}
+
+.meetTeam_sliderSection { padding-bottom: 40px;}
+
+.meetTeam_section_detail { 
+    padding: 60px 0px;
+}
+
+.innerNofification_pages .mainBanner_detail { 
+    padding: 60px 25px 0px !important;
+}
+.innerpages_tabsModify_detail { 
+    padding: 60px 0px;
+}
+
+.innerpages_tabsModify .custom_tittle {
+    padding: 50px 20px 50px;
+}
+
+.viewAll_search_bar { 
+    padding: 20px 20px 0px !important;
+}
+
+.viewAll_listing > ul > li { 
+    width: 100%;
+}
+
+.showListView .meetTeam_info {
+    padding: 20px 20px 20px;
+}
+
+.showListView .meetProfile { 
+    display: flex;
+}
+.showListView .descriptionText p { 
+    font-size: 14px;
+}
+
+.talentOnboard_page .hireForm_banner_detail { padding-top: 70px; padding-bottom: 100px;}
+
+.talentOnboard_page .hireForm_banner_detail .custom_tittle {
+    padding: 0px 0px;
+}
+.talentOnboard_page_detail {transform: translateY(-70px);
+    width: 90%;}
+
+.talent_vetting_head { 
+    padding: 50px 20px 30px;
+}
+.vettingList_section {
+    width: 100%;
+    padding: 50px 20px;}
+
+.vettingList_info .howWork_text_info h4 {
+    font-size: 14px;    padding-bottom: 10px !important;
+}
+
+.vettingList_infoBullets ul li { padding-bottom: 10px !important ;}
+
+.vettingList_info .howWork_text_info {
+    padding-left: 10px !important;}
+
+.vettingList_infoBullets ul { 
+    padding-left: 20px;
+}
+.vettingList_infoBullets ul li p { 
+    padding-left: 5px;
+    line-height: 1.4;
+}
+
+.talent_vetting_head .custom_tittle p {
+    font-size: 16px;
+    line-height: 1.5;
+    padding: 0px;
+}
+.talentProcess_section { 
+    padding: 50px 20px;}
+
+.talentProcess_bullets {
+    width: 100%;
+    display: block;
+}
+
+.talentProcess_bullets span { 
+    margin: 10px 10px 15px 0px;  float: none;
+}
+.talentProcess_section .aboutBizionic_col_info h4 {
+    font-size: 16px;
+}
+
+.global_talent_quotesCol p {
+    font-size: 16px;}
+
+
+.onboardPage .provider_section .industryNew_section2_cols {
+    padding: 0px 0px 0px;
+}
+
+.mainForm_fl .talentCheck_list_info { 
+    padding: 50px 20px;
+}
+
+.mainForm_fl .talentCheckList h4 { 
+    font-size: 24px;
+    line-height: 1.4;
+}
+
+.onboardPage .mainForm_fl .chrckIcon {
+    max-width: 14px;
+    margin-right: 5px;
+}
+.onboardPage .mainForm_fl .talentCheckList ul li p {
+    font-size: 14px;
+    flex-wrap: nowrap;
+}
+
+.onboardPage .mainForm_fl .talentCheckList ul li {
+    width: 100%;
+    padding: 8px 0px;
+}
+
+.listOf_topTechnologies { 
+    padding: 50px 25px;
+}
+
+.listTop_technology ul li { 
+    padding: 20px 20px;
+}
+
+.mainForm_row .flForm_sec {
+    padding-right: 15px !important;
+}
+
+.mainForm_row .frForm_sec {
+    padding-left: 15px !important;
+}
+
+.mainForm_fr { 
+    padding: 50px 20px;}
+
+    .suggested_keySkills ul li button { 
+    padding: 10px 15px; 
+    font-size: 11px;
+}
+.suggested_keySkills ul li a { 
+    padding: 10px 15px; 
+    font-size: 12px;
+}
+
+.rate_edits { padding-bottom: 25px;}
+
+.suggested_keySkills ul li span i {
+    font-size: 16px; 
+    right: -3px;
+    top: -2px; 
+}
+
+.onhire_innerPages .abt_list li p { 
+    text-align: left;
+    font-size: 16px;
+    line-height: 1.4;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 

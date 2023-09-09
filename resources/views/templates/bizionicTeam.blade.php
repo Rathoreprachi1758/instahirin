@@ -649,7 +649,7 @@
 
                             <div class="col-lg-12 col-md-12">
                                 <div class="project_form_textarea">
-                                    <textarea placeholder="How can we help...*"></textarea>
+                                    <textarea placeholder="What can we build together....."></textarea>
                                 </div>
                             </div>
 

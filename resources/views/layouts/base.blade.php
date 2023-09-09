@@ -86,7 +86,22 @@
                          <div class="footerUp_detail">
                             <div class="row" id="footer-app">
                                 @include('forms.subscription')
-                                <div class="col-lg-4 col-md-5">
+
+                                <div class="col-lg-3 col-md-3">
+                                    <div class="quick_links">
+                                        <h5>Quick Links</h5>
+                                        <ul>
+                                            <li><a href="#">Terms of Services</a></li>
+                                            <li><a href="#">Acceptable Policy</a></li>
+                                            <li><a href="#">Cookies Policy</a></li>
+                                            <li><a href="#">Privacy Policy</a></li>
+                                            <li><a href="#">Services Agreement</a></li>
+                                        </ul>
+                                    </div>
+                                </div>
+
+
+                                <div class="col-lg-4 col-md-4">
                                     <div class="bizionic_about"> 
 
                                         <div class="adress_tabs">
@@ -150,6 +165,27 @@
                                             <p>Monday to Friday 9:00 am to 6:00 pm</p>
                                         </div>
 
+
+                                        <div class="social_info">
+                                            <a href="https://www.facebook.com/Bizionictechnologies" target="_blank" class="s_fb"
+                                                ><i class="fa fa-facebook-official" aria-hidden="true"></i
+                                            ></a>
+                                            <a href="https://www.instagram.com/bizionic_technologies/" target="_blank" class="s_inst"
+                                                ><i class="fa fa-instagram" aria-hidden="true"></i
+                                            ></a>
+                                            <a href="https://twitter.com/bizionictech" target="_blank" class="s_tw"
+                                                ><i class="fa fa-twitter-square" aria-hidden="true"></i
+                                            ></a>
+                                            <a href="https://www.linkedin.com/company/bizionic-technologies-and-marketing-solutions/" target="_blank" class="s_link"
+                                                ><i class="fa fa-linkedin-square" aria-hidden="true"></i
+                                            ></a>
+                                            <a href="https://www.youtube.com/channel/UCDz2zqtte5EZ3_6OAfMl4rw" class="s_yout" target="_blank"
+                                                ><i class="fa fa-youtube-play" aria-hidden="true"></i
+                                            ></a>
+                                            <a href="#" class="s_slide" target="_blank"
+                                                ><i class="fa fa-slideshare" aria-hidden="true"></i
+                                            ></a>
+                                        </div>
                                         
                                     </div>
                                 </div>

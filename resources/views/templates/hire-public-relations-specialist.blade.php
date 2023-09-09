@@ -169,6 +169,7 @@
                 <div class="contactUs_detail">
 
                     <!-- form here  -->
+                    @include('forms.hire_talent')
 
 
                 </div>
