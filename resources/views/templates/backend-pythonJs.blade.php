@@ -29,7 +29,7 @@
 
                                         <p class="p_color text-justify">Python is a programming language that lets you work more quickly and integrate your systems more effectively. Python is powerful, fast, plays well with others, runs everywhere, user friendly & easy to learn. Bizionic Technologies Python developers are used in various domains and for multiple applications.</p>
                                            <br>
-                                        <a href="/get-a-free-consultation" class="btn_default mt-2">Hire Python Developer</a>
+                                        <a href="#gotoContact" class="btn_default mt-2">Hire Python Developer</a>
                                     
                                 </div>
                             </div>
@@ -165,7 +165,7 @@
 
 
 
-        <div class="aboutProject_section hireFormSetting">
+        <div class="aboutProject_section hireFormSetting" id="gotoContact">
             <div class="auto_container">
 
                 <div class="contactUs_detail">

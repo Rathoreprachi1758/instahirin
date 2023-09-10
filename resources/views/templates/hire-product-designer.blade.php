@@ -30,7 +30,7 @@
 
                                         <p class="p_color text-justify">Bizionic Marketing Solutions product designers are responsible for the design and development of physical or digital products. They combine creativity, technical knowledge, and user-centered design principles to create products that are functional, aesthetically pleasing, and aligned with user needs. </p>
                                            <br>
-                                        <a href="/get-a-free-consultation" class="btn_default mt-2">Hire Product Designer</a>
+                                        <a href="#gotoContact" class="btn_default mt-2">Hire Product Designer</a>
                                     
                                 </div>
                             </div>
@@ -171,7 +171,7 @@
 
 
 
-        <div class="aboutProject_section hireFormSetting">
+        <div class="aboutProject_section hireFormSetting" id="gotoContact">
             <div class="auto_container">
 
                 <div class="contactUs_detail">

@@ -29,7 +29,7 @@
 
                                         <p class="p_color text-justify">Bizionic Marketing Solutions Email Marketing Specialists are used for various purposes within an organization's marketing efforts.</p>
                                            <br>
-                                        <a href="/get-a-free-consultation" class="btn_default mt-2">Hire Email Marketing Specialist</a>
+                                        <a href="#gotoContact" class="btn_default mt-2">Hire Email Marketing Specialist</a>
                                     
                                 </div>
                             </div>
@@ -154,7 +154,7 @@
 
 
 
-        <div class="aboutProject_section hireFormSetting">
+        <div class="aboutProject_section hireFormSetting" id="gotoContact">
             <div class="auto_container">
 
                 <div class="contactUs_detail">

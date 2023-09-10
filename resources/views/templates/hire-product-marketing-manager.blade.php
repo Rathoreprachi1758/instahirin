@@ -29,7 +29,7 @@
 
                                         <p class="p_color text-justify">Bizionic Marketing Solutions Product Marketing Managers are responsible for driving the success of a product or service by developing and executing strategic marketing plans. They work closely with cross-functional teams, including product development, sales, and marketing, to understand customer needs, differentiate the product in the market, and drive adoption and revenue. </p>
                                            <br>
-                                        <a href="/get-a-free-consultation" class="btn_default mt-2">Hire Product Marketing Manager</a>
+                                        <a href="#gotoContact" class="btn_default mt-2">Hire Product Marketing Manager</a>
                                     
                                 </div>
                             </div>
@@ -163,7 +163,7 @@
 
 
 
-        <div class="aboutProject_section hireFormSetting">
+        <div class="aboutProject_section hireFormSetting" id="gotoContact">
             <div class="auto_container">
 
                 <div class="contactUs_detail">

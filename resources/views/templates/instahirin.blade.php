@@ -177,7 +177,7 @@
                                     </ul>
 
 
-                                    <a href="/instaHirin/global-talent" class="btn_default_white">Revolutionize Your Talent Acquisition Journey!</a>
+                                    <a href="/industries/industries-we-serve/industries/global-talent" class="btn_default_white">Revolutionize Your Talent Acquisition Journey!</a>
                                 </div>
                             </div>
 

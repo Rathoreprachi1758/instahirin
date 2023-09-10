@@ -29,7 +29,7 @@
 
                                         <p class="p_color text-justify">Bizionic Technologies GatsbyJS developers build high-performance websites and applications using a modern web development framework based on React.js. GatsbyJS developers are skilled in utilizing the GatsbyJS framework to develop fast, optimized, and scalable websites.</p>
                                            <br>
-                                        <a href="/get-a-free-consultation" class="btn_default mt-2">Hire GatsbyJS Developer</a>
+                                        <a href="#gotoContact" class="btn_default mt-2">Hire GatsbyJS Developer</a>
                                     
                                 </div>
                             </div>
@@ -146,7 +146,7 @@
 
 
 
-        <div class="aboutProject_section hireFormSetting">
+        <div class="aboutProject_section hireFormSetting" id="gotoContact">
             <div class="auto_container">
 
                 <div class="contactUs_detail">

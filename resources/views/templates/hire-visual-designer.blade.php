@@ -31,7 +31,7 @@
 
                                         <p class="p_color text-justify">Bizionic Marketing Solutions Visual designers specialize in creating visually appealing and engaging designs for various mediums, such as digital interfaces, print materials, branding, and marketing collateral. They are responsible for the visual aspects of a design, including color, typography, imagery, and layout, to communicate a specific message or evoke a desired emotional response. </p>
                                            <br>
-                                        <a href="/get-a-free-consultation" class="btn_default mt-2">Hire Visual Designer</a>
+                                        <a href="#gotoContact" class="btn_default mt-2">Hire Visual Designer</a>
                                     
                                 </div>
                             </div>
@@ -152,7 +152,7 @@
 
 
 
-        <div class="aboutProject_section hireFormSetting">
+        <div class="aboutProject_section hireFormSetting" id="gotoContact">
             <div class="auto_container">
 
                 <div class="contactUs_detail">

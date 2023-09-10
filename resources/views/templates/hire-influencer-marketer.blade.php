@@ -30,7 +30,7 @@
 
                                         <p class="p_color text-justify">Bizionic Marketing Solutions Influencer Marketers specialize in leveraging the power of influencers to promote products, services, or brands.</p>
                                            <br>
-                                        <a href="/get-a-free-consultation" class="btn_default mt-2">Hire Influencer Marketer</a>
+                                        <a href="#gotoContact" class="btn_default mt-2">Hire Influencer Marketer</a>
                                     
                                 </div>
                             </div>
@@ -164,7 +164,7 @@
 
 
 
-        <div class="aboutProject_section hireFormSetting">
+        <div class="aboutProject_section hireFormSetting" id="gotoContact">
             <div class="auto_container">
 
                 <div class="contactUs_detail">

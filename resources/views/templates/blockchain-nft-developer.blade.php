@@ -29,7 +29,7 @@
 
                                         <p class="p_color text-justify">Bizionic Technologies NFT (Non-Fungible Token) developers specialize in creating and implementing applications and platforms that leverage NFT technology. NFTs are unique digital assets representing ownership or proof of authenticity of a particular item or piece of content, such as artwork, music, collectibles, virtual real estate, and more.</p>
                                            <br>
-                                        <a href="/get-a-free-consultation" class="btn_default mt-2">Hire NFT Developer</a>
+                                        <a href="#gotoContact" class="btn_default mt-2">Hire NFT Developer</a>
                                     
                                 </div>
                             </div>
@@ -142,7 +142,7 @@
 
 
 
-        <div class="aboutProject_section hireFormSetting">
+        <div class="aboutProject_section hireFormSetting" id="gotoContact">
             <div class="auto_container">
 
                 <div class="contactUs_detail">

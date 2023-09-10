@@ -29,7 +29,7 @@
 
                                         <p class="p_color text-justify">Bizionic Marketing Solutions Marketing Coordinator supports and assists the marketing team in the implementation of marketing strategies and campaigns. They play a crucial role in executing marketing activities, coordinating projects, and ensuring smooth communication and collaboration within the marketing department.</p>
                                            <br>
-                                        <a href="/get-a-free-consultation" class="btn_default mt-2">Hire Marketing Coordinator</a>
+                                        <a href="#gotoContact" class="btn_default mt-2">Hire Marketing Coordinator</a>
                                     
                                 </div>
                             </div>
@@ -162,7 +162,7 @@
 
 
 
-        <div class="aboutProject_section hireFormSetting">
+        <div class="aboutProject_section hireFormSetting" id="gotoContact">
             <div class="auto_container">
 
                 <div class="contactUs_detail">

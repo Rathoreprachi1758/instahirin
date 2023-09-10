@@ -29,7 +29,7 @@
 
                                         <p class="p_color text-justify">Bizionic Technologies Tableau developers specialize in working with Tableau, a popular data visualization and business intelligence software. They use Tableau's features and capabilities to create interactive and visually appealing dashboards, reports, and data visualizations for businesses and organizations.</p>
                                            <br>
-                                        <a href="/get-a-free-consultation" class="btn_default mt-2">Hire Tableau Developer</a>
+                                        <a href="#gotoContact" class="btn_default mt-2">Hire Tableau Developer</a>
                                     
                                 </div>
                             </div>
@@ -144,7 +144,7 @@
 
 
 
-        <div class="aboutProject_section hireFormSetting">
+        <div class="aboutProject_section hireFormSetting" id="gotoContact">
             <div class="auto_container">
 
                 <div class="contactUs_detail">

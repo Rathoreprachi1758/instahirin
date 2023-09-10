@@ -29,7 +29,7 @@
 
                                         <p class="p_color text-justify">Bizionic Technologies Oracle Cloud Infrastructure (OCI) consultants are hired to assist businesses in leveraging Oracle's cloud platform, OCI, to design, implement, and optimize their cloud infrastructure. OCI is Oracle's cloud computing service offering comprehensive infrastructure services, including computing, storage, networking, database, security, and management tools.</p>
                                            <br>
-                                        <a href="/get-a-free-consultation" class="btn_default mt-2">Hire Oracle Cloud Infrastructure Consultant</a>
+                                        <a href="#gotoContact" class="btn_default mt-2">Hire Oracle Cloud Infrastructure Consultant</a>
                                     
                                 </div>
                             </div>
@@ -145,7 +145,7 @@
 
 
 
-        <div class="aboutProject_section hireFormSetting">
+        <div class="aboutProject_section hireFormSetting" id="gotoContact">
             <div class="auto_container">
 
                 <div class="contactUs_detail">

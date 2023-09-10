@@ -29,7 +29,7 @@
 
                                         <p class="p_color text-justify">Bizionic Marketing Solutions Brand Managers manage and develop a company or product's brand identity and strategy. They play a crucial role in shaping the perception of the brand and ensuring its consistency across various channels and touchpoints. </p>
                                            <br>
-                                        <a href="/get-a-free-consultation" class="btn_default mt-2">Hire Brand Manager</a>
+                                        <a href="#gotoContact" class="btn_default mt-2">Hire Brand Manager</a>
                                     
                                 </div>
                             </div>
@@ -152,7 +152,7 @@
 
 
 
-        <div class="aboutProject_section hireFormSetting">
+        <div class="aboutProject_section hireFormSetting" id="gotoContact">
             <div class="auto_container">
 
                 <div class="contactUs_detail">

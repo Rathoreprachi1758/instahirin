@@ -29,7 +29,7 @@
 
                                         <p class="p_color text-justify">Bizionic Technologies Node.js developers specialize in building applications using the Node.js runtime environment, which allows JavaScript to run on the server side. Node.js is known for its event-driven, non-blocking I/O model, making it well-suited for building scalable and high-performance applications.</p>
                                            <br>
-                                        <a href="/get-a-free-consultation" class="btn_default mt-2">Hire Node.js Developer</a>
+                                        <a href="#gotoContact" class="btn_default mt-2">Hire Node.js Developer</a>
                                     
                                 </div>
                             </div>
@@ -164,7 +164,7 @@
 
 
 
-        <div class="aboutProject_section hireFormSetting">
+        <div class="aboutProject_section hireFormSetting" id="gotoContact">
             <div class="auto_container">
 
                 <div class="contactUs_detail">

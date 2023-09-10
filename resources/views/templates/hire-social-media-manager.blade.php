@@ -29,7 +29,7 @@
 
                                         <p class="p_color text-justify">Bizionic Marketing Solutions Social Media Manager specializes in managing and implementing social media strategies for businesses or brands. They are responsible for creating, scheduling, and analyzing content across various social media platforms to engage with the target audience and achieve specific marketing goals.  </p>
                                            <br>
-                                        <a href="/get-a-free-consultation" class="btn_default mt-2">Hire Social Media Manager</a>
+                                        <a href="#gotoContact" class="btn_default mt-2">Hire Social Media Manager</a>
                                     
                                 </div>
                             </div>
@@ -173,7 +173,7 @@
 
 
 
-        <div class="aboutProject_section hireFormSetting">
+        <div class="aboutProject_section hireFormSetting" id="gotoContact">
             <div class="auto_container">
 
                 <div class="contactUs_detail">

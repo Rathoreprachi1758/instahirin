@@ -29,7 +29,7 @@
 
                                         <p class="p_color text-justify">Bizionic Technologies Angular developers specialize in using the Angular framework to develop web applications. Angular is a popular open-source framework maintained by Google and is widely used for building dynamic, single-page applications (SPAs) and progressive web applications (PWAs). Angular developers leverage their expertise in the framework to create robust, scalable, and interactive web applications with a rich user interface.</p>
                                            
-                                        <a href="/get-a-free-consultation" class="btn_default mt-2">Hire Angular Developer</a>
+                                        <a href="#gotoContact" class="btn_default mt-2">Hire Angular Developer</a>
                                     
                                 </div>
                             </div>
@@ -131,7 +131,7 @@
 
 
 
-        <div class="aboutProject_section hireFormSetting">
+        <div class="aboutProject_section hireFormSetting" id="gotoContact">
             <div class="auto_container">
 
                 <div class="contactUs_detail">

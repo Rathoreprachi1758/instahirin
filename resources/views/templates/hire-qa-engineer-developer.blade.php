@@ -29,7 +29,7 @@
 
                                         <p class="p_color text-justify">QA testers or analysts dive deep into a program or software to uncover bugs and issues. Bizionic Technologies QA (Quality Assurance) software engineers are highly skilled in software testing and quality assurance using contemporary technologies.</p>
                                            <br>
-                                        <a href="/get-a-free-consultation" class="btn_default mt-2">Hire QA Software Engineer</a>
+                                        <a href="#gotoContact" class="btn_default mt-2">Hire QA Software Engineer</a>
                                     
                                 </div>
                             </div>
@@ -164,7 +164,7 @@
 
 
 
-        <div class="aboutProject_section hireFormSetting">
+        <div class="aboutProject_section hireFormSetting" id="gotoContact">
             <div class="auto_container">
 
                 <div class="contactUs_detail">
