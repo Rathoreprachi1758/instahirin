@@ -30,7 +30,7 @@
                                         <p class="p_color text-justify">Bizionic Technologies Next.js uses a popular React framework for building server-rendered React applications and static websites. Next.js developers are skilled in using the Next.js framework to develop high-performance, scalable, and SEO-friendly web applications.</p>
 
                                         <br>
-                                        <a href="/get-a-free-consultation" class="btn_default mt-2">Hire Next.js Developer</a>
+                                        <a href="#gotoContact" class="btn_default mt-2">Hire Next.js Developer</a>
                                     
                                 </div>
                             </div>
@@ -154,7 +154,7 @@
 
 
 
-        <div class="aboutProject_section hireFormSetting">
+        <div class="aboutProject_section hireFormSetting" id="gotoContact">
             <div class="auto_container">
 
                 <div class="contactUs_detail">

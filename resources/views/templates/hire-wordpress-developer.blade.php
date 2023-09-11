@@ -29,7 +29,7 @@
 
                                         <p class="p_color text-justify">Bizionic Technologies Salesforce developers specialize in developing and customizing applications on the Salesforce platform. Salesforce is a cloud-based customer relationship management (CRM) platform that offers various features and functionalities to help businesses manage their sales, marketing, customer service, and other operations.</p>
                                            <br>
-                                        <a href="/get-a-free-consultation" class="btn_default mt-2">Hire WordPress Developer</a>
+                                        <a href="#gotoContact" class="btn_default mt-2">Hire WordPress Developer</a>
                                     
                                 </div>
                             </div>
@@ -149,7 +149,7 @@
 
 
 
-        <div class="aboutProject_section hireFormSetting">
+        <div class="aboutProject_section hireFormSetting" id="gotoContact">
             <div class="auto_container">
 
                 <div class="contactUs_detail">

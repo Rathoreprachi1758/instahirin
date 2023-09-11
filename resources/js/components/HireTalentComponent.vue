@@ -39,7 +39,7 @@
 
         <div class="col-lg-12 col-md-12">
             <div class="project_form_textarea">
-                <textarea placeholder=" How can we help you*" name="message" id="message"></textarea>
+                <textarea placeholder="What can we build together....." name="message" id="message"></textarea>
             </div>
         </div>
 

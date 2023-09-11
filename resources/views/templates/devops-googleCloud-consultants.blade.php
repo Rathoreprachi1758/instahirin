@@ -29,7 +29,7 @@
 
                                         <p class="p_color text-justify">Google Cloud consultants are hired to assist businesses in leveraging the Google Cloud platform to design, implement, and optimize their cloud infrastructure and services. Google Cloud provides many cloud computing services, including computing, storage, networking, databases, analytics, machine learning, and more.</p>
                                            <br>
-                                        <a href="/get-a-free-consultation" class="btn_default mt-2">Hire Google Cloud Consultants</a>
+                                        <a href="#gotoContact" class="btn_default mt-2">Hire Google Cloud Consultants</a>
                                     
                                 </div>
                             </div>
@@ -152,7 +152,7 @@
 
 
 
-        <div class="aboutProject_section hireFormSetting">
+        <div class="aboutProject_section hireFormSetting" id="gotoContact">
             <div class="auto_container">
 
                 <div class="contactUs_detail">

@@ -389,7 +389,7 @@
                         <li>
                             <div class="technology_master_info newTecnologyList">
                                 <div class="row">
-                                    <div class="col-lg-6 col-md-6 aos-init aos-animate" data-aos="fade-right" data-aos-duration="1200" data-aos-easing="ease">
+                                    <div class="col-lg-6 col-md-12 aos-init aos-animate" data-aos="fade-right" data-aos-duration="1200" data-aos-easing="ease">
                                         <div class="technology_master_inner mr-4">
                                             <div class="technology_master_text">
                                                 <h3>Artificial Intelligence (AI) Technologies</h3>
@@ -410,7 +410,7 @@
                                         </div>
                                     </div>
 
-                                    <div class="col-lg-6 col-md-6 aos-init aos-animate" data-aos="fade-left" data-aos-duration="1200" data-aos-easing="ease">
+                                    <div class="col-lg-6 col-md-12 aos-init aos-animate" data-aos="fade-left" data-aos-duration="1200" data-aos-easing="ease">
                                         <div class="technology_master_inner ml-4">
                                             <div class="technology_master_text">
                                                 <h3>Mixed Reality Technologies</h3>

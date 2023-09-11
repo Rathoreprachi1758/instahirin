@@ -29,7 +29,7 @@
 
                                         <p class="p_color text-justify">Bizionic Technologies Full-stack developers are proficient in front-end and back-end development, allowing them to work on all aspects of a web application. In addition, they have a broad understanding of different technologies and frameworks, enabling them to handle client- and server-side development.</p>
                                            <br>
-                                        <a href="/get-a-free-consultation" class="btn_default mt-2">Hire Full-stack Developer</a>
+                                        <a href="#gotoContact" class="btn_default mt-2">Hire Full-Stack Developer</a>
                                     
                                 </div>
                             </div>
@@ -148,7 +148,7 @@
 
 
 
-        <div class="aboutProject_section hireFormSetting">
+        <div class="aboutProject_section hireFormSetting" id="gotoContact">
             <div class="auto_container">
 
                 <div class="contactUs_detail">

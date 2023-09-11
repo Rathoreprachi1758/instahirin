@@ -1,5 +1,5 @@
 <template>
-    <div class="connected_form_info">
+    <div class="connected_form_info getFree">
             <div
                 class="alert alert-success text-center"
                 role="alert"

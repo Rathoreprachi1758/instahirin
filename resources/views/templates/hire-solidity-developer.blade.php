@@ -29,7 +29,7 @@
 
                                         <p class="p_color text-justify">Bizionic Technologies Solidity developers are primarily used for blockchain and decentralized application (dApp) development. Solidity is a programming language specifically designed for writing smart contracts on blockchain platforms, with Ethereum being the most prominent one.</p>
                                            <br>
-                                        <a href="/get-a-free-consultation" class="btn_default mt-2">Hire Solidity Developer</a>
+                                        <a href="#gotoContact" class="btn_default mt-2">Hire Solidity Developer</a>
                                     
                                 </div>
                             </div>
@@ -141,7 +141,7 @@
 
 
 
-        <div class="aboutProject_section hireFormSetting">
+        <div class="aboutProject_section hireFormSetting" id="gotoContact">
             <div class="auto_container">
 
                 <div class="contactUs_detail">

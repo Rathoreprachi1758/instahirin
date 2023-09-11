@@ -27,7 +27,7 @@
 
                                         <p class="p_color text-justify">With their proficient in-house AI and ML teams, "Bizionic Marketing Solution" maintains a leading position in modern marketing practices, effectively integrating artificial intelligence and machine learning into their strategies. This strategic fusion empowers them to adeptly navigate the data-driven and automated marketing landscape adeptly, gaining a distinct competitive advantage. In today's AI-driven, data-centric marketing world, it is imperative for businesses to diligently research the implementation of AI and ML solutions into their marketing endeavours. By choosing to partner with Bizionic, brands can rest assured that they will continuously remain at the cutting edge of the ever-evolving new-age technologies in the marketing landscape.</p>
                                            <br>
-                                        <a href="/get-a-free-consultation" class="btn_default mt-2">Contact Now</a>
+                                        <a href="#gotoContact" class="btn_default mt-2">Contact Now</a>
                                     
                                 </div>
                             </div>
@@ -137,7 +137,7 @@
 
 
 
-        <div class="aboutProject_section hireFormSetting">
+        <div class="aboutProject_section hireFormSetting" id="gotoContact">
             <div class="auto_container">
 
                 <div class="contactUs_detail">

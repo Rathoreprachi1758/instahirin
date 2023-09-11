@@ -30,7 +30,7 @@
                                         <p class="p_color text-justify">Bizionic Technologies Laravel developers specialize in working with the Laravel framework, a popular PHP framework for web application development. They leverage Laravel's features and functionalities to build robust, scalable, and efficient web applications.</p>
                                             <br>                                         
                                         
-                                        <a href="/get-a-free-consultation" class="btn_default mt-2">Hire Laravel Developer</a>
+                                        <a href="#gotoContact" class="btn_default mt-2">Hire Laravel Developer</a>
                                     
                                 </div>
                             </div>
@@ -144,7 +144,7 @@
 
 
 
-        <div class="aboutProject_section hireFormSetting">
+        <div class="aboutProject_section hireFormSetting" id="gotoContact">
             <div class="auto_container">
 
                 <div class="contactUs_detail">

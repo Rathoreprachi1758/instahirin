@@ -267,7 +267,7 @@ class ContentController extends Controller
                 $formData->expert_id = $request->expert_id;
             }
             $formData->priority = 'insta';
-            $formData->source = isset($validatedData['source'])?$validatedData['source']:'';
+            $formData->source = isset($validatedData['source']) ? $validatedData['source'] : '';
             $formData->virtual_assistance_call = isset($validatedData['virtual_assistance_call'])?'Yes':'No';
             $formData->availability_date = $validatedData['availability_date'];
             $formData->availability_time_from = $validatedData['availability_time_from'];

@@ -29,7 +29,7 @@
 
                                         <p class="p_color text-justify">Bizionic Technologies Kotlin developers specialize in developing applications using the Kotlin programming language. Kotlin is a modern and statically typed language that runs on the Java Virtual Machine (JVM) and can be used for various types of development.</p>
                                            <br>
-                                        <a href="/get-a-free-consultation" class="btn_default mt-2">Hire Kotlin Developer</a>
+                                        <a href="#gotoContact" class="btn_default mt-2">Hire Kotlin Developer</a>
                                     
                                 </div>
                             </div>
@@ -168,7 +168,7 @@
 
 
 
-        <div class="aboutProject_section hireFormSetting">
+        <div class="aboutProject_section hireFormSetting" id="gotoContact">
             <div class="auto_container">
 
                 <div class="contactUs_detail">

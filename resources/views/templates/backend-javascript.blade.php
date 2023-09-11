@@ -29,7 +29,7 @@
 
                                         <p class="p_color text-justify">Bizionic Technologies JavaScript developers specialize in developing web applications using the JavaScript programming language. JavaScript is a versatile language that runs in web browsers and can also be used on the server side with platforms like Node.js.</p>
                                            <br>
-                                        <a href="/get-a-free-consultation" class="btn_default mt-2">Hire JavaScript Developer</a>
+                                        <a href="#gotoContact" class="btn_default mt-2">Hire JavaScript Developer</a>
                                     
                                 </div>
                             </div>
@@ -167,7 +167,7 @@
 
 
 
-        <div class="aboutProject_section hireFormSetting">
+        <div class="aboutProject_section hireFormSetting" id="gotoContact">
             <div class="auto_container">
 
                 <div class="contactUs_detail">

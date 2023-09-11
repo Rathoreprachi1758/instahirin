@@ -31,7 +31,7 @@
 
                                         <p class="p_color text-justify">Bizionic Marketing Solutions brand designer specializes in creating and shaping the visual identity and overall perception of a brand. They work closely with clients or companies to develop and design visual elements that represent the brand's values, personality, and story. </p>
                                            <br>
-                                        <a href="/get-a-free-consultation" class="btn_default mt-2">Hire Brand Designer</a>
+                                        <a href="#gotoContact" class="btn_default mt-2">Hire Brand Designer</a>
                                     
                                 </div>
                             </div>
@@ -172,12 +172,13 @@
 
 
 
-        <div class="aboutProject_section hireFormSetting">
+        <div class="aboutProject_section hireFormSetting" id="gotoContact">
             <div class="auto_container">
 
                 <div class="contactUs_detail">
 
                     <!-- form here  -->
+                    @include('forms.hire_talent')
 
 
                 </div>
