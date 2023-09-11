@@ -32,7 +32,7 @@
 
                                         <p class="p_color text-justify">Bizionic Marketing Solution emphasizes the importance of scouting and negotiating Media planning and buying as crucial components of a marketing agency's services. These services involve strategizing and executing the most influential media channels and placements to reach the target audience and achieve the client's marketing objectives. </p>
                                            <br>
-                                        <a href="##gotoContac" class="btn_default mt-2">Contact Us</a>
+                                        <a href="#gotoContact" class="btn_default mt-2">Contact Us</a>
                                     
                                 </div>
                             </div>
@@ -189,7 +189,7 @@
 
 
 
-        <div class="aboutProject_section marketingFormSetting" id="gotoContac">
+        <div class="aboutProject_section marketingFormSetting" id="gotoContact">
             <div class="auto_container">
 
                 <div class="contactUs_detail">
