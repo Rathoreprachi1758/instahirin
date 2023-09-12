@@ -78,13 +78,12 @@
                                 id="hiring_type"
                             >
                              <!-- <option disabled selected>Select hiring type</option> -->
-                                <option value="dedicated_developer">Hire Dedicated Developers</option>
-                                <option value="dedicated">Hire Dedicated</option>
-                                <option value="developers">Hire Developers</option>
+                             <option value="dedicated_developer">Hire Dedicated Developers</option>
+                             <option value="part_time">Hire Part Time Developers</option>
                             </select>
                         </div>
                     </div>
-
+                    
                     <div class="col-lg-6 col-md-12">
                         <div class="project_form_select">
                             <select
@@ -94,12 +93,20 @@
                                 name="budget"
                                 id="budget"
                             >
-                                <option value="below_10K">Below $10K</option>
-                                <option value="above_10K">Above $10K</option>
+                            <option value="below_1K">Below $1K</option>
+                            <option value="below_2K">Below $2K</option>
+                            <option value="below_3K">Below $3K</option>
+                            <option value="below_4K">Below $4K</option>
+                            <option value="below_5K">Below $5K</option>
+                            <option value="below_6K">Below $6K</option>
+                            <option value="below_7K">Below $7K</option>
+                            <option value="below_8K">Below $8K</option>
+                            <option value="below_9K">Below $9K</option>
+                            <option value="below_10K">Below $10K</option>
                             </select>
                         </div>
                     </div>
-
+                    <div style="padding-left: 20px;">You are hiring For: {{template}}</div>
                     <div class="col-lg-12 col-md-12">
                         <div class="project_form_textarea">
                             <textarea
