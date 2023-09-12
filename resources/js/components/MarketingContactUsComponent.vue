@@ -149,6 +149,9 @@ export default {
             },
         };
     },
+    props:{
+        template:String
+    },
     methods: {
         handleFileChange(event) {
             const file = event.target.files[0];
