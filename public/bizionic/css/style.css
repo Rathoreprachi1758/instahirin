@@ -4071,11 +4071,16 @@ body, html {scroll-behavior: smooth; }
 
 
 
+.policy_pages { width: 100%;}
+
+.policy_pages_detail { width: 100%; padding: 70px 0px;}
 
 
+.policy_pages_content { width: 100%;}
 
+.policy_pages_content p b {font-family: 'avenirblack'}
 
-
+.policy_pages_content h6 { padding-top: 10px;}
 
 
 
