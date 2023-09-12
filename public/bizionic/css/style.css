@@ -2409,7 +2409,7 @@ body, html {scroll-behavior: smooth; }
 
 
 
-.scheduleCheckbox { width: 100%; padding: 20px 0px 10px;}
+.scheduleCheckbox { width: 100%; padding: 0px 0px 10px;}
 
 /* Styling Checkbox Starts */
 .checkbox-label { 
@@ -4051,17 +4051,19 @@ body, html {scroll-behavior: smooth; }
 
 
 
+.addCallender { width: 100%; display: flex; justify-content: flex-end;  }
+
+.addCallender .btn_default { padding:8px 10px;min-width: 110px; font-size: 12px;}
 
 
+.onFormCheck .checkbox-label .checkbox-custom { 
+    border: 1px solid #000;}
 
 
+.split_in_two { display: flex; align-items: center; justify-content: space-between;}
 
-
-
-
-
-
-
+.codeCountry {min-width: 28%;margin-right: 2%;}
+.filedPhone {min-width: 70%;}
 
 
 

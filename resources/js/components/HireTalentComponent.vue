@@ -10,8 +10,9 @@
         </div>
 
         <div class="col-lg-6 col-md-12">
-            <div class="project_form_field">
-                <input type="text" value="" placeholder="Phone / Skype / Whatsapp" name="phone" id="phone"/>
+            <div class="project_form_field split_in_two">
+                <input type="text" value="" placeholder="Code" name="phone" id="" class="codeCountry"/>
+                <input type="text" value="" placeholder="Phone / Skype / Whatsapp" name="phone" id="phone" class="filedPhone"/>
             </div>
         </div>
         <div class="col-lg-6 col-md-12">
@@ -83,11 +84,17 @@
                 </div>
 
 
-                <div class="addDeleteBtn">
+                <div class="addDeleteBtn d-none">
                     <a href="javascript:void(0)" class="p_color"><i class="fa fa-plus-circle" aria-hidden="true"></i></a>
                     <a href="javascript:void(0)" class="text-danger"><i class="fa fa-times-circle" aria-hidden="true"></i></a>
                 </div>
 
+            </div>
+        </div>
+
+        <div class="col-lg-12 col-md-12">
+            <div class="addCallender">
+                <button class="btn_default">Add Calender</button>
             </div>
         </div>
 
@@ -103,6 +110,8 @@
                 </label>
             </div>
         </div>
+
+        
 
 
 
@@ -127,7 +136,7 @@
                 </div>
 
 
-                <div class="addDeleteBtn">
+                <div class="addDeleteBtn d-none">
                     <a href="javascript:void(0)" class="p_color"><i class="fa fa-plus-circle" aria-hidden="true"></i></a>
                     <a href="javascript:void(0)" class="text-danger"><i class="fa fa-times-circle" aria-hidden="true"></i></a>
                 </div>
@@ -135,6 +144,12 @@
             </div>
         </div>
 
+
+        <div class="col-lg-12 col-md-12">
+            <div class="addCallender">
+                <button class="btn_default">Add Calender</button>
+            </div>
+        </div>
 
 
         <div class="col-lg-12 col-md-12">
