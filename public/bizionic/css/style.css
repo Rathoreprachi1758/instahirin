@@ -4083,9 +4083,9 @@ body, html {scroll-behavior: smooth; }
 .policy_pages_content h6 { padding-top: 10px;}
 
 
+.discList li { list-style: disc !important; padding: 2px 0px;}
 
-
-
+.discList li p { padding: 0px; padding-left: 8px;}
 
 
 
