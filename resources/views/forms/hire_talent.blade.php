@@ -37,7 +37,7 @@
 
             <form action="{{ route('hire') }}" method="POST" enctype="multipart/form-data" id="hire_developer" onsubmit="return false;">
             @csrf
-
+            <input type='hidden' value='{{$template}}' name='template'>
             <hire-talent-component></hire-talent-component>
 
             </form>
