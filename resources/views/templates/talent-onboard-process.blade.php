@@ -213,7 +213,7 @@
                                         <span class="workCount">11</span>
 
                                         <div class="howWork_text_info">
-                                            <h4>OCIAL MEDIA AND ONLINE PRESENCE:</h4> 
+                                            <h4>SOCIAL MEDIA AND ONLINE PRESENCE:</h4> 
 
                                             <div class="vettingList_infoBullets">
                                                 <ul>
