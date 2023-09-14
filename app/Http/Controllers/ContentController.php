@@ -16,6 +16,8 @@ use App\Models\InstaHirinOnboardDocument;
 use App\Models\Job;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Cache;
+use App\Models\Countrie;
+
 
 
 class ContentController extends Controller
@@ -36,7 +38,7 @@ class ContentController extends Controller
         if ($template == '404') {
             return abort(404);
         }
-
+       
         $menusResponse = Cache::get('menus', nova_get_menu_by_slug('header'));
 //        echo "<pre>";print_r($menusResponse['menuItems']);exit;
         // dd($template);
@@ -49,6 +51,7 @@ class ContentController extends Controller
                 'menus' => json_decode(json_encode((object) $menusResponse['menuItems']), FALSE),
                 'template' => $template,
                 'jobs' => $jobs,
+                
             ]);
         }
         
@@ -58,6 +61,7 @@ class ContentController extends Controller
             'keywords' => 'keywords',
             'menus' => json_decode(json_encode((object) $menusResponse['menuItems']), FALSE),
             'template' => $template,
+            'countries'=>json_encode(Countrie::all())
         ]);
     }
 
@@ -81,7 +85,7 @@ class ContentController extends Controller
     //* ContactUs Form Submission
     public function store(Request $request)
     {
-        // dd($request->all());
+        
         // Validate the request data, including the uploaded file
         if(isset($request->hiring_type))
         {
@@ -92,27 +96,30 @@ class ContentController extends Controller
                 'hiring_type' => 'required',
                 'budget' => 'required',
                 'details' => 'required',
-                'document' => 'required|file',
+                'document' => 'file',
             ]);
         }
         else
         {
             $validatedData = $request->validate([
                 'name' => 'required',
+                'company' => 'required',
                 'email' => 'required|email',
+                'countrycode' => 'required',
                 'phone' => 'required',
-                'details' => 'required',
-                'document' => 'required|file',
+                'details' => '',
+                'document' => '',
             ]);
         }
-
+        
         // Create a new instance of the ContactUs model
         $formData = new Lead();
 
         // Set the form data from the validated request
         $formData->name = $validatedData['name'];
+        $formData->company = $validatedData['company'];
         $formData->email = $validatedData['email'];
-        $formData->phone = $validatedData['phone'];
+        $formData->phone = $validatedData['countrycode'].$validatedData['phone'];
         if(isset($request->hiring_type))
         {
             $formData->hiring_type = $validatedData['hiring_type'];
@@ -125,8 +132,8 @@ class ContentController extends Controller
         if ($request->hasFile('document')) {
             $file = $request->file('document');
             $filename = $file->getClientOriginalName();
-            $file->storeAs('bizionic/images', $filename, 'public');
-            $formData->document = $filename;
+            $file->storeAs('bizionic/images', time().$filename, 'public');
+            $formData->document = time().$filename;
         }
 
         $formData->status = isset($validatedData['status']) ? $validatedData['status'] : 'New';
