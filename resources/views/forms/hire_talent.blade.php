@@ -36,9 +36,9 @@
             <div class="alert alert-danger text-center" role="alert" id="hire_failure"> Sorry! There is some problem sending your query at the moment, Please try again. </div>
 
             <form action="{{ route('hire') }}" method="POST" enctype="multipart/form-data" id="hire_developer" onsubmit="return false;">
-            @csrf
-
-            <hire-talent-component></hire-talent-component>
+            @csrf 
+            <input type='hidden' value='{{$template}}' name='template'>
+            <hire-talent-component :countries='{{$countries}}'></hire-talent-component>
 
             </form>
         </div>
