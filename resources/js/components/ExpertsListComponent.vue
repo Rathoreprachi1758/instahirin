@@ -140,7 +140,7 @@
 
           </ul>
         </div>
-        
+        <Pagination align="center" :data="experts" @Pagination-change-page="fetchExperts"></Pagination>
       </div>
     </div>
   </div>
