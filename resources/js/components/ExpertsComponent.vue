@@ -245,7 +245,7 @@
                     <ul>
                         <li v-for="category in categories" :key="category.id">
                             
-                            <a v-if="category.id === 1" @click="selectCategory(category)" class="active" >{{
+                            <a v-if="category.id === 1" @click="selectCategory(category)" :class="{ active:  (this.selectedCategory && category.id === this.selectedCategory.id) }" >{{
                                 category.title
                             }}</a>
 

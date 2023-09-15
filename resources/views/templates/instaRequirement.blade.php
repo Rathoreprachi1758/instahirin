@@ -368,10 +368,15 @@
                                     <div class="col-lg-6 col-md-12">
                                         <div class="requireForm_lable"> 
                                             <div class="project_form_select">
+                                                @php
+                                                $countries = json_decode($countries);                                                
+                                                @endphp
                                                 <select class="form-select" aria-label="Default select example" name="contact_no_country_code" id="contact_no_country_code">
+                                                <option value="">Country Code</option>
+                                                    @for($n=0;$n<count($countries);$n++)
+                                                    <option value="{{$countries[$n]->phone}}">{{$countries[$n]->name}} </option> 
+                                                    @endfor
                                                     
-                                                    <option value="+91">+91</option> 
-                                                    <option value="+1">+1</option>
                                                 </select>
                                             </div>
                                         </div>
