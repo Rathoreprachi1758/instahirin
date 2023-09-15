@@ -6,7 +6,7 @@ use App\Models\Client;
 use App\Models\Expert;
 use App\Models\ExpertCategory;
 use Illuminate\Http\Request;
-
+use Illuminate\Support\Facades\DB;
 class ApiController extends Controller
 {
     //
@@ -24,10 +24,10 @@ class ApiController extends Controller
     public function experts_search(Request $request)
     {
         // Validation if keyword is not found
-        $keyword = explode(',',$request->input('keyword'));
-        $keyword = explode(' ',implode(',',$keyword));
-
-        return response()->json(Expert::with(['experties', 'skills'])->whereHas('experties', function ($query) use ($keyword) {
+        // $keyword = explode(',',$request->input('keyword'));
+        // $keyword = explode(' ',implode(',',$keyword));
+        $keyword = array($request->input('keyword'));
+         return  response()->json(Expert::with(['experties', 'skills'])->whereHas('experties', function ($query) use ($keyword) {
             $query->whereIn('title', $keyword);
         })->orWhereHas('skills', function ($query) use ($keyword) {
             $query->whereIn('title', $keyword);

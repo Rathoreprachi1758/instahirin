@@ -4121,12 +4121,10 @@ body, html {scroll-behavior: smooth; }
 .uncheckTable b { font-size: 22px; color: #eb1c24;}
 
 
+.split_in_two { display: flex; align-items: center; justify-content: space-between;}
 
-
-
-
-
-
+.codeCountry {min-width: 28%;margin-right: 2%;}
+.filedPhone {min-width: 70%;}
 
 
 
