@@ -3100,10 +3100,16 @@ h6 { font-size: 18px; }
 
 
 
+.matrixTable_sectionDetail .hireForm_banner_detail {
+    padding: 50px 20px;
+}
 
+.matrixTable { 
+    width: 100%;
+    overflow-x: auto;
+}
 
-
-
+.matrixTable .table { width: 1200px;}
 
 
 
