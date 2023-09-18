@@ -47,9 +47,13 @@ class ApiController extends Controller
     public function experts_by_experties(Request $request)
     {
         $keyword = $request->input('keyword');
+        $availabl = $request->input('availabl');
 
-        return response()->json(Expert::with(['experties', 'skills'])->whereHas('experties', function ($query) use ($keyword) {
+        return response()->json(Expert::with(['experties', 'skills'])->whereHas('experties', function ($query) use ($keyword,$availabl) {
             $query->where('title', $keyword);
+            if(!empty($availabl))
+                $query->where('availability', $availabl);
+
         })->orderBy('created_at', 'desc')->get(), 200)->header('Content-Type', 'text/json');
     }
 
