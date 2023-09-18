@@ -92,9 +92,9 @@
                                         <h5>Quick Links</h5>
                                         <ul>
                                             <li><a href="#">Terms of Services</a></li>
-                                            <li><a href="#">Acceptable Policy</a></li>
-                                            <li><a href="#">Cookies Policy</a></li>
-                                            <li><a href="#">Privacy Policy</a></li>
+                                            <li><a href="/industries/industries-we-serve/industries/acceptable-policy">Acceptable Policy</a></li>
+                                            <li><a href="/industries/industries-we-serve/industries/cookies-policy">Cookies Policy</a></li>
+                                            <li><a href="/industries/industries-we-serve/industries/privacy-policy">Privacy Policy</a></li>
                                             <li><a href="#">Services Agreement</a></li>
                                         </ul>
                                     </div>

@@ -8,14 +8,20 @@
                     <input type="text" value="" name="source" id="source" hidden readonly/>
                 </div>
             </div>
-    
+
             <div class="col-lg-6 col-md-12">
                 <div class="project_form_field split_in_two"> 
-                    <select class="form-select codeCountry" required id="country_code"   name="country_code">
-                        <option value="">Country code</option>
-                        <option v-for="item in countries" :key="item">{{item.name}}</option>
+
+                    <div class="project_form_select mt-0 mb-0 mr-3">
+
+                        <select class="form-select codeCountry" required id="country_code"   name="country_code">
+                            <option value="">Country code</option>
+                            <option v-for="item in countries" :key="item">{{item.name}}</option>
+                        
+                        </select>
+
+                    </div>
                     
-                    </select>
                     <input type="text" value="" required placeholder="Phone / Skype / Whatsapp" name="phone" id="phone"/>
                 </div>
             </div>

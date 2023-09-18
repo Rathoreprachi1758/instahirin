@@ -2441,12 +2441,12 @@ body, html {scroll-behavior: smooth; }
 
 .checkbox-label input:checked ~ .checkbox-custom {
     background-color: #e0e1e2;
-    border-radius: 5px;
+     /*border-radius: 5px;
     -webkit-transform: rotate(0deg) scale(1);
     -ms-transform: rotate(0deg) scale(1);
-    transform: rotate(0deg) scale(1);
+    transform: rotate(0deg) scale(1); */
     opacity:1;
-    border: 1px solid #e0e1e2;
+    /* border: 1px solid #e0e1e2; */
 }
 
 
