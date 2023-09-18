@@ -72,7 +72,7 @@
       <div class="viewALL_gridList_detail">
         <div class="viewAll_listing">
           <ul>
-            <li v-for="(expert) in experts" :key="expert">
+            <li v-for="(expert) in experts.data" :key="expert">
               <div class="meetTeam_info">
                     <div class="meetProfile">
                         <span><img :src="`/storage/${expert.avatar}`"
@@ -141,6 +141,15 @@
           </ul>
         </div>
         <Pagination align="center" :data="experts" @Pagination-change-page="fetchExperts"></Pagination>
+            <div class="pagination">
+               <div style="float: left;">
+                 <a href="javascript:void(0)" @click="prevPage">Previous</a>
+               </div>  
+               <div style="float: right;">
+                <a href="javascript:void(0)" @click="nextPage">Next</a>
+            </div>  
+          </div>
+
       </div>
     </div>
   </div>
@@ -154,7 +163,18 @@
 .meetTeam_slider .item {
     
 } */
-
+.pagination {
+    display: inline-block;
+  }
+  
+  .pagination a {
+    color: black;
+    float: left;
+    padding: 8px 16px;
+    text-decoration: none;
+    transition: background-color .3s;
+    border: 1px solid #ddd;
+  }
 .meetTeam_sliderSection {
     overflow: hidden; /* Hide any overflowing content */
 }
@@ -211,6 +231,11 @@ export default {
             categories: [],
             selectedCategory: null,
             searchQuery: "",
+
+            experts: [],  // Store the fetched data
+            currentPage: 1,
+            itemsPerPage: 3,  // Adjust as needed
+            totalItems: 0,
         };
     },
     mounted() {
@@ -224,6 +249,19 @@ export default {
         }
     },
     methods: {
+        nextPage() { 
+    if (this.currentPage * this.itemsPerPage < this.totalItems) {
+      this.currentPage++;
+      this.fetchExperts();
+    }
+  },
+
+  prevPage() {
+    if (this.currentPage > 1) {
+      this.currentPage--;
+      this.fetchExperts();
+    }
+  },
         fetchCategories() {
             axios
                 .get("/api/v1/expert_categories")
@@ -235,11 +273,12 @@ export default {
                     console.error(error);
                 });
         },
-        fetchExperts() {
+        fetchExperts() {  
             axios
-                .get("/api/v1/experts")
-                .then((response) => {
-                    this.experts = response.data;
+                .get("/api/v1/experts?page="+this.currentPage)
+                .then((response) => {                     
+                    this.experts = response.data;                    
+                    this.totalItems = response.data.total;
                 })
                 .catch((error) => {
                     console.error(error);
