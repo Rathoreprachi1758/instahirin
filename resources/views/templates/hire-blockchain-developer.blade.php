@@ -29,7 +29,7 @@
 
                                         <p class="p_color text-justify">Push the limits of your valuable business with our modern blockchain innovations. Our Blockchain developers are responsible for designing, implementing, and maintaining blockchain-based applications and systems.</p>
                                            <br>
-                                        <a href="/get-a-free-consultation" class="btn_default mt-2">Hire Blockchain Developer</a>
+                                        <a href="#gotoContact" class="btn_default mt-2">Hire Blockchain Developer</a>
                                     
                                 </div>
                             </div>
@@ -152,7 +152,7 @@
 
 
 
-        <div class="aboutProject_section hireFormSetting">
+        <div class="aboutProject_section hireFormSetting" id="gotoContact">
             <div class="auto_container">
 
                 <div class="contactUs_detail">

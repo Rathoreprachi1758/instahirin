@@ -29,7 +29,7 @@
 
                                         <p class="p_color text-justify">Bizionic Technologies AWS developers specialize in using the Amazon Web Services (AWS) platform to design, develop, deploy, and manage applications and infrastructure in the cloud. AWS is one of the leading cloud computing platforms, offering a wide range of services and tools for various purposes.</p>
                                            <br>
-                                        <a href="/get-a-free-consultation" class="btn_default mt-2">Hire AWS Developer</a>
+                                        <a href="#gotoContact" class="btn_default mt-2">Hire AWS Developer</a>
                                     
                                 </div>
                             </div>
@@ -152,7 +152,7 @@
 
 
 
-        <div class="aboutProject_section hireFormSetting">
+        <div class="aboutProject_section hireFormSetting" id="gotoContact">
             <div class="auto_container">
 
                 <div class="contactUs_detail">

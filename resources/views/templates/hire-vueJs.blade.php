@@ -29,7 +29,7 @@
 
                                         <p class="p_color text-justify">Bizionic Technologies Vue.js developers are experts in a popular JavaScript framework for building user interfaces and single-page applications. In addition, Vue.js developers are skilled in using Vue.js to develop interactive and responsive web applications.</p>
                                            <br>
-                                        <a href="/get-a-free-consultation" class="btn_default mt-2">Hire Vue.js Developer</a>
+                                        <a href="#gotoContact" class="btn_default mt-2">Hire Vue.js Developer</a>
                                     
                                 </div>
                             </div>
@@ -146,7 +146,7 @@
 
 
 
-        <div class="aboutProject_section hireFormSetting">
+        <div class="aboutProject_section hireFormSetting" id="gotoContact">
             <div class="auto_container">
 
                 <div class="contactUs_detail">

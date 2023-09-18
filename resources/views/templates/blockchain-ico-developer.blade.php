@@ -29,7 +29,7 @@
 
                                         <p class="p_color text-justify">Bizionic Technologies ICO (Initial Coin Offering) developers specialize in creating and launching ICO campaigns for blockchain-based projects. ICOs are fundraising events where new cryptocurrencies or tokens are offered to investors in exchange for established cryptocurrencies like Bitcoin or Ethereum. ICO development involves various aspects, including technical implementation, smart contract creation, marketing, and compliance.</p>
                                            <br>
-                                        <a href="/get-a-free-consultation" class="btn_default mt-2">Hire ICO Developer</a>
+                                        <a href="#gotoContact" class="btn_default mt-2">Hire ICO Developer</a>
                                     
                                 </div>
                             </div>
@@ -145,7 +145,7 @@
 
 
 
-        <div class="aboutProject_section hireFormSetting">
+        <div class="aboutProject_section hireFormSetting" id="gotoContact">
             <div class="auto_container">
 
                 <div class="contactUs_detail">

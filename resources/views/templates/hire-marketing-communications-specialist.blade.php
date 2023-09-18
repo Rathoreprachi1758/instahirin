@@ -30,7 +30,7 @@
                                         <p class="p_color text-justify">Bizionic Marketing Solutions marketing communications specialist specializes in developing and implementing effective communication strategies to promote products, services, or brands. They play a crucial role in conveying messages to target
                                             audiences and engaging them through various marketing channels.</p>
                                            <br>
-                                        <a href="/get-a-free-consultation" class="btn_default mt-2">Hire Marketing Communications Specialist</a>
+                                        <a href="#gotoContact" class="btn_default mt-2">Hire Marketing Communications Specialist</a>
                                     
                                 </div>
                             </div>
@@ -164,12 +164,13 @@
 
 
 
-        <div class="aboutProject_section hireFormSetting">
+        <div class="aboutProject_section hireFormSetting" id="gotoContact">
             <div class="auto_container">
 
                 <div class="contactUs_detail">
 
                     <!-- form here  -->
+                    @include('forms.hire_talent')
 
 
                 </div>

@@ -29,7 +29,7 @@
 
                                         <p class="p_color text-justify">Bizionic Marketing Solution's Content Marketer specializes in creating, planning, and distributing valuable and relevant content to attract and engage a target a udience. They play a crucial role in content strategy development, content creation, and content distribution across various channels  </p>
                                            <br>
-                                        <a href="/get-a-free-consultation" class="btn_default mt-2">Hire Content Marketer</a>
+                                        <a href="#gotoContact" class="btn_default mt-2">Hire Content Marketer</a>
                                     
                                 </div>
                             </div>
@@ -171,12 +171,13 @@
 
 
 
-        <div class="aboutProject_section hireFormSetting">
+        <div class="aboutProject_section hireFormSetting" id="gotoContact">
             <div class="auto_container">
 
                 <div class="contactUs_detail">
 
                     <!-- form here  -->
+                    @include('forms.hire_talent')
 
 
                 </div>

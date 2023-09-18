@@ -31,7 +31,7 @@
 
                                         <p class="p_color text-justify">Bizionic Marketing Solutions exhibition designer specializes in creating engaging and immersive exhibition experiences. They combine artistic creativity, spatial design knowledge, and storytelling techniques to design exhibition spaces that effectively communicate information, engage visitors, and create memorable experiences. </p>
                                            <br>
-                                        <a href="/get-a-free-consultation" class="btn_default mt-2">Hire Exhibition Designer</a>
+                                        <a href="#gotoContact" class="btn_default mt-2">Hire Exhibition Designer</a>
                                     
                                 </div>
                             </div>
@@ -176,12 +176,13 @@
 
 
 
-        <div class="aboutProject_section hireFormSetting">
+        <div class="aboutProject_section hireFormSetting" id="gotoContact">
             <div class="auto_container">
 
                 <div class="contactUs_detail">
 
                     <!-- form here  -->
+                    @include('forms.hire_talent')
 
 
                 </div>

@@ -29,7 +29,7 @@
 
                                         <p class="p_color text-justify">Bizionic Technologies Data Scientists, also known as data science developers, data engineers or machine learning engineers, play a crucial role in developing and deploying data-driven solutions.</p>
                                            <br>
-                                        <a href="/get-a-free-consultation" class="btn_default mt-2">Hire Data Science Developer</a>
+                                        <a href="#gotoContact" class="btn_default mt-2">Hire Data Science Developer</a>
                                     
                                 </div>
                             </div>
@@ -161,7 +161,7 @@
 
 
 
-        <div class="aboutProject_section hireFormSetting">
+        <div class="aboutProject_section hireFormSetting" id="gotoContact">
             <div class="auto_container">
 
                 <div class="contactUs_detail">

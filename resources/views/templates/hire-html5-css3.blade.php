@@ -30,7 +30,7 @@
                                         <p class="p_color text-justify">Bizionic Technologies HTML5/CSS3 developers specialize in front-end web development using HTML5 and CSS3 technologies.</p>
                                         <p class="p_color text-justify">They are responsible for creating web page structure, layout, and visual styling, ensuring a compelling and user-friendly experience.</p>
                                            
-                                        <a href="/get-a-free-consultation" class="btn_default mt-2">Hire HTML5/CSS3 Developer</a>
+                                        <a href="#gotoContact" class="btn_default mt-2">Hire HTML5/CSS3 Developer</a>
                                     
                                 </div>
                             </div>
@@ -153,7 +153,7 @@
 
 
 
-        <div class="aboutProject_section hireFormSetting">
+        <div class="aboutProject_section hireFormSetting" id="gotoContact">
             <div class="auto_container">
 
                 <div class="contactUs_detail">

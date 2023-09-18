@@ -31,7 +31,7 @@
                                         <p class="p_color text-justify">Overall, .NET development offers a versatile and powerful platform for creating a wide range of applications, including web, desktop, mobile, enterprise and cloud-based solutions.</p>
                                          
                                         
-                                        <a href="/get-a-free-consultation" class="btn_default mt-2">Hire .NET Developer</a>
+                                        <a href="#gotoContact" class="btn_default mt-2">Hire .NET Developer</a>
                                     
                                 </div>
                             </div>
@@ -143,7 +143,7 @@
 
 
 
-        <div class="aboutProject_section hireFormSetting">
+        <div class="aboutProject_section hireFormSetting" id="gotoContact">
             <div class="auto_container">
 
                 <div class="contactUs_detail">

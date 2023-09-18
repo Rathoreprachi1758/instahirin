@@ -29,7 +29,7 @@
 
                                         <p class="p_color text-justify">Ruby on Rails developers usually develop back-end components, connect the application with the other (often third-party) web services, and support the front-end developers by integrating their work with the application.</p>
                                            <br>
-                                        <a href="/get-a-free-consultation" class="btn_default mt-2">Hire Ruby On Rails Developer</a>
+                                        <a href="#gotoContact" class="btn_default mt-2">Hire Ruby On Rails Developer</a>
                                     
                                 </div>
                             </div>
@@ -166,7 +166,7 @@
 
 
 
-        <div class="aboutProject_section hireFormSetting">
+        <div class="aboutProject_section hireFormSetting" id="gotoContact">
             <div class="auto_container">
 
                 <div class="contactUs_detail">

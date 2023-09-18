@@ -29,7 +29,7 @@
 
                                         <p class="p_color text-justify">Bizionic Technologies Golang developers use the Go programming to build efficient, scalable, high-performance applications. Go, also known as Golang, does Google develop an open-source language designed explicitly for building reliable and concurrent software.</p>
                                            <br>
-                                        <a href="/get-a-free-consultation" class="btn_default mt-2">Hire GoLang Developer</a>
+                                        <a href="#gotoContact" class="btn_default mt-2">Hire GoLang Developer</a>
                                     
                                 </div>
                             </div>
@@ -150,7 +150,7 @@
 
 
 
-        <div class="aboutProject_section hireFormSetting">
+        <div class="aboutProject_section hireFormSetting" id="gotoContact">
             <div class="auto_container">
 
                 <div class="contactUs_detail">

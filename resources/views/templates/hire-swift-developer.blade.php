@@ -29,7 +29,7 @@
 
                                         <p class="p_color text-justify">Bizionic Technologies Swift developers are primarily used for iOS, macOS, watchOS, and tvOS app development. Swift is a programming language developed by Apple specifically for building applications on Apple's platforms.</p>
                                            <br>
-                                        <a href="/get-a-free-consultation" class="btn_default mt-2">Hire Swift Developer</a>
+                                        <a href="#gotoContact" class="btn_default mt-2">Hire Swift Developer</a>
                                     
                                 </div>
                             </div>
@@ -141,7 +141,7 @@
 
 
 
-        <div class="aboutProject_section hireFormSetting">
+        <div class="aboutProject_section hireFormSetting" id="gotoContact">
             <div class="auto_container">
 
                 <div class="contactUs_detail">

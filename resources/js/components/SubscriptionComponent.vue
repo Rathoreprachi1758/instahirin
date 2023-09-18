@@ -1,6 +1,6 @@
 <template>
     <div class="connected_form">
-        <h3>STAY CONNECTED</h3>
+        <h5>STAY CONNECTED</h5>
         <div class="connected_form_info">
             <div
                 class="alert alert-success text-center"
@@ -52,7 +52,7 @@
                 your consent by <a href="#">contacting</a> us.
             </p>
 
-            <div class="btn_subcribe text-right">
+            <div class="btn_subcribe">
                 <input
                     type="text"
                     class="hidden d-none"
@@ -74,26 +74,7 @@
                 />
             </div>
 
-            <div class="social_info">
-                <a href="#" class="s_fb"
-                    ><i class="fa fa-facebook-official" aria-hidden="true"></i
-                ></a>
-                <a href="#" class="s_inst"
-                    ><i class="fa fa-instagram" aria-hidden="true"></i
-                ></a>
-                <a href="#" class="s_tw"
-                    ><i class="fa fa-twitter-square" aria-hidden="true"></i
-                ></a>
-                <a href="#" class="s_link"
-                    ><i class="fa fa-linkedin-square" aria-hidden="true"></i
-                ></a>
-                <a href="#" class="s_yout"
-                    ><i class="fa fa-youtube-play" aria-hidden="true"></i
-                ></a>
-                <a href="#" class="s_slide"
-                    ><i class="fa fa-slideshare" aria-hidden="true"></i
-                ></a>
-            </div>
+            
         </div>
     </div>
 </template>

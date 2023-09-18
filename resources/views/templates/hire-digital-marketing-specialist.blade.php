@@ -33,7 +33,7 @@
                                                 objectives. They possess expertise in various digital marketing channels and techniques and are skilled at leveraging online platforms to reach and engage
                                                 target audiences. </p>
                                            <br>
-                                        <a href="/get-a-free-consultation" class="btn_default mt-2">Hire Digital Marketing Specialist</a>
+                                        <a href="#gotoContact" class="btn_default mt-2">Hire Digital Marketing Specialist</a>
                                     
                                 </div>
                             </div>
@@ -200,13 +200,13 @@
 
 
 
-        <div class="aboutProject_section hireFormSetting">
+        <div class="aboutProject_section hireFormSetting" id="gotoContact">
             <div class="auto_container">
 
                 <div class="contactUs_detail">
 
                     <!-- form here  -->
-
+                    @include('forms.hire_talent')
 
                 </div>
 

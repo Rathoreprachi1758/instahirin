@@ -29,7 +29,7 @@
 
                                         <p class="p_color text-justify">iOS app developers specialize in building applications specifically for Apple's iOS platform, which powers devices like iPhones, iPads, and iPods touch. They possess expertise in programming languages like Swift or Objective-C and deeply understand the iOS SDK (Software Development Kit) and related tools.</p>
                                            <br>
-                                        <a href="/get-a-free-consultation" class="btn_default mt-2">Hire iOS App Developer</a>
+                                        <a href="#gotoContact" class="btn_default mt-2">Hire iOS App Developer</a>
                                     
                                 </div>
                             </div>
@@ -151,7 +151,7 @@
 
 
 
-        <div class="aboutProject_section hireFormSetting">
+        <div class="aboutProject_section hireFormSetting" id="gotoContact">
             <div class="auto_container">
 
                 <div class="contactUs_detail">

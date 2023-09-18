@@ -29,7 +29,7 @@
 
                                         <p class="p_color text-justify">Bizionic Technologies Flutter developers specialize in building cross-platform mobile applications using the Flutter framework. Flutter is an open-source UI toolkit developed by Google that allows developers to create high-performance apps for multiple platforms, including iOS, Android, and the web, using a single codebase. Flutter developers are proficient in Dart programming language and utilize Flutter's extensive set of libraries and widgets.</p>
                                            <br>
-                                        <a href="/get-a-free-consultation" class="btn_default mt-2">Hire Flutter Developer</a>
+                                        <a href="#gotoContact" class="btn_default mt-2">Hire Flutter Developer</a>
                                     
                                 </div>
                             </div>
@@ -149,7 +149,7 @@
 
 
 
-        <div class="aboutProject_section hireFormSetting">
+        <div class="aboutProject_section hireFormSetting" id="gotoContact">
             <div class="auto_container">
 
                 <div class="contactUs_detail">

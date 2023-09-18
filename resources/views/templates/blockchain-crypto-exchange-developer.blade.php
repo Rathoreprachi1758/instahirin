@@ -29,7 +29,7 @@
 
                                         <p class="p_color text-justify">Bizionic Technologies cryptocurrency exchange developer specializes in designing, developing, and launching cryptocurrency exchange platforms. These platforms facilitate the trading of cryptocurrencies among users, providing a secure and efficient marketplace for buying and selling digital assets.</p>
                                            <br>
-                                        <a href="/get-a-free-consultation" class="btn_default mt-2">Hire Cryptocurrency Exchange Developer</a>
+                                        <a href="#gotoContact" class="btn_default mt-2">Hire Cryptocurrency Exchange Developer</a>
                                     
                                 </div>
                             </div>
@@ -144,7 +144,7 @@
 
 
 
-        <div class="aboutProject_section hireFormSetting">
+        <div class="aboutProject_section hireFormSetting" id="gotoContact">
             <div class="auto_container">
 
                 <div class="contactUs_detail">

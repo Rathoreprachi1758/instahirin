@@ -24,6 +24,7 @@
         "vue-owl-carousel": "^2.0.3",
         "vue-resource": "^1.5.3",
         "vue-upload-component": "^3.1.8",
-        "vue3-carousel": "^0.3.1"
+        "vue3-carousel": "^0.3.1",
+        "vuejs-paginate": "^2.1.0"
     }
 }

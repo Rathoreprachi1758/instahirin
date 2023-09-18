@@ -177,7 +177,7 @@
                                     </ul>
 
 
-                                    <a href="/instaHirin/global-talent" class="btn_default_white">Revolutionize Your Talent Acquisition Journey!</a>
+                                    <a href="/industries/industries-we-serve/industries/global-talent" class="btn_default_white">Revolutionize Your Talent Acquisition Journey!</a>
                                 </div>
                             </div>
 
@@ -256,7 +256,7 @@
      <!-- marketing_talent section -->
 
 
-     <div class="global_section_outer">
+     <div class="global_section_outer pb-5">
         <div class="auto_container">
 
 
@@ -360,6 +360,346 @@
                 </div>
             </div>
     
+        </div>
+    </div>
+
+
+
+
+    <div class="matrixTable_section">
+        <div class="auto_container">
+            <div class="matrixTable_sectionDetail">
+
+
+                <div class="hireForm_banner"> 
+                        <div class="hireForm_banner_detail">
+                            <div class="custom_tittle">
+                                <h2 class="text-white pb-1">Comparison Matrix</h2>
+                                <p class="text-white p-0">InstaHirin VS JobPortals, Freelancers Portals, Recruitment Firms</p>
+                            </div>
+                        </div>         
+                </div>
+
+
+
+                <div class="matrixTable_info">
+                    <div class="">
+                        <div class="matrixTable">
+                            <table class="table table-striped">
+                                <thead>
+                            <tr>
+                                <th scope="col" width="300">Global Recruitment Challenges</th>
+                                <th scope="col" width="500" class="text-left">InstaHirin Advantages</th>
+                                <th scope="col">InstaHirin</th>
+                                <th scope="col">Job Portals</th>
+                                <th scope="col">Recruitment Firms</th>
+                            </tr>
+                            </thead>
+                            <tbody>
+                            <tr>
+                                <td scope="row"><p>Recruitment Duration</p></td>
+                                <td class="text-left"><p>Time to Recruit a Skilled Professional</p></td>
+                                <td class="minHirin_bg">
+                                    <div class="">
+                                        <p>1 Min - 2 Hrs</p>
+                                    </div>
+                                </td>
+                                <td><p>1-4 Months</td>
+                                <td><p>1-3 Months</td>
+                            </tr> 
+
+
+                            <tr>
+                                <td scope="row"><p>Hire Qualified Talents in Minutes</p></td>
+                                <td class="text-left"><p>Screened, Evaluated, and Verified candidates are accessible on the platform.</p></td>
+                                <td class="minHirin_bg">
+                                    <div class="checkTable">
+                                        <b><i class="fa fa-check-circle" aria-hidden="true"></i></b>
+                                    </div>
+                                </td>
+                                <td>
+                                    <div class="uncheckTable">
+                                        <b><i class="fa fa-times-circle" aria-hidden="true"></i></b>
+                                    </div>
+                                </td>
+                                <td>
+                                    <div class="checkTable">
+                                        <b><i class="fa fa-check-circle" aria-hidden="true"></i></b>
+                                    </div>
+                                </td>
+                            </tr>
+
+
+                            <tr>
+                                <td scope="row"><p>Hire Beyond Borders</p></td>
+                                <td class="text-left"><p>You can recruit highly qualified talent from around the world</p></td>
+                                <td class="minHirin_bg">
+                                    <div class="checkTable">
+                                        <b><i class="fa fa-check-circle" aria-hidden="true"></i></b>
+                                    </div>
+                                </td>
+                                <td>
+                                    <div class="checkTable">
+                                        <b><i class="fa fa-check-circle" aria-hidden="true"></i></b>
+                                    </div>
+                                </td>
+                                <td>
+                                    <div class="uncheckTable">
+                                        <b><i class="fa fa-times-circle" aria-hidden="true"></i></b>
+                                    </div>
+                                </td>
+                            </tr>
+
+                            <tr>
+                                <td scope="row"><p>Exact Skill Match</p></td>
+                                <td class="text-left"><p>Experienced Team Leads verify the slacks & technical skills of the candidates.</p></td>
+                                <td class="minHirin_bg">
+                                    <div class="checkTable">
+                                        <b><i class="fa fa-check-circle" aria-hidden="true"></i></b>
+                                    </div>
+                                </td>
+                                <td>
+                                    <div class="uncheckTable">
+                                        <b><i class="fa fa-times-circle" aria-hidden="true"></i></b>
+                                    </div>
+                                </td>
+                                <td>
+                                    <div class="uncheckTable">
+                                        <b><i class="fa fa-times-circle" aria-hidden="true"></i></b>
+                                    </div>
+                                </td>
+                            </tr>
+
+                            <tr>
+                                <td scope="row"><p>Cost Savings</p></td>
+                                <td class="text-left"><p>Clients typically save around 38% to 50% on their total costs, which includes fixed salaries, incentives, benefits, and other employer obligations.</p></td>
+                                <td class="minHirin_bg">
+                                    <div class="checkTable">
+                                        <b><i class="fa fa-check-circle" aria-hidden="true"></i></b>
+                                    </div>
+                                </td>
+                                <td>
+                                    <div class="uncheckTable">
+                                        <b><i class="fa fa-times-circle" aria-hidden="true"></i></b>
+                                    </div>
+                                </td>
+                                <td>
+                                    <div class="uncheckTable">
+                                        <b><i class="fa fa-times-circle" aria-hidden="true"></i></b>
+                                    </div>
+                                </td>
+                            </tr>
+
+                            <tr>
+                                <td scope="row"><p>Software Development Funding</p></td>
+                                <td class="text-left"><p>Development funding options are available.</p></td>
+                                <td class="minHirin_bg">
+                                    <div class="checkTable">
+                                        <b><i class="fa fa-check-circle" aria-hidden="true"></i></b>
+                                    </div>
+                                </td>
+                                <td>
+                                    <div class="uncheckTable">
+                                        <b><i class="fa fa-times-circle" aria-hidden="true"></i></b>
+                                    </div>
+                                </td>
+                                <td>
+                                    <div class="uncheckTable">
+                                        <b><i class="fa fa-times-circle" aria-hidden="true"></i></b>
+                                    </div>
+                                </td>
+                            </tr>
+
+                            <tr>
+                                <td scope="row"><p>Comprehensive - 10 Step Onboarding Evaluation</p></td>
+                                <td class="text-left"><p>Validate the Talent background check, qualifications, academic credentials, criminal, past experiences and slack expertise.</p></td>
+                                <td class="minHirin_bg">
+                                    <div class="checkTable">
+                                        <b><i class="fa fa-check-circle" aria-hidden="true"></i></b>
+                                    </div>
+                                </td>
+                                <td>
+                                    <div class="uncheckTable">
+                                        <b><i class="fa fa-times-circle" aria-hidden="true"></i></b>
+                                    </div>
+                                </td>
+                                <td>
+                                    <div class="uncheckTable">
+                                        <b><i class="fa fa-times-circle" aria-hidden="true"></i></b>
+                                    </div>
+                                </td>
+                            </tr>
+
+                            <tr>
+                                <td scope="row"><p>Fair Recruitment Process</p></td>
+                                <td class="text-left"><p>The onboarding and hiring process is free from corruption, bribery, racial bias, or preferential treatment; selection is solely based on merit.</p></td>
+                                <td class="minHirin_bg">
+                                    <div class="checkTable">
+                                        <b><i class="fa fa-check-circle" aria-hidden="true"></i></b>
+                                    </div>
+                                </td>
+                                <td>
+                                    <div class="checkTable">
+                                        <b><i class="fa fa-check-circle" aria-hidden="true"></i></b>
+                                    </div>
+                                </td>
+                                <td>
+                                    <div class="uncheckTable">
+                                        <b><i class="fa fa-times-circle" aria-hidden="true"></i></b>
+                                    </div>
+                                </td>
+                            </tr>
+
+                            <tr>
+                                <td scope="row"><p>Direct Recruitment - No Intermediaries</p></td>
+                                <td class="text-left"><p>Companies assess interviews, assessment and deal directly with the Talent.</p></td>
+                                <td class="minHirin_bg">
+                                    <div class="checkTable">
+                                        <b><i class="fa fa-check-circle" aria-hidden="true"></i></b>
+                                    </div>
+                                </td>
+                                <td>
+                                    <div class="checkTable">
+                                        <b><i class="fa fa-check-circle" aria-hidden="true"></i></b>
+                                    </div>
+                                </td>
+                                <td>
+                                    <div class="uncheckTable">
+                                        <b><i class="fa fa-times-circle" aria-hidden="true"></i></b>
+                                    </div>
+                                </td>
+                            </tr>
+
+                            <tr>
+                                <td scope="row"><p>Immediate Substitution</p></td>
+                                <td class="text-left"><p>Offer immediate replacement options</p></td>
+                                <td class="minHirin_bg">
+                                    <div class="checkTable">
+                                        <b><i class="fa fa-check-circle" aria-hidden="true"></i></b>
+                                    </div>
+                                </td>
+                                <td>
+                                    <div class="uncheckTable">
+                                        <b><i class="fa fa-times-circle" aria-hidden="true"></i></b>
+                                    </div>
+                                </td>
+                                <td>
+                                    <div class="uncheckTable">
+                                        <b><i class="fa fa-times-circle" aria-hidden="true"></i></b>
+                                    </div>
+                                </td>
+                            </tr>
+
+                            <tr>
+                                <td scope="row"><p>In-House Expertise</p></td>
+                                <td class="text-left"><p>Over 150 in-house talents with diverse skills are available.</p></td>
+                                <td class="minHirin_bg">
+                                    <div class="checkTable">
+                                        <b><i class="fa fa-check-circle" aria-hidden="true"></i></b>
+                                    </div>
+                                </td>
+                                <td>
+                                    <div class="uncheckTable">
+                                        <b><i class="fa fa-times-circle" aria-hidden="true"></i></b>
+                                    </div>
+                                </td>
+                                <td>
+                                    <div class="uncheckTable">
+                                        <b><i class="fa fa-times-circle" aria-hidden="true"></i></b>
+                                    </div>
+                                </td>
+                            </tr>
+
+                            <tr>
+                                <td scope="row"><p>Efficient Project Oversight</p></td>
+                                <td class="text-left"><p>Dedicated project teams ensure on-time project deliveries and tech and multiple slack support.</p></td>
+                                <td class="minHirin_bg">
+                                    <div class="checkTable">
+                                        <b><i class="fa fa-check-circle" aria-hidden="true"></i></b>
+                                    </div>
+                                </td>
+                                <td>
+                                    <div class="uncheckTable">
+                                        <b><i class="fa fa-times-circle" aria-hidden="true"></i></b>
+                                    </div>
+                                </td>
+                                <td>
+                                    <div class="uncheckTable">
+                                        <b><i class="fa fa-times-circle" aria-hidden="true"></i></b>
+                                    </div>
+                                </td>
+                            </tr>
+
+                            <tr>
+                                <td scope="row"><p>Training and Career Development</p></td>
+                                <td class="text-left"><p>Provide ongoing mentoring, development, and training.</p></td>
+                                <td class="minHirin_bg">
+                                    <div class="checkTable">
+                                        <b><i class="fa fa-check-circle" aria-hidden="true"></i></b>
+                                    </div>
+                                </td>
+                                <td>
+                                    <div class="uncheckTable">
+                                        <b><i class="fa fa-times-circle" aria-hidden="true"></i></b>
+                                    </div>
+                                </td>
+                                <td>
+                                    <div class="uncheckTable">
+                                        <b><i class="fa fa-times-circle" aria-hidden="true"></i></b>
+                                    </div>
+                                </td>
+                            </tr>
+
+                            <tr>
+                                <td scope="row"><p>Chat Support</p></td>
+                                <td class="text-left"><p>Expert support is available 24/7</p></td>
+                                <td class="minHirin_bg">
+                                    <div class="checkTable">
+                                        <b><i class="fa fa-check-circle" aria-hidden="true"></i></b>
+                                    </div>
+                                </td>
+                                <td>
+                                    <div class="uncheckTable">
+                                        <b><i class="fa fa-times-circle" aria-hidden="true"></i></b>
+                                    </div>
+                                </td>
+                                <td>
+                                    <div class="uncheckTable">
+                                        <b><i class="fa fa-times-circle" aria-hidden="true"></i></b>
+                                    </div>
+                                </td>
+                            </tr>
+
+                            <tr>
+                                <td scope="row"><p>Adherence to Global Compliance Standards</p></td>
+                                <td class="text-left"><p>Ensure compliance with global regulations.</p></td>
+                                <td class="minHirin_bg">
+                                    <div class="checkTable">
+                                        <b><i class="fa fa-check-circle" aria-hidden="true"></i></b>
+                                    </div>
+                                </td>
+                                <td>
+                                    <div class="uncheckTable">
+                                        <b><i class="fa fa-times-circle" aria-hidden="true"></i></b>
+                                    </div>
+                                </td>
+                                <td>
+                                    <div class="uncheckTable">
+                                        <b><i class="fa fa-times-circle" aria-hidden="true"></i></b>
+                                    </div>
+                                </td>
+                            </tr>
+                            
+
+                            </tbody>
+                        
+                            </table>
+                        </div>
+                    </div>
+                </div>
+
+
+            </div>
         </div>
     </div>
 

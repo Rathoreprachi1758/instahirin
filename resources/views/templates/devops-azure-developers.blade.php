@@ -29,7 +29,7 @@
 
                                         <p class="p_color text-justify">Bizionic Technologies Azure developers specialize in using Microsoft Azure, a cloud computing platform and service provided by Microsoft, to develop, deploy, and manage various applications and solutions. Azure offers a wide range of cloud services, including computing, storage, databases, networking, analytics, artificial intelligence, and more.</p>
                                            <br>
-                                        <a href="/get-a-free-consultation" class="btn_default mt-2">Hire Azure Developer</a>
+                                        <a href="#gotoContact" class="btn_default mt-2">Hire Azure Developer</a>
                                     
                                 </div>
                             </div>
@@ -145,7 +145,7 @@
 
 
 
-        <div class="aboutProject_section hireFormSetting">
+        <div class="aboutProject_section hireFormSetting" id="gotoContact">
             <div class="auto_container">
 
                 <div class="contactUs_detail">

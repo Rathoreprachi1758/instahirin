@@ -29,7 +29,7 @@
 
                                         <p class="p_color text-justify">Bizionic Technologies dApp developers, also known as decentralized application developers, specialize in building decentralized applications (dApps) that operate on blockchain platforms. dApps are applications that leverage blockchain technology's decentralized and immutable nature to provide transparent, secure, and trustless solutions.</p>
                                            <br>
-                                        <a href="/get-a-free-consultation" class="btn_default mt-2">Hire dApps Developer</a>
+                                        <a href="#gotoContact" class="btn_default mt-2">Hire dApps Developer</a>
                                     
                                 </div>
                             </div>
@@ -137,7 +137,7 @@
 
 
 
-        <div class="aboutProject_section hireFormSetting">
+        <div class="aboutProject_section hireFormSetting" id="gotoContact">
             <div class="auto_container">
 
                 <div class="contactUs_detail">

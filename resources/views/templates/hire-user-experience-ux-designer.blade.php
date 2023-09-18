@@ -31,7 +31,7 @@
 
                                         <p class="p_color text-justify">Bizionic Marketing Solutions User Experience (UX) designers focuses on creating meaningful and enjoyable experiences for users when they interact with products, services, or systems. Their role is to consider the needs, goals, and preferences of users and design interfaces that are intuitive, efficient, and satisfying. </p>
                                            <br>
-                                        <a href="/get-a-free-consultation" class="btn_default mt-2">Hire UX Designer</a>
+                                        <a href="#gotoContact" class="btn_default mt-2">Hire UX Designer</a>
                                     
                                 </div>
                             </div>
@@ -156,12 +156,13 @@
 
 
 
-        <div class="aboutProject_section hireFormSetting">
+        <div class="aboutProject_section hireFormSetting" id="gotoContact">
             <div class="auto_container">
 
                 <div class="contactUs_detail">
 
                     <!-- form here  -->
+                    @include('forms.hire_talent')
 
 
                 </div>

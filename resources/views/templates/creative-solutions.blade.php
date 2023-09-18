@@ -244,8 +244,7 @@
                                     <h2 class="p_color">Contact Us:</h2>
                                     <p>Please fill the form and our representative will get back to you.</p>
                                 </div>
-                                <marketing-contact-us-component></marketing-contact-us-component>
-                               
+                                <marketing-contact-us-component template="{{ucwords(str_replace('-',' ',$template))}}"></marketing-contact-us-component>
                             </div>
                         </div>
                     </div>

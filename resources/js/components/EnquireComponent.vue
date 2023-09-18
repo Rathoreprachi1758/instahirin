@@ -62,7 +62,7 @@
                             name="message"
                             id="message"
                             v-model="hireForm.message"
-                            placeholder="How can we help...*"
+                            placeholder="What can we build together....."
                         ></textarea>
                     </div>
                 </div>

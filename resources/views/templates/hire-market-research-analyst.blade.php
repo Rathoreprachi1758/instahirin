@@ -30,7 +30,7 @@
 
                                         <p class="p_color text-justify">A market research analyst is a professional who collects and analyzes data to help organizations make informed business decisions. They gather information about market trends, customer preferences, competitor activities, and other relevant data to provide insights and recommendations to stakeholders.</p>
                                            <br>
-                                        <a href="/get-a-free-consultation" class="btn_default mt-2">Hire Market Research Analyst</a>
+                                        <a href="#gotoContact" class="btn_default mt-2">Hire Market Research Analyst</a>
                                     
                                 </div>
                             </div>
@@ -171,12 +171,13 @@
 
 
 
-        <div class="aboutProject_section hireFormSetting">
+        <div class="aboutProject_section hireFormSetting" id="gotoContact">
             <div class="auto_container">
 
                 <div class="contactUs_detail">
 
                     <!-- form here  -->
+                    @include('forms.hire_talent')
 
 
                 </div>

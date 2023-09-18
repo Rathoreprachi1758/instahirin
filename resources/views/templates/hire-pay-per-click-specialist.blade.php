@@ -29,7 +29,7 @@
 
                                         <p class="p_color text-justify">Bizionic Marketing Solutions PPC (Pay-Per-Click) and Google Ads specialists specialize in managing and optimizing PPC advertising campaigns, specifically using the Google Ads platform. </p>
                                            <br>
-                                        <a href="/get-a-free-consultation" class="btn_default mt-2">Hire PPC and Google Ads  Specialist</a>
+                                        <a href="#gotoContact" class="btn_default mt-2">Hire PPC and Google Ads  Specialist</a>
                                     
                                 </div>
                             </div>
@@ -162,12 +162,13 @@
 
 
 
-        <div class="aboutProject_section hireFormSetting">
+        <div class="aboutProject_section hireFormSetting" id="gotoContact">
             <div class="auto_container">
 
                 <div class="contactUs_detail">
 
                     <!-- form here  -->
+                    @include('forms.hire_talent')
 
 
                 </div>

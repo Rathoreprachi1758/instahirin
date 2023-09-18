@@ -29,7 +29,7 @@
 
                                         <p class="p_color text-justify">Bizionic Technologies Symfony developers specialize in using the Symfony framework to build web applications. Symfony is an open-source PHP framework known for its flexibility, scalability, and robustness. It follows the Model-View-Controller (MVC) architectural pattern and provides a wide range of reusable components and libraries that streamline development.</p>
                                            <br>
-                                        <a href="/get-a-free-consultation" class="btn_default mt-2">Hire Symfony Developer</a>
+                                        <a href="#gotoContact" class="btn_default mt-2">Hire Symfony Developer</a>
                                     
                                 </div>
                             </div>
@@ -140,7 +140,7 @@
 
 
 
-        <div class="aboutProject_section hireFormSetting">
+        <div class="aboutProject_section hireFormSetting" id="gotoContact">
             <div class="auto_container">
 
                 <div class="contactUs_detail">

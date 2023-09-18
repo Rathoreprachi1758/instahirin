@@ -6,11 +6,15 @@ use App\Models\Job;
 use App\Models\Hire;
 use App\Models\Lead;
 use App\Models\Page;
-use App\Models\Career;
 use App\Models\Expert;
-use App\Models\Country;
-use App\Models\HireRequest;
 use App\Models\Subscription;
+use App\Models\HireRequest;
+use App\Models\Hire_requests_calender;
+use App\Models\Career;
+// use App\Models\Expert;
+use App\Models\Country;
+// use App\Models\HireRequest;
+// use App\Models\Subscription;
 use Illuminate\Http\Request;
 use App\Models\InstaHirinOnboard;
 use Illuminate\Support\Facades\DB;
@@ -18,6 +22,7 @@ use Illuminate\Support\Facades\Log;
 use App\Models\InstaHirinRequirement;
 use Illuminate\Support\Facades\Cache;
 use App\Models\InstaHirinOnboardDocument;
+use App\Models\Countrie;
 
 
 
@@ -52,6 +57,7 @@ class ContentController extends Controller
                 'menus' => json_decode(json_encode((object) $menusResponse['menuItems']), FALSE),
                 'template' => $template,
                 'jobs' => $jobs,
+
             ]);
         }
 
@@ -61,6 +67,7 @@ class ContentController extends Controller
             'keywords' => 'keywords',
             'menus' => json_decode(json_encode((object) $menusResponse['menuItems']), FALSE),
             'template' => $template,
+            'countries' => json_encode(Countrie::all())
         ]);
     }
 
@@ -84,7 +91,7 @@ class ContentController extends Controller
     //* ContactUs Form Submission
     public function store(Request $request)
     {
-        // dd($request->all());
+
         // Validate the request data, including the uploaded file
         if (isset($request->hiring_type)) {
             $validatedData = $request->validate([
@@ -94,15 +101,17 @@ class ContentController extends Controller
                 'hiring_type' => 'required',
                 'budget' => 'required',
                 'details' => 'required',
-                'document' => 'required|file',
+                'document' => 'file',
             ]);
         } else {
             $validatedData = $request->validate([
                 'name' => 'required',
+                'company' => 'required',
                 'email' => 'required|email',
+                'countrycode' => 'required',
                 'phone' => 'required',
-                'details' => 'required',
-                'document' => 'required|file',
+                'details' => '',
+                'document' => '',
             ]);
         }
 
@@ -111,8 +120,11 @@ class ContentController extends Controller
 
         // Set the form data from the validated request
         $formData->name = $validatedData['name'];
+        $formData->company = $validatedData['company'];
         $formData->email = $validatedData['email'];
-        $formData->phone = $validatedData['phone'];
+        // $formData->phone = $validatedData['phone'];
+        // if (isset($request->hiring_type)) {
+        $formData->phone = $validatedData['countrycode'] . $validatedData['phone'];
         if (isset($request->hiring_type)) {
             $formData->hiring_type = $validatedData['hiring_type'];
             $formData->budget = $validatedData['budget'];
@@ -124,8 +136,8 @@ class ContentController extends Controller
         if ($request->hasFile('document')) {
             $file = $request->file('document');
             $filename = $file->getClientOriginalName();
-            $file->storeAs('bizionic/images', $filename, 'public');
-            $formData->document = $filename;
+            $file->storeAs('bizionic/images', time() . $filename, 'public');
+            $formData->document = time() . $filename;
         }
 
         $formData->status = isset($validatedData['status']) ? $validatedData['status'] : 'New';
@@ -167,6 +179,7 @@ class ContentController extends Controller
     //* Hire Form Submission
     public function hire(Request $request)
     {
+
         // dd($request->all());
         // Validate the request data, including the uploaded file
         if (isset($request->hiring_type) && !isset($request->company_info)) {
@@ -176,6 +189,7 @@ class ContentController extends Controller
                 'company' => '',
                 'email' => 'required|email',
                 'phone' => '',
+                'country_code' => '',
                 'document' => 'file',
                 'website' => '',
                 'message' => '',
@@ -189,6 +203,7 @@ class ContentController extends Controller
                 'availability_date' => '',
                 'availability_time_from' => '',
                 'availability_time_to' => '',
+                'template' => '',
             ]);
 
             // Create a new instance of the Hire Request model
@@ -200,21 +215,21 @@ class ContentController extends Controller
             $formData->name = $validatedData['name'];
             $formData->company = $validatedData['company'];
             $formData->email = $validatedData['email'];
-            $formData->phone = $validatedData['phone'];
+            $formData->phone = $validatedData['country_code'] . $validatedData['phone'];
             $formData->website = $validatedData['website'];
             $formData->message = $validatedData['message'];
             $formData->address = $validatedData['address'];
-            $formData->from_date = $validatedData['from_date'];
-            $formData->to_date = $validatedData['to_date'];
-            $formData->from_time = $validatedData['from_time'];
-            $formData->to_time = $validatedData['to_time'];
+            // $formData->from_date = $validatedData['from_date'];
+            //$formData->to_date = $validatedData['to_date'];
+            //$formData->from_time = $validatedData['from_time'];
+            //$formData->to_time = $validatedData['to_time'];
             $formData->priority = 'normal';
             $formData->source = ($formData->source) ? $validatedData['source'] : '';
             $formData->virtual_assistance_call = isset($validatedData['virtual_assistance_call']) ? 'Yes' : 'No';
-            $formData->availability_date = $validatedData['availability_date'];
-            $formData->availability_time_from = $validatedData['availability_time_from'];
-            $formData->availability_time_to = $validatedData['availability_time_to'];
-
+            //$formData->availability_date = $validatedData['availability_date'];
+            // $formData->availability_time_from = $validatedData['availability_time_from'];
+            // $formData->availability_time_to = $validatedData['availability_time_to'];
+            $formData->template = $validatedData['template'];
             // Process and store the uploaded file
             if ($request->hasFile('document')) {
                 $file = $request->file('document');
@@ -223,6 +238,27 @@ class ContentController extends Controller
                 $formData->document = $filename;
             }
             $formData->save();
+        } else if (isset($request->company_info)) {
+            $requestId = $formData->id;
+            for ($n = 0; $n < count($request->from_date); $n++) {
+                $formData = new Hire_requests_calender();
+                $formData->from_date = $request->from_date[$n];
+                $formData->to_date = $request->to_date[$n];
+                $formData->from_time = $request->from_time[$n];
+                $formData->to_time = $request->to_time[$n];
+                $formData->calender_type = 1;
+                $formData->request_id = $requestId;
+                $formData->save();
+            }
+            for ($n = 0; $n < count($request->availability_date); $n++) {
+                $formData = new Hire_requests_calender();
+                $formData->from_date = $request->availability_date[$n];
+                $formData->from_time = $request->availability_time_from[$n];
+                $formData->to_time = $request->availability_time_to[$n];
+                $formData->calender_type = 2;
+                $formData->request_id = $requestId;
+                $formData->save();
+            }
         } else if (isset($request->company_info)) {
             // dd('we are here');
             $validatedData = $request->validate([
