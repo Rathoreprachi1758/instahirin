@@ -1096,23 +1096,6 @@ export default {
     //   console.log("Uploaded Files:", this.uploadedFiles);
     // },
 
-    // // Handle file change event
-    // onLocationSelected(suggestion) {
-    //   this.current_location = suggestion.description;
-    // },
-
-    // // Fetch suggestions from Google Maps API
-    // async fetchSuggestions() {
-    //   try {
-    //     const response = await axios.get(
-    //       `https://maps.googleapis.com/maps/api/place/autocomplete/json?input=${this.current_location}&key=live_pub_bf3c620f78701afef3b1c74ffc4c5d1`
-    //     );
-    //     this.suggestions = response.data.predictions;
-    //   } catch (error) {
-    //     console.error("Error fetching suggestions:", error);
-    //   }
-    // },
-
     // Submit the form
     submitForm() {
       // Prepare the form data
@@ -1233,11 +1216,6 @@ export default {
         this.selectedSalaryRange = options[0];
       } else {
         this.selectedSalaryRange = "";
-      }
-    },
-    current_location: function () {
-      if (this.current_location.length >= 3) {
-        this.fetchSuggestions();
       }
     },
   },
