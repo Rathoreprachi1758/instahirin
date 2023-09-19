@@ -57,7 +57,6 @@ class ContentController extends Controller
                 'menus' => json_decode(json_encode((object) $menusResponse['menuItems']), FALSE),
                 'template' => $template,
                 'jobs' => $jobs,
-
             ]);
         }
 
@@ -91,7 +90,6 @@ class ContentController extends Controller
     //* ContactUs Form Submission
     public function store(Request $request)
     {
-
         // Validate the request data, including the uploaded file
         if (isset($request->hiring_type)) {
             $validatedData = $request->validate([
@@ -179,7 +177,6 @@ class ContentController extends Controller
     //* Hire Form Submission
     public function hire(Request $request)
     {
-
         // dd($request->all());
         // Validate the request data, including the uploaded file
         if (isset($request->hiring_type) && !isset($request->company_info)) {

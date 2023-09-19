@@ -14,7 +14,9 @@ use Laravel\Nova\Fields\Text;
 use Laravel\Nova\Fields\Trix;
 use Laravel\Nova\Http\Requests\NovaRequest;
 use Laravel\Nova\Fields\File;
-
+use Silvanite\NovaFieldCheckboxes\Checkboxes;
+use Laravel\Nova\Fields\BooleanGroup;
+ 
 class Expert extends Resource
 {
     /**
@@ -65,6 +67,27 @@ class Expert extends Resource
             File::make('Resume','resume'),
            
             Select::make('Status','status')->options(['New'=>'New','In Review'=>'In Reivew','Reviewed'=>'Reviewed'])->displayUsingLabels()->filterable(),
+             
+            Boolean::make('Personal information','personal_info'),
+            Boolean::make('Pre Screening Check','pre_screen'),
+            Boolean::make('Skills and Comptencies','skill_and_compet'),
+            Boolean::make('Work Experience','work_expe'),
+            Boolean::make('Interview Evaluation','interview_eva'),         
+            Boolean::make('Additional Assessment','education_certifi'),
+            Boolean::make('Education and Certificattions','addi_assess'),
+            Boolean::make('References','referen'),
+            Boolean::make('Background Check','background'),
+            Boolean::make('Cultural Fit','cultural_fit'),
+            // Checkboxes::make('Permissions')->options([
+            //     'viewNova' => 'Access Admin UI',
+            //     'manageUsers' => 'Manage Users',
+            // ]),
+            BooleanGroup::make('Permissions')->options([
+                'create' => 'Create',
+                'read' => 'Read',
+                'update' => 'Update',
+                'delete' => 'Delete',
+            ]),
             Boolean::make('Is Published','published')->filterable(),
             Trix::make('Description','description')
         ];
