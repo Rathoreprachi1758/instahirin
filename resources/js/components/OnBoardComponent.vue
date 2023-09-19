@@ -431,12 +431,22 @@
                     class="uploaded-file"
                   >
                     {{ file.name }}
-                    <span
+                    <!-- <span
                       type="button"
                       class="remove-file btn btn-danger"
                       @click="removeFile(index)"
-                      >Remove</span
-                    >
+                      ></span> -->
+                    <a
+                      href="javascript:void(0)"
+                      class="text-danger"
+                      @click="removeFile(index)"
+                      style="
+                        transform: scale(1.4);
+                        display: inline-block;
+                        margin-left: 10px;
+                      "
+                      ><i class="fa fa-times-circle" aria-hidden="true"></i
+                    ></a>
                   </div>
                 </div>
               </div>
@@ -608,14 +618,14 @@
               />
             </div>
 
-            <div class="addDeleteBtn">
+            <!-- <div class="addDeleteBtn">
               <a href="javascript:void(0)" class="p_color"
                 ><i class="fa fa-plus-circle" aria-hidden="true"></i
               ></a>
               <a href="javascript:void(0)" class="text-danger"
                 ><i class="fa fa-times-circle" aria-hidden="true"></i
               ></a>
-            </div>
+            </div> -->
           </div>
         </div>
 
@@ -826,10 +836,14 @@
 }
 
 .custom-multiselect {
-  background-color: white;
+  /* background-color: white;
   padding: 10px;
   border: 1px solid #ccc;
-  border-radius: 5px;
+  border-radius: 5px; */
+  width: 100%;
+  padding: 15px 20px;
+  border: 1px solid #bcbec0;
+  background: #fff;
 }
 
 .oval-button {
@@ -877,6 +891,16 @@
   background-color: #19437a;
   color: white;
 }
+
+/* .multiselect__tag {
+  font-size: 11px;
+  border-radius: 50px;
+  background: #ccc;
+  padding: 3px 8px 3px;
+  margin-right: 10px;
+  position: relative;
+  color: black;
+} */
 </style>
 
 <script>
