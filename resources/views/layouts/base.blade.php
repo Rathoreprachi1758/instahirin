@@ -54,7 +54,19 @@
     src="https://www.facebook.com/tr?id=990314288786309&ev=PageView&noscript=1"
     /></noscript>
     <!-- End Meta Pixel Code -->
-        
+
+
+
+   <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-603H2KERC7"></script>
+    <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+
+    gtag('config', 'G-603H2KERC7');
+    </script>
+    
 </head>
 
 <body>
