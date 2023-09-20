@@ -54,63 +54,63 @@
                     <div class="nativeSupport_list skilled_setting">
                     <ul>
                         <li>
-                            <a href="#">
+                            <a href="javascript:void(0)" @click="setPeriod('Freelancers')">
                                 <img src="/bizionic/images/skillOption_icon1.png" alt="#" />
 
                                 <strong>Freelancers</strong>
                             </a>
                         </li> 
                         <li>
-                            <a href="#">
+                            <a href="javascript:void(0)" @click="setPeriod('Project-Base')">
                                 <img src="/bizionic/images/skillOption_icon2.png" alt="#" />
 
                                 <strong>Project-Base</strong>
                             </a>
                         </li> 
                         <li>
-                            <a href="#">
+                            <a href="javascript:void(0)" @click="setPeriod('Full Time')">
                                 <img src="/bizionic/images/skillOption_icon3.png" alt="#" />
 
                                 <strong>Full-Time</strong>
                             </a>
                         </li> 
                         <li>
-                            <a href="#">
+                            <a href="javascript:void(0)" @click="setPeriod('Part Time')">
                                 <img src="/bizionic/images/skillOption_icon4.png" alt="#" />
 
                                 <strong>Part-Time</strong>
                             </a>
                         </li> 
                         <li>
-                            <a href="#">
+                            <a href="javascript:void(0)" @click="setPeriod('Contract Base')">
                                 <img src="/bizionic/images/skillOption_icon5.png" alt="#" />
 
                                 <strong>Contract Base</strong>
                             </a>
                         </li> 
                         <li>
-                            <a href="#">
+                            <a href="javascript:void(0)" @click="setPeriod('Monthly')">
                                 <img src="/bizionic/images/skillOption_icon6.png" alt="#" />
 
                                 <strong>Monthly</strong>
                             </a>
                         </li> 
                         <li>
-                            <a href="#">
+                            <a href="javascript:void(0)" @click="setPeriod('Weekly')">
                                 <img src="/bizionic/images/skillOption_icon7.png" alt="#" />
 
                                 <strong>Weekly</strong>
                             </a>
                         </li> 
                         <li>
-                            <a href="#">
+                            <a href="javascript:void(0)" @click="setPeriod('Daily-Bases')">
                                 <img src="/bizionic/images/skillOption_icon8.png" alt="#" />
 
                                 <strong>Daily-Bases</strong>
                             </a>
                         </li> 
                         <li>
-                            <a href="#">
+                            <a href="javascript:void(0)" @click="setPeriod('Hourly')">
                                 <img src="/bizionic/images/skillOption_icon9.png" alt="#" />
 
                                 <strong>Hourly</strong>
@@ -127,50 +127,50 @@
 
                 <div class="nativeSupport_list skilled_setting">
                     <ul>
-                        <li>
-                            <a href="#">
+                        <li> 
+                            <a href="javascript:void(0);" @click="setTech('Web developer')">
                                 <img src="/bizionic/images/hirinSkill_icon1.png" alt="#" />
 
                                 <strong>Web developer</strong>
                             </a>
                         </li>
                         <li>
-                            <a href="#">
+                            <a href="javascript:void(0);" @click="setTech('Front-end Technologies')">
                                 <img src="/bizionic/images/hirinSkill_icon2.png" alt="#" />
 
                                 <strong>Front-end Technologies</strong>
                             </a>
                         </li>
                         <li>
-                            <a href="#">
+                            <a href="javascript:void(0);" @click="setTech('Backend Development')">
                                 <img src="/bizionic/images/hirinSkill_icon3.png" alt="#" />
 
                                 <strong>Backend Development</strong>
                             </a>
                         </li>
                         <li>
-                            <a href="#">
+                            <a href="javascript:void(0);" @click="setTech('IOS Development')">
                                 <img src="/bizionic/images/hirinSkill_icon4.png" alt="#" />
 
-                                <strong>iOS Development</strong>
+                                <strong>IOS Development</strong>
                             </a>
                         </li>
                         <li>
-                            <a href="#">
+                            <a href="javascript:void(0);" @click="setTech('Android Developer')">
                                 <img src="/bizionic/images/hirinSkill_icon5.png" alt="#" />
 
                                 <strong>Android Developer</strong>
                             </a>
                         </li>
                         <li>
-                            <a href="#">
+                            <a href="javascript:void(0);" @click="setTech('UI/UX Designer')">
                                 <img src="/bizionic/images/hirinSkill_icon6.png" alt="#" />
 
                                 <strong>UI/UX Designer</strong>
                             </a>
                         </li>
                         <li>
-                            <a href="#">
+                            <a href="javascript:void(0);" @click="setTech('Digital Marketing')">
                                 <img src="/bizionic/images/hirinSkill_icon7.png" alt="#" />
 
                                 <strong>Digital Marketing</strong>
@@ -183,42 +183,42 @@
 
 
                         <li>
-                            <a href="#">
+                            <a href="javascript:void(0);" @click="setTech('Content Creator')">
                                 <img src="/bizionic/images/hirinSkill_icon8.png" alt="#" />
 
                                 <strong>Content Creator</strong>
                             </a>
                         </li>
                         <li>
-                            <a href="#">
+                            <a href="javascript:void(0);" @click="setTech('SEO Specialist')">
                                 <img src="/bizionic/images/hirinSkill_icon9.png" alt="#" />
 
                                 <strong>SEO Specialist</strong>
                             </a>
                         </li>
                         <li>
-                            <a href="#">
+                            <a href="javascript:void(0);" @click="setTech('Graphic & Design')">
                                 <img src="/bizionic/images/hirinSkill_icon10.png" alt="#" />
 
                                 <strong>Graphic & Design</strong>
                             </a>
                         </li>
                         <li>
-                            <a href="#">
+                            <a href="javascript:void(0);" @click="setTech('SMM Specialist')">
                                 <img src="/bizionic/images/hirinSkill_icon11.png" alt="#" />
 
                                 <strong>SMM Specialist</strong>
                             </a>
                         </li>
                         <li>
-                            <a href="#">
+                            <a href="javascript:void(0);" @click="setTech('Video & Animation')">
                                 <img src="/bizionic/images/hirinSkill_icon12.png" alt="#" />
 
                                 <strong>Video & Animation</strong>
                             </a>
                         </li>
                         <li>
-                            <a href="#">
+                            <a href="javascript:void(0);" @click="setTech('PPC Specialist')">
                                 <img src="/bizionic/images/hirinSkill_icon13.png" alt="#" />
 
                                 <strong>PPC Specialist</strong>
@@ -434,6 +434,9 @@ export default {
             categories: [],
             selectedCategory: null,
             searchQuery: "",
+            availabl:"",
+            tech:"",
+            keyword:""
         };
     },
     mounted() {
@@ -441,6 +444,13 @@ export default {
         this.fetchExperts();
     },
     methods: {
+        setPeriod(val){
+            this.availabl=val
+        },
+        setTech(val){  
+             this.tech=val            
+             this.fetchExpertsByExperty();
+        },
         fetchCategories() {
             axios
                 .get("/api/v1/expert_categories")
@@ -480,7 +490,16 @@ export default {
         // Filter Experts by Experty
         fetchExpertsByExperty(experty) {
             // keyword = Java | Node
-            const requestExperty = { keyword: experty.title };
+           
+            if(experty !== undefined){
+                 this.keyword= experty.title;
+                 this.availabl='';
+            }
+             else{
+                 this.keyword=this.tech;
+            }
+  
+            const requestExperty = { keyword:this.keyword ,availabl:this.availabl };
 
             axios
                 .post("/api/v1/experts/experties" , requestExperty)
