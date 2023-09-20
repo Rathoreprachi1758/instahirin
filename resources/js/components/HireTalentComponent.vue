@@ -12,7 +12,7 @@
             <div class="col-lg-6 col-md-12">
                 <div class="project_form_field split_in_two"> 
 
-                    <div class="project_form_select mt-0 mb-0 mr-3">
+                    <!-- <div class="project_form_select mt-0 mb-0 mr-3"> -->
 
                         <select class="form-select codeCountry" required id="country_code"   name="country_code">
                             <option value="">Country code</option>
@@ -20,7 +20,7 @@
                         
                         </select>
 
-                    </div>
+                    <!-- </div> -->
                     
                     <input type="text" value="" required placeholder="Phone / Skype / Whatsapp" name="phone" id="phone"/>
                 </div>
