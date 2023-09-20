@@ -39,12 +39,12 @@ class ContentController extends Controller
         $page = Page::where('slug', '=', $pageSlug)->first();
         // dd($page->slug);
 
-        $template = $page ? $page->template : '404';
+        echo $template = $page ? $page->template : '404';
 
         if ($template == '404') {
             return abort(404);
         }
-
+       
         $menusResponse = Cache::get('menus', nova_get_menu_by_slug('header'));
         //        echo "<pre>";print_r($menusResponse['menuItems']);exit;
         // dd($template);
@@ -84,6 +84,7 @@ class ContentController extends Controller
             'menus' => json_decode(json_encode((object) $menusResponse['menuItems']), FALSE),
             'template' => 'hireForm',
             'expert' => $expert,
+            'countries'=>json_encode(Countrie::all())
         ]);
     }
 
@@ -112,7 +113,7 @@ class ContentController extends Controller
                 'document' => '',
             ]);
         }
-
+        
         // Create a new instance of the ContactUs model
         $formData = new Lead();
 
@@ -201,6 +202,8 @@ class ContentController extends Controller
                 'availability_time_from' => '',
                 'availability_time_to' => '',
                 'template' => '',
+                'expert' => '',
+                'hiring_type'=>'',
             ]);
 
             // Create a new instance of the Hire Request model
@@ -226,13 +229,15 @@ class ContentController extends Controller
             //$formData->availability_date = $validatedData['availability_date'];
             // $formData->availability_time_from = $validatedData['availability_time_from'];
             // $formData->availability_time_to = $validatedData['availability_time_to'];
-            $formData->template = $validatedData['template'];
+            $formData->hiring_type = $validatedData['hiring_type'];
+            $formData->template = @$validatedData['template'];
+            $formData->expert_id = @$validatedData['expert'];
             // Process and store the uploaded file
             if ($request->hasFile('document')) {
                 $file = $request->file('document');
                 $filename = $file->getClientOriginalName();
-                $file->storeAs('bizionic/images', $filename, 'public');
-                $formData->document = $filename;
+                $file->storeAs('bizionic/images', time().$filename, 'public');
+                $formData->document = time().$filename;
             }
             $formData->save();
         } else if (isset($request->company_info)) {
@@ -242,19 +247,19 @@ class ContentController extends Controller
                 $formData->from_date = $request->from_date[$n];
                 $formData->to_date = $request->to_date[$n];
                 $formData->from_time = $request->from_time[$n];
-                $formData->to_time = $request->to_time[$n];
-                $formData->calender_type = 1;
-                $formData->request_id = $requestId;
-                $formData->save();
+                $formData->to_time = $request->to_time[$n];           
+                $formData->calender_type = 1;  
+                $formData->request_id = $requestId;                    
+                $formData->save();                          
             }
             for ($n = 0; $n < count($request->availability_date); $n++) {
                 $formData = new Hire_requests_calender();
                 $formData->from_date = $request->availability_date[$n];
                 $formData->from_time = $request->availability_time_from[$n];
-                $formData->to_time = $request->availability_time_to[$n];
-                $formData->calender_type = 2;
-                $formData->request_id = $requestId;
-                $formData->save();
+                $formData->to_time = $request->availability_time_to[$n];           
+                $formData->calender_type = 2;  
+                $formData->request_id = $requestId;                    
+                $formData->save();                          
             }
         } else if (isset($request->company_info)) {
             // dd('we are here');

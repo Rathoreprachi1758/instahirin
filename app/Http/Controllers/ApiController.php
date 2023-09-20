@@ -21,7 +21,7 @@ class ApiController extends Controller
         if(empty($request->page))
             return response()->json(Expert::with(['experties', 'skills'])->orderBy('created_at', 'desc')->get(), 200)->header('Content-Type', 'text/json');
         else    
-            return response()->json(Expert::with(['experties', 'skills'])->orderBy('created_at', 'desc')->paginate(3), 200)->header('Content-Type', 'text/json');
+            return response()->json(Expert::with(['experties', 'skills'])->orderBy('created_at', 'desc')->paginate(9), 200)->header('Content-Type', 'text/json');
     }
 
     public function experts_search(Request $request)

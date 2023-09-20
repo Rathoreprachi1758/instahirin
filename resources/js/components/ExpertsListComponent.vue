@@ -234,7 +234,7 @@ export default {
 
             experts: [],  // Store the fetched data
             currentPage: 1,
-            itemsPerPage: 3,  // Adjust as needed
+            itemsPerPage: 9,  // Adjust as needed
             totalItems: 0,
         };
     },
