@@ -54,7 +54,19 @@
     src="https://www.facebook.com/tr?id=990314288786309&ev=PageView&noscript=1"
     /></noscript>
     <!-- End Meta Pixel Code -->
-        
+
+
+
+   <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-603H2KERC7"></script>
+    <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+
+    gtag('config', 'G-603H2KERC7');
+    </script>
+    
 </head>
 
 <body>
@@ -92,9 +104,9 @@
                                         <h5>Quick Links</h5>
                                         <ul>
                                             <li><a href="#">Terms of Services</a></li>
-                                            <li><a href="#">Acceptable Policy</a></li>
-                                            <li><a href="#">Cookies Policy</a></li>
-                                            <li><a href="#">Privacy Policy</a></li>
+                                            <li><a href="/industries/industries-we-serve/industries/acceptable-policy">Acceptable Policy</a></li>
+                                            <li><a href="/industries/industries-we-serve/industries/cookies-policy">Cookies Policy</a></li>
+                                            <li><a href="/industries/industries-we-serve/industries/privacy-policy">Privacy Policy</a></li>
                                             <li><a href="#">Services Agreement</a></li>
                                         </ul>
                                     </div>
