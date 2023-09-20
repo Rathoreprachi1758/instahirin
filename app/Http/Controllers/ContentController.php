@@ -39,7 +39,7 @@ class ContentController extends Controller
         $page = Page::where('slug', '=', $pageSlug)->first();
         // dd($page->slug);
 
-        echo $template = $page ? $page->template : '404';
+        $template = $page ? $page->template : '404';
 
         if ($template == '404') {
             return abort(404);
