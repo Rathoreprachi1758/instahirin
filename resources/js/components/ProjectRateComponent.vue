@@ -1,9 +1,10 @@
 <template>
   <div class="rate_editable">
     <template v-if="!editing">
-      <small @click="startEditing"
-        >$ {{ modelValue }} / Project<i class="fa fa-pencil" aria-hidden="true"></i
-      ></small>
+      <small @click="startEditing">
+        $ {{ modelValue }} / Project
+        <b><i class="fa fa-pencil" aria-hidden="true"></i></b>
+      </small>
     </template>
     <template v-else>
       <input v-model="editedValue" @blur="stopEditing" @keyup.enter="stopEditing" />
@@ -17,7 +18,7 @@
   display: inline-block;
   width: auto;
   border: 1px solid #ccc;
-  padding: 4px 8px;
+  padding: 4px 0px;
   font-size: 14px;
   background-color: transparent;
   color: #333;
@@ -40,7 +41,9 @@
 <script>
 export default {
   props: {
-    modelValue: String,
+    modelValue: {
+      type: [String, Number],
+    },
   },
   data() {
     return {
