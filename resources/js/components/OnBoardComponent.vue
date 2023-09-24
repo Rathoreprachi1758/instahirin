@@ -92,25 +92,14 @@
           <div class="onForm_col">
             <strong>Current Location</strong>
             <div class="project_form_field">
-              <!-- <input
-                type="text"
-                placeholder=""
-                name="current_location"
-                id="current_location"
-                v-model="current_location"
-              /> -->
-              <!-- <vue-autosuggest
-                :suggestions="suggestions"
-                v-model="current_location"
-                @selected="onLocationSelected"
-                placeholder="Enter your current location"
-              ></vue-autosuggest> -->
-              <GoogleAddressAutocomplete
-                apiKey="AIzaSyDY1vginH3C8j_tCqQRwIyE7awXfUQk-ck"
-                v-model="current_location"
-                class="css-class-here"
+              <vue-google-autocomplete
+                id="map"
+                types="geocode"
                 placeholder="Write your address"
-              />
+                v-model="current_location"
+                @place_changed="handlePlaceChanged"
+              >
+              </vue-google-autocomplete>
             </div>
           </div>
         </div>
@@ -305,6 +294,51 @@
           <input type="hidden" name="also_work_with" :value="selectedWorkWith" />
         </div>
 
+        <!-- Last / Current Company -->
+        <div class="col-lg-6 col-md-12">
+          <div class="onForm_col">
+            <strong>Last/Current Company Name</strong>
+            <div class="project_form_field">
+              <input
+                type="text"
+                placeholder=""
+                name="last_company"
+                id="last_company"
+                v-model="last_company"
+              />
+            </div>
+          </div>
+        </div>
+
+        <!-- location of Company -->
+        <div class="col-lg-6 col-md-12">
+          <div class="onForm_col">
+            <strong>Location</strong>
+            <!-- <GoogleMapComponent
+              v-model="company_location"
+              css-class="css-class-here"
+              placeholder="Write your company location"
+            /> -->
+            <div class="project_form_field">
+              <GoogleAddressAutocomplete
+                apiKey="AIzaSyDY1vginH3C8j_tCqQRwIyE7awXfUQk-ck"
+                v-model="company_location"
+                css-class="css-class-here"
+                placeholder="Write your company location"
+              />
+            </div>
+          </div>
+        </div>
+
+        <!-- Currently Working Checkbox -->
+        <div class="scheduleCheckbox pt-2 pl-3">
+          <label class="checkbox-label"
+            >Curently Working Here
+            <input type="checkbox" v-model="currentlyWorking" />
+            <span class="checkbox-custom rectangular ml-2"></span>
+          </label>
+        </div>
+
         <!-- Work Since Date  -->
         <div class="col-lg-6 col-md-12">
           <div class="onForm_col">
@@ -325,11 +359,13 @@
             <strong></strong>
             <div class="project_form_field">
               <input
+                :class="{ 'dimmed-overlay': currentlyWorking }"
                 type="date"
                 placeholder=""
                 name="working_since_date2"
                 id="working_since_date2"
                 v-model="working_since_date2"
+                :disabled="currentlyWorking"
               />
             </div>
           </div>
@@ -665,7 +701,7 @@
 
                       <!-- Hourly Rate Details -->
                       <div v-if="selectedPaymentOption === 'hourly'">
-                        <div class="monthlyYearly_btn mb-3">
+                        <div class="monthlyYearly_btn">
                           <div
                             class="oval-button"
                             :class="{ selected: selectedPaymentOption === 'hourly' }"
@@ -702,7 +738,7 @@
                       <!-- Fixed Payment Details -->
                       <div v-if="selectedPaymentOption === 'fixed'">
                         <div class="row">
-                          <div class="monthlyYearly_btn col-xl-5 col-lg-5 col-md-5">
+                          <div class="monthlyYearly_btn col-xl-6 col-lg-6 col-md-6">
                             <div
                               class="contract-button"
                               @click="selectSubPaymentOption('monthlyRate')"
@@ -712,31 +748,52 @@
                             >
                               Monthly Rate
                             </div>
+                            <div
+                              v-if="selectedSubPaymentOption === 'monthlyRate'"
+                              class="rate_edits mt-3"
+                            >
+                              <strong>Paid by month:</strong>
+                              <monthly-rate-component
+                                v-model="monthlyRateValue"
+                              ></monthly-rate-component>
+                            </div>
                           </div>
-                          <div class="monthlyYearly_btn col-xl-7 col-lg-7 col-md-7 pl-0">
+                          <div class="monthlyYearly_btn col-xl-6 col-lg-6 col-md-6 pl-0">
                             <div
                               class="contract-button2"
-                              @click="selectSubPaymentOption('fixedPrice')"
+                              @click="selectSubPaymentOption('projectRate')"
                               :class="{
-                                selected: selectedSubPaymentOption === 'fixedPrice',
+                                selected: selectedSubPaymentOption === 'projectRate',
                               }"
                             >
                               Get paid fixed price for the project
+                            </div>
+                            <div
+                              v-if="selectedSubPaymentOption === 'projectRate'"
+                              class="rate_edits mt-3"
+                            >
+                              <strong>Paid by project:</strong>
+                              <!-- <hourly-rate-component
+                                v-model="HourlyRateValue"
+                              ></hourly-rate-component> -->
+                              <project-rate-component
+                                v-model="ProjectRateValue"
+                              ></project-rate-component>
                             </div>
                           </div>
                         </div>
 
                         <!-- Monthly Rate Details -->
                         <div class="row">
-                          <div
+                          <!-- <div
                             v-if="selectedSubPaymentOption === 'monthlyRate'"
                             class="rate_edits col-xl-6"
                           >
                             <strong>Paid by project:</strong>
                             <editable-input v-model="monthlyRateValue"></editable-input>
-                          </div>
+                          </div> -->
                           <!-- Fixed Price Details -->
-                          <div
+                          <!-- <div
                             v-if="selectedSubPaymentOption === 'fixedPrice'"
                             class="rate_edits col-xl-6"
                           >
@@ -744,7 +801,7 @@
                             <hourly-rate-component
                               v-model="HourlyRateValue"
                             ></hourly-rate-component>
-                          </div>
+                          </div> -->
                         </div>
                       </div>
                     </div>
@@ -860,7 +917,7 @@
 
 .contract-button {
   display: inline-block;
-  padding: 5px 20px;
+  padding: 13px 16px;
   background-color: white;
   border: 1px solid #ccc;
   cursor: pointer;
@@ -868,11 +925,12 @@
   user-select: none;
   text-align: center;
   line-height: 16px;
+  font-size: 13px;
 }
 
 .contract-button2 {
   display: inline-block;
-  padding: 6px 18px;
+  padding: 6px 1px;
   background-color: white;
   border: 1px solid #ccc;
   cursor: pointer;
@@ -880,6 +938,7 @@
   user-select: none;
   text-align: center;
   line-height: 15px;
+  font-size: 13px;
 }
 
 .oval-button.selected {
@@ -890,6 +949,17 @@
 .selected {
   background-color: #19437a;
   color: white;
+}
+
+.dimmed-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  /* width: 100%;
+  height: 100%; */
+  background-color: rgba(0, 0, 0, 0.5);
+  pointer-events: none;
+  z-index: 1;
 }
 
 /* .multiselect__tag {
@@ -909,9 +979,11 @@ import { ref } from "vue";
 import axios from "axios";
 import Multiselect from "vue-multiselect";
 import VueUploadComponent from "vue-upload-component";
-import EditableInput from "./EditableComponent.vue";
+import MonthlyRateComponent from "./MonthlyRateComponent.vue";
 import HourlyRateComponent from "./HourlyRateComponent.vue";
-// import VueAutosuggest from "vue-autosuggest";
+import ProjectRateComponent from "./ProjectRateComponent.vue";
+// import GoogleMapComponent from "./GoogleMapComponent.vue";
+import VueGoogleAutocomplete from "vue-google-autocomplete";
 import GoogleAddressAutocomplete from "vue3-google-address-autocomplete";
 
 export default {
@@ -924,8 +996,11 @@ export default {
   components: {
     Multiselect,
     FileUpload: VueUploadComponent,
-    EditableInput,
+    MonthlyRateComponent,
     HourlyRateComponent,
+    ProjectRateComponent,
+    // GoogleMapComponent,
+    VueGoogleAutocomplete,
     GoogleAddressAutocomplete,
   },
   data() {
@@ -952,8 +1027,9 @@ export default {
       showHourlyRate: false,
       showFixedRate: false,
       //   editingMonthlyRate: false,
-      monthlyRateValue: "60",
+      monthlyRateValue: "600",
       HourlyRateValue: "33",
+      ProjectRateValue: "1000",
       // Location Section
       //   suggestions: [],
       location: "",
@@ -973,6 +1049,10 @@ export default {
       selectedSkills: [],
       selectedExpertise: [],
       selectedWorkWith: [],
+      last_company: "",
+      company_location: "",
+      //   Checkbox
+      currentlyWorking: false,
       working_since_date: "",
       working_since_date2: "",
       selectedCurrency: "USD",
@@ -986,8 +1066,8 @@ export default {
       availability_time_to: "",
       selectedPaymentOption: "hourly",
       selectedSubPaymentOption: "",
-      monthlyRateValue: 60,
-      HourlyRateValue: 33,
+      //   monthlyRateValue: 600,
+      //   HourlyRateValue: 33,
       resume_headline: "",
     };
   },
@@ -1113,12 +1193,10 @@ export default {
       this.selectedSubPaymentOption = option;
     },
 
-    // Handle file change event
-    // handleFileChange(event) {
-    //   const files = event.target.files;
-    //   this.uploadedFiles = Array.from(files);
-    //   console.log("Uploaded Files:", this.uploadedFiles);
-    // },
+    handlePlaceChanged(place) {
+      // Update current_location when a place is selected
+      this.current_location = place.formatted_address;
+    },
 
     // Submit the form
     submitForm() {
@@ -1135,6 +1213,10 @@ export default {
       formData.append("key_skills", JSON.stringify(this.selectedSkills));
       formData.append("expert_in", JSON.stringify(this.selectedExpertise));
       formData.append("also_work_with", JSON.stringify(this.selectedWorkWith));
+      formData.append("last_company", this.last_company);
+      formData.append("company_location", this.company_location);
+      // Currently Working  Checkbox
+      formData.append("currently_working_here", this.currentlyWorking ? "Yes" : "No");
       formData.append("working_since_date", this.working_since_date);
       formData.append("working_since_date2", this.working_since_date2);
       formData.append("annual_salary_currency", this.selectedCurrency);
@@ -1159,8 +1241,16 @@ export default {
       //   formData.append("hourly_rate", this.HourlyRateValue);
       if (this.selectedPaymentOption === "hourly") {
         formData.append("hourly_rate", this.HourlyRateValue);
-      } else if (this.selectedPaymentOption === "monthly") {
+      } else if (
+        this.selectedPaymentOption === "fixed" &&
+        this.selectedSubPaymentOption === "monthlyRate"
+      ) {
         formData.append("monthly_rate", this.monthlyRateValue);
+      } else if (
+        this.selectedPaymentOption === "fixed" &&
+        this.selectedSubPaymentOption === "projectRate"
+      ) {
+        formData.append("project_rate", this.ProjectRateValue);
       }
       formData.append("resume_headline", this.resume_headline);
 
@@ -1183,6 +1273,9 @@ export default {
           this.selectedSkills = [];
           this.selectedExpertise = [];
           this.selectedWorkWith = [];
+          this.last_company = "";
+          this.company_location = "";
+          this.currentlyWorking = "";
           this.working_since_date = "";
           this.working_since_date2 = "";
           this.selectedCurrency = "USD";
@@ -1196,7 +1289,7 @@ export default {
           this.availability_time_to = "";
           this.selectedPaymentOption = "";
           this.selectedSubPaymentOption = "";
-          this.monthlyRateValue = 60;
+          this.monthlyRateValue = 600;
           this.HourlyRateValue = 33;
           this.resume_headline = "";
         })
