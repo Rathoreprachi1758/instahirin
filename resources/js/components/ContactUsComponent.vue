@@ -45,6 +45,19 @@
                         </div>
                     </div>
 
+                    <!-- add company name field here  -->
+                    <div class="col-lg-6 col-md-12">
+                        <div class="project_form_field">
+                            <input
+                                type="text"
+                                v-model="formData.company"
+                                name="company"
+                                id="company"
+                                placeholder="Company Name*"
+                            />
+                        </div>
+                    </div>
+
                     <div class="col-lg-6 col-md-12">
                         <div class="project_form_field">
                             <input
@@ -52,10 +65,78 @@
                                 v-model="formData.email"
                                 name="email"
                                 id="email"
-                                placeholder="Enter business email"
+                                placeholder="Business email*"
                             />
                         </div>
                     </div>
+
+                    <!-- Contact Details -->
+
+                    <!-- <div class="col-lg-6 col-md-12">
+                        <div class="project_form_field split_in_two"> 
+                            <div class="project_form_select m-0 mr-2">
+                                <select
+                                v-model="selectedPhoneCode"
+                                class="project_form form-select codeCountry oncontact"
+                                names="country_code"
+                                id="country_code"
+                                >
+                                <option value="" disabled>Select Phone Code</option>
+                                 
+                                <option
+                                    v-for="(country, id) in phoneCodes"
+                                    :value="country.phone"
+                                    :key="id"
+                                >
+                                    {{ country.name }} +{{ country.phone }}
+                                </option>
+                                </select> 
+                            </div>
+                             
+                                <input
+                                type="text"
+                                v-model="phoneNumber"
+                                placeholder="Phone number"
+                                name="contact_number"
+                                id="contact_number" class="filedPhone"
+                                /> 
+                            <input type="hidden" name="contact_details" :value="uploadedFiles" /> 
+                        </div>
+                    </div> -->
+
+                    <div class="col-lg-6 col-md-12">
+                        <div class="project_form_field split_in_two"> 
+                            <div class="project_form_select m-0 mr-2">
+                                <select
+                                v-model="selectedPhoneCode"
+                                class="project_form form-select codeCountry oncontact pl-3" style="padding-left: 15px !important;"
+                                names="country_code"
+                                id="country_code"
+                                aria-label="Country Code*"
+                                >
+                                <option value="Country Code*" selected>Country Code*</option>
+                                 
+                                <option
+                                    v-for="(country, id) in phoneCodes"
+                                    :value="country.phone"
+                                    :key="id"
+                                >
+                                    {{ country.name }} +{{ country.phone }}
+                                </option>
+                                </select> 
+                            </div>
+                             
+                                <!-- <input
+                                type="text"
+                                v-model="phoneNumber"
+                                placeholder="Phone number"
+                                name="contact_number"
+                                id="contact_number" class="filedPhone"
+                                />  -->
+                            <!-- <input type="hidden" name="contact_details" :value="uploadedFiles" />  -->
+                        </div>
+                    </div>
+
                     <div class="col-lg-6 col-md-12">
                         <div class="project_form_field">
                             <input
@@ -63,12 +144,12 @@
                                 v-model="formData.phone"
                                 name="phone"
                                 id="phone"
-                                placeholder="Phone / Skype / Whatsapp"
+                                placeholder="Contact No*"
                             />
                         </div>
                     </div>
 
-                    <div class="col-lg-6 col-md-12">
+                    <!-- <div class="col-lg-6 col-md-12">
                         <div class="project_form_select">
                             <select
                                 class="form-select"
@@ -77,15 +158,14 @@
                                 name="hiring_type"
                                 id="hiring_type"
                             >
-                             <!-- <option disabled selected>Select hiring type</option> -->
                                 <option value="dedicated_developer">Hire Dedicated Developers</option>
                                 <option value="dedicated">Hire Dedicated</option>
                                 <option value="developers">Hire Developers</option>
                             </select>
                         </div>
-                    </div>
+                    </div> -->
 
-                    <div class="col-lg-6 col-md-12">
+                    <!-- <div class="col-lg-6 col-md-12">
                         <div class="project_form_select">
                             <select
                                 class="form-select"
@@ -98,7 +178,7 @@
                                 <option value="above_10K">Above $10K</option>
                             </select>
                         </div>
-                    </div>
+                    </div> -->
 
                     <div class="col-lg-12 col-md-12">
                         <div class="project_form_textarea">
@@ -106,7 +186,7 @@
                                 name="details"
                                 id="details"
                                 v-model="formData.details"
-                                placeholder="Tell us more*"
+                                placeholder="Message*"
                             ></textarea>
                         </div>
                     </div>
@@ -124,7 +204,7 @@
 
                             <div class="project_form_submit">
                                 <button class="btn_default" @click="store">
-                                    Inquire Now
+                                    Submit Request
                                 </button>
                             </div>
                         </div>

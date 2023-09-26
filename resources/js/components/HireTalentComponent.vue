@@ -11,14 +11,14 @@
 
             <div class="col-lg-6 col-md-12">
                 <div class="project_form_field split_in_two"> 
-                    <div class="project_form_select mt-0 mb-0 mr-3">
-                    <select class="form-select codeCountry" required id="country_code"   name="country_code">
+                    <div class="project_form_select mt-0 mb-0 mr-2">
+                    <select class="form-select codeCountry m-0 pr-0 pl-2" required id="country_code"   name="country_code">
                         <option value="">Country code</option>
                         <option v-for="item in countries" :value="item.phone" :key="item.phone">{{item.name}} +{{ item.phone }}</option>
                                               
                     </select>
                     </div>
-                    <input type="text" value="" required placeholder="Phone / Skype / Whatsapp" name="phone" id="phone"/>
+                    <input class="filedPhone" type="text" value="" required placeholder="Phone / Skype / Whatsapp" name="phone" id="phone"/>
                 </div>
             </div>
             <div class="col-lg-6 col-md-12">
