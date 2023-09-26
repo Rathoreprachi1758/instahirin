@@ -106,7 +106,7 @@
 
                     <div class="col-lg-6 col-md-12">
                         <div class="project_form_field split_in_two"> 
-                            <div class="project_form_select m-0 mr-2">
+                            <div class="project_form_select m-0">
                                 <select
                                 v-model="selectedPhoneCode"
                                 class="project_form form-select codeCountry oncontact pl-3" style="padding-left: 15px !important;"
