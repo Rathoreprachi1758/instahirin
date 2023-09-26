@@ -3422,7 +3422,7 @@ html {
     padding: 14px 16px;
     background: #fff;
     cursor: pointer;
-    border-right: 10px solid transparent;
+    border-right: 10px solid transparent; color: #757575;
 }
 
 .project_form_select {
@@ -8286,14 +8286,7 @@ html {
     justify-content: space-between;
 }
 
-.codeCountry {
-    min-width: 28%;
-    margin-right: 2%;
-}
-
-.filedPhone {
-    min-width: 70%;
-}
+ 
 
 
 
@@ -8426,13 +8419,14 @@ html {
 }
 
 .codeCountry {
-    min-width: 28%;
-    margin-right: 2%;
+    min-width: 25%;
+    margin-right: 1%; 
 }
 
 .filedPhone {
-    min-width: 70%;
+    min-width: 74%;
 }
+.oncontact {min-height: 51px;}
 
 
 .project_form_textarea .multiselect__tag {
