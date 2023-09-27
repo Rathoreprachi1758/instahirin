@@ -38,6 +38,7 @@ import OnBoard from "./components/OnBoardComponent.vue";
 import MonthlyRate from "./components/MonthlyRateComponent.vue";
 import HourRate from "./components/HourlyRateComponent.vue";
 import ProjectRate from "./components/ProjectRateComponent.vue";
+import TeamContactUs from "./components/TeamContactUsComponent.vue";
 
 app.component("experts-component", ExpertsComponent);
 app.component("experts-list-component", ExpertsListComponent);
@@ -55,6 +56,7 @@ app.component("on-board-component", OnBoard);
 app.component("monthly-rate-component", MonthlyRate);
 app.component("hourly-rate-component", HourRate);
 app.component("project-rate-component", ProjectRate);
+app.component("team-component", TeamContactUs);
 
 // import ExampleComponent from './components/ExampleComponent.vue';
 // app.component('example-component', ExampleComponent);
