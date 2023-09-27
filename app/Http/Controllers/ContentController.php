@@ -95,10 +95,12 @@ class ContentController extends Controller
         if (isset($request->hiring_type)) {
             $validatedData = $request->validate([
                 'name' => 'required',
+                'company' => 'required',
                 'email' => 'required|email',
+                'country_code' => 'required',
                 'phone' => 'required',
-                'hiring_type' => 'required',
-                'budget' => 'required',
+                // 'hiring_type' => 'required',
+                // 'budget' => 'required',
                 'details' => 'required',
                 'document' => 'file',
             ]);
@@ -107,7 +109,7 @@ class ContentController extends Controller
                 'name' => 'required',
                 'company' => 'required',
                 'email' => 'required|email',
-                'countrycode' => 'required',
+                'country_code' => 'required',
                 'phone' => 'required',
                 'details' => '',
                 'document' => '',
@@ -121,14 +123,8 @@ class ContentController extends Controller
         $formData->name = $validatedData['name'];
         $formData->company = $validatedData['company'];
         $formData->email = $validatedData['email'];
-        // $formData->phone = $validatedData['phone'];
-        // if (isset($request->hiring_type)) {
-        $formData->phone = $validatedData['countrycode'] . $validatedData['phone'];
-        if (isset($request->hiring_type)) {
-            $formData->hiring_type = $validatedData['hiring_type'];
-            $formData->budget = $validatedData['budget'];
-        }
-        $formData->lead_type = isset($validatedData['lead_type']) ? $validatedData['lead_type'] : 'Consultation';
+        $formData->phone = $validatedData['country_code'] . $validatedData['phone'];
+        //$formData->lead_type = isset($validatedData['lead_type']) ? $validatedData['lead_type'] : 'Consultation';
         $formData->details = $validatedData['details'];
 
         // Process and store the uploaded file

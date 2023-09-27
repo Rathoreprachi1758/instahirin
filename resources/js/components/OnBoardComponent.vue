@@ -64,7 +64,7 @@
                   id="contact_number"
                 />
               </div>
-              <input type="hidden" name="contact_details" :value="uploadedFiles" />
+              <!-- <input type="hidden" name="contact_details" :value="uploadedFiles" /> -->
             </div>
           </div>
         </div>
@@ -97,7 +97,7 @@
                 types="geocode"
                 placeholder="Write your address"
                 v-model="current_location"
-                @place_changed="handlePlaceChanged"
+                @select="handlePlaceChanged"
               >
               </vue-google-autocomplete>
             </div>
@@ -1193,7 +1193,13 @@ export default {
       this.selectedSubPaymentOption = option;
     },
 
+    // handlePlaceChanged(place) {
+    //   // Update current_location when a place is selected
+    //   this.current_location = place.formatted_address;
+    // },
+
     handlePlaceChanged(place) {
+      console.log("Place changed:", place);
       // Update current_location when a place is selected
       this.current_location = place.formatted_address;
     },
