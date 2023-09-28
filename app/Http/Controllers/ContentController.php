@@ -6,23 +6,24 @@ use App\Models\Job;
 use App\Models\Hire;
 use App\Models\Lead;
 use App\Models\Page;
-use App\Models\Expert;
-use App\Models\Subscription;
-use App\Models\HireRequest;
-use App\Models\Hire_requests_calender;
 use App\Models\Career;
-// use App\Models\Expert;
+use App\Models\Expert;
 use App\Models\Country;
+use App\Models\Countrie;
+use App\Models\HireRequest;
+// use App\Models\Expert;
+use App\Models\Subscription;
 // use App\Models\HireRequest;
 // use App\Models\Subscription;
 use Illuminate\Http\Request;
+use App\Models\TeamContactUs;
 use App\Models\InstaHirinOnboard;
 use Illuminate\Support\Facades\DB;
 use Illuminate\Support\Facades\Log;
 use App\Models\InstaHirinRequirement;
 use Illuminate\Support\Facades\Cache;
+use App\Models\Hire_requests_calender;
 use App\Models\InstaHirinOnboardDocument;
-use App\Models\Countrie;
 
 
 
@@ -142,6 +143,33 @@ class ContentController extends Controller
         $formData->save();
 
         // Return a response indicating success
+        return response()->json(['message' => 'Form submitted successfully']);
+    }
+
+
+    //* Team Form Submission
+    public function teamForm(Request $request)
+    {
+        // Validate the request data, including the uploaded file
+        $validatedData = $request->validate([
+            'name' => 'required',
+            'phone' => 'required',
+            'email' => 'required|email',
+            'details' => 'required',
+        ]);
+
+
+        $formData = new TeamContactUs();
+
+
+        $formData->name = $validatedData['name'];
+        $formData->phone = $validatedData['phone'];
+        $formData->email = $validatedData['email'];
+        $formData->details = $validatedData['details'];
+
+        //$formData->status = isset($validatedData['status']) ? $validatedData['status'] : 'New';
+
+        $formData->save();
         return response()->json(['message' => 'Form submitted successfully']);
     }
 
