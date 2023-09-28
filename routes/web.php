@@ -31,6 +31,9 @@ Route::post('/insta-hirin-requirements', [ContentController::class, 'instaHirinR
 //Route::post('/insta-hirin-onboard', [ContentController::class, 'instaHirinOnboard'])->name('instaHirinOnboard');
 Route::post('/submitForm', [ContentController::class, 'submitForm'])->name('submitForm');
 
+// Team Form Submission
+Route::post('/submit-team-form', [ContentController::class, 'teamForm'])->name('team');
+
 // Career Form Submission
 Route::post('/career', [ContentController::class, 'career'])->name('career');
 
