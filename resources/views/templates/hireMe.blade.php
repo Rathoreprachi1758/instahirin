@@ -255,7 +255,7 @@
                                 <div class="buildTeam_col">
                                     <strong>{{$key+1}}. {{$job->title}}:</strong>
                                     {!!$job->description!!}
-                                    <a href="#careerPage_inner_zone" class="btn_default">Apply Now</a>
+                                    <a href="/industries/industries-we-serve/industries/apply-now-form" target="_blank" class="btn_default">Apply Now</a>
                                 </div>
                             </div>
                             @endforeach
@@ -267,70 +267,7 @@
 
 
 
-            <!-- advance career section -->
-
-            <div class="advanceCareer_section mb-0 bg_fff">
-                <div class="careerPage_inner" id="careerPage_inner_zone">
-                    <div class="custom_tittle">
-                        <h2 class="text-left">Advance Your Career <strong>with BIZIONIC:</strong></h2>
-                        <p class="p_color text-left pb-2">Join our team of the brightest tech talents and let’s create awesome solutions together!</p>
-                    </div>
-                    <div class="alert alert-success text-center" role="alert" id="career_success"> Thank you for the message. We will contact you shortly. </div>
-                    <div class="alert alert-danger text-center" role="alert" id="career_failure"> Sorry! There is some problem sending your query at the moment, Please try again. </div>
-                    <form id="career_form" method="POST" action="{{ route('career') }}" onsubmit="return false" enctype="multipart/form-data">
-                    @csrf
-                        <div class="advanceCareer_form hi-there" >
-                            <div class="row">
-                                <div class="col-lg-6 col-md-6">
-                                    <div class="advanceCareer_form_fl">
-                                        <ul>
-                                            <li>
-                                                <div class="project_form_field">
-                                                    <input type="text" value="" placeholder="Name*" name="name" id="career_name">
-                                                </div>
-                                            </li>
-                                            <li>
-                                                <div class="project_form_field">
-                                                    <input type="text" value="" placeholder="Email*" name="email" id="career_email">
-                                                </div>
-                                            </li>
-                                            <li>
-                                                <div class="project_form_field">
-                                                    <input type="text" value="" placeholder="Linkedin Profile" name="linkedin_profile" id="career_linkedin_profile">
-                                                </div>
-                                            </li>
-                                            <li>
-                                                <label>Attach CV</label>
-                                                <div class="project_form_field">
-                                                    <input type="file" value="" placeholder="Attach CV " name="document" id="career_document">
-                                                </div>
-                                            </li>
-                                        </ul>
-                                    </div>
-                                </div>
-
-
-                                <div class="col-lg-6 col-md-6">
-                                    <div class="advanceCareer_form_fl">
-                                        <ul>
-                                            <li>
-                                                <div class="project_form_textarea">
-                                                    <textarea placeholder="Add a note for our recruiter." name="note" id="career_note"></textarea>
-                                                </div>
-                                            </li>
-                                        </ul>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-
-
-                        <div class="attchForm_btn">
-                            <input type="submit" value="Submit" class="btn_default" />
-                        </div>
-                    </form>
-                </div>
-            </div>
+            
 
 
 

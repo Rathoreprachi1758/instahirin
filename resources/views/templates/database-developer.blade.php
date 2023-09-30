@@ -22,15 +22,16 @@
                         <div class="row align-items-center">
                             <div class="col-lg-6 col-md-6 aos-init " data-aos="fade-right" data-aos-duration="1000" data-aos-easing="ease">
                                 <div class=" custom_tittle text-left">
-                                    <h1>WEB DEVELOPMENT</h1>
+                                    <h1>DATABASE DEVELOPER</h1>
                                     <h2 class="">
-                                        CREATE, BUILD, <strong>AND</strong> MAINTAIN <strong>WEBSITES 
-                                        OR WEB APPLICATIONS THAT</strong> RUNS SMOOTHLY 
-                                        <strong>TO</strong> GENERATE REVENUE <strong>FOR</strong> BUSINESSES.
+                                        DESIGN, PROGRAM, CONSTRUCT, <strong>AND</strong> 
+                                        IMPLEMENT <strong>OF</strong> NEW DATABASES, <strong>OR</strong> MODIFY, 
+                                        UPDATE, <strong>AND</strong> UPGRADE <strong>IN</strong> EXISTING DATABASES 
+                                        <strong>OR</strong> PLATFORM <strong>AS PER</strong> BUSINESS NEEDS.
 
                                     </h2>
 
-                                        <p class="p_color text-justify">Bizionic Technologies offers a comprehensive suite of web development services. <br>Our expertise includes: </p>
+                                        <p class="p_color text-justify">Bizionic Technologies offers specialized Database Developer development services to design, implement, and manage robust and efficient databases for various business needs.</p>
                                         <br>
                                         <a href="#gotoContact" class="btn_default mt-4">Contact Us</a>
                                     
@@ -40,7 +41,7 @@
 
                             <div class="col-lg-6 col-md-6 aos-init " data-aos="fade-left" data-aos-duration="1000" data-aos-easing="ease">
                                 <div class="industryNew_section1_avatar">
-                                    <span><img src="/bizionic/images/t_webDev_avatar.png" alt="#" /></span>
+                                    <span><img src="/bizionic/images/t_databaseDev_avatar.png" alt="#" /></span>
                                 </div>
                             </div>
                         </div>
@@ -50,12 +51,13 @@
 
 
 
-                    <div class="industryNew_section2_info aos-init d-none" data-aos="fade-up" data-aos-duration="1500" data-aos-easing="ease">
+                    <div class="industryNew_section2_info aos-init" data-aos="fade-up" data-aos-duration="1500" data-aos-easing="ease">
                         <div class="custom_tittle">
-                            <h3><strong>Our </strong> Event Management  <strong> Solution:</strong></h3>
-
-                              
+                            <h3>Our services encompass:</h3>
   
+
+
+
                         </div>
 
                         
@@ -77,30 +79,30 @@
                     <div class="row justify-content-center">
                         <div class="col-lg-3 col-md-6 provide_col">
                             <div class="industryNew_section2_colsInfo">
-                                <span><img src="/bizionic/images/t_webDev_icon1.png" alt="#" /></span>
-                                <h6>CUSTOM WEB DEVELOPMENT</h6>
-                                <p>Crafting tailored websites that meet unique business needs and user expectations.</p>
+                                <span><img src="/bizionic/images/t_databaseDev_icon1.png" alt="#" /></span>
+                                <h6>DATABASE DESIGN</h6>
+                                <p>Create well-structured database architectures tailored to your application's requirements, ensuring optimal performance and data organization.</p>
                             </div>
                         </div>
                         <div class="col-lg-3 col-md-6 provide_col">
                             <div class="industryNew_section2_colsInfo">
-                                <span><img src="/bizionic/images/t_webDev_icon2.png" alt="#" /></span>
-                                <h6>E-COMMERCE DEVELOPMENT</h6>
-                                <p>Building robust online stores with secure payment gateways and seamless user experiences.</p>
+                                <span><img src="/bizionic/images/t_databaseDev_icon2.png" alt="#" /></span>
+                                <h6>DATA MODELING</h6>
+                                <p>Design logical and physical data models to represent your business entities, relationships, and attributes accurately.</p>
                             </div>
                         </div>
                         <div class="col-lg-3 col-md-6 provide_col">
                             <div class="industryNew_section2_colsInfo">
-                                <span><img src="/bizionic/images/t_webDev_icon3.png" alt="#" /></span>
-                                <h6>RESPONSIVE DESIGN</h6>
-                                <p>Ensuring websites are optimised for various devices, offering a consistent and user-friendly experience.</p>
+                                <span><img src="/bizionic/images/t_databaseDev_icon3.png" alt="#" /></span>
+                                <h6>DATABASE DEVELOPMENT</h6>
+                                <p>Develop and implement database solutions using leading database management systems like MySQL, PostgreSQL, SQL Server, Oracle, and more.</p>
                             </div>
                         </div>
                         <div class="col-lg-3 col-md-6 provide_col">
                             <div class="industryNew_section2_colsInfo">
-                                <span><img src="/bizionic/images/t_webDev_icon4.png" alt="#" /></span>
-                                <h6>CMS DEVELOPMENT</h6>
-                                <p>Developing content management systems like WordPress for easy content updates and management.</p>
+                                <span><img src="/bizionic/images/t_databaseDev_icon4.png" alt="#" /></span>
+                                <h6>PERFORMANCE OPTIMIZATION</h6>
+                                <p>Fine-tune database performance by optimizing queries, indexes, and database configurations for faster data retrieval and processing.</p>
                             </div>
                         </div>
 
@@ -109,59 +111,75 @@
 
                         <div class="col-lg-3 col-md-6 provide_col">
                             <div class="industryNew_section2_colsInfo">
-                                <span><img src="/bizionic/images/t_webDev_icon5.png" alt="#" /></span>
-                                <h6>FRONT-END DEVELOPMENT</h6>
-                                <p>Creating captivating user interfaces using HTML, CSS, and JavaScript technologies.</p>
+                                <span><img src="/bizionic/images/t_databaseDev_icon5.png" alt="#" /></span>
+                                <h6>DATABASE ADMINISTRATION</h6>
+                                <p>Monitor, maintain, and administer databases, ensuring data security, backup, recovery, and availability.</p>
                             </div>
                         </div>
 
                         <div class="col-lg-3 col-md-6 provide_col">
                             <div class="industryNew_section2_colsInfo">
-                                <span><img src="/bizionic/images/t_webDev_icon6.png" alt="#" /></span>
-                                <h6>BACK-END DEVELOPMENT</h6>
-                                <p>Building powerful server-side applications using PHP, Python, and Node.js technologies.</p>
+                                <span><img src="/bizionic/images/t_databaseDev_icon6.png" alt="#" /></span>
+                                <h6>DATA MIGRATION</h6>
+                                <p>Seamlessly migrate data from legacy systems to modern databases while maintaining data integrity.</p>
                             </div>
                         </div>
-                    
+                
+                        <div class="col-lg-3 col-md-6 provide_col">
+                            <div class="industryNew_section2_colsInfo">
+                                <span><img src="/bizionic/images/t_databaseDev_icon7.png" alt="#" /></span>
+                                <h6>STORED PROCEDURES AND FUNCTIONS</h6>
+                                <p>Develop stored procedures, triggers, and functions to encapsulate business logic within the database.</p>
+                            </div>
+                        </div> 
 
                         <div class="col-lg-3 col-md-6 provide_col">
                             <div class="industryNew_section2_colsInfo">
-                                <span><img src="/bizionic/images/t_webDev_icon7.png" alt="#" /></span>
-                                <h6>WEB APPLICATION DEVELOPMENT</h6>
-                                <p>Developing interactive and dynamic web applications that cater to specific business processes.</p>
+                                <span><img src="/bizionic/images/t_databaseDev_icon8.png" alt="#" /></span>
+                                <h6>DATA INTEGRATION</h6>
+                                <p>Integrate databases with other applications, systems, and services to ensure data consistency and real-time information exchange.</p>
                             </div>
-                        </div>
-                        <div class="col-lg-3 col-md-6 provide_col">
-                            <div class="industryNew_section2_colsInfo">
-                                <span><img src="/bizionic/images/t_webDev_icon8.png" alt="#" /></span>
-                                <h6>API INTEGRATION</h6>
-                                <p>Integrating third-party APIs to enhance functionality and connect different systems seamlessly.</p>
-                            </div>
-                        </div>
-                        <div class="col-lg-3 col-md-6 provide_col">
-                            <div class="industryNew_section2_colsInfo">
-                                <span><img src="/bizionic/images/t_webDev_icon9.png" alt="#" /></span>
-                                <h6>UI/UX DESIGN</h6>
-                                <p>Designing intuitive and visually appealing user interfaces to improve user engagement.</p>
-                            </div>
-                        </div>
-                        <div class="col-lg-3 col-md-6 provide_col">
-                            <div class="industryNew_section2_colsInfo">
-                                <span><img src="/bizionic/images/t_webDev_icon10.png" alt="#" /></span>
-                                <h6>WEBSITE MAINTENANCE</h6>
-                                <p>Providing ongoing support, updates, and security enhancements to ensure website performance.</p>
-                            </div>
-                        </div>
+                        </div> 
 
+
+
+                        <div class="col-lg-3 col-md-6 provide_col">
+                            <div class="industryNew_section2_colsInfo">
+                                <span><img src="/bizionic/images/t_databaseDev_icon9.png" alt="#" /></span>
+                                <h6>SECURITY AND COMPLIANCE</h6>
+                                <p>Implement robust security measures, including access controls, encryption, and compliance with data protection regulations.</p>
+                            </div>
+                        </div> 
+                        <div class="col-lg-3 col-md-6 provide_col">
+                            <div class="industryNew_section2_colsInfo">
+                                <span><img src="/bizionic/images/t_databaseDev_icon10.png" alt="#" /></span>
+                                <h6>DATABASE PERFORMANCE TUNING</h6>
+                                <p>Continuously optimize database performance to handle increasing data loads and user demands.</p>
+                            </div>
+                        </div> 
+                        <div class="col-lg-3 col-md-6 provide_col">
+                            <div class="industryNew_section2_colsInfo">
+                                <span><img src="/bizionic/images/t_databaseDev_icon11.png" alt="#" /></span>
+                                <h6>TROUBLESHOOTING AND SUPPORT</h6>
+                                <p>Provide timely troubleshooting and support to address database-related issues and ensure smooth operations.</p>
+                            </div>
+                        </div> 
                         
+
+
+
+
                         </div>
+                        
+                        
+
 
 
                     <div class="row px-3">
-                        <div class="custom_tittle pt-5 pb-0">
+                        <div class="custom_tittle text-left pt-5 pb-0">
                             <h4 class="text-white text-left d-none">Host Memorable Events with Bizionic!</h4>
                             <p class=" text-justify text-white d-none">Partner with Bizionic Marketing Solutions to elevate your events and create unforgettable experiences for your attendees. Our team of event management experts is dedicated to delivering flawless execution and ensuring that your brand's vision comes to life.</p>
-                            <p class="pb-0 text-justify text-white">With Bizionic's web development services, businesses can achieve an impressive online presence, enhanced user experiences, and improved functionality.</p>
+                            <p class="pb-0 text-left text-white">Our Database Developer team combines expertise in various database technologies with a deep understanding of your business requirements to deliver scalable, secure, and high-performing database solutions.</p>
                         </div>
                     </div>
                 </div>

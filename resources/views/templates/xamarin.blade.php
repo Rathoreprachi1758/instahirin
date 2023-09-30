@@ -22,15 +22,14 @@
                         <div class="row align-items-center">
                             <div class="col-lg-6 col-md-6 aos-init " data-aos="fade-right" data-aos-duration="1000" data-aos-easing="ease">
                                 <div class=" custom_tittle text-left">
-                                    <h1>WEB DEVELOPMENT</h1>
+                                    <h1>XAMARIN</h1>
                                     <h2 class="">
-                                        CREATE, BUILD, <strong>AND</strong> MAINTAIN <strong>WEBSITES 
-                                        OR WEB APPLICATIONS THAT</strong> RUNS SMOOTHLY 
-                                        <strong>TO</strong> GENERATE REVENUE <strong>FOR</strong> BUSINESSES.
+                                        DESIGN, DEVELOP, <strong>AND</strong> BUILD CROSS-PLATFORM 
+                                        <strong>MOBILE</strong> APPLICATIONS <strong>FOR BOTH</strong> ANDROID <strong>AND</strong> iOS.
 
                                     </h2>
 
-                                        <p class="p_color text-justify">Bizionic Technologies offers a comprehensive suite of web development services. <br>Our expertise includes: </p>
+                                        <p class="p_color text-justify">Bizionic Technologies offers comprehensive Xamarin-based software development services to create cross-platform mobile applications with a seamless user experi- ence.</p>
                                         <br>
                                         <a href="#gotoContact" class="btn_default mt-4">Contact Us</a>
                                     
@@ -40,7 +39,7 @@
 
                             <div class="col-lg-6 col-md-6 aos-init " data-aos="fade-left" data-aos-duration="1000" data-aos-easing="ease">
                                 <div class="industryNew_section1_avatar">
-                                    <span><img src="/bizionic/images/t_webDev_avatar.png" alt="#" /></span>
+                                    <span><img src="/bizionic/images/t_xamarin_avatar.png" alt="#" /></span>
                                 </div>
                             </div>
                         </div>
@@ -50,12 +49,13 @@
 
 
 
-                    <div class="industryNew_section2_info aos-init d-none" data-aos="fade-up" data-aos-duration="1500" data-aos-easing="ease">
+                    <div class="industryNew_section2_info aos-init" data-aos="fade-up" data-aos-duration="1500" data-aos-easing="ease">
                         <div class="custom_tittle">
-                            <h3><strong>Our </strong> Event Management  <strong> Solution:</strong></h3>
-
-                              
+                            <h3>Our <strong>Xamarin</strong> services include:</h3>
   
+
+
+
                         </div>
 
                         
@@ -77,91 +77,76 @@
                     <div class="row justify-content-center">
                         <div class="col-lg-3 col-md-6 provide_col">
                             <div class="industryNew_section2_colsInfo">
-                                <span><img src="/bizionic/images/t_webDev_icon1.png" alt="#" /></span>
-                                <h6>CUSTOM WEB DEVELOPMENT</h6>
-                                <p>Crafting tailored websites that meet unique business needs and user expectations.</p>
+                                <span><img src="/bizionic/images/t_xamarin_icon1.png" alt="#" /></span>
+                                <h6>CROSS-PLATFORM APP DEVELOPMENT</h6>
+                                <p>Develop mobile apps that work on both iOS and Android platforms using a single codebase, reducing development time and costs.</p>
                             </div>
                         </div>
                         <div class="col-lg-3 col-md-6 provide_col">
                             <div class="industryNew_section2_colsInfo">
-                                <span><img src="/bizionic/images/t_webDev_icon2.png" alt="#" /></span>
-                                <h6>E-COMMERCE DEVELOPMENT</h6>
-                                <p>Building robust online stores with secure payment gateways and seamless user experiences.</p>
+                                <span><img src="/bizionic/images/t_xamarin_icon2.png" alt="#" /></span>
+                                <h6>NATIVE-LIKE PERFORMANCE</h6>
+                                <p>Utilize Xamarin's native performance capabilities to ensure fast and responsive apps on each platform.</p>
                             </div>
                         </div>
                         <div class="col-lg-3 col-md-6 provide_col">
                             <div class="industryNew_section2_colsInfo">
-                                <span><img src="/bizionic/images/t_webDev_icon3.png" alt="#" /></span>
-                                <h6>RESPONSIVE DESIGN</h6>
-                                <p>Ensuring websites are optimised for various devices, offering a consistent and user-friendly experience.</p>
-                            </div>
-                        </div>
-                        <div class="col-lg-3 col-md-6 provide_col">
-                            <div class="industryNew_section2_colsInfo">
-                                <span><img src="/bizionic/images/t_webDev_icon4.png" alt="#" /></span>
-                                <h6>CMS DEVELOPMENT</h6>
-                                <p>Developing content management systems like WordPress for easy content updates and management.</p>
-                            </div>
-                        </div>
-
-
-
-
-                        <div class="col-lg-3 col-md-6 provide_col">
-                            <div class="industryNew_section2_colsInfo">
-                                <span><img src="/bizionic/images/t_webDev_icon5.png" alt="#" /></span>
-                                <h6>FRONT-END DEVELOPMENT</h6>
-                                <p>Creating captivating user interfaces using HTML, CSS, and JavaScript technologies.</p>
-                            </div>
-                        </div>
-
-                        <div class="col-lg-3 col-md-6 provide_col">
-                            <div class="industryNew_section2_colsInfo">
-                                <span><img src="/bizionic/images/t_webDev_icon6.png" alt="#" /></span>
-                                <h6>BACK-END DEVELOPMENT</h6>
-                                <p>Building powerful server-side applications using PHP, Python, and Node.js technologies.</p>
-                            </div>
-                        </div>
-                    
-
-                        <div class="col-lg-3 col-md-6 provide_col">
-                            <div class="industryNew_section2_colsInfo">
-                                <span><img src="/bizionic/images/t_webDev_icon7.png" alt="#" /></span>
-                                <h6>WEB APPLICATION DEVELOPMENT</h6>
-                                <p>Developing interactive and dynamic web applications that cater to specific business processes.</p>
-                            </div>
-                        </div>
-                        <div class="col-lg-3 col-md-6 provide_col">
-                            <div class="industryNew_section2_colsInfo">
-                                <span><img src="/bizionic/images/t_webDev_icon8.png" alt="#" /></span>
-                                <h6>API INTEGRATION</h6>
-                                <p>Integrating third-party APIs to enhance functionality and connect different systems seamlessly.</p>
-                            </div>
-                        </div>
-                        <div class="col-lg-3 col-md-6 provide_col">
-                            <div class="industryNew_section2_colsInfo">
-                                <span><img src="/bizionic/images/t_webDev_icon9.png" alt="#" /></span>
+                                <span><img src="/bizionic/images/t_xamarin_icon3.png" alt="#" /></span>
                                 <h6>UI/UX DESIGN</h6>
-                                <p>Designing intuitive and visually appealing user interfaces to improve user engagement.</p>
+                                <p>Craft intuitive and user-friendly interfaces that provide a consistent look and feel across different devices and operating systems.</p>
                             </div>
                         </div>
                         <div class="col-lg-3 col-md-6 provide_col">
                             <div class="industryNew_section2_colsInfo">
-                                <span><img src="/bizionic/images/t_webDev_icon10.png" alt="#" /></span>
-                                <h6>WEBSITE MAINTENANCE</h6>
-                                <p>Providing ongoing support, updates, and security enhancements to ensure website performance.</p>
+                                <span><img src="/bizionic/images/t_xamarin_icon4.png" alt="#" /></span>
+                                <h6>INTEGRATION SERVICES</h6>
+                                <p>Integrate your Xamarin app with various APIs, third-party services, and backend systems to enhance functionality and data synchronization.</p>
                             </div>
                         </div>
+
+
+
+
+                        <div class="col-lg-3 col-md-6 provide_col">
+                            <div class="industryNew_section2_colsInfo">
+                                <span><img src="/bizionic/images/t_xamarin_icon5.png" alt="#" /></span>
+                                <h6>CUSTOMIZATION AND EXTENSIONS</h6>
+                                <p>Tailor your app to specific business needs by adding custom features and extensions using Xamarin.</p>
+                            </div>
+                        </div>
+
+                        <div class="col-lg-3 col-md-6 provide_col">
+                            <div class="industryNew_section2_colsInfo">
+                                <span><img src="/bizionic/images/t_xamarin_icon6.png" alt="#" /></span>
+                                <h6>TESTING AND QUALITY ASSURANCE</h6>
+                                <p>Rigorously test your app on different devices and platforms to ensure a bug-free experience for end-users.</p>
+                            </div>
+                        </div>
+                
+                        <div class="col-lg-3 col-md-6 provide_col">
+                            <div class="industryNew_section2_colsInfo">
+                                <span><img src="/bizionic/images/t_xamarin_icon7.png" alt="#" /></span>
+                                <h6>MAINTENANCE AND UPDATES</h6>
+                                <p>Provide ongoing support, updates, and maintenance to keep your Xamarin app up-to-date and compatible with the latest iOS versions.</p>
+                            </div>
+                        </div> 
 
                         
+
+
+
+
                         </div>
+                        
+                        
+
 
 
                     <div class="row px-3">
-                        <div class="custom_tittle pt-5 pb-0">
+                        <div class="custom_tittle text-left pt-5 pb-0">
                             <h4 class="text-white text-left d-none">Host Memorable Events with Bizionic!</h4>
                             <p class=" text-justify text-white d-none">Partner with Bizionic Marketing Solutions to elevate your events and create unforgettable experiences for your attendees. Our team of event management experts is dedicated to delivering flawless execution and ensuring that your brand's vision comes to life.</p>
-                            <p class="pb-0 text-justify text-white">With Bizionic's web development services, businesses can achieve an impressive online presence, enhanced user experiences, and improved functionality.</p>
+                            <p class="pb-0 text-left text-white">Our Xamarin development team leverages the power of this technology to create efficient, cost-effective, and high-quality mobile applications that cater to your business goals and user expectations.</p>
                         </div>
                     </div>
                 </div>
