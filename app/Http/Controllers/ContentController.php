@@ -662,10 +662,13 @@ class ContentController extends Controller
                 $uploadedDocuments = [];
                 foreach ($request->document as $document) {
                     //echo 'Uploading file: ' . $document->getClientOriginalName() . '<br>';
-                    $filename = $document->getClientOriginalName();
+                    $originalFilename = $document->getClientOriginalName();
+                    $timestamp = time();
+                    $filename = $timestamp . '_' . $originalFilename;
                     $document->storeAs('bizionic/images', $filename, 'public');
                     $uploadedDocuments[] = [
-                        'name' => $filename,
+                        'name' => $originalFilename, // Store the original filename
+                        'unique_name' => $filename,
                         'path' => 'bizionic/images/' . $filename,
                     ];
                     // $formData2->insta_hirin_onboard_id = $formData->id;

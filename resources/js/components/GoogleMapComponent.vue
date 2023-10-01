@@ -2,7 +2,7 @@
   <div class="project_form_field">
     <GoogleAddressAutocomplete
       apiKey="AIzaSyDY1vginH3C8j_tCqQRwIyE7awXfUQk-ck"
-      :value="value"
+      :value="modelValue"
       :class="cssClass"
       :placeholder="placeholder"
       @input="updateValue"
@@ -18,7 +18,7 @@ export default {
     GoogleAddressAutocomplete,
   },
   props: {
-    value: String,
+    modelValue: String,
     cssClass: String,
     placeholder: String,
   },
@@ -28,6 +28,7 @@ export default {
   methods: {
     updateValue(newValue) {
       this.$emit("input", newValue);
+      //this.$emit("update:modelValue", newValue);
     },
   },
 };
