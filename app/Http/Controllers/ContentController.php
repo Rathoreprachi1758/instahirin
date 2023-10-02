@@ -6,23 +6,24 @@ use App\Models\Job;
 use App\Models\Hire;
 use App\Models\Lead;
 use App\Models\Page;
-use App\Models\Expert;
-use App\Models\Subscription;
-use App\Models\HireRequest;
-use App\Models\Hire_requests_calender;
 use App\Models\Career;
-// use App\Models\Expert;
+use App\Models\Expert;
 use App\Models\Country;
+use App\Models\Countrie;
+use App\Models\HireRequest;
+// use App\Models\Expert;
+use App\Models\Subscription;
 // use App\Models\HireRequest;
 // use App\Models\Subscription;
 use Illuminate\Http\Request;
+use App\Models\TeamContactUs;
 use App\Models\InstaHirinOnboard;
 use Illuminate\Support\Facades\DB;
 use Illuminate\Support\Facades\Log;
 use App\Models\InstaHirinRequirement;
 use Illuminate\Support\Facades\Cache;
+use App\Models\Hire_requests_calender;
 use App\Models\InstaHirinOnboardDocument;
-use App\Models\Countrie;
 
 
 
@@ -44,7 +45,7 @@ class ContentController extends Controller
         if ($template == '404') {
             return abort(404);
         }
-       
+
         $menusResponse = Cache::get('menus', nova_get_menu_by_slug('header'));
         //        echo "<pre>";print_r($menusResponse['menuItems']);exit;
         // dd($template);
@@ -84,7 +85,7 @@ class ContentController extends Controller
             'menus' => json_decode(json_encode((object) $menusResponse['menuItems']), FALSE),
             'template' => 'hireForm',
             'expert' => $expert,
-            'countries'=>json_encode(Countrie::all())
+            'countries' => json_encode(Countrie::all())
         ]);
     }
 
@@ -95,10 +96,12 @@ class ContentController extends Controller
         if (isset($request->hiring_type)) {
             $validatedData = $request->validate([
                 'name' => 'required',
+                'company' => 'required',
                 'email' => 'required|email',
+                'country_code' => 'required',
                 'phone' => 'required',
-                'hiring_type' => 'required',
-                'budget' => 'required',
+                // 'hiring_type' => 'required',
+                // 'budget' => 'required',
                 'details' => 'required',
                 'document' => 'file',
             ]);
@@ -107,13 +110,13 @@ class ContentController extends Controller
                 'name' => 'required',
                 'company' => 'required',
                 'email' => 'required|email',
-                'countrycode' => 'required',
+                'country_code' => 'required',
                 'phone' => 'required',
                 'details' => '',
                 'document' => '',
             ]);
         }
-        
+
         // Create a new instance of the ContactUs model
         $formData = new Lead();
 
@@ -121,14 +124,8 @@ class ContentController extends Controller
         $formData->name = $validatedData['name'];
         $formData->company = $validatedData['company'];
         $formData->email = $validatedData['email'];
-        // $formData->phone = $validatedData['phone'];
-        // if (isset($request->hiring_type)) {
-        $formData->phone = $validatedData['countrycode'] . $validatedData['phone'];
-        if (isset($request->hiring_type)) {
-            $formData->hiring_type = $validatedData['hiring_type'];
-            $formData->budget = $validatedData['budget'];
-        }
-        $formData->lead_type = isset($validatedData['lead_type']) ? $validatedData['lead_type'] : 'Consultation';
+        $formData->phone = $validatedData['country_code'] . $validatedData['phone'];
+        //$formData->lead_type = isset($validatedData['lead_type']) ? $validatedData['lead_type'] : 'Consultation';
         $formData->details = $validatedData['details'];
 
         // Process and store the uploaded file
@@ -146,6 +143,33 @@ class ContentController extends Controller
         $formData->save();
 
         // Return a response indicating success
+        return response()->json(['message' => 'Form submitted successfully']);
+    }
+
+
+    //* Team Form Submission
+    public function teamForm(Request $request)
+    {
+        // Validate the request data, including the uploaded file
+        $validatedData = $request->validate([
+            'name' => 'required',
+            'phone' => 'required',
+            'email' => 'required|email',
+            'details' => 'required',
+        ]);
+
+
+        $formData = new TeamContactUs();
+
+
+        $formData->name = $validatedData['name'];
+        $formData->phone = $validatedData['phone'];
+        $formData->email = $validatedData['email'];
+        $formData->details = $validatedData['details'];
+
+        //$formData->status = isset($validatedData['status']) ? $validatedData['status'] : 'New';
+
+        $formData->save();
         return response()->json(['message' => 'Form submitted successfully']);
     }
 
@@ -203,7 +227,7 @@ class ContentController extends Controller
                 'availability_time_to' => '',
                 'template' => '',
                 'expert' => '',
-                'hiring_type'=>'',
+                'hiring_type' => '',
             ]);
 
             // Create a new instance of the Hire Request model
@@ -236,8 +260,8 @@ class ContentController extends Controller
             if ($request->hasFile('document')) {
                 $file = $request->file('document');
                 $filename = $file->getClientOriginalName();
-                $file->storeAs('bizionic/images', time().$filename, 'public');
-                $formData->document = time().$filename;
+                $file->storeAs('bizionic/images', time() . $filename, 'public');
+                $formData->document = time() . $filename;
             }
             $formData->save();
         } else if (isset($request->company_info)) {
@@ -247,19 +271,19 @@ class ContentController extends Controller
                 $formData->from_date = $request->from_date[$n];
                 $formData->to_date = $request->to_date[$n];
                 $formData->from_time = $request->from_time[$n];
-                $formData->to_time = $request->to_time[$n];           
-                $formData->calender_type = 1;  
-                $formData->request_id = $requestId;                    
-                $formData->save();                          
+                $formData->to_time = $request->to_time[$n];
+                $formData->calender_type = 1;
+                $formData->request_id = $requestId;
+                $formData->save();
             }
             for ($n = 0; $n < count($request->availability_date); $n++) {
                 $formData = new Hire_requests_calender();
                 $formData->from_date = $request->availability_date[$n];
                 $formData->from_time = $request->availability_time_from[$n];
-                $formData->to_time = $request->availability_time_to[$n];           
-                $formData->calender_type = 2;  
-                $formData->request_id = $requestId;                    
-                $formData->save();                          
+                $formData->to_time = $request->availability_time_to[$n];
+                $formData->calender_type = 2;
+                $formData->request_id = $requestId;
+                $formData->save();
             }
         } else if (isset($request->company_info)) {
             // dd('we are here');
@@ -568,8 +592,11 @@ class ContentController extends Controller
             'key_skills' => 'required|json',
             'expert_in' => 'required|json',
             'also_work_with' => 'required|json',
+            'last_company' => '', // new column
+            'company_location' => '', // new column
+            'currently_working_here' => '', // new column
             'working_since_date' => 'required',
-            'working_since_date2' => 'required',
+            'working_since_date2' => '',
             'annual_salary_currency' => 'required',
             'annual_salary' => 'required',
             'highest_qualification' => 'required',
@@ -582,6 +609,7 @@ class ContentController extends Controller
             'sub_payment_option' => '',
             'monthly_rate' => '',
             'hourly_rate' => '',
+            'project_rate' => '',
             'resume_headline' => 'required',
             // 'document' => 'required|array',
             // 'document.*' => 'file|mimes:pdf,doc,docx|max:5120'
@@ -596,8 +624,8 @@ class ContentController extends Controller
         $formData->name             = $validatedData['name'];
         $formData->contact_details  = $validatedData['contact_details'];
         $formData->email            = $validatedData['email'];
-        // $formData->current_location = $validatedData['current_location'];
-        $formData->current_location   = isset($validatedData['current_location']) ? $validatedData['current_location'] : '-';
+        $formData->current_location = $validatedData['current_location'];
+        //$formData->current_location   = isset($validatedData['current_location']) ? $validatedData['current_location'] : '-';
         $formData->skills_description = $validatedData['skills_description'];
         $formData->current_title    = $validatedData['current_title'];
         $formData->experience_year  = $validatedData['experience_year'];
@@ -605,9 +633,12 @@ class ContentController extends Controller
         $formData->key_skills = json_decode($validatedData['key_skills']);
         $formData->expert_in = json_decode($validatedData['expert_in']);
         $formData->also_work_with = json_decode($validatedData['also_work_with']);
-
+        $formData->last_company = isset($validatedData['last_company']) ? $validatedData['last_company'] : '-';
+        // $formData->company_location = isset($validatedData['company_location']) ? $validatedData['company_location'] : '-';
+        $formData->company_location = $validatedData['company_location'];
+        $formData->currently_working_here = isset($validatedData['currently_working_here']) ? $validatedData['currently_working_here'] : '-';
         $formData->working_since_date      = $validatedData['working_since_date'];
-        $formData->working_since_date2     = $validatedData['working_since_date2'];
+        $formData->working_since_date2     = isset($validatedData['working_since_date2']) ? $validatedData['working_since_date2'] : '-';
         $formData->annual_salary_currency  = $validatedData['annual_salary_currency'];
         $formData->annual_salary           = $validatedData['annual_salary'];
         $formData->highest_qualification   = $validatedData['highest_qualification'];
@@ -620,6 +651,7 @@ class ContentController extends Controller
         $formData->sub_payment_option      = isset($validatedData['sub_payment_option']) ? $validatedData['sub_payment_option'] : null;
         $formData->monthly_rate            = isset($validatedData['monthly_rate']) ? $validatedData['monthly_rate'] : null;
         $formData->hourly_rate             = isset($validatedData['hourly_rate']) ? $validatedData['hourly_rate'] : null;
+        $formData->project_rate            = isset($validatedData['project_rate']) ? $validatedData['project_rate'] : null;
         $formData->resume_headline         = $validatedData['resume_headline'];
         // dd($request->all());
         $formData->save();
@@ -630,10 +662,13 @@ class ContentController extends Controller
                 $uploadedDocuments = [];
                 foreach ($request->document as $document) {
                     //echo 'Uploading file: ' . $document->getClientOriginalName() . '<br>';
-                    $filename = $document->getClientOriginalName();
+                    $originalFilename = $document->getClientOriginalName();
+                    $timestamp = time();
+                    $filename = $timestamp . '_' . $originalFilename;
                     $document->storeAs('bizionic/images', $filename, 'public');
                     $uploadedDocuments[] = [
-                        'name' => $filename,
+                        'name' => $originalFilename, // Store the original filename
+                        'unique_name' => $filename,
                         'path' => 'bizionic/images/' . $filename,
                     ];
                     // $formData2->insta_hirin_onboard_id = $formData->id;

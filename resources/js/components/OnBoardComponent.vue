@@ -4,6 +4,7 @@
     method="POST"
     enctype="multipart/form-data"
     id="hire_developer"
+    @submit.prevent="onFormSubmit"
   >
     <!-- @csrf -->
     <!-- {!! csrf_field() !!} -->
@@ -17,6 +18,25 @@
         </h2>
         <p class="p_color">Please fill the initial information for prescreening.</p>
       </div>
+      <!-- Success & Failure Messages -->
+      <div
+        class="alert alert-success text-center"
+        role="alert"
+        id="success"
+        ref="successMessage"
+      >
+        Thank you for the submitting the inquiry. We will contact you shortly.
+      </div>
+
+      <div
+        class="alert alert-danger text-center"
+        role="alert"
+        id="failure"
+        ref="failureMessage"
+      >
+        Sorry! There is some problem sending your inquiry at the moment, Please try again.
+      </div>
+
       <div class="row">
         <div class="col-lg-6 col-md-12">
           <div class="onForm_col">
@@ -34,14 +54,14 @@
             <strong>Contact Details</strong>
             <div class="row project_form_field">
               <!-- country code -->
-              <div class="col-lg-3 col-md-3 p-0 onForm_col">
+              <div class="col-lg-6 col-md-6 p-0 onForm_col">
                 <select
                   v-model="selectedPhoneCode"
                   class="project_form"
                   names="country_code"
                   id="country_code"
                 >
-                  <option value="" disabled>Select Phone Code</option>
+                  <option value="" disabled>Country Code</option>
                   <!-- <option v-for="(code, id) in phoneCodes" :value="code" :key="id">
                     {{ code }}
                   </option> -->
@@ -55,7 +75,7 @@
                 </select>
               </div>
               <!-- number -->
-              <div class="col-lg-9 col-md-9 p-0">
+              <div class="col-lg-6 col-md-6 p-0">
                 <input
                   type="text"
                   v-model="phoneNumber"
@@ -64,7 +84,7 @@
                   id="contact_number"
                 />
               </div>
-              <input type="hidden" name="contact_details" :value="uploadedFiles" />
+              <!-- <input type="hidden" name="contact_details" :value="uploadedFiles" /> -->
             </div>
           </div>
         </div>
@@ -92,24 +112,28 @@
           <div class="onForm_col">
             <strong>Current Location</strong>
             <div class="project_form_field">
-              <!-- <input
-                type="text"
-                placeholder=""
-                name="current_location"
-                id="current_location"
+              <!-- <vue-google-autocomplete
+                ref="current_location"
+                id="map"
+                types="geocode"
+                placeholder="Write your address"
+                v-model="current_location.formatted_address"
+                @placechanged="getAddressData"
+              >
+              </vue-google-autocomplete> -->
+              <!-- <GoogleMapComponent
+                id="map"
+                types="geocode"
+                placeholder="Write your address"
                 v-model="current_location"
-              /> -->
-              <!-- <vue-autosuggest
-                :suggestions="suggestions"
-                v-model="current_location"
-                @selected="onLocationSelected"
-                placeholder="Enter your current location"
-              ></vue-autosuggest> -->
-              <GoogleAddressAutocomplete
+                @change="handlePlaceChanged"
+              >
+              </GoogleMapComponent> -->
+              <GoogleVue
                 apiKey="AIzaSyDY1vginH3C8j_tCqQRwIyE7awXfUQk-ck"
                 v-model="current_location"
-                class="css-class-here"
-                placeholder="Write your address"
+                css-class="css-class-here"
+                placeholder="Write your company location"
               />
             </div>
           </div>
@@ -305,6 +329,51 @@
           <input type="hidden" name="also_work_with" :value="selectedWorkWith" />
         </div>
 
+        <!-- Last / Current Company -->
+        <div class="col-lg-6 col-md-12">
+          <div class="onForm_col">
+            <strong>Last/Current Company Name</strong>
+            <div class="project_form_field">
+              <input
+                type="text"
+                placeholder=""
+                name="last_company"
+                id="last_company"
+                v-model="last_company"
+              />
+            </div>
+          </div>
+        </div>
+
+        <!-- location of Company -->
+        <div class="col-lg-6 col-md-12">
+          <div class="onForm_col">
+            <strong>Location</strong>
+            <!-- <GoogleMapComponent
+              v-model="company_location"
+              css-class="css-class-here"
+              placeholder="Write your company location"
+            /> -->
+            <div class="project_form_field">
+              <GoogleAddressAutocomplete
+                apiKey="AIzaSyDY1vginH3C8j_tCqQRwIyE7awXfUQk-ck"
+                v-model="company_location"
+                css-class="css-class-here"
+                placeholder="Write your company location"
+              />
+            </div>
+          </div>
+        </div>
+
+        <!-- Currently Working Checkbox -->
+        <div class="scheduleCheckbox pt-2 pl-3">
+          <label class="checkbox-label"
+            >Curently Working Here
+            <input type="checkbox" v-model="currentlyWorking" />
+            <span class="checkbox-custom rectangular ml-2"></span>
+          </label>
+        </div>
+
         <!-- Work Since Date  -->
         <div class="col-lg-6 col-md-12">
           <div class="onForm_col">
@@ -325,11 +394,13 @@
             <strong></strong>
             <div class="project_form_field">
               <input
+                :class="{ 'dimmed-overlay': currentlyWorking }"
                 type="date"
                 placeholder=""
                 name="working_since_date2"
                 id="working_since_date2"
                 v-model="working_since_date2"
+                :disabled="currentlyWorking"
               />
             </div>
           </div>
@@ -392,8 +463,10 @@
                 v-model="highest_qualification"
               >
                 <option value="" disabled selected>Select your qualification</option>
-                <option selected>Post Graduation</option>
+                <option>Any</option>
+                <option>Post Graduation</option>
                 <option>Graduation</option>
+                <option>Doctorate</option>
               </select>
             </div>
           </div>
@@ -573,11 +646,20 @@
                 aria-label="Default select example"
                 v-model="availability"
               >
-                <option selected value="">
+                <option disabled selected value="">
                   Full Time, PartTime, Daily, Weekly, Monthly, Hours, Project-Base, etc.
                 </option>
                 <option>Full Time</option>
                 <option>Part Time</option>
+                <option>Project Base</option>
+                <option>Hourly</option>
+                <option>On-Site</option>
+                <option>Freelancing</option>
+                <option>Contract</option>
+                <option>Shift</option>
+                <option>Consulting</option>
+                <option>Volunteer</option>
+                <option>Internships</option>
               </select>
             </div>
           </div>
@@ -665,7 +747,7 @@
 
                       <!-- Hourly Rate Details -->
                       <div v-if="selectedPaymentOption === 'hourly'">
-                        <div class="monthlyYearly_btn mb-3">
+                        <div class="monthlyYearly_btn">
                           <div
                             class="oval-button"
                             :class="{ selected: selectedPaymentOption === 'hourly' }"
@@ -702,7 +784,7 @@
                       <!-- Fixed Payment Details -->
                       <div v-if="selectedPaymentOption === 'fixed'">
                         <div class="row">
-                          <div class="monthlyYearly_btn col-xl-5 col-lg-5 col-md-5">
+                          <div class="monthlyYearly_btn col-xl-6 col-lg-6 col-md-6">
                             <div
                               class="contract-button"
                               @click="selectSubPaymentOption('monthlyRate')"
@@ -710,33 +792,54 @@
                                 selected: selectedSubPaymentOption === 'monthlyRate',
                               }"
                             >
-                              Monthly Rate
+                              Yearly Contract
+                            </div>
+                            <div
+                              v-if="selectedSubPaymentOption === 'monthlyRate'"
+                              class="rate_edits mt-3"
+                            >
+                              <strong>Paid by month:</strong>
+                              <monthly-rate-component
+                                v-model="monthlyRateValue"
+                              ></monthly-rate-component>
                             </div>
                           </div>
-                          <div class="monthlyYearly_btn col-xl-7 col-lg-7 col-md-7 pl-0">
+                          <div class="monthlyYearly_btn col-xl-6 col-lg-6 col-md-6 pl-0">
                             <div
                               class="contract-button2"
-                              @click="selectSubPaymentOption('fixedPrice')"
+                              @click="selectSubPaymentOption('projectRate')"
                               :class="{
-                                selected: selectedSubPaymentOption === 'fixedPrice',
+                                selected: selectedSubPaymentOption === 'projectRate',
                               }"
                             >
-                              Get paid fixed price for the project
+                              Fixed Price for the Project
+                            </div>
+                            <div
+                              v-if="selectedSubPaymentOption === 'projectRate'"
+                              class="rate_edits mt-3"
+                            >
+                              <strong>Paid by project:</strong>
+                              <!-- <hourly-rate-component
+                                v-model="HourlyRateValue"
+                              ></hourly-rate-component> -->
+                              <project-rate-component
+                                v-model="ProjectRateValue"
+                              ></project-rate-component>
                             </div>
                           </div>
                         </div>
 
                         <!-- Monthly Rate Details -->
                         <div class="row">
-                          <div
+                          <!-- <div
                             v-if="selectedSubPaymentOption === 'monthlyRate'"
                             class="rate_edits col-xl-6"
                           >
                             <strong>Paid by project:</strong>
                             <editable-input v-model="monthlyRateValue"></editable-input>
-                          </div>
+                          </div> -->
                           <!-- Fixed Price Details -->
-                          <div
+                          <!-- <div
                             v-if="selectedSubPaymentOption === 'fixedPrice'"
                             class="rate_edits col-xl-6"
                           >
@@ -744,7 +847,7 @@
                             <hourly-rate-component
                               v-model="HourlyRateValue"
                             ></hourly-rate-component>
-                          </div>
+                          </div> -->
                         </div>
                       </div>
                     </div>
@@ -784,8 +887,9 @@
                 <label class="checkbox-label">
                   <input type="checkbox" />
                   <span class="checkbox-custom rectangular"></span>
-                  Java and J2Ee Developer with M. Arch in Agriculture currently living in
-                  Hyderabad/Secunderabad
+                  Web Application Developer with 6+ years of expertise in TML5 | CSS3 |
+                  JavaScript | jQuery | Bootstrap seeking a challenging role to leverage
+                  my skills & contribute to innovative solutions.
                 </label>
               </div>
             </div>
@@ -860,7 +964,7 @@
 
 .contract-button {
   display: inline-block;
-  padding: 5px 20px;
+  padding: 13px 16px;
   background-color: white;
   border: 1px solid #ccc;
   cursor: pointer;
@@ -868,11 +972,12 @@
   user-select: none;
   text-align: center;
   line-height: 16px;
+  font-size: 13px;
 }
 
 .contract-button2 {
   display: inline-block;
-  padding: 6px 18px;
+  padding: 6px 1px;
   background-color: white;
   border: 1px solid #ccc;
   cursor: pointer;
@@ -880,6 +985,7 @@
   user-select: none;
   text-align: center;
   line-height: 15px;
+  font-size: 13px;
 }
 
 .oval-button.selected {
@@ -890,6 +996,17 @@
 .selected {
   background-color: #19437a;
   color: white;
+}
+
+.dimmed-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  /* width: 100%;
+  height: 100%; */
+  background-color: rgba(0, 0, 0, 0.5);
+  pointer-events: none;
+  z-index: 1;
 }
 
 /* .multiselect__tag {
@@ -909,10 +1026,13 @@ import { ref } from "vue";
 import axios from "axios";
 import Multiselect from "vue-multiselect";
 import VueUploadComponent from "vue-upload-component";
-import EditableInput from "./EditableComponent.vue";
+import MonthlyRateComponent from "./MonthlyRateComponent.vue";
 import HourlyRateComponent from "./HourlyRateComponent.vue";
-// import VueAutosuggest from "vue-autosuggest";
+import ProjectRateComponent from "./ProjectRateComponent.vue";
+//import GoogleMapComponent from "./GoogleMapComponent.vue";
+import VueGoogleAutocomplete from "vue-google-autocomplete";
 import GoogleAddressAutocomplete from "vue3-google-address-autocomplete";
+import GoogleVue from "vue3-google-address-autocomplete";
 
 export default {
   props: {
@@ -924,9 +1044,13 @@ export default {
   components: {
     Multiselect,
     FileUpload: VueUploadComponent,
-    EditableInput,
+    MonthlyRateComponent,
     HourlyRateComponent,
+    ProjectRateComponent,
+    //GoogleMapComponent,
+    VueGoogleAutocomplete,
     GoogleAddressAutocomplete,
+    GoogleVue,
   },
   data() {
     return {
@@ -952,8 +1076,9 @@ export default {
       showHourlyRate: false,
       showFixedRate: false,
       //   editingMonthlyRate: false,
-      monthlyRateValue: "60",
+      monthlyRateValue: "600",
       HourlyRateValue: "33",
+      ProjectRateValue: "1000",
       // Location Section
       //   suggestions: [],
       location: "",
@@ -973,6 +1098,13 @@ export default {
       selectedSkills: [],
       selectedExpertise: [],
       selectedWorkWith: [],
+      last_company: "",
+      company_location: "",
+      //   current_location: {
+      //     formatted_address: "", // Initialize formatted_address
+      //   },
+      //   Checkbox
+      currentlyWorking: false,
       working_since_date: "",
       working_since_date2: "",
       selectedCurrency: "USD",
@@ -986,17 +1118,34 @@ export default {
       availability_time_to: "",
       selectedPaymentOption: "hourly",
       selectedSubPaymentOption: "",
-      monthlyRateValue: 60,
-      HourlyRateValue: 33,
+      //   monthlyRateValue: 600,
+      //   HourlyRateValue: 33,
       resume_headline: "",
     };
   },
   mounted() {
     this.fetchPhoneCodes();
     this.selectedSalaryRange = this.salaryOptions[0];
+
+    this.$el.addEventListener("keydown", this.handleFormKeyDown);
+
+    // this.$refs.current_location.focus();
   },
 
   methods: {
+    // prevent default form change
+    handleFormKeyDown(event) {
+      if (event.keyCode === 13) {
+        event.preventDefault();
+      }
+    },
+
+    // destroy the event listener
+    beforeDestroy() {
+      const form = this.$refs.myForm;
+      form.removeEventListener("keydown", this.handleFormKeyDown);
+    },
+
     // Fetch phone codes from the server
     fetchPhoneCodes() {
       //   console.log("Making request to:", "{{ route('getPhone') }}");
@@ -1025,7 +1174,7 @@ export default {
       axios
         .get(`/api/v1/skills?query=${query.toLowerCase()}`)
         .then((response) => {
-          console.log("Response data:", response.data);
+          //   console.log("Response data:", response.data);
           this.skills = response.data;
           this.isLoading = false;
         })
@@ -1073,7 +1222,7 @@ export default {
 
     // Validate the file size and extension
     inputFilter(newFile, oldFile, prevent) {
-      console.log("New File:", newFile);
+      //   console.log("New File:", newFile);
       if (newFile && (!oldFile || newFile.file !== oldFile.file)) {
         if (newFile.size > this.maxSize) {
           //console.log("File size exceeded the maximum limit.");
@@ -1082,7 +1231,7 @@ export default {
           this.errorMessage = "File size exceeds the maximum limit (5 MB).";
           setTimeout(() => {
             this.errorMessage = "";
-          }, 5000); // Remove the error message after 2 seconds
+          }, 10000); // Remove the error message after 2 seconds
         }
         if (!this.extensions.includes(newFile.name.split(".").pop())) {
           //console.log("Invalid file format.");
@@ -1091,7 +1240,7 @@ export default {
           this.errorMessage = "Invalid file format. Allowed formats: PDF, DOC, DOCX.";
           setTimeout(() => {
             this.errorMessage = "";
-          }, 5000); // Remove the error message after 2 seconds
+          }, 10000); // Remove the error message after 2 seconds
         }
       }
     },
@@ -1113,11 +1262,32 @@ export default {
       this.selectedSubPaymentOption = option;
     },
 
-    // Handle file change event
-    // handleFileChange(event) {
-    //   const files = event.target.files;
-    //   this.uploadedFiles = Array.from(files);
-    //   console.log("Uploaded Files:", this.uploadedFiles);
+    // handlePlaceChanged() {
+    //   // Update current_location when a place is selected
+    //   //this.current_location = place.formatted_address;
+    //   const place = this.$refs.autocomplete.selectedPlace;
+    //   if (place && place.formatted_address) {
+    //     this.current_location = place.formatted_address;
+    //   }
+    // },
+
+    // handlePlaceChanged(place) {
+    //   console.log("Place changed:", place);
+    //   // Update current_location when a place is selected
+    //   const newValue = place ? place.formatted_address : "";
+    //   this.$emit("update:modelValue", newValue);
+    // },
+
+    // getAddressData: function (currentLocation, placeResultData, id) {
+    //   //   this.current_location = currentLocation.formatted_address;
+    //   if (currentLocation && currentLocation.formatted_address) {
+    //     this.current_location = currentLocation.formatted_address;
+    //   }
+    // },
+
+    // getAddressData(currentLocation) {
+    //   // Assign selected address to current_location
+    //   this.current_location.formatted_address = currentLocation.formatted_address;
     // },
 
     // Submit the form
@@ -1135,6 +1305,10 @@ export default {
       formData.append("key_skills", JSON.stringify(this.selectedSkills));
       formData.append("expert_in", JSON.stringify(this.selectedExpertise));
       formData.append("also_work_with", JSON.stringify(this.selectedWorkWith));
+      formData.append("last_company", this.last_company);
+      formData.append("company_location", this.company_location);
+      // Currently Working  Checkbox
+      formData.append("currently_working_here", this.currentlyWorking ? "Yes" : "No");
       formData.append("working_since_date", this.working_since_date);
       formData.append("working_since_date2", this.working_since_date2);
       formData.append("annual_salary_currency", this.selectedCurrency);
@@ -1159,8 +1333,16 @@ export default {
       //   formData.append("hourly_rate", this.HourlyRateValue);
       if (this.selectedPaymentOption === "hourly") {
         formData.append("hourly_rate", this.HourlyRateValue);
-      } else if (this.selectedPaymentOption === "monthly") {
+      } else if (
+        this.selectedPaymentOption === "fixed" &&
+        this.selectedSubPaymentOption === "monthlyRate"
+      ) {
         formData.append("monthly_rate", this.monthlyRateValue);
+      } else if (
+        this.selectedPaymentOption === "fixed" &&
+        this.selectedSubPaymentOption === "projectRate"
+      ) {
+        formData.append("project_rate", this.ProjectRateValue);
       }
       formData.append("resume_headline", this.resume_headline);
 
@@ -1168,8 +1350,9 @@ export default {
       axios
         .post("/submitForm", formData)
         .then((response) => {
-          console.log("Form submitted successfully");
-          console.log("Form Data:", formData);
+          this.showSuccessMessage();
+          //   console.log("Form submitted successfully");
+          //   console.log("Form Data:", formData);
           //  reset form fields here
           this.name = "";
           this.selectedPhoneCode = "";
@@ -1183,6 +1366,9 @@ export default {
           this.selectedSkills = [];
           this.selectedExpertise = [];
           this.selectedWorkWith = [];
+          this.last_company = "";
+          this.company_location = "";
+          this.currentlyWorking = "";
           this.working_since_date = "";
           this.working_since_date2 = "";
           this.selectedCurrency = "USD";
@@ -1196,13 +1382,41 @@ export default {
           this.availability_time_to = "";
           this.selectedPaymentOption = "";
           this.selectedSubPaymentOption = "";
-          this.monthlyRateValue = 60;
+          this.monthlyRateValue = 600;
           this.HourlyRateValue = 33;
           this.resume_headline = "";
         })
         .catch((error) => {
+          this.showFailureMessage();
           console.error("Form submission failed:", error);
         });
+    },
+
+    showSuccessMessage() {
+      const successMessage = this.$refs.successMessage;
+      successMessage.style.display = "block";
+      //successMessage.scrollIntoView({ behavior: "smooth" });
+      const scrollOptions = {
+        behavior: "smooth",
+        block: "center",
+      };
+      successMessage.scrollIntoView(scrollOptions);
+      setTimeout(() => {
+        successMessage.style.display = "none";
+      }, 5000);
+    },
+    showFailureMessage() {
+      const failureMessage = this.$refs.failureMessage;
+      failureMessage.style.display = "block";
+      //failureMessage.scrollIntoView({ behavior: "smooth" });
+      const scrollOptions = {
+        behavior: "smooth",
+        block: "center",
+      };
+      failureMessage.scrollIntoView(scrollOptions);
+      setTimeout(() => {
+        failureMessage.style.display = "none";
+      }, 5000);
     },
   },
   computed: {

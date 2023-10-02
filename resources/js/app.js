@@ -5,7 +5,12 @@
  */
 
 import "./bootstrap";
+// import App from "./App.vue";
 import { createApp } from "vue";
+
+// Import and initialize the Google Maps API here
+// import { createApp } from "vue3-google-address-autocomplete";
+import GoogleMapComponent from "vue3-google-address-autocomplete";
 
 /**
  * Next, we will create a fresh Vue application instance. You may then begin
@@ -29,8 +34,11 @@ import Jobs from "./components/JobsComponent.vue";
 import ClientsComponent from "./components/ClientsComponent.vue";
 import HireTalent from "./components/HireTalentComponent.vue";
 import OnBoard from "./components/OnBoardComponent.vue";
-import Editable from "./components/EditableComponent.vue";
+// import Editable from "./components/EditableComponent.vue";
+import MonthlyRate from "./components/MonthlyRateComponent.vue";
 import HourRate from "./components/HourlyRateComponent.vue";
+import ProjectRate from "./components/ProjectRateComponent.vue";
+import TeamContactUs from "./components/TeamContactUsComponent.vue";
 
 app.component("experts-component", ExpertsComponent);
 app.component("experts-list-component", ExpertsListComponent);
@@ -45,8 +53,10 @@ app2.component("subscription-component", SubscriptionComponent);
 app.component("hire-talent-component", HireTalent);
 app.component("jobs-component", Jobs);
 app.component("on-board-component", OnBoard);
-app.component("editable-input", Editable);
+app.component("monthly-rate-component", MonthlyRate);
 app.component("hourly-rate-component", HourRate);
+app.component("project-rate-component", ProjectRate);
+app.component("team-component", TeamContactUs);
 
 // import ExampleComponent from './components/ExampleComponent.vue';
 // app.component('example-component', ExampleComponent);
@@ -60,7 +70,7 @@ app.component("hourly-rate-component", HourRate);
  */
 
 // Object.entries(import.meta.glob('./**/*.vue', { eager: true })).forEach(([path, definition]) => {
-//     app.component(path.split('/').pop().replace(/\.\w+$/, ''), definition.default);
+// app.component(path.split('/').pop().replace(/\.\w+$/, ''), definition.default);
 // });
 
 /**
@@ -71,3 +81,4 @@ app.component("hourly-rate-component", HourRate);
 
 app.mount("#app");
 app2.mount("#footer-app");
+// app3.mount("#app3");
