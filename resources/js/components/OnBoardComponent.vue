@@ -4,6 +4,7 @@
     method="POST"
     enctype="multipart/form-data"
     id="hire_developer"
+    @submit.prevent="onFormSubmit"
   >
     <!-- @csrf -->
     <!-- {!! csrf_field() !!} -->
@@ -17,6 +18,25 @@
         </h2>
         <p class="p_color">Please fill the initial information for prescreening.</p>
       </div>
+      <!-- Success & Failure Messages -->
+      <div
+        class="alert alert-success text-center"
+        role="alert"
+        id="success"
+        ref="successMessage"
+      >
+        Thank you for the submitting the inquiry. We will contact you shortly.
+      </div>
+
+      <div
+        class="alert alert-danger text-center"
+        role="alert"
+        id="failure"
+        ref="failureMessage"
+      >
+        Sorry! There is some problem sending your inquiry at the moment, Please try again.
+      </div>
+
       <div class="row">
         <div class="col-lg-6 col-md-12">
           <div class="onForm_col">
@@ -34,14 +54,14 @@
             <strong>Contact Details</strong>
             <div class="row project_form_field">
               <!-- country code -->
-              <div class="col-lg-3 col-md-3 p-0 onForm_col">
+              <div class="col-lg-6 col-md-6 p-0 onForm_col">
                 <select
                   v-model="selectedPhoneCode"
                   class="project_form"
                   names="country_code"
                   id="country_code"
                 >
-                  <option value="" disabled>Select Phone Code</option>
+                  <option value="" disabled>Country Code</option>
                   <!-- <option v-for="(code, id) in phoneCodes" :value="code" :key="id">
                     {{ code }}
                   </option> -->
@@ -55,7 +75,7 @@
                 </select>
               </div>
               <!-- number -->
-              <div class="col-lg-9 col-md-9 p-0">
+              <div class="col-lg-6 col-md-6 p-0">
                 <input
                   type="text"
                   v-model="phoneNumber"
@@ -92,14 +112,29 @@
           <div class="onForm_col">
             <strong>Current Location</strong>
             <div class="project_form_field">
-              <vue-google-autocomplete
+              <!-- <vue-google-autocomplete
+                ref="current_location"
+                id="map"
+                types="geocode"
+                placeholder="Write your address"
+                v-model="current_location.formatted_address"
+                @placechanged="getAddressData"
+              >
+              </vue-google-autocomplete> -->
+              <!-- <GoogleMapComponent
                 id="map"
                 types="geocode"
                 placeholder="Write your address"
                 v-model="current_location"
-                @select="handlePlaceChanged"
+                @change="handlePlaceChanged"
               >
-              </vue-google-autocomplete>
+              </GoogleMapComponent> -->
+              <GoogleVue
+                apiKey="AIzaSyDY1vginH3C8j_tCqQRwIyE7awXfUQk-ck"
+                v-model="current_location"
+                css-class="css-class-here"
+                placeholder="Write your company location"
+              />
             </div>
           </div>
         </div>
@@ -428,8 +463,10 @@
                 v-model="highest_qualification"
               >
                 <option value="" disabled selected>Select your qualification</option>
-                <option selected>Post Graduation</option>
+                <option>Any</option>
+                <option>Post Graduation</option>
                 <option>Graduation</option>
+                <option>Doctorate</option>
               </select>
             </div>
           </div>
@@ -609,11 +646,20 @@
                 aria-label="Default select example"
                 v-model="availability"
               >
-                <option selected value="">
+                <option disabled selected value="">
                   Full Time, PartTime, Daily, Weekly, Monthly, Hours, Project-Base, etc.
                 </option>
                 <option>Full Time</option>
                 <option>Part Time</option>
+                <option>Project Base</option>
+                <option>Hourly</option>
+                <option>On-Site</option>
+                <option>Freelancing</option>
+                <option>Contract</option>
+                <option>Shift</option>
+                <option>Consulting</option>
+                <option>Volunteer</option>
+                <option>Internships</option>
               </select>
             </div>
           </div>
@@ -746,7 +792,7 @@
                                 selected: selectedSubPaymentOption === 'monthlyRate',
                               }"
                             >
-                              Monthly Rate
+                              Yearly Contract
                             </div>
                             <div
                               v-if="selectedSubPaymentOption === 'monthlyRate'"
@@ -766,7 +812,7 @@
                                 selected: selectedSubPaymentOption === 'projectRate',
                               }"
                             >
-                              Get paid fixed price for the project
+                              Fixed Price for the Project
                             </div>
                             <div
                               v-if="selectedSubPaymentOption === 'projectRate'"
@@ -841,8 +887,9 @@
                 <label class="checkbox-label">
                   <input type="checkbox" />
                   <span class="checkbox-custom rectangular"></span>
-                  Java and J2Ee Developer with M. Arch in Agriculture currently living in
-                  Hyderabad/Secunderabad
+                  Web Application Developer with 6+ years of expertise in TML5 | CSS3 |
+                  JavaScript | jQuery | Bootstrap seeking a challenging role to leverage
+                  my skills & contribute to innovative solutions.
                 </label>
               </div>
             </div>
@@ -982,9 +1029,10 @@ import VueUploadComponent from "vue-upload-component";
 import MonthlyRateComponent from "./MonthlyRateComponent.vue";
 import HourlyRateComponent from "./HourlyRateComponent.vue";
 import ProjectRateComponent from "./ProjectRateComponent.vue";
-// import GoogleMapComponent from "./GoogleMapComponent.vue";
+//import GoogleMapComponent from "./GoogleMapComponent.vue";
 import VueGoogleAutocomplete from "vue-google-autocomplete";
 import GoogleAddressAutocomplete from "vue3-google-address-autocomplete";
+import GoogleVue from "vue3-google-address-autocomplete";
 
 export default {
   props: {
@@ -999,9 +1047,10 @@ export default {
     MonthlyRateComponent,
     HourlyRateComponent,
     ProjectRateComponent,
-    // GoogleMapComponent,
+    //GoogleMapComponent,
     VueGoogleAutocomplete,
     GoogleAddressAutocomplete,
+    GoogleVue,
   },
   data() {
     return {
@@ -1051,6 +1100,9 @@ export default {
       selectedWorkWith: [],
       last_company: "",
       company_location: "",
+      //   current_location: {
+      //     formatted_address: "", // Initialize formatted_address
+      //   },
       //   Checkbox
       currentlyWorking: false,
       working_since_date: "",
@@ -1074,9 +1126,26 @@ export default {
   mounted() {
     this.fetchPhoneCodes();
     this.selectedSalaryRange = this.salaryOptions[0];
+
+    this.$el.addEventListener("keydown", this.handleFormKeyDown);
+
+    // this.$refs.current_location.focus();
   },
 
   methods: {
+    // prevent default form change
+    handleFormKeyDown(event) {
+      if (event.keyCode === 13) {
+        event.preventDefault();
+      }
+    },
+
+    // destroy the event listener
+    beforeDestroy() {
+      const form = this.$refs.myForm;
+      form.removeEventListener("keydown", this.handleFormKeyDown);
+    },
+
     // Fetch phone codes from the server
     fetchPhoneCodes() {
       //   console.log("Making request to:", "{{ route('getPhone') }}");
@@ -1105,7 +1174,7 @@ export default {
       axios
         .get(`/api/v1/skills?query=${query.toLowerCase()}`)
         .then((response) => {
-          console.log("Response data:", response.data);
+          //   console.log("Response data:", response.data);
           this.skills = response.data;
           this.isLoading = false;
         })
@@ -1153,7 +1222,7 @@ export default {
 
     // Validate the file size and extension
     inputFilter(newFile, oldFile, prevent) {
-      console.log("New File:", newFile);
+      //   console.log("New File:", newFile);
       if (newFile && (!oldFile || newFile.file !== oldFile.file)) {
         if (newFile.size > this.maxSize) {
           //console.log("File size exceeded the maximum limit.");
@@ -1162,7 +1231,7 @@ export default {
           this.errorMessage = "File size exceeds the maximum limit (5 MB).";
           setTimeout(() => {
             this.errorMessage = "";
-          }, 5000); // Remove the error message after 2 seconds
+          }, 10000); // Remove the error message after 2 seconds
         }
         if (!this.extensions.includes(newFile.name.split(".").pop())) {
           //console.log("Invalid file format.");
@@ -1171,7 +1240,7 @@ export default {
           this.errorMessage = "Invalid file format. Allowed formats: PDF, DOC, DOCX.";
           setTimeout(() => {
             this.errorMessage = "";
-          }, 5000); // Remove the error message after 2 seconds
+          }, 10000); // Remove the error message after 2 seconds
         }
       }
     },
@@ -1193,16 +1262,33 @@ export default {
       this.selectedSubPaymentOption = option;
     },
 
-    // handlePlaceChanged(place) {
+    // handlePlaceChanged() {
     //   // Update current_location when a place is selected
-    //   this.current_location = place.formatted_address;
+    //   //this.current_location = place.formatted_address;
+    //   const place = this.$refs.autocomplete.selectedPlace;
+    //   if (place && place.formatted_address) {
+    //     this.current_location = place.formatted_address;
+    //   }
     // },
 
-    handlePlaceChanged(place) {
-      console.log("Place changed:", place);
-      // Update current_location when a place is selected
-      this.current_location = place.formatted_address;
-    },
+    // handlePlaceChanged(place) {
+    //   console.log("Place changed:", place);
+    //   // Update current_location when a place is selected
+    //   const newValue = place ? place.formatted_address : "";
+    //   this.$emit("update:modelValue", newValue);
+    // },
+
+    // getAddressData: function (currentLocation, placeResultData, id) {
+    //   //   this.current_location = currentLocation.formatted_address;
+    //   if (currentLocation && currentLocation.formatted_address) {
+    //     this.current_location = currentLocation.formatted_address;
+    //   }
+    // },
+
+    // getAddressData(currentLocation) {
+    //   // Assign selected address to current_location
+    //   this.current_location.formatted_address = currentLocation.formatted_address;
+    // },
 
     // Submit the form
     submitForm() {
@@ -1264,8 +1350,9 @@ export default {
       axios
         .post("/submitForm", formData)
         .then((response) => {
-          console.log("Form submitted successfully");
-          console.log("Form Data:", formData);
+          this.showSuccessMessage();
+          //   console.log("Form submitted successfully");
+          //   console.log("Form Data:", formData);
           //  reset form fields here
           this.name = "";
           this.selectedPhoneCode = "";
@@ -1300,8 +1387,36 @@ export default {
           this.resume_headline = "";
         })
         .catch((error) => {
+          this.showFailureMessage();
           console.error("Form submission failed:", error);
         });
+    },
+
+    showSuccessMessage() {
+      const successMessage = this.$refs.successMessage;
+      successMessage.style.display = "block";
+      //successMessage.scrollIntoView({ behavior: "smooth" });
+      const scrollOptions = {
+        behavior: "smooth",
+        block: "center",
+      };
+      successMessage.scrollIntoView(scrollOptions);
+      setTimeout(() => {
+        successMessage.style.display = "none";
+      }, 5000);
+    },
+    showFailureMessage() {
+      const failureMessage = this.$refs.failureMessage;
+      failureMessage.style.display = "block";
+      //failureMessage.scrollIntoView({ behavior: "smooth" });
+      const scrollOptions = {
+        behavior: "smooth",
+        block: "center",
+      };
+      failureMessage.scrollIntoView(scrollOptions);
+      setTimeout(() => {
+        failureMessage.style.display = "none";
+      }, 5000);
     },
   },
   computed: {
