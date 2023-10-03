@@ -28,7 +28,7 @@
                     <p class="text-center">If you have an idea in mind of how to enhance your business processes, don’t
                         hesitate <br>
                         to contact us and discover more about our technologies!</p>
-                    <div class="row">
+                    {{-- <div class="row">
                         <div class="col-lg-6 col-md-12">
                             <div class="project_form_field">
                                 <input type="text" value="" placeholder="Name*" />
@@ -63,8 +63,8 @@
                                 </div>
                             </div>
                         </div>
-                    </div>
-                    {{-- <team-component></team-component> --}}
+                    </div> --}}
+                    <team-component></team-component>
 
                 </div>
             </div>
