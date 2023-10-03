@@ -157,7 +157,7 @@
                                         <div class="technology_master_text">
                                             <h3>Mobile Technologies</h3>
                                             <p>Bring mobile development to a brand-new level with Bizionic’s team of experts. We are experienced both in native and cross-platform app development technologies including
-                                                <b>React Native, Flutter, Java, Androin, iOS, Xamarin, Native Script, PWA, ionic, Frame Work, Cord VA and others.</b>
+                                                <b>React Native, Flutter, Java, Android, iOS, Xamarin, Native Script, PWA, ionic, Frame Work, Cord VA and others.</b>
                                                 </p>
                                         </div>
                                     </div>
@@ -191,7 +191,7 @@
                                         <div class="technology_master_text">
                                             <h3>Front-end Technologies</h3>
                                             <p>Build user-friendly interfaces that appeals to your audience with state-of-the-art technologies. Our proficient developers utilize the best front-end technologies
-                                                <b>like HTML5/CSS3/JS, .NET, JS, Angular, Vue.js, React JS, ember, Lit, Redux, Solid JS, Aline.js and others,</b> to provide you with solutions that cater to your requirements.
+                                                <b>like HTML5/CSS3/JS, .NET, JS, Angular, Vue.js, React JS, ember, Lit, Redux, Solid JS, Alpine.js and others,</b> to provide you with solutions that cater to your requirements.
                                                 </p>
                                         </div>
                                     </div>
@@ -313,7 +313,7 @@
                                         <div class="technology_master_text">
                                             <h3>DATABASES:</h3>
                                             <p>Computer databases typically store aggregations of data records or files that contain information, such as sales transactions, customer data, financials reports and product information. Our professional developers use technologies such as
-                                                <b>MySQL, Oracle, Amazon S3, Azuru, Amazan RDS, Google Cloud SQL Postgre SQL and other</b> to create customized software for your business needs.
+                                                <b>MySQL, Oracle, Amazon S3, Azure, Amazon RDS, Google Cloud SQL Postgre SQL and other</b> to create customized software for your business needs.
                                             </p>
                                         </div>
                                     </div>
