@@ -194,6 +194,7 @@
                 type="file"
                 name="document"
                 id="document"
+                ref="fileInput"
                 @change="handleFileChange"
               />
             </div>
@@ -235,6 +236,8 @@ export default {
     handleFileChange(event) {
       const file = event.target.files[0];
       this.formData.document = file;
+
+      this.$refs.fileInput.value = "";
     },
 
     // Fetching phone codes from the backend
@@ -266,8 +269,12 @@ export default {
       form.append("name", this.formData.name);
       form.append("company", this.formData.company);
       form.append("email", this.formData.email);
-      form.append("country_code", this.formData.selectedPhoneCode);
-      form.append("phone", this.formData.phone_number);
+      // form.append("country_code", this.formData.selectedPhoneCode);
+      //form.append("phone", this.formData.phone_number);
+      form.append(
+        "phone",
+        `${this.formData.selectedPhoneCode}${this.formData.phone_number}`
+      );
       //   form.append("hiring_type", this.formData.hiring_type);
       //   form.append("budget", this.formData.budget);
       form.append("details", this.formData.details);
