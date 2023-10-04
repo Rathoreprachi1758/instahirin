@@ -230,7 +230,7 @@
                         <div class="col-lg-6 col-md-6 aos-init aos-animate"  data-aos="fade-right" data-aos-duration="500" data-aos-easing="">
                             <div class="aboutBizionic_col_info">
                                 <h4>#1.	 Cost Saving:</h4>
-                                <p><span><img src="/bizionic/images/offer_icon1.png" alt="#" /></span> As a startup or a matured company, your focus should be on realizing the big IDEA, not letting development Costa and selecting the right tech stack as core pain points that
+                                <p><span><img src="/bizionic/images/offer_icon1.png" alt="#" /></span> As a startup or a matured company, your focus should be on realizing the big IDEA, not letting development Cost and selecting the right tech stack as core pain points that
                                     distract you from achieving your project goals.
                                     
                                     
