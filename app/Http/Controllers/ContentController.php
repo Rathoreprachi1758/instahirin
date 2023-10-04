@@ -96,9 +96,9 @@ class ContentController extends Controller
         if (isset($request->hiring_type)) {
             $validatedData = $request->validate([
                 'name' => 'required',
-                'company' => 'required',
+                'company' => '',
                 'email' => 'required|email',
-                'country_code' => 'required',
+                'country_code' => '',
                 'phone' => 'required',
                 // 'hiring_type' => 'required',
                 // 'budget' => 'required',
@@ -108,9 +108,9 @@ class ContentController extends Controller
         } else {
             $validatedData = $request->validate([
                 'name' => 'required',
-                'company' => 'required',
+                'company' => '',
                 'email' => 'required|email',
-                'country_code' => 'required',
+                'country_code' => '',
                 'phone' => 'required',
                 'details' => '',
                 'document' => '',
@@ -122,9 +122,11 @@ class ContentController extends Controller
 
         // Set the form data from the validated request
         $formData->name = $validatedData['name'];
-        $formData->company = $validatedData['company'];
+        //$formData->company = $validatedData['company'];
+        $formData->company = isset($validatedData['company']) ? $validatedData['company'] : '';
         $formData->email = $validatedData['email'];
-        $formData->phone = $validatedData['country_code'] . $validatedData['phone'];
+        // $formData->phone = $validatedData['country_code'] . $validatedData['phone'];
+        $formData->phone = isset($validatedData['phone']) ? $validatedData['phone'] : '';
         //$formData->lead_type = isset($validatedData['lead_type']) ? $validatedData['lead_type'] : 'Consultation';
         $formData->details = $validatedData['details'];
 

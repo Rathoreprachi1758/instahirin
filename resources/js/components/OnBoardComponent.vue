@@ -886,7 +886,10 @@
               <div class="scheduleCheckbox pt-2">
                 <label class="checkbox-label">
                   <input type="checkbox" />
-                  <span class="checkbox-custom rectangular"></span>
+                  <span
+                    class="checkbox-custom rectangular"
+                    @click="handleSuggestionClick"
+                  ></span>
                   Web Application Developer with 6+ years of expertise in TML5 | CSS3 |
                   JavaScript | jQuery | Bootstrap seeking a challenging role to leverage
                   my skills & contribute to innovative solutions.
@@ -1121,6 +1124,8 @@ export default {
       //   monthlyRateValue: 600,
       //   HourlyRateValue: 33,
       resume_headline: "",
+      //   Suggestion click
+      is_suggestion_clicked: "No",
     };
   },
   mounted() {
@@ -1289,6 +1294,15 @@ export default {
     //   // Assign selected address to current_location
     //   this.current_location.formatted_address = currentLocation.formatted_address;
     // },
+
+    // Suggestion Click
+    handleSuggestionClick() {
+      if (this.is_suggestion_clicked === "No") {
+        this.is_suggestion_clicked = "Yes";
+      } else {
+        this.is_suggestion_clicked = "No";
+      }
+    },
 
     // Submit the form
     submitForm() {
