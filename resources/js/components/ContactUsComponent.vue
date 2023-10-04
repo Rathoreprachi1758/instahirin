@@ -194,7 +194,6 @@
                 type="file"
                 name="document"
                 id="document"
-                ref="fileInput"
                 @change="handleFileChange"
               />
             </div>
@@ -236,8 +235,6 @@ export default {
     handleFileChange(event) {
       const file = event.target.files[0];
       this.formData.document = file;
-
-      this.$refs.fileInput.value = "";
     },
 
     // Fetching phone codes from the backend
