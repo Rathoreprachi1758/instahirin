@@ -38,7 +38,9 @@ class ContentController extends Controller
         // If there is no
         $pageSlug =  strlen($pageSlug) ? $pageSlug : 'hire';
         $page = Page::where('slug', '=', $pageSlug)->first();
-        // dd($page->slug);
+        //dd($page->meta_title);
+        //dd($page->meta_keywords);
+        //dd($page->meta_description);
 
         $template = $page ? $page->template : '404';
 
@@ -52,9 +54,9 @@ class ContentController extends Controller
         if ($page->slug == 'hire-me') {
             $jobs = Job::where('status', 'Open')->get();
             return view('welcome', [
-                'title' => 'Title',
-                'description' => 'Desc',
-                'keywords' => 'keywords',
+                'title' => $page->meta_title,
+                'description' => $page->meta_description,
+                'keywords' => $page->meta_keywords,
                 'menus' => json_decode(json_encode((object) $menusResponse['menuItems']), FALSE),
                 'template' => $template,
                 'jobs' => $jobs,
@@ -62,9 +64,9 @@ class ContentController extends Controller
         }
 
         return view('welcome', [
-            'title' => 'Title',
-            'description' => 'Desc',
-            'keywords' => 'keywords',
+            'title' => $page->meta_title,
+            'description' => $page->meta_description,
+            'keywords' => $page->meta_keywords,
             'menus' => json_decode(json_encode((object) $menusResponse['menuItems']), FALSE),
             'template' => $template,
             'countries' => json_encode(Countrie::all())
@@ -96,9 +98,9 @@ class ContentController extends Controller
         if (isset($request->hiring_type)) {
             $validatedData = $request->validate([
                 'name' => 'required',
-                'company' => 'required',
+                'company' => '',
                 'email' => 'required|email',
-                'country_code' => 'required',
+                'country_code' => '',
                 'phone' => 'required',
                 // 'hiring_type' => 'required',
                 // 'budget' => 'required',
@@ -108,9 +110,9 @@ class ContentController extends Controller
         } else {
             $validatedData = $request->validate([
                 'name' => 'required',
-                'company' => 'required',
+                'company' => '',
                 'email' => 'required|email',
-                'country_code' => 'required',
+                'country_code' => '',
                 'phone' => 'required',
                 'details' => '',
                 'document' => '',
@@ -122,9 +124,11 @@ class ContentController extends Controller
 
         // Set the form data from the validated request
         $formData->name = $validatedData['name'];
-        $formData->company = $validatedData['company'];
+        //$formData->company = $validatedData['company'];
+        $formData->company = isset($validatedData['company']) ? $validatedData['company'] : '';
         $formData->email = $validatedData['email'];
-        $formData->phone = $validatedData['country_code'] . $validatedData['phone'];
+        // $formData->phone = $validatedData['country_code'] . $validatedData['phone'];
+        $formData->phone = isset($validatedData['phone']) ? $validatedData['phone'] : '';
         //$formData->lead_type = isset($validatedData['lead_type']) ? $validatedData['lead_type'] : 'Consultation';
         $formData->details = $validatedData['details'];
 
