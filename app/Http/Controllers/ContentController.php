@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use Log;
 use App\Models\Job;
 use App\Models\Hire;
 use App\Models\Lead;
@@ -10,16 +11,15 @@ use App\Models\Career;
 use App\Models\Expert;
 use App\Models\Country;
 use App\Models\Countrie;
-use App\Models\HireRequest;
 // use App\Models\Expert;
-use App\Models\Subscription;
+use App\Models\HireRequest;
 // use App\Models\HireRequest;
 // use App\Models\Subscription;
+use App\Models\Subscription;
 use Illuminate\Http\Request;
 use App\Models\TeamContactUs;
 use App\Models\InstaHirinOnboard;
 use Illuminate\Support\Facades\DB;
-use Illuminate\Support\Facades\Log;
 use App\Models\InstaHirinRequirement;
 use Illuminate\Support\Facades\Cache;
 use App\Models\Hire_requests_calender;
@@ -27,9 +27,10 @@ use App\Models\InstaHirinOnboardDocument;
 
 
 
+
 class ContentController extends Controller
 {
-    public function index($levelOne = null, $levelTwo = null, $levelThree = null, $levelFour = null)
+    public function index($levelOne = null, $levelTwo = null, $levelThree = null, $levelFour = null, $levelFive = null)
     {
 
         $slugs = array_filter(func_get_args());
@@ -47,7 +48,7 @@ class ContentController extends Controller
         }
 
         $menusResponse = Cache::get('menus', nova_get_menu_by_slug('header'));
-        //        echo "<pre>";print_r($menusResponse['menuItems']);exit;
+        //        echo "<pre>";print_r($menusResponse['menuItems']);exit;f
         // dd($template);
         if ($page->slug == 'hire-me') {
             $jobs = Job::where('status', 'Open')->get();
@@ -439,13 +440,20 @@ class ContentController extends Controller
             'position_title' => 'required',
             'work_mode' => 'required',
             'project_description' => 'required',
-            'key_skills' => '',
+            'key_skills' => 'required|json',
             'min_experience' => '',
             'max_experience' => '',
             'employment_type' => '',
-            'salary_currency' => '',
-            'min_salary' => '',
-            'max_salary' => '',
+            // changes
+            'salary_currency_monthly_project' => '',
+            'min_salary_monthly_project' => '',
+            'max_salary_monthly_project' => '',
+            'salary_currency_yearly' => '',
+            'min_salary_yearly' => '',
+            'max_salary_yearly' => '',
+            'salary_currency_hourly' => '',
+            'min_salary_hourly' => '',
+            'max_salary_hourly' => '',
             'location' => '',
             'education_qualification' => '',
             'company_name' => '',
@@ -457,9 +465,10 @@ class ContentController extends Controller
             'company_details' => '',
             'company_address' => '',
             'document' => 'file',
-            'notify' => '',
+            'notify_ai_applicants' => '',
         ]);
 
+        Log::info('Request data:', $request->all());
         // Create a new instance of the Hire Request model
         $formData = new InstaHirinRequirement();
 
@@ -468,12 +477,21 @@ class ContentController extends Controller
         $formData->work_mode        = $validatedData['work_mode'];
         $formData->project_description = $validatedData['project_description'];
         $formData->key_skills       = $validatedData['key_skills'];
+        // $formData->key_skills = json_decode($validatedData['key_skills']);
         $formData->min_experience   = $validatedData['min_experience'];
         $formData->max_experience   = $validatedData['max_experience'];
         $formData->employment_type  = $validatedData['employment_type'];
-        $formData->salary_currency  = $validatedData['salary_currency'];
-        $formData->min_salary       = $validatedData['min_salary'];
-        $formData->max_salary       = $validatedData['max_salary'];
+        // changes
+        $formData->salary_currency_monthly_project = $validatedData['salary_currency_monthly_project'];
+        $formData->min_salary_monthly_project = $validatedData['min_salary_monthly_project'];
+        $formData->max_salary_monthly_project = $validatedData['max_salary_monthly_project'];
+        $formData->salary_currency_yearly = $validatedData['salary_currency_yearly'];
+        $formData->min_salary_yearly = $validatedData['min_salary_yearly'];
+        $formData->max_salary_yearly = $validatedData['max_salary_yearly'];
+        $formData->salary_currency_hourly = $validatedData['salary_currency_hourly'];
+        $formData->min_salary_hourly = $validatedData['min_salary_hourly'];
+        $formData->max_salary_hourly = $validatedData['max_salary_hourly'];
+
         $formData->location         = $validatedData['location'];
         $formData->education_qualification = $validatedData['education_qualification'];
         $formData->company_name     = $validatedData['company_name'];
@@ -492,7 +510,8 @@ class ContentController extends Controller
             $file->storeAs('bizionic/images', $filename, 'public');
             $formData->document = $filename;
         }
-        $formData->notify           = $validatedData['notify'];
+        // $formData->notify_ai_applicants   = $validatedData['notify_ai_applicants'];
+        $formData->notify_ai_applicants = isset($validatedData['notify_ai_applicants']) ? 'Yes' : 'No';
         $formData->save();
 
 
@@ -580,7 +599,7 @@ class ContentController extends Controller
     public function submitForm(Request $request)
     {
         // Validate the request data, including the uploaded file
-        Log::info('Request data:', $request->all());
+        // Log::info('Request data:', $request->all());
 
         $validatedData = $request->validate([
             'name' => 'required',
@@ -689,5 +708,17 @@ class ContentController extends Controller
 
         // Return a response indicating success
         return response()->json(['message' => 'Form submitted successfully']);
+    }
+
+
+    // Jobs Form Controller
+    public function applyShow($jobId)
+    {
+        //dd($jobId);
+        $job = Job::find($jobId);
+        //dd($job);
+
+
+        return view('templates.apply-now-form', ['job' => $job]);
     }
 }

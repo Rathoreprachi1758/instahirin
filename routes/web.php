@@ -17,7 +17,7 @@ use App\Http\Controllers\OnboardController;
 */
 
 
-Route::get('/{levelOneSlug?}/{levelTwoSlug?}/{levelThreeSlug?}/{levelFourSlug?}', 'App\Http\Controllers\ContentController@index')->name('index');
+Route::get('/{levelOneSlug?}/{levelTwoSlug?}/{levelThreeSlug?}/{levelFourSlug?}/{levelFiveSlug?}', 'App\Http\Controllers\ContentController@index')->name('index');
 
 // ContactUs Form Submission
 Route::post('/submit-form', [App\Http\Controllers\ContentController::class, 'store'])->name('submit-form');
@@ -46,3 +46,6 @@ Route::get('/hire/developer/developers-other/HireForm/{id}', [ContentController:
 // Insta Hiring Onboard Form Submission country code
 // Route::get('/getPhoneCodes', [OnboardController::class, 'getPhoneCodes'])->name('getPhoneCodes');
 //Route::get('/getPhoneCodes', 'ContentController@getPhoneCodes')->name('phoneCodes');
+
+// Apply Form
+Route::get('/industries/industries-we-serve/industries/apply-now-form/{jobId}', [ContentController::class, 'applyShow'])->name('apply-now-form');
