@@ -7,6 +7,8 @@
 
     <!-- CSRF Token -->
     <meta name="csrf-token" content="{{ csrf_token() }}">
+    {{-- csrf token available globally --}}
+    @csrf
 
     <title>{{ config('app.name', 'Laravel') }}</title>
 

@@ -2,7 +2,9 @@
 
 namespace App\Providers;
 
+use Illuminate\Support\Facades\Blade;
 use Illuminate\Support\ServiceProvider;
+use Illuminate\Support\Str;
 
 class AppServiceProvider extends ServiceProvider
 {
@@ -19,6 +21,9 @@ class AppServiceProvider extends ServiceProvider
      */
     public function boot(): void
     {
-        //
+        // Blade directive for limiting the description to 50 words
+        Blade::directive('limitWords', function ($expression) {
+            return "<?php echo Str::words($expression, 50); ?>";
+        });
     }
 }

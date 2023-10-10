@@ -6,9 +6,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="format-detection" content="telephone=no">
-    <title></title>
-    <meta name="description" content="">
-    <meta name="keywords" content="">
+    <title>@yield('meta_title','https://www.bizionictech.com/')"</title>
+    <meta name ="description", content="@yield('meta_description', 'We build e-commerce site, management site, Android, iOS apps, and teach software development courses online.Laravel, Java, NodeJs, PHP technology.')">
+    <meta name ="keywords", content="@yield('meta_keywords', 'We build e-commerce site, management site, Android, iOS apps, and teach software development courses online.Laravel, Java, NodeJs, PHP technology.')">
     <!-- bootstrap -->
     <link rel="stylesheet" href="/bizionic/css/bootstrap.min.css">
     <!-- custom css -->
@@ -89,7 +89,7 @@
                 <div class="auto_container">
                     <div class="header_detail">
                         <div class="main_logo">
-                            <a href="/hire"><img src="/bizionic/images/logo.png" alt="#" /></a>
+                            <a href="/about-us"><img src="/bizionic/images/logo.png" alt="#" /></a>
                         </div>
                         <div class="menuIcon"></div>
                         @include('partials.nav')
@@ -233,7 +233,7 @@
                     <div class="auto_container">
                         <div class="footerBottom_detail">
                             <div class="main_logo">
-                                <a href="/hire"><img src="/bizionic/images/footerLogo.png" alt="#" /></a>
+                                <a href="/about-us"><img src="/bizionic/images/footerLogo.png" alt="#" /></a>
                             </div>
                             <div class="copyRight">
                                 <p>Copyright © 2022 Bizionic Technologies and Marketing Solutions Pvt. Ltd. All Rights

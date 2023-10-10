@@ -56,9 +56,29 @@ class InstaHirinOnboard extends Resource
             Select::make('Experience Year', 'experience_year')->options(['1' => '1', '2' => '2', '3' => '3'])->displayUsingLabels()->filterable()->hideFromIndex(),
             Select::make('Experience Month', 'experience_month')->options(['1' => '1', '2' => '2', '3' => '3'])->displayUsingLabels()->filterable()->hideFromIndex(),
             Select::make('Highest Qualification', 'highest_qualification')->options(['Doctorate' => 'Doctorate', 'Masters' => 'Masters', 'Bachelors' => 'Bachelors'])->displayUsingLabels()->filterable()->hideFromIndex(),
-            Text::make('Key Skills', 'key_skills')->rules('nullable'),
-            Text::make('Expert In', 'expert_in')->hideFromIndex(),
-            Text::make('Also Work With', 'also_work_with')->hideFromIndex(),
+            // Text::make('Key Skills', 'key_skills')->rules('nullable'),
+            Text::make('Key Skills', 'key_skills')
+                ->resolveUsing(function ($value) {
+                    if (is_array($value)) {
+                        return implode(', ', array_column($value, 'name'));
+                    }
+                    return $value;
+                }),
+            // Text::make('Expert In', 'expert_in')->hideFromIndex(),
+            Text::make('Expert In', 'expert_in')
+                ->resolveUsing(function ($value) {
+                    if (is_array($value)) {
+                        return implode(', ', array_column($value, 'name'));
+                    }
+                    return $value;
+                }),
+            // Text::make('Also Work With', 'also_work_with')->hideFromIndex(),
+            Text::make('Also Work With', 'also_work_with')
+                ->resolveUsing(function ($value) {
+                    if (is_array($value)) {
+                        return implode(',', array_column($value, 'name'));
+                    }
+                }),
             Select::make('Working Since Year', 'working_since_year')->options(['2023' => '2023', '2022' => '2022', '2021' => '2021'])->displayUsingLabels()->filterable()->hideFromIndex(),
             Select::make('Working Since Month', 'working_since_month')->options(['1' => 'January', '2' => 'February', '3' => 'March'])->displayUsingLabels()->filterable()->hideFromIndex(),
             Text::make('Annual Salary', 'annual_salary')->hideFromIndex(),
