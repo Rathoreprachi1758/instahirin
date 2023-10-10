@@ -39,7 +39,9 @@ class ContentController extends Controller
         // If there is no
         $pageSlug =  strlen($pageSlug) ? $pageSlug : 'hire';
         $page = Page::where('slug', '=', $pageSlug)->first();
-        // dd($page->slug);
+        //dd($page->meta_title);
+        //dd($page->meta_keywords);
+        //dd($page->meta_description);
 
         $template = $page ? $page->template : '404';
 
@@ -53,9 +55,9 @@ class ContentController extends Controller
         if ($page->slug == 'hire-me') {
             $jobs = Job::where('status', 'Open')->get();
             return view('welcome', [
-                'title' => 'Title',
-                'description' => 'Desc',
-                'keywords' => 'keywords',
+                'title' => $page->meta_title,
+                'description' => $page->meta_description,
+                'keywords' => $page->meta_keywords,
                 'menus' => json_decode(json_encode((object) $menusResponse['menuItems']), FALSE),
                 'template' => $template,
                 'jobs' => $jobs,
@@ -63,9 +65,9 @@ class ContentController extends Controller
         }
 
         return view('welcome', [
-            'title' => 'Title',
-            'description' => 'Desc',
-            'keywords' => 'keywords',
+            'title' => $page->meta_title,
+            'description' => $page->meta_description,
+            'keywords' => $page->meta_keywords,
             'menus' => json_decode(json_encode((object) $menusResponse['menuItems']), FALSE),
             'template' => $template,
             'countries' => json_encode(Countrie::all())

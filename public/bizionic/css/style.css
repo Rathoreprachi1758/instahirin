@@ -5426,7 +5426,7 @@ html {
 
 .marketingTalent_info .custom_tittle p {
     font-size: 18px;
-    line-height: 1.7;
+    line-height: 1.7; text-align: justify !important;
 }
 
 .marketingTalent_info {
