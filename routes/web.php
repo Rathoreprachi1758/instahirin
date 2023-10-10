@@ -17,7 +17,7 @@ use App\Http\Controllers\OnboardController;
 */
 
 
-Route::get('/{levelOneSlug?}/{levelTwoSlug?}/{levelThreeSlug?}/{levelFourSlug?}/{levelFiveSlug?}', 'App\Http\Controllers\ContentController@index')->name('index');
+Route::get('/{levelOneSlug?}/{levelTwoSlug?}/{levelThreeSlug?}/{levelFourSlug?}', 'App\Http\Controllers\ContentController@index')->name('index');
 
 // ContactUs Form Submission
 Route::post('/submit-form', [App\Http\Controllers\ContentController::class, 'store'])->name('submit-form');

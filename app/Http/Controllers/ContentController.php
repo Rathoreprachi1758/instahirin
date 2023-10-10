@@ -30,7 +30,7 @@ use App\Models\InstaHirinOnboardDocument;
 
 class ContentController extends Controller
 {
-    public function index($levelOne = null, $levelTwo = null, $levelThree = null, $levelFour = null, $levelFive = null)
+    public function index($levelOne = null, $levelTwo = null, $levelThree = null, $levelFour = null)
     {
 
         $slugs = array_filter(func_get_args());
