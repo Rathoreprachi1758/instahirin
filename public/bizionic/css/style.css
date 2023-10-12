@@ -4843,8 +4843,8 @@ html {
 }
 
 .hireFormSetting .project_form_field input {
-    font-size: 13px;
-    padding: 10px 15px;
+    font-size: 11px;
+    padding: 10px 11px;
 }
 
 
@@ -4856,12 +4856,13 @@ html {
 
 .dateTime_range label {
     display: block;
-    min-width: 50px;
+    min-width: 48px;
+    font-size: 11px;
 }
 
 .dateTime_range .project_form_field {
-    max-width: 128px;
-    min-width: 128px;
+    max-width: 92px;
+    min-width: 92px;
 }
 
 .hireFormSetting .project_form_textarea textarea {
@@ -5426,7 +5427,8 @@ html {
 
 .marketingTalent_info .custom_tittle p {
     font-size: 18px;
-    line-height: 1.7; text-align: justify !important;
+    line-height: 1.7;
+    text-align: justify !important;
 }
 
 .marketingTalent_info {
