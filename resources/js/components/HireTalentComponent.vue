@@ -165,7 +165,69 @@
           </div>
 
           <!-- From & To Time -->
-          <div class="project_form_field ml-3">
+          <!-- <div class="project_form_field ml-3">
+            <input
+              type="time"
+              value=""
+              placeholder="Time"
+              id="timePicker"
+              name="from_time[]"
+            />
+          </div> -->
+          <!-- <label class="text-center">To</label>
+          <div class="project_form_field">
+            <input type="time" value="" placeholder="Time" name="to_time[]" />
+
+          </div> -->
+          <!-- <div class="project_form_field">
+            <div class="project_form_select">
+              <select
+                v-model="selectedTimezone"
+                class="form-select codeCountry"
+                names="timezone"
+                id="timezone"
+                placeholder="time zone"
+              >
+                <option value="" selected disabled>Time Zone</option>
+                <option
+                  v-for="(timezone, id) in timezones"
+                  :value="timezone.label"
+                  :key="id"
+                >
+                  {{ timezone.label }} {{ timezone.value }}
+                </option>
+              </select>
+            </div>
+          </div> -->
+
+          <!-- Delete BUtton -->
+          <!-- <div class="addDeleteBtn" v-if="index > 0">
+            <a href="javascript:void(0)" @click="remove(index)" class="text-danger"
+              ><i class="fa fa-times-circle" aria-hidden="false"></i
+            ></a>
+          </div> -->
+        </div>
+      </div>
+      <!-- Form Time -->
+      <div
+        class="col-lg-12 col-md-12"
+        v-for="(calender, index) in calenders"
+        :key="index"
+      >
+        <div class="dateTime_range">
+          <!-- <label>From*</label>
+          <div class="project_form_field">
+            <input type="date" value="" placeholder="Calendar" name="from_date[]" />
+          </div>
+
+          <label class="text-center">To</label>
+          <div class="project_form_field mr-3">
+            <input type="date" value="" placeholder="Calendar" name="to_date[]" />
+          </div> -->
+
+          <!-- From & To Time -->
+          <label>From</label>
+          <div class="project_form_field">
             <input
               type="time"
               value=""
@@ -180,6 +242,7 @@
             <input type="time" value="" placeholder="Time" name="to_time[]" />
             <!-- Time Zone -->
           </div>
+          <label class="text-center m-3">Time zone</label>
           <div class="project_form_field">
             <div class="project_form_select">
               <select
