@@ -178,8 +178,8 @@
           <div class="project_form_field mr-2">
             <input type="time" value="" placeholder="Time" name="to_time[]" />
           </div>
-          <label class="text-center">Time Zone</label>
-          <div class="project_form_field ml-2">
+          <label class="text-center m-3">Time zone</label>
+          <div class="project_form_field">
             <div class="project_form_select">
               <select
                 v-model="selectedTimezone"
