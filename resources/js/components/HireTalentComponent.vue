@@ -6,20 +6,22 @@
         <div class="project_form_field">
           <input
             type="text"
-            value=""
             required
             placeholder="Name*"
             name="name"
             id="name"
+            @input="validateName"
+            v-model="name"
           />
           <input type="text" value="" name="source" id="source" hidden readonly />
         </div>
+        <div class="error-message">{{ nameError }}</div>
       </div>
 
       <!-- country code -->
       <div class="col-lg-6 col-md-12">
         <div class="project_form_field split_in_two">
-          <div class="project_form_select mt-0 mb-0 mr-2">
+          <div class="project_form_select mt-0 mb-0 mr-0">
             <select
               class="form-select codeCountry m-0 pr-0 pl-2"
               required
@@ -34,7 +36,6 @@
           </div>
           <!-- phone -->
           <input
-            class="filedPhone"
             type="text"
             value=""
             required
@@ -84,14 +85,43 @@
       <!-- address -->
       <div class="col-lg-6 col-md-12">
         <div class="project_form_field">
-          <input type="text" value="" placeholder="Address" name="address" id="address" />
+          <!-- <input type="text" value="" placeholder="Address" name="address" id="address" /> -->
+          <!-- <GoogleVue
+            apiKey="AIzaSyDY1vginH3C8j_tCqQRwIyE7awXfUQk-ck"
+            v-model="address"
+            css-class="css-class-here"
+            placeholder="Address"
+          /> -->
+          <GoogleAddressAutocomplete
+            apiKey="AIzaSyDY1vginH3C8j_tCqQRwIyE7awXfUQk-ck"
+            v-model="address"
+            css-class="css-class-here"
+            placeholder="Write your company address"
+          />
         </div>
       </div>
 
       <!-- message -->
       <div class="col-lg-12 col-md-12">
-        <div class="project_form_textarea">
+        <!-- <div class="project_form_textarea">
           <textarea placeholder="Description....." name="message" id="message"></textarea>
+        </div> -->
+        <!-- Textarea for the description -->
+        <div class="project_form_textarea">
+          <textarea
+            placeholder="Description....."
+            name="message"
+            id="message"
+            v-model="message"
+            @input="updateCharacterCount"
+            maxlength="5000"
+          ></textarea>
+          <!-- Character count and "limit reached" message -->
+          <div id="character-count" :class="{ 'limit-reached': isLimitReached }">
+            <span v-if="limitReached" class="message mr-2">Characters Limit reached</span>
+            <span id="current">{{ characterCount }}</span>
+            <span id="maximum">/ 5000</span>
+          </div>
         </div>
       </div>
 
@@ -117,14 +147,14 @@
         </div>
       </div>
 
-      <!-- from -->
+      <!-- From & To Date -->
       <div
         class="col-lg-12 col-md-12"
         v-for="(calender, index) in calenders"
         :key="index"
       >
         <div class="dateTime_range">
-          <label>From</label>
+          <label>From*</label>
           <div class="project_form_field">
             <input type="date" value="" placeholder="Calendar" name="from_date[]" />
           </div>
@@ -134,6 +164,7 @@
             <input type="date" value="" placeholder="Calendar" name="to_date[]" />
           </div>
 
+          <!-- From & To Time -->
           <div class="project_form_field ml-3">
             <input
               type="time"
@@ -147,8 +178,30 @@
           <label class="text-center">To</label>
           <div class="project_form_field">
             <input type="time" value="" placeholder="Time" name="to_time[]" />
+            <!-- Time Zone -->
+          </div>
+          <div class="project_form_field">
+            <div class="project_form_select">
+              <select
+                v-model="selectedTimezone"
+                class="form-select codeCountry"
+                names="timezone"
+                id="timezone"
+                placeholder="time zone"
+              >
+                <option value="" selected disabled>Time Zone</option>
+                <option
+                  v-for="(timezone, id) in timezones"
+                  :value="timezone.label"
+                  :key="id"
+                >
+                  {{ timezone.label }} {{ timezone.value }}
+                </option>
+              </select>
+            </div>
           </div>
 
+          <!-- Delete BUtton -->
           <div class="addDeleteBtn" v-if="index > 0">
             <a href="javascript:void(0)" @click="remove(index)" class="text-danger"
               ><i class="fa fa-times-circle" aria-hidden="false"></i
@@ -242,7 +295,11 @@
             <input type="checkbox" />
             <span class="checkbox-custom rectangular"></span>
             By clicking “Sign Up” you agree to Bizionic Technologies and Marketing
-            Solution’s <a href="#">Term of Use</a> and <a href="#">Privacy Statement</a> .
+            Solution’s <a href="#">Term of Use</a> and
+            <a href="/industries/industries-we-serve/industries/privacy-policy"
+              >Privacy Statement</a
+            >
+            .
           </label>
 
           <label class="checkbox-label">
@@ -263,17 +320,43 @@
   </div>
 </template>
 
-<style>
+<style scoped>
 /* #success,
     #failure {
         display: none;
     } */
+
+.error-message {
+  color: red;
+  font-size: 11px;
+}
+
+#character-count {
+  float: right;
+  padding: 0.1rem 0 0 0;
+  font-size: 0.875rem;
+}
+
+#character-count.limit-reached .message {
+  color: red;
+}
+
+#character-count .message {
+  color: red;
+}
 </style>
 
 <script>
 import axios from "axios";
+import GoogleVue from "vue3-google-address-autocomplete";
+import GoogleAddressAutocomplete from "vue3-google-address-autocomplete";
 export default {
+  components: {
+    // GoogleVue,
+    GoogleAddressAutocomplete,
+  },
   mounted() {
+    this.fetchTimezones();
     var pathArray = window.location.pathname.split("/");
     var page = pathArray[pathArray.length - 1];
     var pageText = page.replaceAll("-", " ");
@@ -302,7 +385,24 @@ export default {
           calenderName1: "",
         },
       ],
+      address: "",
+      timezones: [],
+      selectedTimezone: [],
+      name: "",
+      nameError: "",
+      message: "",
+      characterCount: 0,
+      limitReached: false,
+      description: "",
     };
+  },
+  computed: {
+    characterCount() {
+      return this.message.length;
+    },
+    isLimitReached() {
+      return this.characterCount >= 5000;
+    },
   },
   methods: {
     addMore() {
@@ -350,6 +450,42 @@ export default {
       setTimeout(() => {
         this.$refs.failureMessage.style.display = "none";
       }, 3000);
+    },
+
+    // get timezones
+    fetchTimezones() {
+      axios
+        .get("/api/v1/getTimezones")
+        .then((response) => {
+          this.timezones = response.data;
+        })
+        .catch((error) => {
+          console.error("Error fetching time zones", error);
+        });
+    },
+
+    // validate name
+    validateName() {
+      // Regular expression to allow only alphabets and spaces
+      const regex = /^[a-zA-Z\s]*$/;
+
+      if (!regex.test(this.name)) {
+        this.nameError = "Name can only contain alphabets and spaces.";
+      } else {
+        this.nameError = "";
+      }
+    },
+
+    updateCharacterCount() {
+      // update character count
+      this.characterCount = this.message.length;
+
+      if (this.characterCount >= 5000) {
+        this.message = this.message.substring(0, 5000);
+        this.limitReached = true;
+      } else {
+        this.limitReached = false;
+      }
     },
   },
 };

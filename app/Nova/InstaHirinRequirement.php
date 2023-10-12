@@ -70,9 +70,16 @@ class InstaHirinRequirement extends Resource
                 'Volunteer' => 'Volunteer',
                 'Internships' => 'Internships'
             ])->displayUsingLabels()->filterable()->hideFromIndex(),
-            Select::make('Salary Currency', 'salary_currency')->options(['$' => '$', 'INR' => 'INR'])->displayUsingLabels()->filterable()->hideFromIndex(),
-            Text::make('Minimum Salary', 'min_salary')->hideFromIndex(),
-            Text::make('Maximum Salary', 'max_salary')->hideFromIndex(),
+            Select::make('Salary Currency Montly/Project', 'salary_currency_monthly_project')->options(['USD' => 'USD', 'INR' => 'INR'])->displayUsingLabels()->filterable()->hideFromIndex(),
+            Text::make('Minimum Salary Monthly/Project', 'min_salary_monthly_project')->hideFromIndex(),
+            Text::make('Maximum Salary Monthly/Project', 'max_salary_monthly_project')->hideFromIndex(),
+            Select::make('Salary Currency Yearly', 'salary_currency_yearly')->options(['USD' => 'USD', 'INR' => 'INR'])->displayUsingLabels()->filterable()->hideFromIndex(),
+            Text::make('Minimum Salary Yearly', 'min_salary_yearly')->hideFromIndex(),
+            Text::make('Maximum Salary Yearly', 'max_salary_yearly')->hideFromIndex(),
+            Select::make('Salary Currency Hourly', 'salary_currency_hourly')->options(['USD' => 'USD', 'INR' => 'INR'])->displayUsingLabels()->filterable()->hideFromIndex(),
+            Text::make('Minimum Salary Hourly', 'min_salary_hourly')->hideFromIndex(),
+            Text::make('Maximum Salary Hourly', 'max_salary_hourly')->hideFromIndex(),
+
             Text::make('Location', 'location')->hideFromIndex(),
             Select::make('Education Qualification', 'education_qualification')->options(['Post Graduation' => 'Post Graduation', 'Graduation' => 'Graduation'])->displayUsingLabels()->filterable()->hideFromIndex(),
             Text::make('Company Name', 'company_name')->rules('nullable'),
@@ -83,8 +90,16 @@ class InstaHirinRequirement extends Resource
             Text::make('Contact #', 'contact_no')->rules('nullable')->hideFromIndex(),
             Text::make('Company Details', 'company_details')->hideFromIndex(),
             Text::make('Company Address', 'company_address')->hideFromIndex(),
-            File::make('Document', 'document')->hideFromIndex(),
-            Boolean::make('Notify about AI Recommended Applicants', 'notify')->trueValue('Yes')->falseValue('No')->hideFromIndex(),
+            // File::make('Document', 'document')->hideFromIndex(),
+            File::make('Document', 'document')
+                ->disk('public')
+                ->path('bizionic/images')
+                ->storeAs(function (Request $request) {
+                    // Customize the filename if needed
+                    return 'document_' . time() . '.' . $request->file('document')->getClientOriginalExtension();
+                })
+                ->prunable(),
+            Boolean::make('Notify about AI Recommended Applicants', 'notify_ai_applicants')->trueValue('Yes')->falseValue('No')->hideFromIndex(),
             Select::make('Status', 'status')->options(['New' => 'New', 'In Review' => 'In Reivew', 'Reviewed' => 'Reviewed'])->displayUsingLabels()->filterable(),
 
 

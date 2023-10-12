@@ -1,14 +1,14 @@
-
 <div class="hireForm_banner">
-      <div class="auto_container">
+    <div class="auto_container">
         <div class="hireForm_banner_detail">
             <div class="custom_tittle">
                 <h2>Thank you for choosing Bizionic's "Hire Talent Across Borders”</h2>
-                <p>Qualified, Trustworthy Talent, Authenticated Excellence, <strong>HIRE WITH CONFIDENCE</strong>  <br>
-                    Zero Cost to Meet Talent, Hire Top Talent In Minutes, and Unlock Cost Savings through Smart Hiring.</p>
+                <p>Qualified, Trustworthy Talent, Authenticated Excellence, <strong>HIRE WITH CONFIDENCE</strong> <br>
+                    Zero Cost to Meet Talent, Hire Top Talent In Minutes, and Unlock Cost Savings through Smart Hiring.
+                </p>
             </div>
         </div>
-      </div>
+    </div>
 </div>
 
 
@@ -19,7 +19,8 @@
         <div class="contactUs_detail">
 
             <div class="row ">
-                <div class="col-lg-4 col-md-5  aos-init " data-aos="fade-right" data-aos-duration="800" data-aos-easing="ease-out-cubic">
+                <div class="col-lg-4 col-md-5  aos-init " data-aos="fade-right" data-aos-duration="800"
+                    data-aos-easing="ease-out-cubic">
                     <div class="biz_brief">
 
                         <div class="hiringInfo">
@@ -35,7 +36,7 @@
                                     <p>{{$expert->sub_title}}</p>
                                 </div>
                             </div>
-                            
+
                             <div class="descriptionText" style="color: #fff;">
                                 {!! $expert->description !!}
                             </div>
@@ -45,7 +46,7 @@
                                 <strong>EXPERT IN:</strong>
                                 <p>
                                     @foreach($expert->experties as $experty)
-                                        {{$experty->title}}, 
+                                    {{$experty->title}},
                                     @endforeach
                                 </p>
                             </div>
@@ -54,7 +55,7 @@
                                 <strong>ALSO WORK WITH:</strong>
                                 <p>
                                     @foreach($expert->skills as $skill)
-                                        {{$skill->title}}, 
+                                    {{$skill->title}},
                                     @endforeach
                                 </p>
                             </div>
@@ -76,18 +77,23 @@
 
                     </div>
                 </div>
-                <div class="col-lg-8 col-md-7   aos-init " data-aos="fade-left" data-aos-duration="800" data-aos-easing="ease-out-cubic">
+                <div class="col-lg-8 col-md-7   aos-init " data-aos="fade-left" data-aos-duration="800"
+                    data-aos-easing="ease-out-cubic">
                     <div class="contactForm_page">
                         <div class="custom_tittle text-left">
                             <h3 class="p_color pb-5">For Employers, Hiring For </h3>
                             <p class="p-0">Please fill the form and our representative will get back to you.</p>
                         </div>
-                        <div class="alert alert-success text-center" role="alert" id="hire_success"> Thank you for the message. We will contact you shortly. </div>
-                        <div class="alert alert-danger text-center" role="alert" id="hire_failure"> Sorry! There is some problem sending your query at the moment, Please try again. </div>
-                        <form action="{{ route('hire') }}" method="POST" enctype="multipart/form-data" id="hire_developer" onsubmit="return false;">
+                        <div class="alert alert-success text-center" role="alert" id="hire_success"> Thank you for the
+                            message. We will contact you shortly. </div>
+                        <div class="alert alert-danger text-center" role="alert" id="hire_failure"> Sorry! There is some
+                            problem sending your query at the moment, Please try again. </div>
+                        <form action="{{ route('hire') }}" method="POST" enctype="multipart/form-data"
+                            id="hire_developer" onsubmit="return false;">
                             @csrf
                             <input type='hidden' value='{{$expert->id}}' name='expert'>
-                            <hire-talent-component :countries='{{$countries}}'></hire-talent-component>
+                            <hire-talent-component :countries='{{$countries}}' :timezones='{{ $timezones }}'>
+                            </hire-talent-component>
 
                         </form>
                     </div>
@@ -102,10 +108,10 @@
 
 
 
- <!-- our client Bizionic section -->
+<!-- our client Bizionic section -->
 
 
- <client-component></client-component>
+<client-component></client-component>
 
 
 
@@ -223,7 +229,7 @@
                     <li><a href="#">Startup Solutions</a></li> |
                     <li><a href="#">Media & Publishing</a></li> |
                     <li><a href="#">Food & FMCG</a></li> |
-                                <li><a href="#">E-Commerce</a></li> |
+                    <li><a href="#">E-Commerce</a></li> |
                 </ul>
             </div>
         </div>

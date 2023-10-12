@@ -222,7 +222,8 @@
               name="salary_currency_monthly_project"
               id="salary_currency_monthly_project"
             >
-              <option selected>$</option>
+              <option selected>USD</option>
+              <option selected>INR</option>
             </select>
           </div>
         </div>
@@ -269,7 +270,8 @@
               name="salary_currency_yearly"
               id="salary_currency_yearly"
             >
-              <option selected>$</option>
+              <option selected>USD</option>
+              <option selected>INR</option>
             </select>
           </div>
         </div>
@@ -316,7 +318,8 @@
               name="salary_currency_hourly"
               id="salary_currency_hourly"
             >
-              <option selected>$</option>
+              <option selected>USD</option>
+              <option selected>INR</option>
             </select>
           </div>
         </div>

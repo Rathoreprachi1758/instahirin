@@ -57,7 +57,19 @@ class Expert extends Resource
             Text::make('Sub Title', 'sub_title')->rules('required', 'min:6,max:255')->help(
                 'E.g Certified Scrum Master'
             ),
-            Select::make('Availability', 'availability')->options(['Full Time' => 'Full Time', 'Part Time' => 'Part Time'])->displayUsingLabels()->filterable(),
+            Select::make('Availability', 'availability')->options([
+                'Full Time' => 'Full Time',
+                'Part Time' => 'Part Time',
+                'Project Base' => 'Project Base',
+                'Hourly' => 'Hourly',
+                'On Site' => 'On Site',
+                'Freelancing' => 'Freelancing',
+                'Contract' => 'Contract',
+                'Shift' => 'Shift',
+                'Consulting' => 'Consulting',
+                'Volunteer' => 'Volunteer',
+                'Internships' => 'Internships'
+            ])->displayUsingLabels()->filterable(),
             Text::make('Experience', 'experience')->help(
                 'Put value like this 15 Years, 2 Years'
             ),
@@ -68,16 +80,17 @@ class Expert extends Resource
 
             Select::make('Status', 'status')->options(['New' => 'New', 'In Review' => 'In Reivew', 'Reviewed' => 'Reviewed'])->displayUsingLabels()->filterable(),
 
-            Boolean::make('Personal information', 'personal_info'),
-            Boolean::make('Pre Screening Check', 'pre_screen'),
-            Boolean::make('Skills and Comptencies', 'skill_and_compet'),
-            Boolean::make('Work Experience', 'work_expe'),
-            Boolean::make('Interview Evaluation', 'interview_eva'),
-            Boolean::make('Additional Assessment', 'education_certifi'),
-            Boolean::make('Education and Certificattions', 'addi_assess'),
-            Boolean::make('References', 'referen'),
-            Boolean::make('Background Check', 'background'),
-            Boolean::make('Cultural Fit', 'cultural_fit'),
+            //Text::make('Personal information', 'personal_info')->hideFromIndex(),
+            Boolean::make('Personal information', 'personal_info')->trueValue('Yes')->falseValue('No')->hideFromIndex(),
+            Boolean::make('Pre Screening Check', 'pre_screen')->trueValue('Yes')->falseValue('No')->hideFromIndex(),
+            Boolean::make('Skills and Comptencies', 'skill_and_compet')->trueValue('Yes')->falseValue('No')->hideFromIndex(),
+            Boolean::make('Work Experience', 'work_expe')->trueValue('Yes')->falseValue('No')->hideFromIndex(),
+            Boolean::make('Interview Evaluation', 'interview_eva')->trueValue('Yes')->falseValue('No')->hideFromIndex(),
+            Boolean::make('Additional Assessment', 'education_certifi')->trueValue('Yes')->falseValue('No')->hideFromIndex(),
+            Boolean::make('Education and Certificattions', 'addi_assess')->trueValue('Yes')->falseValue('No')->hideFromIndex(),
+            Boolean::make('References', 'referen')->trueValue('Yes')->falseValue('No')->hideFromIndex(),
+            Boolean::make('Background Check', 'background')->trueValue('Yes')->falseValue('No')->hideFromIndex(),
+            Boolean::make('Cultural Fit', 'cultural_fit')->trueValue('Yes')->falseValue('No')->hideFromIndex(),
             // Checkboxes::make('Permissions')->options([
             //     'viewNova' => 'Access Admin UI',
             //     'manageUsers' => 'Manage Users',
