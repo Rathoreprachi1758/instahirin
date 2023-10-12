@@ -4857,7 +4857,7 @@ html {
 .dateTime_range label {
     display: block;
     min-width: 48px;
-    font-size: 12px;
+    font-size: 11px;
 }
 
 .dateTime_range .project_form_field {
