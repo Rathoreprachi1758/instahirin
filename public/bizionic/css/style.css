@@ -4861,8 +4861,8 @@ html {
 }
 
 .dateTime_range .project_form_field {
-    max-width: 98px;
-    min-width: 98px;
+    max-width: 92px;
+    min-width: 92px;
 }
 
 .hireFormSetting .project_form_textarea textarea {
