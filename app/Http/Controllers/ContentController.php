@@ -12,12 +12,14 @@ use App\Models\Expert;
 use App\Models\Country;
 use App\Models\Countrie;
 // use App\Models\Expert;
-use App\Models\HireRequest;
+use App\Models\TimeZones;
 // use App\Models\HireRequest;
 // use App\Models\Subscription;
+use App\Models\HireRequest;
 use App\Models\Subscription;
 use Illuminate\Http\Request;
 use App\Models\TeamContactUs;
+//use Laravel\Nova\Fields\Timezone;
 use App\Models\InstaHirinOnboard;
 use Illuminate\Support\Facades\DB;
 use App\Models\InstaHirinRequirement;
@@ -63,16 +65,18 @@ class ContentController extends Controller
                 'jobs' => $jobs,
             ]);
         }
-
+        $timezones = TimeZones::all();
         return view('welcome', [
             'title' => $page->meta_title,
             'description' => $page->meta_description,
             'keywords' => $page->meta_keywords,
             'menus' => json_decode(json_encode((object) $menusResponse['menuItems']), FALSE),
             'template' => $template,
-            'countries' => json_encode(Countrie::all())
+            'countries' => json_encode(Countrie::all()),
+            'timezones' => $timezones,
         ]);
     }
+
 
     public function hireExpert($id)
     {
@@ -88,7 +92,8 @@ class ContentController extends Controller
             'menus' => json_decode(json_encode((object) $menusResponse['menuItems']), FALSE),
             'template' => 'hireForm',
             'expert' => $expert,
-            'countries' => json_encode(Countrie::all())
+            'countries' => json_encode(Countrie::all()),
+            'timezones' => json_encode(TimeZones::all())
         ]);
     }
 
@@ -679,33 +684,57 @@ class ContentController extends Controller
         // dd($request->all());
         $formData->save();
 
+        // if ($request->hasFile('document')) {
+        //     //echo "here we are";
+        //     if (is_array($request->document) && count($request->document) > 0) {
+        //         $uploadedDocuments = [];
+        //         foreach ($request->document as $document) {
+        //             //echo 'Uploading file: ' . $document->getClientOriginalName() . '<br>';
+        //             $originalFilename = $document->getClientOriginalName();
+        //             $timestamp = time();
+        //             $filename = $timestamp . '_' . $originalFilename;
+        //             $document->storeAs('bizionic/files', $filename, 'public');
+        //             $uploadedDocuments[] = [
+        //                 'name' => $originalFilename, // Store the original filename
+        //                 'unique_name' => $filename,
+        //                 'path' => 'bizionic/images/' . $filename,
+        //             ];
+        //             // $formData2->insta_hirin_onboard_id = $formData->id;
+        //             // $file = $document;
+        //             // $filename = $file->getClientOriginalName();
+        //             // $file->storeAs('bizionic/images', $filename, 'public');
+        //             // $formData2->document = $filename;
+        //             // $formData2->save();
+        //         }
+        //         // Save the uploaded document information in the database
+        //         $formData->document = json_encode($uploadedDocuments);
+        //         $formData->save();
+        //     }
+        // }
+
         if ($request->hasFile('document')) {
-            //echo "here we are";
-            if (is_array($request->document) && count($request->document) > 0) {
-                $uploadedDocuments = [];
-                foreach ($request->document as $document) {
-                    //echo 'Uploading file: ' . $document->getClientOriginalName() . '<br>';
-                    $originalFilename = $document->getClientOriginalName();
-                    $timestamp = time();
-                    $filename = $timestamp . '_' . $originalFilename;
-                    $document->storeAs('bizionic/images', $filename, 'public');
-                    $uploadedDocuments[] = [
-                        'name' => $originalFilename, // Store the original filename
-                        'unique_name' => $filename,
-                        'path' => 'bizionic/images/' . $filename,
-                    ];
-                    // $formData2->insta_hirin_onboard_id = $formData->id;
-                    // $file = $document;
-                    // $filename = $file->getClientOriginalName();
-                    // $file->storeAs('bizionic/images', $filename, 'public');
-                    // $formData2->document = $filename;
-                    // $formData2->save();
-                }
-                // Save the uploaded document information in the database
-                $formData->document = json_encode($uploadedDocuments);
-                $formData->save();
+            $uploadedDocuments = [];
+
+            foreach ($request->file('document') as $document) {
+                $originalFilename = $document->getClientOriginalName();
+                $timestamp = time();
+                $filename = $timestamp . '_' . $originalFilename;
+                $document->storeAs('bizionic/images', $filename, 'public');
+
+                $uploadedDocuments[] = [
+                    'name' => $originalFilename, // Store the original filename
+                    'unique_name' => $filename,
+                    'path' => 'bizionic/images/' . $filename,
+                ];
             }
+
+            // Save the uploaded document information in the database
+            $formData->document = json_encode($uploadedDocuments);
+            $formData->save();
         }
+
+
+
         DB::commit();
 
         // Return a response indicating success
@@ -722,5 +751,13 @@ class ContentController extends Controller
 
 
         return view('templates.apply-now-form', ['job' => $job]);
+    }
+
+
+    // Time Zone Controller
+    public function getTimezones()
+    {
+        $timezones = TimeZones::all();
+        return response()->json($timezones);
     }
 }

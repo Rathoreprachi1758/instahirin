@@ -34,6 +34,7 @@ Route::prefix('v1')->group(function () {
     Route::get('/skills', [OnboardController::class, 'getSkills'])->name('getSkills');
     Route::get('/expertise', [OnboardController::class, 'getExpert'])->name('getExpert');
     Route::get('/workWith', [OnboardController::class, 'getWork'])->name('getWork');
+    Route::get('/getTimezones', [ContentController::class, 'getTimezones'])->name('getTimezones');
     // Route::post('/submitForm', [ContentController::class, 'submitForm'])->name('submitForm');
     // Route for submitting the document data to insta_hirin_onboard_documents table
     //Route::post('/submit-document', [ContentController::class, 'submitDocument'])->name('submitDocument');
