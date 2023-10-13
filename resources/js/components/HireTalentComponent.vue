@@ -154,18 +154,18 @@
         :key="index"
       >
         <div class="dateTime_range">
-          <label>From*</label>
-          <div class="project_form_field">
+          <label>Expected Start Date*</label>
+          <div class="project_form_field ml-3">
             <input type="date" value="" placeholder="Calendar" name="from_date[]" />
           </div>
 
-          <label class="text-center">To</label>
+          <!-- <label class="text-center">To</label>
           <div class="project_form_field mr-2">
             <input type="date" value="" placeholder="Calendar" name="to_date[]" />
-          </div>
+          </div> -->
 
           <!-- From & To Time -->
-          <div class="project_form_field ml-2">
+          <!-- <div class="project_form_field ml-2">
             <input
               type="time"
               value=""
@@ -173,12 +173,12 @@
               id="timePicker"
               name="from_time[]"
             />
-          </div>
-          <label class="text-center">To</label>
+          </div> -->
+          <!-- <label class="text-center">To</label>
           <div class="project_form_field mr-2">
             <input type="time" value="" placeholder="Time" name="to_time[]" />
-          </div>
-          <label class="text-center m-3">Time zone</label>
+          </div> -->
+          <!-- <label class="text-center m-3">Time zone</label>
           <div class="project_form_field">
             <div class="project_form_select">
               <select
@@ -198,7 +198,7 @@
                 </option>
               </select>
             </div>
-          </div>
+          </div> -->
 
           <!-- Delete BUtton -->
           <div class="addDeleteBtn" v-if="index > 0">
@@ -211,11 +211,11 @@
 
       <!-- AddCalender -->
       <div class="col-lg-12 col-md-12">
-        <div class="addCallender">
+        <!-- <div class="addCallender">
           <a href="javascript:void(0)" @click="addMore()" class="btn_default"
             >Add Calender</a
           >
-        </div>
+        </div> -->
       </div>
 
       <!-- Virtual Meeting -->
@@ -262,6 +262,28 @@
               placeholder="Time"
               name="availability_time_to[]"
             />
+          </div>
+          <!-- Time Zone -->
+          <label class="text-center m-3">Time zone</label>
+          <div class="project_form_field">
+            <div class="project_form_select">
+              <select
+                v-model="selectedTimezone"
+                class="form-select codeCountry"
+                names="timezone"
+                id="timezone"
+                placeholder="time zone"
+              >
+                <option value="" selected disabled>Time Zone</option>
+                <option
+                  v-for="(timezone, id) in timezones"
+                  :value="timezone.label"
+                  :key="id"
+                >
+                  {{ timezone.label }} {{ timezone.value }}
+                </option>
+              </select>
+            </div>
           </div>
 
           <div class="addDeleteBtn" v-if="index1 > 0">
