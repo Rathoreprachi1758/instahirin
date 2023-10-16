@@ -88,14 +88,16 @@
                             message. We will contact you shortly. </div>
                         <div class="alert alert-danger text-center" role="alert" id="hire_failure"> Sorry! There is some
                             problem sending your query at the moment, Please try again. </div>
-                        <form action="{{ route('hire') }}" method="POST" enctype="multipart/form-data"
-                            id="hire_developer" onsubmit="return false;">
+                        {{-- <form enctype="multipart/form-data" id="hire_developer">
                             @csrf
                             <input type='hidden' value='{{$expert->id}}' name='expert'>
                             <hire-talent-component :countries='{{$countries}}' :timezones='{{ $timezones }}'>
                             </hire-talent-component>
 
-                        </form>
+                        </form> --}}
+                        <hire-talent-component :countries='{{$countries}}' :timezones='{{ $timezones }}'
+                            :expert-id='{{ $expert->id }}'>
+                        </hire-talent-component>
                     </div>
                 </div>
             </div>

@@ -7,8 +7,10 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="format-detection" content="telephone=no">
     <title>@yield('meta_title','https://www.bizionictech.com/')"</title>
-    <meta name ="description", content="@yield('meta_description', 'We build e-commerce site, management site, Android, iOS apps, and teach software development courses online.Laravel, Java, NodeJs, PHP technology.')">
-    <meta name ="keywords", content="@yield('meta_keywords', 'We build e-commerce site, management site, Android, iOS apps, and teach software development courses online.Laravel, Java, NodeJs, PHP technology.')">
+    <meta name="description" ,
+        content="@yield('meta_description', 'We build e-commerce site, management site, Android, iOS apps, and teach software development courses online.Laravel, Java, NodeJs, PHP technology.')">
+    <meta name="keywords" ,
+        content="@yield('meta_keywords', 'We build e-commerce site, management site, Android, iOS apps, and teach software development courses online.Laravel, Java, NodeJs, PHP technology.')">
     <!-- bootstrap -->
     <link rel="stylesheet" href="/bizionic/css/bootstrap.min.css">
     <!-- custom css -->
@@ -19,6 +21,8 @@
     <!-- font awesome-->
     <link rel="stylesheet " href="/bizionic/css/font-awesome.min.css ">
     <script src="/bizionic/js/jquery-3.4.1.min.js"></script>
+    {{-- Schema Js file --}}
+    <script src="/bizionic/js/schema.js"></script>
     <!-- slick slider -->
     <link rel=" stylesheet " type="text/css " href="/bizionic/css/slick.css ">
     <link rel="stylesheet " type="text/css " href="/bizionic/css/slick-theme.css ">
