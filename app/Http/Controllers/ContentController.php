@@ -20,6 +20,7 @@ use App\Models\Subscription;
 use Illuminate\Http\Request;
 use App\Models\TeamContactUs;
 //use Laravel\Nova\Fields\Timezone;
+use App\Models\AvailabilityData;
 use App\Models\InstaHirinOnboard;
 use Illuminate\Support\Facades\DB;
 use App\Models\InstaHirinRequirement;
@@ -214,38 +215,43 @@ class ContentController extends Controller
     {
         // dd($request->all());
         // Validate the request data, including the uploaded file
+        //! for form where `hiring_type` exists
         if (isset($request->hiring_type) && !isset($request->company_info)) {
 
             $validatedData = $request->validate([
                 'name' => 'required',
-                'company' => '',
-                'email' => 'required|email',
+                'country_code' => 'required',
                 'phone' => '',
-                'country_code' => '',
-                'document' => 'file',
+                'company' => 'required',
+                'email' => 'required|email',
                 'website' => '',
-                'message' => '',
                 'address' => '',
+                'message' => '',
+                'hiring_type' => '',
                 'from_date' => '',
-                'to_date' => '',
-                'from_time' => '',
-                'to_time' => '',
-                'source' => '',
                 'virtual_assistance_call' => '',
                 'availability_date' => '',
                 'availability_time_from' => '',
                 'availability_time_to' => '',
+                'availability_time_zone' => '',
+                'document' => 'file',
+                'term_of_use' => '',
+                'future_promotion' => '',
+                // 'to_date' => '',
+                // 'from_time' => '',
+                // 'to_time' => '',
+                'source' => '',
                 'template' => '',
-                'expert' => '',
-                'hiring_type' => '',
+                'expert' => 'required',
             ]);
-
+            // dd($validatedData);
             // Create a new instance of the Hire Request model
             $formData = new HireRequest();
 
 
 
             // Set the form data from the validated request
+            // $formData->expert_id = $validatedData['expert_id'];
             $formData->name = $validatedData['name'];
             $formData->company = $validatedData['company'];
             $formData->email = $validatedData['email'];
@@ -253,16 +259,29 @@ class ContentController extends Controller
             $formData->website = $validatedData['website'];
             $formData->message = $validatedData['message'];
             $formData->address = $validatedData['address'];
-            // $formData->from_date = $validatedData['from_date'];
+            $formData->from_date = $validatedData['from_date'];
             //$formData->to_date = $validatedData['to_date'];
             //$formData->from_time = $validatedData['from_time'];
             //$formData->to_time = $validatedData['to_time'];
             $formData->priority = 'normal';
             $formData->source = ($formData->source) ? $validatedData['source'] : '';
             $formData->virtual_assistance_call = isset($validatedData['virtual_assistance_call']) ? 'Yes' : 'No';
-            //$formData->availability_date = $validatedData['availability_date'];
-            // $formData->availability_time_from = $validatedData['availability_time_from'];
-            // $formData->availability_time_to = $validatedData['availability_time_to'];
+            $formData->term_of_use = isset($validatedData['term_of_use']) ? 'Yes' : 'No';
+            $formData->future_promotion = isset($validatedData['future_promotion']) ? 'Yes' : 'No';
+            // $formData->availability_date = json_encode($validatedData['availability_date']);
+            // $formData->availability_time_from = json_encode($validatedData['availability_time_from']);
+            // $formData->availability_time_to = json_encode($validatedData['availability_time_to']);
+            // $formData->timezone = json_encode($validatedData['availability_time_zone']);
+            //! for multiple dates
+            // foreach ($request->availability_date as $key => $date) {
+            //     $availabilityData = new AvailabilityData([
+            //         'availability_date' => $date,
+            //         'availability_time_from' => $request->availability_time_from[$key],
+            //         'availability_time_to' => $request->availability_time_to[$key],
+            //         'availability_time_zone' => $request->availability_time_zone[$key],
+            //     ]);
+            //     $formData->availabilityData()->save($availabilityData);
+            // }
             $formData->hiring_type = $validatedData['hiring_type'];
             $formData->template = @$validatedData['template'];
             $formData->expert_id = @$validatedData['expert'];
@@ -274,6 +293,16 @@ class ContentController extends Controller
                 $formData->document = time() . $filename;
             }
             $formData->save();
+            foreach ($request->availability_date as $key => $date) {
+                $availabilityData = new AvailabilityData([
+                    'availability_date' => $date,
+                    'availability_time_from' => $request->availability_time_from[$key],
+                    'availability_time_to' => $request->availability_time_to[$key],
+                    'availability_time_zone' => $request->availability_time_zone[$key],
+                ]);
+
+                $formData->availabilityData()->save($availabilityData);
+            }
         } else if (isset($request->company_info)) {
             $requestId = $formData->id;
             for ($n = 0; $n < count($request->from_date); $n++) {
@@ -297,10 +326,12 @@ class ContentController extends Controller
             }
         } else if (isset($request->company_info)) {
             // dd('we are here');
+
             $validatedData = $request->validate([
                 'name' => 'required',
                 'company' => '',
                 'email' => 'required|email',
+                'country_code' => '',
                 'phone' => '',
                 'document' => 'file',
                 'company_info' => '',
@@ -326,7 +357,7 @@ class ContentController extends Controller
             $formData->company = $validatedData['company'];
             $formData->company_info = $validatedData['company_info'];
             $formData->email = $validatedData['email'];
-            $formData->phone = $validatedData['phone'];
+            $formData->phone =  $validatedData['country_code'] . $validatedData['phone'];
             $formData->website = $validatedData['website'];
             $formData->message = $validatedData['message'];
             $formData->address = $validatedData['address'];
@@ -353,9 +384,11 @@ class ContentController extends Controller
             }
             $formData->save();
         } else if (!isset($request->company)) {
+            //! this is not for hire form
             $validatedData = $request->validate([
                 'name' => 'required',
                 'email' => 'required|email',
+                'country_code' => '',
                 'phone' => '',
                 'message' => 'required',
             ]);
@@ -367,15 +400,17 @@ class ContentController extends Controller
             $formData->name = $validatedData['name'];
             $formData->company = '-';
             $formData->email = $validatedData['email'];
-            $formData->phone = $validatedData['phone'];
+            $formData->phone = $validatedData['country_code'] . $validatedData['phone'];
             $formData->message = $validatedData['message'];
 
             $formData->save();
         } else {
+            //! this is not for hire form
             $validatedData = $request->validate([
                 'name' => 'required',
                 'company' => '',
                 'email' => 'required|email',
+                'country_code' => '',
                 'phone' => '',
                 'message' => 'required',
             ]);
@@ -387,7 +422,7 @@ class ContentController extends Controller
             $formData->name = $validatedData['name'];
             $formData->company = $validatedData['company'];
             $formData->email = $validatedData['email'];
-            $formData->phone = $validatedData['phone'];
+            $formData->phone = $validatedData['country_code'] . $validatedData['phone'];
             $formData->message = $validatedData['message'];
 
             $formData->save();
@@ -475,7 +510,7 @@ class ContentController extends Controller
             'notify_ai_applicants' => '',
         ]);
 
-        Log::info('Request data:', $request->all());
+        //Log::info('Request data:', $request->all());
         // Create a new instance of the Hire Request model
         $formData = new InstaHirinRequirement();
 
