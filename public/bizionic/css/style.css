@@ -236,7 +236,7 @@ p {
     border: 1px solid #646464;
     background: #646464;
     text-align: center;
-    border-radius: 5px;
+    border-radius: 5px !important;
     font-size: 14px;
     transition: all 0.3s ease-in-out;
     -moz-transition: all 0.3s ease-in-out;
@@ -8492,6 +8492,182 @@ html {
     width: 100%;
     padding: 20px 0px;
 }
+
+
+
+
+/* new inner pages  */
+
+.ind_innerPages .custom_tittle h2 b { font-size: 54px;line-height: 1.1;}
+
+.ind_innerPages { 
+    background: url(../images/ind_banner_pattern.png) top center no-repeat #fff;
+     
+}
+
+/* .wedo_sction { bac} */
+
+.wedo_sction { background:#e3e4e5 !important}
+
+.wedo_sction .hireForm_banner_detail { padding: 80px 70px;}
+
+.wedo_sction .industryNew_section2_cols { transform: translate(0); background-color: #fff;padding: 80px 60px 50px ;}
+
+.wedo_sction .custom_tittle p { font-size: 18px; line-height: 1.8;}
+
+.wedo_sction .industryNew_section2_colsInfo {
+    border: 0px solid #f0f0f0;
+    padding: 50px 20px 30px 20px; background-color: #f0f0f0 !important;
+}
+
+.newStartup_section { background:#e3e4e5 !important}
+
+
+.nevStarup_setting { padding: 80px 60px 60px; background-color: #fff; position: relative;}
+
+.nevStarup_setting::after {
+    width: 100%;
+    height: 270px;
+    content: '';
+    /* background: url(../images/latestBlog_bg.png) bottom center no-repeat; */
+    background-size: cover;
+    position: absolute;
+    left: 0px; z-index: 0;
+    top: 0px;
+    background: rgb(102,102,102);
+background: linear-gradient(0deg, rgba(102,102,102,1) 0%, rgba(155,155,155,1) 100%);
+}
+
+.nevStarup_setting > div { position: relative; z-index: 1;}
+
+.nevStarup_setting .indust_work_col {
+    background: rgb(221,221,221);
+background: linear-gradient(0deg, rgba(221,221,221,1) 0%, rgba(244,244,244,1) 100%);    padding: 30px 25px;}
+
+.nevStarup_setting .indust_work_col a { 
+    justify-content: space-around;  
+}
+
+.nevStarup_setting .indust_work_col a strong { padding-bottom: 20px;}
+.nevStarup_setting .indust_work_col a p {text-align: justify;}
+
+
+
+.proposal_section { width: 100%; background-color: #fff; }
+.wedo_sction > .auto_container { transform: translateY(-100px);}
+
+.proposal_sectionTittle { background: rgb(102,102,102); width: 100%; position: relative; padding: 80px 60px;
+    background: linear-gradient(0deg, rgba(102,102,102,1) 0%, rgba(155,155,155,1) 100%);}
+
+
+
+.funding_info { width: 100%; padding: 70px 60px;}
+
+.funding_info h3 { font-style: italic;}
+
+.funding_info p { padding: 5px 0px;}
+.funding_info p b { font-family: 'avenirblack';}
+
+
+
+.discList {
+    margin-left: 20px;
+    padding-bottom: 20px;
+}
+
+.abt_ldiscListist li {
+    list-style: disc;
+}
+
+.discList li p {
+    padding-bottom: 0px;
+}
+
+
+.decimelList {
+    margin-left: 20px;
+    padding-bottom: 20px;
+}
+
+.decimelList li {
+    list-style: decimal;
+}
+
+.decimelList li p {
+    padding-bottom: 0px;
+}
+
+
+.appProcssSec { padding: 0px;}
+
+.appProcssSec .howWork_text_info p { color: #000; font-size: 16px; line-height: 1.6;}
+
+.appProcssSec .howWork_section { padding-left: 0px;}
+
+.appProcssSec .howWork_text_info h4 { 
+    font-family: 'avenirblack'; font-size: 20px;
+}
+
+.appProcssSec .workCount { background: none;
+    width: 60px;
+    height: 60px;}
+
+
+.appProcssSec  ul li::before { 
+    left: 29px;top: 3px;
+}
+
+.appProcssSec ul li {
+    padding-bottom: 40px; 
+}
+
+.applyBtn { display: flex; padding-top: 20px;}
+.applyBtn .btn_default { max-width: 160px;}
+
+
+
+
+.fundingApplyForm_page { width: 100%; position: relative;}
+
+.fundingApplyForm_pageDetail { width: 100%; padding: 80px 0px; max-width: 1000px; margin: auto;}
+
+
+.fundingApplyForm_info { width: 100%; padding: 50px 30px; box-shadow: 0px 0px 3px #cccccc62; background-color: #e5e5e5;}
+
+
+.fundingForm_col { width: 100%; position: relative; padding: 12px 0px;}
+.fundingForm_col strong { display: block; margin-bottom: 8px; color: #000; font-size: 15px;}
+
+.fundingForm_col .project_form_field { margin: 0px;}
+.fundingForm_col .project_form_select { margin: 0px;}
+.fundingForm_col .project_form_textarea { margin: 0px;}
+.fundingForm_col .project_form_textarea textarea { min-height: 150px;}
+
+
+.fundingApplyForm_info_section hr { border-color: #000;}
+
+.fundingForm_col p { font-size: 14px;  color: #858484;}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
