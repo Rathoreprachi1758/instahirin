@@ -1,92 +1,12 @@
 
-    <!-- main banner  -->
-
-    <div class="mainBanner_section servicesBanner">
-        <div class="auto_container">
-            <div class="mainBanner_detail ">
-
-                <div class="row">
-                    <div class="col-lg-6 col-md-6 aos-init " data-aos="fade-right" data-aos-duration="1000" data-aos-easing="ease">
-                        <div class="mainBanner_text hireBannerText">
-                            <h3> INNOVATIVE <br>
-                                SOLUTION FOR<br>
-                                 
-                                <b>INDUSTRial <br>SOFTWAREs</b>
-                            </h3>
-
-                            <p>  BIZIONIC understands the everyday challenges of an ordinary businessmen faces, and thus, works with the core dictum and provide an unique identity to their business. Having a team of IT experts, we deliver modern business solutions under one roof. With
-                                innovative ideas, unwavering passion, and a dedication to excellence, we aspire to create
-                                a positive impact that will help the industry leaders.</p>
-                            <p>Our exceptional services are a result of our professional staff, vast expertise, and
-                                successful long-term client relationships. In keeping with industry standards, we provide a wide range of software solutions services which meet all your needs and grow
-                                your business.</p>
-
-                                <h6 class="font-italic">Bizionic, One Platform for All Your Industrial Software Needs</h6>
-                                <a href="/get-a-free-consultation" class="btn_default_white">Contact Us</a>
-                        </div>
-
-
-                    </div>
-
-                    <div class="col-lg-6 col-md-6 aos-init " data-aos="fade-left" data-aos-duration="1000" data-aos-easing="ease">
-                        <div class="marketing_banner_fr">
-                            <span><img src="/bizionic/images/industryBanner_avatar.png" alt="#" /></span> 
-                        </div>
-                    </div>
-                </div> 
-                
-            </div>
-        </div>
-    </div>
-
-
-
-    <!-- technology master section -->
-
-
-        <div class="technology_master_section lavrageServices">
-            <div class="auto_container">
-                <div class="technology_master_detail">
-                    <div class="custom_tittle pt-2">
-                        <h2> <strong>Utilize Our</strong> Top Software Services <strong>to<br>
-                             Expand Your Business</strong>   </h2> 
-                    </div>
-
-
-
-                    <div class="servicesProvided_info aos-init aos-animate  pb-0" data-aos="fade-up" data-aos-duration="800" data-aos-easing="ease-out-cubic"> 
-                        <ul>
-                            <li><a href="/industries/industries-we-serve/industries/startups">Startup Solutions</a></li> |
-                            <li><a href="/industries/industries-we-serve/industries/real-estate">Real Estate</a></li> |
-                            <li><a href="/industries/industries-we-serve/industries/b2b-solutions">B2B Solutions</a></li> | 
-                            <li><a href="/industries/industries-we-serve/industries/b2c-solutions">B2C Solutions</a></li> | 
-
-                            <li><a href="/industries/industries-we-serve/industries/healthcare">Healthcare</a></li> |  
-                            <li><a href="/industries/industries-we-serve/industries/travel-and-hospitality">Travel & Hospitality </a></li> | 
-                            <li><a href="/industries/industries-we-serve/industries/banking-and-finance">Banking & Finance</a></li> |<br>
-
-                            <li><a href="/industries/industries-we-serve/industries/media-and-publishing">Media & Publishing</a></li> | 
-                            <li><a href="/industries/industries-we-serve/industries/education-and-e-Learning">Education and E-Learning</a></li> | 
-                            <li><a href="/industries/industries-we-serve/industries/food-and-fmcg">Food & FMCG</a></li> | 
-                            <li><a href="/industries/industries-we-serve/industries/automotive">Automotive</a></li> | 
-                            <li><a href="/industries/industries-we-serve/industries/e-commerce">E-Commerce</a></li> 
-                        </ul>
-                    </div>
-
-                </div>
-            </div>
-        </div>
-
-
 
 
     <!-- industry new section section -->
 
 
 
-        <div class="industryNew_section  bg_f2f2f2">
+        <div class="industryNew_section  ind_innerPages">
             <div class="auto_container">
-                <div class="pageSection_icon startUp_icon"><img src="/bizionic/images/startupIcon.png" alt="#" /></div>
                 <div class="industryNew_section_detail">
 
 
@@ -95,15 +15,13 @@
                             <div class="col-lg-6 col-md-6 aos-init " data-aos="fade-right" data-aos-duration="1000" data-aos-easing="ease">
                                 <div class=" custom_tittle">
                                     <h2 class="text-left">
-                                       <strong>EXCELLENT</strong>  START-UP <br>
-                                        SOLUTIONS <strong>FROM THE <br>
-                                        EXPERTS!</strong> 
+                                        DREAMING OF THE <b>NEXT<br> BIG THING?</b> WE'VE GOT<br>
+                                        YOUR BACK!
                                     </h2>
 
-                                        <p class="p_color text-justify">The Start-Up involves many essential parts for anyone seeking to launch an online business. Depending on your business model and goals, BIZIONIC
-                                            believe you may need to start thinking about things like Business Analysis, Planning, Specifications Gathering, Web Development, Mobile App
-                                            Development, Cloud-based Solutions, and SEO / Digital Marketing. Our close collaboration with you ensures the value of your business and makes a meaningful difference when it counts the most. To keep your overhead costs to a minimum, we can provide all of our services as part of a Team Package
-                                            or on an as-needed basis (as the start).</p>
+                                        <p class="p_color text-justify">In the dynamic landscape of today's digital world, having an innovative idea sets the stage. 
+                                            But to really leave a mark and soar high, you need more than just a concept. You need a potent combination of the right 
+                                            technology and astute marketing. This is where <b>Bizionic Technologies</b> steps in, ready to propel your vision to unparalleled heights.</p>
 
                                             <a href="/get-a-free-consultation" class="btn_default mt-2">Get a Free Consultation</a>
                                     
@@ -113,7 +31,32 @@
 
                             <div class="col-lg-6 col-md-6 aos-init " data-aos="fade-left" data-aos-duration="1000" data-aos-easing="ease">
                                 <div class="industryNew_section1_avatar">
-                                    <span><img src="/bizionic/images/indus_page1_avatar.png" alt="#" /></span>
+                                    <span><img src="/bizionic/images/ind_startupAvatar.png" alt="#" /></span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+ 
+
+                </div>
+            </div>
+        </div>
+
+
+
+
+
+        <div class="provider_section wedo_sction">
+
+            <div class="auto_container p-0">
+                <div class="wedo_sction_inner">
+                    <div class="auto_container">
+                        <div class="hireForm_banner">
+                            <div class="hireForm_banner_detail">
+                                <div class="custom_tittle">
+                                    <h2 class="text-white "><strong>What</strong> we <strong>do</strong></h2>
+                                    <p class="text-white text-justify p-0">The hardest thing to do in the early phases is developing a viable product in a short period of time. Although it seems unusual, the start of a project is the most critical aspect. The entire process of going from an idea to an income-generating product can be difficult. Sadly, a lot of people fail during the process. This is why you need a reliable team to help you along the path. Bizionic has a varied pool of professionals with diverse areas of experience.</p>
                                 </div>
                             </div>
                         </div>
@@ -121,113 +64,341 @@
 
 
 
+                    <div class="auto_container">
+                        <div class="industryNew_section2_cols">
+                            <div class="custom_tittle">
+                                    <h2 class=""><strong>How</strong> We <strong>get You</strong> Launch-ready</h2>
+                                </div>
+                            <div class="row justify-content-center">
+                                <div class="col-lg-4 col-md-6 provide_col">
+                                    <div class="industryNew_section2_colsInfo">
+                                        <span><img src="/bizionic/images/weGet_icon1.png" alt="#" /></span>
+                                        <h6>DEFINING YOUR<br> PRODUCT REQUIREMENTS</h6>
+                                        <p>Product requirements ensure that your product satisfies the expectations of your customers, is delivered on schedule and within budget, and succeeds in the market.</p>
+                                    </div>
+                                </div>
+                                <div class="col-lg-4 col-md-6 provide_col">
+                                    <div class="industryNew_section2_colsInfo">
+                                        <span><img src="/bizionic/images/weGet_icon2.png" alt="#" /></span>
+                                        <h6>IDENTIFY THE MVP<br> SCOPE AND PRIORITIZE FEATURES </h6>
+                                        <p>Determine the MVP scope and prioritise it based on user feedback, market demand, and technological feasibility. Launch more quickly, validate, and iterate.</p>
+                                    </div>
+                                </div>
+                                <div class="col-lg-4 col-md-6 provide_col">
+                                    <div class="industryNew_section2_colsInfo">
+                                        <span><img src="/bizionic/images/weGet_icon3.png" alt="#" /></span>
+                                        <h6>EARLY ADOPTER<br> FEEDBACK</h6>
+                                        <p>Feedback from early adopters helps to improve your product, validate assumptions, and generate loyal customers. Seek input, listen carefully, and iterate swiftly to achieve a competitive advantage.</p>
+                                    </div>
+                                </div>
+                                <div class="col-lg-4 col-md-6 provide_col">
+                                    <div class="industryNew_section2_colsInfo">
+                                        <span><img src="/bizionic/images/weGet_icon4.png" alt="#" /></span>
+                                        <h6>BUILD AND DEVELOP MVP<br> IN A FEW WEEKS</h6>
+                                        <p>Build and release an MVP in a matter of weeks by focusing on critical features, utilising tools, working with a small team, testing frequently, and iterating based on feedback.</p>
+                                    </div>
+                                </div>
 
 
-                    <div class="industryNew_section2_info aos-init " data-aos="fade-up" data-aos-duration="1500" data-aos-easing="ease">
-                        <div class="custom_tittle">
-                            <h2>Start-Up  <strong>Solutions BIZIONIC Provides</strong></h2>
+
+                                <div class="col-lg-4 col-md-6 provide_col">
+                                    <div class="industryNew_section2_colsInfo">
+                                        <span><img src="/bizionic/images/weGet_icon5.png" alt="#" /></span>
+                                        <h6>PRECISION PROBLEM<br> CAPTURE AT SCALE</h6>
+                                        <p>Precision problem capture at scale detects client pain points, prioritises concerns, and collects data to improve customer satisfaction, reduce churn, and create a competitive edge.</p>
+                                    </div>
+                                </div>
+                                <div class="col-lg-4 col-md-6 provide_col">
+                                    <div class="industryNew_section2_colsInfo">
+                                        <span><img src="/bizionic/images/weGet_icon6.png" alt="#" /></span>
+                                        <h6>CREATING INTERACTIVE<br> PROTOTYPES</h6>
+                                        <p>To evaluate product concepts, gather input, discover difficulties, and iterate quickly, create interactive prototypes with tools like Figma, InVision, or Sketch.</p>
+                                    </div>
+                                </div>
+                                <div class="col-lg-4 col-md-6 provide_col">
+                                    <div class="industryNew_section2_colsInfo">
+                                        <span><img src="/bizionic/images/weGet_icon7.png" alt="#" /></span>
+                                        <h6>INTEGRATE USER FEEDBACK<br> IN THE PRODUCT</h6>
+                                        <p>In order to improve customer satisfaction, reduce churn, and gain a competitive advantage, incorporate user feedback into product development. Seek comments, pay close attention, and prioritise significant improvements.</p>
+                                    </div>
+                                </div>
+                                <div class="col-lg-4 col-md-6 provide_col">
+                                    <div class="industryNew_section2_colsInfo">
+                                        <span><img src="/bizionic/images/weGet_icon8.png" alt="#" /></span>
+                                        <h6>CONTINUOUS<br> SUPPORT AND MAINTENANCE</h6>
+                                        <p>Once the product is operational, our support don’t come to an end. Additionally, we can assist with the installation of any upgrades, new modules, patches, upgrades, and security features.</p>
+                                    </div>
+                                </div>
+                            </div>
                         </div>
-
-                        
                     </div>
 
+
+                    
+                    <div class="auto_container">
+                        <div class="newStartup_section_detail nevStarup_setting">
+                            <div class="custom_tittle">
+                                <h2 class="text-white">Start-Up <strong>Solutions BIZIONIC Provides</strong></h2>
+                            </div>
+
+                            <div class="newStartup_row">
+                                <div class="">
+                                    <div class="row">
+                                        <div class="col-lg-4 col-md-6 indCol">
+                                            <div class="indust_work_col">
+                                                <a href="#">
+                                                    <span><img src="/bizionic/images/newStartup_icon1.png" alt="#" /></span>
+                                                    <strong>MINIMUM VIABLE<br> PRODUCT (MVP)</strong>
+                                                    <p>We assist startups in developing a minimal viable product that can be tested in a real-world setting.As a result, companies may get feedback in real time before scaling the product and incurring further costs.</p>
+
+                                                    <b class="w-100 d-flex justify-content-end"><i class="fa fa-arrow-right" aria-hidden="true"></i></b>
+                                                </a>
+                                            </div>
+                                        </div>
+                                        <div class="col-lg-4 col-md-6 indCol">
+                                            <div class="indust_work_col">
+                                                <a href="#">
+                                                    <span><img src="/bizionic/images/newStartup_icon2.png" alt="#" /></span>
+                                                    <strong>DESIGN <br>EXPERIENCE</strong>
+                                                    <p>Use TechVariable's UX design services to increase user trust, engagement, and loyalty in your digital goods and platforms.</p>
+
+                                                    <b class="w-100 d-flex justify-content-end"><i class="fa fa-arrow-right" aria-hidden="true"></i></b>
+                                                </a>
+                                            </div>
+                                        </div>
+                                        <div class="col-lg-4 col-md-6 indCol">
+                                            <div class="indust_work_col">
+                                                <a href="#">
+                                                    <span><img src="/bizionic/images/newStartup_icon3.png" alt="#" /></span>
+                                                    <strong>AWS NEPTUNE<br> CONSULTING</strong>
+                                                    <p>Work with Bizionic's AWS neptune consultants and engineers to use this graph database to ensure optimal speed and scalability while also accelerating business growth.</p>
+
+                                                    <b class="w-100 d-flex justify-content-end"><i class="fa fa-arrow-right" aria-hidden="true"></i></b>
+                                                </a>
+                                            </div>
+                                        </div>
+
+
+
+
+
+                                        <div class="col-lg-4 col-md-6 indCol">
+                                            <div class="indust_work_col">
+                                                <a href="#">
+                                                    <span><img src="/bizionic/images/newStartup_icon4.png" alt="#" /></span>
+                                                    <strong>RAPID APPLICATION<br> DEVELOPMENT</strong>
+                                                    <p>The ideal combination of agility, quality, and efficiency. You'll have a high-quality app in no time thanks to short turnaround times and efficient development.</p>
+
+                                                    <b class="w-100 d-flex justify-content-end"><i class="fa fa-arrow-right" aria-hidden="true"></i></b>
+                                                </a>
+                                            </div>
+                                        </div>
+                                        <div class="col-lg-4 col-md-6 indCol">
+                                            <div class="indust_work_col">
+                                                <a href="#">
+                                                    <span><img src="/bizionic/images/newStartup_icon5.png" alt="#" /></span>
+                                                    <strong>CUSTOM APPLICATION<br> DEVELOPMENT</strong>
+                                                    <p>Custom app development can help you increase brand awareness and market reach by providing unique features and a personalised user experience.</p>
+
+                                                    <b class="w-100 d-flex justify-content-end"><i class="fa fa-arrow-right" aria-hidden="true"></i></b>
+                                                </a>
+                                            </div>
+                                        </div>
+                                        <div class="col-lg-4 col-md-6 indCol">
+                                            <div class="indust_work_col">
+                                                <a href="#">
+                                                    <span><img src="/bizionic/images/newStartup_icon6.png" alt="#" /></span>
+                                                    <strong>APPLICATION<br> MODERNIZATION</strong>
+                                                    <p>By modernising your platform with Bizionic, you can improve user experience, save costs, and increase efficiency without impacting business operations.</p>
+
+                                                    <b class="w-100 d-flex justify-content-end"><i class="fa fa-arrow-right" aria-hidden="true"></i></b>
+                                                </a>
+                                            </div>
+                                        </div>
+
+                                        <div class="col-lg-4 col-md-6 indCol">
+                                            <div class="indust_work_col">
+                                                <a href="#">
+                                                    <span><img src="/bizionic/images/newStartup_icon7.png" alt="#" /></span>
+                                                    <strong>DATA INFRASTRUCTURE<br> MODERNIZATION</strong>
+                                                    <p>Modernise data infrastructure with a trusted cloud, hire specialists for AI-driven foundations and DataOps, and expand your IT ecosystem with a cost-effective IT ecosystem.</p>
+
+                                                    <b class="w-100 d-flex justify-content-end"><i class="fa fa-arrow-right" aria-hidden="true"></i></b>
+                                                </a>
+                                            </div>
+                                        </div>
+                                        <div class="col-lg-4 col-md-6 indCol">
+                                            <div class="indust_work_col">
+                                                <a href="#">
+                                                    <span><img src="/bizionic/images/newStartup_icon8.png" alt="#" /></span>
+                                                    <strong>PRODUCT<br> ENGINEERING</strong>
+                                                    <p>Product development from start to finish and optimised software delivery. Boost growth, improve operations, and address company difficulties. Ideal for companies, small and medium-sized businesses, and sponsored startups.</p>
+
+                                                    <b class="w-100 d-flex justify-content-end"><i class="fa fa-arrow-right" aria-hidden="true"></i></b>
+                                                </a>
+                                            </div>
+                                        </div>
+                                        <div class="col-lg-4 col-md-6 indCol">
+                                            <div class="indust_work_col">
+                                                <a href="#">
+                                                    `<span><img src="/bizionic/images/newStartup_icon9.png" alt="#" /></span>
+                                                    <strong>ETL<br> AS A SERVICE</strong>
+                                                    <p>A strong ETL system that will alter your data management process. to create an effective system for gathering all of your data and organising it in a useful fashion.</p>
+
+                                                    <b class="w-100 d-flex justify-content-end"><i class="fa fa-arrow-right" aria-hidden="true"></i></b>
+                                                </a>
+                                            </div>
+                                        </div>
+                                        <div class="col-lg-4 col-md-6 indCol">
+                                            <div class="indust_work_col">
+                                                <a href="#">
+                                                    <span><img src="/bizionic/images/newStartup_icon10.png" alt="#" /></span>
+                                                    <strong>CLOUD DATA<br> ANALYTICS</strong>
+                                                    <p>Bizionic's data analytics services help brand-focused businesses achieve concrete commercial benefits while navigating the digital landscape.</p>
+
+                                                    <b class="w-100 d-flex justify-content-end"><i class="fa fa-arrow-right" aria-hidden="true"></i></b>
+                                                </a>
+                                            </div>
+                                        </div>
+
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+
+                    <div class="auto_container">
+                        <div class="proposal_section">
+                            <div class="proposal_sectionTittle">
+                                <div class="custom_tittle p-0">
+                                    <h2 class="text-white text-center pb-2">Proposal <strong>for</strong> Start-Up</h2>
+                                    <h6 class="text-white  text-center"><strong>Funding by Bizionic Technologies</strong></h6>
+                                    <p class="p-0 text-justify text-white pt-2">Bizionic Technologies recognises the challenges start-ups face in their initial phases, especially when funding crucial sectors like technology development and marketing. We believe in empowering innovative start-ups by providing them the financial support they need to flourish.</p>
+                                </div>
+                            </div>
+
+
+                            <div class="funding_info">
+                                <h3>Funding Offer:</h3>
+                                <p>We are excited to announce our <b>start-up funding initiative,</b> where we provide up to <b>$100,000</b> in funding towards:</p>
+
+                                <ul class="discList pb-0">
+                                    <li><p><b>Technology Development:</b> Build, Refine, or Expand your Product Suite.</p></li>
+                                    <li><p><b>Marketing Costs:</b> Establish a Strong Market Presence right from the beginning.</p></li>
+                                </ul>
+                                
+                                <p>This funding is designed specifically for Start-ups like Yours, allowing you to develop your Minimum Viable Product (MVP) and meet other technological requirements.</p>
+                            
+                                <br>
+                                <br>
+
+                                <h3>Why Choose Bizionic's Funding?</h3>
+                                <p><b>Focus on Core Business:</b> With our financial support for technological and marketing endeavours, you can channel your funds and energy into business growth and strategic planning.</p>
+                                <p><b>Flexible Funding:</b> Our funding is valid for one year. Depending on your business needs and progress, at the end of the year, this fund can be converted to:</p>
+                                <ul class="discList pb-0">
+                                    <li><p><b>Debt Financing:</b> A structured repayment plan suitable for your start-up's financial health.</p></li>
+                                    <li><p><b>Company Equity:</b> A share in the company, turning Bizionic Technologies into a strategic partner for your journey ahead.</li>
+                                </ul>
+
+                                <br>
+                                <br>
+
+                                <h3>Eligibility Criteria:</h3>
+                                <ul class="decimelList pb-0">
+                                    <li><p>Registered start-up or business entity.</p></li>
+                                    <li><p>Clear business plan and vision.</p></li>
+                                    <li><p>Demonstrable need for technological and marketing funds.</p></li>
+                                </ul>
+
+
+                                <br>
+                                <br>
+
+
+                                <h3>Application Process:</h3>
+
+                                <div class="instaHirin_section appProcssSec">
+                                    <div class="howWork_section">
+                                        <ul>
+                                            <li>
+                                                <div class="howWork_text">
+                                                    <span class="workCount"><img src="/bizionic/images/procssIcon1.png" alt="#" /></span>
+                                                    <div class="howWork_text_info">
+                                                        <h4>#1. Submission</h4>
+                                                        <p>Send in your detailed business plan and a statement of purpose<br> explaining why you require the funding.</p>
+                                                    </div>
+                                                </div>
+                                            </li>
+
+                                            <li>
+                                                <div class="howWork_text">
+                                                    <span class="workCount"><img src="/bizionic/images/procssIcon2.png" alt="#" /></span>
+                                                    <div class="howWork_text_info">
+                                                        <h4>#2. Evaluation</h4>
+                                                        <p>Our panel of experts will evaluate the potential and feasibility of your business idea.</p>
+                                                    </div>
+                                                </div>
+                                            </li>
+
+                                            <li>
+                                                <div class="howWork_text">
+                                                    <span class="workCount"><img src="/bizionic/images/procssIcon3.png" alt="#" /></span>
+                                                    <div class="howWork_text_info">
+                                                        <h4>#3. Interview</h4>
+                                                        <p>Shortlisted candidates will be invited for a discussion.</p>
+                                                    </div>
+                                                </div>
+                                            </li>
+
+                                            <li>
+                                                <div class="howWork_text">
+                                                    <span class="workCount"><img src="/bizionic/images/procssIcon4.png" alt="#" /></span>
+                                                    <div class="howWork_text_info">
+                                                        <h4>#4. Funding Approval</h4>
+                                                        <p>Post the evaluation and discussion, successful candidates will be<br> notified of the funding approval.</p>
+                                                    </div>
+                                                </div>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </div>
+
+
+        
+
+
+                                <h3>Terms and Conditions:</h3>
+                                <ul class="discList pb-0">
+                                    <li><p>The funding provided should strictly be used for technology development and marketing purposes with Bizionic Technologies.</p></li>
+                                    <li><p>Regular updates on progress and fund utilisation must be shared with Bizionic Technologies.</p></li>
+                                    <li><p>The decision to convert the fund into debt or equity at the end of the year will be a mutual agreement between the start-up and Bizionic Technologies.</p></li>
+                                    <li><p>The funding approval is subjected to Bizionic assessment criteria and funding Terms and Conditions.</p></li>
+
+                                </ul>
+
+                                <br>
+                                <br>
+
+                                <h3>Conclusion:</h3>
+                                <p>At Bizionic Technologies, we believe in fostering innovation and driving technological advancements by supporting the leaders of tomorrow. This funding initiative is a testament to our commitment to the start-up ecosystem. We look forward to partnering with ambitious start-ups and being a part of their success story.</p>
+
+
+                                <br>
+                                <br> 
+                                <p>For further details or to begin your application process, please contact</p>
+
+                                <div class="applyBtn">
+                                    <a href="industries/industries-we-serve/industries/funding-apply-now-form" class="btn_default" target="_blank">Apply Now</a>
+                                </div>
+
+                            </div>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
 
-
-
-
-
-        <div class="provider_section">
-            <div class="auto_container">
-                <div class="industryNew_section2_cols">
-                    <div class="row">
-                        <div class="col-lg-3 col-md-6 provide_col">
-                            <div class="industryNew_section2_colsInfo">
-                                <span><img src="/bizionic/images/bizProvide_icon1.png" alt="#" /></span>
-                                <h6>Business Analysis</h6>
-                                <p>We collaborate with you to analyze
-                                    and understand your business and
-                                    objectives. Then, we assist you in
-                                    planning and creating your software
-                                    development.</p>
-                            </div>
-                        </div>
-                        <div class="col-lg-3 col-md-6 provide_col">
-                            <div class="industryNew_section2_colsInfo">
-                                <span><img src="/bizionic/images/bizProvide_icon2.png" alt="#" /></span>
-                                <h6>Specifications </h6>
-                                <p>Once our expert analysts has
-                                    understood the requirements, we can work closely together and help you create the functional specifications to help your business achieve all
-                                    development goals.</p>
-                            </div>
-                        </div>
-                        <div class="col-lg-3 col-md-6 provide_col">
-                            <div class="industryNew_section2_colsInfo">
-                                <span><img src="/bizionic/images/bizProvide_icon3.png" alt="#" /></span>
-                                <h6>Web Development</h6>
-                                <p>From providing a platform for your
-                                    business on the web, we can help. We are experts not only to create websites but also back office systems to keep your business streamlined and give you
-                                    the edge on the competition.</p>
-                            </div>
-                        </div>
-                        <div class="col-lg-3 col-md-6 provide_col">
-                            <div class="industryNew_section2_colsInfo">
-                                <span><img src="/bizionic/images/bizProvide_icon4.png" alt="#" /></span>
-                                <h6>Mobile App Development</h6>
-                                <p>The growth of the digital world is
-                                    increasing due to mobile access. We'll discuss about what you need from mobile app development to keep your users engaged. We can also deploy apps using Virtual Reality (VR) and
-                                    Augmented Reality (AR).</p>
-                            </div>
-                        </div>
-
-
-
-                        <div class="col-lg-3 col-md-6 provide_col">
-                            <div class="industryNew_section2_colsInfo">
-                                <span><img src="/bizionic/images/bizProvide_icon5.png" alt="#" /></span>
-                                <h6>Software Development</h6>
-                                <p>We also provides Internet of Things
-                                    (IoT) software applications utilising
-                                    automation, apps to take advantage of wearables & watches, and also SBC
-                                    or any board maker solutions required.</p>
-                            </div>
-                        </div>
-                        <div class="col-lg-3 col-md-6 provide_col">
-                            <div class="industryNew_section2_colsInfo">
-                                <span><img src="/bizionic/images/bizProvide_icon6.png" alt="#" /></span>
-                                <h6>Security, Server
-                                    Management and Server
-                                    & Network Support</h6>
-                                <p>Experts to configure your server, and give you the best environment to easily
-                                    and securely scale your data.</p>
-                            </div>
-                        </div>
-                        <div class="col-lg-3 col-md-6 provide_col">
-                            <div class="industryNew_section2_colsInfo">
-                                <span><img src="/bizionic/images/bizProvide_icon7.png" alt="#" /></span>
-                                <h6>Digital Marketing</h6>
-                                <p>Ensure others about your advantages. We will help you stand out from the
-                                    crowd and get found.</p>
-                            </div>
-                        </div>
-                        <div class="col-lg-3 col-md-6 provide_col">
-                            <div class="industryNew_section2_colsInfo">
-                                <span><img src="/bizionic/images/bizProvide_icon8.png" alt="#" /></span>
-                                <h6>Support</h6>
-                                <p>Once the system is operational, our
-                                    supporto not come to an end.
-                                    Additionally, we can assist with the
-                                    installation of any upgrades, new
-                                    modules, patches, upgrades, and
-                                    security features.</p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
 
 
 
