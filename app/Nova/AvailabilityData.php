@@ -2,22 +2,29 @@
 
 namespace App\Nova;
 
-use Illuminate\Http\Request;
-use Laravel\Nova\Fields\File;
+// use App\Models\HireRequest;
+
+
 use Laravel\Nova\Fields\ID;
-use Laravel\Nova\Fields\Select;
+
+
+
+use Illuminate\Http\Request;
+use Laravel\Nova\Fields\Date;
 use Laravel\Nova\Fields\Text;
-use Laravel\Nova\Fields\Trix;
+use Laravel\Nova\Fields\DateTime;
+use Laravel\Nova\Fields\Timezone;
+use Laravel\Nova\Fields\BelongsTo;
 use Laravel\Nova\Http\Requests\NovaRequest;
 
-class Job extends Resource
+class AvailabilityData extends Resource
 {
     /**
      * The model the resource corresponds to.
      *
-     * @var class-string<\App\Models\Job>
+     * @var class-string<\App\Models\AvailabilityData>
      */
-    public static $model = \App\Models\Job::class;
+    public static $model = \App\Models\AvailabilityData::class;
 
     /**
      * The single value that should be used to represent the resource when being displayed.
@@ -25,6 +32,9 @@ class Job extends Resource
      * @var string
      */
     public static $title = 'id';
+    //public static $title = 'name';
+
+
 
     /**
      * The columns that should be searched.
@@ -32,8 +42,18 @@ class Job extends Resource
      * @var array
      */
     public static $search = [
-        'id',
+        'id', 'availability_date'
     ];
+
+    public static function label()
+    {
+        return __('Availability Data');
+    }
+
+    public static function uriKey()
+    {
+        return 'availability-data';
+    }
 
     /**
      * Get the fields displayed by the resource.
@@ -45,14 +65,13 @@ class Job extends Resource
     {
         return [
             ID::make()->sortable(),
-            Text::make('Title', 'title')->rules('required', 'min:6,max:255'),
-            Text::make('Location', 'location'),
-            Trix::make('Job Description', 'description'),
-            Trix::make('Key Responsibilities', 'responsibilities'),
-            Trix::make('Qualification', 'qualification'),
-            Trix::make('Preferred Qualification', 'prefer_qualification'),
-            Trix::make('What We Offer', 'we_offer'),
-            Select::make('Status', 'status')->options(['Open' => 'Open', 'Closed' => 'Closed'])->displayUsingLabels()->filterable(),
+            Date::make('Availability Date', 'availability_date')->sortable(),
+            // Time::make('Time From', 'availability_time_from')->sortable(),
+            Text::make('Time From', 'availability_time_from')->withMeta(['extraAttributes' => ['type' => 'time']]),
+            //Text::make('Time To', 'availability_time_to')->sortable(),
+            Text::make('Time To', 'availability_time_to')->withMeta(['extraAttributes' => ['type' => 'time']]),
+            Timezone::make('Time Zone', 'availability_time_zone')->sortable(),
+            BelongsTo::make('Hire Request')->sortable()->showOnPreview(),
         ];
     }
 

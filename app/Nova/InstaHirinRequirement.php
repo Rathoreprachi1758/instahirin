@@ -47,36 +47,60 @@ class InstaHirinRequirement extends Resource
     {
         return [
             ID::make()->sortable(),
-            Text::make('Position Title','position_title')->rules('required','min:6,max:255'),
-            Text::make('Work Mode','work_mode')->rules('required','min:6,max:255'),
-            Text::make('Project Description','project_description')->rules('required','min:6,max:255')->hideFromIndex(),
-            Text::make('Key Skills','key_skills')->rules('required','min:6,max:255')->hideFromIndex(),
-            Select::make('Employment Role/Type','employment_type')->options(['Full Time'=>'Full Time','Part-Time'=>'Part-Time',
+            Text::make('Position Title', 'position_title')->rules('required', 'min:6,max:255'),
+            Text::make('Work Mode', 'work_mode')->rules('required', 'min:6,max:255'),
+            Text::make('Project Description', 'project_description')->rules('required', 'min:6,max:255')->hideFromIndex(),
+            // Text::make('Key Skills', 'key_skills')->rules('required', 'min:6,max:255')->hideFromIndex(),
+            Text::make('Key Skills', 'key_skills')
+                ->resolveUsing(function ($value) {
+                    if (is_array($value)) {
+                        return implode(', ', array_column($value, 'name'));
+                    }
+                    return $value;
+                }),
+            Select::make('Employment Role/Type', 'employment_type')->options([
+                'Full Time' => 'Full Time', 'Part-Time' => 'Part-Time',
                 'Project Base' => 'Project Base',
                 'Hourly' => 'Hourly',
                 'On-Site' => 'On-Site',
-                'Freelancing' => 'Freelancing', 
-                'Contract' => 'Contract', 
-                'Shift' => 'Shift', 
-                'Consulting' => 'Consulting', 
-                'Volunteer' => 'Volunteer', 
-                'Internships' => 'Internships' ])->displayUsingLabels()->filterable()->hideFromIndex(),
-            Select::make('Salary Currency','salary_currency')->options(['$'=>'$','INR'=>'INR'])->displayUsingLabels()->filterable()->hideFromIndex(),
-            Text::make('Minimum Salary','min_salary')->hideFromIndex(),
-            Text::make('Maximum Salary','max_salary')->hideFromIndex(),
-            Text::make('Location','location')->hideFromIndex(),
-            Select::make('Education Qualification','education_qualification')->options(['Post Graduation'=>'Post Graduation','Graduation'=>'Graduation'])->displayUsingLabels()->filterable()->hideFromIndex(),
-            Text::make('Company Name','company_name')->rules('nullable'),
-            Text::make('Company Website','company_website')->hideFromIndex(),
-            Text::make('Contact Person','contact_person')->hideFromIndex(),
-            Text::make('Email Address','email')->rules('nullable')->hideFromIndex(),
-            Text::make('Contact # Country Code','contact_no_country_code')->rules('nullable')->hideFromIndex(),
-            Text::make('Contact #','contact_no')->rules('nullable')->hideFromIndex(),
-            Text::make('Company Details','company_details')->hideFromIndex(),
-            Text::make('Company Address','company_address')->hideFromIndex(),
-            File::make('Document','document')->hideFromIndex(),
-            Boolean::make('Notify about AI Recommended Applicants','notify')->trueValue('Yes')->falseValue('No')->hideFromIndex(),
-            Select::make('Status','status')->options(['New'=>'New','In Review'=>'In Reivew','Reviewed'=>'Reviewed'])->displayUsingLabels()->filterable(),
+                'Freelancing' => 'Freelancing',
+                'Contract' => 'Contract',
+                'Shift' => 'Shift',
+                'Consulting' => 'Consulting',
+                'Volunteer' => 'Volunteer',
+                'Internships' => 'Internships'
+            ])->displayUsingLabels()->filterable()->hideFromIndex(),
+            Select::make('Salary Currency Montly/Project', 'salary_currency_monthly_project')->options(['USD' => 'USD', 'INR' => 'INR'])->displayUsingLabels()->filterable()->hideFromIndex(),
+            Text::make('Minimum Salary Monthly/Project', 'min_salary_monthly_project')->hideFromIndex(),
+            Text::make('Maximum Salary Monthly/Project', 'max_salary_monthly_project')->hideFromIndex(),
+            Select::make('Salary Currency Yearly', 'salary_currency_yearly')->options(['USD' => 'USD', 'INR' => 'INR'])->displayUsingLabels()->filterable()->hideFromIndex(),
+            Text::make('Minimum Salary Yearly', 'min_salary_yearly')->hideFromIndex(),
+            Text::make('Maximum Salary Yearly', 'max_salary_yearly')->hideFromIndex(),
+            Select::make('Salary Currency Hourly', 'salary_currency_hourly')->options(['USD' => 'USD', 'INR' => 'INR'])->displayUsingLabels()->filterable()->hideFromIndex(),
+            Text::make('Minimum Salary Hourly', 'min_salary_hourly')->hideFromIndex(),
+            Text::make('Maximum Salary Hourly', 'max_salary_hourly')->hideFromIndex(),
+
+            Text::make('Location', 'location')->hideFromIndex(),
+            Select::make('Education Qualification', 'education_qualification')->options(['Post Graduation' => 'Post Graduation', 'Graduation' => 'Graduation'])->displayUsingLabels()->filterable()->hideFromIndex(),
+            Text::make('Company Name', 'company_name')->rules('nullable'),
+            Text::make('Company Website', 'company_website')->hideFromIndex(),
+            Text::make('Contact Person', 'contact_person')->hideFromIndex(),
+            Text::make('Email Address', 'email')->rules('nullable')->hideFromIndex(),
+            Text::make('Contact # Country Code', 'contact_no_country_code')->rules('nullable')->hideFromIndex(),
+            Text::make('Contact #', 'contact_no')->rules('nullable')->hideFromIndex(),
+            Text::make('Company Details', 'company_details')->hideFromIndex(),
+            Text::make('Company Address', 'company_address')->hideFromIndex(),
+            // File::make('Document', 'document')->hideFromIndex(),
+            File::make('Document', 'document')
+                ->disk('public')
+                ->path('bizionic/images')
+                ->storeAs(function (Request $request) {
+                    // Customize the filename if needed
+                    return 'document_' . time() . '.' . $request->file('document')->getClientOriginalExtension();
+                })
+                ->prunable(),
+            Boolean::make('Notify about AI Recommended Applicants', 'notify_ai_applicants')->trueValue('Yes')->falseValue('No')->hideFromIndex(),
+            Select::make('Status', 'status')->options(['New' => 'New', 'In Review' => 'In Reivew', 'Reviewed' => 'Reviewed'])->displayUsingLabels()->filterable(),
 
 
         ];
@@ -125,4 +149,18 @@ class InstaHirinRequirement extends Resource
     {
         return [];
     }
+
+    // public function fieldsForIndex(NovaRequest $request)
+    // {
+    //     return [
+    //         // Define the key_skills field for the index page
+    //         Text::make('Key Skills', 'key_skills')
+    //             ->resolveUsing(function ($value) {
+    //                 if (is_array($value)) {
+    //                     return implode(', ', array_column($value, 'name'));
+    //                 }
+    //                 return $value;
+    //             }),
+    //     ];
+    // }
 }

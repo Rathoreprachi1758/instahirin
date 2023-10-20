@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use Log;
 use App\Models\Job;
 use App\Models\Hire;
 use App\Models\Lead;
@@ -10,20 +11,23 @@ use App\Models\Career;
 use App\Models\Expert;
 use App\Models\Country;
 use App\Models\Countrie;
-use App\Models\HireRequest;
 // use App\Models\Expert;
-use App\Models\Subscription;
+use App\Models\TimeZones;
 // use App\Models\HireRequest;
 // use App\Models\Subscription;
+use App\Models\HireRequest;
+use App\Models\Subscription;
 use Illuminate\Http\Request;
 use App\Models\TeamContactUs;
+//use Laravel\Nova\Fields\Timezone;
+use App\Models\AvailabilityData;
 use App\Models\InstaHirinOnboard;
 use Illuminate\Support\Facades\DB;
-use Illuminate\Support\Facades\Log;
 use App\Models\InstaHirinRequirement;
 use Illuminate\Support\Facades\Cache;
 use App\Models\Hire_requests_calender;
 use App\Models\InstaHirinOnboardDocument;
+
 
 
 
@@ -49,7 +53,7 @@ class ContentController extends Controller
         }
 
         $menusResponse = Cache::get('menus', nova_get_menu_by_slug('header'));
-        //        echo "<pre>";print_r($menusResponse['menuItems']);exit;
+        //        echo "<pre>";print_r($menusResponse['menuItems']);exit;f
         // dd($template);
         if ($page->slug == 'hire-me') {
             $jobs = Job::where('status', 'Open')->get();
@@ -62,16 +66,18 @@ class ContentController extends Controller
                 'jobs' => $jobs,
             ]);
         }
-
+        $timezones = TimeZones::all();
         return view('welcome', [
             'title' => $page->meta_title,
             'description' => $page->meta_description,
             'keywords' => $page->meta_keywords,
             'menus' => json_decode(json_encode((object) $menusResponse['menuItems']), FALSE),
             'template' => $template,
-            'countries' => json_encode(Countrie::all())
+            'countries' => json_encode(Countrie::all()),
+            'timezones' => $timezones,
         ]);
     }
+
 
     public function hireExpert($id)
     {
@@ -87,7 +93,8 @@ class ContentController extends Controller
             'menus' => json_decode(json_encode((object) $menusResponse['menuItems']), FALSE),
             'template' => 'hireForm',
             'expert' => $expert,
-            'countries' => json_encode(Countrie::all())
+            'countries' => json_encode(Countrie::all()),
+            'timezones' => json_encode(TimeZones::all())
         ]);
     }
 
@@ -208,38 +215,43 @@ class ContentController extends Controller
     {
         // dd($request->all());
         // Validate the request data, including the uploaded file
+        //! for form where `hiring_type` exists
         if (isset($request->hiring_type) && !isset($request->company_info)) {
 
             $validatedData = $request->validate([
                 'name' => 'required',
-                'company' => '',
-                'email' => 'required|email',
+                'country_code' => 'required',
                 'phone' => '',
-                'country_code' => '',
-                'document' => 'file',
+                'company' => 'required',
+                'email' => 'required|email',
                 'website' => '',
-                'message' => '',
                 'address' => '',
+                'message' => '',
+                'hiring_type' => '',
                 'from_date' => '',
-                'to_date' => '',
-                'from_time' => '',
-                'to_time' => '',
-                'source' => '',
                 'virtual_assistance_call' => '',
                 'availability_date' => '',
                 'availability_time_from' => '',
                 'availability_time_to' => '',
+                'availability_time_zone' => '',
+                'document' => 'file',
+                'term_of_use' => '',
+                'future_promotion' => '',
+                // 'to_date' => '',
+                // 'from_time' => '',
+                // 'to_time' => '',
+                'source' => '',
                 'template' => '',
-                'expert' => '',
-                'hiring_type' => '',
+                'expert' => 'required',
             ]);
-
+            // dd($validatedData);
             // Create a new instance of the Hire Request model
             $formData = new HireRequest();
 
 
 
             // Set the form data from the validated request
+            // $formData->expert_id = $validatedData['expert_id'];
             $formData->name = $validatedData['name'];
             $formData->company = $validatedData['company'];
             $formData->email = $validatedData['email'];
@@ -247,16 +259,29 @@ class ContentController extends Controller
             $formData->website = $validatedData['website'];
             $formData->message = $validatedData['message'];
             $formData->address = $validatedData['address'];
-            // $formData->from_date = $validatedData['from_date'];
+            $formData->from_date = $validatedData['from_date'];
             //$formData->to_date = $validatedData['to_date'];
             //$formData->from_time = $validatedData['from_time'];
             //$formData->to_time = $validatedData['to_time'];
             $formData->priority = 'normal';
             $formData->source = ($formData->source) ? $validatedData['source'] : '';
             $formData->virtual_assistance_call = isset($validatedData['virtual_assistance_call']) ? 'Yes' : 'No';
-            //$formData->availability_date = $validatedData['availability_date'];
-            // $formData->availability_time_from = $validatedData['availability_time_from'];
-            // $formData->availability_time_to = $validatedData['availability_time_to'];
+            $formData->term_of_use = isset($validatedData['term_of_use']) ? 'Yes' : 'No';
+            $formData->future_promotion = isset($validatedData['future_promotion']) ? 'Yes' : 'No';
+            // $formData->availability_date = json_encode($validatedData['availability_date']);
+            // $formData->availability_time_from = json_encode($validatedData['availability_time_from']);
+            // $formData->availability_time_to = json_encode($validatedData['availability_time_to']);
+            // $formData->timezone = json_encode($validatedData['availability_time_zone']);
+            //! for multiple dates
+            // foreach ($request->availability_date as $key => $date) {
+            //     $availabilityData = new AvailabilityData([
+            //         'availability_date' => $date,
+            //         'availability_time_from' => $request->availability_time_from[$key],
+            //         'availability_time_to' => $request->availability_time_to[$key],
+            //         'availability_time_zone' => $request->availability_time_zone[$key],
+            //     ]);
+            //     $formData->availabilityData()->save($availabilityData);
+            // }
             $formData->hiring_type = $validatedData['hiring_type'];
             $formData->template = @$validatedData['template'];
             $formData->expert_id = @$validatedData['expert'];
@@ -268,6 +293,16 @@ class ContentController extends Controller
                 $formData->document = time() . $filename;
             }
             $formData->save();
+            foreach ($request->availability_date as $key => $date) {
+                $availabilityData = new AvailabilityData([
+                    'availability_date' => $date,
+                    'availability_time_from' => $request->availability_time_from[$key],
+                    'availability_time_to' => $request->availability_time_to[$key],
+                    'availability_time_zone' => $request->availability_time_zone[$key],
+                ]);
+
+                $formData->availabilityData()->save($availabilityData);
+            }
         } else if (isset($request->company_info)) {
             $requestId = $formData->id;
             for ($n = 0; $n < count($request->from_date); $n++) {
@@ -291,10 +326,12 @@ class ContentController extends Controller
             }
         } else if (isset($request->company_info)) {
             // dd('we are here');
+
             $validatedData = $request->validate([
                 'name' => 'required',
                 'company' => '',
                 'email' => 'required|email',
+                'country_code' => '',
                 'phone' => '',
                 'document' => 'file',
                 'company_info' => '',
@@ -320,7 +357,7 @@ class ContentController extends Controller
             $formData->company = $validatedData['company'];
             $formData->company_info = $validatedData['company_info'];
             $formData->email = $validatedData['email'];
-            $formData->phone = $validatedData['phone'];
+            $formData->phone =  $validatedData['country_code'] . $validatedData['phone'];
             $formData->website = $validatedData['website'];
             $formData->message = $validatedData['message'];
             $formData->address = $validatedData['address'];
@@ -347,9 +384,11 @@ class ContentController extends Controller
             }
             $formData->save();
         } else if (!isset($request->company)) {
+            //! this is not for hire form
             $validatedData = $request->validate([
                 'name' => 'required',
                 'email' => 'required|email',
+                'country_code' => '',
                 'phone' => '',
                 'message' => 'required',
             ]);
@@ -361,15 +400,17 @@ class ContentController extends Controller
             $formData->name = $validatedData['name'];
             $formData->company = '-';
             $formData->email = $validatedData['email'];
-            $formData->phone = $validatedData['phone'];
+            $formData->phone = $validatedData['country_code'] . $validatedData['phone'];
             $formData->message = $validatedData['message'];
 
             $formData->save();
         } else {
+            //! this is not for hire form
             $validatedData = $request->validate([
                 'name' => 'required',
                 'company' => '',
                 'email' => 'required|email',
+                'country_code' => '',
                 'phone' => '',
                 'message' => 'required',
             ]);
@@ -381,7 +422,7 @@ class ContentController extends Controller
             $formData->name = $validatedData['name'];
             $formData->company = $validatedData['company'];
             $formData->email = $validatedData['email'];
-            $formData->phone = $validatedData['phone'];
+            $formData->phone = $validatedData['country_code'] . $validatedData['phone'];
             $formData->message = $validatedData['message'];
 
             $formData->save();
@@ -441,13 +482,20 @@ class ContentController extends Controller
             'position_title' => 'required',
             'work_mode' => 'required',
             'project_description' => 'required',
-            'key_skills' => '',
+            'key_skills' => 'required|json',
             'min_experience' => '',
             'max_experience' => '',
             'employment_type' => '',
-            'salary_currency' => '',
-            'min_salary' => '',
-            'max_salary' => '',
+            // changes
+            'salary_currency_monthly_project' => '',
+            'min_salary_monthly_project' => '',
+            'max_salary_monthly_project' => '',
+            'salary_currency_yearly' => '',
+            'min_salary_yearly' => '',
+            'max_salary_yearly' => '',
+            'salary_currency_hourly' => '',
+            'min_salary_hourly' => '',
+            'max_salary_hourly' => '',
             'location' => '',
             'education_qualification' => '',
             'company_name' => '',
@@ -459,9 +507,10 @@ class ContentController extends Controller
             'company_details' => '',
             'company_address' => '',
             'document' => 'file',
-            'notify' => '',
+            'notify_ai_applicants' => '',
         ]);
 
+        //Log::info('Request data:', $request->all());
         // Create a new instance of the Hire Request model
         $formData = new InstaHirinRequirement();
 
@@ -470,12 +519,21 @@ class ContentController extends Controller
         $formData->work_mode        = $validatedData['work_mode'];
         $formData->project_description = $validatedData['project_description'];
         $formData->key_skills       = $validatedData['key_skills'];
+        // $formData->key_skills = json_decode($validatedData['key_skills']);
         $formData->min_experience   = $validatedData['min_experience'];
         $formData->max_experience   = $validatedData['max_experience'];
         $formData->employment_type  = $validatedData['employment_type'];
-        $formData->salary_currency  = $validatedData['salary_currency'];
-        $formData->min_salary       = $validatedData['min_salary'];
-        $formData->max_salary       = $validatedData['max_salary'];
+        // changes
+        $formData->salary_currency_monthly_project = $validatedData['salary_currency_monthly_project'];
+        $formData->min_salary_monthly_project = $validatedData['min_salary_monthly_project'];
+        $formData->max_salary_monthly_project = $validatedData['max_salary_monthly_project'];
+        $formData->salary_currency_yearly = $validatedData['salary_currency_yearly'];
+        $formData->min_salary_yearly = $validatedData['min_salary_yearly'];
+        $formData->max_salary_yearly = $validatedData['max_salary_yearly'];
+        $formData->salary_currency_hourly = $validatedData['salary_currency_hourly'];
+        $formData->min_salary_hourly = $validatedData['min_salary_hourly'];
+        $formData->max_salary_hourly = $validatedData['max_salary_hourly'];
+
         $formData->location         = $validatedData['location'];
         $formData->education_qualification = $validatedData['education_qualification'];
         $formData->company_name     = $validatedData['company_name'];
@@ -494,7 +552,8 @@ class ContentController extends Controller
             $file->storeAs('bizionic/images', $filename, 'public');
             $formData->document = $filename;
         }
-        $formData->notify           = $validatedData['notify'];
+        // $formData->notify_ai_applicants   = $validatedData['notify_ai_applicants'];
+        $formData->notify_ai_applicants = isset($validatedData['notify_ai_applicants']) ? 'Yes' : 'No';
         $formData->save();
 
 
@@ -582,7 +641,7 @@ class ContentController extends Controller
     public function submitForm(Request $request)
     {
         // Validate the request data, including the uploaded file
-        Log::info('Request data:', $request->all());
+        // Log::info('Request data:', $request->all());
 
         $validatedData = $request->validate([
             'name' => 'required',
@@ -660,36 +719,80 @@ class ContentController extends Controller
         // dd($request->all());
         $formData->save();
 
+        // if ($request->hasFile('document')) {
+        //     //echo "here we are";
+        //     if (is_array($request->document) && count($request->document) > 0) {
+        //         $uploadedDocuments = [];
+        //         foreach ($request->document as $document) {
+        //             //echo 'Uploading file: ' . $document->getClientOriginalName() . '<br>';
+        //             $originalFilename = $document->getClientOriginalName();
+        //             $timestamp = time();
+        //             $filename = $timestamp . '_' . $originalFilename;
+        //             $document->storeAs('bizionic/files', $filename, 'public');
+        //             $uploadedDocuments[] = [
+        //                 'name' => $originalFilename, // Store the original filename
+        //                 'unique_name' => $filename,
+        //                 'path' => 'bizionic/images/' . $filename,
+        //             ];
+        //             // $formData2->insta_hirin_onboard_id = $formData->id;
+        //             // $file = $document;
+        //             // $filename = $file->getClientOriginalName();
+        //             // $file->storeAs('bizionic/images', $filename, 'public');
+        //             // $formData2->document = $filename;
+        //             // $formData2->save();
+        //         }
+        //         // Save the uploaded document information in the database
+        //         $formData->document = json_encode($uploadedDocuments);
+        //         $formData->save();
+        //     }
+        // }
+
         if ($request->hasFile('document')) {
-            //echo "here we are";
-            if (is_array($request->document) && count($request->document) > 0) {
-                $uploadedDocuments = [];
-                foreach ($request->document as $document) {
-                    //echo 'Uploading file: ' . $document->getClientOriginalName() . '<br>';
-                    $originalFilename = $document->getClientOriginalName();
-                    $timestamp = time();
-                    $filename = $timestamp . '_' . $originalFilename;
-                    $document->storeAs('bizionic/images', $filename, 'public');
-                    $uploadedDocuments[] = [
-                        'name' => $originalFilename, // Store the original filename
-                        'unique_name' => $filename,
-                        'path' => 'bizionic/images/' . $filename,
-                    ];
-                    // $formData2->insta_hirin_onboard_id = $formData->id;
-                    // $file = $document;
-                    // $filename = $file->getClientOriginalName();
-                    // $file->storeAs('bizionic/images', $filename, 'public');
-                    // $formData2->document = $filename;
-                    // $formData2->save();
-                }
-                // Save the uploaded document information in the database
-                $formData->document = json_encode($uploadedDocuments);
-                $formData->save();
+            $uploadedDocuments = [];
+
+            foreach ($request->file('document') as $document) {
+                $originalFilename = $document->getClientOriginalName();
+                $timestamp = time();
+                $filename = $timestamp . '_' . $originalFilename;
+                $document->storeAs('bizionic/images', $filename, 'public');
+
+                $uploadedDocuments[] = [
+                    'name' => $originalFilename, // Store the original filename
+                    'unique_name' => $filename,
+                    'path' => 'bizionic/images/' . $filename,
+                ];
             }
+
+            // Save the uploaded document information in the database
+            $formData->document = json_encode($uploadedDocuments);
+            $formData->save();
         }
+
+
+
         DB::commit();
 
         // Return a response indicating success
         return response()->json(['message' => 'Form submitted successfully']);
+    }
+
+
+    // Jobs Form Controller
+    public function applyShow($jobId)
+    {
+        //dd($jobId);
+        $job = Job::find($jobId);
+        //dd($job);
+
+
+        return view('templates.apply-now-form', ['job' => $job]);
+    }
+
+
+    // Time Zone Controller
+    public function getTimezones()
+    {
+        $timezones = TimeZones::all();
+        return response()->json($timezones);
     }
 }

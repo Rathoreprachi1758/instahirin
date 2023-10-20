@@ -1402,6 +1402,7 @@ export default {
         })
         .catch((error) => {
           this.showFailureMessage();
+          console.error("Error response from server:", error.response.data);
           console.error("Form submission failed:", error);
         });
     },

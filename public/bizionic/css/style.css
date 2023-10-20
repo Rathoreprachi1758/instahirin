@@ -3422,7 +3422,8 @@ html {
     padding: 14px 16px;
     background: #fff;
     cursor: pointer;
-    border-right: 10px solid transparent; color: #757575;
+    border-right: 10px solid transparent;
+    color: #757575;
 }
 
 .project_form_select {
@@ -3994,10 +3995,15 @@ html {
     font-family: 'avenirmedium';
     text-align: justify;
     line-height: 1.6;
+    white-space: normal;
     font-size: 15px;
-    margin-bottom: 15px;
+    margin-bottom: 25px;
     max-height: 100px;
+    text-overflow: ellipsis;
     overflow: hidden;
+    -webkit-line-clamp: 3;
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
 }
 
 
@@ -4418,15 +4424,16 @@ html {
 
 
 
-.checkbox-label input:checked ~ .checkbox-custom {
+.checkbox-label input:checked~.checkbox-custom {
     background-color: #e0e1e2;
-     /*border-radius: 5px;
+    /*border-radius: 5px;
     -webkit-transform: rotate(0deg) scale(1);
     -ms-transform: rotate(0deg) scale(1);
     transform: rotate(0deg) scale(1); */
-    opacity:1;
+    opacity: 1;
     /* border: 1px solid #e0e1e2; */
 }
+
 .clientSlider_inner a {
     width: 100%;
     height: 100px;
@@ -4836,8 +4843,8 @@ html {
 }
 
 .hireFormSetting .project_form_field input {
-    font-size: 13px;
-    padding: 10px 15px;
+    font-size: 11px;
+    padding: 10px 11px;
 }
 
 
@@ -4849,12 +4856,13 @@ html {
 
 .dateTime_range label {
     display: block;
-    min-width: 50px;
+    min-width: 48px;
+    font-size: 11px;
 }
 
 .dateTime_range .project_form_field {
-    max-width: 128px;
-    min-width: 128px;
+    max-width: 105px;
+    min-width: 110px;
 }
 
 .hireFormSetting .project_form_textarea textarea {
@@ -5419,7 +5427,8 @@ html {
 
 .marketingTalent_info .custom_tittle p {
     font-size: 18px;
-    line-height: 1.7; text-align: justify !important;
+    line-height: 1.7;
+    text-align: justify !important;
 }
 
 .marketingTalent_info {
@@ -8286,7 +8295,7 @@ html {
     justify-content: space-between;
 }
 
- 
+
 
 
 
@@ -8420,13 +8429,16 @@ html {
 
 .codeCountry {
     min-width: 25%;
-    margin-right: 1%; 
+    margin-right: 1%;
 }
 
 .filedPhone {
     min-width: 74%;
 }
-.oncontact {min-height: 51px;}
+
+.oncontact {
+    min-height: 51px;
+}
 
 
 .project_form_textarea .multiselect__tag {
@@ -8478,15 +8490,31 @@ html {
 
 
 
-.policy_pages_content  strong {font-family: 'avenirmedium';}
+.policy_pages_content strong {
+    font-family: 'avenirmedium';
+}
 
-.texte_787878 { color: #787878 !important;}
+.texte_787878 {
+    color: #787878 !important;
+}
 
 
 
-.applyNow_text { width: 100%; padding: 40px 0px; border-top: 1px solid #000; border-bottom: 1px solid #000; margin: 40px 0px;}
+.applyNow_text {
+    width: 100%;
+    padding: 40px 0px;
+    border-top: 1px solid #000;
+    border-bottom: 1px solid #000;
+    margin: 40px 0px;
+}
 
-.applyNow_textInfo { width: 100%; display: flex; justify-content: space-between;padding: 15px 0px; align-items: center;}
+.applyNow_textInfo {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    padding: 15px 0px;
+    align-items: center;
+}
 
 .policy_pages_detail .careerPage_inner {
     width: 100%;
@@ -8687,3 +8715,4 @@ background: linear-gradient(0deg, rgba(221,221,221,1) 0%, rgba(244,244,244,1) 10
 
 
 
+}
