@@ -308,6 +308,86 @@ p {
     position: relative;
 }
 
+
+
+.header_up { width: 100%; position: relative; background-color: #0b3b6a;}
+
+.header_up_detail { width: 100%; padding: 10px 0px; display: flex; align-items: center; justify-content: space-between;}
+
+.logo_socialInfo { width: auto; display: flex; align-items: center; justify-content: space-between;}
+
+.logo_socialInfo .social_info { padding-top: 0px !important;}
+
+.logo_socialInfo .social_info a {
+    margin-right: 10px !important;
+    color: #fff;
+    font-size: 15px !important;}
+
+.eshareWhite_logo {
+    width: auto; 
+    margin-left: 60px; 
+}
+
+.eshareWhite_logo a {
+    width: 95px;
+    display: block;
+    transition: all 0.2s ease;
+    -moz-transition: all 0.2s ease;
+    -ms-transition: all 0.2s ease;
+    -o-transition: all 0.2s ease;
+    -webkit-transition: all 0.3s ease;
+}
+
+.eshareWhite_logo a img {
+    width: 100%;
+    display: block;
+}
+
+
+.trendingNav { width: auto; display: flex; align-items: center; justify-content: space-between;}
+
+.trendingNav ul { display: flex; align-items: center;}
+
+.trendingNav ul li { padding: 0px 5px;}
+
+.trendingNav ul li a { border: 1px solid #fff; padding: 3px 8px; border-radius: 4px; font-size: 10px; display: block; color: #fff;}
+ 
+.change_langOuter{
+    border-radius: 4px;
+    background-color: #fff;
+    border: 1px solid #000;
+    width: 120px; 
+    color: #000;
+    padding: 1px 3px;
+    font-family: Arial; min-height: 25px; margin-left: 20px;
+}
+.changeLang:focus{
+    outline: none;
+    box-shadow: none;
+}
+
+
+.change_langOuter span { display: none !important;}
+
+.change_langOuter .skiptranslate { font-size: 0px !important;}
+
+.change_langOuter .goog-te-combo { font-size: 10px;}
+
+.skiptranslate  iframe{ display: none !important;}
+
+
+.authBtns { width: auto; display: flex; align-items: center; justify-content: space-between; padding-left: 10px;}
+
+.authBtns ul { display: flex; align-items: center;}
+
+.authBtns ul li { padding: 0px 0px 0px 8px;}
+
+.authBtns ul li a { border: 1px solid #fff; background-color: #fff; padding: 5px 10px; border-radius: 4px; font-size: 10px; display: block; color: #000;}
+ 
+
+
+
+
 .main_logo {
     width: auto;
     padding: 15px 0px;
@@ -403,7 +483,9 @@ p {
     font-family: 'avenirmedium' !important;
     border-width: 1px !important;
     transform: translateY(-15px);
-    font-size: 12px;
+    font-size: 12px; 
+        border: 1px solid #27a5de;
+        background: #27a5de;
 }
 
 .main_nav ul li:hover>a {
@@ -439,9 +521,11 @@ p {
     display: block;
 }
 
+.main_nav ul li a.hire_me_button > small , .main_nav ul li a.btn_default > small { display: none !important; z-index: 22;}
+
 
 .main_container {
-    padding-top: 105px;
+    padding-top: 150px;
     width: 100%;
 }
 
@@ -3332,6 +3416,8 @@ html {
     color: #5a5a5a;
 }
 
+.technologyFloating_menu .floatingMenu_col_list ul li a { 
+    font-size: 11px;}
 
 .has_ul {
     display: flex !important;
@@ -5189,7 +5275,7 @@ html {
 .hire_me_button {
     position: relative;
     color: #fff !important;
-    background: #19437a;
+    background: #1b5298;
     padding: 7px 12px 4px 12px !important;
     font-size: 12px !important;
     border-radius: 5px;
@@ -5474,13 +5560,13 @@ html {
     width: 100vw;
     left: 0px;
     margin-left: 0px;
-    top: 105px;
+    top: 151px;
     padding: 0px;
     border-top: 2px solid #000029;
 }
 
 .fixed_header .flotNav_added .floatingMenu {
-    top: 97px;
+    top: 142px;
 }
 
 .flotNav_added .main_nav ul li small {
@@ -5510,7 +5596,7 @@ html {
 
 .innerColum_menu {
     width: 100%;
-    padding: 10px 0px 10px 0px;
+    padding: 5px 0px 5px 0px;
 }
 
 .innerColum_menu ul {
@@ -5526,14 +5612,14 @@ html {
     color: #000029;
     font-family: 'avenirblack';
     border-bottom: 1px solid #000029;
-    margin-bottom: 6px;
+    margin-bottom: 5px;
     display: inline-block;
-    font-size: 13px;
-    min-height: 20px;
+    font-size: 12px;
+    min-height: 18px;
 }
 
 .innerColum_menu ul li {
-    padding: 1px 0px 1px 0px;
+    padding: .5px 0px .5px 0px;
 }
 
 
@@ -5541,8 +5627,8 @@ html {
     width: 100%;
     height: 100%;
     border-right: 1px solid #5a5a5a;
-    padding: 10px 20px 15px 20px;
-    min-height: 575px;
+    padding: 5px 20px 10px 20px;
+    min-height: 522px;
 }
 
 .border_0 {
@@ -5552,7 +5638,7 @@ html {
 
 .labs_location {
     width: 100%;
-    padding: 30px;
+    padding: 25px 20px;
 }
 
 .labs_location_info {
@@ -8678,21 +8764,48 @@ background: linear-gradient(0deg, rgba(221,221,221,1) 0%, rgba(244,244,244,1) 10
 
 
 
+.get_in_touchSection { width: 100%; background-color: #f5f5f5;}
+
+.get_in_touchSection_detail { width: 100%; padding: 70px 0px;}
+
+.get_in_touchSection_detail a {color: #07396A !important;}
+.get_in_touchSection_detail i {color: #07396A !important;}
+
+
+.contactUs_info_form { width: 100%;}
+
+.contactUs_info_field {background: #FFFFFF ; padding: 6px 10px ; border: 1px solid #BCBCBC; border-radius: 15px; margin: 7px 0px;}
+
+.contactUs_info_field strong{ display: block; color: #AFADAD; font-size:13px;}
+
+.contactUs_info_fieldInput { width: 100%; position: relative;}
+.contactUs_info_fieldInput input { width: 100%; font-size: 13px; color: #BDBBBB;}
+
+.contactUs_info_fieldSelect { width: 100%; position: relative; padding-top: 3px;}
+
+.contactUs_info_fieldSelect select { border: 0px !important;   height: auto !important;
+    padding: 0 !important;
+    font-size: 13px !important; 
+    color: #BDBBBB !important; 
+    border-radius: 0px !important;}
+
+.contactUs_info_fieldSelect .form-control:focus { box-shadow: none !important;}
+
+.contactUs_info_fieldText { width: 100%; position: relative;}
+.contactUs_info_fieldText textarea { width: 100%; font-size: 13px; color: #BDBBBB; min-height: 80px;}
+
+
+.get_in_touchSection .modal-dialog {
+    max-width: 850px;
+}
 
 
 
 
+.colSet  {border-right: 1px solid #dee2e6!important;}
+.colSet:last-child  {border: 0px !important}
 
-
-
-
-
-
-
-
-
-
-
+.get_in_touchSection .colSet p { cursor: pointer;}
 
 
 
