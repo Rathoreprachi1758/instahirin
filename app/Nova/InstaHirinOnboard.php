@@ -129,7 +129,9 @@ class InstaHirinOnboard extends Resource
                     // Customize the filename if needed
                     return 'document_' . time() . '.' . $request->file('document')->getClientOriginalExtension();
                 })
-                ->prunable(),
+                ->prunable()
+                ->help('Upload a zip archive containing documents.'),
+
             Select::make('Status', 'status')
                 ->options(['New' => 'New', 'In Review' => 'In Reivew', 'Reviewed' => 'Reviewed'])
                 ->displayUsingLabels()
