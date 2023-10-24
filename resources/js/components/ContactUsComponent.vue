@@ -65,40 +65,6 @@
           </div>
         </div>
 
-        <!-- Contact Details -->
-
-        <!-- <div class="col-lg-6 col-md-12">
-                        <div class="project_form_field split_in_two">
-                            <div class="project_form_select m-0 mr-2">
-                                <select
-                                v-model="selectedPhoneCode"
-                                class="project_form form-select codeCountry oncontact"
-                                names="country_code"
-                                id="country_code"
-                                >
-                                <option value="" disabled>Select Phone Code</option>
-
-                                <option
-                                    v-for="(country, id) in phoneCodes"
-                                    :value="country.phone"
-                                    :key="id"
-                                >
-                                    {{ country.name }} +{{ country.phone }}
-                                </option>
-                                </select>
-                            </div>
-
-                                <input
-                                type="text"
-                                v-model="phoneNumber"
-                                placeholder="Phone number"
-                                name="contact_number"
-                                id="contact_number" class="filedPhone"
-                                />
-                            <input type="hidden" name="contact_details" :value="uploadedFiles" />
-                        </div>
-                    </div> -->
-
         <div class="col-lg-6 col-md-12">
           <div class="project_form_field split_in_two">
             <div class="project_form_select m-0 mr-2">
@@ -144,37 +110,6 @@
             />
           </div>
         </div>
-
-        <!-- <div class="col-lg-6 col-md-12">
-                        <div class="project_form_select">
-                            <select
-                                class="form-select"
-                                aria-label="Default select example"
-                                v-model="formData.hiring_type"
-                                name="hiring_type"
-                                id="hiring_type"
-                            >
-                                <option value="dedicated_developer">Hire Dedicated Developers</option>
-                                <option value="dedicated">Hire Dedicated</option>
-                                <option value="developers">Hire Developers</option>
-                            </select>
-                        </div>
-                    </div> -->
-
-        <!-- <div class="col-lg-6 col-md-12">
-                        <div class="project_form_select">
-                            <select
-                                class="form-select"
-                                aria-label="Default select example"
-                                v-model="formData.budget"
-                                name="budget"
-                                id="budget"
-                            >
-                                <option value="below_10K">Below $10K</option>
-                                <option value="above_10K">Above $10K</option>
-                            </select>
-                        </div>
-                    </div> -->
 
         <div class="col-lg-12 col-md-12">
           <div class="project_form_textarea">
@@ -302,16 +237,30 @@ export default {
         });
     },
     showSuccessMessage() {
-      this.$refs.successMessage.style.display = "block";
+      const successMessage = this.$refs.successMessage;
+      successMessage.style.display = "block";
+      //successMessage.scrollIntoView({ behavior: "smooth" });
+      const scrollOptions = {
+        behavior: "smooth",
+        block: "center",
+      };
+      successMessage.scrollIntoView(scrollOptions);
       setTimeout(() => {
-        this.$refs.successMessage.style.display = "none";
-      }, 3000);
+        successMessage.style.display = "none";
+      }, 5000);
     },
     showFailureMessage() {
-      this.$refs.failureMessage.style.display = "block";
+      const failureMessage = this.$refs.failureMessage;
+      failureMessage.style.display = "block";
+      //failureMessage.scrollIntoView({ behavior: "smooth" });
+      const scrollOptions = {
+        behavior: "smooth",
+        block: "center",
+      };
+      failureMessage.scrollIntoView(scrollOptions);
       setTimeout(() => {
-        this.$refs.failureMessage.style.display = "none";
-      }, 3000);
+        failureMessage.style.display = "none";
+      }, 5000);
     },
   },
 };

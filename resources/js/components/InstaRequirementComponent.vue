@@ -78,7 +78,17 @@
               v-model="project_description"
               name="project_description"
               id="project_description"
+              maxlength="5000"
+              @input="updateCountProject"
             ></textarea>
+            <!-- Counter  -->
+            <div id="character-count" :class="{ 'limit-reached': isLimitReached1 }">
+              <span v-if="limitReached1" class="message mr-2">
+                Characters Limit reached
+              </span>
+              <span id="current">{{ characterCount1 }}</span>
+              <span id="maximum">/ 5000</span>
+            </div>
           </div>
         </div>
       </div>
@@ -212,7 +222,7 @@
           <strong class="req_lable">Monthly / Project:</strong>
         </div>
       </div>
-      <div class="col-lg-2 col-md-4">
+      <div class="col-lg-4 col-md-4">
         <div class="requireForm_lable">
           <div class="project_form_select">
             <select
@@ -228,7 +238,7 @@
           </div>
         </div>
       </div>
-      <div class="col-lg-5 col-md-4">
+      <div class="col-lg-4 col-md-4">
         <div class="requireForm_lable">
           <div class="project_form_field">
             <input
@@ -241,7 +251,7 @@
           </div>
         </div>
       </div>
-      <div class="col-lg-5 col-md-4">
+      <div class="col-lg-4 col-md-4">
         <div class="requireForm_lable">
           <div class="project_form_field">
             <input
@@ -260,7 +270,7 @@
           <strong class="req_lable">Yearly:</strong>
         </div>
       </div>
-      <div class="col-lg-2 col-md-4">
+      <div class="col-lg-4 col-md-4">
         <div class="requireForm_lable">
           <div class="project_form_select">
             <select
@@ -276,7 +286,7 @@
           </div>
         </div>
       </div>
-      <div class="col-lg-5 col-md-4">
+      <div class="col-lg-4 col-md-4">
         <div class="requireForm_lable">
           <div class="project_form_field">
             <input
@@ -289,7 +299,7 @@
           </div>
         </div>
       </div>
-      <div class="col-lg-5 col-md-4">
+      <div class="col-lg-4 col-md-4">
         <div class="requireForm_lable">
           <div class="project_form_field">
             <input
@@ -308,7 +318,7 @@
           <strong class="req_lable">Hourly:</strong>
         </div>
       </div>
-      <div class="col-lg-2 col-md-4">
+      <div class="col-lg-4 col-md-4">
         <div class="requireForm_lable">
           <div class="project_form_select">
             <select
@@ -324,7 +334,7 @@
           </div>
         </div>
       </div>
-      <div class="col-lg-5 col-md-4">
+      <div class="col-lg-4 col-md-4">
         <div class="requireForm_lable">
           <div class="project_form_field">
             <input
@@ -337,7 +347,7 @@
           </div>
         </div>
       </div>
-      <div class="col-lg-5 col-md-4">
+      <div class="col-lg-4 col-md-4">
         <div class="requireForm_lable">
           <div class="project_form_field">
             <input
@@ -513,7 +523,17 @@
               name="company_details"
               id="company_details"
               v-model="company_details"
+              @input="updateCountCompany"
+              maxlength="5000"
             ></textarea>
+            <!-- Counter  -->
+            <div id="character-count" :class="{ 'limit-reached': isLimitReached2 }">
+              <span v-if="limitReached2" class="message mr-2">
+                Characters Limit reached
+              </span>
+              <span id="current">{{ characterCount2 }}</span>
+              <span id="maximum">/ 5000</span>
+            </div>
           </div>
         </div>
       </div>
@@ -528,7 +548,16 @@
               name="company_address"
               id="company_address"
               v-model="company_address"
+              @input="updateCountCompanyAddress"
+              maxlength="5000"
             ></textarea>
+            <div id="character-count" :class="{ 'limit-reached': isLimitReached3 }">
+              <span v-if="limitReached3" class="message mr-2">
+                Characters Limit reached
+              </span>
+              <span id="current">{{ characterCount3 }}</span>
+              <span id="maximum">/ 5000</span>
+            </div>
           </div>
         </div>
       </div>
@@ -608,15 +637,19 @@
   background: #fff;
 }
 
-/* .multiselect__tag {
-  font-size: 11px;
-  border-radius: 50px;
-  background: #ccc;
-  padding: 3px 8px 3px;
-  margin-right: 10px;
-  position: relative;
-  color: black;
-} */
+#character-count {
+  float: right;
+  padding: 0.1rem 0 0 0;
+  font-size: 0.875rem;
+}
+
+#character-count.limit-reached .message {
+  color: red;
+}
+
+#character-count .message {
+  color: red;
+}
 </style>
 
 <script>
@@ -670,6 +703,11 @@ export default {
       company_address: "",
       document: "",
       notify_ai_applicants: false,
+      //   Counter
+      //   characterCount2: 0,
+      limitReached1: false,
+      limitReached2: false,
+      limitReached3: false,
     };
   },
   mounted() {
@@ -680,8 +718,61 @@ export default {
 
     // this.$refs.current_location.focus();
   },
+  computed: {
+    // project description
+    characterCount1() {
+      return this.project_description.length;
+    },
+    isLimitReached1() {
+      return this.characterCount1 >= 5000;
+    },
+    // Company detail count
+    characterCount2() {
+      return this.company_details.length;
+    },
+    isLimitReached2() {
+      return this.characterCount2 >= 5000;
+    },
+
+    // company address
+
+    characterCount3() {
+      return this.company_address.length;
+    },
+    isLimitReached3() {
+      return this.characterCount3 >= 5000;
+    },
+  },
 
   methods: {
+    // Character Counter
+    updateCountProject() {
+      if (this.project_description.length >= 5000) {
+        this.project_description = this.project_description.substring(0, 5000);
+        this.limitReached1 = true;
+      } else {
+        this.limitReached1 = false;
+      }
+    },
+
+    updateCountCompany() {
+      if (this.company_details.length >= 5000) {
+        this.company_details = this.company_details.substring(0, 5000);
+        this.limitReached2 = true;
+      } else {
+        this.limitReached2 = false;
+      }
+    },
+
+    updateCountCompanyAddress() {
+      if (this.company_address.length >= 5000) {
+        this.company_address = this.company_address.substring(0, 5000);
+        this.limitReached3 = true;
+      } else {
+        this.limitReached3 = false;
+      }
+    },
+
     handleFileChange(event) {
       const file = event.target.files[0];
       this.document = file;
