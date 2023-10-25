@@ -8809,23 +8809,176 @@ background: linear-gradient(0deg, rgba(221,221,221,1) 0%, rgba(244,244,244,1) 10
 
 
 
+.startup_innerPages { background: #efefef !important; padding-bottom: 80px;}
 
+.startup_innerPages .industryNew_section_detail  { overflow: hidden; background: url(../images/startup_pages_texture.png) top center no-repeat #fff;padding: 90px 60px 80px;}
 
+.startup_innerPages .industryNew_section1 .custom_tittle { padding: 0px;}
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+.startup_innerPages .industryNew_section1 .custom_tittle h2 b {
+    font-size: 42px; 
 }
+
+.startup_innerPages .industryNew_section1 .custom_tittle h4 {
+    line-height: 1.7;
+}
+
+.startup_innerPages .industryNew_section1 { padding: 0px !important;}
+
+
+.startupMvp_section::after { background-color: #fff;}
+
+.startupMvp_section .seamlessLimitless_info { 
+    border-top: 6px solid #16509b; 
+}
+
+.startupMvp_section .seamlessLimitless_fr span {
+    max-width: 340px; padding-top: 50px; padding-bottom: 60px;
+}
+
+
+
+
+.needMvp_section { width: 100%; position: relative;}
+
+.needMvp_section_detail { width: 100%; padding: 80px 0px;}
+
+
+.mvpFlow { width: 100%; padding-bottom: 50px; padding-top: 20px;}
+
+.mvpFlow span { display: block; width: 100%; max-width: 800px; margin: auto;}
+.mvpFlow span img { display: block; width: 100%;}
+
+.bg_eceded { background-color: #eceded !important;}
+
+.mvpDev_process { width: 100%; position: relative; padding: 40px 30px 30px;}
+
+
+.mvpDev_col_info { text-align: center; width: 100%; height: 100%; background-color: #ebebeb; padding: 40px 20px 40px;}
+
+.mvpDev_col_info span { width: 45px; height: 45px; display: flex; margin: auto; align-items: center; justify-content: center; margin-bottom: 25px; background-color: #787878;
+color: #fff; font-size: 18px;font-family: 'avenirblack'; border-radius: 50%;
+}
+
+.mvpDev_col_info p { padding-bottom: 0px;}
+
+.mvpDev_col_info strong {font-size: 18px;font-family: 'avenirblack'; padding-bottom: 8px; display: block; color: #000;}
+
+
+.mvpBenefits_flowSection { width: 100%; padding: 80px 70px 70px;}
+
+
+.mvpBenefits_flow { width: 100%; padding-top: 20px;}
+
+.mvpBenefits_flow span { display: block; width: 100%;  }
+.mvpBenefits_flow span img { display: block; width: 100%;}
+
+
+.designSolution_section > .auto_container {
+    transform: translateY(0px);
+}
+
+.designSolution_section .industryNew_section2_cols {
+    transform: translate(0);
+    background-color: transparent;
+    padding: 80px 0px 70px;
+}
+
+.designSolution_section .industryNew_section2_colsInfo { 
+    background-color: #fff !important;padding: 40px 30px 40px 30px;
+}
+
+
+
+.inspiredPassion_section { width: 100%; position: relative;background: rgb(102,102,102); 
+    background: linear-gradient(0deg, rgba(102,102,102,1) 0%, rgba(155,155,155,1) 100%)}
+
+.inspiredPassion_section::after {
+    width: 100%;
+    height: 210px;
+    content: '';
+    background: #fff;
+    position: absolute;
+    left: 0px;
+    bottom: 0px; z-index: 0;
+}
+
+.inspiredPassion_section_detail { width: 100%; padding: 80px 0px 60px;}
+
+.inspiredPassion_row { padding-top: 20px; width: 100%;}
+
+
+.inspired_col { padding-left:25px ;padding-right:25px ;}
+
+.inspiredPassion_cil_info { width: 100%; position: relative; text-align: center; height: 100%; background-color: #f0f0f0; padding: 40px 40px 30px;}
+
+.inspiredPassion_cil_info span { display: block; margin-bottom: 20px;}
+.inspiredPassion_cil_info span img { display: block;width: 55px ; height: 55px; object-fit: contain; margin: auto;}
+
+.inspiredPassion_cil_info h6 { padding-bottom: 10px;}
+
+.inspiredPassion_cil_info p { padding-bottom: 0px;}
+
+
+
+.startupPage_form .custom_tittle h2 { color: #000 !important;}
+
+.startupPage_form .aboutProject_section { background: #f1f1f1 !important;}
+.startupPage_form .project_form { background: #fff !important;}
+
+
+
+
+.bg_e3e4e5 { background: #e3e4e5 !important;}
+.awsNepture_section { width: 100%; position: relative;}
+
+.awsNepture_section_detail { width: 100%; padding: 70px 0px 50px;}
+
+.awsNepture_list_info { width: 100%; padding: 60px 60px; background: #fff;}
+
+.awsNepture_info_fl { width: 100%;}
+
+.awsNepture_info_fl .custom_tittle  {  padding-right: 50px;}
+.awsNepture_info_fl .custom_tittle h4 { color: #16509a;}
+.awsNepture_info_fl .custom_tittle p { padding: 0px; font-size: 18px; line-height: 1.8;}
+
+
+.awsNepture_list { width: 100%;}
+
+.awsNepture_list ul li { padding: 40px 0px;}
+
+
+.awsNepture_info_fr { width: 100%;}
+
+.awsNepture_info_fr span { display: block; max-width: 320px; margin: auto;}
+.awsNepture_info_fr span img { display: block; width: 100%; }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

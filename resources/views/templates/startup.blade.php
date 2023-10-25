@@ -146,7 +146,7 @@
                                     <div class="row">
                                         <div class="col-lg-4 col-md-6 indCol">
                                             <div class="indust_work_col">
-                                                <a href="#">
+                                                <a href="/industries/industries-we-serve/industries/startup-mvp">
                                                     <span><img src="/bizionic/images/newStartup_icon1.png" alt="#" /></span>
                                                     <strong>MINIMUM VIABLE<br> PRODUCT (MVP)</strong>
                                                     <p>We assist startups in developing a minimal viable product that can be tested in a real-world setting.As a result, companies may get feedback in real time before scaling the product and incurring further costs.</p>
@@ -157,7 +157,7 @@
                                         </div>
                                         <div class="col-lg-4 col-md-6 indCol">
                                             <div class="indust_work_col">
-                                                <a href="#">
+                                                <a href="/industries/industries-we-serve/industries/startup-design-experience">
                                                     <span><img src="/bizionic/images/newStartup_icon2.png" alt="#" /></span>
                                                     <strong>DESIGN <br>EXPERIENCE</strong>
                                                     <p>Use TechVariable's UX design services to increase user trust, engagement, and loyalty in your digital goods and platforms.</p>
@@ -168,7 +168,7 @@
                                         </div>
                                         <div class="col-lg-4 col-md-6 indCol">
                                             <div class="indust_work_col">
-                                                <a href="#">
+                                                <a href="/industries/industries-we-serve/industries/startup-aws-consulting">
                                                     <span><img src="/bizionic/images/newStartup_icon3.png" alt="#" /></span>
                                                     <strong>AWS NEPTUNE<br> CONSULTING</strong>
                                                     <p>Work with Bizionic's AWS neptune consultants and engineers to use this graph database to ensure optimal speed and scalability while also accelerating business growth.</p>

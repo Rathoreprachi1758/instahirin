@@ -97,7 +97,7 @@
                                         </div>
 
                                         <div class="col-lg-4 col-md-5">
-                                            <a href="/hire/developer/developers-other/instaHirin%20Onboard%20Form"
+                                            <a href="/hire/developer/developers-other/instaHirin-Onboard-Form"
                                                 class="btn_default_white">Let’s Get You Onboarded</a>
                                         </div>
                                     </div>
@@ -172,7 +172,7 @@
 
                                         <p class="text-left p_color">Get employed at your terms, desired companies,
                                             time, hours and working conditions.</p>
-                                        <a href="/hire/developer/developers-other/instaHirin%20Onboard%20Form"
+                                        <a href="/hire/developer/developers-other/instaHirin-Onboard-Form"
                                             class="btn_default">Let's Get You Onboarded</a>
                                     </div>
                                 </div>
