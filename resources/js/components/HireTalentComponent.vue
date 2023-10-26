@@ -441,7 +441,7 @@ export default {
     // expertId: Number,
     expertId: {
       type: Number,
-      default: null, // Set a default value of null for expertId
+      default: null,
     },
   },
   data() {

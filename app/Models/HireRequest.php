@@ -19,7 +19,9 @@ class HireRequest extends Model
     protected $casts = [
         'availability_date' => 'date',
         'from_date' => 'date',
-        'to_date' => 'date'
+        'to_date' => 'date',
+        'expert_id' => 'integer',
+
     ];
 
 
