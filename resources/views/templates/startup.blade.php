@@ -5,7 +5,7 @@
 
 
 
-        <div class="industryNew_section  ind_innerPages">
+    <div class="industryNew_section  ind_innerPages">
             <div class="auto_container">
                 <div class="industryNew_section_detail">
 
@@ -530,4 +530,5 @@
             </div>
         </div>
     </div>
+
 

@@ -438,7 +438,11 @@ export default {
   },
   props: {
     countries: Object,
-    expertId: Number,
+    // expertId: Number,
+    expertId: {
+      type: Number,
+      default: null,
+    },
   },
   data() {
     return {

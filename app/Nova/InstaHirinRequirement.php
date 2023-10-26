@@ -2,13 +2,14 @@
 
 namespace App\Nova;
 
-use Illuminate\Http\Request;
-use Laravel\Nova\Fields\File;
 use Laravel\Nova\Fields\ID;
-use Laravel\Nova\Fields\Select;
+use Illuminate\Http\Request;
+use Laravel\Nova\Fields\Tag;
+use Laravel\Nova\Fields\Date;
+use Laravel\Nova\Fields\File;
 use Laravel\Nova\Fields\Text;
 use Laravel\Nova\Fields\Trix;
-use Laravel\Nova\Fields\Date;
+use Laravel\Nova\Fields\Select;
 use Laravel\Nova\Fields\Boolean;
 use Laravel\Nova\Http\Requests\NovaRequest;
 
@@ -51,13 +52,14 @@ class InstaHirinRequirement extends Resource
             Text::make('Work Mode', 'work_mode')->rules('required', 'min:6,max:255'),
             Text::make('Project Description', 'project_description')->rules('required', 'min:6,max:255')->hideFromIndex(),
             // Text::make('Key Skills', 'key_skills')->rules('required', 'min:6,max:255')->hideFromIndex(),
-            Text::make('Key Skills', 'key_skills')
-                ->resolveUsing(function ($value) {
-                    if (is_array($value)) {
-                        return implode(', ', array_column($value, 'name'));
-                    }
-                    return $value;
-                }),
+
+            Text::make('Key Skills', 'key_skills')->resolveUsing(function ($value) {
+                if (is_array($value)) {
+                    return implode(', ', array_column($value, 'name'));
+                }
+                return $value;
+            }),
+            // Tag::make('Skills', 'skills')->showCreateRelationButton()->preload()->displayAsList(),
             Select::make('Employment Role/Type', 'employment_type')->options([
                 'Full Time' => 'Full Time', 'Part-Time' => 'Part-Time',
                 'Project Base' => 'Project Base',
@@ -81,7 +83,7 @@ class InstaHirinRequirement extends Resource
             Text::make('Maximum Salary Hourly', 'max_salary_hourly')->hideFromIndex(),
 
             Text::make('Location', 'location')->hideFromIndex(),
-            Select::make('Education Qualification', 'education_qualification')->options(['Post Graduation' => 'Post Graduation', 'Graduation' => 'Graduation'])->displayUsingLabels()->filterable()->hideFromIndex(),
+            Select::make('Education Qualification', 'education_qualification')->options(['Post Graduation' => 'Post Graduation', 'Graduation' => 'Graduation', 'Doctorate' => 'Doctorate'])->displayUsingLabels()->filterable()->hideFromIndex(),
             Text::make('Company Name', 'company_name')->rules('nullable'),
             Text::make('Company Website', 'company_website')->hideFromIndex(),
             Text::make('Contact Person', 'contact_person')->hideFromIndex(),

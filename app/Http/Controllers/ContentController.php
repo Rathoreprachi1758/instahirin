@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use Log;
+use ZipArchive;
 use App\Models\Job;
 use App\Models\Hire;
 use App\Models\Lead;
@@ -10,16 +11,16 @@ use App\Models\Page;
 use App\Models\Career;
 use App\Models\Expert;
 use App\Models\Country;
-use App\Models\Countrie;
 // use App\Models\Expert;
-use App\Models\TimeZones;
+use App\Models\Countrie;
 // use App\Models\HireRequest;
 // use App\Models\Subscription;
+use App\Models\TimeZones;
 use App\Models\HireRequest;
 use App\Models\Subscription;
 use Illuminate\Http\Request;
-use App\Models\TeamContactUs;
 //use Laravel\Nova\Fields\Timezone;
+use App\Models\TeamContactUs;
 use App\Models\AvailabilityData;
 use App\Models\InstaHirinOnboard;
 use Illuminate\Support\Facades\DB;
@@ -33,7 +34,7 @@ use App\Models\InstaHirinOnboardDocument;
 
 class ContentController extends Controller
 {
-    public function index($levelOne = null, $levelTwo = null, $levelThree = null, $levelFour = null)
+    public function index($levelOne = null, $levelTwo = null, $levelThree = null, $levelFour = null,)
     {
 
         $slugs = array_filter(func_get_args());
@@ -67,14 +68,18 @@ class ContentController extends Controller
             ]);
         }
         $timezones = TimeZones::all();
+        // $expert = Expert::all();
+
         return view('welcome', [
             'title' => $page->meta_title,
             'description' => $page->meta_description,
             'keywords' => $page->meta_keywords,
             'menus' => json_decode(json_encode((object) $menusResponse['menuItems']), FALSE),
             'template' => $template,
+            // 'expert' => $expert, // made a change expert here
             'countries' => json_encode(Countrie::all()),
             'timezones' => $timezones,
+
         ]);
     }
 
@@ -142,8 +147,8 @@ class ContentController extends Controller
         // Process and store the uploaded file
         if ($request->hasFile('document')) {
             $file = $request->file('document');
-            $filename = $file->getClientOriginalName();
-            $file->storeAs('bizionic/images', time() . $filename, 'public');
+            $filename = 'bizionic/images/' . time() . '_' . $file->getClientOriginalName();
+            $file->storeAs('bizionic/images', $filename, 'public');
             $formData->document = time() . $filename;
         }
 
@@ -220,7 +225,7 @@ class ContentController extends Controller
 
             $validatedData = $request->validate([
                 'name' => 'required',
-                'country_code' => 'required',
+                'country_code' => '',
                 'phone' => '',
                 'company' => 'required',
                 'email' => 'required|email',
@@ -242,7 +247,7 @@ class ContentController extends Controller
                 // 'to_time' => '',
                 'source' => '',
                 'template' => '',
-                'expert' => 'required',
+                'expert' => '',
             ]);
             // dd($validatedData);
             // Create a new instance of the Hire Request model
@@ -284,12 +289,19 @@ class ContentController extends Controller
             // }
             $formData->hiring_type = $validatedData['hiring_type'];
             $formData->template = @$validatedData['template'];
-            $formData->expert_id = @$validatedData['expert'];
+            //$formData->expert_id = @$validatedData['expert'];
+            //$formData->expert_id = isset($validatedData['expert']) ? $validatedData['expert'] : null;
+            if (array_key_exists('expert', $validatedData) && $validatedData['expert'] !== '') {
+                $formData->expert_id = $validatedData['expert'];
+            } else {
+                $formData->expert_id = null;
+            }
+
             // Process and store the uploaded file
             if ($request->hasFile('document')) {
                 $file = $request->file('document');
-                $filename = $file->getClientOriginalName();
-                $file->storeAs('bizionic/images', time() . $filename, 'public');
+                $filename = 'bizionic/images/' . time() . '_' . $file->getClientOriginalName();
+                $file->storeAs('bizionic/images', $filename, 'public');
                 $formData->document = time() . $filename;
             }
             $formData->save();
@@ -378,7 +390,7 @@ class ContentController extends Controller
             // Process and store the uploaded file
             if ($request->hasFile('document')) {
                 $file = $request->file('document');
-                $filename = $file->getClientOriginalName();
+                $filename = 'bizionic/images/' . time() . '_' . $file->getClientOriginalName();
                 $file->storeAs('bizionic/images', $filename, 'public');
                 $formData->document = $filename;
             }
@@ -457,10 +469,11 @@ class ContentController extends Controller
         // Process and store the uploaded file
         if ($request->hasFile('document')) {
             $file = $request->file('document');
-            $filename = $file->getClientOriginalName();
+            $filename = 'bizionic/images/' . time() . '_' . $file->getClientOriginalName();
             $file->storeAs('bizionic/images', $filename, 'public');
             $formData->document = $filename;
         }
+
 
         $formData->status = isset($validatedData['status']) ? $validatedData['status'] : 'New';
 
@@ -548,7 +561,7 @@ class ContentController extends Controller
         // Process and store the uploaded file
         if ($request->hasFile('document')) {
             $file = $request->file('document');
-            $filename = $file->getClientOriginalName();
+            $filename = 'bizionic/images/' . time() . '_' . $file->getClientOriginalName();
             $file->storeAs('bizionic/images', $filename, 'public');
             $formData->document = $filename;
         }
@@ -655,8 +668,8 @@ class ContentController extends Controller
             'key_skills' => 'required|json',
             'expert_in' => 'required|json',
             'also_work_with' => 'required|json',
-            'last_company' => '', // new column
-            'company_location' => '', // new column
+            'last_company' => '',
+            'company_location' => '',
             'currently_working_here' => '', // new column
             'working_since_date' => 'required',
             'working_since_date2' => '',
@@ -747,25 +760,47 @@ class ContentController extends Controller
         //     }
         // }
 
+        // ? Correct code below
+
+        // if ($request->hasFile('document')) {
+        //     $uploadedDocuments = [];
+
+        //     foreach ($request->file('document') as $document) {
+        //         $originalFilename = $document->getClientOriginalName();
+        //         $filename = 'bizionic/images/' . time() . '_' . $originalFilename;
+        //         $document->storeAs('bizionic/images', $filename, 'public');
+
+        //         $uploadedDocuments[] = [
+        //             'name' => $originalFilename, // Store the original filename
+        //             'unique_name' => $filename,
+        //             'path' => 'bizionic/images/' . $filename,
+        //         ];
+        //     }
+
+        //     // Save the uploaded document information in the database
+        //     $formData->document = json_encode($uploadedDocuments);
+        //     $formData->save();
+        // }
+
+        // ?  New code
         if ($request->hasFile('document')) {
-            $uploadedDocuments = [];
+            // Create a temporary zip file
+            $zipFileName = 'bizionic/images/' . time() . '_documents.zip';
+            $zip = new ZipArchive();
+            if ($zip->open(storage_path('app/public/' . $zipFileName), ZipArchive::CREATE) === true) {
+                foreach ($request->file('document') as $document) {
+                    $originalFilename = $document->getClientOriginalName();
+                    $filename = 'bizionic/images/' . time() . '_' . $originalFilename;
+                    $document->storeAs('bizionic/images', $filename, 'public');
+                    // Add the file to the zip archive
+                    $zip->addFile(storage_path('app/public/' . $filename), $originalFilename);
+                }
+                $zip->close();
 
-            foreach ($request->file('document') as $document) {
-                $originalFilename = $document->getClientOriginalName();
-                $timestamp = time();
-                $filename = $timestamp . '_' . $originalFilename;
-                $document->storeAs('bizionic/images', $filename, 'public');
-
-                $uploadedDocuments[] = [
-                    'name' => $originalFilename, // Store the original filename
-                    'unique_name' => $filename,
-                    'path' => 'bizionic/images/' . $filename,
-                ];
+                // Save the zip file information in the database
+                $formData->document = $zipFileName;
+                $formData->save();
             }
-
-            // Save the uploaded document information in the database
-            $formData->document = json_encode($uploadedDocuments);
-            $formData->save();
         }
 
 

@@ -143,14 +143,24 @@
 
         <div class="col-lg-12 col-md-12">
           <div class="onForm_col">
-            <strong>Talent and Skills Brief Description (Max 100 words):</strong>
+            <strong>Talent and Skills Brief Description (Max 5000 words):</strong>
             <div class="project_form_textarea">
               <textarea
                 placeholder=" Briefly describe your skills and experience."
                 name="skills_description"
                 id="skills_description"
                 v-model="skills_description"
+                maxlength="5000"
+                @input="updateCharacterCount"
               ></textarea>
+              <!-- Character count and "limit reached" skills_description -->
+              <div id="character-count" :class="{ 'limit-reached': isLimitReached }">
+                <span v-if="limitReached" class="message mr-2">
+                  Characters Limit reached
+                </span>
+                <span id="current">{{ characterCount }}</span>
+                <span id="maximum">/ 5000</span>
+              </div>
             </div>
           </div>
         </div>
@@ -1012,15 +1022,19 @@
   z-index: 1;
 }
 
-/* .multiselect__tag {
-  font-size: 11px;
-  border-radius: 50px;
-  background: #ccc;
-  padding: 3px 8px 3px;
-  margin-right: 10px;
-  position: relative;
-  color: black;
-} */
+#character-count {
+  float: right;
+  padding: 0.1rem 0 0 0;
+  font-size: 0.875rem;
+}
+
+#character-count.limit-reached .message {
+  color: red;
+}
+
+#character-count .message {
+  color: red;
+}
 </style>
 
 <script>
@@ -1126,6 +1140,10 @@ export default {
       resume_headline: "",
       //   Suggestion click
       is_suggestion_clicked: "No",
+
+      //   Character count
+      //   characterCount: 0,
+      limitReached: false,
     };
   },
   mounted() {
@@ -1138,6 +1156,16 @@ export default {
   },
 
   methods: {
+    // Character Count
+    updateCharacterCount() {
+      if (this.skills_description.length >= 5000) {
+        this.skills_description = this.skills_description.substring(0, 5000);
+        this.limitReached = true;
+      } else {
+        this.limitReached = false;
+      }
+    },
+
     // prevent default form change
     handleFormKeyDown(event) {
       if (event.keyCode === 13) {
@@ -1435,6 +1463,13 @@ export default {
     },
   },
   computed: {
+    characterCount() {
+      return this.skills_description.length;
+    },
+    isLimitReached() {
+      return this.characterCount >= 5000;
+    },
+
     salaryOptions() {
       if (this.selectedCurrency === "USD") {
         return [
