@@ -8955,12 +8955,13 @@ color: #fff; font-size: 18px;font-family: 'avenirblack'; border-radius: 50%;
 
 
 
+.adv_rapd { background: #fff !important;}
 
+.adv_rapd:after { display: none !important;}
 
+.adv_rapd .seamlessLimitless_info { background: none !important; border: 0px !important;}
 
-
-
-
+.adv_rapd .mvpBenefits_flowSection { padding: 0px;}
 
 
 

@@ -184,7 +184,7 @@
 
                                         <div class="col-lg-4 col-md-6 indCol">
                                             <div class="indust_work_col">
-                                                <a href="#">
+                                                <a href="/industries/industries-we-serve/industries/startup-app-development">
                                                     <span><img src="/bizionic/images/newStartup_icon4.png" alt="#" /></span>
                                                     <strong>RAPID APPLICATION<br> DEVELOPMENT</strong>
                                                     <p>The ideal combination of agility, quality, and efficiency. You'll have a high-quality app in no time thanks to short turnaround times and efficient development.</p>
