@@ -1,7 +1,21 @@
 @charset "utf-8";
 /* CSS Document */
 
-@media only screen and (min-width:1280px) {}
+@media only screen and (min-width:1366px) and (max-width:1700px) {
+
+
+    .innerColum_menu_outer { 
+        padding: 5px 12px 10px 12px;     min-height: 525px;
+    }
+
+    .labs_location {
+        width: 100%;
+        padding: 20px 20px 10px 20px;
+    }
+    .hireFloating_menu .innerColum_menu_outer { 
+        min-height: 570px;
+    }
+}
 
 @media only screen and (min-width:1280px) and (max-width:1365px) {
 
@@ -11,8 +25,39 @@
     }
     
     .innerColum_menu_outer { 
-        padding: 10px 12px 15px 12px; 
+        padding: 5px 12px 10px 12px;     min-height: 480px;
     }
+
+    .labs_location_info p {
+        font-size: 12px; 
+    }
+
+    .labs_location_info h6 strong { 
+        font-size: 15px;
+    }
+    .labs_location_info { 
+        padding-bottom: 20px;
+    }
+    .innerColum_menu ul li {
+        padding: 0px;
+    }
+    .technologyFloating_menu {
+        width: 80vw !important; 
+    }
+    .floatingMenu_col_list ul li { 
+        font-size: 12px;}
+
+
+        .labs_location {
+            width: 100%;
+            padding: 20px 20px 10px 20px;
+        }
+
+.hireFloating_menu .innerColum_menu_outer { 
+    min-height: 560px;
+}
+
+
 
 }
 
@@ -3137,6 +3182,7 @@ h6 { font-size: 18px; }
 
 
 
+.colSet  {border-bottom: 1px solid #dee2e6!important; border-right: 0px !important;}
 
 
 
