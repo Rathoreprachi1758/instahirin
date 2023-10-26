@@ -308,6 +308,86 @@ p {
     position: relative;
 }
 
+
+
+.header_up { width: 100%; position: relative; background-color: #0b3b6a;}
+
+.header_up_detail { width: 100%; padding: 10px 0px; display: flex; align-items: center; justify-content: space-between;}
+
+.logo_socialInfo { width: auto; display: flex; align-items: center; justify-content: space-between;}
+
+.logo_socialInfo .social_info { padding-top: 0px !important;}
+
+.logo_socialInfo .social_info a {
+    margin-right: 10px !important;
+    color: #fff;
+    font-size: 15px !important;}
+
+.eshareWhite_logo {
+    width: auto; 
+    margin-left: 60px; 
+}
+
+.eshareWhite_logo a {
+    width: 95px;
+    display: block;
+    transition: all 0.2s ease;
+    -moz-transition: all 0.2s ease;
+    -ms-transition: all 0.2s ease;
+    -o-transition: all 0.2s ease;
+    -webkit-transition: all 0.3s ease;
+}
+
+.eshareWhite_logo a img {
+    width: 100%;
+    display: block;
+}
+
+
+.trendingNav { width: auto; display: flex; align-items: center; justify-content: space-between;}
+
+.trendingNav ul { display: flex; align-items: center;}
+
+.trendingNav ul li { padding: 0px 5px;}
+
+.trendingNav ul li a { border: 1px solid #fff; padding: 3px 8px; border-radius: 4px; font-size: 10px; display: block; color: #fff;}
+ 
+.change_langOuter{
+    border-radius: 4px;
+    background-color: #fff;
+    border: 1px solid #000;
+    width: 120px; 
+    color: #000;
+    padding: 1px 3px;
+    font-family: Arial; min-height: 25px; margin-left: 20px;
+}
+.changeLang:focus{
+    outline: none;
+    box-shadow: none;
+}
+
+
+.change_langOuter span { display: none !important;}
+
+.change_langOuter .skiptranslate { font-size: 0px !important;}
+
+.change_langOuter .goog-te-combo { font-size: 10px;}
+
+.skiptranslate  iframe{ display: none !important;}
+
+
+.authBtns { width: auto; display: flex; align-items: center; justify-content: space-between; padding-left: 10px;}
+
+.authBtns ul { display: flex; align-items: center;}
+
+.authBtns ul li { padding: 0px 0px 0px 8px;}
+
+.authBtns ul li a { border: 1px solid #fff; background-color: #fff; padding: 5px 10px; border-radius: 4px; font-size: 10px; display: block; color: #000;}
+ 
+
+
+
+
 .main_logo {
     width: auto;
     padding: 15px 0px;
@@ -404,6 +484,8 @@ p {
     border-width: 1px !important;
     transform: translateY(-15px);
     font-size: 12px;
+        border: 1px solid #27a5de;
+        background: #27a5de;
 }
 
 .main_nav ul li:hover>a {
@@ -439,9 +521,11 @@ p {
     display: block;
 }
 
+.main_nav ul li a.hire_me_button > small , .main_nav ul li a.btn_default > small { display: none !important; z-index: 22;}
+
 
 .main_container {
-    padding-top: 105px;
+    padding-top: 150px;
     width: 100%;
 }
 
@@ -3332,6 +3416,8 @@ html {
     color: #5a5a5a;
 }
 
+.technologyFloating_menu .floatingMenu_col_list ul li a { 
+    font-size: 11px;}
 
 .has_ul {
     display: flex !important;
@@ -5193,7 +5279,7 @@ html {
 .hire_me_button {
     position: relative;
     color: #fff !important;
-    background: #19437a;
+    background: #1b5298;
     padding: 7px 12px 4px 12px !important;
     font-size: 12px !important;
     border-radius: 5px;
@@ -5478,13 +5564,13 @@ html {
     width: 100vw;
     left: 0px;
     margin-left: 0px;
-    top: 105px;
+    top: 151px;
     padding: 0px;
     border-top: 2px solid #000029;
 }
 
 .fixed_header .flotNav_added .floatingMenu {
-    top: 97px;
+    top: 142px;
 }
 
 .flotNav_added .main_nav ul li small {
@@ -5514,7 +5600,7 @@ html {
 
 .innerColum_menu {
     width: 100%;
-    padding: 10px 0px 10px 0px;
+    padding: 5px 0px 5px 0px;
 }
 
 .innerColum_menu ul {
@@ -5530,14 +5616,14 @@ html {
     color: #000029;
     font-family: 'avenirblack';
     border-bottom: 1px solid #000029;
-    margin-bottom: 6px;
+    margin-bottom: 5px;
     display: inline-block;
-    font-size: 13px;
-    min-height: 20px;
+    font-size: 12px;
+    min-height: 18px;
 }
 
 .innerColum_menu ul li {
-    padding: 1px 0px 1px 0px;
+    padding: .5px 0px .5px 0px;
 }
 
 
@@ -5545,8 +5631,8 @@ html {
     width: 100%;
     height: 100%;
     border-right: 1px solid #5a5a5a;
-    padding: 10px 20px 15px 20px;
-    min-height: 575px;
+    padding: 5px 20px 10px 20px;
+    min-height: 522px;
 }
 
 .border_0 {
@@ -5556,7 +5642,7 @@ html {
 
 .labs_location {
     width: 100%;
-    padding: 30px;
+    padding: 25px 20px;
 }
 
 .labs_location_info {
@@ -8682,41 +8768,221 @@ background: linear-gradient(0deg, rgba(221,221,221,1) 0%, rgba(244,244,244,1) 10
 
 
 
+.get_in_touchSection { width: 100%; background-color: #f5f5f5;}
+
+.get_in_touchSection_detail { width: 100%; padding: 70px 0px;}
+
+.get_in_touchSection_detail a {color: #07396A !important;}
+.get_in_touchSection_detail i {color: #07396A !important;}
 
 
+.contactUs_info_form { width: 100%;}
+
+.contactUs_info_field {background: #FFFFFF ; padding: 6px 10px ; border: 1px solid #BCBCBC; border-radius: 15px; margin: 7px 0px;}
+
+.contactUs_info_field strong{ display: block; color: #AFADAD; font-size:13px;}
+
+.contactUs_info_fieldInput { width: 100%; position: relative;}
+.contactUs_info_fieldInput input { width: 100%; font-size: 13px; color: #BDBBBB;}
+
+.contactUs_info_fieldSelect { width: 100%; position: relative; padding-top: 3px;}
+
+.contactUs_info_fieldSelect select { border: 0px !important;   height: auto !important;
+    padding: 0 !important;
+    font-size: 13px !important; 
+    color: #BDBBBB !important; 
+    border-radius: 0px !important;}
+
+.contactUs_info_fieldSelect .form-control:focus { box-shadow: none !important;}
+
+.contactUs_info_fieldText { width: 100%; position: relative;}
+.contactUs_info_fieldText textarea { width: 100%; font-size: 13px; color: #BDBBBB; min-height: 80px;}
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+.get_in_touchSection .modal-dialog {
+    max-width: 850px;
 }
+
+
+
+
+.colSet  {border-right: 1px solid #dee2e6!important;}
+.colSet:last-child  {border: 0px !important}
+
+.get_in_touchSection .colSet p { cursor: pointer;}
+
+
+
+.startup_innerPages { background: #efefef !important; padding-bottom: 80px;}
+
+.startup_innerPages .industryNew_section_detail  { overflow: hidden; background: url(../images/startup_pages_texture.png) top center no-repeat #fff;padding: 90px 60px 80px;}
+
+.startup_innerPages .industryNew_section1 .custom_tittle { padding: 0px;}
+
+.startup_innerPages .industryNew_section1 .custom_tittle h2 b {
+    font-size: 42px; 
+}
+
+.startup_innerPages .industryNew_section1 .custom_tittle h4 {
+    line-height: 1.7;
+}
+
+.startup_innerPages .industryNew_section1 { padding: 0px !important;}
+
+
+.startupMvp_section::after { background-color: #fff;}
+
+.startupMvp_section .seamlessLimitless_info { 
+    border-top: 6px solid #16509b; 
+}
+
+.startupMvp_section .seamlessLimitless_fr span {
+    max-width: 340px; padding-top: 50px; padding-bottom: 60px;
+}
+
+
+
+
+.needMvp_section { width: 100%; position: relative;}
+
+.needMvp_section_detail { width: 100%; padding: 80px 0px;}
+
+
+.mvpFlow { width: 100%; padding-bottom: 50px; padding-top: 20px;}
+
+.mvpFlow span { display: block; width: 100%; max-width: 800px; margin: auto;}
+.mvpFlow span img { display: block; width: 100%;}
+
+.bg_eceded { background-color: #eceded !important;}
+
+.mvpDev_process { width: 100%; position: relative; padding: 40px 30px 30px;}
+
+
+.mvpDev_col_info { text-align: center; width: 100%; height: 100%; background-color: #ebebeb; padding: 40px 20px 40px;}
+
+.mvpDev_col_info span { width: 45px; height: 45px; display: flex; margin: auto; align-items: center; justify-content: center; margin-bottom: 25px; background-color: #787878;
+color: #fff; font-size: 18px;font-family: 'avenirblack'; border-radius: 50%;
+}
+
+.mvpDev_col_info p { padding-bottom: 0px;}
+
+.mvpDev_col_info strong {font-size: 18px;font-family: 'avenirblack'; padding-bottom: 8px; display: block; color: #000;}
+
+
+.mvpBenefits_flowSection { width: 100%; padding: 80px 70px 70px;}
+
+
+.mvpBenefits_flow { width: 100%; padding-top: 20px;}
+
+.mvpBenefits_flow span { display: block; width: 100%;  }
+.mvpBenefits_flow span img { display: block; width: 100%;}
+
+
+.designSolution_section > .auto_container {
+    transform: translateY(0px);
+}
+
+.designSolution_section .industryNew_section2_cols {
+    transform: translate(0);
+    background-color: transparent;
+    padding: 80px 0px 70px;
+}
+
+.designSolution_section .industryNew_section2_colsInfo { 
+    background-color: #fff !important;padding: 40px 30px 40px 30px;
+}
+
+
+
+.inspiredPassion_section { width: 100%; position: relative;background: rgb(102,102,102); 
+    background: linear-gradient(0deg, rgba(102,102,102,1) 0%, rgba(155,155,155,1) 100%)}
+
+.inspiredPassion_section::after {
+    width: 100%;
+    height: 210px;
+    content: '';
+    background: #fff;
+    position: absolute;
+    left: 0px;
+    bottom: 0px; z-index: 0;
+}
+
+.inspiredPassion_section_detail { width: 100%; padding: 80px 0px 60px;}
+
+.inspiredPassion_row { padding-top: 20px; width: 100%;}
+
+
+.inspired_col { padding-left:25px ;padding-right:25px ;}
+
+.inspiredPassion_cil_info { width: 100%; position: relative; text-align: center; height: 100%; background-color: #f0f0f0; padding: 40px 40px 30px;}
+
+.inspiredPassion_cil_info span { display: block; margin-bottom: 20px;}
+.inspiredPassion_cil_info span img { display: block;width: 55px ; height: 55px; object-fit: contain; margin: auto;}
+
+.inspiredPassion_cil_info h6 { padding-bottom: 10px;}
+
+.inspiredPassion_cil_info p { padding-bottom: 0px;}
+
+
+
+.startupPage_form .custom_tittle h2 { color: #000 !important;}
+
+.startupPage_form .aboutProject_section { background: #f1f1f1 !important;}
+.startupPage_form .project_form { background: #fff !important;}
+
+
+
+
+.bg_e3e4e5 { background: #e3e4e5 !important;}
+.awsNepture_section { width: 100%; position: relative;}
+
+.awsNepture_section_detail { width: 100%; padding: 70px 0px 50px;}
+
+.awsNepture_list_info { width: 100%; padding: 60px 60px; background: #fff;}
+
+.awsNepture_info_fl { width: 100%;}
+
+.awsNepture_info_fl .custom_tittle  {  padding-right: 50px;}
+.awsNepture_info_fl .custom_tittle h4 { color: #16509a;}
+.awsNepture_info_fl .custom_tittle p { padding: 0px; font-size: 18px; line-height: 1.8;}
+
+
+.awsNepture_list { width: 100%;}
+
+.awsNepture_list ul li { padding: 40px 0px;}
+
+
+.awsNepture_info_fr { width: 100%;}
+
+.awsNepture_info_fr span { display: block; max-width: 320px; margin: auto;}
+.awsNepture_info_fr span img { display: block; width: 100%; }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

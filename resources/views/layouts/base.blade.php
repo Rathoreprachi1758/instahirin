@@ -28,6 +28,7 @@
     <link rel="stylesheet " type="text/css " href="/bizionic/css/slick-theme.css ">
     <script type="text/javascript" src="/bizionic/js/slick.js"></script>
     <script type="text/javascript" src="/bizionic/js/owl.carousel.js"></script>
+    <script type="text/javascript" src="/bizionic/js/countries.js"></script>
     {{-- <script type="text/javascript"
         src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDY1vginH3C8j_tCqQRwIyE7awXfUQk-ck&libraries=places">
     </script> --}}
@@ -92,6 +93,61 @@
         <header>
 
             <div class="header flotNav_added">
+
+                <!-- header up bar  -->
+                <div class="header_up">
+                    <div class="auto_container">
+                        <div class="header_up_detail">
+                            <div class="logo_socialInfo">
+                                <div class="social_info">
+                                    <a href="https://www.facebook.com/Bizionictechnologies" target="_blank"
+                                        class="s_fb"><i class="fa fa-facebook-official"
+                                            aria-hidden="true"></i></a>
+                                    <a href="https://www.instagram.com/bizionic_technologies/" target="_blank"
+                                        class="s_inst"><i class="fa fa-instagram" aria-hidden="true"></i></a>
+                                    <a href="https://twitter.com/bizionictech" target="_blank" class="s_tw"><i
+                                            class="fa fa-twitter-square" aria-hidden="true"></i></a>
+                                    <a href="https://www.linkedin.com/company/bizionic-technologies-and-marketing-solutions/"
+                                        target="_blank" class="s_link"><i class="fa fa-linkedin-square"
+                                            aria-hidden="true"></i></a>
+                                    <a href="https://www.youtube.com/channel/UCDz2zqtte5EZ3_6OAfMl4rw"
+                                        class="s_yout" target="_blank"><i class="fa fa-youtube-play"
+                                            aria-hidden="true"></i></a>
+                                    <a href="#" class="s_slide" target="_blank"><i class="fa fa-slideshare"
+                                            aria-hidden="true"></i></a>
+                                </div>
+
+                                <div class="eshareWhite_logo">
+                                    <a href="https://www.eshare.ai/" target="_blank"><img src="/bizionic/images/eshareWhite_logo.png" alt="#" /></a>
+                                </div>
+                            </div>
+
+
+                            <div class="trendingNav">
+                                <div class="trendingNav_links">
+                                    <ul>
+                                        <li><a href="#">Startup Funding</a></li>
+                                        <li><a href="#">Trending News</a></li>
+                                        <li><a href="#">Blogs</a></li>
+                                    </ul>
+                                </div>
+
+                                <div class="change_langOuter">
+                                    <div id="google_translate_element"></div>
+                                </div>
+
+
+                                <div class="authBtns">
+                                    <ul>
+                                        <li><a href="#">Sign In</a></li>
+                                        <li><a href="#">Sign Up</a></li> 
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
                 <div class="auto_container">
                     <div class="header_detail">
                         <div class="main_logo">
@@ -260,6 +316,15 @@
     <!-- bootstrap -->
     <script src="/bizionic/js/bootstrap.min.js"></script>
     <script src="/bizionic/js/aos.js"></script>
+
+
+    <script type="text/javascript">
+function googleTranslateElementInit() {
+  new google.translate.TranslateElement({pageLanguage: 'en'}, 'google_translate_element');
+}
+</script>
+
+<script type="text/javascript" src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
 
 </body>
 
