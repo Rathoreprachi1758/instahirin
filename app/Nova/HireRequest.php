@@ -57,7 +57,15 @@ class HireRequest extends Resource
             Text::make('Phone', 'phone')->rules('required', 'min:6,max:255'),
             Text::make('Company', 'company')->rules('required', 'min:6,max:255'),
             Trix::make('Details', 'message')->rules('required', 'min:6,max:255'),
-            File::make('Document', 'document')->hideFromIndex(),
+            //File::make('Document', 'document')->hideFromIndex(),
+            File::make('Document', 'document')
+                ->disk('public')
+                ->path('bizionic/images')
+                ->storeAs(function (Request $request) {
+                    // Customize the filename if needed
+                    return 'document_' . time() . '.' . $request->file('document')->getClientOriginalExtension();
+                })
+                ->prunable(),
             Text::make('Website', 'website')->hideFromIndex(),
             Text::make('Source', 'source')->filterable()->nullable(),
             Text::make('Address', 'address')->hideFromIndex(),

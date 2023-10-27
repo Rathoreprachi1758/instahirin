@@ -149,7 +149,7 @@ class ContentController extends Controller
             $file = $request->file('document');
             $filename = 'bizionic/images/' . time() . '_' . $file->getClientOriginalName();
             $file->storeAs('bizionic/images', $filename, 'public');
-            $formData->document = time() . $filename;
+            $formData->document = $filename;
         }
 
         $formData->status = isset($validatedData['status']) ? $validatedData['status'] : 'New';
@@ -302,7 +302,7 @@ class ContentController extends Controller
                 $file = $request->file('document');
                 $filename = 'bizionic/images/' . time() . '_' . $file->getClientOriginalName();
                 $file->storeAs('bizionic/images', $filename, 'public');
-                $formData->document = time() . $filename;
+                $formData->document = $filename;
             }
             $formData->save();
             foreach ($request->availability_date as $key => $date) {
