@@ -506,4 +506,10 @@ class ContentController extends Controller
         // Return a response indicating success
         return response()->json(['message' => 'Form submitted successfully']);
     }
+    //
+    public function Thanksmessage(){
+        // return view('Thankyou.blade');
+        
+        return response()->json(['message' => 'Form get successfully']);
+    }
 }

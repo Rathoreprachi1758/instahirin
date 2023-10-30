@@ -1,3 +1,6 @@
+<script setup>
+//Vue.use(VueRouter)
+</script>
 <template>
     <div class="connected_form_info">
             <div
@@ -6,7 +9,7 @@
                 id="success"
                 ref="successMessage"
             >
-                Thank you for the submitting the inquiry. We will contact you shortly.
+                Thank you for the We will contact you shortly.
             </div>
 
             <div
@@ -136,6 +139,25 @@
 </template>
 
 <script>
+// import Vue from 'vue'
+// import VueRouter from 'vue-router'
+
+// Vue.use(VueRouter)
+// const routes = [
+//   { path: '/hi',component: () => import('@/components/Thankyou.vue') },
+// ]
+
+// const router = new VueRouter({
+//   routes,
+//   mode: 'history'
+// })
+
+// new Vue({
+//   el: '#app',
+//   router,
+//   render: h => h(App)
+// })
+
 export default {
     data() {
         return {
@@ -157,9 +179,6 @@ export default {
         },
 
         store() {
-            // Send form data to the backend
-            // console.log(this.formData);
-
             const form = new FormData();
             form.append("name", this.formData.name);
             form.append("email", this.formData.email);
@@ -191,10 +210,11 @@ export default {
                 });
         },
         showSuccessMessage() {
-            this.$refs.successMessage.style.display = "block";
-            setTimeout(() => {
-                this.$refs.successMessage.style.display = "none";
-            }, 3000);
+            axios.get('/Thankyou')
+            // this.$refs.successMessage.style.display = "block";
+            // setTimeout(() => {
+            //     this.$refs.successMessage.style.display = "none";
+            // }, 3000);
         },
         showFailureMessage() {
             this.$refs.failureMessage.style.display = "block";
@@ -204,4 +224,85 @@ export default {
         },
     },
 };
+// export default {
+//   data() {
+//     return {
+//       formData: {
+//         name: "",
+//         email: "",
+//         phone: "",
+//         hiring_type: "dedicated_developer",
+//         budget: "below_10K",
+//         details: "",
+//         document: null,
+//       },
+//       successMessageVisible: false,
+//       failureMessageVisible: false,
+//     };
+//   },
+//   methods: {
+//     handleFileChange(event) {
+//       const file = event.target.files[0];
+//       this.formData.document = file;
+//     },
+
+//     async store() {
+//       const form = new FormData();
+//       for (const key in this.formData) {
+//         form.append(key, this.formData[key]);
+//       }
+
+//       try {
+//         const response = await axios.post("/submit-form", form);
+//         if (response.status === 200) {
+//           // Show success message
+//           this.showSuccessMessage();
+//           // Add the following line to make the additional GET request
+//           this.getThankYouData();
+//           this.clearForm();
+//         }
+//       } catch (error) {
+//         this.showFailureMessage();
+//       }
+//     },
+
+//     async getThankYouData() {
+//       try {
+//         const response = await axios.get('/get-a-free-consultation/Thankyou');
+//         // Handle the response data if needed
+//       } catch (error) {
+//         // Handle errors for the additional request
+//       }
+//     },
+
+//     showSuccessMessage() {
+//       this.successMessageVisible = true;
+//       setTimeout(() => {
+//         this.successMessageVisible = false;
+//         // Optionally, you can navigate to a different route
+//         // this.$router.push({ name: 'Home' });
+//       }, 3000);
+//     },
+
+//     showFailureMessage() {
+//       this.failureMessageVisible = true;
+//       setTimeout(() => {
+//         this.failureMessageVisible = false;
+//       }, 3000);
+//     },
+
+//     clearForm() {
+//       this.formData = {
+//         name: "",
+//         email: "",
+//         phone: "",
+//         hiring_type: "",
+//         budget: "",
+//         details: "",
+//         document: null,
+//       };
+//     },
+//   },
+// };
+
 </script>

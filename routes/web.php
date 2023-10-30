@@ -23,7 +23,8 @@ Route::post('/submit-form', [App\Http\Controllers\ContentController::class, 'sto
 
 // Subscribe Form Submission
 Route::post('/subscribe', [App\Http\Controllers\ContentController::class, 'subscription'])->name('subscribe');
-
+//Thankyou page
+Route::get('/Thankyou',[ContentController::class, 'Thanksmessage'])->name('Thankyou');
 // Hire Form Submission
 Route::post('/hire', [ContentController::class, 'hire'])->name('hire');
 Route::post('/insta-hirin-requirements', [ContentController::class, 'instaHirinRequirements'])->name('instaHirinRequirements');
