@@ -16,13 +16,17 @@ use App\Http\Controllers\OnboardController;
 |
 */
 
-Route::get('sitemap.xml',function() {
-    return response()->view('sitemap')->header('Content-Type', 'xml');});
+Route::get('sitemap.xml', function () {
+    return response()->view('sitemap')->header('Content-Type', 'xml');
+});
 
 Route::get('/{levelOneSlug?}/{levelTwoSlug?}/{levelThreeSlug?}/{levelFourSlug?}', 'App\Http\Controllers\ContentController@index')->name('index');
 
 // ContactUs Form Submission
 Route::post('/submit-form', [App\Http\Controllers\ContentController::class, 'store'])->name('submit-form');
+
+// Funding Apply Form Submission
+Route::post('/funding-apply', [App\Http\Controllers\ContentController::class, 'fundingApply'])->name('funding-apply');
 
 // Subscribe Form Submission
 Route::post('/subscribe', [App\Http\Controllers\ContentController::class, 'subscription'])->name('subscribe');

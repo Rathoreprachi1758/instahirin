@@ -21,6 +21,7 @@ use App\Models\Subscription;
 use Illuminate\Http\Request;
 //use Laravel\Nova\Fields\Timezone;
 use App\Models\TeamContactUs;
+use App\Models\FundingApplyNow;
 use App\Models\AvailabilityData;
 use App\Models\InstaHirinOnboard;
 use Illuminate\Support\Facades\DB;
@@ -808,6 +809,57 @@ class ContentController extends Controller
         DB::commit();
 
         // Return a response indicating success
+        return response()->json(['message' => 'Form submitted successfully']);
+    }
+
+    // Funding Apply Form
+    public function fundingApply(Request $request)
+    {
+        $validatedData = $request->validate([
+            'first_name' => '',
+            'last_name' => '',
+            'title' => '',
+            'email' => 'required|email',
+            'company' => '',
+            'hq' => '',
+            'website' => '',
+            'linkedIn' => '',
+            'instagram' => '',
+            'twitter' => '',
+            'raising_capital' => '',
+            'raised_venture_capital' => '',
+            'raised_amount' => '',
+            'valuation' => '',
+            'enabling_technology' => '',
+            'industry' => '',
+            'challenges' => '',
+            'core_buyer' => '',
+            'investors' => '',
+        ]);
+
+        // Create a new instance of the FundingApply model
+        $formData = new FundingApplyNow();
+        $formData->first_name = $validatedData['first_name'];
+        $formData->last_name = $validatedData['last_name'];
+        $formData->title = $validatedData['title'];
+        $formData->email = $validatedData['email'];
+        $formData->company = $validatedData['company'];
+        $formData->hq = $validatedData['hq'];
+        $formData->website = $validatedData['website'];
+        $formData->linkedIn = $validatedData['linkedIn'];
+        $formData->instagram = $validatedData['instagram'];
+        $formData->twitter = $validatedData['twitter'];
+        $formData->raising_capital = $validatedData['raising_capital'];
+        $formData->raised_venture_capital = $validatedData['raised_venture_capital'];
+        $formData->raised_amount = $validatedData['raised_amount'];
+        $formData->valuation = $validatedData['valuation'];
+        $formData->enabling_technology = $validatedData['enabling_technology'];
+        $formData->industry = $validatedData['industry'];
+        $formData->challenges = $validatedData['challenges'];
+        $formData->core_buyer = $validatedData['core_buyer'];
+        $formData->investors = $validatedData['investors'];
+
+        $formData->save();
         return response()->json(['message' => 'Form submitted successfully']);
     }
 
