@@ -31,7 +31,7 @@
 
                                         <p class="p_color text-justify">Bizionic Marketing Solutions UX (User Experience) researcher specializes in understanding user behaviors, needs, and preferences to inform the design and development of user-centered products and experiences. They employ various research methods and techniques to gather insights and data about users, which are then used to guide decision-making throughout the design process. </p>
                                            <br>
-                                        <a href="/get-a-free-consultation" class="btn_default mt-2">Hire UX Researcher</a>
+                                        <a href="#gotoContact" class="btn_default mt-2">Hire UX Researcher</a>
                                     
                                 </div>
                             </div>
@@ -172,12 +172,13 @@
 
 
 
-        <div class="aboutProject_section hireFormSetting">
+        <div class="aboutProject_section hireFormSetting" id="gotoContact">
             <div class="auto_container">
 
                 <div class="contactUs_detail">
 
                     <!-- form here  -->
+                    @include('forms.hire_talent')
 
 
                 </div>

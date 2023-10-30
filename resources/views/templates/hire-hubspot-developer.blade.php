@@ -29,7 +29,7 @@
 
                                         <p class="p_color text-justify">Bizionic Technologies HubSpot developers specialize in using the HubSpot platform to develop and customize marketing, sales, and customer service solutions for businesses. HubSpot is an all-in-one inbound marketing and sales software that provides tools for lead generation, customer relationship management (CRM), content management, email marketing, automation, analytics, and more.</p>
                                            <br>
-                                        <a href="/get-a-free-consultation" class="btn_default mt-2">Hire HubSpot Developer</a>
+                                        <a href="#gotoContact" class="btn_default mt-2">Hire HubSpot Developer</a>
                                     
                                 </div>
                             </div>
@@ -148,7 +148,7 @@
 
 
 
-        <div class="aboutProject_section hireFormSetting">
+        <div class="aboutProject_section hireFormSetting" id="gotoContact">
             <div class="auto_container">
 
                 <div class="contactUs_detail">

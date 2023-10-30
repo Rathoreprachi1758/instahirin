@@ -29,7 +29,7 @@
 
                                         <p class="p_color text-justify">Angular 2.0 (now referred to as Angular) is a widely used and popular open-source framework for building web applications. Angular 2.0 developers specialize in using Angular to create robust and scalable applications with a rich user interface.</p>
                                            
-                                        <a href="/get-a-free-consultation" class="btn_default mt-2">Hire Angular 2.0 Developer</a>
+                                        <a href="#gotoContact" class="btn_default mt-2">Hire Angular 2.0 Developer</a>
                                     
                                 </div>
                             </div>
@@ -131,7 +131,7 @@
 
 
 
-        <div class="aboutProject_section hireFormSetting">
+        <div class="aboutProject_section hireFormSetting" id="gotoContact">
             <div class="auto_container">
 
                 <div class="contactUs_detail">

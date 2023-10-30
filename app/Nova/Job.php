@@ -45,9 +45,14 @@ class Job extends Resource
     {
         return [
             ID::make()->sortable(),
-            Text::make('Title','title')->rules('required','min:6,max:255'),
-            Trix::make('Description','description'),
-            Select::make('Status','status')->options(['Open'=>'Open','Closed'=>'Closed'])->displayUsingLabels()->filterable(),
+            Text::make('Title', 'title')->rules('required', 'min:6,max:255'),
+            Text::make('Location', 'location'),
+            Trix::make('Job Description', 'description'),
+            Trix::make('Key Responsibilities', 'responsibilities'),
+            Trix::make('Qualification', 'qualification'),
+            Trix::make('Preferred Qualification', 'prefer_qualification'),
+            Trix::make('What We Offer', 'we_offer'),
+            Select::make('Status', 'status')->options(['Open' => 'Open', 'Closed' => 'Closed'])->displayUsingLabels()->filterable(),
         ];
     }
 

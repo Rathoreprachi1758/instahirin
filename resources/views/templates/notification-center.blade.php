@@ -58,7 +58,7 @@
                 <div class="row">
                     <div class="col-lg-4 col-md-6 indCol">
                         <div class="indust_work_col">
-                            <a href="/industries/industries-we-serve/industries/startups">
+                            <a href="/notification-center/mobile-push-notifications">
                                 <span><img src="/bizionic/images/pushNotif_icon1.png" alt="#" /></span>
                                 <strong>MOBILE PUSH NOTIFICATIONS</strong>
                                 <p>Make sure your message is the first thing customers see when they pick up their phones. Notifications are the main source of traffic for most mobile apps.</p>
@@ -69,7 +69,7 @@
                     </div>
                     <div class="col-lg-4 col-md-6 indCol">
                         <div class="indust_work_col">
-                            <a href="/industries/industries-we-serve/industries/startups">
+                            <a href="/notification-center/web-push-notifications">
                                 <span><img src="/bizionic/images/pushNotif_icon2.png" alt="#" /></span>
                                 <strong>WEB PUSH NOTIFICATIONS</strong>
                                 <p>Keep your brand in front of your customers even when they leave your website. Works on Chrome, Safari, Firefox, Edge, and Yandex.</p>
@@ -80,7 +80,7 @@
                     </div>
                     <div class="col-lg-4 col-md-6 indCol">
                         <div class="indust_work_col">
-                            <a href="/industries/industries-we-serve/industries/startups">
+                            <a href="/notification-center/in-app-push-notifications">
                                 <span><img src="/bizionic/images/pushNotif_icon3.png" alt="#" /></span>
                                 <strong>IN-APP MESSAGES</strong>
                                 <p>Deliver delight-inducing messages. Design banners, pop-ups and interstitials; implement without writing a single line of code.</p>
@@ -96,7 +96,7 @@
 
                     <div class="col-lg-4 col-md-6 indCol">
                         <div class="indust_work_col">
-                            <a href="/industries/industries-we-serve/industries/startups">
+                            <a href="/notification-center/email-notifications">
                                 <span><img src="/bizionic/images/pushNotif_icon4.png" alt="#" /></span>
                                 <strong>EMAIL NOTIFICATIONS</strong>
                                 <p>Create emails with the drag-and-drop composer that look fabulous on all devices. Tailor our templates to reflect your brand's identity.</p>
@@ -107,7 +107,7 @@
                     </div>
                     <div class="col-lg-4 col-md-6 indCol">
                         <div class="indust_work_col">
-                            <a href="/industries/industries-we-serve/industries/startups">
+                            <a href="/notification-center/sms-notifications">
                                 <span><img src="/bizionic/images/pushNotif_icon5.png" alt="#" /></span>
                                 <strong>SMS NOTIFICATIONS</strong>
                                 <p>For greater engagement, contact clients directly on their phones. Customers who don't have your app or a smartphone can still communicate with you.</p>
@@ -118,7 +118,7 @@
                     </div>
                     <div class="col-lg-4 col-md-6 indCol">
                         <div class="indust_work_col">
-                            <a href="/industries/industries-we-serve/industries/startups">
+                            <a href="/notification-center/journey-notifications">
                                 <span><img src="/bizionic/images/pushNotif_icon6.png" alt="#" /></span>
                                 <strong>JOURNEYS</strong>
                                 <p>Utilise our simple message process builder to easily manage your messaging between channels without writing any code.</p>

@@ -2,16 +2,18 @@
 
 namespace App\Nova;
 
-use Illuminate\Http\Request;
-use Laravel\Nova\Fields\File;
 use Laravel\Nova\Fields\ID;
-use Laravel\Nova\Fields\Select;
+use Illuminate\Http\Request;
+use Laravel\Nova\Fields\Date;
+use Laravel\Nova\Fields\File;
 use Laravel\Nova\Fields\Text;
 use Laravel\Nova\Fields\Trix;
-use Laravel\Nova\Fields\Date;
+use App\Nova\AvailabilityData;
+use Laravel\Nova\Fields\Select;
 use Laravel\Nova\Fields\Boolean;
-use Laravel\Nova\Http\Requests\NovaRequest;
+use Laravel\Nova\Fields\HasMany;
 use Laravel\Nova\Fields\BelongsTo;
+use Laravel\Nova\Http\Requests\NovaRequest;
 
 class HireRequest extends Resource
 {
@@ -27,7 +29,8 @@ class HireRequest extends Resource
      *
      * @var string
      */
-    public static $title = 'id';
+    // public static $title = 'id';
+    public static $title = 'name';
 
     /**
      * The columns that should be searched.
@@ -48,27 +51,52 @@ class HireRequest extends Resource
     {
         return [
             ID::make()->sortable(),
-            BelongsTo::make('Expert','expert')->noPeeking()->filterable()->nullable(),
-            Text::make('Name','name')->rules('required','min:6,max:255'),
-            Text::make('Email','email')->rules('required','min:6,max:255'),
-            Text::make('Phone','phone')->rules('required','min:6,max:255'),
-            Text::make('Company','company')->rules('required','min:6,max:255'),
-            Trix::make('Details','message')->rules('required','min:6,max:255'),
-            File::make('Document','document')->hideFromIndex(),
-            Text::make('Website','website')->hideFromIndex(),
-            Text::make('Address','address')->hideFromIndex(),
-            Text::make('Company','company')->rules('required','min:6,max:255')->hideFromIndex(),
-            Trix::make('Company Info','company_info')->hideFromIndex(),
-            Select::make('Hiring Type','hiring_type')->options(['Dedicated'=>'Hire Dedicated','Developer'=>'Hire Developer'])->displayUsingLabels()->filterable()->hideFromIndex(),
-            Select::make('Priority','priority')->options(['normal'=>'Normal','insta'=>'Insta'])->displayUsingLabels()->filterable(),
-            Date::make('From Date','from_date')->rules('nullable', 'date_format:Y-m-d')->hideFromIndex(),
-            Date::make('To Date','to_date')->rules('nullable', 'date_format:Y-m-d')->hideFromIndex(),
-            Text::make('From Time','from_time')->hideFromIndex(),
-            Text::make('To Time','to_time')->hideFromIndex(),
-            Boolean::make('Virtual Assistance Call','virtual_assistance_call')->trueValue('Yes')->falseValue('No')->hideFromIndex(),
-            Date::make('Availability Date','availability_date')->rules('nullable', 'date_format:Y-m-d')->hideFromIndex(),
-            Text::make('Availability Time From','availability_time_from')->hideFromIndex(),
-            Text::make('Availability Time To','availability_time_to')->hideFromIndex(),
+            BelongsTo::make('Expert', 'expert')->noPeeking()->filterable()->nullable(),
+            Text::make('Name', 'name')->rules('required', 'min:6,max:255'),
+            Text::make('Email', 'email')->rules('required', 'min:6,max:255'),
+            Text::make('Phone', 'phone')->rules('required', 'min:6,max:255'),
+            Text::make('Company', 'company')->rules('required', 'min:6,max:255'),
+            Trix::make('Details', 'message')->rules('required', 'min:6,max:255'),
+            //File::make('Document', 'document')->hideFromIndex(),
+            File::make('Document', 'document')
+                ->disk('public')
+                ->path('bizionic/images')
+                ->storeAs(function (Request $request) {
+                    // Customize the filename if needed
+                    return 'document_' . time() . '.' . $request->file('document')->getClientOriginalExtension();
+                })
+                ->prunable(),
+            Text::make('Website', 'website')->hideFromIndex(),
+            Text::make('Source', 'source')->filterable()->nullable(),
+            Text::make('Address', 'address')->hideFromIndex(),
+            // Text::make('Company', 'company')->rules('required', 'min:6,max:255')->hideFromIndex(),
+            Trix::make('Company Info', 'company_info')->hideFromIndex(),
+            Select::make('Hiring Type', 'hiring_type')->options(
+                [
+                    'Full Time' => 'Full Time',
+                    'Part Time' => 'Part Time',
+                    "Daily Bases" => "Daily Bases",
+                    'Weekly' => 'Weekly',
+                    'Period' => 'Period',
+                    "Freelance" => "Freelance",
+                    "Project Base" => "Project Base",
+                    "Contract Base" => "Contract Base",
+                    'Hourly' => 'Hourly'
+                ]
+            )->displayUsingLabels()->filterable()->hideFromIndex(),
+            Select::make('Priority', 'priority')->options(['normal' => 'Normal', 'insta' => 'Insta'])->displayUsingLabels()->filterable(),
+            Date::make('From Date', 'from_date')->rules('nullable', 'date_format:Y-m-d')->hideFromIndex(),
+            // Date::make('To Date','to_date')->rules('nullable', 'date_format:Y-m-d')->hideFromIndex(),
+            // Text::make('From Time','from_time')->hideFromIndex(),
+            // Text::make('To Time','to_time')->hideFromIndex(),
+            Boolean::make('Virtual Assistance Call', 'virtual_assistance_call')->trueValue('Yes')->falseValue('No')->hideFromIndex(),
+            Boolean::make('Agree to Term of Use', 'term_of_use')->trueValue('Yes')->falseValue('No')->hideFromIndex(),
+            Boolean::make('Want Future Promotion , Offers & Communication', 'future_promotion')->trueValue('Yes')->falseValue('No')->hideFromIndex(),
+            //Date::make('Availability Date', 'availability_date')->rules('nullable', 'date_format:Y-m-d')->hideFromIndex(),
+            // HasMany::make('Availability Data', 'availabilityData', AvailabilityData::class)->hideFromIndex(),
+            HasMany::make('Availability Data', 'availabilityData', AvailabilityData::class)->hideFromIndex(),
+
+
 
         ];
     }

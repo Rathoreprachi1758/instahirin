@@ -29,7 +29,7 @@
 
                                         <p class="p_color text-justify">Bizionic Technologies Android app Developers specialize in building applications for the Android platform. They are proficient in programming languages like Java or Kotlin and have expertise in the Android SDK (Software Development Kit) and related tools.</p>
                                            <br>
-                                        <a href="/get-a-free-consultation" class="btn_default mt-2">Hire Android App Developer</a>
+                                        <a href="#gotoContact" class="btn_default mt-2">Hire Android App Developer</a>
                                     
                                 </div>
                             </div>
@@ -152,7 +152,7 @@
 
 
 
-        <div class="aboutProject_section hireFormSetting">
+        <div class="aboutProject_section hireFormSetting" id="gotoContact">
             <div class="auto_container">
 
                 <div class="contactUs_detail">

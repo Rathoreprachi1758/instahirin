@@ -32,7 +32,7 @@
                                                 implementing, and overseeing marketing activities to promote a product, service, or brand. They play a crucial role in developing and executing marketing strategies to
                                                 achieve the organization's goals.</p>
                                            <br>
-                                        <a href="/get-a-free-consultation" class="btn_default mt-2">Hire Marketing Manager</a>
+                                        <a href="#gotoContact" class="btn_default mt-2">Hire Marketing Manager</a>
                                     
                                 </div>
                             </div>
@@ -178,13 +178,13 @@
 
 
 
-        <div class="aboutProject_section hireFormSetting">
+        <div class="aboutProject_section hireFormSetting" id="gotoContact">
             <div class="auto_container">
 
                 <div class="contactUs_detail">
 
                     <!-- form here  -->
-
+                    @include('forms.hire_talent')
 
                 </div>
 

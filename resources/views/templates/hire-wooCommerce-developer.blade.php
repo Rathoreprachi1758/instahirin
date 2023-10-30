@@ -29,7 +29,7 @@
 
                                         <p class="p_color text-justify">Bizionic Technologies WooCommerce developers specialize in building and customizing e-commerce websites using the WooCommerce plugin, built on top of the WordPress platform. WooCommerce is one of the most popular e-commerce plugins for WordPress and provides a comprehensive set of features and tools for creating online stores.</p>
                                            <br>
-                                        <a href="/get-a-free-consultation" class="btn_default mt-2">Hire WooCommerce Developer</a>
+                                        <a href="#gotoContact" class="btn_default mt-2">Hire WooCommerce Developer</a>
                                     
                                 </div>
                             </div>
@@ -148,7 +148,7 @@
 
 
 
-        <div class="aboutProject_section hireFormSetting">
+        <div class="aboutProject_section hireFormSetting" id="gotoContact">
             <div class="auto_container">
 
                 <div class="contactUs_detail">

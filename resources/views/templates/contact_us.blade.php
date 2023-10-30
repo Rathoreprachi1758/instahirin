@@ -48,77 +48,7 @@
                             <p>Please fill the form and our representative will get back to you.</p>
                         </div>
                         <contact-us-component></contact-us-component>
-                        {{-- <div class="project_form">
-                            <div class="row">
-                                <div class="col-lg-6 col-md-12">
-                                    <div class="project_form_field">
-                                        <input type="text" value="" placeholder="Name*" />
-                                    </div>
-                                </div>
-                                <div class="col-lg-6 col-md-12">
-                                    <div class="project_form_field">
-                                        <div class="protectPrivacy">
-                                            <span>
-                                                <img src="/bizionic/images/protect_icon.png" alt="#" />
-                                                Your privacy is protected
-                                            </span>
-                                        </div>
-                                    </div>
-                                </div>
-
-                                <div class="col-lg-6 col-md-12">
-                                    <div class="project_form_field">
-                                        <input type="text" value="" placeholder="Enter business email" />
-                                    </div>
-                                </div>
-                                <div class="col-lg-6 col-md-12">
-                                    <div class="project_form_field">
-                                        <input type="text" value="" placeholder="Phone / Skype / Whatsapp" />
-                                    </div>
-                                </div>
-
-
-                                <div class="col-lg-6 col-md-12">
-                                    <div class="project_form_select">
-                                        <select class="form-select" aria-label="Default select example">
-                                            <option selected>Hire Dedicated Developers</option>
-                                            <option value="1">Hire Dedicated</option>
-                                            <option value="2">Hire Developers</option>
-                                        </select>
-                                    </div>
-                                </div>
-
-
-                                <div class="col-lg-6 col-md-12">
-                                    <div class="project_form_select">
-                                        <select class="form-select" aria-label="Default select example">
-                                            <option selected>Below $10K</option>
-                                            <option value="1">Hire Dedicated</option>
-                                            <option value="2">Hire Developers</option>
-                                        </select>
-                                    </div>
-                                </div>
-
-
-                                <div class="col-lg-12 col-md-12">
-                                    <div class="project_form_textarea">
-                                        <textarea placeholder="Tell us more*"></textarea>
-                                    </div>
-                                </div>
-
-                                <div class="col-lg-12 col-md-12">
-                                    <div class="addFile_button">
-                                        <div class="addFile">
-                                            <input type="file" />
-                                        </div>
-
-                                        <div class="project_form_submit">
-                                            <input type="submit" value="Inquire Now" class="btn_default" />
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div> --}}
+                         
                     </div>
                 </div>
             </div>

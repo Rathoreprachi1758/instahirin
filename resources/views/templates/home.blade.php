@@ -56,10 +56,8 @@
                     <div class="col-lg-3 col-md-6 buildCol">
                         <div class="buildTeam_col">
                             <span><img src="/bizionic/images/build_icon.png"  alt="#" /></span>
-                            <strong>Build Your Team</strong>
-                            <p>Hire marketers and developers that have expertise with similar platforms or applications. Gain better ROIs by hiring individuals having wider expertise and a
-                                complete grasp of the most recent technologies and marketing
-                                strategies.</p>
+                            <strong>BUILD YOUR TEAM</strong>
+                            <p>Hire marketers and developers who have expertise with similar platforms or applications. Gain better ROIs by hiring individuals who are experts and have a complete grasp of the most recent technologies and marketing strategies.</p>
                         </div>
                     </div>
 
@@ -79,11 +77,8 @@
                     <div class="col-lg-3 col-md-6 buildCol">
                         <div class="buildTeam_col">
                             <span><img src="/bizionic/images/increase_icon.png"  alt="#" /></span>
-                            <strong>Increase Productivity</strong>
-                            <p>Improve your team's efficiency hiring more resources,
-                                reduce the work stress on your in-house team, 
-                               while increasing bottom-line revenue and 
-                               profit from expertise and productivity.</p>
+                            <strong>INCREASE PRODUCTIVITY</strong>
+                            <p>Improve your team's efficiency by hiring more resources, and reduce the work stress on your in-house team, while increasing bottom-line revenue and profit from expertise and productivity.</p>
                         </div>
                     </div>
 
@@ -154,7 +149,7 @@
                 <div class="custom_tittle aos-init aos-animate"  data-aos="fade-zoom-in" data-aos-duration="300" data-aos-easing="linear">
                     <h2 class=""><strong>Bizionic, Your</strong>  Software Development Partner</h2>
                     <p class="p_color text-left"><b style=" font-family: 'avenirblack';">Looking to hire talented offshore remote software developers for your company?</b>  Look no further! Our team of experienced developers
-                        are ready to help you build the software solutions you need to take your business to the next level.</p> 
+                        is ready to help you build the software solutions you need to take your business to the next level.</p> 
                 </div>
 
 
@@ -235,7 +230,7 @@
                         <div class="col-lg-6 col-md-6 aos-init aos-animate"  data-aos="fade-right" data-aos-duration="500" data-aos-easing="">
                             <div class="aboutBizionic_col_info">
                                 <h4>#1.	 Cost Saving:</h4>
-                                <p><span><img src="/bizionic/images/offer_icon1.png" alt="#" /></span> As a startup or a matured company, your focus should be on realizing the big IDEA, not letting development COST and selecting the right tech stack as core pain points that
+                                <p><span><img src="/bizionic/images/offer_icon1.png" alt="#" /></span> As a startup or a matured company, your focus should be on realizing the big IDEA, not letting development Cost and selecting the right tech stack as core pain points that
                                     distract you from achieving your project goals.
                                     
                                     

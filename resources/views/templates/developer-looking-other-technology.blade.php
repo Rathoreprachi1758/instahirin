@@ -27,7 +27,7 @@
 
                                         <p class="p_color text-justify">Welcome to Bizionic Technologies, where innovation and creativity converge to create cutting-edge technological solutions. As a forward-thinking technology development company, we are committed to empowering businesses and individuals with the "new-age" and "emerging" cutting-edge and transformative wave of technologies that can revolutionize how businesses operate, and individuals interact with technology. These technologies continually evolve, leading to new applications and capabilities previously considered beyond reach.</p>
                                            <br>
-                                        <a href="/get-a-free-consultation" class="btn_default mt-2">Contact Now</a>
+                                        <a href="#gotoContact" class="btn_default mt-2">Contact Now</a>
                                     
                                 </div>
                             </div>
@@ -119,7 +119,7 @@
 
 
 
-        <div class="aboutProject_section hireFormSetting">
+        <div class="aboutProject_section hireFormSetting" id="gotoContact">
             <div class="auto_container">
 
                 <div class="contactUs_detail">

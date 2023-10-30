@@ -24,6 +24,7 @@ return new class extends Migration
             $table->string('message');
             $table->string('hiring_type')->nullable();
             $table->string('priority')->default('normal');
+            $table->string('source')->nullable();
             $table->string('document')->nullable();
             $table->string('from_date')->nullable();
             $table->string('to_date')->nullable();

@@ -30,7 +30,7 @@
 
                                         <p class="p_color text-justify">Bizionic Marketing Solutions SEM (Search Engine Marketing) specialists specialises in various capacities to drive targeted traffic and increase visibility through search engine advertising.  </p>
                                            <br>
-                                        <a href="/get-a-free-consultation" class="btn_default mt-2">Hire SEM Specialist</a>
+                                        <a href="#gotoContact" class="btn_default mt-2">Hire SEM Specialist</a>
                                     
                                 </div>
                             </div>
@@ -182,13 +182,13 @@
 
 
 
-        <div class="aboutProject_section hireFormSetting">
+        <div class="aboutProject_section hireFormSetting" id="gotoContact">
             <div class="auto_container">
 
                 <div class="contactUs_detail">
 
                     <!-- form here  -->
-
+                    @include('forms.hire_talent')
 
                 </div>
 

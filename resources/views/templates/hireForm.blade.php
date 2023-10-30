@@ -1,14 +1,14 @@
-
 <div class="hireForm_banner">
-      <div class="auto_container">
+    <div class="auto_container">
         <div class="hireForm_banner_detail">
             <div class="custom_tittle">
                 <h2>Thank you for choosing Bizionic's "Hire Talent Across Borders”</h2>
-                <p>Qualified, Trustworthy Talent, Authenticated Excellence, <strong>HIRE WITH CONFIDENCE</strong>  <br>
-                    Zero Cost to Meet Talent, Hire Top Talent In Minutes, and Unlock Cost Savings through Smart Hiring.</p>
+                <p>Qualified, Trustworthy Talent, Authenticated Excellence, <strong>HIRE WITH CONFIDENCE</strong> <br>
+                    Zero Cost to Meet Talent, Hire Top Talent In Minutes, and Unlock Cost Savings through Smart Hiring.
+                </p>
             </div>
         </div>
-      </div>
+    </div>
 </div>
 
 
@@ -19,7 +19,8 @@
         <div class="contactUs_detail">
 
             <div class="row ">
-                <div class="col-lg-4 col-md-5  aos-init " data-aos="fade-right" data-aos-duration="800" data-aos-easing="ease-out-cubic">
+                <div class="col-lg-4 col-md-5  aos-init " data-aos="fade-right" data-aos-duration="800"
+                    data-aos-easing="ease-out-cubic">
                     <div class="biz_brief">
 
                         <div class="hiringInfo">
@@ -36,8 +37,8 @@
                                 </div>
                             </div>
 
-                            <div class="descriptionText">
-                                <p>{{$expert->description}}</p>
+                            <div class="descriptionText" style="color: #fff;">
+                                {!! $expert->description !!}
                             </div>
 
 
@@ -45,7 +46,7 @@
                                 <strong>EXPERT IN:</strong>
                                 <p>
                                     @foreach($expert->experties as $experty)
-                                        {{$experty->title}}, 
+                                    {{$experty->title}},
                                     @endforeach
                                 </p>
                             </div>
@@ -54,7 +55,7 @@
                                 <strong>ALSO WORK WITH:</strong>
                                 <p>
                                     @foreach($expert->skills as $skill)
-                                        {{$skill->title}}, 
+                                    {{$skill->title}},
                                     @endforeach
                                 </p>
                             </div>
@@ -76,171 +77,27 @@
 
                     </div>
                 </div>
-                <div class="col-lg-8 col-md-7   aos-init " data-aos="fade-left" data-aos-duration="800" data-aos-easing="ease-out-cubic">
+                <div class="col-lg-8 col-md-7   aos-init " data-aos="fade-left" data-aos-duration="800"
+                    data-aos-easing="ease-out-cubic">
                     <div class="contactForm_page">
                         <div class="custom_tittle text-left">
-                            <h3 class="p_color pb-5">For Employers, Hiring For</h3>
+                            <h3 class="p_color pb-5">For Employers, Hiring For </h3>
                             <p class="p-0">Please fill the form and our representative will get back to you.</p>
                         </div>
-                        <div class="alert alert-success text-center" role="alert" id="hire_success"> Thank you for the message. We will contact you shortly. </div>
-                        <div class="alert alert-danger text-center" role="alert" id="hire_failure"> Sorry! There is some problem sending your query at the moment, Please try again. </div>
-                        <form action="{{ route('hire') }}" method="POST" enctype="multipart/form-data" id="hire_developer" onsubmit="return false;">
+                        <div class="alert alert-success text-center" role="alert" id="hire_success"> Thank you for the
+                            message. We will contact you shortly. </div>
+                        <div class="alert alert-danger text-center" role="alert" id="hire_failure"> Sorry! There is some
+                            problem sending your query at the moment, Please try again. </div>
+                        {{-- <form enctype="multipart/form-data" id="hire_developer">
                             @csrf
-                        <div class="project_form">
-                            <div class="row">
-                                <div class="col-lg-6 col-md-12">
-                                    <div class="project_form_field">
-                                        <input type="text" value="" placeholder="Name*" id="name" name="name"/>
-                                        <input type="text" value="{{ $expert->id }}" name="expert_id" id="expert_id" hidden readonly>
-                                    </div>
-                                </div>
+                            <input type='hidden' value='{{$expert->id}}' name='expert'>
+                            <hire-talent-component :countries='{{$countries}}' :timezones='{{ $timezones }}'>
+                            </hire-talent-component>
 
-                                <div class="col-lg-6 col-md-12">
-                                    <div class="project_form_field">
-                                        <input type="text" value="" placeholder="Phone / Skype / Whatsapp" name="phone" id="phone"/>
-                                    </div>
-                                </div>
-                                <div class="col-lg-6 col-md-12">
-                                    <div class="project_form_field">
-                                        <input type="text" value="" placeholder="Company Name " name="company"/>
-                                    </div>
-                                </div>
-                                <div class="col-lg-6 col-md-12">
-                                    <div class="project_form_field">
-                                        <input type="text" value="" placeholder="Enter business email*" name="email"/>
-                                    </div>
-                                </div>
-                                <div class="col-lg-6 col-md-12">
-                                    <div class="project_form_field">
-                                        <input type="text" value="" placeholder="Website (if Available)" name="website"/>
-                                    </div>
-                                </div>
-                                <div class="col-lg-6 col-md-12">
-                                    <div class="project_form_field">
-                                        <input type="text" value="" placeholder="Address" name="address"/>
-                                    </div>
-                                </div>
-
-
-
-                                <div class="col-lg-12 col-md-12">
-                                    <div class="project_form_textarea">
-                                        <textarea placeholder="Brief company information..." name="company_info"></textarea>
-                                    </div>
-                                </div>
-                                <div class="col-lg-12 col-md-12">
-                                    <div class="project_form_textarea">
-                                        <textarea placeholder="Brief project information..." name="message"></textarea>
-                                    </div>
-                                </div>
-
-
-                                <div class="col-lg-12 col-md-12">
-                                    <div class="project_form_select">
-                                        <select class="form-select" aria-label="Default select example" name="hiring_type" required>
-                                            <option value="" selected>Hire Periods (Full Time, Part Time, Daily, Weekly, Periods) Please Select</option>
-                                            <option value="Dedicated">Hire Dedicated</option>
-                                            <option value="Developer">Hire Developers</option>
-                                          </select>
-                                    </div>
-                                </div>
-
-
-
-                                <div class="col-lg-12 col-md-12">
-                                    <div class="dateTime_range">
-                                        <label>From</label>
-                                        <div class="project_form_field">
-                                            <input type="text" value="" placeholder="Calendar"  name="from_date">
-                                        </div>
-
-
-                                        <label class="text-center">To</label>
-                                        <div class="project_form_field mr-3">
-                                            <input type="text" value="" placeholder="Calendar" name="to_date">
-                                        </div>
-
-
-
-                                        <div class="project_form_field ml-3">
-                                            <input type="text" value="" placeholder="Time" id="timePicker" name="from_time"/>
-                                        </div>
-                                        <label class="text-center">To</label>
-                                        <div class="project_form_field">
-                                            <input type="text" value="" placeholder="Time" name="to_time">
-                                        </div>
-
-
-                                        <div class="addDeleteBtn">
-                                            <a href="javascript:void(0)" class="p_color"><i class="fa fa-plus-circle" aria-hidden="true"></i></a>
-                                            <a href="javascript:void(0)" class="text-danger"><i class="fa fa-times-circle" aria-hidden="true"></i></a>
-                                        </div>
-
-                                    </div>
-                                </div>
-
-
-
-
-                                <div class="col-lg-12 col-md-12">
-                                    <div class="scheduleCheckbox">
-                                        <label class="checkbox-label" name="virtual_assistance_call" value="Yes">
-                                            <input type="checkbox">
-                                            <span class="checkbox-custom rectangular"></span>
-                                            Schedule an Virtual Assistance Call
-                                        </label>
-                                    </div>
-                                </div>
-
-
-
-
-                                <div class="col-lg-12 col-md-12">
-                                    <div class="dateTime_range">
-                                        <label style="min-width: 90px;">Availability</label>
-                                        <div class="project_form_field">
-                                            <input type="text" value="" placeholder="Calendar" name="availability_date" >
-                                        </div>
-
-
-
-
-
-                                        <div class="project_form_field ml-5">
-                                            <input type="text" value="" placeholder="Time" id="timePicker" name="availability_time_from"/>
-                                        </div>
-                                        <label class="text-center">To</label>
-                                        <div class="project_form_field">
-                                            <input type="text" value="" placeholder="Time" name="availability_time_to">
-                                        </div>
-
-
-                                        <div class="addDeleteBtn">
-                                            <a href="javascript:void(0)" class="p_color"><i class="fa fa-plus-circle" aria-hidden="true"></i></a>
-                                            <a href="javascript:void(0)" class="text-danger"><i class="fa fa-times-circle" aria-hidden="true"></i></a>
-                                        </div>
-
-                                    </div>
-                                </div>
-
-
-
-                                <div class="col-lg-12 col-md-12">
-                                    <div class="addFile_button onHiredetailPage">
-                                        <div class="addFile">
-                                            <strong>Upload supporting documents. if have!</strong>
-                                            <input type="file" name="document"/>
-                                        </div>
-
-                                        <div class="project_form_submit">
-                                            <input type="submit" value="Submit Request" class="btn_default" />
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-
-                        </div>
-                        </form>
+                        </form> --}}
+                        <hire-talent-component :countries='{{$countries}}' :timezones='{{ $timezones }}'
+                            :expert-id='{{ $expert->id }}'>
+                        </hire-talent-component>
                     </div>
                 </div>
             </div>
@@ -253,10 +110,10 @@
 
 
 
- <!-- our client Bizionic section -->
+<!-- our client Bizionic section -->
 
 
- <client-component></client-component>
+<client-component></client-component>
 
 
 
@@ -374,7 +231,7 @@
                     <li><a href="#">Startup Solutions</a></li> |
                     <li><a href="#">Media & Publishing</a></li> |
                     <li><a href="#">Food & FMCG</a></li> |
-                                <li><a href="#">E-Commerce</a></li> |
+                    <li><a href="#">E-Commerce</a></li> |
                 </ul>
             </div>
         </div>

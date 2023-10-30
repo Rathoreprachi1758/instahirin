@@ -29,7 +29,7 @@
 
                                         <p class="p_color text-justify">Bizionic Technologies Craft CMS developers specialize in building websites and web applications using the Craft CMS platform. Craft CMS is a flexible and powerful content management system allowing developers to create custom websites easily. Craft CMS developers are skilled in web development technologies such as PHP, Twig templating language, HTML, CSS, and JavaScript.</p>
                                            <br>
-                                        <a href="/get-a-free-consultation" class="btn_default mt-2">Hire Craft CMS Developer</a>
+                                        <a href="#gotoContact" class="btn_default mt-2">Hire Craft CMS Developer</a>
                                     
                                 </div>
                             </div>
@@ -150,7 +150,7 @@
 
 
 
-        <div class="aboutProject_section hireFormSetting">
+        <div class="aboutProject_section hireFormSetting" id="gotoContact">
             <div class="auto_container">
 
                 <div class="contactUs_detail">

@@ -29,7 +29,7 @@
 
                                         <p class="p_color text-justify">Bizionic Marketing Solutions Public Relations (PR) Specialists are responsible for managing the public image and reputation of a company, organization, or individual. They develop and implement strategic communication plans to build positive relationships with the target audience, media outlets, and the public at large. PR Specialists play a critical role in shaping public perception, managing crises, and promoting favorable coverage.</p>
                                            <br>
-                                        <a href="/get-a-free-consultation" class="btn_default mt-2">Hire PR Specialist</a>
+                                        <a href="#gotoContact" class="btn_default mt-2">Hire PR Specialist</a>
                                     
                                 </div>
                             </div>
@@ -163,12 +163,13 @@
 
 
 
-        <div class="aboutProject_section hireFormSetting">
+        <div class="aboutProject_section hireFormSetting" id="gotoContact">
             <div class="auto_container">
 
                 <div class="contactUs_detail">
 
                     <!-- form here  -->
+                    @include('forms.hire_talent')
 
 
                 </div>

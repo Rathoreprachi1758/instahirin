@@ -30,7 +30,7 @@
 
                                         <p class="p_color text-justify">Bizionic Marketing Solutions packaging designer specializes in creating visually appealing and functional packaging designs for products. They combine creative design skills, branding knowledge, and practical considerations to develop packaging that not only protects and contains the product but also communicates the brand's message and attracts consumers. </p>
                                            <br>
-                                        <a href="/get-a-free-consultation" class="btn_default mt-2">Hire Packaging Designer</a>
+                                        <a href="#gotoContact" class="btn_default mt-2">Hire Packaging Designer</a>
                                     
                                 </div>
                             </div>
@@ -175,12 +175,13 @@
 
 
 
-        <div class="aboutProject_section hireFormSetting">
+        <div class="aboutProject_section hireFormSetting" id="gotoContact">
             <div class="auto_container">
 
                 <div class="contactUs_detail">
 
                     <!-- form here  -->
+                    @include('forms.hire_talent')
 
 
                 </div>

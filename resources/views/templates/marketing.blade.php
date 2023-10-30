@@ -331,6 +331,9 @@
                         </div>
                     </div>
 
+                    <div class="consult_btn">
+                        <a href="/get-a-free-consultation" class="btn_default mt-2">Get a Free Consultation</a>
+                    </div>
                 </div>
             </div>
         </div>
@@ -672,10 +675,10 @@
                                         through social media.</h5>
 
                                         <div class="social_info">
-                                            <a href="#" class="s_fb"><i class="fa fa-facebook" aria-hidden="true"></i></a>
-                                            <a href="#" class="s_tw"><i class="fa fa-twitter" aria-hidden="true"></i></a>
-                                            <a href="#" class="s_link"><i class="fa fa-linkedin" aria-hidden="true"></i></a> 
-                                            <a href="#" class="s_inst"><i class="fa fa-envelope" aria-hidden="true"></i></a> 
+                                            <a href="https://www.facebook.com/Bizionictechnologies" target="_blank" class="s_fb"><i class="fa fa-facebook" aria-hidden="true"></i></a>
+                                            <a href="https://twitter.com/bizionictech" target="_blank" class="s_tw"><i class="fa fa-twitter" aria-hidden="true"></i></a>
+                                            <a href="https://www.linkedin.com/company/bizionic-technologies-and-marketing-solutions/" target="_blank" class="s_link"><i class="fa fa-linkedin" aria-hidden="true"></i></a> 
+                                            <a href="mailto:info@bizionictech.com" class="s_inst"><i class="fa fa-envelope" aria-hidden="true"></i></a> 
                                             
                                         </div>
                                 </div>
@@ -689,10 +692,10 @@
                                         into who, what and why of hiring the rig..</h5>
 
                                         <div class="social_info">
-                                            <a href="#" class="s_fb"><i class="fa fa-facebook" aria-hidden="true"></i></a>
-                                            <a href="#" class="s_tw"><i class="fa fa-twitter" aria-hidden="true"></i></a>
-                                            <a href="#" class="s_link"><i class="fa fa-linkedin" aria-hidden="true"></i></a> 
-                                            <a href="#" class="s_inst"><i class="fa fa-envelope" aria-hidden="true"></i></a> 
+                                            <a href="https://www.facebook.com/Bizionictechnologies" target="_blank" class="s_fb"><i class="fa fa-facebook" aria-hidden="true"></i></a>
+                                            <a href="https://twitter.com/bizionictech" target="_blank" class="s_tw"><i class="fa fa-twitter" aria-hidden="true"></i></a>
+                                            <a href="https://www.linkedin.com/company/bizionic-technologies-and-marketing-solutions/" target="_blank" class="s_link"><i class="fa fa-linkedin" aria-hidden="true"></i></a> 
+                                            <a href="mailto:info@bizionictech.com" class="s_inst"><i class="fa fa-envelope" aria-hidden="true"></i></a> 
                                             
                                         </div>
                                 </div>
@@ -706,10 +709,10 @@
                                         SEO agency for your business? Here is... </h5>
 
                                         <div class="social_info">
-                                            <a href="#" class="s_fb"><i class="fa fa-facebook" aria-hidden="true"></i></a>
-                                            <a href="#" class="s_tw"><i class="fa fa-twitter" aria-hidden="true"></i></a>
-                                            <a href="#" class="s_link"><i class="fa fa-linkedin" aria-hidden="true"></i></a> 
-                                            <a href="#" class="s_inst"><i class="fa fa-envelope" aria-hidden="true"></i></a> 
+                                            <a href="https://www.facebook.com/Bizionictechnologies" target="_blank" class="s_fb"><i class="fa fa-facebook" aria-hidden="true"></i></a>
+                                            <a href="https://twitter.com/bizionictech" target="_blank" class="s_tw"><i class="fa fa-twitter" aria-hidden="true"></i></a>
+                                            <a href="https://www.linkedin.com/company/bizionic-technologies-and-marketing-solutions/" target="_blank" class="s_link"><i class="fa fa-linkedin" aria-hidden="true"></i></a> 
+                                            <a href="mailto:info@bizionictech.com" class="s_inst"><i class="fa fa-envelope" aria-hidden="true"></i></a> 
                                             
                                         </div>
                                 </div>

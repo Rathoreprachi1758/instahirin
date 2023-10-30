@@ -6,7 +6,7 @@ use App\Models\Client;
 use App\Models\Expert;
 use App\Models\ExpertCategory;
 use Illuminate\Http\Request;
-
+use Illuminate\Support\Facades\DB;
 class ApiController extends Controller
 {
     //
@@ -18,18 +18,22 @@ class ApiController extends Controller
 
     public function experts(Request $request)
     {
-        return response()->json(Expert::with(['experties', 'skills'])->orderBy('created_at', 'desc')->get(), 200)->header('Content-Type', 'text/json');
+        if(empty($request->page))
+            return response()->json(Expert::with(['experties', 'skills'])->orderBy('created_at', 'desc')->get(), 200)->header('Content-Type', 'text/json');
+        else    
+            return response()->json(Expert::with(['experties', 'skills'])->orderBy('created_at', 'desc')->paginate(9), 200)->header('Content-Type', 'text/json');
     }
 
     public function experts_search(Request $request)
     {
         // Validation if keyword is not found
-        $keyword = $request->input('keyword');
-
-        return response()->json(Expert::with(['experties', 'skills'])->whereHas('experties', function ($query) use ($keyword) {
-            $query->where('title', $keyword);
+        // $keyword = explode(',',$request->input('keyword'));
+        // $keyword = explode(' ',implode(',',$keyword));
+        $keyword = array($request->input('keyword'));
+         return  response()->json(Expert::with(['experties', 'skills'])->whereHas('experties', function ($query) use ($keyword) {
+            $query->whereIn('title', $keyword);
         })->orWhereHas('skills', function ($query) use ($keyword) {
-            $query->where('title', $keyword);
+            $query->whereIn('title', $keyword);
         })->orderBy('created_at', 'desc')->get(), 200)->header('Content-Type', 'text/json');
     }
 
@@ -46,9 +50,13 @@ class ApiController extends Controller
     public function experts_by_experties(Request $request)
     {
         $keyword = $request->input('keyword');
+        $availabl = $request->input('availabl');
 
-        return response()->json(Expert::with(['experties', 'skills'])->whereHas('experties', function ($query) use ($keyword) {
+        return response()->json(Expert::with(['experties', 'skills'])->whereHas('experties', function ($query) use ($keyword,$availabl) {
             $query->where('title', $keyword);
+            if(!empty($availabl))
+                $query->where('availability', $availabl);
+
         })->orderBy('created_at', 'desc')->get(), 200)->header('Content-Type', 'text/json');
     }
 

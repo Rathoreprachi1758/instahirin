@@ -29,7 +29,7 @@
 
                                         <p class="p_color text-justify">Bizionic Marketing Solutions UI/UX designers focuses on creating user-friendly and visually appealing interfaces for digital products, such as websites, mobile apps, software applications, and other interactive platforms. UI stands for User Interface, which refers to the visual elements and layout of a digital product, while UX stands for User Experience, which encompasses the overall interaction and usability of the product. </p>
                                            <br>
-                                        <a href="/get-a-free-consultation" class="btn_default mt-2">Hire UI/UX Designer</a>
+                                        <a href="#gotoContact" class="btn_default mt-2">Hire UI/UX Designer</a>
                                     
                                 </div>
                             </div>
@@ -170,12 +170,13 @@
 
 
 
-        <div class="aboutProject_section hireFormSetting">
+        <div class="aboutProject_section hireFormSetting" id="gotoContact">
             <div class="auto_container">
 
                 <div class="contactUs_detail">
 
                     <!-- form here  -->
+                    @include('forms.hire_talent')
 
 
                 </div>
