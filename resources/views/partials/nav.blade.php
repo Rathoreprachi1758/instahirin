@@ -84,4 +84,12 @@
         </li>
         @endforeach
     </ul>
+
+    <div class="trendingNav_links">
+            <ul>
+                <li><a href="#">Startup Funding</a></li>
+                <li><a href="#">Trending News</a></li>
+                <li><a href="#">Blogs</a></li>
+            </ul>
+        </div>
 </div>

@@ -299,7 +299,7 @@
     width: 110px;
 }
 .main_container {
-    padding-top: 100px; 
+    padding-top: 142px; 
 }
 
 .main_nav { display: none;
@@ -507,6 +507,115 @@
 
 .biz_brief_info ul li strong {
     font-size: 18px;}
+
+
+.ind_innerPages .custom_tittle h2 b {
+    font-size: 48px; 
+}
+
+.header_up_detail { 
+    padding: 8px 0px;}
+
+.industryNew_section_detail { 
+    padding: 70px 0px;
+}
+.wedo_sction .hireForm_banner_detail {
+    padding: 60px 50px;
+}
+.wedo_sction .industryNew_section2_cols { 
+    padding: 70px 50px 60px;
+}
+.nevStarup_setting {
+    padding: 70px 50px 60px; 
+}
+.indCol {
+    padding: 10px;
+}
+.proposal_sectionTittle { 
+    padding: 70px 50px; 
+}
+.funding_info { 
+    padding: 70px 50px;
+}
+.aboutProject_section_detail { 
+    padding: 70px 0px; 
+}
+.startup_innerPages .industryNew_section_detail { 
+    padding: 70px 40px 70px;
+}
+
+.seamlessLimitless_section_detail { 
+    padding: 70px 0px;
+}
+.needMvp_section_detail { 
+    padding: 70px 0px;
+}
+
+.mvpDev_col_info { 
+    padding: 30px 15px 30px;
+}
+.mvpBenefits_flowSection { 
+    padding: 70px 50px 70px;
+}
+.designSolution_section .industryNew_section2_colsInfo { 
+    padding: 30px 20px 30px 20px;
+}
+.inspired_col {
+    padding-left: 15px;
+    padding-right: 15px;
+}
+.inspiredPassion_section_detail { 
+    padding: 70px 0px 60px;
+}
+
+.startupMvp_section .seamlessLimitless_fl { padding-right: 20px;}
+
+.startupMvp_section .seamlessLimitless_fr span {
+    max-width: 380px; 
+}
+
+.awsNepture_list_info { 
+    padding: 60px 50px; 
+}
+.awsNepture_list ul li {
+    padding: 30px 0px;
+}
+
+.inspiredPassion_cil_info { 
+    padding: 30px 25px 30px;
+}
+.startupServices_section_detail { 
+    padding: 70px 0px 70px; 
+}
+
+.startupWhy .inspired_col {
+    padding-top: 15px;
+    padding-bottom: 15px;
+}
+.startupHowWork .inspired_col {
+    padding: 10px;
+}
+.startupHowWork .inspiredPassion_section_detail {
+    padding: 70px 0px 70px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -1492,6 +1601,115 @@ h6 { font-size: 18px; }
 .marketingFormSetting .row { align-items: flex-start !important;}
 
 .industryNew_section1 .row { align-items: flex-start !important;}
+
+
+
+
+.header_up_detail { 
+    padding: 8px 0px;}
+
+.logo_socialInfo .social_info a {
+    margin-right: 8px !important; 
+    font-size: 14px !important;
+}
+.eshareWhite_logo a {
+    width: 85px;}
+
+.change_langOuter { 
+    width: 110px; 
+    padding: 1px 2px; 
+    margin-left: 5px;
+}
+
+.change_langOuter .goog-te-combo {
+    font-size: 9px;
+}
+
+.authBtns { 
+    padding-left: 0px;
+}
+.authBtns ul li a { 
+    padding: 4px 8px; 
+    font-size: 9px; 
+}
+.eshareWhite_logo { 
+    margin-left: 35px;
+}
+.main_container {
+    padding-top: 141px;
+}
+.startup_innerPages .industryNew_section_detail { 
+    padding: 60px 40px 60px;
+}
+.startup_innerPages .industryNew_section1 .custom_tittle h2 b {
+    font-size: 34px;
+}
+
+.mvpDev_col { padding: 15px;}
+
+.mvpBenefits_flowSection { 
+    padding: 60px 40px 60px;
+}
+
+.ind_innerPages .custom_tittle h2 b {
+    font-size: 42px;
+    line-height: 1.2;
+}
+
+.wedo_sction .hireForm_banner_detail {
+    padding: 50px 40px;
+}
+.wedo_sction .industryNew_section2_cols { 
+    padding: 60px 40px 50px;
+}
+.nevStarup_setting {
+    padding: 60px 40px 50px; 
+}
+.proposal_sectionTittle { 
+    padding: 50px 40px; 
+}
+.funding_info { 
+    padding: 50px 40px;
+}
+
+.seamlessLimitless_section_detail { 
+    padding: 60px 0px;
+}
+.needMvp_section_detail { 
+    padding: 60px 0px;
+}
+
+.inspiredPassion_section_detail { 
+    padding: 60px 0px 30px;
+}
+.inspired_col { padding: 15px;}
+
+.wedo_sction .industryNew_section2_cols {
+    padding: 60px 20px 50px;
+}
+.awsNepture_list_info { 
+    padding: 50px 30px; 
+}
+
+.inspiredPassion_row {
+    padding-top: 0px; 
+}
+
+.wedo_sction .custom_tittle p br { display: none;}
+
+.startupServices_info { 
+    padding: 50px 40px;
+}
+
+.startupServices_section_detail { 
+    padding: 60px 0px 60px; 
+}
+
+.startupMvp_section .seamlessLimitless_fl { padding-right: 0px;}
+
+.startupHowWork .inspired_col {
+    padding: 15px;
+}
 
 
 
@@ -3189,6 +3407,41 @@ h6 { font-size: 18px; }
 
 
 
+.header_up_detail { 
+    padding: 6px 0px;}
+.logo_socialInfo .social_info { display: none;}
+
+.trendingNav_links { display: none;}
+
+.header_detail .trendingNav_links { display: block;}
+
+.eshareWhite_logo { 
+    margin-left: 0px;
+}
+
+.eshareWhite_logo a {
+    width: 70px;}
+
+.authBtns ul li a { background: none !important; padding: 0px !important; font-size: 9px; border: 0px; color: #fff;}
+
+.change_langOuter .goog-te-combo {
+    font-size: 9px;
+} 
+.change_langOuter { 
+    width: 110px; 
+    min-height: 15px;
+    margin-left: 10px;
+}
+
+.authBtns ul li {
+    padding: 0px 0px 0px 7px;
+}
+.authBtns { 
+    padding-left: 3px;
+}
+.main_container {
+    padding-top: 136px;
+}
 
 
 
@@ -3196,12 +3449,101 @@ h6 { font-size: 18px; }
 
 
 
+.proposal_sectionTittle { 
+    padding: 40px 20px;}
 
+    .funding_info { 
+    padding: 40px 20px;
+}
+.appProcssSec {
+    padding: 0px !important;
+}
 
+.startup_innerPages .industryNew_section_detail { 
+    padding: 50px 20px 40px;
+}
 
+.startup_innerPages .industryNew_section1_avatar { padding-top: 25px;}
 
+.startupMvp_section .seamlessLimitless_fr span { 
+    padding-top: 30px;
+    padding-bottom: 40px;
+}
+.mvpDev_process { 
+    padding: 40px 15px 30px;
+}
 
+.mvpDev_col { padding-top: 10px; padding-bottom: 10px;}
 
+.mvpDev_col_info { 
+    padding: 30px 15px 30px;
+}
+.needMvp_section_detail { 
+    padding: 60px 0px;
+}
+
+.mvpBenefits_flowSection { 
+    padding: 50px 20px 40px;
+}
+
+.mvpBenefits_flow { 
+    padding-top: 0px;
+}
+
+.startup_innerPages .industryNew_section1 .custom_tittle h2 b {
+   word-wrap: break-word;
+}
+
+.designSolution_section .industryNew_section2_cols { 
+    padding: 60px 0px 60px !important;
+}
+.designSolution_section .industryNew_section2_colsInfo { 
+    padding: 40px 20px 40px 20px;
+}
+.inspiredPassion_cil_info { 
+    padding: 40px 20px 30px;
+}
+
+.inspired_col { padding-top: 10px; padding-bottom: 10px;}
+
+.awsNepture_info_fl .custom_tittle {
+    padding-right: 0px;
+    padding-bottom: 40px !important;
+}
+.awsNepture_list ul li {
+    padding: 20px 0px;
+}
+.inspiredPassion_section_detail { 
+    padding: 60px 0px 50px;
+}
+
+.startupWhy .inspired_col {
+    padding-top: 15px;
+    padding-bottom: 15px;
+}
+.inspiredPassion_row {
+    padding-top: 0px; 
+}
+
+.nevStarup_setting .indust_work_col { 
+    padding: 25px 20px;
+}
+.startupServices_info { 
+    padding: 40px 20px;
+}
+.startupServices_section_detail { 
+    padding: 60px 0px 60px; 
+}
+
+.modernizationSection .industryNew_section2_colsInfo { 
+    margin: 15px 0px;
+}
+
+.modernizationSection .provide_col { padding: 0px 15px !important;}
+
+.awsNepture_list_info { 
+    padding: 40px 20px; 
+}
 
 
 

@@ -195,7 +195,7 @@
                                         </div>
                                         <div class="col-lg-4 col-md-6 indCol">
                                             <div class="indust_work_col">
-                                                <a href="#">
+                                                <a href="/industries/industries-we-serve/industries/startup-design-experience">
                                                     <span><img src="/bizionic/images/newStartup_icon5.png" alt="#" /></span>
                                                     <strong>CUSTOM APPLICATION<br> DEVELOPMENT</strong>
                                                     <p>Custom app development can help you increase brand awareness and market reach by providing unique features and a personalised user experience.</p>
@@ -206,7 +206,7 @@
                                         </div>
                                         <div class="col-lg-4 col-md-6 indCol">
                                             <div class="indust_work_col">
-                                                <a href="#">
+                                                <a href="/industries/industries-we-serve/industries/app-modernization">
                                                     <span><img src="/bizionic/images/newStartup_icon6.png" alt="#" /></span>
                                                     <strong>APPLICATION<br> MODERNIZATION</strong>
                                                     <p>By modernising your platform with Bizionic, you can improve user experience, save costs, and increase efficiency without impacting business operations.</p>
@@ -218,7 +218,7 @@
 
                                         <div class="col-lg-4 col-md-6 indCol">
                                             <div class="indust_work_col">
-                                                <a href="#">
+                                                <a href="/industries/industries-we-serve/industries/startup-data-infastructure">
                                                     <span><img src="/bizionic/images/newStartup_icon7.png" alt="#" /></span>
                                                     <strong>DATA INFRASTRUCTURE<br> MODERNIZATION</strong>
                                                     <p>Modernise data infrastructure with a trusted cloud, hire specialists for AI-driven foundations and DataOps, and expand your IT ecosystem with a cost-effective IT ecosystem.</p>
@@ -229,7 +229,7 @@
                                         </div>
                                         <div class="col-lg-4 col-md-6 indCol">
                                             <div class="indust_work_col">
-                                                <a href="#">
+                                                <a href="/industries/industries-we-serve/industries/startup-product-services">
                                                     <span><img src="/bizionic/images/newStartup_icon8.png" alt="#" /></span>
                                                     <strong>PRODUCT<br> ENGINEERING</strong>
                                                     <p>Product development from start to finish and optimised software delivery. Boost growth, improve operations, and address company difficulties. Ideal for companies, small and medium-sized businesses, and sponsored startups.</p>
@@ -240,7 +240,7 @@
                                         </div>
                                         <div class="col-lg-4 col-md-6 indCol">
                                             <div class="indust_work_col">
-                                                <a href="#">
+                                                <a href="/industries/industries-we-serve/industries/startup-etl-services">
                                                     `<span><img src="/bizionic/images/newStartup_icon9.png" alt="#" /></span>
                                                     <strong>ETL<br> AS A SERVICE</strong>
                                                     <p>A strong ETL system that will alter your data management process. to create an effective system for gathering all of your data and organising it in a useful fashion.</p>
@@ -251,7 +251,7 @@
                                         </div>
                                         <div class="col-lg-4 col-md-6 indCol">
                                             <div class="indust_work_col">
-                                                <a href="#">
+                                                <a href="/industries/industries-we-serve/industries/startup-data-analytic">
                                                     <span><img src="/bizionic/images/newStartup_icon10.png" alt="#" /></span>
                                                     <strong>CLOUD DATA<br> ANALYTICS</strong>
                                                     <p>Bizionic's data analytics services help brand-focused businesses achieve concrete commercial benefits while navigating the digital landscape.</p>
@@ -389,7 +389,7 @@
                                 <p>For further details or to begin your application process, please contact</p>
 
                                 <div class="applyBtn">
-                                    <a href="industries/industries-we-serve/industries/funding-apply-now-form" class="btn_default" target="_blank">Apply Now</a>
+                                    <a href="/industries/industries-we-serve/industries/funding-apply-now-form" class="btn_default" target="_blank">Apply Now</a>
                                 </div>
 
                             </div>
@@ -404,8 +404,10 @@
 
 
 
+        <div class="startupPage_form">
     <!-- about project section -->
     @include('forms.contact_section')
+</div>
 
     <!-- our client Bizionic section -->
     <client-component></client-component>
