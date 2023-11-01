@@ -866,7 +866,7 @@
 
                     <div class="col-lg-3 col-md-6 pt-4 pb-4  colSet">
                         <!-- <a href="https://chat.whatsapp.com/9059360184"> -->
-                        <a href="https://api.whatsapp.com/send?phone=916302464538">
+                        <a href="https://api.whatsapp.com/send?phone=919059360184" target="_blank">
                             <i class="pt-3 fa fa-whatsapp fa-3x" aria-hidden="true"></i><br>
                             <p class="mt-4 h5">Whats app</p>
                             <!-- <a href="https://api.whatsapp.com/send?phone=916302464538">Send Message</a> -->
