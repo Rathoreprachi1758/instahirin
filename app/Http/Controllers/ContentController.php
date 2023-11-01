@@ -59,6 +59,7 @@ class ContentController extends Controller
         // dd($template);
         if ($page->slug == 'hire-me') {
             $jobs = Job::where('status', 'Open')->get();
+         
             return view('welcome', [
                 'title' => $page->meta_title,
                 'description' => $page->meta_description,
@@ -118,7 +119,7 @@ class ContentController extends Controller
                 // 'hiring_type' => 'required',
                 // 'budget' => 'required',
                 'details' => 'required',
-                'document' => 'file',
+                // 'document' => 'file',
             ]);
         } else {
             $validatedData = $request->validate([
@@ -128,7 +129,7 @@ class ContentController extends Controller
                 'country_code' => '',
                 'phone' => 'required',
                 'details' => '',
-                'document' => '',
+                // 'document' => '',
             ]);
         }
 
@@ -317,6 +318,7 @@ class ContentController extends Controller
                 $formData->availabilityData()->save($availabilityData);
             }
         } else if (isset($request->company_info)) {
+            $formData = new HireRequest();
             $requestId = $formData->id;
             for ($n = 0; $n < count($request->from_date); $n++) {
                 $formData = new Hire_requests_calender();
@@ -656,7 +658,7 @@ class ContentController extends Controller
     {
         // Validate the request data, including the uploaded file
         // Log::info('Request data:', $request->all());
-
+       // dd('Hii9');
         $validatedData = $request->validate([
             'name' => 'required',
             'contact_details' => 'required',
@@ -811,13 +813,6 @@ class ContentController extends Controller
         // Return a response indicating success
         return response()->json(['message' => 'Form submitted successfully']);
     }
-<<<<<<< HEAD
-    //
-    public function Thanksmessage(){
-        // return view('Thankyou.blade');
-        
-        return response()->json(['message' => 'Form get successfully']);
-=======
 
     // Funding Apply Form
     public function fundingApply(Request $request)
@@ -872,13 +867,13 @@ class ContentController extends Controller
 
 
     // Jobs Form Controller
-    public function applyShow($jobId)
+
+    
+    // Jobs Form Controller
+    public function applyShow(Request $request)
     {
-        //dd($jobId);
+        $jobId = $request->query('jobId');
         $job = Job::find($jobId);
-        //dd($job);
-
-
         return view('templates.apply-now-form', ['job' => $job]);
     }
 
@@ -888,6 +883,15 @@ class ContentController extends Controller
     {
         $timezones = TimeZones::all();
         return response()->json($timezones);
->>>>>>> 9f88572e28cde829a123b6bda39a24783bf860de
+    }
+    public function thanksMessage()
+    {
+        return "This is the Thankyou-message";
+    }
+    ///
+    public function process($jobId)
+    {
+        $job = Job::find($jobId);
+        return view('templates.jobid', ['job' => $job]);
     }
 }

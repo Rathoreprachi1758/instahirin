@@ -57,7 +57,7 @@
                                                                 $childMenuItemClass = ($childMenuItem->data->is_action_item) ?  $childMenuItem->data->is_action_item : '';
 
                                                                 @endphp                                                                
-                                                                <li @class([$childMenuItemClass=>$hasChildMenuItemClass])><a href="{{url("/{$menu->data->slug}/{$cmenu->data->slug}/{$cMenuItem->data->slug}/{$childMenuItem->data->slug}")}}" class="  ">{{$childMenuItem->name}}</a> </li>
+                                                                <li @class([$childMenuItemClass=>$hasChildMenuItemClass])><a href="{{url("/{$menu->data->slug}/{$cmenu->data->slug}/{$cMenuItem->data->slug}/{$childMenuItem->data->slug}")}}"    class="">{{$childMenuItem->name}}</a> </li>
                                                                 @endforeach 
                                                             </ul>
                                                             @endif
