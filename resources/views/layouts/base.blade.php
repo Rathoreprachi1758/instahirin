@@ -155,6 +155,9 @@
                         </div>
                         <div class="menuIcon"></div>
                         @include('partials.nav')
+
+
+                        
                     </div>
                 </div>
             </div>

@@ -15,13 +15,17 @@
                             <div class="col-lg-6 col-md-6 aos-init " data-aos="fade-right" data-aos-duration="1000" data-aos-easing="ease">
                                 <div class=" custom_tittle">
                                     <h2 class="text-left">
-                                    CUSTOM <b>MVP SOFTWARE<br> DEVELOPMENT</b> SERVICES 
+                                    <b>PRODUCT ENGINEERING</b> SERVICES</b>
                                     </h2>
 
-                                    <h4 class="text-left"><strong>We</strong> Assist Startups <strong>in Swiftly Launching Important</strong> 
-                                        Software Capabilities <strong>and</strong> Testing <strong>the</strong> Market.</h4>
+                                    <h4 class="text-left">
+                                        <strong>End-to-End</strong> Product Development <strong>and</strong> Software 
+                                        Optimization <strong>Solutions. Empower</strong> Growth, <strong>Improve</strong> 
+                                        Operations <strong>and Deal with Businesses Issues.</strong> Ideal 
+                                        for Enterprises, Small/Medium-Sized Businesses, <strong>and</strong> Sponsored Startups.
+                                    </h4>
 
-                                        <p class="p_color text-justify">Work with our in-house expertise to create MVPs that produce results.</p>
+                                        <p class="p_color text-justify">Improving the Digital Experience to Make a Difference in the World.</p>
 
                                             <a href="/get-a-free-consultation" class="btn_default mt-2">Get a Free Consultation</a>
                                     
@@ -31,7 +35,7 @@
 
                             <div class="col-lg-6 col-md-6 aos-init " data-aos="fade-left" data-aos-duration="1000" data-aos-easing="ease">
                                 <div class="industryNew_section1_avatar">
-                                    <span><img src="/bizionic/images/mvpBanner_avatar.png" alt="#" /></span>
+                                    <span><img src="/bizionic/images/productBanner_avatar.png" alt="#" /></span>
                                 </div>
                             </div>
                         </div>
@@ -56,15 +60,16 @@
                     <div class="col-lg-6 col-md-6">
                         <div class="seamlessLimitless_fl">
                             <div class="custom_tittle pb-0 text-left">
-                                <h2 class="pb-3"><strong>The</strong> Positive Aspects <strong>of</strong> MVP</h2>
-                                <p class="p_color p-0 text-justify">MVPs are the best tool for early stage businesses providing a quick and strategic way to improving user pleasure, identifying and fixing faults, and maximising system functionality; using this technique, companies may investigate how to achieve product market fit with minimal cost.</p>
+                                <h2 class="pb-3"><strong>Why do We need</strong> High-End Product Engineering?</h2>
+                                <p class="p_color pb-2 text-justify">The prospects for success are enormous, and the possibilities are endless. However, one mistake can result in severe losses and failure.</p>
+                                <p class="p_color p-0 text-justify">Product engineering offers a remedy as a result. Making an idea into a successful product is the goal. Feasibility studies, MVP design, product release, and iteration are all parts of the process. A product engineering team needs a wide range of abilities in addition to technical and coding knowledge. These include planning ahead, keeping tabs on finances, and more.</p>
                             </div>
                         </div> 
                     </div>
 
                     <div class="col-lg-6 col-md-6">
                         <div class="seamlessLimitless_fr">
-                            <span><img src="/bizionic/images/aspectMvp_avatar.png" alt="#" /></span>
+                            <span><img src="/bizionic/images/productEngenering_avatar.png" alt="#" /></span>
                         </div>
                     </div>
                 </div>
@@ -75,62 +80,104 @@
 
 
 
-<!-- need mvp section  -->
 
-<div class="needMvp_section bg_eceded">
+<!-- designs solution section  -->
+
+<div class="designSolution_section wedo_sction provider_section">
     <div class="auto_container">
-        <div class="needMvp_section_detail">
-            <div class="custom_tittle text-center">
-                <h2><strong>Do We Need an</strong> MVP?</h2>
-                <p class="p_color">It may not be necessary if they have a strong understanding of their product and a pre-approved budget. However, startups that want to <br>
-                    deliver new goods or solutions, as well as those on a tight budget, can profit immensely from deploying an MVP.</p>
-            </div>
-
-            <div class="mvpFlow">
-                <span><img src="/bizionic/images/mvp_keyFlow.png" alt="#" /></span>
-            </div>
-
-
-            <div class="mvpDev_process bg_fff">
-                <div class="custom_tittle text-center">
-                    <h2>MVP? <strong>Development Process</strong></h2> 
+        <div class="industryNew_section2_cols">
+            <div class="custom_tittle">
+                    <h2 class="">Product Engineering Services <strong>Bizionic Provides</strong></h2>
+                </div>
+            <div class="row justify-content-center">
+                <div class="col-lg-4 col-md-6 provide_col">
+                    <div class="industryNew_section2_colsInfo">
+                        <span><img src="/bizionic/images/s_productEng_icon1.png" alt="#" /></span>
+                        <h6>CONSULTING</h6>
+                        <p>We research your product and choose the most effective technological resources to make it a reality. We have expertise in AI, machine learning, and IoT as well as innovation testing facilities available.</p>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6 provide_col">
+                    <div class="industryNew_section2_colsInfo">
+                        <span><img src="/bizionic/images/s_productEng_icon2.png" alt="#" /></span>
+                        <h6>PRODUCT DEVELOPMENT</h6>
+                        <p>The Bizionic team is there for you every step of the way. We are here for you, from scalability to product conceptualization.</p>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6 provide_col">
+                    <div class="industryNew_section2_colsInfo">
+                        <span><img src="/bizionic/images/s_productEng_icon3.png" alt="#" /></span>
+                        <h6>MODERNIZATION</h6>
+                        <p>Our professionals are always leaders in their fields. They are experts in cutting-edge technologies. This makes sure that your product is entirely unique.</p>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6 provide_col">
+                    <div class="industryNew_section2_colsInfo">
+                        <span><img src="/bizionic/images/s_productEng_icon4.png" alt="#" /></span>
+                        <h6>TESTING</h6>
+                        <p>It's crucial to test your product before release. Your reputation may be impacted by poor performance. We provide integration, compatibility, and security testing services for mobile apps.</p>
+                    </div>
                 </div>
 
+
+
+                <div class="col-lg-4 col-md-6 provide_col">
+                    <div class="industryNew_section2_colsInfo">
+                        <span><img src="/bizionic/images/s_productEng_icon5.png" alt="#" /></span>
+                        <h6>MAINTENANCE</h6>
+                        <p>Our team assists in ensuring that your product keeps operating at its best. You'll benefit greatly from our technical support, help desk, cloud deployment, and maintenance services.</p>
+                    </div>
+                </div>
+
+                <div class="col-lg-4 col-md-6 provide_col">
+                    <div class="industryNew_section2_colsInfo">
+                        <span><img src="/bizionic/images/s_productEng_icon6.png" alt="#" /></span>
+                        <h6>MOBILE OPTIMIZATION</h6>
+                        <p>We can assist you in modifying your platform or product to take advantage of mobile devices.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
+<!-- inspired passion section  -->
+
+<div class="inspiredPassion_section">
+    <div class="auto_container">
+        <div class="inspiredPassion_section_detail">
+            <div class="custom_tittle">
+                <h2 class="text-white"><strong>We Create</strong> Digital Experiences <br>
+                    <strong>that are</strong> Inspired by Vision <strong>and</strong> Powered by Passion.</h2>
+            </div>
+
+            <div class="inspiredPassion_row">
                 <div class="row">
-                    <div class="col-lg-3 col-md-6 mvpDev_col">
-                        <div class="mvpDev_col_info">
-                            <span>#1</span>
-                            <strong>ANALYSIS</strong>
-                            <p>We study <br>your business's necessities.</p>
+                    <div class="col-lg-4 col-md-6 inspired_col">
+                        <div class="inspiredPassion_cil_info">
+                            <span><img src="/bizionic/images/passion_icon1.png" alt="#" /></span>
+                            <h6>ENGAGE</h6>
+                            <p>With the platform's<br> navigation fully aligned with<br> the customer's goals!</p>
                         </div>
                     </div>
 
 
-                    <div class="col-lg-3 col-md-6 mvpDev_col">
-                        <div class="mvpDev_col_info">
-                            <span>#2</span>
-                            <strong>DESIGN</strong>
-                            <p>Our design team<br> creates the interface.</p>
+                    <div class="col-lg-4 col-md-6 inspired_col">
+                        <div class="inspiredPassion_cil_info">
+                            <span><img src="/bizionic/images/passion_icon2.png" alt="#" /></span>
+                            <h6>EXCITE</h6>
+                            <p>With the platform's<br> navigation fully aligned with<br> the customer's goals!</p>
                         </div>
                     </div>
 
 
-
-                    <div class="col-lg-3 col-md-6 mvpDev_col">
-                        <div class="mvpDev_col_info">
-                            <span>#3</span>
-                            <strong>DEVELOPMENT</strong>
-                            <p>The coding department <br> makes your concept a reality.</p>
-                        </div>
-                    </div>
-
-
-                    <div class="col-lg-3 col-md-6 mvpDev_col">
-                        <div class="mvpDev_col_info">
-                            <span>#4</span>
-                            <strong>LAUNCH</strong>
-                            <p>We launch your<br>
-                            product and learn from <br> real-world consumer feedback.</p>
+                    <div class="col-lg-4 col-md-6 inspired_col">
+                        <div class="inspiredPassion_cil_info">
+                            <span><img src="/bizionic/images/passion_icon3.png" alt="#" /></span>
+                            <h6>ENTICE</h6>
+                            <p>With every box checked<br> and more. Success just keeps<br> getting better and better!</p>
                         </div>
                     </div>
                 </div>
@@ -140,29 +187,6 @@
 </div>
 
 
-
-
-<!-- seamless  limitless section  -->
-
-
-<div class="seamlessLimitless_section startupMvp_section">
-    <div class="auto_container">
-        <div class="seamlessLimitless_section_detail">
-            <div class="seamlessLimitless_info">
-                <div class="mvpBenefits_flowSection">
-                    <div class="custom_tittle">
-                        <h2 class=""><strong>Benefits of Creating</strong> MVP <strong>with Bizionic</strong> </h2>
-                    </div>
-
-                    <div class="mvpBenefits_flow">
-                        <span><img src="/bizionic/images/mvpBenefits_process.png" alt="#" /></span>
-                    </div> 
-                </div>
-                    
-            </div>
-        </div>
-    </div>
-</div>
 
 
 
