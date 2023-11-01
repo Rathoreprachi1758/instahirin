@@ -15,13 +15,17 @@
                             <div class="col-lg-6 col-md-6 aos-init " data-aos="fade-right" data-aos-duration="1000" data-aos-easing="ease">
                                 <div class=" custom_tittle">
                                     <h2 class="text-left">
-                                    CUSTOM <b>MVP SOFTWARE<br> DEVELOPMENT</b> SERVICES 
+                                    RAPID <b>APP DEVELOPMENT:</b> QUICK, FLEXIBLE, <strong>AND</strong>  PERFECT
                                     </h2>
 
-                                    <h4 class="text-left"><strong>We</strong> Assist Startups <strong>in Swiftly Launching Important</strong> 
-                                        Software Capabilities <strong>and</strong> Testing <strong>the</strong> Market.</h4>
+                                    <h4 class="text-left">
+                                        <strong>The</strong> Perfect Fusion <strong>of</strong> Quality, Efficiency 
+                                        <strong>and</strong> Agility. <strong>With Our</strong> Short Turnaround Times 
+                                        <strong>and</strong> Efficient Development, <strong>You'll</strong> Acquire
+                                        <strong>a</strong> High-Quality App <strong>in No Time.</strong>
+                                    </h4>
 
-                                        <p class="p_color text-justify">Work with our in-house expertise to create MVPs that produce results.</p>
+                                        <!-- <p class="p_color text-justify">Work with our in-house expertise to create MVPs that produce results.</p> -->
 
                                             <a href="/get-a-free-consultation" class="btn_default mt-2">Get a Free Consultation</a>
                                     
@@ -31,7 +35,7 @@
 
                             <div class="col-lg-6 col-md-6 aos-init " data-aos="fade-left" data-aos-duration="1000" data-aos-easing="ease">
                                 <div class="industryNew_section1_avatar">
-                                    <span><img src="/bizionic/images/mvpBanner_avatar.png" alt="#" /></span>
+                                    <span><img src="/bizionic/images/startup_appBanner_avatar.png" alt="#" /></span>
                                 </div>
                             </div>
                         </div>
@@ -56,15 +60,15 @@
                     <div class="col-lg-6 col-md-6">
                         <div class="seamlessLimitless_fl">
                             <div class="custom_tittle pb-0 text-left">
-                                <h2 class="pb-3"><strong>The</strong> Positive Aspects <strong>of</strong> MVP</h2>
-                                <p class="p_color p-0 text-justify">MVPs are the best tool for early stage businesses providing a quick and strategic way to improving user pleasure, identifying and fixing faults, and maximising system functionality; using this technique, companies may investigate how to achieve product market fit with minimal cost.</p>
+                                <h2 class="pb-3"><strong>How does</strong> Rapid Application <strong>Work?</strong></h2>
+                                <p class="p_color p-0 text-justify">As a leading provider of rapid app development, we use RAD and DevOps techniques to guarantee speed and efficiency. We rely on automation to speed up app development and cut costs associated with infrastructure management and human testing. We enable customers to visualise the product and spot faults early via prototyping and iterations, which lowers down on development time.</p>
                             </div>
                         </div> 
                     </div>
 
                     <div class="col-lg-6 col-md-6">
                         <div class="seamlessLimitless_fr">
-                            <span><img src="/bizionic/images/aspectMvp_avatar.png" alt="#" /></span>
+                            <span><img src="/bizionic/images/rapidWork_avatar.png" alt="#" /></span>
                         </div>
                     </div>
                 </div>
@@ -74,70 +78,7 @@
 </div>
 
 
-
-<!-- need mvp section  -->
-
-<div class="needMvp_section bg_eceded">
-    <div class="auto_container">
-        <div class="needMvp_section_detail">
-            <div class="custom_tittle text-center">
-                <h2><strong>Do We Need an</strong> MVP?</h2>
-                <p class="p_color">It may not be necessary if they have a strong understanding of their product and a pre-approved budget. However, startups that want to <br>
-                    deliver new goods or solutions, as well as those on a tight budget, can profit immensely from deploying an MVP.</p>
-            </div>
-
-            <div class="mvpFlow">
-                <span><img src="/bizionic/images/mvp_keyFlow.png" alt="#" /></span>
-            </div>
-
-
-            <div class="mvpDev_process bg_fff">
-                <div class="custom_tittle text-center">
-                    <h2>MVP? <strong>Development Process</strong></h2> 
-                </div>
-
-                <div class="row">
-                    <div class="col-lg-3 col-md-6 mvpDev_col">
-                        <div class="mvpDev_col_info">
-                            <span>#1</span>
-                            <strong>ANALYSIS</strong>
-                            <p>We study <br>your business's necessities.</p>
-                        </div>
-                    </div>
-
-
-                    <div class="col-lg-3 col-md-6 mvpDev_col">
-                        <div class="mvpDev_col_info">
-                            <span>#2</span>
-                            <strong>DESIGN</strong>
-                            <p>Our design team<br> creates the interface.</p>
-                        </div>
-                    </div>
-
-
-
-                    <div class="col-lg-3 col-md-6 mvpDev_col">
-                        <div class="mvpDev_col_info">
-                            <span>#3</span>
-                            <strong>DEVELOPMENT</strong>
-                            <p>The coding department <br> makes your concept a reality.</p>
-                        </div>
-                    </div>
-
-
-                    <div class="col-lg-3 col-md-6 mvpDev_col">
-                        <div class="mvpDev_col_info">
-                            <span>#4</span>
-                            <strong>LAUNCH</strong>
-                            <p>We launch your<br>
-                            product and learn from <br> real-world consumer feedback.</p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-</div>
+ 
 
 
 
@@ -145,17 +86,17 @@
 <!-- seamless  limitless section  -->
 
 
-<div class="seamlessLimitless_section startupMvp_section">
+<div class="seamlessLimitless_section adv_rapd">
     <div class="auto_container">
         <div class="seamlessLimitless_section_detail">
             <div class="seamlessLimitless_info">
                 <div class="mvpBenefits_flowSection">
                     <div class="custom_tittle">
-                        <h2 class=""><strong>Benefits of Creating</strong> MVP <strong>with Bizionic</strong> </h2>
+                        <h2 class=""><strong>Advantages of</strong> Rapid App Development </h2>
                     </div>
 
                     <div class="mvpBenefits_flow">
-                        <span><img src="/bizionic/images/mvpBenefits_process.png" alt="#" /></span>
+                        <span><img src="/bizionic/images/rapidProcess_img.png" alt="#" /></span>
                     </div> 
                 </div>
                     

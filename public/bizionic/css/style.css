@@ -8815,10 +8815,15 @@ background: linear-gradient(0deg, rgba(221,221,221,1) 0%, rgba(244,244,244,1) 10
 
 .startup_innerPages { background: #efefef !important; padding-bottom: 80px;}
 
-.startup_innerPages .industryNew_section_detail  { overflow: hidden; background: url(../images/startup_pages_texture.png) top center no-repeat #fff;padding: 90px 60px 80px;}
+.startup_innerPages .industryNew_section_detail  { overflow: hidden; background: url(../images/startup_pages_texture.png) top center no-repeat #fff;padding: 80px 60px 80px;}
 
 .startup_innerPages .industryNew_section1 .custom_tittle { padding: 0px;}
 
+.contactUs_info_form { width: 100%;}
+
+.contactUs_info_field {background: #FFFFFF ; padding: 6px 10px ; border: 1px solid #BCBCBC; border-radius: 15px; margin: 7px 0px;}
+
+.contactUs_info_field strong{ display: block; color: #AFADAD; font-size:13px;}
 .startup_innerPages .industryNew_section1 .custom_tittle h2 b {
     font-size: 42px; 
 }
@@ -8829,7 +8834,16 @@ background: linear-gradient(0deg, rgba(221,221,221,1) 0%, rgba(244,244,244,1) 10
 
 .startup_innerPages .industryNew_section1 { padding: 0px !important;}
 
+.contactUs_info_fieldInput { width: 100%; position: relative;}
+.contactUs_info_fieldInput input { width: 100%; font-size: 13px; color: #BDBBBB;}
 
+.contactUs_info_fieldSelect { width: 100%; position: relative; padding-top: 3px;}
+
+.contactUs_info_fieldSelect select { border: 0px !important;   height: auto !important;
+    padding: 0 !important;
+    font-size: 13px !important; 
+    color: #BDBBBB !important; 
+    border-radius: 0px !important;}
 .startupMvp_section::after { background-color: #fff;}
 
 .startupMvp_section .seamlessLimitless_info { 
@@ -8837,10 +8851,46 @@ background: linear-gradient(0deg, rgba(221,221,221,1) 0%, rgba(244,244,244,1) 10
 }
 
 .startupMvp_section .seamlessLimitless_fr span {
-    max-width: 340px; padding-top: 50px; padding-bottom: 60px;
+    max-width: 400px; padding-top: 50px; padding-bottom: 60px;
+}
+
+.contactUs_info_fieldSelect .form-control:focus { box-shadow: none !important;}
+
+.contactUs_info_fieldText { width: 100%; position: relative;}
+.contactUs_info_fieldText textarea { width: 100%; font-size: 13px; color: #BDBBBB; min-height: 80px;}
+
+
+.get_in_touchSection .modal-dialog {
+    max-width: 850px;
 }
 
 
+
+
+.colSet  {border-right: 1px solid #dee2e6!important;}
+.colSet:last-child  {border: 0px !important}
+
+.get_in_touchSection .colSet p { cursor: pointer;}
+
+
+.mvpFlow { width: 100%; padding-bottom: 50px; padding-top: 20px;}
+
+
+.mvpDev_col_info { text-align: center; width: 100%; height: 100%; background-color: #ebebeb; padding: 40px 20px 40px;}
+
+ 
+
+ 
+.mvpDev_col_info span { width: 45px; height: 45px; display: flex; margin: auto; align-items: center; justify-content: center; margin-bottom: 25px; background-color: #787878;
+color: #fff; font-size: 18px;font-family: 'avenirblack'; border-radius: 50%;
+}
+
+.mvpDev_col_info p { padding-bottom: 0px;}
+
+.mvpDev_col_info strong {font-size: 18px;font-family: 'avenirblack'; padding-bottom: 8px; display: block; color: #000;}
+
+
+.mvpBenefits_flowSection { width: 100%; padding: 80px 70px 70px;}
 
 
 .needMvp_section { width: 100%; position: relative;}
@@ -8850,10 +8900,27 @@ background: linear-gradient(0deg, rgba(221,221,221,1) 0%, rgba(244,244,244,1) 10
 
 .mvpFlow { width: 100%; padding-bottom: 50px; padding-top: 20px;}
 
-.mvpFlow span { display: block; width: 100%; max-width: 800px; margin: auto;}
-.mvpFlow span img { display: block; width: 100%;}
 
 .bg_eceded { background-color: #eceded !important;}
+.mvpBenefits_flow { width: 100%; padding-top: 20px;}
+
+.mvpBenefits_flow span { display: block; width: 100%;  }
+.mvpBenefits_flow span img { display: block; width: 100%;}
+
+
+.designSolution_section > .auto_container {
+    transform: translateY(0px);
+}
+
+.designSolution_section .industryNew_section2_cols {
+    transform: translate(0);
+    background-color: transparent;
+    padding: 80px 0px 70px;
+}
+
+.designSolution_section .industryNew_section2_colsInfo { 
+    background-color: #fff !important;padding: 40px 30px 40px 30px;
+}
 
 .mvpDev_process { width: 100%; position: relative; padding: 40px 30px 30px;}
 
@@ -8878,20 +8945,7 @@ color: #fff; font-size: 18px;font-family: 'avenirblack'; border-radius: 50%;
 .mvpBenefits_flow span img { display: block; width: 100%;}
 
 
-.designSolution_section > .auto_container {
-    transform: translateY(0px);
-}
-
-.designSolution_section .industryNew_section2_cols {
-    transform: translate(0);
-    background-color: transparent;
-    padding: 80px 0px 70px;
-}
-
-.designSolution_section .industryNew_section2_colsInfo { 
-    background-color: #fff !important;padding: 40px 30px 40px 30px;
-}
-
+ 
 
 
 .inspiredPassion_section { width: 100%; position: relative;background: rgb(102,102,102); 
@@ -8959,16 +9013,105 @@ color: #fff; font-size: 18px;font-family: 'avenirblack'; border-radius: 50%;
 
 
 
+.adv_rapd { background: #fff !important;}
+
+.adv_rapd:after { display: none !important;}
+
+.adv_rapd .seamlessLimitless_info { background: none !important; border: 0px !important;}
+
+.adv_rapd .mvpBenefits_flowSection { padding: 0px;}
+
+
+
+.modernizationSection .industryNew_section2_colsInfo { height: auto; margin: 25px 0px;}
+
+.modernizationSection .industryNew_section2_cols { padding-bottom: 50px;}
+
+
+.startupMvp_section .seamlessLimitless_fl .custom_tittle > h2 { color: #16509b;}
 
 
 
 
 
 
+.startupServices_section { width: 100%; position: relative;background: #fff;}
+
+.startupServices_section::after {
+    width: 100%;
+    height: 210px;
+    content: '';
+    
+    position: absolute;
+    left: 0px;
+    top: 0px; z-index: 0;background: rgb(102,102,102); 
+    background: linear-gradient(0deg, rgba(102,102,102,1) 0%, rgba(155,155,155,1) 100%)
+}
+
+.startupServices_section_detail { width: 100%; padding: 80px 0px 80px;  position: relative; z-index: 1;}
+
+.startupServices_info {background-color: #f5f5f5; position: relative; padding: 60px 50px;}
+
+
+.startupServices_infoText { width: 100%;}
+.startupServices_infoText h6 { padding-bottom: 10px;}
+.startupServices_infoText p { padding: 3px 0px;}
+
+.startupServices_infoText p b { font-family: 'avenirblack';}
+
+
+.bg_e8e9e9 { background-color: #e8e9e9 !important;}
 
 
 
 
+
+
+.startupWhy { width: 100%; position: relative; background: #fff !important;}
+
+.startupWhy::after {
+    background: rgb(102,102,102); 
+    background: linear-gradient(0deg, rgba(102,102,102,1) 0%, rgba(155,155,155,1) 100%); top: 0px; height: 300px;
+}
+
+
+.startupWhy .inspired_col { padding-top: 25px; padding-bottom: 25px;}
+
+.startupWhy .inspiredPassion_cil_info { 
+    padding: 40px 25px 30px;
+}
+.startupWhy .inspiredPassion_cil_info h6 {
+    padding-bottom: 12px; font-size: 18px;
+}
+
+
+.startupHowWork { background: #e5e6e7;}
+
+.startupHowWork::after { display: none;}
+
+.startupHowWork .inspired_col {
+    padding: 20px; 
+}
+
+
+.startupHowWork .inspiredPassion_cil_info {background: rgb(102,102,102); padding: 40px 20px 25px;
+    background: linear-gradient(0deg, rgba(102,102,102,1) 0%, rgba(155,155,155,1) 100%);}
+
+.startupHowWork .inspiredPassion_cil_info span { display: none;}
+
+.startupHowWork .inspiredPassion_cil_info h6 {
+   color: #fff; text-align: left; padding-bottom: 20px; font-size: 24px;
+}
+
+.startupHowWork .inspiredPassion_cil_info p {
+    padding-bottom: 0px; line-height: 1.4;color: #fff;
+}
+
+.startup_innerPages .industryNew_section1 .custom_tittle h4 { text-align: justify !important;}
+
+
+
+.main_nav .trendingNav_links { display: none;}
 
 
 
