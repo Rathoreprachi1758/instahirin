@@ -303,7 +303,7 @@ class ContentController extends Controller
             // Process and store the uploaded file
             if ($request->hasFile('document')) {
                 $file = $request->file('document');
-                $filename = 'bizionic/images/' . 'vamshi' . '_' . $file->getClientOriginalName();
+                $filename = 'bizionic/images/' . time() . '_' . $file->getClientOriginalName();
                 $file->storeAs('', $filename, 'public');
                 $formData->document = $filename;
             }
