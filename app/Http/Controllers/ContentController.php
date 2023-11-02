@@ -59,6 +59,7 @@ class ContentController extends Controller
         // dd($template);
         if ($page->slug == 'hire-me') {
             $jobs = Job::where('status', 'Open')->get();
+         
             return view('welcome', [
                 'title' => $page->meta_title,
                 'description' => $page->meta_description,
@@ -108,6 +109,7 @@ class ContentController extends Controller
     public function store(Request $request)
     {
         // Validate the request data, including the uploaded file
+        // dd($request->all());
         if (isset($request->hiring_type)) {
             $validatedData = $request->validate([
                 'name' => 'required',
@@ -118,7 +120,7 @@ class ContentController extends Controller
                 // 'hiring_type' => 'required',
                 // 'budget' => 'required',
                 'details' => 'required',
-                'document' => 'file',
+                // 'document' => 'file',
             ]);
         } else {
             $validatedData = $request->validate([
@@ -128,7 +130,7 @@ class ContentController extends Controller
                 'country_code' => '',
                 'phone' => 'required',
                 'details' => '',
-                'document' => '',
+                // 'document' => '',
             ]);
         }
 
@@ -144,12 +146,12 @@ class ContentController extends Controller
         $formData->phone = isset($validatedData['phone']) ? $validatedData['phone'] : '';
         //$formData->lead_type = isset($validatedData['lead_type']) ? $validatedData['lead_type'] : 'Consultation';
         $formData->details = $validatedData['details'];
-
+        
         // Process and store the uploaded file
         if ($request->hasFile('document')) {
             $file = $request->file('document');
             $filename = 'bizionic/images/' . time() . '_' . $file->getClientOriginalName();
-            $file->storeAs('bizionic/images', $filename, 'public');
+            $file->storeAs('', $filename, 'public');
             $formData->document = $filename;
         }
 
@@ -302,7 +304,7 @@ class ContentController extends Controller
             if ($request->hasFile('document')) {
                 $file = $request->file('document');
                 $filename = 'bizionic/images/' . time() . '_' . $file->getClientOriginalName();
-                $file->storeAs('bizionic/images', $filename, 'public');
+                $file->storeAs('', $filename, 'public');
                 $formData->document = $filename;
             }
             $formData->save();
@@ -317,6 +319,7 @@ class ContentController extends Controller
                 $formData->availabilityData()->save($availabilityData);
             }
         } else if (isset($request->company_info)) {
+            $formData = new HireRequest();
             $requestId = $formData->id;
             for ($n = 0; $n < count($request->from_date); $n++) {
                 $formData = new Hire_requests_calender();
@@ -392,7 +395,7 @@ class ContentController extends Controller
             if ($request->hasFile('document')) {
                 $file = $request->file('document');
                 $filename = 'bizionic/images/' . time() . '_' . $file->getClientOriginalName();
-                $file->storeAs('bizionic/images', $filename, 'public');
+                $file->storeAs('', $filename, 'public');
                 $formData->document = $filename;
             }
             $formData->save();
@@ -471,7 +474,7 @@ class ContentController extends Controller
         if ($request->hasFile('document')) {
             $file = $request->file('document');
             $filename = 'bizionic/images/' . time() . '_' . $file->getClientOriginalName();
-            $file->storeAs('bizionic/images', $filename, 'public');
+            $file->storeAs('', $filename, 'public');
             $formData->document = $filename;
         }
 
@@ -488,10 +491,10 @@ class ContentController extends Controller
 
     //* Hire Form Submission
     public function instaHirinRequirements(Request $request)
-    {
+    { 
 
         // Validate the request data, including the uploaded file
-
+        // return 'Hii';
         $validatedData = $request->validate([
             'position_title' => 'required',
             'work_mode' => 'required',
@@ -563,7 +566,7 @@ class ContentController extends Controller
         if ($request->hasFile('document')) {
             $file = $request->file('document');
             $filename = 'bizionic/images/' . time() . '_' . $file->getClientOriginalName();
-            $file->storeAs('bizionic/images', $filename, 'public');
+            $file->storeAs('', $filename, 'public');
             $formData->document = $filename;
         }
         // $formData->notify_ai_applicants   = $validatedData['notify_ai_applicants'];
@@ -656,7 +659,7 @@ class ContentController extends Controller
     {
         // Validate the request data, including the uploaded file
         // Log::info('Request data:', $request->all());
-
+       // dd('Hii9');
         $validatedData = $request->validate([
             'name' => 'required',
             'contact_details' => 'required',
@@ -792,7 +795,7 @@ class ContentController extends Controller
                 foreach ($request->file('document') as $document) {
                     $originalFilename = $document->getClientOriginalName();
                     $filename = 'bizionic/images/' . time() . '_' . $originalFilename;
-                    $document->storeAs('bizionic/images', $filename, 'public');
+                    $document->storeAs('', $filename, 'public');
                     // Add the file to the zip archive
                     $zip->addFile(storage_path('app/public/' . $filename), $originalFilename);
                 }
@@ -863,15 +866,11 @@ class ContentController extends Controller
         return response()->json(['message' => 'Form submitted successfully']);
     }
 
-
     // Jobs Form Controller
-    public function applyShow($jobId)
-    {
-        //dd($jobId);
+    public function applyShow(Request $request)
+    {   
+        $jobId = $request->query('jobId');
         $job = Job::find($jobId);
-        //dd($job);
-
-
         return view('templates.apply-now-form', ['job' => $job]);
     }
 
@@ -881,5 +880,15 @@ class ContentController extends Controller
     {
         $timezones = TimeZones::all();
         return response()->json($timezones);
+    }
+    public function thanksMessage()
+    {
+        return "This is the Thankyou-message";
+    }
+    ///
+    public function process($jobId)
+    {
+        $job = Job::find($jobId);
+        return view('templates.jobid', ['job' => $job]);
     }
 }
