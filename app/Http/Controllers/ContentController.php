@@ -109,6 +109,7 @@ class ContentController extends Controller
     public function store(Request $request)
     {
         // Validate the request data, including the uploaded file
+        // dd($request->all());
         if (isset($request->hiring_type)) {
             $validatedData = $request->validate([
                 'name' => 'required',
@@ -145,12 +146,12 @@ class ContentController extends Controller
         $formData->phone = isset($validatedData['phone']) ? $validatedData['phone'] : '';
         //$formData->lead_type = isset($validatedData['lead_type']) ? $validatedData['lead_type'] : 'Consultation';
         $formData->details = $validatedData['details'];
-
+        
         // Process and store the uploaded file
         if ($request->hasFile('document')) {
             $file = $request->file('document');
             $filename = 'bizionic/images/' . time() . '_' . $file->getClientOriginalName();
-            $file->storeAs('bizionic/images', $filename, 'public');
+            $file->storeAs('', $filename, 'public');
             $formData->document = $filename;
         }
 
@@ -302,8 +303,8 @@ class ContentController extends Controller
             // Process and store the uploaded file
             if ($request->hasFile('document')) {
                 $file = $request->file('document');
-                $filename = 'bizionic/images/' . time() . '_' . $file->getClientOriginalName();
-                $file->storeAs('bizionic/images', $filename, 'public');
+                $filename = 'bizionic/images/' . 'vamshi' . '_' . $file->getClientOriginalName();
+                $file->storeAs('', $filename, 'public');
                 $formData->document = $filename;
             }
             $formData->save();
@@ -394,7 +395,7 @@ class ContentController extends Controller
             if ($request->hasFile('document')) {
                 $file = $request->file('document');
                 $filename = 'bizionic/images/' . time() . '_' . $file->getClientOriginalName();
-                $file->storeAs('bizionic/images', $filename, 'public');
+                $file->storeAs('', $filename, 'public');
                 $formData->document = $filename;
             }
             $formData->save();
@@ -473,7 +474,7 @@ class ContentController extends Controller
         if ($request->hasFile('document')) {
             $file = $request->file('document');
             $filename = 'bizionic/images/' . time() . '_' . $file->getClientOriginalName();
-            $file->storeAs('bizionic/images', $filename, 'public');
+            $file->storeAs('', $filename, 'public');
             $formData->document = $filename;
         }
 
@@ -490,10 +491,10 @@ class ContentController extends Controller
 
     //* Hire Form Submission
     public function instaHirinRequirements(Request $request)
-    {
+    { 
 
         // Validate the request data, including the uploaded file
-
+        // return 'Hii';
         $validatedData = $request->validate([
             'position_title' => 'required',
             'work_mode' => 'required',
@@ -565,7 +566,7 @@ class ContentController extends Controller
         if ($request->hasFile('document')) {
             $file = $request->file('document');
             $filename = 'bizionic/images/' . time() . '_' . $file->getClientOriginalName();
-            $file->storeAs('bizionic/images', $filename, 'public');
+            $file->storeAs('', $filename, 'public');
             $formData->document = $filename;
         }
         // $formData->notify_ai_applicants   = $validatedData['notify_ai_applicants'];
@@ -794,7 +795,7 @@ class ContentController extends Controller
                 foreach ($request->file('document') as $document) {
                     $originalFilename = $document->getClientOriginalName();
                     $filename = 'bizionic/images/' . time() . '_' . $originalFilename;
-                    $document->storeAs('bizionic/images', $filename, 'public');
+                    $document->storeAs('', $filename, 'public');
                     // Add the file to the zip archive
                     $zip->addFile(storage_path('app/public/' . $filename), $originalFilename);
                 }
@@ -865,13 +866,9 @@ class ContentController extends Controller
         return response()->json(['message' => 'Form submitted successfully']);
     }
 
-
-    // Jobs Form Controller
-
-    
     // Jobs Form Controller
     public function applyShow(Request $request)
-    {
+    {   
         $jobId = $request->query('jobId');
         $job = Job::find($jobId);
         return view('templates.apply-now-form', ['job' => $job]);
