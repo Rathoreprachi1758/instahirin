@@ -18,7 +18,7 @@
                         <div class="blogs_list_col">
                             <span class="blogAvatar"><img src="/bizionic/images/blogs_img1.png" alt="#" /></span>
                             <h6>
-                                <a href="#">
+                                <a href="/hire/developer/front-end-developement/blogs-detail">
                                     Unleashing the Power of AI
                                     Marketing with Bizionic
                                     Technologies.
