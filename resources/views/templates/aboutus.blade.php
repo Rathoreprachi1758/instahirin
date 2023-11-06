@@ -1,6 +1,4 @@
 
-
-
 <!-- main banner  -->
 
 <div class="mainBanner_section aboutUs_bgSection">

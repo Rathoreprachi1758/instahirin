@@ -7,6 +7,11 @@
    
    <!-- main banner  -->
     <div class="mainBanner_section">
+        
+ <!-- Google Tag Manager (noscript) -->
+<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-THZV9RC4"
+    height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+    <!-- End Google Tag Manager (noscript) -->
         <div class="auto_container">
             <div class="mainBanner_detail hireMain">
 

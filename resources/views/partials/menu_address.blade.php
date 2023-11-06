@@ -3,7 +3,11 @@
         <h5>Bizionic, Startup to Unicorn’s Lab</h5>
         <p>Highly skilled software developers, designers, and marketers at one stop to build cost-effective solutions for business of all sizes, from startups to unicorns.</p>
     </div>
-
+    
+ <!-- Google Tag Manager (noscript) -->
+<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-THZV9RC4"
+    height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+    <!-- End Google Tag Manager (noscript) -->
     <div class="labs_location_info">
         <h5>or call us at</h5>
         <p><i class="fa fa-whatsapp mr-2" aria-hidden="true"></i><a href="tel:+91 90593 60184">+91 90593 60184</a> (Enquiries)</p>
