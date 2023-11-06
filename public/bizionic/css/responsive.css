@@ -3565,9 +3565,13 @@ h6 { font-size: 18px; }
     padding-bottom: 0px;
 }
 
+.blogsSection_detail { 
+    padding: 60px 0px;
+}
 
-
-
+.blogAvatar img { 
+     height: 155px; 
+}
 
 
 
