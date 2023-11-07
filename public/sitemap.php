@@ -1180,6 +1180,7 @@
   <priority>0.1</priority>
   <lastmod>2023-10-12</lastmod>
 </url>
+<!-- this is new  file-->
 <url>
   <loc>https://www.bizionictech.com/get-a-free-consultation</loc>
   <priority>0.5</priority>
