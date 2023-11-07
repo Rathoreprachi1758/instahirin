@@ -42,13 +42,22 @@
           <div class="onForm_col">
             <strong>Full Name</strong>
             <div class="project_form_field">
-              <input type="text" placeholder="" name="name" id="name" v-model="name" />
+              <input
+                type="text"
+                placeholder=""
+                name="name"
+                id="name"
+                v-model="name"
+                @input="validateField('name')"
+                ref="nameField"
+              />
             </div>
+            <!-- name error -->
+            <div class="error-message" ref="nameError">{{ validationErrors.name }}</div>
           </div>
         </div>
 
         <!-- Contact Details -->
-
         <div class="col-lg-6 col-md-12">
           <div class="onForm_col">
             <strong>Contact Details</strong>
@@ -60,6 +69,8 @@
                   class="project_form"
                   names="country_code"
                   id="country_code"
+                  @change="validateField('selectedPhoneCode')"
+                  ref="selectedPhoneCodeField"
                 >
                   <option value="" disabled>Country Code</option>
                   <!-- <option v-for="(code, id) in phoneCodes" :value="code" :key="id">
@@ -82,15 +93,30 @@
                   placeholder="Phone number"
                   name="contact_number"
                   id="contact_number"
+                  @input="validateField('phoneNumber')"
+                  ref="phoneNumberField"
                 />
               </div>
               <!-- <input type="hidden" name="contact_details" :value="uploadedFiles" /> -->
+              <!-- errors -->
+              <div class="row m-0">
+                <!-- country code error -->
+                <div
+                  class="error-message col-lg-6 col-md-12"
+                  ref="selectedPhoneCodeError"
+                >
+                  {{ validationErrors.selectedPhoneCode }}
+                </div>
+                <!-- contact_number error -->
+                <div class="error-message col-lg-6 col-md-12" ref="phoneNumberError">
+                  {{ validationErrors.phoneNumber }}
+                </div>
+              </div>
             </div>
           </div>
         </div>
 
         <!--Email  -->
-
         <div class="col-lg-6 col-md-12">
           <div class="onForm_col">
             <strong>Email Address</strong>
@@ -101,13 +127,18 @@
                 name="email"
                 id="email"
                 v-model="email"
+                @input="validateField('email')"
+                ref="emailField"
               />
+            </div>
+            <!-- email error -->
+            <div class="error-message" ref="emailError">
+              {{ validationErrors.email }}
             </div>
           </div>
         </div>
 
         <!-- Current Location -->
-
         <div class="col-lg-6 col-md-12">
           <div class="onForm_col">
             <strong>Current Location</strong>
@@ -140,7 +171,6 @@
         </div>
 
         <!--Skill Description  -->
-
         <div class="col-lg-12 col-md-12">
           <div class="onForm_col">
             <strong>Talent and Skills Brief Description (Max 5000 words):</strong>
@@ -150,23 +180,24 @@
                 name="skills_description"
                 id="skills_description"
                 v-model="skills_description"
+                @input="validateField('skills_description')"
+                ref="skills_descriptionField"
                 maxlength="5000"
-                @input="updateCharacterCount"
               ></textarea>
-              <!-- Character count and "limit reached" skills_description -->
+              <!-- Character count and "limit reached" message -->
               <div id="character-count" :class="{ 'limit-reached': isLimitReached }">
-                <span v-if="limitReached" class="message mr-2">
-                  Characters Limit reached
-                </span>
                 <span id="current">{{ characterCount }}</span>
                 <span id="maximum">/ 5000</span>
               </div>
+            </div>
+            <!-- message error -->
+            <div class="error-message" ref="skills_descriptionError">
+              {{ validationErrors.skills_description }}
             </div>
           </div>
         </div>
 
         <!-- Current Title -->
-
         <div class="col-lg-12 col-md-12">
           <div class="onForm_col">
             <strong>Current Title:</strong>
@@ -177,13 +208,18 @@
                 name="current_title"
                 id="current_title"
                 v-model="current_title"
+                @input="validateField('current_title')"
+                ref="current_titleField"
               />
+            </div>
+            <!-- current_title error -->
+            <div class="error-message" ref="current_titleError">
+              {{ validationErrors.current_title }}
             </div>
           </div>
         </div>
 
         <!-- Experience Year  -->
-
         <div class="col-lg-6 col-md-12">
           <div class="onForm_col">
             <strong>Total Work Experience:</strong>
@@ -194,6 +230,8 @@
                 name="experience_year"
                 id="experience_year"
                 v-model="experience_year"
+                @change="validateField('experience_year')"
+                ref="experience_yearField"
               >
                 <option selected value="">Years</option>
                 <option>0</option>
@@ -219,11 +257,14 @@
                 <option>20+</option>
               </select>
             </div>
+            <!-- hiring_type error -->
+            <div class="error-message" ref="experience_yearError">
+              {{ validationErrors.experience_year }}
+            </div>
           </div>
         </div>
 
         <!-- Experience month  -->
-
         <div class="col-lg-6 col-md-12">
           <div class="onForm_col">
             <strong></strong>
@@ -234,6 +275,8 @@
                 name="experience_month"
                 id="experience_month"
                 v-model="experience_month"
+                @change="validateField('experience_month')"
+                ref="experience_monthField"
               >
                 <option selected value="">Month</option>
                 <option>1</option>
@@ -249,6 +292,10 @@
                 <option>11</option>
                 <option>12</option>
               </select>
+            </div>
+            <!-- hiring_type error -->
+            <div class="error-message" ref="experience_monthError">
+              {{ validationErrors.experience_month }}
             </div>
           </div>
         </div>
@@ -350,7 +397,13 @@
                 name="last_company"
                 id="last_company"
                 v-model="last_company"
+                @input="validateField('last_company')"
+                ref="last_companyField"
               />
+            </div>
+            <!-- last_company error -->
+            <div class="error-message" ref="last_companyError">
+              {{ validationErrors.last_company }}
             </div>
           </div>
         </div>
@@ -471,6 +524,8 @@
                 id="highest_qualification"
                 aria-label="Default select example"
                 v-model="highest_qualification"
+                @change="validateField('highest_qualification')"
+                ref="highest_qualificationField"
               >
                 <option value="" disabled selected>Select your qualification</option>
                 <option>Any</option>
@@ -478,6 +533,10 @@
                 <option>Graduation</option>
                 <option>Doctorate</option>
               </select>
+            </div>
+            <!-- highest_qualification error -->
+            <div class="error-message" ref="highest_qualificationError">
+              {{ validationErrors.highest_qualification }}
             </div>
           </div>
         </div>
@@ -655,6 +714,8 @@
                 id="availability"
                 aria-label="Default select example"
                 v-model="availability"
+                @change="validateField('availability')"
+                ref="availabilityField"
               >
                 <option disabled selected value="">
                   Full Time, PartTime, Daily, Weekly, Monthly, Hours, Project-Base, etc.
@@ -671,6 +732,10 @@
                 <option>Volunteer</option>
                 <option>Internships</option>
               </select>
+            </div>
+            <!-- availability error -->
+            <div class="error-message" ref="availabilityError">
+              {{ validationErrors.availability }}
             </div>
           </div>
         </div>
@@ -926,6 +991,11 @@
 </template>
 
 <style scoped>
+.error-message {
+  color: red;
+  font-size: 10px;
+}
+
 .project_form {
   border: 1px solid #ccc;
   padding: 10px;
@@ -1144,6 +1214,20 @@ export default {
       //   Character count
       //   characterCount: 0,
       limitReached: false,
+      //    Error Validation
+      validationErrors: {
+        name: "",
+        selectedPhoneCode: "",
+        phoneNumber: "",
+        email: "",
+        skills_description: "",
+        current_title: "",
+        experience_year: "",
+        experience_month: "",
+        highest_qualification: "",
+        last_company: "",
+        availability: "",
+      },
     };
   },
   mounted() {
@@ -1157,14 +1241,14 @@ export default {
 
   methods: {
     // Character Count
-    updateCharacterCount() {
-      if (this.skills_description.length >= 5000) {
-        this.skills_description = this.skills_description.substring(0, 5000);
-        this.limitReached = true;
-      } else {
-        this.limitReached = false;
-      }
-    },
+    // updateCharacterCount() {
+    //   if (this.skills_description.length >= 5000) {
+    //     this.skills_description = this.skills_description.substring(0, 5000);
+    //     this.limitReached = true;
+    //   } else {
+    //     this.limitReached = false;
+    //   }
+    // },
 
     // prevent default form change
     handleFormKeyDown(event) {
@@ -1332,8 +1416,108 @@ export default {
       }
     },
 
+    // Validate the form fields
+    validateField(field) {
+      this.validationErrors[field] = "";
+
+      if (field === "name") {
+        if (!this.name) {
+          this.validationErrors.name = "Name is required.";
+        } else {
+          const regex = /^[a-zA-Z\s]*$/;
+          if (!regex.test(this.name)) {
+            this.validationErrors.name = "Name can only contain alphabets and spaces.";
+          }
+        }
+      }
+
+      //   country code validation
+      if (field === "selectedPhoneCode") {
+        if (!this.selectedPhoneCode) {
+          this.validationErrors.selectedPhoneCode = "Country code is required.";
+        }
+      }
+
+      //   phone number validation
+      if (field === "phoneNumber") {
+        if (!this.phoneNumber) {
+          this.validationErrors[field] = "Phone number is required.";
+        }
+      }
+
+      if (field === "email") {
+        if (!this.email) {
+          this.validationErrors.email = "Email is required.";
+        } else {
+          const regex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+          if (!regex.test(this.email)) {
+            this.validationErrors.email = "Please enter a valid email address.";
+          }
+        }
+      }
+
+      if (field === "skills_description") {
+        if (this.skills_description.length === 0) {
+          this.validationErrors.skills_description = "Message is required.";
+        } else if (this.skills_description.length >= 5000) {
+          this.validationErrors.skills_description =
+            "Character limit reached (5000 characters).";
+        } else {
+          this.validationErrors.skills_description = "";
+        }
+      }
+
+      if (field === "current_title") {
+        if (!this.current_title) {
+          this.validationErrors.current_title = "Current title is required.";
+        }
+      }
+
+      if (field === "experience_year") {
+        if (!this.experience_year) {
+          this.validationErrors.experience_year = "Experience year is required.";
+        }
+      }
+
+      if (field === "experience_month") {
+        if (!this.experience_month) {
+          this.validationErrors.experience_month = "Experience month is required.";
+        }
+      }
+
+      if (field === "highest_qualification") {
+        if (!this.highest_qualification) {
+          this.validationErrors.highest_qualification =
+            "Highest qualification is required.";
+        }
+      }
+
+      if (field === "last_company") {
+        if (!this.last_company) {
+          this.validationErrors.last_company = "Last company is required.";
+        }
+      }
+
+      if (field === "availability") {
+        if (!this.availability) {
+          this.validationErrors.availability = "Availability is required.";
+        }
+      }
+    },
+
     // Submit the form
     submitForm() {
+      // Trigger validation for all fields
+      for (const field in this.validationErrors) {
+        this.validateField(field);
+      }
+
+      // Check if there are any validation errors
+      if (this.hasValidationErrors) {
+        this.scrollAndFocusOnErrorField();
+        return;
+      }
+
       // Prepare the form data
       const formData = new FormData();
       formData.append("name", this.name);
@@ -1435,6 +1619,23 @@ export default {
         });
     },
 
+    // Scroll to the first field with an error and focus on it
+    scrollAndFocusOnErrorField() {
+      for (const field in this.validationErrors) {
+        if (this.validationErrors[field]) {
+          // Scroll to the first error field and focus on it
+          const errorField = this.$refs[`${field}Error`];
+          errorField.scrollIntoView({
+            behavior: "smooth",
+            block: "center",
+          });
+          const errorInput = this.$refs[`${field}Field`];
+          errorInput.focus();
+          return; // Stop after the first error is encountered
+        }
+      }
+    },
+
     showSuccessMessage() {
       const successMessage = this.$refs.successMessage;
       successMessage.style.display = "block";
@@ -1468,6 +1669,15 @@ export default {
     },
     isLimitReached() {
       return this.characterCount >= 5000;
+    },
+
+    hasValidationErrors() {
+      for (const field in this.validationErrors) {
+        if (this.validationErrors[field]) {
+          return true;
+        }
+      }
+      return false;
     },
 
     salaryOptions() {
