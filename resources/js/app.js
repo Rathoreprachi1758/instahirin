@@ -40,6 +40,8 @@ import HourRate from "./components/HourlyRateComponent.vue";
 import ProjectRate from "./components/ProjectRateComponent.vue";
 import TeamContactUs from "./components/TeamContactUsComponent.vue";
 import InstaRequirement from "./components/InstaRequirementComponent.vue";
+import FundingApplyNow from "./components/FundingApplyNowComponent.vue";
+import Thankyou from "./components/Thankyou.vue";
 
 app.component("experts-component", ExpertsComponent);
 app.component("experts-list-component", ExpertsListComponent);
@@ -59,6 +61,8 @@ app.component("hourly-rate-component", HourRate);
 app.component("project-rate-component", ProjectRate);
 app.component("team-component", TeamContactUs);
 app.component("insta-requirement-component", InstaRequirement);
+app.component("funding-apply-now-component", FundingApplyNow);
+app.component("Thankyou-component",Thankyou);
 
 // import ExampleComponent from './components/ExampleComponent.vue';
 // app.component('example-component', ExampleComponent);

@@ -319,7 +319,7 @@
                                         {!!$job->description!!}
                                         {{-- <a href="{{ route('apply-now-form', ['jobId' => $job->id]) }}"
                                             target="_blank" class="btn_default">Show more</a> --}}
-                                        <a href="/industries/industries-we-serve/industries/apply-now-form?jobId={{ $job->id }}"
+                                        <a href="/industries/industries-we-serve/industries/jobid?jobId={{ $job->id }}"
                                             target="_blank" class="btn_default">Show more</a>
 
                                     </div>

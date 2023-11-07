@@ -1,11 +1,19 @@
+
+@php
+    $jobId = request('jobId');
+    $job = \App\Models\Job::find($jobId);
+@endphp
+
+{{-- <p>Job ID: {{ $jobId }}</p> --}}
+
+{{-- <form action="{{ route('content.process', ['jobId' => $jobId]) }}" method="POST">
+    @csrf
+    <button type="submit">Send Job IDr</button>
+</form> --}}
 <div class="policy_pages">
     <div class="auto_container">
         <div class="policy_pages_detail">
             <div class="policy_pages_content">
-                @php
-                    $jobId = request('jobId');
-                    $job = Job::find($jobId);
-                @endphp
                 <h1>About the Job:</h1>
                 <h4 class="pb-2 pt-2">Job Title: <strong>{{ $job->title }}</strong></h4>
                 <h4>Location: <strong>{{ $job->location }}</strong></h4>
@@ -18,8 +26,8 @@
                     delivering exceptional results that drive growth and success for our clients.</p>
 
                 <h6 class="">Job Description:</h6>
-                {{ $job->description }}
-
+                {{-- {{ $job->description }} --}}
+                {{ strip_tags($job->description) }}
 
                 <h6 class="">Key Responsibilities:</h6>
                 {{-- <div class="discList ml-4 pt-0 pb-3">{{ $job->responsibilities }}</div> --}}

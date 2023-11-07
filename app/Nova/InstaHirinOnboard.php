@@ -33,7 +33,7 @@ class InstaHirinOnboard extends Resource
      *
      * @var array
      */
-    public static $search = ['id'];
+    public static $search = ['id', 'name'];
 
     /**
      * Get the fields displayed by the resource.
