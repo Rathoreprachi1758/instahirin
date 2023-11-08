@@ -4,6 +4,7 @@ use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\ContentController;
 use App\Http\Controllers\OnboardController;
+use App\Http\Controllers\Logincontroller;
 
 /*
 |--------------------------------------------------------------------------
@@ -19,6 +20,9 @@ use App\Http\Controllers\OnboardController;
 Route::get('sitemap.xml', function () {
     return response()->view('sitemap')->header('Content-Type', 'xml');
 });
+
+////
+Route::get('/Home',[Logincontroller::class,'index']);
 
 Route::get('/{levelOneSlug?}/{levelTwoSlug?}/{levelThreeSlug?}/{levelFourSlug?}', 'App\Http\Controllers\ContentController@index')->name('index');
 
