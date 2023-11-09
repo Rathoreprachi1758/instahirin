@@ -17,12 +17,18 @@ use App\Http\Controllers\Logincontroller;
 |
 */
 
+// Route::get('sitemap.xml', function () {
+//     return response()->view('sitemap')->header('Content-Type', 'xml');
+// });
+//
 Route::get('sitemap.xml', function () {
-    return response()->view('sitemap')->header('Content-Type', 'xml');
+    return response()->file('sitemap.xml');
 });
-
 ////
-Route::get('/Home',[Logincontroller::class,'index']);
+Route::get('/Sign-In',[Logincontroller::class,'index'])->name('signin');
+Route::Post('sign-up',[Logincontroller::class,'store'])->name('submit.signup');
+Route::get('/login', [LoginController::class, 'login'])->name('loginpage');
+Route::post('dashboard', [LoginController::class, 'loginpage'])->name('login');
 
 Route::get('/{levelOneSlug?}/{levelTwoSlug?}/{levelThreeSlug?}/{levelFourSlug?}', 'App\Http\Controllers\ContentController@index')->name('index');
 
@@ -48,7 +54,7 @@ Route::post('/career', [ContentController::class, 'career'])->name('career');
 
 Auth::routes();
 
-Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
+Route::get('/Home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
 
 Route::get('/hire/developer/developers-other/HireForm/{id}', [ContentController::class, 'hireExpert'])->name('hireExpert');
 
