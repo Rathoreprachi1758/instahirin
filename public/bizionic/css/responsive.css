@@ -1,3 +1,4 @@
+@@ -1,3580 +1,3584 @@
 @charset "utf-8";
 /* CSS Document */
 
@@ -3447,68 +3448,7 @@ h6 { font-size: 18px; }
 
 
 
-.eshareWhite_logo { 
-    margin-left: 0px;
-}
 
-.eshareWhite_logo a {
-    width: 70px;}
-
-.authBtns ul li a { background: none !important; padding: 0px !important; font-size: 9px; border: 0px; color: #fff;}
-
-.change_langOuter .goog-te-combo {
-    font-size: 9px;
-} 
-.change_langOuter { 
-    width: 110px; 
-    min-height: 15px;
-    margin-left: 10px;
-}
-
-.authBtns ul li {
-    padding: 0px 0px 0px 7px;
-}
-.authBtns { 
-    padding-left: 3px;
-}
-.main_container {
-    padding-top: 136px;
-}
-
-.startup_innerPages .industryNew_section_detail { 
-    padding: 50px 20px 40px;
-}
-
-.startup_innerPages .industryNew_section1_avatar { padding-top: 25px;}
-
-.startupMvp_section .seamlessLimitless_fr span { 
-    padding-top: 30px;
-    padding-bottom: 40px;
-}
-.mvpDev_process { 
-    padding: 40px 15px 30px;
-}
-
-.mvpDev_col { padding-top: 10px; padding-bottom: 10px;}
-
-.mvpDev_col_info { 
-    padding: 30px 15px 30px;
-}
-.needMvp_section_detail { 
-    padding: 60px 0px;
-}
-
-.mvpBenefits_flowSection { 
-    padding: 50px 20px 40px;
-}
-
-.mvpBenefits_flow { 
-    padding-top: 0px;
-}
-
-.startup_innerPages .industryNew_section1 .custom_tittle h2 b {
-   word-wrap: break-word;
-}
 
 .proposal_sectionTittle { 
     padding: 40px 20px;}
@@ -3606,47 +3546,6 @@ h6 { font-size: 18px; }
     padding: 40px 20px; 
 }
 
-.inspired_col { padding-top: 10px; padding-bottom: 10px;}
-
-.awsNepture_info_fl .custom_tittle {
-    padding-right: 0px;
-    padding-bottom: 40px !important;
-}
-.awsNepture_list ul li {
-    padding: 20px 0px;
-}
-.inspiredPassion_section_detail { 
-    padding: 60px 0px 50px;
-}
-
-.startupWhy .inspired_col {
-    padding-top: 15px;
-    padding-bottom: 15px;
-}
-.inspiredPassion_row {
-    padding-top: 0px; 
-}
-
-.nevStarup_setting .indust_work_col { 
-    padding: 25px 20px;
-}
-.startupServices_info { 
-    padding: 40px 20px;
-}
-.startupServices_section_detail { 
-    padding: 60px 0px 60px; 
-}
-
-.modernizationSection .industryNew_section2_colsInfo { 
-    margin: 15px 0px;
-}
-
-.modernizationSection .provide_col { padding: 0px 15px !important;}
-
-.awsNepture_list_info { 
-    padding: 40px 20px; 
-}
-
 .newInd_pages_addSec .seamlessLimitless_fl {
     padding: 50px 20px 45px;
 }
@@ -3670,6 +3569,8 @@ h6 { font-size: 18px; }
 .blogsSection_detail { 
     padding: 60px 0px;
 }
+
+
 
 .blogAvatar img { 
      height: 155px; 

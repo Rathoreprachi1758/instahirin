@@ -1,3 +1,4 @@
+@ -1,9187 +1,9297 @@
 .page-dev {
     text-transform: capitalize;
 }
@@ -2410,7 +2411,7 @@ p {
 .blog_column_info {
     width: 100%;
     position: relative;
-    padding: 0px 20px 0px;
+    padding: 20px; background-color: #fff;
 }
 
 .blog_column_info span {
@@ -2425,13 +2426,14 @@ p {
 }
 
 .blog_column_info h5 {
-    padding-left: 10px;
-    color: #fff;
+    color: #000;
     padding-bottom: 15px;
     font-family: 'avenirmedium';
     font-size: 16px;
     line-height: 1.5;
 }
+.blog_column_info h5 a { color: #000;}
+.blog_column_info h5 a:hover { text-decoration: underline !important;}
 
 .blog_column_info .social_info a {
     color: #5b5b5b;
@@ -2444,17 +2446,15 @@ p {
     background: #fff;
 }
 
-.blog_column_info .social_info {
-    padding-left: 10px;
+.blog_column_info .social_info { 
     border-bottom: 1px solid #fff;
     padding-bottom: 25px;
 }
 
-.blog_column .row {
-    margin: 0px -35px;
+.blog_column .row { 
 }
 
-
+.blgCol { padding: 15px;}
 
 
 
@@ -9027,30 +9027,6 @@ color: #fff; font-size: 18px;font-family: 'avenirblack'; border-radius: 50%;
 
 .modernizationSection .industryNew_section2_cols { padding-bottom: 50px;}
 
-.blogs_list_col h6  { min-height: 72px;  padding: 0px; 
-    white-space: normal; 
-    margin-bottom: 20px; 
-    text-overflow: ellipsis;
-    overflow: hidden;
-    -webkit-line-clamp: 3;
-    display: -webkit-box;
-    -webkit-box-orient: vertical;
-}
-.blogs_list_col h6 a { color: #000;}
-.blogs_list_col p { color: #818181; 
-    padding: 0px;
-    font-family: 'avenirmedium';
-    text-align: justify;
-    line-height: 1.6;
-    white-space: normal;
-    font-size: 15px;
-    margin-bottom: 20px;
-    max-height: 100px;
-    text-overflow: ellipsis;
-    overflow: hidden;
-    -webkit-line-clamp: 3;
-    display: -webkit-box;
-    -webkit-box-orient: vertical;  }
 
 .startupMvp_section .seamlessLimitless_fl .custom_tittle > h2 { color: #16509b;}
 
@@ -9076,13 +9052,7 @@ color: #fff; font-size: 18px;font-family: 'avenirblack'; border-radius: 50%;
 
 .startupServices_info {background-color: #f5f5f5; position: relative; padding: 60px 50px;}
 
-.blogSponsor { width: 100%; display: flex;   padding-top: 20px;}
 
-.blogSponsor span { width: 32px; display: block;}
-.blogSponsor span img { width: 100%; display: block;}
-
-.blogSponsor strong { margin-left: 10px; font-size: 12px; color: #000;}
-.blogSponsor strong small {   font-size: 11px; color: #818181; display: block;}
 .startupServices_infoText { width: 100%;}
 .startupServices_infoText h6 { padding-bottom: 10px;}
 .startupServices_infoText p { padding: 3px 0px;}
@@ -9141,8 +9111,141 @@ color: #fff; font-size: 18px;font-family: 'avenirblack'; border-radius: 50%;
 
 
 
-.blogMore_btn { width: 100%; display: flex;  justify-content: center; padding-top: 40px; }
 .main_nav .trendingNav_links { display: none;}
+
+
+
+
+.manufactureMask { max-width: 450px; bottom: -0px; left: -60px;}
+
+
+.newInd_pages  { background: rgb(102,102,102);  background: linear-gradient(0deg, rgba(102,102,102,1) 0%, rgba(155,155,155,1) 100%);}
+
+
+.newInd_pages_addSec { padding-top: 30px;}
+
+.newInd_pages_addSec .seamlessLimitless_info  { background: #f2f2f2; border: 0px;}
+.newInd_pages_addSec .seamlessLimitless_fr  { background: #ffffff; padding-top: 25px; padding-bottom: 25px;}
+
+.newInd_pages_addSec .custom_tittle p {
+    font-size: 18px; 
+    line-height: 1.8;
+}
+
+.newInd_pages_addSec .seamlessLimitless_fl { 
+    padding: 70px 35px 70px 50px;
+}
+
+
+
+
+
+.newIndPages_section2 { width: 100%; position: relative;}
+
+.newIndPages_section2_tittle { width: 100%; padding: 70px 0px;}
+
+.newIndPages_section2_outer { position: relative; width: 100%;}
+
+
+.newInd_pagesSec2 { background: #f2f2f2 !important; padding: 50px 0px 70px; position: relative;}
+
+.newInd_pagesSec2 .industryNew_section2_cols { transform: none;}
+
+.newInd_pagesSec2::after {background: rgb(102,102,102);  background: linear-gradient(0deg, rgba(102,102,102,1) 0%, rgba(155,155,155,1) 100%);
+    content: '';
+    position: absolute;
+    left: 0px;
+    top: 0px;
+    height: 290px;
+    width: 100%; z-index: 0;
+}
+
+.newInd_pagesSec2 > .auto_container { z-index: 1;}
+
+.newInd_pagesSec2 .industryNew_section2_colsInfo h6 {
+    font-family: 'avenirblack'; 
+    font-size: 14px; 
+}
+
+.newInd_pagesSec2 .industryNew_section2_colsInfo p {
+    font-size: 14px; 
+}
+
+
+
+
+
+.blogsSection { width: 100%; position: relative;}
+
+.blogsSection_detail { width: 100%; padding: 70px 0px;}
+
+.blogCol { padding: 15px !important;}
+
+.blogs_list_col { width: 100%; position: relative; background-color: #fff; box-shadow: 0px 0px 15px #cccccca8; padding: 20px;}
+
+.readMore_goto a {
+    display: flex;
+    align-items: center;
+    justify-content: space-between; 
+    font-size: 14px;
+    color: #969696;
+}
+
+.readMore_goto a b {
+    width: 35px;
+    height: 30px;
+    border-radius: 4px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 1px solid #a3a3a3;
+    font-size: 18px; color: #a3a3a3;
+}
+
+.blogAvatar { width: 100%; display: block; margin-bottom: 20px;}
+
+.blogAvatar img { display: block; width: 100%; object-fit: fill; height: 195px;}
+
+
+.blogs_list_col h6  { min-height: 72px;  padding: 0px; 
+    white-space: normal; 
+    margin-bottom: 20px; 
+    text-overflow: ellipsis;
+    overflow: hidden;
+    -webkit-line-clamp: 3;
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+}
+.blogs_list_col h6 a { color: #000;}
+.blogs_list_col p { color: #818181; 
+    padding: 0px;
+    font-family: 'avenirmedium';
+    text-align: justify;
+    line-height: 1.6;
+    white-space: normal;
+    font-size: 15px;
+    margin-bottom: 20px;
+    max-height: 100px;
+    text-overflow: ellipsis;
+    overflow: hidden;
+    -webkit-line-clamp: 3;
+    display: -webkit-box;
+    -webkit-box-orient: vertical;  }
+
+
+
+.blogSponsor { width: 100%; display: flex;   padding-top: 20px; border-top: 1px solid #ccc;}
+
+.blogSponsor span { width: 32px; display: block; margin: 0px;}
+.blogSponsor span img { width: 100%; display: block;}
+
+.blogSponsor strong { margin-left: 10px; font-size: 12px; color: #000;}
+.blogSponsor strong small {   font-size: 11px; color: #818181; display: block;}
+
+
+
+
+.blogMore_btn { width: 100%; display: flex;  justify-content: center; padding-top: 40px; }
 
 .blogPost_detail  .blogAvatar img { height: auto;}
 
@@ -9189,6 +9292,34 @@ color: #fff; font-size: 18px;font-family: 'avenirblack'; border-radius: 50%;
     width: 45px; min-width: 45px;
     display: block;
 }
+
+
+
+
+
+
+.paginationBlog { width: 100%; display: flex; justify-content: center; padding-top: 30px;}
+
+.paginationBlog ul li  { margin: 0px 5px ;}
+
+.paginationBlog .page-item.active  {    border: 1px solid #27a5de;
+    background: #27a5de; color: #fff;}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
