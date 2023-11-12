@@ -602,9 +602,12 @@
 
 
 
+.priceFeatureList ul li p { 
+    font-size: 12px;}
 
-
-
+.priceFeatureList { 
+    padding: 20px 8px 0px;
+}
 
 
 
@@ -1714,19 +1717,42 @@ h6 { font-size: 18px; }
 
 
 
+.pricingList_col { 
+    padding: 20px 10px 50px; 
+}
 
+.priceFeatureList { 
+    padding: 20px 5px 0px;
+}
 
+.categoryTittle { 
+    font-size: 14px;
+    padding-bottom: 10px;
+}
 
+.setupFee small {
+    margin-right: 5px;
+    font-size: 12px;
+}
+.setupFee strong { 
+    font-size: 14px;
+}
+.priceFeatureList ul li { 
+    padding: 10px 0px; 
+}
 
+.priceFeatureList ul li p { 
+    font-size: 12px;}
 
-
-
-
-
-
-
-
-
+.priceFeatureList ul li p span {
+    padding-right: 6px; 
+    font-size: 15px;
+}
+.categoryTittleTag { 
+    max-width: 100px; 
+    padding: 5px 8px; 
+    font-size: 12px;
+}
 
 
 
@@ -3575,6 +3601,48 @@ h6 { font-size: 18px; }
 .blogAvatar img { 
      height: 155px; 
 }
+
+
+
+
+
+
+.pricingList ul {
+    display: block; 
+}
+
+.pricingList ul li {
+    width: 100%;
+}
+.priceValue { 
+    padding-bottom: 10px;
+}
+.priceFeatureList { 
+    padding: 10px 10px 0px;
+}
+.priceFeatureList ul li { 
+    padding: 10px 0px; 
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 

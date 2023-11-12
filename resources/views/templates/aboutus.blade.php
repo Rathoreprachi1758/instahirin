@@ -488,9 +488,272 @@
         </div>
 
 
-        <!-- section model 3 -->
+       
 
-        <div class="sourcingModel_section">
+    </div>
+</div>
+
+
+
+<!-- marketing services  section  -->
+
+
+<div id="goto_market" class="markServices_section aos-init aos-animate" data-aos="fade-up" data-aos-duration="1500" data-aos-easing="ease">
+        <div class="custom_tittle">
+            <h2><strong>Our</strong> Marketing Services</h2>
+            <p class="p_color">We Are Your Growth Partners</p>
+        </div>
+
+
+        <div class="markServices_tabs">
+            <div class="markServices_tabsBtn">
+                <div class="auto_container">
+                    <div class="markServices_tabsBtn_info">
+                        <ul>
+                            <li><a href="#tab1" class="active">Marketing & Media</a></li>
+                            <li><a href="#tab2">UI/UX Services</a></li>
+                            <li><a href="#tab3">360 E-Commerce Solutions</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+
+
+            <div class="markServices_tabsInfo">
+                <div class="auto_container">
+
+
+
+                    <!-- Marketing & Media tab -->
+
+                    <div class="markServices_tabsInfo_detail" id="tab1" style="display: block;">
+
+                        <h3 class="tabsMarker">
+                            Marketing <br>  & Media
+                        </h3>
+
+                        <div class="row">
+                            <div class="col-lg-4 col-md-4">
+                                <div class="markServices_tabs_col">
+                                    <div class="markServices_tabs_colInfo">
+                                        <strong>Media Planning And Buying: </strong>
+                                        <p>Our media planning and buying involve strategy and
+                                            placement of ads to ensure brands are targeting the right audience, at the right time, on the right platform. Across BTL, ATL, TTL, PPC, Social or Programmatic channels and
+                                            achieving the desired performance metrics.</p>
+                                    </div>
+
+                                    <div class="markServices_tabs_colInfo">
+                                        <strong>Social Media Management (SMM):  </strong>
+                                        <p>Social media is essential in growing organic traffic and increasing modern business. Our approach achieves brand goals by finding the right demographic for the product across social media platforms, Instagram, YouTube,
+                                            LinkedIn, Facebook, TikTok, Twitter, Pinterest,
+                                            Snapchat, etc.</p>
+                                    </div>
+
+                                    <div class="markServices_tabs_colInfo">
+                                        <strong>Search Engine Optimization (SEO): </strong>
+                                        <p>Our SEO services covers, Conversion rate optimization, Content marketing, Off-page SEO, and Technical SEO designed to deliver sustained business growth and visibility
+                                            in organic search results for brands' products and services.</p>
+                                    </div>
+                                </div>
+                            </div>
+
+
+                            <div class="col-lg-4 col-md-4">
+                                <div class="tabsAvatar pr-3">
+                                    <span><img src="/bizionic/images/marketingAvatar_stairs.png" alt="#" /></span>
+                                </div> 
+                            </div>
+
+
+                            <div class="col-lg-4 col-md-4">
+                                <div class="markServices_tabs_col">
+                                    <div class="markServices_tabs_colInfo">
+                                        <strong>Google Adverts And PPC: </strong>
+                                        <p>Google Adverts and PPC Advertising allow your business to advertise the products or services in front of the people actively searching for them. It will let you display your ads to users when they are ready to purchase, thereby increasing
+                                            the conversion rate.
+                                            </p>
+                                    </div>
+
+                                    <div class="markServices_tabs_colInfo">
+                                        <strong>Technical Analysis: </strong>
+                                        <p>By deploying various tools, including Google Analytics and other software, our Technical Services deliver high-level support and solutions in providing the client with details performance analytics and devising the optimal strategy
+                                            for meeting the desired results.
+                                            </p>
+                                    </div>
+
+                                    <div class="markServices_tabs_colInfo">
+                                        <strong>Creative Solutions: </strong>
+                                        <p>Bring your brands to LIFE; our innovative team can assist in turning your ideas into reality. Products have a few seconds to grab the audience's attention; our creative and design
+                                            team will help conceptualize and transform your vision.</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+
+                    <!-- UI/UX Services tab -->
+
+                    <div class="markServices_tabsInfo_detail" id="tab2">
+
+                        <h3 class="tabsMarker uiMarker">
+                            UI/UX  <br> Services
+                        </h3>
+
+                        <div class="row">
+                            <div class="col-lg-4 col-md-4">
+                                <div class="markServices_tabs_col">
+                                    <div class="markServices_tabs_colInfo">
+                                        <strong>UI/UX Designs: </strong>
+                                        <p>UI/UX design has become more “trendy”; with the “internet of things.” Our user experience (UX) designers team works to create a product, from branding to design to usability, providing meaningful and
+                                            enjoyable user experiences.</p>
+                                    </div>
+
+                                    <div class="markServices_tabs_colInfo">
+                                        <strong>Usability Testing:</strong>
+                                        <p>Our qualitative usability testing collects insights, findings and anecdotes about how people use the product or service. Usability testing deploys multiple techniques and real users in a user-centered interaction
+                                            approach to evaluate product flows.</p>
+                                    </div>
+
+                                    <div class="markServices_tabs_colInfo">
+                                        <strong>Usability Audit (UX Audit):</strong>
+                                        <p>Our UX audit uses empirical methods to provide users with behavior analytics and let the brand know how to boost
+                                            conversions by making it easier for users to achieve their goals on brand websites
+                                            and applications.</p>
+                                    </div>
+                                </div>
+                            </div>
+
+
+                            <div class="col-lg-4 col-md-4">
+                                <div class="tabsAvatar">
+                                    <span><img src="/bizionic/images/uxAvatar.png" alt="#" /></span>
+                                </div> 
+                            </div>
+
+
+                            <div class="col-lg-4 col-md-4">
+                                <div class="markServices_tabs_col">
+                                    <div class="markServices_tabs_colInfo">
+                                        <strong>Layout Wireframes:</strong>
+                                        <p>Think of a website or applications wireframe like an architectural blueprint. Our
+                                            wireframes provide a clear overview of the page structure, layout, information
+                                            architecture, user flow, functionality and
+                                            intended behaviors.                                                     
+                                            </p>
+                                    </div>
+
+                                    <div class="markServices_tabs_colInfo">
+                                        <strong>Animations:</strong>
+                                        <p>Our in-house Studio is a design-led team that brings any brand's message to life through playful and lovingly crafted 2D, 3D, Long & Short form character animation production. Animated stories crafted with
+                                            personality, warmth and wit.                                                     
+                                            </p>
+                                    </div>
+
+                                    <div class="markServices_tabs_colInfo">
+                                        <strong>Illustrations:</strong>
+                                        <p>Our team comprises the finest illustrators and animators with informative writing genre that clarifies a specific situation or object through demonstrative evidence. You only need to look in one place to find the perfect proven artists quickly and easily
+                                            for your illustration needs.</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+
+
+                    <!-- 360 eCommerce Solutions -->
+
+                    <div class="markServices_tabsInfo_detail" id="tab3">
+
+                        <h3 class="tabsMarker ecomMarker">
+                            360 E-Commerce  <br>  Solutions
+                        </h3>
+
+                        <div class="row">
+                            <div class="col-lg-4 col-md-4">
+                                <div class="markServices_tabs_col">
+                                    <div class="markServices_tabs_colInfo">
+                                        <strong>E-Commerce Store:</strong>
+                                        <p>Our 360 e-Commerce solutions will assist in creating robust, easy navigation, user-friendly, and conversion-focused
+                                            commerce platforms (Web and
+                                            Applications) that generate results & assistin growing brands' digital presence
+                                            and sales channels.</p>
+                                    </div>
+
+                                    <div class="markServices_tabs_colInfo">
+                                        <strong>Payment Gateway:</strong>
+                                        <p>We partner with major payment gateway providers and assist brands in managing their e-Commerce platform with seamless secured payment solutions integration, enabling the platform to provide services to
+                                            users across geographic regions.</p>
+                                    </div>
+
+                                    <div class="markServices_tabs_colInfo">
+                                        <strong>Voice Commerce:</strong>
+                                        <p>By leveraging voice recognition technology based on artificial intelligence, we assist brands in enabling users to use voice
+                                            commands to make purchases on various integrated platforms without clicking
+                                            multiple buttons.</p>
+                                    </div>
+                                </div>
+                            </div>
+
+
+                            <div class="col-lg-4 col-md-4">
+                                <div class="tabsAvatar ">
+                                    <span><img src="/bizionic/images/ecommerceAvatar.png" alt="#" /></span>
+                                </div> 
+                            </div>
+
+
+                            <div class="col-lg-4 col-md-4">
+                                <div class="markServices_tabs_col">
+                                    <div class="markServices_tabs_colInfo">
+                                        <strong>Chatbots Commerce:</strong>
+                                        <p>Our WhatsApp and Web/device-based Chatbot commerce solutions can assist brands in integrating real-time conversation solutions, promoting products and services on active devices, capturing leads, and
+                                            provide real-time customer assistance.                                                     
+                                            </p>
+                                    </div>
+
+                                    <div class="markServices_tabs_colInfo">
+                                        <strong>Customer Service Automation:</strong>
+                                        <p>With our automated customer services
+                                            solutions, brands can streamline workflows & reduce human dependencies, enhance business deliveries and customer
+                                            satisfaction, and build brand trust &
+                                            recognition with the users.                                                     
+                                            </p>
+                                    </div>
+
+                                    <div class="markServices_tabs_colInfo">
+                                        <strong>Artificial Intelligence:</strong>
+                                        <p>Our AI and predictive analytics solution will assist brands in delivering an outstanding customer and user experience in
+                                            e-Commerce and making intelligent
+                                            business decisions driven by customer data
+                                            and behavioral analysis.</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="consult_btn">
+                        <a href="/get-a-free-consultation" class="btn_default mt-2">Get a Free Consultation</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+     </div>
+
+
+
+
+
+
+<div class="ourEndProcess_section bg_e5e6e7 pt-5 onmainPage">
+    <div class="auto_container">
+
+     <!-- section model 3 -->
+
+     <div class="sourcingModel_section pt-2">
             <div class="custom_tittle">
                 <h2><strong>Our</strong> Talent Sourcing Models</h2>
                 <p class="p_color text-justify p-0">We at Bizionic believe in diversity, therefore we do not stick to a single outsourcing model while providing software development outsourcing services.
@@ -632,6 +895,7 @@
 
     </div>
 </div>
+
 
 
 
