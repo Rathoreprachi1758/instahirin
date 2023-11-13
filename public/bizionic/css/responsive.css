@@ -1,3 +1,4 @@
+@@ -1,3580 +1,3584 @@
 @charset "utf-8";
 /* CSS Document */
 
@@ -3545,19 +3546,35 @@ h6 { font-size: 18px; }
     padding: 40px 20px; 
 }
 
+.newInd_pages_addSec .seamlessLimitless_fl {
+    padding: 50px 20px 45px;
+}
+
+.newInd_pages_addSec .seamlessLimitless_fr { 
+    padding:0px; 
+}
+
+.newIndPages_section2_tittle { 
+    padding: 45px 0px;
+}
+
+.newInd_pagesSec2 .industryNew_section2_cols {
+    transform: none !important;
+}
+
+.custom_tittle { 
+    padding-bottom: 0px;
+}
+
+.blogsSection_detail { 
+    padding: 60px 0px;
+}
 
 
 
-
-
-
-
-
-
-
-
-
-
+.blogAvatar img { 
+     height: 155px; 
+}
 
 
 

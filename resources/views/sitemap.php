@@ -5,6 +5,8 @@
   <priority>0.5</priority>
   <lastmod>2023-10-12</lastmod>
 </url>
+<!-- new file -->
+<!-- changed file -->
 <url>
   <loc>https://www.bizionictech.com/hire</loc>
   <priority>1.0</priority>
