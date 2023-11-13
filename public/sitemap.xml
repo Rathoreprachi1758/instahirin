@@ -6,6 +6,7 @@
   <lastmod>2023-10-12</lastmod>
 </url>
 <url>
+<!-- this is the newfile -->
   <loc>https://www.bizionictech.com/hire</loc>
   <priority>1.0</priority>
   <lastmod>2023-10-12</lastmod>
@@ -251,7 +252,7 @@
   <lastmod>2023-10-12</lastmod>
 </url>
 <url>
-  <loc>https://www.bizionictech.com/hire/developer/developers-other/instaHirin Onboard Form</loc>
+  <loc>https://www.bizionictech.com/hire/developer/developers-other/instaHirin-onboard-form</loc>
   <priority>0.9</priority>
   <lastmod>2023-10-12</lastmod>
 </url>
@@ -596,7 +597,7 @@
   <lastmod>2023-10-12</lastmod>
 </url>
 <url>
-  <loc>https://www.bizionictech.com/technology/technology-we-master/technologies/Front End Technologies</loc>
+  <loc>https://www.bizionictech.com/technology/technology-we-master/technologies/front-end-technologies</loc>
   <priority>0.7</priority>
   <lastmod>2023-10-12</lastmod>
 </url>
@@ -976,12 +977,12 @@
   <lastmod>2023-10-12</lastmod>
 </url>
 <url>
-  <loc>https://www.bizionictech.com/services/services-we-excel-at/technology/data-science -analytics-services</loc>
+  <loc>https://www.bizionictech.com/services/services-we-excel-at/technology/data-science-analytics-services</loc>
   <priority>0.4</priority>
   <lastmod>2023-10-12</lastmod>
 </url>
 <url>
-  <loc>https://www.bizionictech.com/services/services-we-excel-at/technology/cybersecurity-services -auditing</loc>
+  <loc>https://www.bizionictech.com/services/services-we-excel-at/technology/cybersecurity-services-auditing</loc>
   <priority>0.2</priority>
   <lastmod>2023-10-12</lastmod>
 </url>
@@ -1036,12 +1037,7 @@
   <lastmod>2023-10-12</lastmod>
 </url>
 <url>
-  <loc>https://www.bizionictech.com/services/services-we-excel-at/marketing/social-media-marketing</loc>
-  <priority>0.8</priority>
-  <lastmod>2023-10-12</lastmod>
-</url>
-<url>
-  <loc>https://www.bizionictech.com/services/services-we-excel-at/marketing/lead-generation-nurturing:</loc>
+  <loc>https://www.bizionictech.com/services/services-we-excel-at/marketing/lead-generation-nurturing</loc>
   <priority>0.4</priority>
   <lastmod>2023-10-12</lastmod>
 </url>
@@ -1171,96 +1167,6 @@
   <lastmod>2023-10-12</lastmod>
 </url>
 <url>
-  <loc>https://www.bizionictech.com/industries/industries-we-serve/industries/retail-e-commerce</loc>
-  <priority>0.2</priority>
-  <lastmod>2023-10-12</lastmod>
-</url>
-<url>
-  <loc>https://www.bizionictech.com/industries/industries-we-serve/industries/manufacturing</loc>
-  <priority>0.4</priority>
-  <lastmod>2023-10-12</lastmod>
-</url>
-<url>
-  <loc>https://www.bizionictech.com/industries/industries-we-serve/industries/telecommunications</loc>
-  <priority>0.8</priority>
-  <lastmod>2023-10-12</lastmod>
-</url>
-<url>
-  <loc>https://www.bizionictech.com/industries/industries-we-serve/industries/energy-and-utilities</loc>
-  <priority>0.7</priority>
-  <lastmod>2023-10-12</lastmod>
-</url>
-<url>
-  <loc>https://www.bizionictech.com/industries/industries-we-serve/industries/government</loc>
-  <priority>0.5</priority>
-  <lastmod>2023-10-12</lastmod>
-</url>
-<url>
-  <loc>https://www.bizionictech.com/industries/industries-we-serve/industries/nonprofits</loc>
-  <priority>0.4</priority>
-  <lastmod>2023-10-12</lastmod>
-</url>
-<url>
-  <loc>https://www.bizionictech.com/industries/industries-we-serve/industries/professional-services</loc>
-  <priority>0.2</priority>
-  <lastmod>2023-10-12</lastmod>
-</url>
-<url>
-  <loc>https://www.bizionictech.com/industries/industries-we-serve/industries/software-as-service</loc>
-  <priority>0.7</priority>
-  <lastmod>2023-10-12</lastmod>
-</url>
-<url>
-  <loc>https://www.bizionictech.com/industries/industries-we-serve/industries/consumer-electronics</loc>
-  <priority>0.5</priority>
-  <lastmod>2023-10-12</lastmod>
-</url>
-<url>
-  <loc>https://www.bizionictech.com/industries/industries-we-serve/industries/fashion-and-apparel</loc>
-  <priority>1.0</priority>
-  <lastmod>2023-10-12</lastmod>
-</url>
-<url>
-  <loc>https://www.bizionictech.com/industries/industries-we-serve/industries/agriculture</loc>
-  <priority>0.2</priority>
-  <lastmod>2023-10-12</lastmod>
-</url>
-<url>
-  <loc>https://www.bizionictech.com/industries/industries-we-serve/industries/bizionic-team</loc>
-  <priority>0.3</priority>
-  <lastmod>2023-10-12</lastmod>
-</url>
-<url>
-  <loc>https://www.bizionictech.com/industries/industries-we-serve/industries/mobile-push-notifications</loc>
-  <priority>0.2</priority>
-  <lastmod>2023-10-12</lastmod>
-</url>
-<url>
-  <loc>https://www.bizionictech.com/industries/industries-we-serve/industries/web-push-notifications</loc>
-  <priority>0.7</priority>
-  <lastmod>2023-10-12</lastmod>
-</url>
-<url>
-  <loc>https://www.bizionictech.com/industries/industries-we-serve/industries/in-app-push-notifications</loc>
-  <priority>1.0</priority>
-  <lastmod>2023-10-12</lastmod>
-</url>
-<url>
-  <loc>https://www.bizionictech.com/industries/industries-we-serve/industries/email-notifications</loc>
-  <priority>0.5</priority>
-  <lastmod>2023-10-12</lastmod>
-</url>
-<url>
-  <loc>https://www.bizionictech.com/industries/industries-we-serve/industries/sms-notifications</loc>
-  <priority>0.4</priority>
-  <lastmod>2023-10-12</lastmod>
-</url>
-<url>
-  <loc>https://www.bizionictech.com/industries/industries-we-serve/industries/journey-notifications</loc>
-  <priority>0.1</priority>
-  <lastmod>2023-10-12</lastmod>
-</url>
-<url>
   <loc>https://www.bizionictech.com/notification-center</loc>
   <priority>0.1</priority>
   <lastmod>2023-10-12</lastmod>
@@ -1311,11 +1217,6 @@
   <lastmod>2023-10-12</lastmod>
 </url>
 <url>
-  <loc>https://www.bizionictech.com/get-a-free-consultantion</loc>
-  <priority>0.8</priority>
-  <lastmod>2023-10-12</lastmod>
-</url>
-<url>
   <loc>https://www.bizionictech.com/notification-center/mobile-push-notifications</loc>
   <priority>0.9</priority>
   <lastmod>2023-10-12</lastmod>
@@ -1346,33 +1247,8 @@
   <lastmod>2023-10-12</lastmod>
 </url>
 <url>
-  <loc>https://www.bizionictech.com/instaHirin/talent-onboard-process</loc>
-  <priority>0.5</priority>
-  <lastmod>2023-10-12</lastmod>
-</url>
-<url>
-  <loc>https://www.bizionictech.com/industries/industries-we-serve/industries/global-talent</loc>
-  <priority>0.8</priority>
-  <lastmod>2023-10-12</lastmod>
-</url>
-<url>
   <loc>https://www.bizionictech.com/hire/developer/developers-other/instaHirin%20Onboard%20Form</loc>
   <priority>0.2</priority>
-  <lastmod>2023-10-12</lastmod>
-</url>
-<url>
-  <loc>https://www.bizionictech.com/industries/industries-we-serve/industries/apply-now-form?jobId=9</loc>
-  <priority>0.3</priority>
-  <lastmod>2023-10-12</lastmod>
-</url>
-<url>
-  <loc>https://www.bizionictech.com/industries/industries-we-serve/industries/apply-now-form?jobId=10</loc>
-  <priority>0.9</priority>
-  <lastmod>2023-10-12</lastmod>
-</url>
-<url>
-  <loc>https://www.bizionictech.com/industries/industries-we-serve/industries/apply-now-form?jobId=11</loc>
-  <priority>0.5</priority>
   <lastmod>2023-10-12</lastmod>
 </url>
 </urlset>

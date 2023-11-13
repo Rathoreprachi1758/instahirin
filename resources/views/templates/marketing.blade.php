@@ -1348,7 +1348,6 @@
 
                                         </div>
 
-
                                         <input type="text" name="type" placeholder="" value="video" hidden/>
                                         <div class="contactBtn pt-3 mt-3">
                                             <input type="submit" value="Submit"
