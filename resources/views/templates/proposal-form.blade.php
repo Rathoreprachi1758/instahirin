@@ -1,4 +1,4 @@
-<div class="aboutProject_section getFree">
+<div class="aboutProject_section getFree proposalPage">
     <div class="auto_container">
 
         <div class="contactUs_detail">
@@ -6,48 +6,42 @@
                 <div class="col-lg-4 col-md-5  aos-init " data-aos="fade-right" data-aos-duration="800"
                     data-aos-easing="ease-out-cubic">
                     <div class="biz_brief">
-                        <div class="biz_brief_info">
-                            <h3>BIZIONIC in Brief:</h3>
-                            <ul>
-                                <li>
-                                    <strong>10+ Years of Expertise</strong>
-                                    <p>IT powerhouse of Hyderabad India</p>
-                                </li>
+                        <li>
+                            <div class="pricingList_col mostPopular"> 
 
-                                <li>
-                                    <strong>150+ Developers and Marketers</strong>
-                                    <p>In-house, Min 5+ Years of Experience</p>
-                                </li>
+                                <h5 class="text-center text-white pb-2">SEO</h5>
+                                <strong class="categoryTittle">Silver</strong>
 
-                                <li>
-                                    <strong>25+ Project Manager's Team</strong>
-                                    <p>10+ Years of Experience</p>
-                                </li>
+                                <h3 class="priceValue">$500 <sub>/Month</sub></h3>
 
-                                <li>
-                                    <strong>50M+ Users of Solutions</strong>
-                                    <p>Our Team Developed</p>
-                                </li>
+                                <div class="setupFee">
+                                    <small>Setup Fees</small>
+                                    <strong>$300</strong>
+                                </div>
 
-                                <li>
-                                    <strong>250+ Projects Accomplished</strong>
-                                </li>
-
-                                <li>
-                                    <strong>1000K+ Development Hours</strong>
-                                </li>
-                            </ul>
-                        </div>
+                                <div class="priceFeatureList">
+                                    <ul>
+                                        <li><p><span><i class="fa fa-check-square-o" aria-hidden="true"></i></span> 200 Keywords</p></li>
+                                        <li><p><span><i class="fa fa-check-square-o" aria-hidden="true"></i></span> 10 Ad Groups</p></li>
+                                        <li><p><span><i class="fa fa-check-square-o" aria-hidden="true"></i></span> Quarterly Display ads with banner design</p></li>
+                                        <li><p><span><i class="fa fa-check-square-o" aria-hidden="true"></i></span> Search, Remarketing ads</p></li>
+                                        <li><p><span><i class="fa fa-check-square-o" aria-hidden="true"></i></span> Competitor & Research Analysis</p></li>
+                                        <li><p><span><i class="fa fa-check-square-o" aria-hidden="true"></i></span> $2800/month Budget</p></li>  
+                                        <li><p><span><i class="fa fa-check-square-o" aria-hidden="true"></i></span> Monthly Report</p></li>  
+                                    </ul>
+                                </div>
+                            </div>
+                        </li>
                     </div>
                 </div>
                 <div class="col-lg-8 col-md-7   aos-init " data-aos="fade-left" data-aos-duration="800"
                     data-aos-easing="ease-out-cubic">
                     <div class="contactForm_page">
                         <div class="custom_tittle text-left">
-                            <h2>Get a Free Consultation</h2>
+                            <h2>Proposal Request Form</h2>
                             <p>Please fill the form and our representative will get back to you.</p>
                         </div>
-                        <contact-us-component></contact-us-component>
+                        <proposal-component></proposal-component>
                          
                     </div>
                 </div>

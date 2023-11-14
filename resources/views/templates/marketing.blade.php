@@ -453,6 +453,442 @@
 
 
 
+     <!-- our story section  -->
+
+     <div class="pricing_section bg_fff">
+        <div class="auto_container">
+            <div class="pricing_section_detail">
+                <div class="custom_tittle aos-init aos-animate" data-aos="fade-up" data-aos-duration="800" data-aos-easing="ease">
+                    <h2 class="pb-2">Plans &<strong> Pricing</strong></h2>
+                    <p class="p_color">Let us make you brand stand out!</p>
+                </div>
+
+
+
+                <!-- section core 2 -->
+
+                <div class="coreServices_section"> 
+
+                    <div class="coreServices_sectionDetail">
+                        <div class="coreTabs">
+                            <ul>
+                                <li><a href="#coreTab1">SEO Packages & Pricing</a> </li>
+                                <li><a href="#coreTab2">Social Media Marketing Packages & Pricing</a></li>
+                                <li><a href="#coreTab3">Pay Per Click Packages & Pricing</a></li> 
+                            </ul>
+                        </div>
+
+
+                        <div class="coreTabs_data">
+
+                            <!-- core tab1 -->
+                            <div class="coreTabs_data_show" id="coreTab1"   style="display:block">
+                            
+                                <div class="pricingList">
+                                    <ul>
+                                        <li>
+                                            <div class="pricingList_col">
+                                                <strong class="categoryTittle">Basic</strong>
+
+                                                <h3 class="priceValue">$595 <sub>/Month</sub></h3>
+
+                                                <div class="setupFee">
+                                                    <small>Setup Fees</small>
+                                                    <strong>$400</strong>
+                                                </div>
+
+                                                <div class="priceFeatureList">
+                                                    <ul>
+                                                        <li><p><span><i class="fa fa-check-square-o" aria-hidden="true"></i></span> 20 Keyword Research</p></li>
+                                                        <li><p><span><i class="fa fa-check-square-o" aria-hidden="true"></i></span> Website Analysis & Opportunity</p></li>
+                                                        <li><p><span><i class="fa fa-check-square-o" aria-hidden="true"></i></span> Report</p></li>
+                                                        <li><p><span><i class="fa fa-check-square-o" aria-hidden="true"></i></span> SEO Strategy</p></li>
+                                                        <li><p><span><i class="fa fa-check-square-o" aria-hidden="true"></i></span> On-Page SEO</p></li>
+                                                        <li><p><span><i class="fa fa-check-square-o" aria-hidden="true"></i></span> Monthly Report</p></li> 
+                                                    </ul>
+                                                </div>
+                                            </div>
+                                        </li>
+
+
+                                        <li>
+                                            <div class="pricingList_col mostPopular">
+                                                <strong class="categoryTittleTag">Most Popular</strong>
+
+                                                <strong class="categoryTittle">Silver</strong>
+
+                                                <h3 class="priceValue">$1200 <sub>/Month</sub></h3>
+
+                                                <div class="setupFee">
+                                                    <small>Setup Fees</small>
+                                                    <strong>$400</strong>
+                                                </div>
+
+                                                <div class="priceFeatureList">
+                                                    <ul>
+                                                        <li><p><span><i class="fa fa-check-square-o" aria-hidden="true"></i></span> 30 Keyword Research</p></li>
+                                                        <li><p><span><i class="fa fa-check-square-o" aria-hidden="true"></i></span> Website Analysis & Opportunity</p></li>
+                                                        <li><p><span><i class="fa fa-check-square-o" aria-hidden="true"></i></span> Report</p></li>
+                                                        <li><p><span><i class="fa fa-check-square-o" aria-hidden="true"></i></span> SEO Strategy</p></li>
+                                                        <li><p><span><i class="fa fa-check-square-o" aria-hidden="true"></i></span> 1 Blog/month</p></li>
+                                                        <li><p><span><i class="fa fa-check-square-o" aria-hidden="true"></i></span> On-Page SEO</p></li> 
+                                                        <li><p><span><i class="fa fa-check-square-o" aria-hidden="true"></i></span> Off-Page SEO</p></li> 
+                                                        <li><p><span><i class="fa fa-check-square-o" aria-hidden="true"></i></span> Monthly Report</p></li>  
+                                                    </ul>
+                                                </div>
+                                            </div>
+                                        </li>
+
+
+                                        <li>
+                                            <div class="pricingList_col">
+                                                <strong class="categoryTittle">Gold</strong>
+
+                                                <h3 class="priceValue">$2200 <sub>/Month</sub></h3>
+
+                                                <div class="setupFee">
+                                                    <small>Setup Fees</small>
+                                                    <strong>$700</strong>
+                                                </div>
+
+                                                <div class="priceFeatureList">
+                                                    <ul>
+                                                        <li><p><span><i class="fa fa-check-square-o" aria-hidden="true"></i></span> 60 Keyword Research</p></li>
+                                                        <li><p><span><i class="fa fa-check-square-o" aria-hidden="true"></i></span> Website Analysis & Opportunity</p></li>
+                                                        <li><p><span><i class="fa fa-check-square-o" aria-hidden="true"></i></span> Report</p></li>
+                                                        <li><p><span><i class="fa fa-check-square-o" aria-hidden="true"></i></span> SEO Strategy</p></li>
+                                                        <li><p><span><i class="fa fa-check-square-o" aria-hidden="true"></i></span> 2 Blog/month</p></li>
+                                                        <li><p><span><i class="fa fa-check-square-o" aria-hidden="true"></i></span> Persona analysis</p></li>
+                                                        <li><p><span><i class="fa fa-check-square-o" aria-hidden="true"></i></span> On-Page SEO</p></li> 
+                                                        <li><p><span><i class="fa fa-check-square-o" aria-hidden="true"></i></span> Off-Page SEO</p></li> 
+                                                        <li><p><span><i class="fa fa-check-square-o" aria-hidden="true"></i></span> Monthly Report Meeting</p></li>  
+                                                    </ul>
+                                                </div>
+                                            </div>
+                                        </li>
+
+
+                                        <li>
+                                            <div class="pricingList_col">
+                                                <strong class="categoryTittle">Platinum</strong>
+
+                                                <h3 class="priceValue">$5000 <sub>/Month</sub></h3>
+
+                                                <div class="setupFee">
+                                                    <small>Setup Fees</small>
+                                                    <strong>$9000</strong>
+                                                </div>
+
+                                                <div class="priceFeatureList">
+                                                    <ul>
+                                                        <li><p><span><i class="fa fa-check-square-o" aria-hidden="true"></i></span> 100 Keyword Research</p></li>
+                                                        <li><p><span><i class="fa fa-check-square-o" aria-hidden="true"></i></span> Website Analysis & Opportunity</p></li>
+                                                        <li><p><span><i class="fa fa-check-square-o" aria-hidden="true"></i></span> Report</p></li>
+                                                        <li><p><span><i class="fa fa-check-square-o" aria-hidden="true"></i></span> SEO Strategy</p></li>
+                                                        <li><p><span><i class="fa fa-check-square-o" aria-hidden="true"></i></span> 3 Blog/month</p></li>
+                                                        <li><p><span><i class="fa fa-check-square-o" aria-hidden="true"></i></span> Persona analysis</p></li>
+                                                        <li><p><span><i class="fa fa-check-square-o" aria-hidden="true"></i></span> On-Page SEO</p></li> 
+                                                        <li><p><span><i class="fa fa-check-square-o" aria-hidden="true"></i></span> Off-Page SEO</p></li> 
+                                                        <li><p><span><i class="fa fa-check-square-o" aria-hidden="true"></i></span> Monthly Report Meeting</p></li>  
+                                                    </ul>
+                                                </div>
+                                            </div>
+                                        </li>
+
+                                        <li>
+                                            <div class="pricingList_col">
+                                                <strong class="categoryTittle">Custom</strong> 
+
+                                                <div class="setupFee">
+                                                    <small>Custom <br> Digital Marketing <br> Package</small>
+                                                </div>
+
+                                                <div class="priceFeatureList">
+                                                    <ul>
+                                                        <li><p><span><i class="fa fa-check-square-o" aria-hidden="true"></i></span> Customization as per your requirments</p></li> 
+                                                    </ul>
+                                                </div>
+                                            </div>
+                                        </li>
+                                    </ul>
+                                </div>
+                            
+                            </div>
+
+
+
+                            <!-- core tab2 -->
+                            <div class="coreTabs_data_show" id="coreTab2">
+                                
+                                <div class="pricingList">
+                                    <ul>
+                                        <li>
+                                            <div class="pricingList_col">
+                                                <strong class="categoryTittle">Basic</strong>
+
+                                                <h3 class="priceValue">$1,000  <sub>/Month</sub></h3>
+
+                                                <div class="setupFee">
+                                                    <small>Setup Fees</small>
+                                                    <strong>$800</strong>
+                                                </div>
+
+                                                <div class="priceFeatureList">
+                                                    <ul>
+                                                        <li><p><span><i class="fa fa-check-square-o" aria-hidden="true"></i></span> 2 Platforms</p></li>
+                                                        <li><p><span><i class="fa fa-check-square-o" aria-hidden="true"></i></span> 8 Posts/Monthly</p></li>
+                                                        <li><p><span><i class="fa fa-check-square-o" aria-hidden="true"></i></span> 5 Custom Images/ Month</p></li>
+                                                        <li><p><span><i class="fa fa-check-square-o" aria-hidden="true"></i></span> Dedicated Account Manager</p></li>
+                                                        <li><p><span><i class="fa fa-check-square-o" aria-hidden="true"></i></span> Social Ads Mgt (Fees Extra)</p></li>
+                                                        <li><p><span><i class="fa fa-check-square-o" aria-hidden="true"></i></span> Monthly Report</p></li> 
+                                                    </ul>
+                                                </div>
+                                            </div>
+                                        </li>
+
+
+                                        <li>
+                                            <div class="pricingList_col mostPopular">
+                                                <strong class="categoryTittleTag">Most Popular</strong>
+
+                                                <strong class="categoryTittle">Silver</strong>
+
+                                                <h3 class="priceValue">$2000 <sub>/Month</sub></h3>
+
+                                                <div class="setupFee">
+                                                    <small>Setup Fees</small>
+                                                    <strong>$1200</strong>
+                                                </div>
+
+                                                <div class="priceFeatureList">
+                                                    <ul>
+                                                        <li><p><span><i class="fa fa-check-square-o" aria-hidden="true"></i></span> 3 Platforms</p></li>
+                                                        <li><p><span><i class="fa fa-check-square-o" aria-hidden="true"></i></span> 12 Posts/Monthly</p></li>
+                                                        <li><p><span><i class="fa fa-check-square-o" aria-hidden="true"></i></span> 8 Custom Images/ Month</p></li>
+                                                        <li><p><span><i class="fa fa-check-square-o" aria-hidden="true"></i></span> Dedicated Account Manager</p></li>
+                                                        <li><p><span><i class="fa fa-check-square-o" aria-hidden="true"></i></span> Social Ads Mgt (Fees Extra)</p></li>
+                                                        <li><p><span><i class="fa fa-check-square-o" aria-hidden="true"></i></span> Monthly Reporting</p></li>  
+                                                    </ul>
+                                                </div>
+                                            </div>
+                                        </li>
+
+
+                                        <li>
+                                            <div class="pricingList_col">
+                                                <strong class="categoryTittle">Gold</strong>
+
+                                                <h3 class="priceValue">$4000 <sub>/Month</sub></h3>
+
+                                                <div class="setupFee">
+                                                    <small>Setup Fees</small>
+                                                    <strong>$1500</strong>
+                                                </div>
+
+                                                <div class="priceFeatureList">
+                                                    <ul>
+                                                        <li><p><span><i class="fa fa-check-square-o" aria-hidden="true"></i></span> 4 Platforms</p></li>
+                                                        <li><p><span><i class="fa fa-check-square-o" aria-hidden="true"></i></span> 16 Posts/Monthly</p></li>
+                                                        <li><p><span><i class="fa fa-check-square-o" aria-hidden="true"></i></span> 15 Custom Images/ Month</p></li>
+                                                        <li><p><span><i class="fa fa-check-square-o" aria-hidden="true"></i></span> Dedicated Account Manager</p></li>
+                                                        <li><p><span><i class="fa fa-check-square-o" aria-hidden="true"></i></span> Social Ads Mgt (Fees Extra)</p></li>
+                                                        <li><p><span><i class="fa fa-check-square-o" aria-hidden="true"></i></span> Monthly Reporting</p></li>  
+                                                    </ul>
+                                                </div>
+                                            </div>
+                                        </li>
+
+
+                                        <li>
+                                            <div class="pricingList_col">
+                                                <strong class="categoryTittle">Platinum</strong>
+
+                                                <h3 class="priceValue">$8000 <sub>/Month</sub></h3>
+
+                                                <div class="setupFee">
+                                                    <small>Setup Fees</small>
+                                                    <strong>$2500</strong>
+                                                </div>
+
+                                                <div class="priceFeatureList">
+                                                    <ul>
+                                                        <li><p><span><i class="fa fa-check-square-o" aria-hidden="true"></i></span> 6 Platforms</p></li>
+                                                        <li><p><span><i class="fa fa-check-square-o" aria-hidden="true"></i></span> 20 Posts/Monthly</p></li>
+                                                        <li><p><span><i class="fa fa-check-square-o" aria-hidden="true"></i></span> Dedicated Account Manager</p></li>
+                                                        <li><p><span><i class="fa fa-check-square-o" aria-hidden="true"></i></span> Social Ads Mgt (Fees Extra)</p></li>
+                                                        <li><p><span><i class="fa fa-check-square-o" aria-hidden="true"></i></span> Monthly Reporting</p></li>  
+                                                    </ul>
+                                                </div>
+                                            </div>
+                                        </li>
+
+                                        <li>
+                                            <div class="pricingList_col">
+                                                <strong class="categoryTittle">Custom</strong> 
+
+                                                <div class="setupFee">
+                                                    <small>Custom <br> Digital Marketing <br> Package</small>
+                                                </div>
+
+                                                <div class="priceFeatureList">
+                                                    <ul>
+                                                        <li><p><span><i class="fa fa-check-square-o" aria-hidden="true"></i></span> Customization as per your requirments</p></li> 
+                                                    </ul>
+                                                </div>
+                                            </div>
+                                        </li>
+                                    </ul>
+                                </div>
+
+
+                            </div>
+
+
+
+                            <!-- core tab3 -->
+                            <div class="coreTabs_data_show" id="coreTab3" >
+                                <div class="pricingList">
+                                    <ul>
+                                        <li>
+                                            <div class="pricingList_col">
+                                                <strong class="categoryTittle">Basic</strong>
+
+                                                <h3 class="priceValue">$300  <sub>/Month</sub></h3>
+
+                                                <div class="setupFee">
+                                                    <small>Setup Fees</small>
+                                                    <strong>$100</strong>
+                                                </div>
+
+                                                <div class="priceFeatureList">
+                                                    <ul>
+                                                        <li><p><span><i class="fa fa-check-square-o" aria-hidden="true"></i></span> 80 Keywords</p></li>
+                                                        <li><p><span><i class="fa fa-check-square-o" aria-hidden="true"></i></span> 1-8 Ad Groups</p></li>
+                                                        <li><p><span><i class="fa fa-check-square-o" aria-hidden="true"></i></span> Search</p></li>
+                                                        <li><p><span><i class="fa fa-check-square-o" aria-hidden="true"></i></span> Competitor & Research Analysis</p></li>
+                                                        <li><p><span><i class="fa fa-check-square-o" aria-hidden="true"></i></span> $800/month Budget</p></li>
+                                                        <li><p><span><i class="fa fa-check-square-o" aria-hidden="true"></i></span> Monthly Report</p></li> 
+                                                    </ul>
+                                                </div>
+                                            </div>
+                                        </li>
+
+
+                                        <li>
+                                            <div class="pricingList_col mostPopular">
+                                                <strong class="categoryTittleTag">Most Popular</strong>
+
+                                                <strong class="categoryTittle">Silver</strong>
+
+                                                <h3 class="priceValue">$500 <sub>/Month</sub></h3>
+
+                                                <div class="setupFee">
+                                                    <small>Setup Fees</small>
+                                                    <strong>$300</strong>
+                                                </div>
+
+                                                <div class="priceFeatureList">
+                                                    <ul>
+                                                        <li><p><span><i class="fa fa-check-square-o" aria-hidden="true"></i></span> 200 Keywords</p></li>
+                                                        <li><p><span><i class="fa fa-check-square-o" aria-hidden="true"></i></span> 10 Ad Groups</p></li>
+                                                        <li><p><span><i class="fa fa-check-square-o" aria-hidden="true"></i></span> Quarterly Display ads with banner design</p></li>
+                                                        <li><p><span><i class="fa fa-check-square-o" aria-hidden="true"></i></span> Search, Remarketing ads</p></li>
+                                                        <li><p><span><i class="fa fa-check-square-o" aria-hidden="true"></i></span> Competitor & Research Analysis</p></li>
+                                                        <li><p><span><i class="fa fa-check-square-o" aria-hidden="true"></i></span> $2800/month Budget</p></li>  
+                                                        <li><p><span><i class="fa fa-check-square-o" aria-hidden="true"></i></span> Monthly Report</p></li>  
+                                                    </ul>
+                                                </div>
+                                            </div>
+                                        </li>
+
+
+                                        <li>
+                                            <div class="pricingList_col">
+                                                <strong class="categoryTittle">Gold</strong>
+
+                                                <h3 class="priceValue">$800 <sub>/Month</sub></h3>
+
+                                                <div class="setupFee">
+                                                    <small>Setup Fees</small>
+                                                    <strong>$600</strong>
+                                                </div>
+
+                                                <div class="priceFeatureList">
+                                                    <ul>
+                                                        <li><p><span><i class="fa fa-check-square-o" aria-hidden="true"></i></span> 350 Keywords</p></li>
+                                                        <li><p><span><i class="fa fa-check-square-o" aria-hidden="true"></i></span> 25 Ad Groups</p></li>
+                                                        <li><p><span><i class="fa fa-check-square-o" aria-hidden="true"></i></span> Monthly Display ads with banner design</p></li>
+                                                        <li><p><span><i class="fa fa-check-square-o" aria-hidden="true"></i></span> Search, Video, Remarketing, & Shopping Ads</p></li>
+                                                        <li><p><span><i class="fa fa-check-square-o" aria-hidden="true"></i></span> Persona analysis</p></li>
+                                                        <li><p><span><i class="fa fa-check-square-o" aria-hidden="true"></i></span> Competitor & Research Analysis</p></li>  
+                                                        <li><p><span><i class="fa fa-check-square-o" aria-hidden="true"></i></span> $8000/month Budget</p></li>  
+                                                        <li><p><span><i class="fa fa-check-square-o" aria-hidden="true"></i></span> Monthly Report</p></li>  
+                                                    </ul>
+                                                </div>
+                                            </div>
+                                        </li>
+
+
+                                        <li>
+                                            <div class="pricingList_col">
+                                                <strong class="categoryTittle">Platinum</strong>
+
+                                                <h3 class="priceValue">15% <sub>of Mthly Ad Spend</sub></h3>
+
+                                                <div class="setupFee">
+                                                    <small>Setup Fees</small>
+                                                    <strong>$800</strong>
+                                                </div>
+
+                                                <div class="priceFeatureList">
+                                                    <ul>
+                                                        <li><p><span><i class="fa fa-check-square-o" aria-hidden="true"></i></span> 400 Keywords</p></li>
+                                                        <li><p><span><i class="fa fa-check-square-o" aria-hidden="true"></i></span> 25 Ad Groups</p></li>
+                                                        <li><p><span><i class="fa fa-check-square-o" aria-hidden="true"></i></span> Monthly Display ads with banner design</p></li>
+                                                        <li><p><span><i class="fa fa-check-square-o" aria-hidden="true"></i></span> Search, Video, Remarketing, & Shopping Ads</p></li>
+                                                        <li><p><span><i class="fa fa-check-square-o" aria-hidden="true"></i></span> Persona analysis</p></li>  
+                                                        <li><p><span><i class="fa fa-check-square-o" aria-hidden="true"></i></span> Competitor & Research Analysis</p></li>  
+                                                        <li><p><span><i class="fa fa-check-square-o" aria-hidden="true"></i></span> $8000/month Budget</p></li>  
+                                                        <li><p><span><i class="fa fa-check-square-o" aria-hidden="true"></i></span> Monthly Report</p></li>  
+                                                    </ul>
+                                                </div>
+                                            </div>
+                                        </li>
+
+                                        <li>
+                                            <div class="pricingList_col">
+                                                <strong class="categoryTittle">Custom</strong> 
+
+                                                <div class="setupFee">
+                                                    <small>Custom <br> Digital Marketing <br> Package</small>
+                                                </div>
+
+                                                <div class="priceFeatureList">
+                                                    <ul>
+                                                        <li><p><span><i class="fa fa-check-square-o" aria-hidden="true"></i></span> Customization as per your requirments</p></li> 
+                                                    </ul>
+                                                </div>
+                                            </div>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+
+
+                        </div> 
+
+
+                        
+                    </div>
+                </div>
+
+
+                <div class="consult_btn pt-3 pb-0">
+                    <a href="/hire/developer/front-end-developement/proposal-form" class="btn_default ">Request a Proposal</a>
+                </div>
+            </div>
+        </div>
+    </div>
 
 
 
@@ -911,7 +1347,6 @@
 
 
                                         </div>
-
 
                                         <input type="text" name="type" placeholder="" value="video" hidden/>
                                         <div class="contactBtn pt-3 mt-3">
