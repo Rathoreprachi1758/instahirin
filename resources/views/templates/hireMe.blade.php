@@ -22,7 +22,7 @@
                                 <b>WELCOME TO </b>
                                 Bizionic's Career page!
                             </h3>
-
+                           {{-- <h1 style="color:azure">This is the HireMe</h1> --}}
                             <p>At Bizionic, we are driven by innovation, powered by technology, and united by a passion
                                 for excellence. As a progressive technology company, we are committed to shaping the
                                 future through groundbreaking solutions and empowering our talented professionals to

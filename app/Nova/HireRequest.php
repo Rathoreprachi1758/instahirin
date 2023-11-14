@@ -14,6 +14,9 @@ use Laravel\Nova\Fields\Boolean;
 use Laravel\Nova\Fields\HasMany;
 use Laravel\Nova\Fields\BelongsTo;
 use Laravel\Nova\Http\Requests\NovaRequest;
+use Laravel\Nova\Fields\DateTime;
+use Illuminate\Support\Facades\Gate;
+use App\Policies\brandpolicy;
 
 class HireRequest extends Resource
 {
@@ -144,4 +147,15 @@ class HireRequest extends Resource
     {
         return [];
     }
+    // public static function authorizedToViewAny($request)
+    // {
+
+    //     return auth()->check() && auth()->user()->can('viewAny', brandpolicy::class);
+
+    // }
+
+    // public function authorizedToView($request)
+    // {
+    //     return $request->user()->can('view', $this);
+    // }
 }

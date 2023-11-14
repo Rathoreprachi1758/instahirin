@@ -17,18 +17,18 @@ use App\Http\Controllers\Logincontroller;
 |
 */
 
-// Route::get('sitemap.xml', function () {
-//     return response()->view('sitemap')->header('Content-Type', 'xml');
-// });
-//
 Route::get('sitemap.xml', function () {
     return response()->file('sitemap.xml');
 });
-////
 Route::get('/Sign-In',[Logincontroller::class,'index'])->name('signin');
 Route::Post('sign-up',[Logincontroller::class,'store'])->name('submit.signup');
-Route::get('/login', [LoginController::class, 'login'])->name('loginpage');
-Route::post('dashboard', [LoginController::class, 'loginpage'])->name('login');
+Route::get('/loginpage', [LoginController::class, 'login'])->name('loginpage');
+// Route::middleware(['auth.custom'])->group(function () {
+    // Your routes that require authentication go here
+    Route::post('dashboard', [LoginController::class, 'authenticate'])->name('login');
+// });
+// Route::post('dashboard', [LoginController::class, 'authenticate'])->name('login');
+Route::get('logout', [LoginController::class, 'logout']);
 
 Route::get('/{levelOneSlug?}/{levelTwoSlug?}/{levelThreeSlug?}/{levelFourSlug?}', 'App\Http\Controllers\ContentController@index')->name('index');
 
