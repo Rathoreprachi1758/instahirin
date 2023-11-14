@@ -5,6 +5,8 @@ namespace App\Providers;
 use Illuminate\Support\Facades\Gate;
 use Laravel\Nova\Nova;
 use Laravel\Nova\NovaApplicationServiceProvider;
+use App\Policies\brandpolicy;
+use App\Models\Post2;
 
 class NovaServiceProvider extends NovaApplicationServiceProvider
 {
@@ -16,6 +18,10 @@ class NovaServiceProvider extends NovaApplicationServiceProvider
     public function boot()
     {
         parent::boot();
+
+        Nova::footer(function ($request){
+            return "===========Testing=======";
+        });
     }
 
     /**
@@ -26,9 +32,9 @@ class NovaServiceProvider extends NovaApplicationServiceProvider
     protected function routes()
     {
         Nova::routes()
-                ->withAuthenticationRoutes()
-                ->withPasswordResetRoutes()
-                ->register();
+            ->withAuthenticationRoutes()
+            ->withPasswordResetRoutes()
+            ->register();
     }
 
     /**
@@ -47,6 +53,12 @@ class NovaServiceProvider extends NovaApplicationServiceProvider
                 'admin@admin.com',
             ]);
         });
+        Gate::policy(Post2::class, brandpolicy::class);
+        // Nova::gate('viewAny', brandpolicy::class.'@viewAny');
+        // Nova::gate('view', brandpolicy::class.'@view');
+        // protected $policies = [
+        //     Brand::class => BrandPolicy::class,
+        // ];
     }
 
     /**
@@ -72,12 +84,20 @@ class NovaServiceProvider extends NovaApplicationServiceProvider
             // ...
             \Outl1ne\MenuBuilder\MenuBuilder::make()
 
-            // Optional customization
-            ->title('Menus') // Define a new name for sidebar
-            ->icon('adjustments') // Customize menu icon, supports heroicons
-            ->hideMenu(false) // Hide MenuBuilder defined MenuSection.
+                // Optional customization
+                ->title('Menus') // Define a new name for sidebar
+                ->icon('adjustments') // Customize menu icon, supports heroicons
+                ->hideMenu(false) // Hide MenuBuilder defined MenuSection.
         ];
     }
+    //
+    protected function cards()
+{
+    return [
+        // other cards...
+        new \App\Nova\Card\AuthNamecard,
+    ];
+}
 
     /**
      * Register any application services.
@@ -88,4 +108,5 @@ class NovaServiceProvider extends NovaApplicationServiceProvider
     {
         //
     }
+
 }

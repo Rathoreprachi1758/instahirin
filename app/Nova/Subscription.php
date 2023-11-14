@@ -93,4 +93,17 @@ class Subscription extends Resource
     {
         return [];
     }
+
+    //
+       // public static function authorizedToViewAny($request)
+    // {
+
+    //     return auth()->check() && auth()->user()->can('viewAny', brandpolicy::class);
+
+    // }
+
+    // public function authorizedToView($request)
+    // {
+    //     return $request->user()->can('view', $this);
+    // }
 }

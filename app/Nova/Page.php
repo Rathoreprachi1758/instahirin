@@ -10,6 +10,9 @@ use Laravel\Nova\Fields\Text;
 use Laravel\Nova\Fields\Textarea;
 use Laravel\Nova\Http\Requests\NovaRequest;
 use File;
+use Laravel\Nova\Fields\DateTime;
+use Illuminate\Support\Facades\Gate;
+use App\Policies\brandpolicy;
 
 class Page extends Resource
 {
@@ -136,4 +139,27 @@ class Page extends Resource
 
        return $flatMenus;
     }
+    ///
+    // public static function authorizedToViewAny($request)
+    // {   
+    //     //return "Admin";
+    //     // $user = auth()->user();
+    //     // if($user->roles === 'admin')
+    //     // {
+    //     //     //return auth()->check() && auth()->user()->can('viewAny', brandpolicy::class);
+    //     //     return "Admin";
+    //     // }
+    //     // else{
+    //     //     return "User";
+    //     // }
+        
+    //     //  return $request->user()->can('viewAny', brandpolicy::class);
+       
+    //     // return auth()->check() && auth()->user()->can('viewAny', brandpolicy::class);
+    // }
+    
+    // public function authorizedToView($request)
+    // {
+    //     return $request->user()->can('view', $this);
+    // }
 }

@@ -45,17 +45,9 @@
     <script type="text/javascript" src="/bizionic/js/slick.js"></script>
     <script type="text/javascript" src="/bizionic/js/owl.carousel.js"></script>
     <script type="text/javascript" src="/bizionic/js/countries.js"></script>
-    {{-- <script type="text/javascript"
-        src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDY1vginH3C8j_tCqQRwIyE7awXfUQk-ck&libraries=places">
-    </script> --}}
     <script type="text/javascript"
         src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDY1vginH3C8j_tCqQRwIyE7awXfUQk-ck&libraries=places&callback=Function.prototype">
     </script>
-    {{-- <script type="text/javascript">
-        function initMap() {
-      }
-    </script> --}}
-    {{-- <script src="/resources/js/maps.js"></script> --}}
     <link rel="stylesheet" href="/bizionic/css/owl.carousel.min.css" />
     <link rel="icon" sizes="96x96" href="/bizionic/images/favicon-96x96.png">
     @vite(['resources/css/app.css', 'resources/js/app.js'])
@@ -165,8 +157,13 @@
                             <div class="trendingNav">
                                 <div class="trendingNav_links">
                                     <ul>
-                                        <li><a href="/industries/industries-we-serve/industries/startups">Startup Funding</a></li>
-                                        <li><a href="/hire/developer/front-end-developement/portfolio">Portfolio</a></li>
+                                        <li><a href="/industries/industries-we-serve/industries/startups">Startup
+                                                Funding</a></li>
+                                        <li><a href="#">Trending News</a></li>
+                                        <li><a href="/industries/industries-we-serve/industries/startups">Startup
+                                                Funding</a></li>
+                                        <li><a href="/hire/developer/front-end-developement/portfolio">Portfolio</a>
+                                        </li>
                                         <li><a href="/hire/developer/front-end-developement/blogs">Blogs</a></li>
                                     </ul>
                                 </div>
@@ -178,8 +175,9 @@
 
                                 <div class="authBtns">
                                     <ul>
-                                        <li><a href="#">Sign In</a></li>
-                                        <li><a href="#">Sign Up</a></li>
+                                        <li><a href="{{ route('signin') }}">Sign In</a>
+                                        </li>
+                                        <li><a href="{{ url('/loginpage') }}">Sign Up</a></li>
                                     </ul>
                                 </div>
                             </div>
@@ -204,7 +202,6 @@
         </header>
         <main class="main_container" id="app">
             @yield('content')
-            {{-- Hiiii --}}
         </main>
         <!-- footer -->
         <footer>
