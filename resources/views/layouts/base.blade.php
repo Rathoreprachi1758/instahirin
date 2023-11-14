@@ -160,6 +160,10 @@
                                         <li><a href="/industries/industries-we-serve/industries/startups">Startup
                                                 Funding</a></li>
                                         <li><a href="#">Trending News</a></li>
+                                        <li><a href="/industries/industries-we-serve/industries/startups">Startup
+                                                Funding</a></li>
+                                        <li><a href="/hire/developer/front-end-developement/portfolio">Portfolio</a>
+                                        </li>
                                         <li><a href="/hire/developer/front-end-developement/blogs">Blogs</a></li>
                                     </ul>
                                 </div>

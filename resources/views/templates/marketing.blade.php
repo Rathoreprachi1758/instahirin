@@ -393,7 +393,7 @@
                 </div>
 
                 <div class="seeOur">
-                    <a href="#">See Our Full Industry Solutions</a>
+                    <a href="/industries">See Our Full Industry Solutions</a>
                 </div>
             </div>
         </div>  
@@ -415,7 +415,7 @@
                     <div class="row">
                         <div class="col-lg-7 col-md-7 aos-init aos-animate" data-aos="fade-right" data-aos-duration="1400" data-aos-easing="ease-in">
                             <div class="ourStory_section_fl">
-                                <a href="#" class="btn_default">Play</a>
+                                <a href="https://www.youtube.com/@BizionicTechnologies" target="_blank" class="btn_default">Play</a>
                                 <h4>Bizionic, Startups to Unicorn's Lab</h4>
                                 <p>Bizionic Technologies and Marketing Solution (Bizionic) is the most advanced digitech,
                                     technology and marketing agency based in Hyderabad, India; the city is among the global centers of Information Technology (IT) in the world. Bizionic provides expert technology-driven marketing solutions focusing on providing brands with the desired ROI and reinventing the path to achieve strategic objectives. Bizionic transforms companies through enhanced
@@ -453,43 +453,443 @@
 
 
 
+     <!-- our story section  -->
 
-     <!-- our work section  -->
+     <div class="pricing_section bg_fff">
+        <div class="auto_container">
+            <div class="pricing_section_detail">
+                <div class="custom_tittle aos-init aos-animate" data-aos="fade-up" data-aos-duration="800" data-aos-easing="ease">
+                    <h2 class="pb-2">Plans &<strong> Pricing</strong></h2>
+                    <p class="p_color">Let us make you brand stand out!</p>
+                </div>
 
-     <div class="at_bizionic_section portfolioSection"> 
-        <div class="at_bizionic_section_detail">
 
-            <div class="portfolioAvatar aos-init aos-animate" data-aos="fade-up" data-aos-duration="600" data-aos-easing="ease-in">
-                <span><img src="/bizionic/images/portfolio_avatar.png" alt="#" /></span>
-            </div>
 
-            <div class="custom_tittle  aos-init aos-animate"   data-aos="fade-up" data-aos-duration="800" data-aos-easing="ease">
-                <p class="p_color">Portfolio</p>
-                <h2><strong>Our</strong> Work</h2>
-            </div>
+                <!-- section core 2 -->
 
-            <div class="at_bizionic_steps">
-                <div class="row">
-                    <div class="col-lg-4 col-md-4 p-0  aos-init aos-animate"   data-aos="flip-left" data-aos-duration="2000" data-aos-easing="ease-out-cubic">
-                        <div class="at_bizionicSteps_col">
-                            <span><img src="/bizionic/images/portfolio_img1.jpg" alt="#" /></span>
+                <div class="coreServices_section"> 
+
+                    <div class="coreServices_sectionDetail">
+                        <div class="coreTabs">
+                            <ul>
+                                <li><a href="#coreTab1">SEO Packages & Pricing</a> </li>
+                                <li><a href="#coreTab2">Social Media Marketing Packages & Pricing</a></li>
+                                <li><a href="#coreTab3">Pay Per Click Packages & Pricing</a></li> 
+                            </ul>
                         </div>
-                    </div>
-                    <div class="col-lg-4 col-md-4 p-0 aos-init aos-animate"  data-aos="flip-left" data-aos-duration="2000" data-aos-easing="ease-out-cubic">
-                        <div class="at_bizionicSteps_col">
-                            <span><img src="/bizionic/images/portfolio_img2.jpg" alt="#" /></span>
-                        </div>
-                    </div>
-                    <div class="col-lg-4 col-md-4 p-0 aos-init aos-animate"  data-aos="flip-left" data-aos-duration="2000" data-aos-easing="ease-out-cubic">
-                        <div class="at_bizionicSteps_col">
-                            <span><img src="/bizionic/images/portfolio_img3.jpg" alt="#" /></span>
-                        </div>
+
+
+                        <div class="coreTabs_data">
+
+                            <!-- core tab1 -->
+                            <div class="coreTabs_data_show" id="coreTab1"   style="display:block">
+                            
+                                <div class="pricingList">
+                                    <ul>
+                                        <li>
+                                            <div class="pricingList_col">
+                                                <strong class="categoryTittle">Basic</strong>
+
+                                                <h3 class="priceValue">$595 <sub>/Month</sub></h3>
+
+                                                <div class="setupFee">
+                                                    <small>Setup Fees</small>
+                                                    <strong>$400</strong>
+                                                </div>
+
+                                                <div class="priceFeatureList">
+                                                    <ul>
+                                                        <li><p><span><i class="fa fa-check-square-o" aria-hidden="true"></i></span> 20 Keyword Research</p></li>
+                                                        <li><p><span><i class="fa fa-check-square-o" aria-hidden="true"></i></span> Website Analysis & Opportunity</p></li>
+                                                        <li><p><span><i class="fa fa-check-square-o" aria-hidden="true"></i></span> Report</p></li>
+                                                        <li><p><span><i class="fa fa-check-square-o" aria-hidden="true"></i></span> SEO Strategy</p></li>
+                                                        <li><p><span><i class="fa fa-check-square-o" aria-hidden="true"></i></span> On-Page SEO</p></li>
+                                                        <li><p><span><i class="fa fa-check-square-o" aria-hidden="true"></i></span> Monthly Report</p></li> 
+                                                    </ul>
+                                                </div>
+                                            </div>
+                                        </li>
+
+
+                                        <li>
+                                            <div class="pricingList_col mostPopular">
+                                                <strong class="categoryTittleTag">Most Popular</strong>
+
+                                                <strong class="categoryTittle">Silver</strong>
+
+                                                <h3 class="priceValue">$1200 <sub>/Month</sub></h3>
+
+                                                <div class="setupFee">
+                                                    <small>Setup Fees</small>
+                                                    <strong>$400</strong>
+                                                </div>
+
+                                                <div class="priceFeatureList">
+                                                    <ul>
+                                                        <li><p><span><i class="fa fa-check-square-o" aria-hidden="true"></i></span> 30 Keyword Research</p></li>
+                                                        <li><p><span><i class="fa fa-check-square-o" aria-hidden="true"></i></span> Website Analysis & Opportunity</p></li>
+                                                        <li><p><span><i class="fa fa-check-square-o" aria-hidden="true"></i></span> Report</p></li>
+                                                        <li><p><span><i class="fa fa-check-square-o" aria-hidden="true"></i></span> SEO Strategy</p></li>
+                                                        <li><p><span><i class="fa fa-check-square-o" aria-hidden="true"></i></span> 1 Blog/month</p></li>
+                                                        <li><p><span><i class="fa fa-check-square-o" aria-hidden="true"></i></span> On-Page SEO</p></li> 
+                                                        <li><p><span><i class="fa fa-check-square-o" aria-hidden="true"></i></span> Off-Page SEO</p></li> 
+                                                        <li><p><span><i class="fa fa-check-square-o" aria-hidden="true"></i></span> Monthly Report</p></li>  
+                                                    </ul>
+                                                </div>
+                                            </div>
+                                        </li>
+
+
+                                        <li>
+                                            <div class="pricingList_col">
+                                                <strong class="categoryTittle">Gold</strong>
+
+                                                <h3 class="priceValue">$2200 <sub>/Month</sub></h3>
+
+                                                <div class="setupFee">
+                                                    <small>Setup Fees</small>
+                                                    <strong>$700</strong>
+                                                </div>
+
+                                                <div class="priceFeatureList">
+                                                    <ul>
+                                                        <li><p><span><i class="fa fa-check-square-o" aria-hidden="true"></i></span> 60 Keyword Research</p></li>
+                                                        <li><p><span><i class="fa fa-check-square-o" aria-hidden="true"></i></span> Website Analysis & Opportunity</p></li>
+                                                        <li><p><span><i class="fa fa-check-square-o" aria-hidden="true"></i></span> Report</p></li>
+                                                        <li><p><span><i class="fa fa-check-square-o" aria-hidden="true"></i></span> SEO Strategy</p></li>
+                                                        <li><p><span><i class="fa fa-check-square-o" aria-hidden="true"></i></span> 2 Blog/month</p></li>
+                                                        <li><p><span><i class="fa fa-check-square-o" aria-hidden="true"></i></span> Persona analysis</p></li>
+                                                        <li><p><span><i class="fa fa-check-square-o" aria-hidden="true"></i></span> On-Page SEO</p></li> 
+                                                        <li><p><span><i class="fa fa-check-square-o" aria-hidden="true"></i></span> Off-Page SEO</p></li> 
+                                                        <li><p><span><i class="fa fa-check-square-o" aria-hidden="true"></i></span> Monthly Report Meeting</p></li>  
+                                                    </ul>
+                                                </div>
+                                            </div>
+                                        </li>
+
+
+                                        <li>
+                                            <div class="pricingList_col">
+                                                <strong class="categoryTittle">Platinum</strong>
+
+                                                <h3 class="priceValue">$5000 <sub>/Month</sub></h3>
+
+                                                <div class="setupFee">
+                                                    <small>Setup Fees</small>
+                                                    <strong>$9000</strong>
+                                                </div>
+
+                                                <div class="priceFeatureList">
+                                                    <ul>
+                                                        <li><p><span><i class="fa fa-check-square-o" aria-hidden="true"></i></span> 100 Keyword Research</p></li>
+                                                        <li><p><span><i class="fa fa-check-square-o" aria-hidden="true"></i></span> Website Analysis & Opportunity</p></li>
+                                                        <li><p><span><i class="fa fa-check-square-o" aria-hidden="true"></i></span> Report</p></li>
+                                                        <li><p><span><i class="fa fa-check-square-o" aria-hidden="true"></i></span> SEO Strategy</p></li>
+                                                        <li><p><span><i class="fa fa-check-square-o" aria-hidden="true"></i></span> 3 Blog/month</p></li>
+                                                        <li><p><span><i class="fa fa-check-square-o" aria-hidden="true"></i></span> Persona analysis</p></li>
+                                                        <li><p><span><i class="fa fa-check-square-o" aria-hidden="true"></i></span> On-Page SEO</p></li> 
+                                                        <li><p><span><i class="fa fa-check-square-o" aria-hidden="true"></i></span> Off-Page SEO</p></li> 
+                                                        <li><p><span><i class="fa fa-check-square-o" aria-hidden="true"></i></span> Monthly Report Meeting</p></li>  
+                                                    </ul>
+                                                </div>
+                                            </div>
+                                        </li>
+
+                                        <li>
+                                            <div class="pricingList_col">
+                                                <strong class="categoryTittle">Custom</strong> 
+
+                                                <div class="setupFee">
+                                                    <small>Custom <br> Digital Marketing <br> Package</small>
+                                                </div>
+
+                                                <div class="priceFeatureList">
+                                                    <ul>
+                                                        <li><p><span><i class="fa fa-check-square-o" aria-hidden="true"></i></span> Customization as per your requirments</p></li> 
+                                                    </ul>
+                                                </div>
+                                            </div>
+                                        </li>
+                                    </ul>
+                                </div>
+                            
+                            </div>
+
+
+
+                            <!-- core tab2 -->
+                            <div class="coreTabs_data_show" id="coreTab2">
+                                
+                                <div class="pricingList">
+                                    <ul>
+                                        <li>
+                                            <div class="pricingList_col">
+                                                <strong class="categoryTittle">Basic</strong>
+
+                                                <h3 class="priceValue">$1,000  <sub>/Month</sub></h3>
+
+                                                <div class="setupFee">
+                                                    <small>Setup Fees</small>
+                                                    <strong>$800</strong>
+                                                </div>
+
+                                                <div class="priceFeatureList">
+                                                    <ul>
+                                                        <li><p><span><i class="fa fa-check-square-o" aria-hidden="true"></i></span> 2 Platforms</p></li>
+                                                        <li><p><span><i class="fa fa-check-square-o" aria-hidden="true"></i></span> 8 Posts/Monthly</p></li>
+                                                        <li><p><span><i class="fa fa-check-square-o" aria-hidden="true"></i></span> 5 Custom Images/ Month</p></li>
+                                                        <li><p><span><i class="fa fa-check-square-o" aria-hidden="true"></i></span> Dedicated Account Manager</p></li>
+                                                        <li><p><span><i class="fa fa-check-square-o" aria-hidden="true"></i></span> Social Ads Mgt (Fees Extra)</p></li>
+                                                        <li><p><span><i class="fa fa-check-square-o" aria-hidden="true"></i></span> Monthly Report</p></li> 
+                                                    </ul>
+                                                </div>
+                                            </div>
+                                        </li>
+
+
+                                        <li>
+                                            <div class="pricingList_col mostPopular">
+                                                <strong class="categoryTittleTag">Most Popular</strong>
+
+                                                <strong class="categoryTittle">Silver</strong>
+
+                                                <h3 class="priceValue">$2000 <sub>/Month</sub></h3>
+
+                                                <div class="setupFee">
+                                                    <small>Setup Fees</small>
+                                                    <strong>$1200</strong>
+                                                </div>
+
+                                                <div class="priceFeatureList">
+                                                    <ul>
+                                                        <li><p><span><i class="fa fa-check-square-o" aria-hidden="true"></i></span> 3 Platforms</p></li>
+                                                        <li><p><span><i class="fa fa-check-square-o" aria-hidden="true"></i></span> 12 Posts/Monthly</p></li>
+                                                        <li><p><span><i class="fa fa-check-square-o" aria-hidden="true"></i></span> 8 Custom Images/ Month</p></li>
+                                                        <li><p><span><i class="fa fa-check-square-o" aria-hidden="true"></i></span> Dedicated Account Manager</p></li>
+                                                        <li><p><span><i class="fa fa-check-square-o" aria-hidden="true"></i></span> Social Ads Mgt (Fees Extra)</p></li>
+                                                        <li><p><span><i class="fa fa-check-square-o" aria-hidden="true"></i></span> Monthly Reporting</p></li>  
+                                                    </ul>
+                                                </div>
+                                            </div>
+                                        </li>
+
+
+                                        <li>
+                                            <div class="pricingList_col">
+                                                <strong class="categoryTittle">Gold</strong>
+
+                                                <h3 class="priceValue">$4000 <sub>/Month</sub></h3>
+
+                                                <div class="setupFee">
+                                                    <small>Setup Fees</small>
+                                                    <strong>$1500</strong>
+                                                </div>
+
+                                                <div class="priceFeatureList">
+                                                    <ul>
+                                                        <li><p><span><i class="fa fa-check-square-o" aria-hidden="true"></i></span> 4 Platforms</p></li>
+                                                        <li><p><span><i class="fa fa-check-square-o" aria-hidden="true"></i></span> 16 Posts/Monthly</p></li>
+                                                        <li><p><span><i class="fa fa-check-square-o" aria-hidden="true"></i></span> 15 Custom Images/ Month</p></li>
+                                                        <li><p><span><i class="fa fa-check-square-o" aria-hidden="true"></i></span> Dedicated Account Manager</p></li>
+                                                        <li><p><span><i class="fa fa-check-square-o" aria-hidden="true"></i></span> Social Ads Mgt (Fees Extra)</p></li>
+                                                        <li><p><span><i class="fa fa-check-square-o" aria-hidden="true"></i></span> Monthly Reporting</p></li>  
+                                                    </ul>
+                                                </div>
+                                            </div>
+                                        </li>
+
+
+                                        <li>
+                                            <div class="pricingList_col">
+                                                <strong class="categoryTittle">Platinum</strong>
+
+                                                <h3 class="priceValue">$8000 <sub>/Month</sub></h3>
+
+                                                <div class="setupFee">
+                                                    <small>Setup Fees</small>
+                                                    <strong>$2500</strong>
+                                                </div>
+
+                                                <div class="priceFeatureList">
+                                                    <ul>
+                                                        <li><p><span><i class="fa fa-check-square-o" aria-hidden="true"></i></span> 6 Platforms</p></li>
+                                                        <li><p><span><i class="fa fa-check-square-o" aria-hidden="true"></i></span> 20 Posts/Monthly</p></li>
+                                                        <li><p><span><i class="fa fa-check-square-o" aria-hidden="true"></i></span> Dedicated Account Manager</p></li>
+                                                        <li><p><span><i class="fa fa-check-square-o" aria-hidden="true"></i></span> Social Ads Mgt (Fees Extra)</p></li>
+                                                        <li><p><span><i class="fa fa-check-square-o" aria-hidden="true"></i></span> Monthly Reporting</p></li>  
+                                                    </ul>
+                                                </div>
+                                            </div>
+                                        </li>
+
+                                        <li>
+                                            <div class="pricingList_col">
+                                                <strong class="categoryTittle">Custom</strong> 
+
+                                                <div class="setupFee">
+                                                    <small>Custom <br> Digital Marketing <br> Package</small>
+                                                </div>
+
+                                                <div class="priceFeatureList">
+                                                    <ul>
+                                                        <li><p><span><i class="fa fa-check-square-o" aria-hidden="true"></i></span> Customization as per your requirments</p></li> 
+                                                    </ul>
+                                                </div>
+                                            </div>
+                                        </li>
+                                    </ul>
+                                </div>
+
+
+                            </div>
+
+
+
+                            <!-- core tab3 -->
+                            <div class="coreTabs_data_show" id="coreTab3" >
+                                <div class="pricingList">
+                                    <ul>
+                                        <li>
+                                            <div class="pricingList_col">
+                                                <strong class="categoryTittle">Basic</strong>
+
+                                                <h3 class="priceValue">$300  <sub>/Month</sub></h3>
+
+                                                <div class="setupFee">
+                                                    <small>Setup Fees</small>
+                                                    <strong>$100</strong>
+                                                </div>
+
+                                                <div class="priceFeatureList">
+                                                    <ul>
+                                                        <li><p><span><i class="fa fa-check-square-o" aria-hidden="true"></i></span> 80 Keywords</p></li>
+                                                        <li><p><span><i class="fa fa-check-square-o" aria-hidden="true"></i></span> 1-8 Ad Groups</p></li>
+                                                        <li><p><span><i class="fa fa-check-square-o" aria-hidden="true"></i></span> Search</p></li>
+                                                        <li><p><span><i class="fa fa-check-square-o" aria-hidden="true"></i></span> Competitor & Research Analysis</p></li>
+                                                        <li><p><span><i class="fa fa-check-square-o" aria-hidden="true"></i></span> $800/month Budget</p></li>
+                                                        <li><p><span><i class="fa fa-check-square-o" aria-hidden="true"></i></span> Monthly Report</p></li> 
+                                                    </ul>
+                                                </div>
+                                            </div>
+                                        </li>
+
+
+                                        <li>
+                                            <div class="pricingList_col mostPopular">
+                                                <strong class="categoryTittleTag">Most Popular</strong>
+
+                                                <strong class="categoryTittle">Silver</strong>
+
+                                                <h3 class="priceValue">$500 <sub>/Month</sub></h3>
+
+                                                <div class="setupFee">
+                                                    <small>Setup Fees</small>
+                                                    <strong>$300</strong>
+                                                </div>
+
+                                                <div class="priceFeatureList">
+                                                    <ul>
+                                                        <li><p><span><i class="fa fa-check-square-o" aria-hidden="true"></i></span> 200 Keywords</p></li>
+                                                        <li><p><span><i class="fa fa-check-square-o" aria-hidden="true"></i></span> 10 Ad Groups</p></li>
+                                                        <li><p><span><i class="fa fa-check-square-o" aria-hidden="true"></i></span> Quarterly Display ads with banner design</p></li>
+                                                        <li><p><span><i class="fa fa-check-square-o" aria-hidden="true"></i></span> Search, Remarketing ads</p></li>
+                                                        <li><p><span><i class="fa fa-check-square-o" aria-hidden="true"></i></span> Competitor & Research Analysis</p></li>
+                                                        <li><p><span><i class="fa fa-check-square-o" aria-hidden="true"></i></span> $2800/month Budget</p></li>  
+                                                        <li><p><span><i class="fa fa-check-square-o" aria-hidden="true"></i></span> Monthly Report</p></li>  
+                                                    </ul>
+                                                </div>
+                                            </div>
+                                        </li>
+
+
+                                        <li>
+                                            <div class="pricingList_col">
+                                                <strong class="categoryTittle">Gold</strong>
+
+                                                <h3 class="priceValue">$800 <sub>/Month</sub></h3>
+
+                                                <div class="setupFee">
+                                                    <small>Setup Fees</small>
+                                                    <strong>$600</strong>
+                                                </div>
+
+                                                <div class="priceFeatureList">
+                                                    <ul>
+                                                        <li><p><span><i class="fa fa-check-square-o" aria-hidden="true"></i></span> 350 Keywords</p></li>
+                                                        <li><p><span><i class="fa fa-check-square-o" aria-hidden="true"></i></span> 25 Ad Groups</p></li>
+                                                        <li><p><span><i class="fa fa-check-square-o" aria-hidden="true"></i></span> Monthly Display ads with banner design</p></li>
+                                                        <li><p><span><i class="fa fa-check-square-o" aria-hidden="true"></i></span> Search, Video, Remarketing, & Shopping Ads</p></li>
+                                                        <li><p><span><i class="fa fa-check-square-o" aria-hidden="true"></i></span> Persona analysis</p></li>
+                                                        <li><p><span><i class="fa fa-check-square-o" aria-hidden="true"></i></span> Competitor & Research Analysis</p></li>  
+                                                        <li><p><span><i class="fa fa-check-square-o" aria-hidden="true"></i></span> $8000/month Budget</p></li>  
+                                                        <li><p><span><i class="fa fa-check-square-o" aria-hidden="true"></i></span> Monthly Report</p></li>  
+                                                    </ul>
+                                                </div>
+                                            </div>
+                                        </li>
+
+
+                                        <li>
+                                            <div class="pricingList_col">
+                                                <strong class="categoryTittle">Platinum</strong>
+
+                                                <h3 class="priceValue">15% <sub>of Mthly Ad Spend</sub></h3>
+
+                                                <div class="setupFee">
+                                                    <small>Setup Fees</small>
+                                                    <strong>$800</strong>
+                                                </div>
+
+                                                <div class="priceFeatureList">
+                                                    <ul>
+                                                        <li><p><span><i class="fa fa-check-square-o" aria-hidden="true"></i></span> 400 Keywords</p></li>
+                                                        <li><p><span><i class="fa fa-check-square-o" aria-hidden="true"></i></span> 25 Ad Groups</p></li>
+                                                        <li><p><span><i class="fa fa-check-square-o" aria-hidden="true"></i></span> Monthly Display ads with banner design</p></li>
+                                                        <li><p><span><i class="fa fa-check-square-o" aria-hidden="true"></i></span> Search, Video, Remarketing, & Shopping Ads</p></li>
+                                                        <li><p><span><i class="fa fa-check-square-o" aria-hidden="true"></i></span> Persona analysis</p></li>  
+                                                        <li><p><span><i class="fa fa-check-square-o" aria-hidden="true"></i></span> Competitor & Research Analysis</p></li>  
+                                                        <li><p><span><i class="fa fa-check-square-o" aria-hidden="true"></i></span> $8000/month Budget</p></li>  
+                                                        <li><p><span><i class="fa fa-check-square-o" aria-hidden="true"></i></span> Monthly Report</p></li>  
+                                                    </ul>
+                                                </div>
+                                            </div>
+                                        </li>
+
+                                        <li>
+                                            <div class="pricingList_col">
+                                                <strong class="categoryTittle">Custom</strong> 
+
+                                                <div class="setupFee">
+                                                    <small>Custom <br> Digital Marketing <br> Package</small>
+                                                </div>
+
+                                                <div class="priceFeatureList">
+                                                    <ul>
+                                                        <li><p><span><i class="fa fa-check-square-o" aria-hidden="true"></i></span> Customization as per your requirments</p></li> 
+                                                    </ul>
+                                                </div>
+                                            </div>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+
+
+                        </div> 
+
+
+                        
                     </div>
                 </div>
-            </div>
 
-        </div> 
+
+                <div class="consult_btn pt-3 pb-0">
+                    <a href="/hire/developer/front-end-developement/proposal-form" class="btn_default ">Request a Proposal</a>
+                </div>
+            </div>
+        </div>
     </div>
+
 
 
 
@@ -552,7 +952,7 @@
                                 <strong>Find the latest insights <br>
                                     in our blog </strong>
                                 <b class="spratorLine"></b>
-                                <a href="#">See Articles</a>
+                                <a href="/hire/developer/front-end-developement/blogs">See Articles</a>
                             </div>
                         </div>
                     </div>
@@ -649,80 +1049,7 @@
 
 
 
-     <!-- togather avatar section  -->
-
-     
-        <div class="latestBlog_section">
-            <div class="auto_container">
-                <div class="latestBlog_section_detail">
-                    <div class="custom_tittle " >
-                        <h2 class="text-white"><strong>Our</strong> Latest Blogs</h2>
-                    </div>
-
-                    <div class="blog_avatar aos-init aos-animate" >
-                        <span><img src="/bizionic/images/blogAvatar.png" alt="#" /></span>
-                    </div>
-
-
-
-                    <div class="blog_column aos-init aos-animate" >
-                        <div class="row">
-                            <div class="col-lg-4 col-md-4">
-                                <div class="blog_column_info">
-                                    <span><img src="/bizionic/images/blog_img1.png" alt="#" /></span>
-
-                                    <h5>5 ways to stir up your lead generation
-                                        through social media.</h5>
-
-                                        <div class="social_info">
-                                            <a href="https://www.facebook.com/Bizionictechnologies" target="_blank" class="s_fb"><i class="fa fa-facebook" aria-hidden="true"></i></a>
-                                            <a href="https://twitter.com/bizionictech" target="_blank" class="s_tw"><i class="fa fa-twitter" aria-hidden="true"></i></a>
-                                            <a href="https://www.linkedin.com/company/bizionic-technologies-and-marketing-solutions/" target="_blank" class="s_link"><i class="fa fa-linkedin" aria-hidden="true"></i></a> 
-                                            <a href="mailto:info@bizionictech.com" class="s_inst"><i class="fa fa-envelope" aria-hidden="true"></i></a> 
-                                            
-                                        </div>
-                                </div>
-                            </div>
-
-                            <div class="col-lg-4 col-md-4">
-                                <div class="blog_column_info">
-                                    <span><img src="/bizionic/images/blog_img2.png" alt="#" /></span>
-
-                                    <h5>What is digital marketing? Here is a look
-                                        into who, what and why of hiring the rig..</h5>
-
-                                        <div class="social_info">
-                                            <a href="https://www.facebook.com/Bizionictechnologies" target="_blank" class="s_fb"><i class="fa fa-facebook" aria-hidden="true"></i></a>
-                                            <a href="https://twitter.com/bizionictech" target="_blank" class="s_tw"><i class="fa fa-twitter" aria-hidden="true"></i></a>
-                                            <a href="https://www.linkedin.com/company/bizionic-technologies-and-marketing-solutions/" target="_blank" class="s_link"><i class="fa fa-linkedin" aria-hidden="true"></i></a> 
-                                            <a href="mailto:info@bizionictech.com" class="s_inst"><i class="fa fa-envelope" aria-hidden="true"></i></a> 
-                                            
-                                        </div>
-                                </div>
-                            </div>
-
-                            <div class="col-lg-4 col-md-4">
-                                <div class="blog_column_info">
-                                    <span><img src="/bizionic/images/blog_img3.png" alt="#" /></span>
-
-                                    <h5>What is SEO and how to hire the right
-                                        SEO agency for your business? Here is... </h5>
-
-                                        <div class="social_info">
-                                            <a href="https://www.facebook.com/Bizionictechnologies" target="_blank" class="s_fb"><i class="fa fa-facebook" aria-hidden="true"></i></a>
-                                            <a href="https://twitter.com/bizionictech" target="_blank" class="s_tw"><i class="fa fa-twitter" aria-hidden="true"></i></a>
-                                            <a href="https://www.linkedin.com/company/bizionic-technologies-and-marketing-solutions/" target="_blank" class="s_link"><i class="fa fa-linkedin" aria-hidden="true"></i></a> 
-                                            <a href="mailto:info@bizionictech.com" class="s_inst"><i class="fa fa-envelope" aria-hidden="true"></i></a> 
-                                            
-                                        </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div> 
-
+    
 
 
 
@@ -734,3 +1061,306 @@
 
 
      @include('partials.services') 
+
+
+
+
+
+      <!-- get in touch section  -->
+
+    <div class="get_in_touchSection">
+        <div class="auto_container">
+            <div class="get_in_touchSection_detail text-center align-center justify-content-center ">
+                <div class="custom_tittle">
+                    <h2 class="p-0"><strong>Need Assistance?</strong> Get in touch</h2>
+                </div>
+                
+                <div class="row text-center align-center justify-content-center text-primary mt-4 pt-4">
+
+                    <div class="col-lg-3 col-md-6 pt-4 pb-4  colSet">
+                        <!-- <a href="https://chat.whatsapp.com/9059360184"> -->
+                        <a href="https://api.whatsapp.com/send?phone=919059360184" target="_blank">
+                            <i class="pt-3 fa fa-whatsapp fa-3x" aria-hidden="true"></i><br>
+                            <p class="mt-4 h5">Whats app</p>
+                            <!-- <a href="https://api.whatsapp.com/send?phone=916302464538">Send Message</a> -->
+                        </a>
+                    </div>
+
+                    <div class="vr"></div>
+                    <div class="col-lg-3 col-md-6  pt-4 pb-4 colSet" id="showPopup" data-toggle="modal" data-target="#callModal">
+
+                        <i class="pt-3 fa fa-phone fa-3x"></i>
+                        <p class="mt-4 h5 cursor-pointer">Call</p>
+
+                    </div>
+                    <div class="vr"></div>
+
+                    <div class="col-lg-3 col-md-6  pt-4 pb-4  colSet" data-toggle="modal" data-target="#videoCallModal">
+
+                        <i class="pt-3 fa fa-video-camera fa-3x" aria-hidden="true"></i>
+                        <p class="mt-4 h5 cursor-pointer">Video Call</p>
+
+                    </div>
+
+                    <div class="vr"></div>
+                    <div class="col-lg-3 col-md-6  pt-4 pb-4  colSet">
+                        <a href="mailto:services@eshare.ai">
+                            <i class="pt-3 fa fa-envelope-o fa-3x" aria-hidden="true"></i>
+                            <p class="mt-4 h5">Email</p>
+                        </a>
+                    </div>
+
+
+                </div>
+
+            </div>
+        </div>
+
+
+        
+ 
+
+                <!-- Call Modal -->
+                <div class="modal fade" id="callModal" tabindex="-1" role="dialog" aria-labelledby="callModalLabel"
+                    aria-hidden="true">
+                    <div class="modal-dialog" role="document">
+                        <div class="modal-content">
+
+                            <div class="modal-body">
+                                <div class=" p-2">
+                                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                        <span aria-hidden="true">&times;</span>
+                                    </button>
+                                    <h3 class="modal-title " id="callModalLabel">Request a Call Back</h3>
+                                    <form id="contactForm" action="contact-form" method="post">
+                                    <div class="contactUs_info_form p-0">
+                                        <div class="row">
+
+
+                                            <div class="col-lg-6">
+                                                <div class="contactUs_info_field">
+                                                    <strong>Full Name<sup class="text-danger">*</sup></strong>
+                                                    <div class="contactUs_info_fieldInput">
+                                                        <input type="text" name="full_name" placeholder="" value="" />
+                                                    </div>
+                                                </div>
+                                            </div>
+
+                                            <div class="col-lg-6">
+                                                <div class="contactUs_info_field">
+                                                    <strong>Company Name</strong>
+                                                    <div class="contactUs_info_fieldInput">
+                                                        <input type="text" name="company_name" placeholder="" value="" />
+                                                    </div>
+                                                </div>
+                                            </div>
+
+
+                                            <div class="col-lg-6">
+                                                <div class="contactUs_info_field">
+                                                    <strong>Email<sup class="text-danger">*</sup></strong>
+                                                    <div class="contactUs_info_fieldInput">
+                                                        <input type="text" name="email" placeholder="" value="" />
+                                                    </div>
+                                                </div>
+                                            </div>
+
+                                            <div class="col-lg-6">
+                                                <div class="contactUs_info_field">
+                                                    <strong>Country Name<sup class="text-danger">*</sup></strong>
+                                                    <div class="contactUs_info_fieldSelect">
+                                                        <select class="form-control" name="country_name" id="countrySelect"
+                                                            placeholder="Search or select a country">
+                                                            <!-- Options will be dynamically populated using JavaScript -->
+                                                        </select>
+                                                    </div>
+
+                                                </div>
+                                            </div>
+
+                                            <div class="col-lg-6" hidden>
+                                                <div class="contactUs_info_field">
+                                                    <strong>Country code<sup class="text-danger">*</sup></strong>
+                                                    <div class="contactUs_info_fieldSelect">
+                                                        <select class="form-control" name="country_code" id="countryCodeSelect"
+                                                            placeholder="Search or select a mobile code">
+                                                            <!-- Options will be dynamically populated using JavaScript -->
+                                                        </select>
+                                                    </div>
+                                                </div>
+                                            </div>
+
+
+                                            <div class="col-lg-6">
+                                                <div class="contactUs_info_field">
+                                                    <strong>Mobile code<sup class="text-danger">*</sup></strong>
+                                                    <div class="contactUs_info_fieldSelect">
+                                                        <select class="form-control" name="mobile_code" id="mobileCodeSelect"
+                                                            placeholder="Search or select a mobile code">
+                                                            <!-- Options will be dynamically populated using JavaScript -->
+                                                        </select>
+                                                    </div>
+                                                </div>
+                                            </div>
+
+
+                                            <div class="col-lg-6">
+                                                <div class="contactUs_info_field">
+                                                    <strong>Contact Number<sup class="text-danger">*</sup></strong>
+                                                    <div class="contactUs_info_fieldInput">
+                                                        <input type="text" name="contact_number" placeholder="" value="" />
+                                                    </div>
+                                                </div>
+                                            </div>
+
+
+                                        </div>
+                                        <input type="time" id="time" name="time" value="" hidden/>
+                                        <input type="date" name="date" value="" hidden/>
+                                        <input type="text" name="type" placeholder="" value="call" hidden/>
+                                        <div class="contactBtn pt-3  mt-3">
+                                            <input type="submit" value="Submit"
+                                                class="btn_default d-block w-100" />
+                                        </div>
+                                    </div>
+                                    </form>
+                                    
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+
+                <!-- Video Call Modal -->
+                <div class="modal fade" id="videoCallModal" tabindex="-1" role="dialog"
+                    aria-labelledby="videoCallModalLabel" aria-hidden="true">
+                    <div class="modal-dialog" role="document">
+                        <div class="modal-content">
+
+                            <div class="modal-body">
+                                <div class=" p-2">
+                                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                        <span aria-hidden="true">&times;</span>
+                                    </button>
+                                    <h3 class="modal-title " id="callModalLabel">Book a Video Call</h3>
+                                    <form id="contactForm" action="contact-form" method="post">
+                                    <div class="contactUs_info_form p-0">
+                                        <div class="row">
+                                            <div class="col-lg-6">
+                                                <div class="contactUs_info_field">
+                                                    <strong>Full Name<sup class="text-danger">*</sup></strong>
+                                                    <div class="contactUs_info_fieldInput">
+                                                        <input type="text" name="full_name" placeholder="" value="" />
+                                                    </div>
+                                                </div>
+                                            </div>
+
+
+                                            <div class="col-lg-6">
+                                                <div class="contactUs_info_field">
+                                                    <strong>Company Name</strong>
+                                                    <div class="contactUs_info_fieldInput">
+                                                        <input type="text" name="company_name" placeholder="" value="" />
+                                                    </div>
+                                                </div>
+                                            </div>
+
+
+                                            <div class="col-lg-6">
+                                                <div class="contactUs_info_field">
+                                                    <strong>Country Name<sup class="text-danger">*</sup></strong>
+                                                    <div class="contactUs_info_fieldSelect">
+                                                        <select class="form-control" name="country_name" id="videoCountrySelect"
+                                                            placeholder="Search or select a country">
+                                                            <!-- Options will be dynamically populated using JavaScript -->
+                                                        </select>
+                                                    </div>
+
+                                                </div>
+                                            </div>
+
+                                            <div class="col-lg-6" hidden>
+                                                <div class="contactUs_info_field">
+                                                    <strong>Country code<sup class="text-danger">*</sup></strong>
+                                                    <div class="contactUs_info_fieldSelect">
+                                                        <select class="form-control" name="country_code" id="videoCountryCodeSelect"
+                                                            placeholder="Search or select a mobile code">
+                                                            <!-- Options will be dynamically populated using JavaScript -->
+                                                        </select>
+                                                    </div>
+                                                </div>
+                                            </div>
+
+
+                                            <div class="col-lg-6">
+                                                <div class="contactUs_info_field">
+                                                    <strong>Mobile code<sup class="text-danger">*</sup></strong>
+                                                    <div class="contactUs_info_fieldSelect">
+                                                        <select class="form-control" name="mobile_code" id="videoMobileCodeSelect"
+                                                            placeholder="Search or select a mobile code">
+                                                            <!-- Options will be dynamically populated using JavaScript -->
+                                                        </select>
+                                                    </div>
+                                                </div>
+                                            </div>
+
+
+                                            <div class="col-lg-6">
+                                                <div class="contactUs_info_field">
+                                                    <strong>Contact Number<sup class="text-danger">*</sup></strong>
+                                                    <div class="contactUs_info_fieldInput">
+                                                        <input type="text" name="contact_number" placeholder="" value="" />
+                                                    </div>
+                                                </div>
+                                            </div>
+
+
+                                            <div class="col-lg-6">
+                                                <div class="contactUs_info_field">
+                                                    <strong>Email<sup class="text-danger">*</sup></strong>
+                                                    <div class="contactUs_info_fieldInput">
+                                                        <input type="text" name="email" placeholder="" value="" />
+                                                    </div>
+                                                </div>
+                                            </div>
+
+                                            <div class="col-lg-6">
+                                                <div class="contactUs_info_field">
+                                                    <strong>Date<sup class="text-danger">*</sup></strong>
+                                                    <input type="date" name="date" />
+                                                </div>
+                                            </div>
+
+
+                                            <div class="col-lg-6">
+                                                <div class="contactUs_info_field">
+                                                    <strong>Time<sup class="text-danger">*</sup></strong>
+                                                    <input type="time" id="time" name="time" />
+                                                </div>
+                                            </div>
+
+
+
+
+
+
+
+                                        </div>
+
+                                        <input type="text" name="type" placeholder="" value="video" hidden/>
+                                        <div class="contactBtn pt-3 mt-3">
+                                            <input type="submit" value="Submit"
+                                                class="btn_default   d-block w-100" />
+                                        </div>
+                                    </div>
+                                    </form>
+                                    
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+ 
+    </div>

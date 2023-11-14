@@ -1,72 +1,79 @@
-<div class="aboutProject_section getFree">
-    <div class="auto_container">
 
-        <div class="contactUs_detail">
-            <div class="row align-items-center">
-                <div class="col-lg-4 col-md-5  aos-init " data-aos="fade-right" data-aos-duration="800"
-                    data-aos-easing="ease-out-cubic">
-                    <div class="biz_brief">
-                        <div class="biz_brief_info">
-                            <h3>BIZIONIC in Brief:</h3>
-                            <ul>
-                                <li>
-                                    <strong>10+ Years of Expertise</strong>
-                                    <p>IT powerhouse of Hyderabad India</p>
-                                </li>
+ 
 
-                                <li>
-                                    <strong>150+ Developers and Marketers</strong>
-                                    <p>In-house, Min 5+ Years of Experience</p>
-                                </li>
+ <!-- togather avatar section  -->
 
-                                <li>
-                                    <strong>25+ Project Manager's Team</strong>
-                                    <p>10+ Years of Experience</p>
-                                </li>
+     
+     <!-- our work section  -->
 
-                                <li>
-                                    <strong>50M+ Users of Solutions</strong>
-                                    <p>Our Team Developed</p>
-                                </li>
+     <div class="at_bizionic_section portfolioSection bg_f1f1f1"> 
+        <div class="at_bizionic_section_detail">
 
-                                <li>
-                                    <strong>250+ Projects Accomplished</strong>
-                                </li>
+            <div class="portfolioAvatar aos-init aos-animate" data-aos="fade-up" data-aos-duration="600" data-aos-easing="ease-in">
+                <span><img src="/bizionic/images/portfolio_avatar.png" alt="#" /></span>
+            </div>
 
-                                <li>
-                                    <strong>1000K+ Development Hours</strong>
-                                </li>
-                            </ul>
+            <div class="custom_tittle  aos-init aos-animate"   data-aos="fade-up" data-aos-duration="800" data-aos-easing="ease">
+                <p class="p_color">Portfolio</p>
+                <h2><strong>Our</strong> Work</h2>
+            </div>
+
+            <div class="at_bizionic_steps">
+                <div class="row">
+                    <div class="col-lg-4 col-md-4 p-0  aos-init aos-animate"   data-aos="flip-left" data-aos-duration="2000" data-aos-easing="ease-out-cubic">
+                        <div class="at_bizionicSteps_col">
+                            <span><img src="/bizionic/images/portfolio_img1.jpg" alt="#" /></span>
                         </div>
                     </div>
-                </div>
-                <div class="col-lg-8 col-md-7   aos-init " data-aos="fade-left" data-aos-duration="800"
-                    data-aos-easing="ease-out-cubic">
-                    <div class="contactForm_page">
-                        <div class="custom_tittle text-left">
-                            <h2>Get a Free Consultation</h2>
-                            <p>Please fill the form and our representative will get back to you.</p>
+                    <div class="col-lg-4 col-md-4 p-0 aos-init aos-animate"  data-aos="flip-left" data-aos-duration="2000" data-aos-easing="ease-out-cubic">
+                        <div class="at_bizionicSteps_col">
+                            <span><img src="/bizionic/images/portfolio_img2.jpg" alt="#" /></span>
                         </div>
-                        <contact-us-component></contact-us-component>
-                         
+                    </div>
+                    <div class="col-lg-4 col-md-4 p-0 aos-init aos-animate"  data-aos="flip-left" data-aos-duration="2000" data-aos-easing="ease-out-cubic">
+                        <div class="at_bizionicSteps_col">
+                            <span><img src="/bizionic/images/portfolio_img3.jpg" alt="#" /></span>
+                        </div>
                     </div>
                 </div>
             </div>
-        </div>
 
-
+        </div> 
     </div>
-</div>
 
 
 
 
-<!-- Services provided section -->
+ 
 
 
-<div class="servicesProvided_section">
+
+
+ <!-- Services provided section -->
+
+
+ <div class="servicesProvided_section">
     <div class="auto_container">
-        <div class="servicesProvided_section_detail">
+        <div class="servicesProvided_section_detail aos-init aos-animate"  data-aos="fade-in" data-aos-duration="1000" data-aos-easing="ease-in">
+            
+            <div class="servicesProvided_info">
+                <h3 class="text-center">INDUSTRIES</h3>
+                <ul>
+                    <li><a href="#">Real Estate</a></li> | 
+                    <li><a href="#">Travel & Hospitality</a></li> | 
+                    <li><a href="#">B2B Solutions</a></li> | 
+                    <li><a href="#">B2C Solutions</a></li> | 
+                    <li><a href="#">Healthcare</a></li> | 
+                    <li><a href="#">Education & e-Learning</a></li> | 
+                    <li><a href="#">Banking & Finance</a></li> | 
+                    <li><a href="#">Startup Solutions</a></li> | 
+                    <li><a href="#">Media & Publishing</a></li> | 
+                    <li><a href="#">Food Ordering Solutions</a></li> | 
+                    <li><a href="#">Train Ticket Booking Solutions</a></li> | 
+                </ul>
+            </div>
+
+            
             <div class="servicesProvided_info">
                 <h3 class="text-center">SERVICES</h3>
                 <ul>
@@ -102,8 +109,7 @@
             </div>
 
 
-
-            <div class="servicesProvided_info">
+            <div class="servicesProvided_info  p-0">
                 <h3 class="text-center">TECHNOLOGIES</h3>
                 <ul>
                     <li><a href="#">ASP.NET</a></li> | 
@@ -157,32 +163,18 @@
                     <li><a href="#">Zencart</a></li> | 
                 </ul>
             </div>
+            
 
-
-
-            <div class="servicesProvided_info p-0">
-                <h3 class="text-center">INDUSTRIES</h3>
-                <ul>
-                    <li><a href="#">Real Estate</a></li> | 
-                    <li><a href="#">Travel & Hospitality</a></li> | 
-                    <li><a href="#">B2B Solutions</a></li> | 
-                    <li><a href="#">B2C Solutions</a></li> | 
-                    <li><a href="#">Healthcare</a></li> | 
-                    <li><a href="#">Education & e-Learning</a></li> | 
-                    <li><a href="#">Banking & Finance</a></li> | 
-                    <li><a href="#">Startup Solutions</a></li> | 
-                    <li><a href="#">Media & Publishing</a></li> | 
-                    <li><a href="#">Food & FMCG</a></li> | 
-                    <li><a href="#">E-Commerce</a></li> | 
-                </ul>
-            </div>
         </div>
     </div>
 </div>
 
 
 
-<div class="get_in_touchSection">
+
+ <!-- get in touch section  -->
+
+ <div class="get_in_touchSection">
         <div class="auto_container">
             <div class="get_in_touchSection_detail text-center align-center justify-content-center ">
                 <div class="custom_tittle">

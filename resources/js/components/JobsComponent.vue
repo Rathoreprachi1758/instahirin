@@ -5,7 +5,7 @@
         <div class="">
           <h4 class="p-0">Apply for the Position</h4>
         </div>
-        <a href="#" class="btn_default">Apply</a>
+        <a class="btn_default text-white" @click="scrollToForm">Apply</a>
       </div>
 
       <div class="applyNow_textInfo">
@@ -19,7 +19,7 @@
 
     <!-- Success and  Failure Messages -->
 
-    <div
+    <!-- <div
       class="alert alert-success text-center"
       role="alert"
       id="success"
@@ -35,7 +35,7 @@
       ref="failureMessage"
     >
       Sorry! There is some problem sending your inquiry at the moment, Please try again.
-    </div>
+    </div> -->
 
     <!-- advance career section -->
 
@@ -48,20 +48,38 @@
             together!
           </p>
         </div>
-        <div class="alert alert-success text-center" role="alert" id="career_success">
+        <!-- <div class="alert alert-success text-center" role="alert" id="career_success">
           Thank you for the message. We will contact you shortly.
         </div>
         <div class="alert alert-danger text-center" role="alert" id="career_failure">
           Sorry! There is some problem sending your query at the moment, Please try again.
-        </div>
-        <form
-          id="career_form"
-          method="POST"
-          action="{{ route('career') }}"
-          onsubmit="return false"
-          enctype="multipart/form-data"
+        </div> -->
+
+        <!-- Success and  Failure Messages -->
+
+        <div
+          class="alert alert-success text-center"
+          role="alert"
+          id="success"
+          ref="successMessage"
         >
-          @csrf
+          Thank you for the submitting the inquiry. We will contact you shortly.
+        </div>
+
+        <div
+          class="alert alert-danger text-center"
+          role="alert"
+          id="failure"
+          ref="failureMessage"
+        >
+          Sorry! There is some problem sending your inquiry at the moment, Please try
+          again.
+        </div>
+
+        <!-- Form -->
+        <form id="career_form" enctype="multipart/form-data" @submit.prevent="storeJob">
+          <!-- @csrf -->
+          <input type="hidden" :value="csrfToken" name="_token" />
           <div class="advanceCareer_form hi-there">
             <div class="row">
               <div class="col-lg-6 col-md-6">
@@ -137,7 +155,13 @@
           </div>
 
           <div class="attchForm_btn">
-            <input type="button" class="btn_default" @click="storeJob" />
+            <input
+              type="button"
+              value="Apply For Job"
+              class="btn_default text-white"
+              @click="storeJob"
+            />
+            <!-- <button type="button" class="btn_default" @click="storeJob">Apply</button> -->
           </div>
         </form>
       </div>
@@ -149,6 +173,7 @@
 export default {
   data() {
     return {
+      csrfToken: "{{ csrf_token() }}",
       name: "",
       email: "",
       linkedin_profile: "",
@@ -157,6 +182,17 @@ export default {
     };
   },
   methods: {
+    // Scroll to form
+    scrollToForm() {
+      const formElement = document.getElementById("career_form");
+      if (formElement) {
+        formElement.scrollIntoView({
+          behavior: "smooth",
+          block: "center",
+        });
+      }
+    },
+
     handleFileChange(event) {
       // const file = event.target.files[0];
       // this.formData.document = file;
@@ -172,25 +208,63 @@ export default {
       formData.append("note", this.note);
 
       axios
-        .post("{{ route('career') }}", formData, {
-          headers: {
-            "Content-Type": "multipart/form-data",
-          },
-        })
+        // .post("{{ route('career') }}", formData, {
+        //   headers: {
+        //     "Content-Type": "multipart/form-data",
+        //   },
+        // })
+        .post("/career", formData)
         .then((response) => {
-          if (response.data.status == "success") {
-            $("#career_success").show();
-            $("#career_failure").hide();
-            $("#career_form")[0].reset();
-          } else {
-            $("#career_success").hide();
-            $("#career_failure").show();
+          //   if (response.data.status == 200) {
+          //     $("#career_success").show();
+          //     $("#career_failure").hide();
+          //     $("#career_form")[0].reset();
+          //   } else {
+          //     $("#career_success").hide();
+          //     $("#career_failure").show();
+          //   }
+          if (response.status == 200) {
+            this.showSuccessMessage();
+            this.name = "";
+            this.email = "";
+            this.linkedin_profile = "";
+            this.document = null;
+            this.note = "";
           }
         })
         .catch((error) => {
-          $("#career_success").hide();
-          $("#career_failure").show();
+          this.showFailureMessage();
+          //   $("#career_success").hide();
+          //   $("#career_failure").show();
         });
+    },
+
+    showSuccessMessage() {
+      const successMessage = this.$refs.successMessage;
+      successMessage.style.display = "block";
+      //successMessage.scrollIntoView({ behavior: "smooth" });
+      const scrollOptions = {
+        behavior: "smooth",
+        block: "center",
+      };
+      successMessage.scrollIntoView(scrollOptions);
+      setTimeout(() => {
+        successMessage.style.display = "none";
+      }, 5000);
+    },
+
+    showFailureMessage() {
+      const failureMessage = this.$refs.failureMessage;
+      failureMessage.style.display = "block";
+      //failureMessage.scrollIntoView({ behavior: "smooth" });
+      const scrollOptions = {
+        behavior: "smooth",
+        block: "center",
+      };
+      failureMessage.scrollIntoView(scrollOptions);
+      setTimeout(() => {
+        failureMessage.style.display = "none";
+      }, 5000);
     },
   },
 };

@@ -1,7 +1,6 @@
-
 @php
-    $jobId = request('jobId');
-    $job = \App\Models\Job::find($jobId);
+$jobId = request('jobId');
+$job = \App\Models\Job::find($jobId);
 @endphp
 
 {{-- <p>Job ID: {{ $jobId }}</p> --}}
@@ -31,22 +30,28 @@
 
                 <h6 class="">Key Responsibilities:</h6>
                 {{-- <div class="discList ml-4 pt-0 pb-3">{{ $job->responsibilities }}</div> --}}
-                {{ $job->responsibilities }}
-
+                {{-- {{ $job->responsibilities }} --}}
+                {{-- {!! html_entity_decode($job->responsibilities) !!} --}}
+                {!! $job->responsibilities !!}
 
 
                 <h6 class="pt-3">Qualifications:</h6>
                 {{-- <div class="discList ml-4 pt-0 pb-3">{{ $job->qualification }}</div> --}}
-                {{ $job->qualification }}
+                {{-- {{ $job->qualification }} --}}
+                {!! $job->qualification !!}
 
 
                 <h6 class="pt-3">Preferred Qualifications:</h6>
                 {{-- <div class="discList ml-4 pt-0 pb-3">{{ $job->prefer_qualification }}</div> --}}
-                {{ $job->prefer_qualification }}
+                {{-- {{ $job->prefer_qualification }} --}}
+                {!! $job->prefer_qualification !!}
 
 
                 <h6 class="pt-3">What We Offer:</h6>
-                <div class="discList ml-4 pt-0 pb-3"> {{ $job->we_offer }}</div>
+                <div class="discList ml-4 pt-0 pb-3">
+                    {{-- {{ $job->we_offer }} --}}
+                    {!! $job->we_offer !!}
+                </div>
 
                 <p>At Bizionic Technologies, we believe in the power of technology to transform businesses. If you are
                     passionate about PHP development, eager to learn, and ready to make a positive impact, we encourage
