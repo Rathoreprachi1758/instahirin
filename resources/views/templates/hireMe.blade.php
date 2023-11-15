@@ -312,7 +312,7 @@
                             </div>
                             <div class="row">
 
-                                {{-- @foreach($jobs as $key=>$job)
+                                @foreach($jobs as $key=>$job)
                                 <div class="col-lg-4 col-md-6 buildCol">
                                     <div class="buildTeam_col">
                                         <strong>{{$key+1}}. {{$job->title}}:</strong>
