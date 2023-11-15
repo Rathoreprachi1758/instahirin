@@ -316,7 +316,10 @@
                                 <div class="col-lg-4 col-md-6 buildCol">
                                     <div class="buildTeam_col">
                                         <strong>{{$key+1}}. {{$job->title}}:</strong>
-                                        {!!$job->description!!}
+                                        {{-- {!!$job->description!!} --}}
+                                        <div class="description-container">
+                                            {!! $job->description !!}
+                                        </div>
                                         {{-- <a href="{{ route('apply-now-form', ['jobId' => $job->id]) }}"
                                             target="_blank" class="btn_default">Show more</a> --}}
                                         <a href="/industries/industries-we-serve/industries/jobid?jobId={{ $job->id }}"
@@ -812,7 +815,27 @@
 
     </div>
 
-
-
-
 </div>
+
+<script>
+    $(document).ready(function () {
+        // Set the number of words to show initially
+        const initialWords = 50;
+
+        $('.buildTeam_col').each(function () {
+            const $container = $(this).find('.description-container');
+            const $showMoreLink = $(this).find('.btn_show_more');
+
+            const fullText = $container.text();
+            const truncatedText = fullText.split(' ').slice(0, initialWords).join(' ');
+
+            $container.text(truncatedText);
+
+            $showMoreLink.on('click', function (e) {
+                e.preventDefault();
+                $container.text(fullText);
+                $showMoreLink.hide();
+            });
+        });
+    });
+</script>
