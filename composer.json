@@ -2,7 +2,10 @@
     "name": "laravel/laravel",
     "type": "project",
     "description": "The Laravel Framework.",
-    "keywords": ["framework", "laravel"],
+    "keywords": [
+        "framework",
+        "laravel"
+    ],
     "license": "MIT",
     "require": {
         "php": "^8.1",
@@ -13,7 +16,9 @@
         "laravel/tinker": "^2.8",
         "laravel/ui": "^4.2",
         "outl1ne/nova-menu-builder": "^7.1",
-        "outl1ne/nova-sortable": "^3.4"
+        "outl1ne/nova-sortable": "^3.4",
+        "spatie/laravel-permission": "^6.1",
+        "App/authNamecard": "@dev"
     },
     "require-dev": {
         "fakerphp/faker": "^1.9.1",
@@ -71,6 +76,22 @@
         "nova": {
             "type": "composer",
             "url": "https://nova.laravel.com"
+        },
+        "0": {
+            "type": "path",
+            "url": "./nova-components/AuthNamecard"
+        },
+        "1": {
+            "type": "path",
+            "url": "./nova-components/AuthNamecard"
+        },
+        "2": {
+            "type": "path",
+            "url": "./nova-components/AuthNamecard"
+        },
+        "3": {
+            "type": "path",
+            "url": "./nova-components/AuthNamecard"
         }
     }
 }

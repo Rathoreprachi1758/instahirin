@@ -9,6 +9,9 @@ use Laravel\Nova\Fields\Select;
 use Laravel\Nova\Fields\Text;
 use Laravel\Nova\Fields\Trix;
 use Laravel\Nova\Http\Requests\NovaRequest;
+use Laravel\Nova\Fields\DateTime;
+use Illuminate\Support\Facades\Gate;
+use App\Policies\brandpolicy;
 
 class Job extends Resource
 {
@@ -98,5 +101,52 @@ class Job extends Resource
     public function actions(NovaRequest $request)
     {
         return [];
+    }
+    //     $userRoles = auth()->user()->roles;
+
+    // if ($userRoles === 'admin') {
+//     job::authorizedToViewAny($request);
+//     job::authorizedToView($request);
+// } else {
+//     return response('Unauthorized', 403);
+// }
+// public function actions(NovaRequest $request)
+//     {
+//         $userRoles = auth()->user()->roles;
+
+    //         if ($userRoles === 'admin') {
+//             return [
+//                 job::authorizedToViewAny($request),
+//                 job::authorizedToView($request),
+//             ];
+//         } else {
+//             return response('Unauthorized', 403);
+//         }
+//     }
+    // public static function authorizedToViewAny($request)
+    // {
+    //     $user = auth()->user();
+    //     // // dd($user->roles);
+    //     // if ($user->roles === 'admin') {
+    //     //     // dd($user);
+    //     //     dd("in admin");
+    //     //     return false;
+    //     // }
+        
+    //     // if ($user->roles === 'user') {
+    //     //     dd("in user");
+    //     //     return auth()->check() && $user->can('viewAny', brandpolicy::class);
+          
+    //     // }
+    // }
+
+    public function authorizedToView($request)
+    {
+        $user = $request->user();
+        if ($user->roles === 'admin') {
+            return $user->can('view', $this);
+        } else {
+            return true;
+        }
     }
 }

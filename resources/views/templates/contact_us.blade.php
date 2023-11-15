@@ -1,4 +1,4 @@
-<div class="aboutProject_section">
+<div class="aboutProject_section getFree">
     <div class="auto_container">
 
         <div class="contactUs_detail">

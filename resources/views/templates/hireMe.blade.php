@@ -22,7 +22,7 @@
                                 <b>WELCOME TO </b>
                                 Bizionic's Career page!
                             </h3>
-
+                            {{-- <h1 style="color:azure">This is the HireMe</h1> --}}
                             <p>At Bizionic, we are driven by innovation, powered by technology, and united by a passion
                                 for excellence. As a progressive technology company, we are committed to shaping the
                                 future through groundbreaking solutions and empowering our talented professionals to
@@ -316,25 +316,12 @@
                                 <div class="col-lg-4 col-md-6 buildCol">
                                     <div class="buildTeam_col">
                                         <strong>{{$key+1}}. {{$job->title}}:</strong>
-                                        <div class="description-container">
-                                            {!! $job->description !!}
-                                        </div>
+                                        {!!$job->description!!}
+                                        {{-- <a href="{{ route('apply-now-form', ['jobId' => $job->id]) }}"
+                                            target="_blank" class="btn_default">Show more</a> --}}
                                         <a href="/industries/industries-we-serve/industries/jobid?jobId={{ $job->id }}"
                                             target="_blank" class="btn_default">Show more</a>
-                                    </div>
-                                </div>
-                                @endforeach --}}
-                                @foreach($jobs as $key => $job)
-                                <div class="col-lg-4 col-md-6 buildCol">
-                                    <div class="buildTeam_col">
-                                        <div class="title-container">
-                                            <strong>{{$key+1}}. {{$job->title}}:</strong>
-                                        </div>
-                                        <div class="description-container">
-                                            {!! $job->description !!}
-                                        </div>
-                                        <a href="/industries/industries-we-serve/industries/jobid?jobId={{ $job->id }}"
-                                            target="_blank" class="btn_default">Show more</a>
+
                                     </div>
                                 </div>
                                 @endforeach
@@ -829,26 +816,3 @@
 
 
 </div>
-
-<script>
-    $(document).ready(function () {
-        // Set the number of words to show initially
-        const initialWords = 50;
-
-        $('.buildTeam_col').each(function () {
-            const $container = $(this).find('.description-container');
-            const $showMoreLink = $(this).find('.btn_show_more');
-
-            const fullText = $container.text();
-            const truncatedText = fullText.split(' ').slice(0, initialWords).join(' ');
-
-            $container.text(truncatedText);
-
-            $showMoreLink.on('click', function (e) {
-                e.preventDefault();
-                $container.text(fullText);
-                $showMoreLink.hide();
-            });
-        });
-    });
-</script>
