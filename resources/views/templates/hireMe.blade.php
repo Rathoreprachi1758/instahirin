@@ -312,22 +312,29 @@
                             </div>
                             <div class="row">
 
-                                @foreach($jobs as $key=>$job)
+                                {{-- @foreach($jobs as $key=>$job)
                                 <div class="col-lg-4 col-md-6 buildCol">
                                     <div class="buildTeam_col">
                                         <strong>{{$key+1}}. {{$job->title}}:</strong>
-                                        {{-- {!!$job->description!!} --}}
                                         <div class="description-container">
                                             {!! $job->description !!}
                                         </div>
-                                        {{-- {!! limitWords($job->description, 20, '...') !!} --}}
-
                                         <a href="/industries/industries-we-serve/industries/jobid?jobId={{ $job->id }}"
                                             target="_blank" class="btn_default">Show more</a>
-
-                                        {{-- <button class="btn_toggle_description" data-show-more="Show more"
-                                            data-show-less="Show less">Show more</button> --}}
-
+                                    </div>
+                                </div>
+                                @endforeach --}}
+                                @foreach($jobs as $key => $job)
+                                <div class="col-lg-4 col-md-6 buildCol">
+                                    <div class="buildTeam_col">
+                                        <div class="title-container">
+                                            <strong>{{$key+1}}. {{$job->title}}:</strong>
+                                        </div>
+                                        <div class="description-container">
+                                            {!! $job->description !!}
+                                        </div>
+                                        <a href="/industries/industries-we-serve/industries/jobid?jobId={{ $job->id }}"
+                                            target="_blank" class="btn_default">Show more</a>
                                     </div>
                                 </div>
                                 @endforeach
@@ -822,7 +829,6 @@
 
 
 </div>
-
 
 <script>
     $(document).ready(function () {
