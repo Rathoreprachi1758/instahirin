@@ -13,9 +13,7 @@ class Leadpolicy
      */
     public function viewAny(User $user): bool
     {   
-        // $user = auth()->user();
-        //dd($user);
-        return $user->roles === "admin";
+        return true;
     }
 
     /**
@@ -23,46 +21,46 @@ class Leadpolicy
      */
     public function view(User $user, Lead $lead): bool
     {
-        return true;
+        return $user->roles === "admin";
     }
 
     /**
      * Determine whether the user can create models.
      */
-    // public function create(User $user): bool
-    // {
-    //     return true;
-    // }
+    public function create(User $user): bool
+    {
+        return $user->roles === "admin";
+    }
 
-    // /**
-    //  * Determine whether the user can update the model.
-    //  */
-    // public function update(User $user, Lead $lead): bool
-    // {
-    //     return true;
-    // }
+    /**
+     * Determine whether the user can update the model.
+     */
+    public function update(User $user, Lead $lead): bool
+    {
+        return $user->roles === "admin";
+    }
 
-    // /**
-    //  * Determine whether the user can delete the model.
-    //  */
-    // public function delete(User $user, Lead $lead): bool
-    // {
-    //     return true;
-    // }
+    /**
+     * Determine whether the user can delete the model.
+     */
+    public function delete(User $user, Lead $lead): bool
+    {
+        return $user->roles === "admin";
+    }
 
-    // /**
-    //  * Determine whether the user can restore the model.
-    //  */
-    // public function restore(User $user, Lead $lead): bool
-    // {
-    //     return true;
-    // }
+    /**
+     * Determine whether the user can restore the model.
+     */
+    public function restore(User $user, Lead $lead): bool
+    {
+        return $user->roles === "admin";
+    }
 
-    // /**
-    //  * Determine whether the user can permanently delete the model.
-    //  */
-    // public function forceDelete(User $user, Lead $lead): bool
-    // {
-    //     //
-    // }
+    /**
+     * Determine whether the user can permanently delete the model.
+     */
+    public function forceDelete(User $user, Lead $lead): bool
+    {
+        return $user->roles === "admin";
+    }
 }
