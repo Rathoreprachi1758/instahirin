@@ -22,7 +22,7 @@
                                 <b>WELCOME TO </b>
                                 Bizionic's Career page!
                             </h3>
-                           {{-- <h1 style="color:azure">This is the HireMe</h1> --}}
+                            {{-- <h1 style="color:azure">This is the HireMe</h1> --}}
                             <p>At Bizionic, we are driven by innovation, powered by technology, and united by a passion
                                 for excellence. As a progressive technology company, we are committed to shaping the
                                 future through groundbreaking solutions and empowering our talented professionals to
@@ -312,21 +312,15 @@
                             </div>
                             <div class="row">
 
-                                @foreach($jobs as $key=>$job)
+                                {{-- @foreach($jobs as $key=>$job)
                                 <div class="col-lg-4 col-md-6 buildCol">
                                     <div class="buildTeam_col">
                                         <strong>{{$key+1}}. {{$job->title}}:</strong>
-                                        {{-- {!!$job->description!!} --}}
-                                        <div class="description-container">
-                                            {!! $job->description !!}
-                                        </div>
-                                        {{-- {!! limitWords($job->description, 20, '...') !!} --}}
-
+                                        {!!$job->description!!}
+                                        {{-- <a href="{{ route('apply-now-form', ['jobId' => $job->id]) }}"
+                                            target="_blank" class="btn_default">Show more</a> --}}
                                         <a href="/industries/industries-we-serve/industries/jobid?jobId={{ $job->id }}"
                                             target="_blank" class="btn_default">Show more</a>
-
-                                        {{-- <button class="btn_toggle_description" data-show-more="Show more"
-                                            data-show-less="Show less">Show more</button> --}}
 
                                     </div>
                                 </div>
@@ -522,7 +516,7 @@
                 <div class="custom_tittle">
                     <h2 class="p-0"><strong>Need Assistance?</strong> Get in touch</h2>
                 </div>
-                
+
                 <div class="row text-center align-center justify-content-center text-primary mt-4 pt-4">
 
                     <div class="col-lg-3 col-md-6 pt-4 pb-4  colSet">
@@ -566,8 +560,8 @@
         </div>
 
 
-        
- 
+
+
 
         <!-- Call Modal -->
         <div class="modal fade" id="callModal" tabindex="-1" role="dialog" aria-labelledby="callModalLabel"
@@ -815,34 +809,10 @@
                 </div>
             </div>
         </div>
- 
+
     </div>
 
 
 
 
 </div>
-
-
-<script>
-    $(document).ready(function () {
-        // Set the number of words to show initially
-        const initialWords = 50;
-
-        $('.buildTeam_col').each(function () {
-            const $container = $(this).find('.description-container');
-            const $showMoreLink = $(this).find('.btn_show_more');
-
-            const fullText = $container.text();
-            const truncatedText = fullText.split(' ').slice(0, initialWords).join(' ');
-
-            $container.text(truncatedText);
-
-            $showMoreLink.on('click', function (e) {
-                e.preventDefault();
-                $container.text(fullText);
-                $showMoreLink.hide();
-            });
-        });
-    });
-</script>
