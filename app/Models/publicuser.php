@@ -5,8 +5,9 @@ namespace App\Models;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 
-class brand extends Model
+class publicuser extends Model
 {
     use HasFactory;
-    protected $table = "publicusers";
+    protected $table = 'publicusers';
+    
 }
