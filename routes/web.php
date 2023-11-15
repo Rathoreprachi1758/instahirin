@@ -68,6 +68,3 @@ Route::get('/industries/industries-we-serve/industries/thankyou', [App\Http\Cont
 Route::get('/industries/{industries-we-serve}/{industries}/{jobid}', [ContentController::class, 'applyShow']);
 //
 Route::post('content/process/{jobId}', [ContentController::class, 'process'])->name('content.process');
-
-
-
