@@ -12,14 +12,15 @@ use App\Models\Career;
 use App\Models\Expert;
 use App\Models\Country;
 // use App\Models\Expert;
-use App\Models\Countrie;
+use App\Models\Experty;
 // use App\Models\HireRequest;
 // use App\Models\Subscription;
+use App\Models\Countrie;
 use App\Models\TimeZones;
 use App\Models\HireRequest;
 use App\Models\Subscription;
-use Illuminate\Http\Request;
 //use Laravel\Nova\Fields\Timezone;
+use Illuminate\Http\Request;
 use App\Models\TeamContactUs;
 use App\Models\FundingApplyNow;
 use App\Models\AvailabilityData;
@@ -59,7 +60,7 @@ class ContentController extends Controller
         // dd($template);
         if ($page->slug == 'hire-me') {
             $jobs = Job::where('status', 'Open')->get();
-         
+
             return view('welcome', [
                 'title' => $page->meta_title,
                 'description' => $page->meta_description,
@@ -146,7 +147,7 @@ class ContentController extends Controller
         $formData->phone = isset($validatedData['phone']) ? $validatedData['phone'] : '';
         //$formData->lead_type = isset($validatedData['lead_type']) ? $validatedData['lead_type'] : 'Consultation';
         $formData->details = $validatedData['details'];
-        
+
         // Process and store the uploaded file
         if ($request->hasFile('document')) {
             $file = $request->file('document');
@@ -491,7 +492,7 @@ class ContentController extends Controller
 
     //* Hire Form Submission
     public function instaHirinRequirements(Request $request)
-    { 
+    {
 
         // Validate the request data, including the uploaded file
         // return 'Hii';
@@ -659,7 +660,7 @@ class ContentController extends Controller
     {
         // Validate the request data, including the uploaded file
         // Log::info('Request data:', $request->all());
-       // dd('Hii9');
+        // dd('Hii9');
         $validatedData = $request->validate([
             'name' => 'required',
             'contact_details' => 'required',
@@ -868,7 +869,7 @@ class ContentController extends Controller
 
     // Jobs Form Controller
     public function applyShow(Request $request)
-    {   
+    {
         $jobId = $request->query('jobId');
         $job = Job::find($jobId);
         return view('templates.apply-now-form', ['job' => $job]);
@@ -890,5 +891,13 @@ class ContentController extends Controller
     {
         $job = Job::find($jobId);
         return view('templates.jobid', ['job' => $job]);
+    }
+
+
+    // Get Expertise controller
+    public function getExpertise()
+    {
+        $expertises = Experty::all();
+        return response()->json($expertises);
     }
 }
