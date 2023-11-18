@@ -16,7 +16,7 @@ class Publicuser extends Resource
      *
      * @var class-string<\App\Models\Publicuser>
      */
-    public static $model = \App\Models\Publicuser::class;
+    public static $model = \App\Models\publicuser::class;
 
     /**
      * The single value that should be used to represent the resource when being displayed.

@@ -2,7 +2,7 @@
 
 namespace App\Providers;
 use App\Models\Lead;
-use App\Policies\LeadPolicy;
+use App\Policies\Leadpolicy;
 // use Illuminate\Support\Facades\Gate;
 use Illuminate\Foundation\Support\Providers\AuthServiceProvider as ServiceProvider;
 

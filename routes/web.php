@@ -17,16 +17,12 @@ use App\Http\Controllers\Logincontroller;
 |
 */
 
-// Route::get('sitemap.xml', function () {
-//     return response()->view('sitemap')->header('Content-Type', 'xml');
-// });
-//
 Route::get('sitemap.xml', function () {
     return response()->file('sitemap.xml');
 });
 ////
-Route::get('/Sign-In',[Logincontroller::class,'index'])->name('signin');
-Route::Post('sign-up',[Logincontroller::class,'store'])->name('submit.signup');
+Route::get('/Sign-In', [Logincontroller::class, 'index'])->name('signin');
+Route::Post('sign-up', [Logincontroller::class, 'store'])->name('submit.signup');
 Route::get('/login', [LoginController::class, 'login'])->name('loginpage');
 Route::post('dashboard', [LoginController::class, 'loginpage'])->name('login');
 
@@ -63,15 +59,12 @@ Route::get('/hire/developer/developers-other/HireForm/{id}', [ContentController:
 //Route::get('/getPhoneCodes', 'ContentController@getPhoneCodes')->name('phoneCodes');
 
 // Apply Form
- Route::get('/industries/industries-we-serve/industries/apply-now-form/{jobId}', [ContentController::class, 'applyShow'])->name('apply-now-form');
- //
- //Thankyou page
+Route::get('/industries/industries-we-serve/industries/apply-now-form/{jobId}', [ContentController::class, 'applyShow'])->name('apply-now-form');
+//
+//Thankyou page
 // Route::get('/thankyou',[App\Http\Controllers\ContentController::class, 'thanksMessage'])->name('Thankyou');
-Route::get('/industries/industries-we-serve/industries/thankyou',[App\Http\Controllers\ContentController::class, 'thanksMessage'])->name('Thankyou');
+Route::get('/industries/industries-we-serve/industries/thankyou', [App\Http\Controllers\ContentController::class, 'thanksMessage'])->name('Thankyou');
 //this is slug
 Route::get('/industries/{industries-we-serve}/{industries}/{jobid}', [ContentController::class, 'applyShow']);
 //
-Route::post('content/process/{jobId}', [ContentController::class,'process'])->name('content.process');
-
-
-
+Route::post('content/process/{jobId}', [ContentController::class, 'process'])->name('content.process');

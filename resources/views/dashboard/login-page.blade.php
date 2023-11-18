@@ -13,7 +13,6 @@
             <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
         </div>
     @endif
-
     <div class="container" style="margin-top:130px">
         <div class="row justify-content-center">
             <div class="col-md-6">
@@ -22,7 +21,6 @@
                     <div class="card-header">Login</div>
 
                     <div class="card-body">
-                        {{-- <form  action="{{ url('/dashboard') }}" method="POST"> --}}
                         <form action="{{ url('/dashboard') }}" method="POST" enctype="multipart/form-data">
                             @csrf
 
