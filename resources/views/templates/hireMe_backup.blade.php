@@ -1,4 +1,4 @@
-<div class="bg_cfd1d2 d-none">
+<div class="bg_cfd1d2">
 
 
 
@@ -9,233 +9,57 @@
     </div>
 
 
-    <!-- hire me main section  -->
-
-    <div class="embarkMain_section">
+    <!-- main banner  -->
+    <div class="mainBanner_section">
         <div class="auto_container">
-            <div class="embarkMain_section_detail">
+            <div class="mainBanner_detail hireCareer">
+
                 <div class="row">
-                    <div class="col-lg-8">
-                        <div class="custom_tittle">
-                            <h1 class="text-left">
-                                <strong>Embark on An Exciting</strong> Career Journey <strong>with</strong> BIZIONIC and Beyond...
-                            </h1> 
-                        </div>
-                    </div>
-                </div> 
+                    <div class="col-lg-12 col-md-12 aos-init " data-aos="fade-right" data-aos-duration="1000"
+                        data-aos-easing="ease">
+                        <div class="mainBanner_text hireBannerText">
+                            <h3>
+                                <b>WELCOME TO </b>
+                                Bizionic's Career page!
+                            </h3>
 
+                            <p>At Bizionic, we are driven by innovation, powered by technology, and united by a passion
+                                for excellence. As a progressive technology company, we are committed to shaping the
+                                future through groundbreaking solutions and empowering our talented professionals to
+                                achieve their full potential.</p>
+                            <p>Joining our team means becoming part of a dynamic and diverse community of individuals
+                                who are at the forefront of technological advancements. We embrace a culture of
+                                collaboration, creativity, and continuous learning, where your ideas are valued and your
+                                contributions make a meaningful impact.</p>
+                            <p>We believe that our people are our greatest asset, and we are dedicated to fostering a
+                                supportive and inclusive work environment that nurtures growth, encourages innovation,
+                                and celebrates achievements. We strive for excellence as a team, pushing boundaries and
+                                challenging the status quo to deliver cutting-edge solutions that transform industries
+                                and improve lives.</p>
+                            <p>At Bizionic, you can work on exciting projects and collaborate with some of the brightest
+                                minds in the industry. Our commitment to professional development and career growth
+                                ensures that companies continuously have the resources and support to enhance your
+                                skills and expertise.</p>
+                            <p>Whether you are an experienced professional or just starting your career, we offer a wide
+                                range of opportunities across various domains, including software development, data
+                                science, artificial intelligence, cybersecurity, cloud computing, marketing, digitech
+                                solutions and more. We provide a platform for you to thrive, innovate, and make a
+                                difference.</p>
+                            <p>Explore our career opportunities and be a part of our journey to shape the future of
+                                technology. Join us, and together, let's create a world where possibilities are
+                                limitless.</p>
 
-                <div class="embark_search_section">
-                    <div class="embark_search_info">
-                        <div class="search1">
-                            <input type="" placeholder="Enter skills / designations / companies" />
-                            <b><i class="fa fa-search" aria-hidden="true"></i></b>
-                        </div>
-                        <div class="searchSelect">
-                            <select>
-                                <option>Select experience</option>
-                                <option>Select expe</option>
-                                <option>Select exper..</option>
-                            </select>
-                        </div>
-                        <div class="search2">
-                            <input type="" placeholder="Enter location" />
-                        </div>
-                        <div class="searchResult">
-                            <input type="submit" value="Search" class="btn_default" />
-                        </div>
-                    </div>
+                            <h6 class="font-italic mt-3">Bizionic, Startup's to Unicorn's Lab</h6>
 
-                    <div class="embark_teamBtn">
-                        <a href="#" class="btn_default">Join Team Bizionic</a>
-                    </div>
-                </div>
-
-
-                <div class="careerFeatures">
-                    <div class="row">
-                        <div class="col-lg-4 col-md-6 careerFeaturesCol">
-                            <div class="careerFeaturesCol_info">
-                                <span><img src="/bizionic/images/hireMeMain_icon1.png" alt="#" /></span>
-
-                                <div class="careerFeaturesCol_infoText">
-                                    <a href="javascript:void(0)">Websites, IT & Software</a>
-                                    <p>PHP, HTML, JavaScript, Software Architecture, WordPress...</p>
-                                </div>
-                            </div>
+                            <a href="/bizionic-team" class="btn_default_white">Bizionic Team</a>
                         </div>
 
-                        <div class="col-lg-4 col-md-6 careerFeaturesCol">
-                            <div class="careerFeaturesCol_info colColor">
-                                <span><img src="/bizionic/images/hireMeMain_icon2.png" alt="#" /></span>
 
-                                <div class="careerFeaturesCol_infoText">
-                                    <a href="javascript:void(0)">Mobile Phones & Computing</a>
-                                    <p>Mobile App Development, Android, iPhone, iPad, Kotlin...</p>
-                                </div>
-                            </div>
-                        </div>
-
-                        <div class="col-lg-4 col-md-6 careerFeaturesCol">
-                            <div class="careerFeaturesCol_info">
-                                <span><img src="/bizionic/images/hireMeMain_icon3.png" alt="#" /></span>
-
-                                <div class="careerFeaturesCol_infoText">
-                                    <a href="javascript:void(0)">Design, Media & Architecture</a>
-                                    <p>Graphic Design, Website Design, Photoshop, Logo Design, Illustrator...</p>
-                                </div>
-                            </div>
-                        </div>
-
-                        <div class="col-lg-4 col-md-6 careerFeaturesCol">
-                            <div class="careerFeaturesCol_info colColor">
-                                <span><img src="/bizionic/images/hireMeMain_icon4.png" alt="#" /></span>
-
-                                <div class="careerFeaturesCol_infoText">
-                                    <a href="javascript:void(0)">Writing & Content</a>
-                                    <p>Content Writing, Article Writing, Research, Copywriting, Research Writing...</p>
-                                </div>
-                            </div>
-                        </div>
-
-                        <div class="col-lg-4 col-md-6 careerFeaturesCol">
-                            <div class="careerFeaturesCol_info">
-                                <span><img src="/bizionic/images/hireMeMain_icon5.png" alt="#" /></span>
-
-                                <div class="careerFeaturesCol_infoText">
-                                    <a href="javascript:void(0)">Engineering & Science</a>
-                                    <p>Artificial Intelligence, Machine Learning (ML), Engineering, Data Mining...</p>
-                                </div>
-                            </div>
-                        </div>
-
-                        <div class="col-lg-4 col-md-6 careerFeaturesCol">
-                            <div class="careerFeaturesCol_info colColor">
-                                <span><img src="/bizionic/images/hireMeMain_icon6.png" alt="#" /></span>
-
-                                <div class="careerFeaturesCol_infoText">
-                                    <a href="javascript:void(0)">Sales & Marketing</a>
-                                    <p>Internet Marketing, Marketing, Social Media Marketing, Facebook Marketing, Sales...</p>
-                                </div>
-                            </div>
-                        </div>
-
-                        <div class="col-lg-4 col-md-6 careerFeaturesCol">
-                            <div class="careerFeaturesCol_info">
-                                <span><img src="/bizionic/images/hireMeMain_icon7.png" alt="#" /></span>
-
-                                <div class="careerFeaturesCol_infoText">
-                                    <a href="javascript:void(0)">Cyber Security</a>
-                                    <p>Application Security, Network Security, Critical Infrastructure Security, IoT Security...</p>
-                                </div>
-                            </div>
-                        </div>
-
-                        <div class="col-lg-4 col-md-6 careerFeaturesCol">
-                            <div class="careerFeaturesCol_info colColor">
-                                <span><img src="/bizionic/images/hireMeMain_icon8.png" alt="#" /></span>
-
-                                <div class="careerFeaturesCol_infoText">
-                                    <a href="javascript:void(0)">Clouds Services</a>
-                                    <p>Clouds Security, Clouds Infrastructure Security, IaaS, PaaS, SaaS...</p>
-                                </div>
-                            </div>
-                        </div>
-
-                        <div class="col-lg-4 col-md-6 careerFeaturesCol">
-                            <div class="careerFeaturesCol_info">
-                                <span><img src="/bizionic/images/hireMeMain_icon9.png" alt="#" /></span>
-
-                                <div class="careerFeaturesCol_infoText">
-                                    <a href="javascript:void(0)">Others</a>
-                                    <p>Local Job, Virtual Assistant, Odd Jobs, Inspections...</p>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-
-
-
-    <!-- Curent position section  -->
-
-
-    <div class="curentPosition_section bg_f2f2f2">
-        <div class="auto_container">
-            <div class="curentPosition_section_detail">
-            <div class="buildTeam_section openPosition_sec">
-                    <div class="auto_container">
-                        <div class="careerPage_inner">
-                            <div class="row">
-                                <div class="custom_tittle">
-                                    <h2 class="text-left p-0"><strong>Current</strong> Open Positions:</h2>
-                                </div>
-                            </div>
-                            <div class="row">
-
-                                @foreach($jobs as $key=>$job)
-                                <div class="col-lg-4 col-md-6 buildCol">
-                                    <div class="buildTeam_col">
-                                        <strong>{{$key+1}}. {{$job->title}}:</strong>
-                                        {!!$job->description!!}
-                                        {{-- <a href="{{ route('apply-now-form', ['jobId' => $job->id]) }}"
-                                            target="_blank" class="btn_default">Show more</a> --}}
-                                        <a href="/industries/industries-we-serve/industries/jobid?jobId={{ $job->id }}"
-                                            target="_blank" class="btn_default">Show more</a>
-
-                                    </div>
-                                </div>
-                                @endforeach
-
-                            </div>
-                        </div>
                     </div>
                 </div>
 
-                {{-- <style>
-                    .description {
-                        height: 100px;
-                        overflow: hidden;
-                    }
-                </style> --}}
-            </div>
-        </div>
-    </div>
 
 
-
-    <!-- Hiring Slider section  -->
-
-    <div class="hiringSlider_section bg_fff">
-        <div class="auto_container">
-            <div class="hiringSlider_section_detail">
-                <div class="custom_tittle">
-                    <h2 class="text-center"><strong>Companies Actively</strong> Hiring</h2>
-                </div>
-
-                <div class="hiring_slider">
-                    <div class="col-lg-12">
-                        <div class="logo-area">
-                            <div class="sponsorsSection">
-                                <div class="sponsorSlider">
-                                    <div><span><img src="/bizionic/images/hiring_slider1.png" alt=""></span></div> 
-                                    <div><span><img src="/bizionic/images/hiring_slider2.png" alt=""></span></div> 
-                                    <div><span><img src="/bizionic/images/hiring_slider3.png" alt=""></span></div> 
-                                    <div><span><img src="/bizionic/images/hiring_slider4.png" alt=""></span></div> 
-                                    <div><span><img src="/bizionic/images/hiring_slider5.png" alt=""></span></div> 
-                                    <div><span><img src="/bizionic/images/hiring_slider2.png" alt=""></span></div> 
-                                    <div><span><img src="/bizionic/images/hiring_slider5.png" alt=""></span></div> 
-                                    <div><span><img src="/bizionic/images/hiring_slider1.png" alt=""></span></div> 
-                                    <div><span><img src="/bizionic/images/hiring_slider3.png" alt=""></span></div> 
-                                    <div><span><img src="/bizionic/images/hiring_slider4.png" alt=""></span></div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
             </div>
         </div>
     </div>
@@ -243,11 +67,7 @@
 
 
 
-
-
-
-
-    <div class="newHireUpdate_page">
+    <div class="careerPage_container">
         <div class="auto_container">
             <div class="careerPage_container_detail">
 
@@ -258,7 +78,7 @@
                 <div class="embark_section">
                     <div class="careerPage_inner">
                         <div class="custom_tittle">
-                            <h2 class="text-white d-none"><strong>Embark An Exciting Career Journey with BIZIONIC</strong></h2>
+                            <h2 class="text-white"><strong>Embark An Exciting Career Journey with BIZIONIC</strong></h2>
                             <p class="text-justify text-white">At BIZIONIC, we believe in pushing boundaries,
                                 challenging norms, and shaping the "How work should be in the future of the Technologies
                                 and Marketing Domain." We are a trailblazing company that thrives on the passion and
@@ -311,7 +131,8 @@
                     <div class="careerPage_inner">
                         <div class="industryNew_section1 marketingTalent_info">
                             <div class="row align-items-center">
-                                <div class="col-lg-6 col-md-12 ">
+                                <div class="col-lg-6 col-md-12 aos-init " data-aos="fade-right" data-aos-duration="1000"
+                                    data-aos-easing="ease">
                                     <div class="custom_tittle">
                                         <h2 class="text-left"><strong>For</strong> Tech <strong>and</strong> Marketing
                                             Talent</h2>
@@ -333,7 +154,8 @@
                                 </div>
 
 
-                                <div class="col-lg-6 col-md-12 pb-3 ">
+                                <div class="col-lg-6 col-md-12 pb-3 aos-init " data-aos="fade-left"
+                                    data-aos-duration="1000" data-aos-easing="ease">
                                     <div class="industryNew_section1_avatar">
                                         <span><img src="/bizionic/images/marketing_talent_img1.png" alt="#" /></span>
                                     </div>
@@ -343,30 +165,20 @@
 
 
                             <div class="row align-items-center pt-2">
-                                <div class="col-lg-12 col-md-12 ">
+                                <div class="col-lg-12 col-md-12 aos-init " data-aos="fade-right"
+                                    data-aos-duration="1500" data-aos-easing="ease">
                                     <div class="custom_tittle p-0">
                                         <h2 class="text-left"><strong>Find</strong> Work Now: </h2>
 
                                         <p class="text-left p_color">Get employed at your terms, desired companies,
                                             time, hours and working conditions.</p>
                                         <a href="/hire/developer/developers-other/instaHirin-Onboard-Form"
-                                            class="btn_default revoBtn">Revolutionize Your Employment Journey!</a>
+                                            class="btn_default">Let's Get You Onboarded</a>
                                     </div>
                                 </div>
                             </div>
                         </div>
 
-                    </div>
-
-
-                    <div class="getEmployed_section">
-                        <div class="getEmployed_info">
-                            <div class="custom_tittle text-left pb-0">
-                                <h2 class="text-white"><strong>Be Your</strong> Own BOSS</h2>
-                                <p class="text-white">Get <b>employed</b> at your terms, desired companies, time, hours and working conditions.</p>
-                                <a href="" class="btn_default_white mt-4">Learn More</a>
-                            </div>
-                        </div>
                     </div>
 
                 </div>
@@ -376,157 +188,112 @@
 
                 <!-- looking work section  -->
 
-                <div class="lookingWork_section ">
-                            <div class="accendDream_section">
-                                <div class="accendDream_sectionDetail">
-                                    <div class="custom_tittle text-left pb-0">
-                                        <h3 class="">
-                                            Ascend <strong>Your</strong> Dream Career <strong>Ladder<br> 
-                                            at</strong> Bizionic — <strong>Where</strong> Ambitions <strong>are</strong><br> Sculpted <strong>into Successes.
-                                        </h2>
-                                        <p class="p_color">Join Forces with Our Proficient Software Developers,<br> Creative Designers, and Sharp Marketers.</p>
-                                        <a href="" class="btn_default mt-4">Join Team Bizionic</a>
-                                    </div>
-                                </div>
-                            </div>
+                <div class="lookingWork_section bg_fff">
                     <div class="careerPage_inner">
+                        <div class="custom_tittle">
+                            <h2 class="text-left"><strong>For</strong> Tech <strong>and</strong> Marketing Talent <br>
+                                looking <strong>to</strong> Work <strong>at BIZIONIC</strong> </h2>
+                        </div>
 
-                        <div class="innerSec1">
+                        <div class="lookingWork_list">
+                            <h3>Why <strong>Work</strong> with Bizionic:</h3>
 
+                            <div class="lookingWork_list_info">
+                                <div class="row">
 
-                            
+                                    <div class="col-lg-6 col-md-6 aos-init " data-aos="fade-right"
+                                        data-aos-duration="300" data-aos-easing="">
+                                        <div class="aboutBizionic_col_info">
+                                            <h4>Cutting-Edge Technology:</h4>
+                                            <p><span><img src="/bizionic/images/looking_icon1.png" alt="#" /></span>
 
-
-
-
-                            <div class="custom_tittle d-none">
-                                <h2 class="text-left"><strong>For</strong> Tech <strong>and</strong> Marketing Talent <br>
-                                    looking <strong>to</strong> Work <strong>at BIZIONIC</strong> </h2>
-                            </div>
-
-                            <div class="lookingWork_list">
-                                <h2 class="text-center">Why <strong>Work</strong> with Bizionic</h2>
-
-                                <div class="lookingWork_list_info">
-                                    <div class="row">
-
-                                        <div class="col-lg-4 col-md-6  lokingCol">
-                                            <div class="aboutBizionic_col_info">
-                                                <div class="whyWork-tittle">
-                                                    <span><img src="/bizionic/images/looking_icon1.png" alt="#" /></span>
-                                                    <h4>Cutting-Edge Technology:</h4>
-                                                </div>
-                                                <p>
-
-                                                    Be at the forefront of technological advancements and work with the
-                                                    latest tools and platforms to create impactful solutions for our
-                                                    clients.
+                                                Be at the forefront of technological advancements and work with the
+                                                latest tools and platforms to create impactful solutions for our
+                                                clients.
 
 
-                                                </p>
-                                            </div>
+                                            </p>
                                         </div>
-
-
-                                        <div class="col-lg-4 col-md-6  lokingCol">
-                                            <div class="aboutBizionic_col_info">
-                                                <div class="whyWork-tittle">
-                                                    <span><img src="/bizionic/images/looking_icon2.png" alt="#" /></span>
-                                                    <h4>Collaborative Environment:</h4>
-                                                </div>
-                                                <p>
-
-                                                    Join an inclusive team that fosters creativity, idea-sharing, and
-                                                    continuous learning. The best results come from diverse perspectives and
-                                                    teamwork.
-                                                </p>
-                                            </div>
-                                        </div>
-
-
-
-
-
-                                        <div class="col-lg-4 col-md-6  lokingCol">
-                                            <div class="aboutBizionic_col_info">
-                                                <div class="whyWork-tittle">
-                                                    <span><img src="/bizionic/images/looking_icon3.png" alt="#" /></span>
-                                                    <h4>IMPACTFUL PROJECTS:</h4>
-                                                </div>
-                                                <p>
-
-                                                    Work on exciting projects for various clients spanning various
-                                                    industries. From global brands to startups, you can make a real impact
-                                                    and contribute to their success.
-                                                </p>
-                                            </div>
-                                        </div>
-                                        <div class="col-lg-4 col-md-6  lokingCol">
-                                            <div class="aboutBizionic_col_info">
-                                                <div class="whyWork-tittle">
-                                                    <span><img src="/bizionic/images/looking_icon4.png" alt="#" /></span>
-                                                    <h4>WORK-LIFE BALANCE:</h4>
-                                                </div>
-                                                <p>
-
-                                                    We believe in maintaining a healthy work-life balance. Enjoy flexible
-                                                    work arrangements, wellness programs, and a supportive work culture that
-                                                    prioritizes your well-being.
-                                                </p>
-                                            </div>
-                                        </div>
-
-
-
-
-
-                                        <div class="col-lg-4 col-md-6  lokingCol">
-                                            <div class="aboutBizionic_col_info">
-                                                <div class="whyWork-tittle">
-                                                    <span><img src="/bizionic/images/looking_icon5.png" alt="#" /></span>
-                                                    <h4>CAREER GROWTH:</h4>
-                                                </div>
-                                                <p>
-
-                                                    We are committed to your professional growth and development. Through
-                                                    mentorship programs, training opportunities, and challenging
-                                                    assignments, we provide a supportive environment for you to expand your
-                                                    skills and advance your career.
-                                                </p>
-                                            </div>
-                                        </div>
-                                        <div class="col-lg-4 col-md-6 lokingCol">
-                                            <div class="aboutBizionic_col_info">
-                                                <div class="whyWork-tittle">
-                                                    <span><img src="/bizionic/images/looking_icon6.png" alt="#" /></span>
-                                                    <h4>FLEXIBLE WORKING CONTRACT:</h4>
-                                                </div>
-                                                <p>
-
-                                                    We believe in providing you with desired employment working model,
-                                                    remote, hybrid, part-time employment, full-time employment, freelancing,
-                                                    or project-based employment.
-                                                </p>
-                                            </div>
-                                        </div>
-
-
-
                                     </div>
+
+
+                                    <div class="col-lg-6 col-md-6 aos-init " data-aos="fade-left"
+                                        data-aos-duration="500" data-aos-easing="">
+                                        <div class="aboutBizionic_col_info">
+                                            <h4>Collaborative Environment:</h4>
+                                            <p><span><img src="/bizionic/images/looking_icon2.png" alt="#" /></span>
+
+                                                Join an inclusive team that fosters creativity, idea-sharing, and
+                                                continuous learning. The best results come from diverse perspectives and
+                                                teamwork.
+                                            </p>
+                                        </div>
+                                    </div>
+
+
+
+
+
+                                    <div class="col-lg-6 col-md-6 aos-init " data-aos="fade-right"
+                                        data-aos-duration="700" data-aos-easing="">
+                                        <div class="aboutBizionic_col_info">
+                                            <h4>IMPACTFUL PROJECTS:</h4>
+                                            <p><span><img src="/bizionic/images/looking_icon3.png" alt="#" /></span>
+
+                                                Work on exciting projects for various clients spanning various
+                                                industries. From global brands to startups, you can make a real impact
+                                                and contribute to their success.
+                                            </p>
+                                        </div>
+                                    </div>
+                                    <div class="col-lg-6 col-md-6 aos-init " data-aos="fade-left"
+                                        data-aos-duration="900" data-aos-easing="">
+                                        <div class="aboutBizionic_col_info">
+                                            <h4>WORK-LIFE BALANCE:</h4>
+                                            <p><span><img src="/bizionic/images/looking_icon4.png" alt="#" /></span>
+
+                                                We believe in maintaining a healthy work-life balance. Enjoy flexible
+                                                work arrangements, wellness programs, and a supportive work culture that
+                                                prioritizes your well-being.
+                                            </p>
+                                        </div>
+                                    </div>
+
+
+
+
+
+                                    <div class="col-lg-6 col-md-6 aos-init " data-aos="fade-right"
+                                        data-aos-duration="1100" data-aos-easing="">
+                                        <div class="aboutBizionic_col_info">
+                                            <h4>CAREER GROWTH:</h4>
+                                            <p><span><img src="/bizionic/images/looking_icon5.png" alt="#" /></span>
+
+                                                We are committed to your professional growth and development. Through
+                                                mentorship programs, training opportunities, and challenging
+                                                assignments, we provide a supportive environment for you to expand your
+                                                skills and advance your career.
+                                            </p>
+                                        </div>
+                                    </div>
+                                    <div class="col-lg-6 col-md-6 aos-init " data-aos="fade-left"
+                                        data-aos-duration="1300" data-aos-easing="">
+                                        <div class="aboutBizionic_col_info">
+                                            <h4>FLEXIBLE WORKING CONTRACT:</h4>
+                                            <p><span><img src="/bizionic/images/looking_icon6.png" alt="#" /></span>
+
+                                                We believe in providing you with desired employment working model,
+                                                remote, hybrid, part-time employment, full-time employment, freelancing,
+                                                or project-based employment.
+                                            </p>
+                                        </div>
+                                    </div>
+
+
+
                                 </div>
                             </div>
-
                         </div>
-
-
-
-                        <div class="advaceCareer_hire">
-
-                            <jobs-component></jobs-component>
-
-                        </div>
-
-
                     </div>
                 </div>
 
@@ -535,7 +302,41 @@
 
                 <!-- open position section -->
 
-                
+                <div class="buildTeam_section openPosition_sec">
+                    <div class="auto_container">
+                        <div class="careerPage_inner">
+                            <div class="row">
+                                <div class="custom_tittle">
+                                    <h2 class="text-left p-0"><strong>Current</strong> Open Positions:</h2>
+                                </div>
+                            </div>
+                            <div class="row">
+
+                                @foreach($jobs as $key=>$job)
+                                <div class="col-lg-4 col-md-6 buildCol">
+                                    <div class="buildTeam_col">
+                                        <strong>{{$key+1}}. {{$job->title}}:</strong>
+                                        {!!$job->description!!}
+                                        {{-- <a href="{{ route('apply-now-form', ['jobId' => $job->id]) }}"
+                                            target="_blank" class="btn_default">Show more</a> --}}
+                                        <a href="/industries/industries-we-serve/industries/jobid?jobId={{ $job->id }}"
+                                            target="_blank" class="btn_default">Show more</a>
+
+                                    </div>
+                                </div>
+                                @endforeach
+
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                {{-- <style>
+                    .description {
+                        height: 100px;
+                        overflow: hidden;
+                    }
+                </style> --}}
 
 
 
@@ -1011,8 +812,3 @@
 
 
 </div>
-
-
-
-
- 
