@@ -1,4 +1,4 @@
-<div class="bg_cfd1d2 d-none">
+<div class="bg_cfd1d2 ">
 
 
 
@@ -291,7 +291,7 @@
                                         </div>
 
                                         <div class="col-lg-4 col-md-5">
-                                            <a href="#careerPage_inner_zone" class="btn_default_white">Join Team
+                                            <a href="#" class="btn_default_white">Join Team
                                                 Bizionic</a>
                                         </div>
                                     </div>
@@ -349,7 +349,7 @@
 
                                         <p class="text-left p_color">Get employed at your terms, desired companies,
                                             time, hours and working conditions.</p>
-                                        <a href="/hire/developer/developers-other/instaHirin-Onboard-Form"
+                                        <a href="/hire/developer/front-end-developement/revolution-journey"
                                             class="btn_default revoBtn">Revolutionize Your Employment Journey!</a>
                                     </div>
                                 </div>
@@ -364,7 +364,7 @@
                             <div class="custom_tittle text-left pb-0">
                                 <h2 class="text-white"><strong>Be Your</strong> Own BOSS</h2>
                                 <p class="text-white">Get <b>employed</b> at your terms, desired companies, time, hours and working conditions.</p>
-                                <a href="" class="btn_default_white mt-4">Learn More</a>
+                                <a href="/hire/developer/front-end-developement/own-boss-learn-more" class="btn_default_white mt-4">Learn More</a>
                             </div>
                         </div>
                     </div>
