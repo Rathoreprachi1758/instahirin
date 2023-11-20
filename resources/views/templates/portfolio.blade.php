@@ -6,39 +6,310 @@
      
      <!-- our work section  -->
 
-     <div class="at_bizionic_section portfolioSection bg_f1f1f1"> 
-        <div class="at_bizionic_section_detail">
+     <div class="at_bizionic_section portfolioPage "> 
+        <div class="auto_container">
+            <div class="at_bizionic_section_detail">
 
-            <div class="portfolioAvatar aos-init aos-animate" data-aos="fade-up" data-aos-duration="600" data-aos-easing="ease-in">
-                <span><img src="/bizionic/images/portfolio_avatar.png" alt="#" /></span>
-            </div>
+                <div class="portfolioAvatar pt-2 pb-5 aos-init aos-animate" data-aos="fade-up" data-aos-duration="600" data-aos-easing="ease-in">
+                    <span><img src="/bizionic/images/potfolio_tittle.png" alt="#" /></span>
+                </div>
 
-            <div class="custom_tittle  aos-init aos-animate"   data-aos="fade-up" data-aos-duration="800" data-aos-easing="ease">
-                <p class="p_color">Portfolio</p>
-                <h2><strong>Our</strong> Work</h2>
-            </div>
+                <div class="portfolioAvatar aos-init aos-animate" data-aos="fade-up" data-aos-duration="600" data-aos-easing="ease-in">
+                    <span><img src="/bizionic/images/portfolio_avatar.png" alt="#" /></span>
+                </div>
 
-            <div class="at_bizionic_steps">
-                <div class="row">
-                    <div class="col-lg-4 col-md-4 p-0  aos-init aos-animate"   data-aos="flip-left" data-aos-duration="2000" data-aos-easing="ease-out-cubic">
-                        <div class="at_bizionicSteps_col">
-                            <span><img src="/bizionic/images/portfolio_img1.jpg" alt="#" /></span>
-                        </div>
-                    </div>
-                    <div class="col-lg-4 col-md-4 p-0 aos-init aos-animate"  data-aos="flip-left" data-aos-duration="2000" data-aos-easing="ease-out-cubic">
-                        <div class="at_bizionicSteps_col">
-                            <span><img src="/bizionic/images/portfolio_img2.jpg" alt="#" /></span>
-                        </div>
-                    </div>
-                    <div class="col-lg-4 col-md-4 p-0 aos-init aos-animate"  data-aos="flip-left" data-aos-duration="2000" data-aos-easing="ease-out-cubic">
-                        <div class="at_bizionicSteps_col">
-                            <span><img src="/bizionic/images/portfolio_img3.jpg" alt="#" /></span>
-                        </div>
+                <div class="custom_tittle  aos-init aos-animate"   data-aos="fade-up" data-aos-duration="800" data-aos-easing="ease">
+                    <p class="p_color">Portfolio</p>
+                    <h2><strong>Our</strong> Work</h2>
+                </div>
+
+                <div class="at_bizionic_steps">
+                    <div class="row">
+                        <div class="col-lg-3 col-md-4 portfolioCol  aos-init aos-animate"   data-aos="flip-left" data-aos-duration="2000" data-aos-easing="ease-out-cubic">
+                            <div class="at_bizionicSteps_col">
+                                <a href="#">
+                                    <img src="/bizionic/images/portfolio_pic1.png" alt="#" />
+                                    <b><i class="fa fa-long-arrow-right" aria-hidden="true"></i></b>
+                                </a>
+                            </div>
+                        </div> 
+                        <div class="col-lg-3 col-md-4 portfolioCol  aos-init aos-animate"   data-aos="flip-left" data-aos-duration="2000" data-aos-easing="ease-out-cubic">
+                            <div class="at_bizionicSteps_col">
+                                <a href="#">
+                                    <img src="/bizionic/images/portfolio_pic2.png" alt="#" />
+                                    <b><i class="fa fa-long-arrow-right" aria-hidden="true"></i></b>
+                                </a>
+                            </div>
+                        </div> 
+                        <div class="col-lg-3 col-md-4 portfolioCol  aos-init aos-animate"   data-aos="flip-left" data-aos-duration="2000" data-aos-easing="ease-out-cubic">
+                            <div class="at_bizionicSteps_col">
+                                <a href="#">
+                                    <img src="/bizionic/images/portfolio_pic3.png" alt="#" />
+                                    <b><i class="fa fa-long-arrow-right" aria-hidden="true"></i></b>
+                                </a>
+                            </div>
+                        </div> 
+                        <div class="col-lg-3 col-md-4 portfolioCol  aos-init aos-animate"   data-aos="flip-left" data-aos-duration="2000" data-aos-easing="ease-out-cubic">
+                            <div class="at_bizionicSteps_col">
+                                <a href="#">
+                                    <img src="/bizionic/images/portfolio_pic4.png" alt="#" />
+                                    <b><i class="fa fa-long-arrow-right" aria-hidden="true"></i></b>
+                                </a>
+                            </div>
+                        </div> 
+                        <div class="col-lg-3 col-md-4 portfolioCol  aos-init aos-animate"   data-aos="flip-left" data-aos-duration="2000" data-aos-easing="ease-out-cubic">
+                            <div class="at_bizionicSteps_col">
+                                <a href="#">
+                                    <img src="/bizionic/images/portfolio_pic5.png" alt="#" />
+                                    <b><i class="fa fa-long-arrow-right" aria-hidden="true"></i></b>
+                                </a>
+                            </div>
+                        </div> 
+                        <div class="col-lg-3 col-md-4 portfolioCol  aos-init aos-animate"   data-aos="flip-left" data-aos-duration="2000" data-aos-easing="ease-out-cubic">
+                            <div class="at_bizionicSteps_col">
+                                <a href="#">
+                                    <img src="/bizionic/images/portfolio_pic6.png" alt="#" />
+                                    <b><i class="fa fa-long-arrow-right" aria-hidden="true"></i></b>
+                                </a>
+                            </div>
+                        </div> 
+                        <div class="col-lg-3 col-md-4 portfolioCol  aos-init aos-animate"   data-aos="flip-left" data-aos-duration="2000" data-aos-easing="ease-out-cubic">
+                            <div class="at_bizionicSteps_col">
+                                <a href="#">
+                                    <img src="/bizionic/images/portfolio_pic7.png" alt="#" />
+                                    <b><i class="fa fa-long-arrow-right" aria-hidden="true"></i></b>
+                                </a>
+                            </div>
+                        </div> 
+                        <div class="col-lg-3 col-md-4 portfolioCol  aos-init aos-animate"   data-aos="flip-left" data-aos-duration="2000" data-aos-easing="ease-out-cubic">
+                            <div class="at_bizionicSteps_col">
+                                <a href="#">
+                                    <img src="/bizionic/images/portfolio_pic8.png" alt="#" />
+                                    <b><i class="fa fa-long-arrow-right" aria-hidden="true"></i></b>
+                                </a>
+                            </div>
+                        </div> 
+                        <div class="col-lg-3 col-md-4 portfolioCol  aos-init aos-animate"   data-aos="flip-left" data-aos-duration="2000" data-aos-easing="ease-out-cubic">
+                            <div class="at_bizionicSteps_col">
+                                <a href="#">
+                                    <img src="/bizionic/images/portfolio_pic9.png" alt="#" />
+                                    <b><i class="fa fa-long-arrow-right" aria-hidden="true"></i></b>
+                                </a>
+                            </div>
+                        </div> 
+                        <div class="col-lg-3 col-md-4 portfolioCol  aos-init aos-animate"   data-aos="flip-left" data-aos-duration="2000" data-aos-easing="ease-out-cubic">
+                            <div class="at_bizionicSteps_col">
+                                <a href="#">
+                                    <img src="/bizionic/images/portfolio_pic10.png" alt="#" />
+                                    <b><i class="fa fa-long-arrow-right" aria-hidden="true"></i></b>
+                                </a>
+                            </div>
+                        </div> 
+                        <div class="col-lg-3 col-md-4 portfolioCol  aos-init aos-animate"   data-aos="flip-left" data-aos-duration="2000" data-aos-easing="ease-out-cubic">
+                            <div class="at_bizionicSteps_col">
+                                <a href="#">
+                                    <img src="/bizionic/images/portfolio_pic11.png" alt="#" />
+                                    <b><i class="fa fa-long-arrow-right" aria-hidden="true"></i></b>
+                                </a>
+                            </div>
+                        </div> 
+                        <div class="col-lg-3 col-md-4 portfolioCol  aos-init aos-animate"   data-aos="flip-left" data-aos-duration="2000" data-aos-easing="ease-out-cubic">
+                            <div class="at_bizionicSteps_col">
+                                <a href="#">
+                                    <img src="/bizionic/images/portfolio_pic12.png" alt="#" />
+                                    <b><i class="fa fa-long-arrow-right" aria-hidden="true"></i></b>
+                                </a>
+                            </div>
+                        </div> 
+                        <div class="col-lg-3 col-md-4 portfolioCol  aos-init aos-animate"   data-aos="flip-left" data-aos-duration="2000" data-aos-easing="ease-out-cubic">
+                            <div class="at_bizionicSteps_col">
+                                <a href="#">
+                                    <img src="/bizionic/images/portfolio_pic13.png" alt="#" />
+                                    <b><i class="fa fa-long-arrow-right" aria-hidden="true"></i></b>
+                                </a>
+                            </div>
+                        </div> 
+                        <div class="col-lg-3 col-md-4 portfolioCol  aos-init aos-animate"   data-aos="flip-left" data-aos-duration="2000" data-aos-easing="ease-out-cubic">
+                            <div class="at_bizionicSteps_col">
+                                <a href="#">
+                                    <img src="/bizionic/images/portfolio_pic14.png" alt="#" />
+                                    <b><i class="fa fa-long-arrow-right" aria-hidden="true"></i></b>
+                                </a>
+                            </div>
+                        </div> 
+                        <div class="col-lg-3 col-md-4 portfolioCol  aos-init aos-animate"   data-aos="flip-left" data-aos-duration="2000" data-aos-easing="ease-out-cubic">
+                            <div class="at_bizionicSteps_col">
+                                <a href="#">
+                                    <img src="/bizionic/images/portfolio_pic15.png" alt="#" />
+                                    <b><i class="fa fa-long-arrow-right" aria-hidden="true"></i></b>
+                                </a>
+                            </div>
+                        </div> 
+                        <div class="col-lg-3 col-md-4 portfolioCol  aos-init aos-animate"   data-aos="flip-left" data-aos-duration="2000" data-aos-easing="ease-out-cubic">
+                            <div class="at_bizionicSteps_col">
+                                <a href="#">
+                                    <img src="/bizionic/images/portfolio_pic16.png" alt="#" />
+                                    <b><i class="fa fa-long-arrow-right" aria-hidden="true"></i></b>
+                                </a>
+                            </div>
+                        </div> 
+                        <div class="col-lg-3 col-md-4 portfolioCol  aos-init aos-animate"   data-aos="flip-left" data-aos-duration="2000" data-aos-easing="ease-out-cubic">
+                            <div class="at_bizionicSteps_col">
+                                <a href="#">
+                                    <img src="/bizionic/images/portfolio_pic17.png" alt="#" />
+                                    <b><i class="fa fa-long-arrow-right" aria-hidden="true"></i></b>
+                                </a>
+                            </div>
+                        </div> 
+                        <div class="col-lg-3 col-md-4 portfolioCol  aos-init aos-animate"   data-aos="flip-left" data-aos-duration="2000" data-aos-easing="ease-out-cubic">
+                            <div class="at_bizionicSteps_col">
+                                <a href="#">
+                                    <img src="/bizionic/images/portfolio_pic18.png" alt="#" />
+                                    <b><i class="fa fa-long-arrow-right" aria-hidden="true"></i></b>
+                                </a>
+                            </div>
+                        </div> 
+                        <div class="col-lg-3 col-md-4 portfolioCol  aos-init aos-animate"   data-aos="flip-left" data-aos-duration="2000" data-aos-easing="ease-out-cubic">
+                            <div class="at_bizionicSteps_col">
+                                <a href="#">
+                                    <img src="/bizionic/images/portfolio_pic19.png" alt="#" />
+                                    <b><i class="fa fa-long-arrow-right" aria-hidden="true"></i></b>
+                                </a>
+                            </div>
+                        </div> 
+                        <div class="col-lg-3 col-md-4 portfolioCol  aos-init aos-animate"   data-aos="flip-left" data-aos-duration="2000" data-aos-easing="ease-out-cubic">
+                            <div class="at_bizionicSteps_col">
+                                <a href="#">
+                                    <img src="/bizionic/images/portfolio_pic20.png" alt="#" />
+                                    <b><i class="fa fa-long-arrow-right" aria-hidden="true"></i></b>
+                                </a>
+                            </div>
+                        </div> 
+                        <div class="col-lg-3 col-md-4 portfolioCol  aos-init aos-animate"   data-aos="flip-left" data-aos-duration="2000" data-aos-easing="ease-out-cubic">
+                            <div class="at_bizionicSteps_col">
+                                <a href="#">
+                                    <img src="/bizionic/images/portfolio_pic21.png" alt="#" />
+                                    <b><i class="fa fa-long-arrow-right" aria-hidden="true"></i></b>
+                                </a>
+                            </div>
+                        </div> 
+                        <div class="col-lg-3 col-md-4 portfolioCol  aos-init aos-animate"   data-aos="flip-left" data-aos-duration="2000" data-aos-easing="ease-out-cubic">
+                            <div class="at_bizionicSteps_col">
+                                <a href="#">
+                                    <img src="/bizionic/images/portfolio_pic22.png" alt="#" />
+                                    <b><i class="fa fa-long-arrow-right" aria-hidden="true"></i></b>
+                                </a>
+                            </div>
+                        </div> 
+                        <div class="col-lg-3 col-md-4 portfolioCol  aos-init aos-animate"   data-aos="flip-left" data-aos-duration="2000" data-aos-easing="ease-out-cubic">
+                            <div class="at_bizionicSteps_col">
+                                <a href="#">
+                                    <img src="/bizionic/images/portfolio_pic23.png" alt="#" />
+                                    <b><i class="fa fa-long-arrow-right" aria-hidden="true"></i></b>
+                                </a>
+                            </div>
+                        </div> 
+                        <div class="col-lg-3 col-md-4 portfolioCol  aos-init aos-animate"   data-aos="flip-left" data-aos-duration="2000" data-aos-easing="ease-out-cubic">
+                            <div class="at_bizionicSteps_col">
+                                <a href="#">
+                                    <img src="/bizionic/images/portfolio_pic24.png" alt="#" />
+                                    <b><i class="fa fa-long-arrow-right" aria-hidden="true"></i></b>
+                                </a>
+                            </div>
+                        </div> 
+                        <div class="col-lg-3 col-md-4 portfolioCol  aos-init aos-animate"   data-aos="flip-left" data-aos-duration="2000" data-aos-easing="ease-out-cubic">
+                            <div class="at_bizionicSteps_col">
+                                <a href="#">
+                                    <img src="/bizionic/images/portfolio_pic25.png" alt="#" />
+                                    <b><i class="fa fa-long-arrow-right" aria-hidden="true"></i></b>
+                                </a>
+                            </div>
+                        </div> 
+                        <div class="col-lg-3 col-md-4 portfolioCol  aos-init aos-animate"   data-aos="flip-left" data-aos-duration="2000" data-aos-easing="ease-out-cubic">
+                            <div class="at_bizionicSteps_col">
+                                <a href="#">
+                                    <img src="/bizionic/images/portfolio_pic26.png" alt="#" />
+                                    <b><i class="fa fa-long-arrow-right" aria-hidden="true"></i></b>
+                                </a>
+                            </div>
+                        </div> 
+                        <div class="col-lg-3 col-md-4 portfolioCol  aos-init aos-animate"   data-aos="flip-left" data-aos-duration="2000" data-aos-easing="ease-out-cubic">
+                            <div class="at_bizionicSteps_col">
+                                <a href="#">
+                                    <img src="/bizionic/images/portfolio_pic26.png" alt="#" />
+                                    <b><i class="fa fa-long-arrow-right" aria-hidden="true"></i></b>
+                                </a>
+                            </div>
+                        </div> 
+                        <div class="col-lg-3 col-md-4 portfolioCol  aos-init aos-animate"   data-aos="flip-left" data-aos-duration="2000" data-aos-easing="ease-out-cubic">
+                            <div class="at_bizionicSteps_col">
+                                <a href="#">
+                                    <img src="/bizionic/images/portfolio_pic28.png" alt="#" />
+                                    <b><i class="fa fa-long-arrow-right" aria-hidden="true"></i></b>
+                                </a>
+                            </div>
+                        </div> 
+                        <div class="col-lg-3 col-md-4 portfolioCol  aos-init aos-animate"   data-aos="flip-left" data-aos-duration="2000" data-aos-easing="ease-out-cubic">
+                            <div class="at_bizionicSteps_col">
+                                <a href="#">
+                                    <img src="/bizionic/images/portfolio_pic29.png" alt="#" />
+                                    <b><i class="fa fa-long-arrow-right" aria-hidden="true"></i></b>
+                                </a>
+                            </div>
+                        </div> 
+                        <div class="col-lg-3 col-md-4 portfolioCol  aos-init aos-animate"   data-aos="flip-left" data-aos-duration="2000" data-aos-easing="ease-out-cubic">
+                            <div class="at_bizionicSteps_col">
+                                <a href="#">
+                                    <img src="/bizionic/images/portfolio_pic30.png" alt="#" />
+                                    <b><i class="fa fa-long-arrow-right" aria-hidden="true"></i></b>
+                                </a>
+                            </div>
+                        </div> 
+                        <div class="col-lg-3 col-md-4 portfolioCol  aos-init aos-animate"   data-aos="flip-left" data-aos-duration="2000" data-aos-easing="ease-out-cubic">
+                            <div class="at_bizionicSteps_col">
+                                <a href="#">
+                                    <img src="/bizionic/images/portfolio_pic31.png" alt="#" />
+                                    <b><i class="fa fa-long-arrow-right" aria-hidden="true"></i></b>
+                                </a>
+                            </div>
+                        </div> 
+                        <div class="col-lg-3 col-md-4 portfolioCol  aos-init aos-animate"   data-aos="flip-left" data-aos-duration="2000" data-aos-easing="ease-out-cubic">
+                            <div class="at_bizionicSteps_col">
+                                <a href="#">
+                                    <img src="/bizionic/images/portfolio_pic32.png" alt="#" />
+                                    <b><i class="fa fa-long-arrow-right" aria-hidden="true"></i></b>
+                                </a>
+                            </div>
+                        </div> 
+                        <div class="col-lg-3 col-md-4 portfolioCol  aos-init aos-animate"   data-aos="flip-left" data-aos-duration="2000" data-aos-easing="ease-out-cubic">
+                            <div class="at_bizionicSteps_col">
+                                <a href="#">
+                                    <img src="/bizionic/images/portfolio_pic33.png" alt="#" />
+                                    <b><i class="fa fa-long-arrow-right" aria-hidden="true"></i></b>
+                                </a>
+                            </div>
+                        </div> 
+                        <div class="col-lg-3 col-md-4 portfolioCol  aos-init aos-animate"   data-aos="flip-left" data-aos-duration="2000" data-aos-easing="ease-out-cubic">
+                            <div class="at_bizionicSteps_col">
+                                <a href="#">
+                                    <img src="/bizionic/images/portfolio_pic34.png" alt="#" />
+                                    <b><i class="fa fa-long-arrow-right" aria-hidden="true"></i></b>
+                                </a>
+                            </div>
+                        </div> 
+                        <div class="col-lg-3 col-md-4 portfolioCol  aos-init aos-animate"   data-aos="flip-left" data-aos-duration="2000" data-aos-easing="ease-out-cubic">
+                            <div class="at_bizionicSteps_col">
+                                <a href="#">
+                                    <img src="/bizionic/images/portfolio_pic35.png" alt="#" />
+                                    <b><i class="fa fa-long-arrow-right" aria-hidden="true"></i></b>
+                                </a>
+                            </div>
+                        </div> 
                     </div>
                 </div>
-            </div>
 
-        </div> 
+            </div> 
+        </div>
     </div>
 
 

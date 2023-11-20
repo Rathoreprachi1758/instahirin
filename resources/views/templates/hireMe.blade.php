@@ -47,7 +47,7 @@
                     </div>
 
                     <div class="embark_teamBtn">
-                        <a href="#" class="btn_default">Join Team Bizionic</a>
+                        <a href="/bizionic-team" class="btn_default">Join Team Bizionic</a>
                     </div>
                 </div>
 
@@ -291,7 +291,7 @@
                                         </div>
 
                                         <div class="col-lg-4 col-md-5">
-                                            <a href="#" class="btn_default_white">Join Team
+                                            <a href="/bizionic-team" class="btn_default_white">Join Team
                                                 Bizionic</a>
                                         </div>
                                     </div>
@@ -385,7 +385,7 @@
                                             at</strong> Bizionic — <strong>Where</strong> Ambitions <strong>are</strong><br> Sculpted <strong>into Successes.
                                         </h2>
                                         <p class="p_color">Join Forces with Our Proficient Software Developers,<br> Creative Designers, and Sharp Marketers.</p>
-                                        <a href="" class="btn_default mt-4">Join Team Bizionic</a>
+                                        <a href="/bizionic-team" class="btn_default mt-4">Join Team Bizionic</a>
                                     </div>
                                 </div>
                             </div>
