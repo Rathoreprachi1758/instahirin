@@ -460,7 +460,7 @@
             <div class="pricing_section_detail">
                 <div class="custom_tittle aos-init aos-animate" data-aos="fade-up" data-aos-duration="800" data-aos-easing="ease">
                     <h2 class="pb-2">Plans &<strong> Pricing</strong></h2>
-                    <p class="p_color">Let us make you brand stand out!</p>
+                    <p class="p_color">Elevate your brand's visibility and distinctiveness with the expertise of Bizionic.</p>
                 </div>
 
 

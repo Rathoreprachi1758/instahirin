@@ -609,10 +609,24 @@
     padding: 20px 8px 0px;
 }
 
+.accendDream_sectionDetail { 
+    padding: 100px 100px 90px 150px;
+}
 
+.sponsorSlider .slick-next { 
+    right: -22px; 
+    width: 28px;
+    height: 28px; 
+}
+.sponsorSlider .slick-prev { 
+    left: -22px; 
+    width: 28px;
+    height: 28px; 
+}
 
-
-
+.revolution_infoDetail { 
+    padding: 40px 25px; 
+}
 
 
 
@@ -1753,9 +1767,66 @@ h6 { font-size: 18px; }
     padding: 5px 8px; 
     font-size: 12px;
 }
+.embark_search_info {
+    width: 100%; 
+    padding: 15px 20px;
+    justify-content: space-between; margin-bottom: 20px;
+}
+.embark_teamBtn {
+    width: 28%;
+    padding-left: 0px;
+}
+.embark_search_section { flex-flow: column;}
+
+
+.sponsorSlider .slick-next { 
+    right: -22px; 
+    width: 28px;
+    height: 28px; 
+}
+.sponsorSlider .slick-prev { 
+    left: -22px; 
+    width: 28px;
+    height: 28px; 
+}
+.getEmployed_info { 
+    padding: 50px 25px; 
+}
+
+.getEmployed_info .custom_tittle p {
+    padding-right: 20px;
+    font-size: 20px;
+}
+
+.accendDream_sectionDetail { 
+    padding: 70px 150px 70px 80px;
+}
+.whyWork-tittle h4 {
+    font-size: 16px !important; 
+}
+.advaceCareer_hire .careerPage_inner { 
+    padding: 50px 0px 0px;
+}
+
+.learnOwn_bossFl { 
+    padding: 50px 40px 40px;
+}
+
+.learnOwn_bossFr { padding-right: 0px;}
+
+.revolution_info { 
+    padding: 60px 40px; 
+}
+.revolution_infoDetail { 
+    padding: 40px 25px; 
+}
+.revolutionCol { padding: 10px !important;}
 
 
 
+.portfolioPage .at_bizionic_section_detail { 
+    padding: 60px 30px;
+}
 
 
 
@@ -3627,16 +3698,130 @@ h6 { font-size: 18px; }
 
 
 
+.embarkMain_section_detail { 
+    padding: 60px 0px;
+}
+.embark_search_section { 
+    display: block;  
+}
+
+.embark_search_info {
+    width: 100%;
+    display: block; margin-bottom: 20px;
+}
+.search1 {
+    width: 100%; 
+    padding: 10px 0px;
+    border-bottom: 1px solid #ccc;
+}
+
+.searchSelect {
+    width: 100%; 
+    padding: 10px 0px;
+    border-bottom: 1px solid #ccc;
+}
+
+.search2 {
+    width: 100%; 
+    padding: 10px 0px;
+    border-bottom: 1px solid #ccc; margin-bottom: 25px;
+}
+
+.search1 b { 
+    top: 8px; ;
+}
+.embark_teamBtn {
+    width: 100%;
+    padding-left: 0px;
+}
+.careerFeaturesCol {
+    padding: 15px !important;
+}
+.careerFeaturesCol_info { 
+    padding: 30px 25px; 
+    align-items: flex-start;
+}
+.sponsorSlider .slick-next { 
+    right: -22px; 
+    width: 28px;
+    height: 28px; 
+}
+.sponsorSlider .slick-prev { 
+    left: -22px; 
+    width: 28px;
+    height: 28px; 
+}
+.hiringSlider_section_detail { 
+    padding: 50px 0px;
+}
+
+.revoBtn {
+    max-width: 330px !important;
+    min-width: auto;
+}
+
+.getEmployed_section { 
+    padding: 15px;
+}
+
+.getEmployed_info {
+    width: 100%;
+    padding: 50px 20px; 
+}
+
+.getEmployed_info .custom_tittle p {
+    padding-right: 0px;
+    font-size: 18px;
+}
+
+.accendDream_sectionDetail { 
+    padding: 50px 20px 50px 20px;
+}
+.accendDream_section { 
+    background-position-x: 64%;
+}
+
+.lokingCol {
+    padding: 15px 5px !important;
+}
 
 
 
 
 
 
+.revolutionBanner_info { 
+    padding: 50px 20px;background-position-x: 38%;
+}
 
+.revolutionBanner_infoText h1 {
+    font-size: 24px;
+}
+.revolutionBanner_sectionDetail { 
+    padding: 0px 0px 60px;
+}
+.revolution_info { 
+    padding: 40px 20px;
+    margin: 25px 0px;
+}
 
+.revolution_infoDetail { 
+    padding: 40px 20px; 
+}
 
+.revolutionCol { padding: 10px !important;}
 
+.learnOwn_bossFl { 
+    padding: 40px 10px 10px 10px;
+}
+
+.revolutionBanner_sectionDetail .getEmployed_section > .row { flex-flow: column-reverse;}
+.learnOwn_bossFr { 
+    padding: 40px 0px 0px;
+}
+.learnOwn_bossFl .custom_tittle h1 {
+    font-size: 24px;
+}
 
 
 
