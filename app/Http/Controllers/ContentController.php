@@ -18,14 +18,16 @@ use App\Models\Experty;
 use App\Models\Countrie;
 use App\Models\TimeZones;
 use App\Models\HireRequest;
-use App\Models\Subscription;
+use App\Models\PlanPricing;
 //use Laravel\Nova\Fields\Timezone;
+use App\Models\Subscription;
 use Illuminate\Http\Request;
 use App\Models\TeamContactUs;
 use App\Models\FundingApplyNow;
 use App\Models\AvailabilityData;
 use App\Models\InstaHirinOnboard;
 use Illuminate\Support\Facades\DB;
+use App\Models\PlanPricingCategory;
 use App\Models\InstaHirinRequirement;
 use Illuminate\Support\Facades\Cache;
 use App\Models\Hire_requests_calender;
@@ -899,5 +901,47 @@ class ContentController extends Controller
     {
         $expertises = Experty::all();
         return response()->json($expertises);
+    }
+
+    // proposal get
+    public function proposalGet($planId)
+    {
+        $plan  = PlanPricing::all($planId);
+        return view('templates.proposal-form', ['plan' => $plan]);
+    }
+
+    // Get Plans and Pricing Categories
+    public function getPlansCategory()
+    {
+        // $categories = PlanPricingCategory::all();
+        $categories = PlanPricingCategory::with('plans.features')->get();
+        return response()->json($categories);
+    }
+
+    // proposal form submission
+    public function proposalForm(Request $request)
+    {
+        $validatedData = $request->validate([
+            'name' => 'required',
+            'company' => '',
+            'email' => 'required|email',
+            // 'country_code' => '',
+            'phone' => '',
+            'plan_category' => '',
+            'plan' => '',
+            'details' => '',
+        ]);
+
+        // Create a new instance of the Hire Request model
+        $formData = new HireRequest();
+
+        // Set the form data from the validated request
+        $formData->name = $validatedData['name'];
+        $formData->company = '-';
+        $formData->email = $validatedData['email'];
+        $formData->phone = $validatedData['country_code'] . $validatedData['phone'];
+        $formData->message = $validatedData['message'];
+
+        $formData->save();
     }
 }
