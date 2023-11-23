@@ -177,13 +177,13 @@
                                 </div>
 
 
-                                <div class="authBtns">
+                                <!-- <div class="authBtns">
                                     <ul>
                                         <li><a href="{{ route('signin') }}">Sign In</a>
                                         </li>
                                         <li><a href="{{ url('/loginpage') }}">Sign Up</a></li>
                                     </ul>
-                                </div>
+                                </div> -->
                             </div>
                         </div>
                     </div>

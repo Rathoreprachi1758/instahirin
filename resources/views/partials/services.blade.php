@@ -97,17 +97,29 @@
                 <div class="servicesProvided_info p-0">
                     <h5 class="text-center">INDUSTRIES</h5>
                     <ul>
-                        <li><a href="#">Real Estate</a></li> | 
-                        <li><a href="#">Travel & Hospitality</a></li> | 
-                        <li><a href="#">B2B Solutions</a></li> | 
-                        <li><a href="#">B2C Solutions</a></li> | 
-                        <li><a href="#">Healthcare</a></li> | 
-                        <li><a href="#">Education & e-Learning</a></li> | 
-                        <li><a href="#">Banking & Finance</a></li> | 
-                        <li><a href="#">Startup Solutions</a></li> | 
-                        <li><a href="#">Media & Publishing</a></li> | 
-                        <li><a href="#">Food & FMCG</a></li> | 
-                                <li><a href="#">E-Commerce</a></li> | 
+                    
+                        <li><a href="/industries/industries-we-serve/industries/startups">Startups Ecosystem</a></li> | 
+                        <li><a href="/industries/industries-we-serve/industries/real-estate">Real Estate</a></li> | 
+                        <li><a href="/industries/industries-we-serve/industries/b2b-solutions">B2B Solutions</a></li> | 
+                        <li><a href="/industries/industries-we-serve/industries/b2c-solutions">B2C Solutions</a></li> | 
+                        <li><a href="/industries/industries-we-serve/industries/healthcare">Healthcare</a></li> | 
+                        <li><a href="/industries/industries-we-serve/industries/travel-and-hospitality">Travel & Hospitality</a></li> | 
+                        <li><a href="/industries/industries-we-serve/industries/banking-and-finance">Banking & Finance</a></li> | 
+                        <li><a href="/industries/industries-we-serve/industries/media-and-publishing">Media & Publishing</a></li> | 
+                        <li><a href="/industries/industries-we-serve/industries/education-and-e-Learning">Education & e-Learning</a></li> |
+                        <li><a href="/industries/industries-we-serve/industries/food-and-fmcg">Food & FMCG</a></li> | 
+                        <li><a href="/industries/industries-we-serve/industries/automotive">Automotive</a></li> | 
+                        <li><a href="/industries/industries-we-serve/industries/retail-e-commerce">Retail and E-Commerce</a></li> | 
+                        <li><a href="/industries/industries-we-serve/industries/manufacturing">Manufacturing</a></li> | 
+                        <li><a href="/industries/industries-we-serve/industries/telecommunications">Telecommunications</a></li> | 
+                        <li><a href="/industries/industries-we-serve/industries/energy-and-utilities">Energy and Utilities</a></li> | 
+                        <li><a href="/industries/industries-we-serve/industries/government">Government</a></li> | 
+                        <li><a href="/industries/industries-we-serve/industries/nonprofits">Nonprofits</a></li> | 
+                        <li><a href="/industries/industries-we-serve/industries/professional-services">Professional Services</a></li> | 
+                        <li><a href="/industries/industries-we-serve/industries/software-as-service">SaaS (Software as a Service)</a></li> | 
+                        <li><a href="/industries/industries-we-serve/industries/consumer-electronics">Consumer Electronics</a></li> | 
+                        <li><a href="/industries/industries-we-serve/industries/fashion-and-apparel">Fashion and Apparel</a></li> | 
+                        <li><a href="ndustries/industries-we-serve/industries/agriculture">Agriculture</a></li>  
                     </ul>
                 </div>
             </div>
