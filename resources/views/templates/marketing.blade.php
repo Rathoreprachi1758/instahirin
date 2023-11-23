@@ -602,8 +602,8 @@
 
 
             <!-- our story section  -->
-
-            <div class="pricing_section bg_fff">
+            <pricing-component></pricing-component>
+            {{-- <div class="pricing_section bg_fff">
                 <div class="auto_container">
                     <div class="pricing_section_detail">
                         <div class="custom_tittle aos-init aos-animate" data-aos="fade-up" data-aos-duration="800"
@@ -1387,7 +1387,7 @@
                         </div>
                     </div>
                 </div>
-            </div>
+            </div> --}}
 
 
 
