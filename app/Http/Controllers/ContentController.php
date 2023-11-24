@@ -907,7 +907,10 @@ class ContentController extends Controller
     public function proposalGet($planId)
     {
         $plan  = PlanPricing::all($planId);
-        return view('templates.proposal-form', ['plan' => $plan]);
+        return view('templates.planId', ['plan' => $plan]);
+        // $planId = $request->query('planId');
+        // $plan = PlanPricing::find($planId);
+        // return view('templates.planId', ['plan' => $plan]);
     }
 
     // Get Plans and Pricing Categories

@@ -76,7 +76,7 @@
         </div>
 
         <div class="consult_btn pt-3 pb-0">
-          <!-- href="/hire/developer/front-end-developement/proposal-form" -->
+          <!-- href="/hire/developer/front-end-developement/planId?planId={{selectedPlan.id}}" -->
           <a
             class="btn_default text-white"
             target="_blank"
