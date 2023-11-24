@@ -31,6 +31,12 @@ Route::get('/{levelOneSlug?}/{levelTwoSlug?}/{levelThreeSlug?}/{levelFourSlug?}'
 // ContactUs Form Submission
 Route::post('/submit-form', [App\Http\Controllers\ContentController::class, 'store'])->name('submit-form');
 
+
+Route::get('/hire/developer/front-end-developement/{planId}', [App\Http\Controllers\ContentController::class, 'proposalGet'])->name('planId');
+
+// Proposal Form Submission
+Route::post('/submit-proposal-form', [App\Http\Controllers\ContentController::class, 'proposalForm'])->name('submit-proposal-form');
+
 // Funding Apply Form Submission
 Route::post('/funding-apply', [App\Http\Controllers\ContentController::class, 'fundingApply'])->name('funding-apply');
 

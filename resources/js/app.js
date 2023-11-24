@@ -43,8 +43,7 @@ import InstaRequirement from "./components/InstaRequirementComponent.vue";
 import FundingApplyNow from "./components/FundingApplyNowComponent.vue";
 import Thankyou from "./components/Thankyou.vue";
 import Proposal from "./components/ProposalFormComponent.vue";
-
-
+import Pricing from "./components/PlansPricingComponent.vue";
 
 app.component("experts-component", ExpertsComponent);
 app.component("experts-list-component", ExpertsListComponent);
@@ -65,8 +64,9 @@ app.component("project-rate-component", ProjectRate);
 app.component("team-component", TeamContactUs);
 app.component("insta-requirement-component", InstaRequirement);
 app.component("funding-apply-now-component", FundingApplyNow);
-app.component("Thankyou-component",Thankyou);
-app.component("proposal-component",Proposal);
+app.component("Thankyou-component", Thankyou);
+app.component("proposal-component", Proposal);
+app.component("pricing-component", Pricing);
 
 // import ExampleComponent from './components/ExampleComponent.vue';
 // app.component('example-component', ExampleComponent);
