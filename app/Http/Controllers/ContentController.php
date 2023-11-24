@@ -944,4 +944,14 @@ class ContentController extends Controller
 
         $formData->save();
     }
+
+
+    // jobs get method
+    public function allJobs(){
+        $jobs = Job::where('status', 'Open')->get();
+
+        return view('templates.all-jobs', ['jobs' => $jobs]);
+   }
+
+
 }

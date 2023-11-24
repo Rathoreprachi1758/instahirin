@@ -47,7 +47,7 @@
                     </div>
 
                     <div class="embark_teamBtn">
-                        <a href="/bizionic-team" class="btn_default">Join Team Bizionic</a>
+                        <a href="#goto_form" class="btn_default">Join Team Bizionic</a>
                     </div>
                 </div>
 
@@ -164,33 +164,39 @@
 
 
     <div class="curentPosition_section bg_f2f2f2">
-        <div class="auto_container">
-            <div class="curentPosition_section_detail">
+        <div class="">
+            <div class="curentPosition_section_detail pb-0">
             <div class="buildTeam_section openPosition_sec">
                     <div class="auto_container">
                         <div class="careerPage_inner">
                             <div class="row">
-                                <div class="custom_tittle">
+                                <div class="custom_tittle viewBtn">
                                     <h2 class="text-left p-0"><strong>Current</strong> Open Positions:</h2>
+                                    <a href="" class="btn_default">View All</a>
                                 </div>
                             </div>
-                            <div class="row">
 
-                                @foreach($jobs as $key=>$job)
-                                <div class="col-lg-4 col-md-6 buildCol">
-                                    <div class="buildTeam_col">
-                                        <strong>{{$key+1}}. {{$job->title}}:</strong>
-                                        {!!$job->description!!}
-                                        {{-- <a href="{{ route('apply-now-form', ['jobId' => $job->id]) }}"
-                                            target="_blank" class="btn_default">Show more</a> --}}
-                                        <a href="/industries/industries-we-serve/industries/jobid?jobId={{ $job->id }}"
-                                            target="_blank" class="btn_default">Show more</a>
+                            <div class="sponsorsSection">
+                                <div class="currentJobSlider">
+                                    @foreach($jobs as $key=>$job)
+                                    <div>
+                                        
+                                        <!-- <div class="col-lg-4 col-md-6 buildCol"> -->
+                                            <div class="buildTeam_col">
+                                                <strong>{{$key+1}}. {{$job->title}}:</strong>
+                                                {!!$job->description!!}
+                                                {{-- <a href="{{ route('apply-now-form', ['jobId' => $job->id]) }}"
+                                                    target="_blank" class="btn_default">Show more</a> --}}
+                                                <a href="/industries/industries-we-serve/industries/jobid?jobId={{ $job->id }}"
+                                                    target="_blank" class="btn_default">Show more</a>
 
-                                    </div>
+                                            </div>
+                                        <!-- </div> -->
+                                       
+                                    </div>  
+                                    @endforeach
                                 </div>
-                                @endforeach
-
-                            </div>
+                            </div> 
                         </div>
                     </div>
                 </div>
@@ -221,16 +227,34 @@
                         <div class="logo-area">
                             <div class="sponsorsSection">
                                 <div class="sponsorSlider">
-                                    <div><span><img src="/bizionic/images/hiring_slider1.png" alt=""></span></div> 
-                                    <div><span><img src="/bizionic/images/hiring_slider2.png" alt=""></span></div> 
-                                    <div><span><img src="/bizionic/images/hiring_slider3.png" alt=""></span></div> 
-                                    <div><span><img src="/bizionic/images/hiring_slider4.png" alt=""></span></div> 
-                                    <div><span><img src="/bizionic/images/hiring_slider5.png" alt=""></span></div> 
-                                    <div><span><img src="/bizionic/images/hiring_slider2.png" alt=""></span></div> 
-                                    <div><span><img src="/bizionic/images/hiring_slider5.png" alt=""></span></div> 
-                                    <div><span><img src="/bizionic/images/hiring_slider1.png" alt=""></span></div> 
-                                    <div><span><img src="/bizionic/images/hiring_slider3.png" alt=""></span></div> 
-                                    <div><span><img src="/bizionic/images/hiring_slider4.png" alt=""></span></div>
+                                    <div><span><img src="/bizionic/images/logo.png" alt=""></span></div> 
+                                    <div><span><img src="/bizionic/images/client_logo10.png" alt=""></span></div>  
+                                    <div><span><img src="/bizionic/images/eshareLogo.png" alt=""></span></div>  
+                                    <div><span><img src="/bizionic/images/client_logo26.jpeg" alt=""></span></div>  
+                                    <div><span><img src="/bizionic/images/client_logo1.png" alt=""></span></div>  
+                                    <div><span><img src="/bizionic/images/client_logo2.png" alt=""></span></div>  
+                                    <div><span><img src="/bizionic/images/client_logo3.png" alt=""></span></div>  
+                                    <div><span><img src="/bizionic/images/client_logo4.png" alt=""></span></div>  
+                                    <div><span><img src="/bizionic/images/client_logo5.png" alt=""></span></div>  
+                                    <div><span><img src="/bizionic/images/client_logo6.png" alt=""></span></div>  
+                                    <div><span><img src="/bizionic/images/client_logo7.png" alt=""></span></div>  
+                                    <div><span><img src="/bizionic/images/client_logo8.png" alt=""></span></div>  
+                                    <div><span><img src="/bizionic/images/client_logo9.png" alt=""></span></div>  
+                                    <div><span><img src="/bizionic/images/client_logo11.png" alt=""></span></div>  
+                                    <div><span><img src="/bizionic/images/client_logo12.png" alt=""></span></div>  
+                                    <div><span><img src="/bizionic/images/client_logo13.png" alt=""></span></div>  
+                                    <div><span><img src="/bizionic/images/client_logo14.png" alt=""></span></div>  
+                                    <div><span><img src="/bizionic/images/client_logo15.png" alt=""></span></div>  
+                                    <div><span><img src="/bizionic/images/client_logo16.png" alt=""></span></div>  
+                                    <div><span><img src="/bizionic/images/client_logo17.png" alt=""></span></div>  
+                                    <div><span><img src="/bizionic/images/client_logo18.png" alt=""></span></div>  
+                                    <div><span><img src="/bizionic/images/client_logo19.png" alt=""></span></div>  
+                                    <div><span><img src="/bizionic/images/client_logo20.png" alt=""></span></div>  
+                                    <div><span><img src="/bizionic/images/client_logo21.png" alt=""></span></div>  
+                                    <div><span><img src="/bizionic/images/client_logo22.png" alt=""></span></div>  
+                                    <div><span><img src="/bizionic/images/client_logo23.png" alt=""></span></div>  
+                                    <div><span><img src="/bizionic/images/client_logo24.png" alt=""></span></div>  
+                                    <div><span><img src="/bizionic/images/client_logo25.png" alt=""></span></div>  
                                 </div>
                             </div>
                         </div>
@@ -291,7 +315,7 @@
                                         </div>
 
                                         <div class="col-lg-4 col-md-5">
-                                            <a href="/bizionic-team" class="btn_default_white">Join Team
+                                            <a href="/bizionic-team#goto_form" class="btn_default_white">Join Team
                                                 Bizionic</a>
                                         </div>
                                     </div>
@@ -385,7 +409,7 @@
                                             at</strong> Bizionic — <strong>Where</strong> Ambitions <strong>are</strong><br> Sculpted <strong>into Successes.
                                         </h2>
                                         <p class="p_color">Join Forces with Our Proficient Software Developers,<br> Creative Designers, and Sharp Marketers.</p>
-                                        <a href="/bizionic-team" class="btn_default mt-4">Join Team Bizionic</a>
+                                        <a href="/bizionic-team#goto_form" class="btn_default mt-4">Join Team Bizionic</a>
                                     </div>
                                 </div>
                             </div>
@@ -520,7 +544,7 @@
 
 
 
-                        <div class="advaceCareer_hire">
+                        <div class="advaceCareer_hire" id="goto_form">
 
                             <jobs-component></jobs-component>
 
@@ -535,17 +559,7 @@
 
                 <!-- open position section -->
 
-                
-
-
-
-
-
-
-
-
-
-
+                 
 
 
 

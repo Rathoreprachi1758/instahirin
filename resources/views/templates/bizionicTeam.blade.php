@@ -655,8 +655,17 @@
 
 
     <div class="aboutProject_section bg_f2f2f2 services_formOuter">
-        <div class="auto_container">
-            <div class="aboutProject_section_detail">
+        <div class="auto_container pb-4">
+
+
+                        <div class="advaceCareer_hire pb-5" id="goto_form">
+
+                            <jobs-component></jobs-component>
+
+                        </div>
+
+
+            <div class="aboutProject_section_detail d-none">
 
                 <div class="custom_tittle">
                     <h2 class=""><strong>We love to</strong> create software <strong>and find simple <br>
