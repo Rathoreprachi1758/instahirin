@@ -904,14 +904,16 @@ class ContentController extends Controller
     }
 
     // proposal get
-    public function proposalGet($planId)
+    public function proposalGet(Request $request)
     {
-        $plan  = PlanPricing::all($planId);
-        return view('templates.planId', ['plan' => $plan]);
-        // $planId = $request->query('planId');
-        // $plan = PlanPricing::find($planId);
+        dd($request->all());
+        // $plan  = PlanPricing::all($planId);
         // return view('templates.planId', ['plan' => $plan]);
+        $planId = $request->route('planId');
+        $plan = PlanPricing::find($planId);
+        return view('templates.planId', ['plan' => $plan]);
     }
+
 
     // Get Plans and Pricing Categories
     public function getPlansCategory()

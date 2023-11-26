@@ -9,7 +9,7 @@
                         <li>
                             <div class="pricingList_col mostPopular">
 
-                                <h5 class="text-center text-white pb-2">{{ $plan->plan_category_id }}</h5>
+                                {{-- <h5 class="text-center text-white pb-2">{{ $plan->plan_category_id }}</h5> --}}
                                 <strong class="categoryTittle">{{ $plan->title }}</strong>
 
                                 <h3 class="priceValue">${{ $plan->price }} <sub>/Month</sub></h3>
