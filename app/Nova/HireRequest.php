@@ -17,6 +17,7 @@ use Laravel\Nova\Http\Requests\NovaRequest;
 use Laravel\Nova\Fields\DateTime;
 use Illuminate\Support\Facades\Gate;
 use App\Policies\brandpolicy;
+use App\Policies\CareerPolicy;
 
 class HireRequest extends Resource
 {
@@ -26,7 +27,8 @@ class HireRequest extends Resource
      * @var class-string<\App\Models\HireRequest>
      */
     public static $model = \App\Models\HireRequest::class;
-
+    
+    protected $policy = \App\Policies\CareerPolicy::class;
     /**
      * The single value that should be used to represent the resource when being displayed.
      *
@@ -51,7 +53,8 @@ class HireRequest extends Resource
      * @return array
      */
     public function fields(NovaRequest $request)
-    {
+    {   
+        // $this->authorizeTo(new CareerPolicy);
         return [
             ID::make()->sortable(),
             BelongsTo::make('Expert', 'expert')->noPeeking()->filterable()->nullable(),

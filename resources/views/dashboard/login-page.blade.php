@@ -13,6 +13,11 @@
             <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
         </div>
     @endif
+    @if (session('error'))
+        <div class="alert alert-danger">
+            {{ session('error') }}
+        </div>
+    @endif
     <div class="container" style="margin-top:130px">
         <div class="row justify-content-center">
             <div class="col-md-6">

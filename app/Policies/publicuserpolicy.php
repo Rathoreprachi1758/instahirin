@@ -6,7 +6,7 @@ use App\Models\User;
 use App\Models\publicuser;
 use Illuminate\Auth\Access\Response;
 
-class publicbrandpolicy
+class publicuserpolicy
 {
     /**
      * Determine whether the user can view any models.
