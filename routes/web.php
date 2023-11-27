@@ -23,9 +23,13 @@ Route::get('sitemap.xml', function () {
 ////
 Route::get('/Sign-In', [Logincontroller::class, 'index'])->name('signin');
 Route::Post('sign-up', [Logincontroller::class, 'store'])->name('submit.signup');
-Route::get('/login', [LoginController::class, 'login'])->name('loginpage');
-Route::post('dashboard', [LoginController::class, 'loginpage'])->name('login');
-
+Route::get('/loginpage', [LoginController::class, 'login'])->name('loginpage');
+// Route::post('dashboard', [LoginController::class, 'authenticate'])->name('login');
+// Route::get('logout', [loginController::class, 'logout']);
+Route::middleware(['auth.check'])->group(function () {
+    Route::post('dashboard', [LoginController::class, 'authenticate'])->name('login');
+    Route::get('logout', [LoginController::class, 'logout']);
+});
 Route::get('/{levelOneSlug?}/{levelTwoSlug?}/{levelThreeSlug?}/{levelFourSlug?}', 'App\Http\Controllers\ContentController@index')->name('index');
 
 // ContactUs Form Submission

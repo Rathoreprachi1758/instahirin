@@ -4,8 +4,8 @@
     "scripts": {
         "dev": "vite",
         "build": "vite build",
-        "build-authNamecard": "cd nova-components/AuthNamecard && npm run dev",
-        "build-authNamecard-prod": "cd nova-components/AuthNamecard && npm run prod"
+        "build-permissioncard": "cd nova-components/Permissioncard && npm run dev",
+        "build-permissioncard-prod": "cd nova-components/Permissioncard && npm run prod"
     },
     "devDependencies": {
         "@popperjs/core": "^2.11.6",
