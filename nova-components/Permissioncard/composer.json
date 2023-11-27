@@ -1,0 +1,29 @@
+{
+    "name": "permission-table/permissioncard",
+    "description": "A Laravel Nova card.",
+    "keywords": [
+        "laravel",
+        "nova"
+    ],
+    "license": "MIT",
+    "require": {
+        "php": "^7.3|^8.0"
+    },
+    "autoload": {
+        "psr-4": {
+            "NovaComponents\\Permissioncard\\src\\": "nova-components/Permissioncard/src/"
+        }
+    },
+    "extra": {
+        "laravel": {
+            "providers": [
+                "PermissionTable\\Permissioncard\\CardServiceProvider"
+            ]
+        }
+    },
+    "config": {
+        "sort-packages": true
+    },
+    "minimum-stability": "dev",
+    "prefer-stable": true
+}

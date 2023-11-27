@@ -14,7 +14,6 @@ return new class extends Migration
         Schema::create('novaresourcelists', function (Blueprint $table) {
             $table->id();
             $table->string('resource_name');
-            // $table->string('Autherized_to');
             $table->string('Autherized_to');
             $table->timestamps();
         });
