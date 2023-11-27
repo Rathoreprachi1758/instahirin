@@ -178,14 +178,15 @@
 
 
                                 <div class="authBtns">
-                                    <ul>
-                                        {{-- <li><a href="{{ route('loginpage') }}">login</a>
-                                        </li> --}}
-                                        <li><a href="{{ route('signin') }}">Sign In</a>
+                                    {{-- <ul>
+                                        <li><a href="{{ route('signin') }}">Sign Up</a>
                                         </li>
-                                        {{-- <li><a href="{{ url('/login') }}">login</a>
-                                        </li> --}}
-                                        <li><a href="{{ url('/loginpage') }}">Sign Up</a></li>
+                                        <li><a href="{{ url('/loginpage') }}">Sign In</a></li>
+                                    </ul> --}}
+                                    <ul>
+                                        <li><a href="#">Sign Up</a>
+                                        </li>
+                                        <li><a href="#">Sign In</a></li>
                                     </ul>
                                 </div>
                             </div>
