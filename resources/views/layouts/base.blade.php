@@ -175,6 +175,15 @@
                                 </div>
 
 
+
+
+
+
+
+
+
+
+                                
                                 <div class="authBtns">
                                     <ul>
                                         <li><a href="{{ route('signin') }}">Sign In</a>
