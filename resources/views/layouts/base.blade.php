@@ -6,8 +6,8 @@
     {{-- Paste this code as high in the
 
     <head> of the page as possible --}}
-        <script>
-            (function(w, d, s, l, i) {
+    <script>
+        (function(w, d, s, l, i) {
             w[l] = w[l] || [];
             w[l].push({
                 'gtm.start': new Date().getTime(),
@@ -21,43 +21,41 @@
                 'https://www.googletagmanager.com/gtm.js?id=' + i + dl;
             f.parentNode.insertBefore(j, f);
         })(window, document, 'script', 'dataLayer', 'GTM-THZV9RC4');
-        </script>
-        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
-        <meta name="viewport" content="width=device-width, initial-scale=1" />
-        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-        <meta name="format-detection" content="telephone=no">
-        <title>@yield('meta_title', 'https://www.bizionictech.com/')"</title>
-        <meta name="description" ,
-            content="@yield('meta_description', 'We build e-commerce site, management site, Android, iOS apps, and teach software development courses online.Laravel, Java, NodeJs, PHP technology.')">
-        <meta name="keywords" ,
-            content="@yield('meta_keywords', 'We build e-commerce site, management site, Android, iOS apps, and teach software development courses online.Laravel, Java, NodeJs, PHP technology.')">
-        <!-- bootstrap -->
-        <link rel="stylesheet" href="/bizionic/css/bootstrap.min.css">
-        <!-- custom css -->
-        <link rel="stylesheet " href="/bizionic/css/style.css ">
-        <link rel="stylesheet " href="/bizionic/css/responsive.css ">
-        <link rel="stylesheet" href="/bizionic/css/aos.css" />
+    </script>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="format-detection" content="telephone=no">
+    <title>@yield('meta_title', 'https://www.bizionictech.com/')"</title>
+    <meta name="description" , content="@yield('meta_description', 'We build e-commerce site, management site, Android, iOS apps, and teach software development courses online.Laravel, Java, NodeJs, PHP technology.')">
+    <meta name="keywords" , content="@yield('meta_keywords', 'We build e-commerce site, management site, Android, iOS apps, and teach software development courses online.Laravel, Java, NodeJs, PHP technology.')">
+    <!-- bootstrap -->
+    <link rel="stylesheet" href="/bizionic/css/bootstrap.min.css">
+    <!-- custom css -->
+    <link rel="stylesheet " href="/bizionic/css/style.css ">
+    <link rel="stylesheet " href="/bizionic/css/responsive.css ">
+    <link rel="stylesheet" href="/bizionic/css/aos.css" />
 
-        <!-- font awesome-->
-        <link rel="stylesheet " href="/bizionic/css/font-awesome.min.css ">
-        <script src="/bizionic/js/jquery-3.4.1.min.js"></script>
-        {{-- Schema Js file --}}
-        <script src="/bizionic/js/schema.js"></script>
-        <!-- slick slider -->
-        <link rel=" stylesheet " type="text/css " href="/bizionic/css/slick.css ">
-        <link rel="stylesheet " type="text/css " href="/bizionic/css/slick-theme.css ">
-        <script type="text/javascript" src="/bizionic/js/slick.js"></script>
-        <script type="text/javascript" src="/bizionic/js/owl.carousel.js"></script>
-        <script type="text/javascript" src="/bizionic/js/countries.js"></script>
-        <script type="text/javascript"
-            src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDY1vginH3C8j_tCqQRwIyE7awXfUQk-ck&libraries=places&callback=Function.prototype">
-        </script>
-        <link rel="stylesheet" href="/bizionic/css/owl.carousel.min.css" />
-        <link rel="icon" sizes="96x96" href="/bizionic/images/favicon-96x96.png">
-        @vite(['resources/css/app.css', 'resources/js/app.js'])
-        <!-- Hotjar Tracking Code for https://www.bizionictech.com/ -->
-        <script>
-            (function(h, o, t, j, a, r) {
+    <!-- font awesome-->
+    <link rel="stylesheet " href="/bizionic/css/font-awesome.min.css ">
+    <script src="/bizionic/js/jquery-3.4.1.min.js"></script>
+    {{-- Schema Js file --}}
+    <script src="/bizionic/js/schema.js"></script>
+    <!-- slick slider -->
+    <link rel=" stylesheet " type="text/css " href="/bizionic/css/slick.css ">
+    <link rel="stylesheet " type="text/css " href="/bizionic/css/slick-theme.css ">
+    <script type="text/javascript" src="/bizionic/js/slick.js"></script>
+    <script type="text/javascript" src="/bizionic/js/owl.carousel.js"></script>
+    <script type="text/javascript" src="/bizionic/js/countries.js"></script>
+    <script type="text/javascript"
+        src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDY1vginH3C8j_tCqQRwIyE7awXfUQk-ck&libraries=places&callback=Function.prototype">
+    </script>
+    <link rel="stylesheet" href="/bizionic/css/owl.carousel.min.css" />
+    <link rel="icon" sizes="96x96" href="/bizionic/images/favicon-96x96.png">
+    @vite(['resources/css/app.css', 'resources/js/app.js'])
+    <!-- Hotjar Tracking Code for https://www.bizionictech.com/ -->
+    <script>
+        (function(h, o, t, j, a, r) {
             h.hj = h.hj || function() {
                 (h.hj.q = h.hj.q || []).push(arguments)
             };
@@ -71,10 +69,10 @@
             r.src = t + h._hjSettings.hjid + j + h._hjSettings.hjsv;
             a.appendChild(r);
         })(window, document, 'https://static.hotjar.com/c/hotjar-', '.js?sv=');
-        </script>
-        <!-- Meta Pixel Code -->
-        <script>
-            ! function(f, b, e, v, n, t, s) {
+    </script>
+    <!-- Meta Pixel Code -->
+    <script>
+        ! function(f, b, e, v, n, t, s) {
             if (f.fbq) return;
             n = f.fbq = function() {
                 n.callMethod ?
@@ -94,17 +92,17 @@
             'https://connect.facebook.net/en_US/fbevents.js');
         fbq('init', '990314288786309');
         fbq('track', 'PageView');
-        </script>
-        <noscript><img height="1" width="1" style="display:none"
-                src="https://www.facebook.com/tr?id=990314288786309&ev=PageView&noscript=1" /></noscript>
-        <!-- End Meta Pixel Code -->
+    </script>
+    <noscript><img height="1" width="1" style="display:none"
+            src="https://www.facebook.com/tr?id=990314288786309&ev=PageView&noscript=1" /></noscript>
+    <!-- End Meta Pixel Code -->
 
 
 
-        <!-- Google tag (gtag.js) -->
-        <script async src="https://www.googletagmanager.com/gtag/js?id=G-603H2KERC7"></script>
-        <script>
-            window.dataLayer = window.dataLayer || [];
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-603H2KERC7"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
 
         function gtag() {
             dataLayer.push(arguments);
@@ -112,11 +110,11 @@
         gtag('js', new Date());
 
         gtag('config', 'G-603H2KERC7');
-        </script>
+    </script>
 
 
 
-    </head>
+</head>
 
 <body>
     <div class="wrapper">
@@ -177,13 +175,13 @@
                                 </div>
 
 
-                                <!-- <div class="authBtns">
+                                <div class="authBtns">
                                     <ul>
                                         <li><a href="{{ route('signin') }}">Sign In</a>
                                         </li>
                                         <li><a href="{{ url('/loginpage') }}">Sign Up</a></li>
                                     </ul>
-                                </div> -->
+                                </div>
                             </div>
                         </div>
                     </div>
@@ -316,16 +314,17 @@
                                                     aria-hidden="true"></i></a>
                                             <a href="https://www.instagram.com/bizionic_technologies/" target="_blank"
                                                 class="s_inst"><i class="fa fa-instagram" aria-hidden="true"></i></a>
-                                            <a href="https://twitter.com/bizionictech" target="_blank" class="s_tw"><i
-                                                    class="fa fa-twitter-square" aria-hidden="true"></i></a>
+                                            <a href="https://twitter.com/bizionictech" target="_blank"
+                                                class="s_tw"><i class="fa fa-twitter-square"
+                                                    aria-hidden="true"></i></a>
                                             <a href="https://www.linkedin.com/company/bizionic-technologies-and-marketing-solutions/"
                                                 target="_blank" class="s_link"><i class="fa fa-linkedin-square"
                                                     aria-hidden="true"></i></a>
                                             <a href="https://www.youtube.com/channel/UCDz2zqtte5EZ3_6OAfMl4rw"
                                                 class="s_yout" target="_blank"><i class="fa fa-youtube-play"
                                                     aria-hidden="true"></i></a>
-                                            <a href="#" class="s_slide" target="_blank"><i class="fa fa-slideshare"
-                                                    aria-hidden="true"></i></a>
+                                            <a href="#" class="s_slide" target="_blank"><i
+                                                    class="fa fa-slideshare" aria-hidden="true"></i></a>
                                         </div>
 
                                     </div>
