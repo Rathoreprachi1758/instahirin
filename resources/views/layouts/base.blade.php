@@ -172,15 +172,10 @@
                                     <div id="google_translate_element"></div>
                                 </div>
                                 <div class="authBtns">
-                                    {{-- <ul>
+                                    <ul>
                                         <li><a href="{{ route('signin') }}">Sign Up</a>
                                         </li>
                                         <li><a href="{{ url('/loginpage') }}">Sign In</a></li>
-                                    </ul> --}}
-                                    <ul>
-                                        <li><a href="#">Sign Up</a>
-                                        </li>
-                                        <li><a href="#">Sign In</a></li>
                                     </ul>
                                 </div>
                             </div>
