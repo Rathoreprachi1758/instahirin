@@ -171,18 +171,6 @@
                                 <div class="change_langOuter">
                                     <div id="google_translate_element"></div>
                                 </div>
-
-
-                              
-                              
-                              
-                              
-                              
-                              
-                              
-                              
-                              
-                              
                                 <div class="authBtns">
                                     {{-- <ul>
                                         <li><a href="{{ route('signin') }}">Sign Up</a>
