@@ -36,7 +36,7 @@ class Page extends Resource
      * @var array
      */
     public static $search = [
-        'id',
+        'id', 'title'
     ];
 
     /**
@@ -50,12 +50,12 @@ class Page extends Resource
 
         return [
             ID::make()->sortable(),
-            Text::make('Title','title')->rules('required','min:3,max:255'),
-            Select::make('Slug','slug')->options($this->getAllSlugs())->rules('required'),
-            Text::make('Meta Title','meta_title')->rules('min:6,max:255'),
-            Text::make('Meta Keywords','meta_keywords')->rules('min:6,max:255'),
-            Textarea::make('Meta Description','meta_description')->rules('min:6,max:500'),
-            Select::make('Template','template')->options($this->getAllTemplates())->rules('required'),
+            Text::make('Title', 'title')->rules('required', 'min:3,max:255'),
+            Select::make('Slug', 'slug')->options($this->getAllSlugs())->rules('required'),
+            Text::make('Meta Title', 'meta_title')->rules('min:6,max:255'),
+            Text::make('Meta Keywords', 'meta_keywords')->rules('min:6,max:255'),
+            Textarea::make('Meta Description', 'meta_description')->rules('min:6,max:500'),
+            Select::make('Template', 'template')->options($this->getAllTemplates())->rules('required'),
         ];
     }
 
@@ -103,11 +103,12 @@ class Page extends Resource
         return [];
     }
 
-    private function getAllTemplates(){
+    private function getAllTemplates()
+    {
 
-        $files = File::allFiles(base_path().'/resources/views/templates');
+        $files = File::allFiles(base_path() . '/resources/views/templates');
 
-        foreach($files as $key=>$file){
+        foreach ($files as $key => $file) {
             $fileName = $file->getBasename('.blade.php');
             $fileNames[$fileName] = $fileName;
         }
@@ -115,33 +116,34 @@ class Page extends Resource
         return $fileNames;
     }
 
-    private function getAllSlugs(){
-       $menus = nova_get_menu_by_slug('header');
-       $menus = (object) $menus['menuItems']; 
-       $flatMenus = [];
-       foreach($menus as $levelOneKey => $levelOneMenu){
-        $flatMenus[$levelOneMenu['data']['slug']] =  $levelOneMenu['name'];
-            foreach($levelOneMenu['children'] as $levelTwoKey => $levelTwoMenu){
+    private function getAllSlugs()
+    {
+        $menus = nova_get_menu_by_slug('header');
+        $menus = (object) $menus['menuItems'];
+        $flatMenus = [];
+        foreach ($menus as $levelOneKey => $levelOneMenu) {
+            $flatMenus[$levelOneMenu['data']['slug']] =  $levelOneMenu['name'];
+            foreach ($levelOneMenu['children'] as $levelTwoKey => $levelTwoMenu) {
                 //array_push($flatMenus,$levelTwoMenu['name']);
-                foreach($levelTwoMenu['children'] as $levelThreeKey => $levelThreeMenu){
+                foreach ($levelTwoMenu['children'] as $levelThreeKey => $levelThreeMenu) {
 
-                    foreach($levelThreeMenu['children'] as $levelThreeKey => $levelFourMenu){
+                    foreach ($levelThreeMenu['children'] as $levelThreeKey => $levelFourMenu) {
                         //array_push($flatMenus,$levelThreeMenu['name']);
-                        foreach($levelFourMenu['children'] as $levelFourKey => $levelFiveMenu){
-                            $slug = $levelOneMenu['data']['slug'].'|'.$levelTwoMenu['data']['slug'].'|'.$levelFourMenu['data']['slug'].'|'.$levelFiveMenu['data']['slug'];
-                            $name = $levelOneMenu['name'].' | '.$levelTwoMenu['name'].' | '.$levelFourMenu['name'].' | '.$levelFiveMenu['name'];
+                        foreach ($levelFourMenu['children'] as $levelFourKey => $levelFiveMenu) {
+                            $slug = $levelOneMenu['data']['slug'] . '|' . $levelTwoMenu['data']['slug'] . '|' . $levelFourMenu['data']['slug'] . '|' . $levelFiveMenu['data']['slug'];
+                            $name = $levelOneMenu['name'] . ' | ' . $levelTwoMenu['name'] . ' | ' . $levelFourMenu['name'] . ' | ' . $levelFiveMenu['name'];
                             $flatMenus[$slug] =  $name;
                         }
                     }
                 }
             }
-       }
+        }
 
-       return $flatMenus;
+        return $flatMenus;
     }
     ///
     // public static function authorizedToViewAny($request)
-    // {   
+    // {
     //     //return "Admin";
     //     // $user = auth()->user();
     //     // if($user->roles === 'admin')
@@ -152,12 +154,12 @@ class Page extends Resource
     //     // else{
     //     //     return "User";
     //     // }
-        
+
     //     //  return $request->user()->can('viewAny', brandpolicy::class);
-       
+
     //     // return auth()->check() && auth()->user()->can('viewAny', brandpolicy::class);
     // }
-    
+
     // public function authorizedToView($request)
     // {
     //     return $request->user()->can('view', $this);
