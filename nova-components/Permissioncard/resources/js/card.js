@@ -1,5 +1,5 @@
 import Card from './components/Card'
 
 Nova.booting((app, store) => {
-  app.component('authNamecard', Card)
+  app.component('permissioncard', Card)
 })

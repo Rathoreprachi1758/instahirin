@@ -1,7 +1,7 @@
 <template>
   <Card class="flex flex-col items-center justify-center">
     <div class="px-3 py-3">
-      <h1 class="text-center text-3xl text-gray-500 font-light">Authnamecard</h1>
+      <h1 class="text-center text-3xl text-gray-500 font-light">Permissioncard</h1>
     </div>
   </Card>
 </template>

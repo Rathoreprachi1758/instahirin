@@ -173,22 +173,12 @@
                                 <div class="change_langOuter">
                                     <div id="google_translate_element"></div>
                                 </div>
-
-
-
-
-
-
-
-
-
-
-                                
+                                {{-- <div class="authBtns"> --}}
                                 <div class="authBtns">
                                     <ul>
-                                        <li><a href="{{ route('signin') }}">Sign In</a>
+                                        <li><a href="{{ route('signin') }}">Sign Up</a>
                                         </li>
-                                        <li><a href="{{ url('/loginpage') }}">Sign Up</a></li>
+                                        <li><a href="{{ url('/loginpage') }}">Sign In</a></li>
                                     </ul>
                                 </div>
                             </div>

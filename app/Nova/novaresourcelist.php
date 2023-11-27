@@ -5,32 +5,30 @@ namespace App\Nova;
 use Illuminate\Http\Request;
 use Laravel\Nova\Fields\ID;
 use Laravel\Nova\Fields\Text;
+use Laravel\Nova\Fields\BooleanGroup;
+use Laravel\Nova\Fields\Boolean;
+use Laravel\Nova\Fields\Select;
+use Illuminate\Validation\Rules;
+use Laravel\Nova\Fields\Gravatar;
 use Laravel\Nova\Http\Requests\NovaRequest;
-// use App\Policies\CareerPolicy;
+use App\Models\Role;
+use Illuminate\Support\Facades\File;
 
-class Skill extends Resource
+class novaresourcelist extends Resource
 {
     /**
      * The model the resource corresponds to.
      *
-     * @var class-string<\App\Models\Skill>
+     * @var class-string<\App\Models\novaresourcelist>
      */
-    // public static $displayInNavigation = false;
-
-
-    public static $model = \App\Models\Skill::class;
-
-    // App\Career.php
-
-//    protected $policy = \App\Policies\CareerPolicy::class;
-
+    public static $model = \App\Models\novaresourcelist::class;
 
     /**
      * The single value that should be used to represent the resource when being displayed.
      *
      * @var string
      */
-    public static $title = 'title';
+    public static $title = 'id';
 
     /**
      * The columns that should be searched.
@@ -38,7 +36,7 @@ class Skill extends Resource
      * @var array
      */
     public static $search = [
-        'id','title',
+        'id',
     ];
 
     /**
@@ -49,10 +47,23 @@ class Skill extends Resource
      */
     public function fields(NovaRequest $request)
     {   
-        // $this->authorizeTo(new CareerPolicy);
+        $resourcePath = app_path('Nova');
+        $resources = collect(File::files($resourcePath))
+            ->map(function ($file) {
+                $class = '\\App\\Nova\\' . pathinfo($file)['filename'];
+                return class_exists($class) ?  pathinfo($file)['filename'] : null;
+            })
+            ->filter()
+            ->toArray();
+            \Log::info('$resources========$$$$$$$$4=============');
+            \Log::info($resources);
         return [
             ID::make()->sortable(),
-            Text::make('Title','title')
+            Gravatar::make()->maxWidth(30),
+            // Text::make('Resource Name','resource_name')->rules('required'),
+            Select::make('Resource Name','resource_name')->options(array_combine($resources, $resources)),
+            Select::make('Authorized To','autherized_to')->options(array_combine(Role::all()->pluck('role')->unique()->toArray(), Role::all()->pluck('role')->unique()->toArray())),
+            
         ];
     }
 

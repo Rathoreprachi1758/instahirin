@@ -1,6 +1,6 @@
 <?php
 
-namespace App\AuthNamecard;
+namespace PermissionTable\Permissioncard;
 
 use Illuminate\Support\Facades\Route;
 use Illuminate\Support\ServiceProvider;
@@ -21,8 +21,8 @@ class CardServiceProvider extends ServiceProvider
         });
 
         Nova::serving(function (ServingNova $event) {
-            Nova::script('authNamecard', __DIR__.'/../dist/js/card.js');
-            Nova::style('authNamecard', __DIR__.'/../dist/css/card.css');
+            Nova::script('permissioncard', __DIR__.'/../dist/js/card.js');
+            Nova::style('permissioncard', __DIR__.'/../dist/css/card.css');
         });
     }
 
@@ -38,7 +38,7 @@ class CardServiceProvider extends ServiceProvider
         }
 
         Route::middleware(['nova'])
-                ->prefix('nova-vendor/authNamecard')
+                ->prefix('nova-vendor/permissioncard')
                 ->group(__DIR__.'/../routes/api.php');
     }
 
