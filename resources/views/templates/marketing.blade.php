@@ -84,8 +84,8 @@
 
         <div class="col-lg-6 col-md-6">
             <div class="bizionic_know_fr">
-                <span class=" aos-init aos-animate" data-aos="fade-left" data-aos-duration="1000"
-                    data-aos-easing="ease"><img src="/bizionic/images/eye.png" alt="#" /></span>
+                    <span class=" aos-init aos-animate" data-aos="fade-left" data-aos-duration="1000"
+                    data-aos-easing="ease"><img src="/bizionic/images/eye-image.gif" alt="#" /></span>
             </div>
         </div>
 

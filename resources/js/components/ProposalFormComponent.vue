@@ -85,9 +85,10 @@
               id="plan_category"
             >
               <!-- <option disabled selected>Select hiring type</option> -->
-              <option value="dedicated_developer">SEO</option>
-              <option value="dedicated">SMM</option>
-              <option value="developers">PPC</option>
+              <option value="">Select a option</option>
+              <option value="dedicated_developer">Search Engine Optimization(SEO)</option>
+              <option value="dedicated">Social Media Management(SMM)</option>
+              <option value="developers">Google Advarts And PPC</option>
             </select>
           </div>
         </div>
@@ -102,6 +103,7 @@
               name="plan"
               id="plan"
             >
+              <option value="">Select a option</option>
               <option value="dedicated">GOLD</option>
               <option value="developers">SILVER</option>
               <option value="developers">PLATINUM</option>
