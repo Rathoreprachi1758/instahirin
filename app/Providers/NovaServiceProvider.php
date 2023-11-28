@@ -7,6 +7,7 @@ use Laravel\Nova\Nova;
 use Laravel\Nova\NovaApplicationServiceProvider;
 use App\Policies\brandpolicy;
 use App\Models\Post2;
+use \App\Models\User;
 use Illuminate\Support\Facades\File;
 // use NovaComponents\Permissioncard\Permissioncard;
 use novacomponents\Permissioncard\src\Permissioncard;
@@ -43,6 +44,9 @@ class NovaServiceProvider extends NovaApplicationServiceProvider
             ->toArray();
             \Log::info('$resources=====================');
             \Log::info($resources);
+            $allowedEmails = User::pluck('email')->toArray();
+            \Log::info(' $allowedEmails==========');
+            \Log::info($allowedEmails);
         // Nova::resources($resources);
     }
 
@@ -68,16 +72,18 @@ class NovaServiceProvider extends NovaApplicationServiceProvider
      */
     protected function gate()
     {
-        // Gate::define('viewNova', function ($user) {
-        //     //dd($user->email);
-
-        //     return in_array($user->email, [
-        //         'admin@bizionic.com',
-        //         'admin@gmail.com',
-        //         'admin@admin.com',
-        //     ]);
+        Gate::define('viewNova', function ($user) {
+            //dd($user->email);
+            $allowedEmails = User::pluck('email')->toArray();
+            \Log::info($allowedEmails);
+            return in_array($user->email, $allowedEmails);
+            // return in_array($user->email, [
+            //     'admin@bizionic.com',
+            //     'admin@gmail.com',
+            //     'admin@admin.com',
+            // ]);
             
-        // });
+        });
 
     }
 
