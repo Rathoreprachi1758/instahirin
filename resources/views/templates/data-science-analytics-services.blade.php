@@ -22,11 +22,10 @@
                         <div class="row align-items-center">
                             <div class="col-lg-6 col-md-6 aos-init " data-aos="fade-right" data-aos-duration="1000" data-aos-easing="ease">
                                 <div class=" custom_tittle text-left">
-                                    <h1>DATA SCIENCE AND ANALYTICS SERVICES</h1>
+                                    <h1>Data Science And Analytics Services</h1>
                                     <h2 class="">
-                                        <strong>GENERATE USEFUL</strong> BUSINESS INSIGHTS
-                                        <strong>FROM</strong> DATA <strong>USING</strong> MATHEMATICAL, STATISTICAL, 
-                                        AI, <strong>AND</strong> COMPUTER ENGINEERING <strong>TECHNIQUES.</strong>
+                                        Generate <strong>Useful</strong> Business Insights From Data <strong>Using</strong> Mathematical, 
+                                        Statistical, <strong>Ai,</strong> And <strong>Computer</strong> Engineering Techniques.
 
                                     </h2>
 

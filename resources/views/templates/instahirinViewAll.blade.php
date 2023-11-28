@@ -16,8 +16,7 @@
         <div class="aboutProject_section_detail">
 
             <div class="custom_tittle">
-                <h2 class="text-white">We love to create software and find simple <br>
-                    solutions to complex challenges </h2>
+                <h2 class="text-white">We Love To Create Software And Find Simple <br>Solutions To Complex Challenges </h2>
             </div>
 
 
@@ -25,9 +24,7 @@
                 data-aos-easing="ease-out-cubic">
 
                 <div class="servicesForm">
-                    <p class="text-center">If you have an idea in mind of how to enhance your business processes, don’t
-                        hesitate <br>
-                        to contact us and discover more about our technologies!</p>
+                    <p class="text-center">If You Have An Idea In Mind Of How To Enhance Your Business Processes, Don’t Hesitate<br> To Contact Us And Discover More About Our Technologies</p>
                     {{-- <div class="row">
                         <div class="col-lg-6 col-md-12">
                             <div class="project_form_field">

@@ -18,7 +18,8 @@
                         <div class="row align-items-center">
                             <div class="col-lg-6 col-md-6 aos-init " data-aos="fade-right" data-aos-duration="1000" data-aos-easing="ease">
                                 <div class="custom_tittle text-left">
-                                    <h2>REVOLUTIONISING RETAIL AND E-COMMERCE SOLUTIONS WITH AI
+                                    <h1>Ai Revolution In Retail & E-Commerce - Bizionics Solutions</h1>
+                                    <h2>Transformative <strong>Excellence</strong> In E-Commerce: Bizionic Technologies <strong>Ai-Driven</strong> Solutions
                                     </h2>
 
                                         <p class="p_color text-justify">The digital age has ushered in an era of unprecedented change and innovation for the retail and e-commerce sectors. At the heart of this transformation is Artificial Intelligence (AI). Beyond just a buzzword, AI has become the linchpin, redefining how businesses operate, interact with customers, and drive growth. Here's a brief exploration of how AI is revolutionising the retail and e-commerce domain.</p>
@@ -45,7 +46,7 @@
 
                     <div class="industryNew_section2_info aos-init " data-aos="fade-up" data-aos-duration="1500" data-aos-easing="ease">
                         <div class="custom_tittle">
-                            <h2><strong>The</strong> Services <strong>We Offered</strong></h2> 
+                            <h2><strong>Bizionic's Tailored Ai Solutions For</strong> E-Commerce</h2> 
                         </div>
 
                         

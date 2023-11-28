@@ -22,11 +22,9 @@
                         <div class="row align-items-center">
                             <div class="col-lg-6 col-md-6 aos-init " data-aos="fade-right" data-aos-duration="1000" data-aos-easing="ease">
                                 <div class=" custom_tittle text-left">
-                                    <h1>LOCATION-BASED SERVICES (LBS)</h1>
+                                    <h1>Location-Based Services (LBS)</h1>
                                     <h2 class="">
-                                        <strong>CREATE</strong> SOFTWARE SERVICE <strong>FOR</strong> MOBILE 
-                                        DEVICE APPLICATIONS <strong>TO ACKNOWLEDGE ABOUT 
-                                        WHERE MOBILE</strong> DEVICE <strong>IS</strong> GEOGRAPHICALLY LOCATED.
+                                    Create <strong>Software</strong> Service For Mobile Device <strong>Applications</strong> To Acknowledge About Where Mobile Device Is <strong>Geographically Located.</strong>
 
                                     </h2>
 

@@ -22,9 +22,9 @@
                         <div class="row align-items-center">
                             <div class="col-lg-6 col-md-6 aos-init " data-aos="fade-right" data-aos-duration="1000" data-aos-easing="ease">
                                 <div class=" custom_tittle text-left">
-                                    <h1>KOTLIN DEVELOPERS</h1>
+                                    <h1>Kotlin Developers</h1>
                                     <h2 class="">
-                                        NO. 1 CHOICE <strong>FOR</strong> ANDROID APP DEVELOPMENT.
+                                    <strong>No. 1 Choice For</strong> Android App Development.
                                     </h2>
 
                                         <p class="p_color text-justify">Bizionic Technologies Kotlin developers specialize in developing applications using the Kotlin programming language. Kotlin is a modern and statically typed language that runs on the Java Virtual Machine (JVM) and can be used for various types of development.</p>

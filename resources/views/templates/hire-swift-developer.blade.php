@@ -22,9 +22,10 @@
                         <div class="row align-items-center">
                             <div class="col-lg-6 col-md-6 aos-init " data-aos="fade-right" data-aos-duration="1000" data-aos-easing="ease">
                                 <div class=" custom_tittle text-left">
-                                    <h1>SWIFT DEVELOPERS</h1>
+                                    <h1>Swift Developers</h1>
                                     <h2 class="">
-                                        <strong>A</strong> POWERFUL AND INTUITIVE <strong>PROGRAMMING LANGUAGE FOR ALL</strong> APPLE PLATFORMS.
+                                        <strong>A</strong> Powerful And Intuitive <strong>Programming Language For All</strong> Apple Platforms.
+  
                                     </h2>
 
                                         <p class="p_color text-justify">Bizionic Technologies Swift developers are primarily used for iOS, macOS, watchOS, and tvOS app development. Swift is a programming language developed by Apple specifically for building applications on Apple's platforms.</p>
@@ -49,9 +50,9 @@
 
                     <div class="industryNew_section2_info aos-init " data-aos="fade-up" data-aos-duration="1500" data-aos-easing="ease">
                         <div class="custom_tittle">
-                            <h3><strong>Here are some key areas where </strong> Swift <strong>developers are commonly utilized:</strong></h2>
+                            <h3><strong>Empowering Your Apple Ecosystem Journey With </strong> Swift Developer</h2>
                             
-                             
+                            
                               
                         </div>
 

@@ -22,9 +22,10 @@
                         <div class="row align-items-center">
                             <div class="col-lg-6 col-md-6 aos-init " data-aos="fade-right" data-aos-duration="1000" data-aos-easing="ease">
                                 <div class=" custom_tittle text-left">
-                                    <h1>CRYPTOCURRENCY EXCHANGE DEVELOPMENT</h1>
+                                    <h1>Cryptocurrency Exchange Development</h1>
                                     <h2 class="">
-                                        <strong>BUILD HIGHLY</strong> CUSTOMIZE <strong>AND</strong> PREMIUM QUALITY <strong>CRYPTOCURRENCY EXCHANGE SOFTWARES WITH</strong> COST-EFFECTIVE DEVELOPMENT <strong>SOLUTIONS</strong>.
+                                    
+                                        Build Highly Customize <strong>And</strong> Premium Quality Cryptocurrency <strong>Exchange</strong> Softwares With <strong>Cost-Effective</strong> Development <strong>Solutions.</strong>
                                     </h2>
 
                                         <p class="p_color text-justify">Bizionic Technologies cryptocurrency exchange developer specializes in designing, developing, and launching cryptocurrency exchange platforms. These platforms facilitate the trading of cryptocurrencies among users, providing a secure and efficient marketplace for buying and selling digital assets.</p>

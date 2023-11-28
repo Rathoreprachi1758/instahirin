@@ -22,9 +22,10 @@
                         <div class="row align-items-center">
                             <div class="col-lg-6 col-md-6 aos-init " data-aos="fade-right" data-aos-duration="1000" data-aos-easing="ease">
                                 <div class=" custom_tittle text-left">
-                                    <h1>MARKETING COORDINATOR</h1>
+                                    <h1>Marketing Coordinator</h1>
                                     <h2 class="">
-                                        WORKS <strong>WITH MANAGEMENT</strong> TEAMS <strong>TO</strong> IMPROVE MARKETING <strong>EFFORTS BY CREATING AND MANAGING</strong> ADVERTISING CAMPAIGNS.
+                                    Works <strong>With</strong> Management Teams To Improve <strong>Marketing</strong> 
+                                    Efforts By Creating <strong>And</strong> Managing <strong>Advertising</strong> Campaigns.
                                     </h2>
 
                                         <p class="p_color text-justify">Bizionic Marketing Solutions Marketing Coordinator supports and assists the marketing team in the implementation of marketing strategies and campaigns. They play a crucial role in executing marketing activities, coordinating projects, and ensuring smooth communication and collaboration within the marketing department.</p>

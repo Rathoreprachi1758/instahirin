@@ -22,10 +22,10 @@
                         <div class="row align-items-center">
                             <div class="col-lg-6 col-md-6 aos-init " data-aos="fade-right" data-aos-duration="1000" data-aos-easing="ease">
                                 <div class=" custom_tittle text-left">
-                                    <h1>MACHINE LEARNING SERVICES</h1>
+                                    <h1>Machine Learning Services</h1>
                                     <h2 class="">
-                                        <strong>USE</strong> DATA AND ALGORITHMS <strong>TO</strong> INCREASE <strong>THE</strong> 
-                                        ACCURACY <strong>OF A PRODUCT, SYSTEM OR PLATFORM.</strong>
+                                    Use <strong>Data</strong> And Algorithms To Increase <strong>The</strong> 
+                                    Accuracy Of A Product, <strong>System Or Platform.</strong>
 
                                     </h2>
 

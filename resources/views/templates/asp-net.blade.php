@@ -22,11 +22,10 @@
                         <div class="row align-items-center">
                             <div class="col-lg-6 col-md-6 aos-init " data-aos="fade-right" data-aos-duration="1000" data-aos-easing="ease">
                                 <div class=" custom_tittle text-left">
-                                    <h1>ASP.NET</h1>
+                                    <h1>Asp.Net</h1>
                                     <h2 class="">
-                                        <strong>BUILD GREAT</strong> WEBSITES <strong>AND</strong> WEB 
-                                        APPLICATIONS <strong>USING</strong> HTML, CSS, <strong>AND</strong> 
-                                        JAVASCRIPT <strong>THROUGH ASP.NET</strong> WEB FRAMEWORKS.
+                                    <strong>Build</strong> Great Websites And Web Applications <strong>Using</strong> Html, 
+                                    Css, And Javascript Through Asp.Net <strong>Web Frameworks.</strong>
 
                                     </h2>
 

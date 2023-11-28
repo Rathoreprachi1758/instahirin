@@ -22,9 +22,10 @@
                         <div class="row align-items-center">
                             <div class="col-lg-6 col-md-6 aos-init " data-aos="fade-right" data-aos-duration="1000" data-aos-easing="ease">
                                 <div class=" custom_tittle text-left">
-                                    <h1>AZURE DEVELOPERS</h1>
+                                    <h1>Azure Developers</h1>
                                     <h2 class="">
-                                        <strong>INVENT WITH PURPOSE.</strong> ENVISION <strong>AND</strong> CREATE <strong>INTELLIGENT APPS WITH THE</strong> LATEST TECHNOLOGIES.
+                                    Invent <strong>With</strong> Purpose. Envision And <strong>Create</strong> 
+                                    Intelligent Apps With The <strong>Latest Technologies.</strong>
                                     </h2>
 
                                         <p class="p_color text-justify">Bizionic Technologies Azure developers specialize in using Microsoft Azure, a cloud computing platform and service provided by Microsoft, to develop, deploy, and manage various applications and solutions. Azure offers a wide range of cloud services, including computing, storage, databases, networking, analytics, artificial intelligence, and more.</p>

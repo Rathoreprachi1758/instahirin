@@ -22,10 +22,9 @@
                         <div class="row align-items-center">
                             <div class="col-lg-6 col-md-6 aos-init " data-aos="fade-right" data-aos-duration="1000" data-aos-easing="ease">
                                 <div class=" custom_tittle text-left">
-                                    <h1>AI RESEARCH AND DEVELOPMENT</h1>
+                                    <h1>AI Research And Development</h1>
                                     <h2 class="">
-                                        <strong>REDUCE THE</strong> TIME AND RESOURCES <strong>OF</strong> R&D 
-                                        <strong>AND</strong> MAXIMIZE <strong>THE BUSINESSES</strong> RESULTS.
+                                    Reduce <strong>The</strong> Time And Resources <strong>Of</strong> R&D And Maximize The Businesses <strong>Results.</strong>
 
                                     </h2>
 

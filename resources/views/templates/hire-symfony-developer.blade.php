@@ -22,9 +22,11 @@
                         <div class="row align-items-center">
                             <div class="col-lg-6 col-md-6 aos-init " data-aos="fade-right" data-aos-duration="1000" data-aos-easing="ease">
                                 <div class=" custom_tittle text-left">
-                                    <h1>SYMFONY DEVELOPERS</h1>
+                                    <h1>Symfony Developers</h1>
                                     <h2 class="">
-                                        <strong>A</strong> POWERFUL <strong>PHP</strong> FRAMEWORK <strong>THAT ALLOWS TO</strong> CREATE <strong>AWESOME</strong> WEBSITES AND WEB APPLICATIONS.
+                                        <strong>A</strong> Powerful <strong>Php</strong> Framework <strong>That Allows To</strong> Create <strong>Awesome</strong> Websites And Web Applications.
+
+                                          
                                     </h2>
 
                                         <p class="p_color text-justify">Bizionic Technologies Symfony developers specialize in using the Symfony framework to build web applications. Symfony is an open-source PHP framework known for its flexibility, scalability, and robustness. It follows the Model-View-Controller (MVC) architectural pattern and provides a wide range of reusable components and libraries that streamline development.</p>
@@ -49,8 +51,9 @@
 
                     <div class="industryNew_section2_info aos-init " data-aos="fade-up" data-aos-duration="1500" data-aos-easing="ease">
                         <div class="custom_tittle">
-                            <h3><strong>Here are some essential purposes and use cases where  </strong> Symfony <strong>developers are commonly employed:</strong></h2>
+                            <h3><strong>Crafting Tailored Excellence In</strong> PHP, Symfony <strong>Framework, And Beyond For Robust Web Solutions</strong></h2>
                               
+                             
                         </div>
 
                         

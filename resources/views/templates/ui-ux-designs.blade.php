@@ -22,10 +22,9 @@
                         <div class="row align-items-center">
                             <div class="col-lg-6 col-md-6 aos-init " data-aos="fade-right" data-aos-duration="1000" data-aos-easing="ease">
                                 <div class=" custom_tittle text-left">
-                                    <h1>UI/UX DESIGNS</h1>
+                                    <h1>UI/UX Designs</h1>
                                     <h2 class="">
-                                        <strong>CREATE</strong> USER INTERFACE <strong>BASED ON 
-                                        USER</strong> RESEARCH INSIGHTS <strong>FOLLOWED BY</strong> USABILITY TESTING.
+                                    <strong>Create</strong> User Interface Based On User <strong>Research Insights</strong> Followed By Usability <strong>Testing.</strong>
 
                                     </h2>
 

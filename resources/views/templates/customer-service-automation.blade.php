@@ -22,10 +22,10 @@
                         <div class="row align-items-center">
                             <div class="col-lg-6 col-md-6 aos-init " data-aos="fade-right" data-aos-duration="1000" data-aos-easing="ease">
                                 <div class=" custom_tittle text-left">
-                                    <h1>CUSTOMER SERVICE AUTOMATION</h1>
+                                    <h1>Customer Service Automation</h1>
                                     <h2 class="">
-                                        <strong>TRANSFORM</strong> CUSTOMER SERVICE <strong>WITH BIZIONIC MARKETING 
-                                        SOLUTIONS' CUSTOMER SERVICE</strong> AUTOMATION SOLUTION.
+                                    Transform <strong>Customer</strong> Service With <strong>Bizionic</strong> Marketing 
+                                    Solutions Customer Service <strong>Automation</strong> Solution.
 
                                     </h2>
 

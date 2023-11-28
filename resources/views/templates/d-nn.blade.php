@@ -22,10 +22,10 @@
                         <div class="row align-items-center">
                             <div class="col-lg-6 col-md-6 aos-init " data-aos="fade-right" data-aos-duration="1000" data-aos-easing="ease">
                                 <div class=" custom_tittle text-left">
-                                    <h1>DNN (DOTNETNUKE)</h1>
+                                    <h1>DNN (Dotnetnuke)</h1>
                                     <h2 class="">
-                                        <strong>BUILD</strong> PROFESSIONAL WEBSITES <strong>WITH</strong> 
-                                        INTERACTIVE FEATURES <strong>AND</strong> CONTENT.
+                                    Build <strong>Professional</strong> Websites With 
+                                    Interactive Features And <strong>Content.</strong>
 
                                     </h2>
 

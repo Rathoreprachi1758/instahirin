@@ -5,25 +5,25 @@
         <div class="mainBanner_detail">
             <div class="row">
                 <div class="col-lg-7 col-md-9">
-                    <div class="mainBanner_text aos-init " data-aos="fade-right" data-aos-duration="500"
+                    <div class=" custom_tittle aos-init " data-aos="fade-right" data-aos-duration="500"
                         data-aos-easing="ease-in">
-                        <h3 class="text-white text-uppercase">
-                            <b>BIZIONIC</b> top-rated software development <br>
-                            and marketing company
-                        </h3>
+                        <h1 class="text-white text-uppercase text-left">
+                            Your <strong>Innovation</strong> Hub For <strong>Software Development,</strong> Ai, <strong>Blockchain,</strong> 
+                            And <strong>Marketing</strong> Solutions - Where Ideas Take Flight And Achieve <strong>Global</strong> Impact
+                        </h1>
                         {{-- <h1 style="color:aliceblue">About page</h1> --}}
 
-                        <p class="text-white">Welcome to Bizionic, a leading software development and marketing company
+                        <p class="text-white text-justify">Welcome to Bizionic, a leading software development and marketing company
                             that empowers businesses to thrive digitally. With a comprehensive suite of services, we
                             combine cutting-edge software development expertise with strategic marketing solutions to
                             help our clients achieve
                             their goals and outshine their competition.</p>
-                        <p class="text-white">Partnering with Bizionic means gaining a dedicated team passionate about
+                        <p class="text-white text-justify">Partnering with Bizionic means gaining a dedicated team passionate about
                             your success. We work collaboratively, keeping you informed and involved throughout the
                             entire process. Our commitment to delivering on time, within budget, and exceeding your
                             expectations remains
                             unwavering.</p>
-                        <p class="text-white">Embrace the power of integrated software development and marketing with
+                        <p class="text-white text-justify">Embrace the power of integrated software development and marketing with
                             Bizionic. Contact us today to embark on a transformative journey to elevate your brand,
                             expand your reach, and
                             accelerate your business growth. Let's pave the way for digital success in an ever-evolving
@@ -52,7 +52,7 @@
                     <div class="who_we_are_text  aos-init aos-animate" data-aos="fade-right" data-aos-duration="800"
                         data-aos-easing="ease">
                         <div class="custom_tittle">
-                            <h2 class="text-justify p_color"><strong>Who</strong> We Are?</h2>
+                            <h2 class="text-left p_color">Bizionic, <strong>Your Software Development</strong> Partner</h2>
                             <h6 class="text-justify p_color pb-2"><strong>Startups to Unicorn's Lab</strong></h6>
                             <p class="text-justify p_color"><b>Bizionic Technologies and Marketing Solution
                                     (Bizionic)</b> is a Startup to Unicorn
@@ -87,7 +87,7 @@
                         data-aos-easing="ease">
                         <div class="byNumber_section_detail">
                             <div class="custom_tittle">
-                                <h2 class="pb-5 text-left"><strong>Bizionic</strong> by Numbers</h2>
+                                <h2 class="pb-5 text-left"><strong>Bizionic</strong> by Numbers </h2>
                             </div>
 
                             <div class="byNumber_steps" id="counter">
@@ -199,7 +199,7 @@
         <div class="at_bizionic_section_detail">
             <div class="custom_tittle  aos-init aos-animate" data-aos="fade-up" data-aos-duration="800"
                 data-aos-easing="ease">
-                <h2><strong>At</strong> Bizionic</h2>
+                <h2><strong>What We Offer At</strong> Bizionic?</h2>
                 <p class="p_color">We pride ourselves on delivering results, not promises.</p>
             </div>
 

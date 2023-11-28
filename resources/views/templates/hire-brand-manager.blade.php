@@ -22,9 +22,10 @@
                         <div class="row align-items-center">
                             <div class="col-lg-6 col-md-6 aos-init " data-aos="fade-right" data-aos-duration="1000" data-aos-easing="ease">
                                 <div class=" custom_tittle text-left">
-                                    <h1>BRAND MANAGER</h1>
+                                    <h1>Brand Manager</h1>
                                     <h2 class="">
-                                        <strong>DEVELOP A</strong> BRAND STRATEGY <strong>FOR BUSINESS NEEDS SUCH AS</strong> BRANDING, COMMUNICATION, PRODUCT DEVELOPMENT, ONLINE <strong>AND</strong> OFFLINE PROMOTIONS, <strong>AND</strong> MARKET RESEARCH.
+                                        Develop <strong>A</strong> Brand Strategy For Business Needs <strong>Such</strong> As Branding, <strong>Communication,</strong> 
+                                        Product Development, <strong>Online</strong> And Offline Promotions, And Market Research.
                                     </h2>
 
                                         <p class="p_color text-justify">Bizionic Marketing Solutions Brand Managers manage and develop a company or product's brand identity and strategy. They play a crucial role in shaping the perception of the brand and ensuring its consistency across various channels and touchpoints. </p>

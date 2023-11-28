@@ -22,11 +22,10 @@
                         <div class="row align-items-center">
                             <div class="col-lg-6 col-md-6 aos-init " data-aos="fade-right" data-aos-duration="1000" data-aos-easing="ease">
                                 <div class=" custom_tittle text-left">
-                                    <h1>SOCIAL MEDIA MANAGEMENT (SMM)</h1>
-                                    <h2 class="">
-                                        CREATE <strong>AND</strong> SCHEDULE <strong>POSTING</strong> CONTENTS
-                                         <strong>DESIGNED TO</strong> GROW <strong>AND</strong> NURTURE <strong>AN</strong> AUDIENCE
-                                          <strong>ACROSS SOCIAL MEDIA</strong> PLATFORMS.
+                                    <h1>Empower Your Brands Social Presence: Bizionic Technologies Social Media Management</h1>
+                                    <h2 class=""> 
+
+                                          Empowering <strong>Businesses</strong> Across <strong>Diverse</strong> Platforms For Commanding <strong>Social Media Presence</strong>
 
                                     </h2>
 
@@ -52,7 +51,7 @@
 
                     <div class="industryNew_section2_info aos-init " data-aos="fade-up" data-aos-duration="1500" data-aos-easing="ease">
                         <div class="custom_tittle">
-                            <h3><strong>Our comprehensive suite of</strong> Social Media Management <strong>services includes the following:</strong></h3>
+                            <h3><strong>Unlock Growth, Foster Loyalty, And Engage Effectively With Expert</strong> Social Media Marketing</h3>
 
                              
                              

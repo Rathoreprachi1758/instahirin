@@ -22,11 +22,14 @@
                         <div class="row align-items-center">
                             <div class="col-lg-6 col-md-6 aos-init " data-aos="fade-right" data-aos-duration="1000" data-aos-easing="ease">
                                 <div class=" custom_tittle text-left">
-                                    <h1>SHOPIFY</h1>
+                                    <h1>Shopify</h1>
                                     <h2 class="">
                                         <strong>BUILD</strong> E-COMMERCE WEBSITE <strong>OR</strong> ONLINE STORE 
                                         <strong>FOR</strong> BUSINESSES, <strong>OR</strong> SELL PRODUCTS <strong>ON THIRD-PARTY</strong> 
                                         MARKETPLACES <strong>OR</strong> SOCIAL MEDIA PLATFORMS <strong>OR</strong> CREATE POS.
+
+                                        Build E-Commerce <strong>Website</strong> Or Online Store For Businesses, <strong>Or</strong> Sell 
+                                        Products On <strong>Third-Party</strong> Marketplaces Or Social <strong>Media Platforms Or Create Pos.</strong>
 
                                     </h2>
 

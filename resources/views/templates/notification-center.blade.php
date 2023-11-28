@@ -12,13 +12,13 @@
 
                 <div class="row align-items-center">
                     <div class="col-lg-5 col-md-6 aos-init " data-aos="fade-right" data-aos-duration="1000" data-aos-easing="ease">
-                        <div class="mainBanner_text hireBannerText">
-                            <h3>  UNLOCK UNPRECEDENTED ENGAGEMENT
-                            </h3>
-                            <h4>  Empower Your App with <b>"Push<br> Notification Magic!"</b>
-                            </h4>
+                        <div class="custom_tittle notifyText text-left ">
+                            <h1 class="text-white">  Unlock Unprecedented Engagement
+                            </h1>
+                            <h2 class="text-white">  Everything <strong>You’Re</strong> Looking <strong>For</strong> In “Push Notification Magic”
+                            </h2>
 
-                            <p> Push Notifications, Email, SMS & In-App<br> Messaging to Increase Your Customer's<br> Engagement.</p>
+                            <p class="text-white"> Push Notifications, Email, SMS & In-App<br> Messaging to Increase Your Customer's<br> Engagement.</p>
 
                                 <a href="/get-a-free-consultation" class="btn_default_white">Contact Us</a>
                         </div>
@@ -143,7 +143,7 @@
     <div class="auto_container">
         <div class="keySuccess_marketerSection_detail">
             <div class="custom_tittle">
-                <h2><strong>Unveiling Key</strong> Marketers' Success </h2>
+                <h2><strong>Unveiling Key</strong> Marketers Success </h2>
                 <p class="p_color">Mastering the Real-Time Method to Engage Your Audience</p>
             </div>
 

@@ -18,7 +18,8 @@
                     <div class="row align-items-center">
                         <div class="col-lg-6 col-md-6 aos-init " data-aos="fade-right" data-aos-duration="1000" data-aos-easing="ease">
                             <div class="custom_tittle text-left">
-                                <h2>AGRICULTURE SERVICE DEVELOPMENT SOLUTIONS
+                                <h1>Enhancing Agriculture: Bizionics Tailored Solutions</h1>
+                                <h2><strong>Integrating</strong> Technology For <strong>Agricultural</strong> Advancement
                                 </h2>
 
                                     <p class="p_color text-justify">Bizionic Technologies offers tailored Agriculture Service Development Solutions to address the unique needs and challenges of the agriculture industry. Our approach integrates technology, data-driven insights, and sustainable practices to enhance agricultural operations and outcomes. Here's an overview of our Agriculture Service Development Solutions.</p>
@@ -43,7 +44,7 @@
 
                 <div class="industryNew_section2_info aos-init " data-aos="fade-up" data-aos-duration="1500" data-aos-easing="ease">
                     <div class="custom_tittle">
-                        <h2><strong>The</strong> Services <strong>We Offered</strong></h2> 
+                        <h2>Enhancing Agricultural Outcomes</h2> 
                     </div>
 
                     

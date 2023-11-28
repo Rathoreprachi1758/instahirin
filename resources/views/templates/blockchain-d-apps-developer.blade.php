@@ -22,9 +22,10 @@
                         <div class="row align-items-center">
                             <div class="col-lg-6 col-md-6 aos-init " data-aos="fade-right" data-aos-duration="1000" data-aos-easing="ease">
                                 <div class=" custom_tittle text-left">
-                                    <h1>dAPPS DEVELOPERS</h1>
+                                    <h1>DApps Developers</h1>
                                     <h2 class="">
-                                        <strong>BUILD A</strong> DECENTRALIZED NETWORK <strong>THAT COMBINES A</strong> SMART CONTRACT <strong>AND</strong> FRONTEND USER INTERFACE.
+                                        Build A <strong>Decentralized</strong> Network That <strong>Combines</strong> 
+                                        A Smart Contract And Frontend User <strong>Interface.</strong>
                                     </h2>
 
                                         <p class="p_color text-justify">Bizionic Technologies dApp developers, also known as decentralized application developers, specialize in building decentralized applications (dApps) that operate on blockchain platforms. dApps are applications that leverage blockchain technology's decentralized and immutable nature to provide transparent, secure, and trustless solutions.</p>
@@ -49,7 +50,7 @@
 
                     <div class="industryNew_section2_info aos-init " data-aos="fade-up" data-aos-duration="1500" data-aos-easing="ease">
                         <div class="custom_tittle">
-                            <h3><strong>Here are some key purposes and use cases where  </strong> dApp  <strong>developers are commonly employed:</strong></h2>
+                            <h3>Crafting Trustworthy And Reliable Smart Contracts With Expertise In <strong>Blockchain Platforms And Programming Languages</strong></h2>
                              
                              
                               

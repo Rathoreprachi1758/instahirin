@@ -22,11 +22,10 @@
                         <div class="row align-items-center">
                             <div class="col-lg-6 col-md-6 aos-init " data-aos="fade-right" data-aos-duration="1000" data-aos-easing="ease">
                                 <div class=" custom_tittle text-left">
-                                    <h1>WEB APPLICATION DEVELOPMENT</h1>
+                                    <h1>Web Application Development</h1>
                                     <h2 class="">
-                                        <strong>DESIGN, BUILD, TEST AND DEPLOY</strong> 
-                                        WEB-BASED APPLICATIONS, <strong>CAN</strong> INSTALLED <strong>ON 
-                                        REMOTE</strong> SERVERS <strong>AND DELIVERED TO USERS VIA INTERNET.</strong>
+                                    <strong>Design,</strong> Build, Test And Deploy Web-Based <strong>Applications,</strong> Can 
+                                    Installed <strong>On</strong> Remote Servers And Delivered To Users <strong>Via Internet.</strong>
 
                                     </h2>
 

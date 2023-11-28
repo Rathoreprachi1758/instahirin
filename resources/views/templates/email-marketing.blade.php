@@ -22,11 +22,10 @@
                         <div class="row align-items-center">
                             <div class="col-lg-6 col-md-6 aos-init " data-aos="fade-right" data-aos-duration="1000" data-aos-easing="ease">
                                 <div class=" custom_tittle text-left">
-                                    <h1>EMAIL MARKETING</h1>
+                                    <h1>Email Marketing</h1>
                                     <h2 class="">
-                                        IDENTIFY <strong>THE</strong> BRAND'S TARGET 
-                                        <strong>DEMOGRAPHIC, BUILD</strong> EMAIL LISTS, <strong>AND</strong> 
-                                        CONDUCT EMAIL</strong> MARKETING CAMPAIGN <strong>STRATEGIES.</strong>
+                                    Identify <strong>The</strong> Brands Target Demographic, <strong>Build</strong> Email 
+                                    Lists, And <strong>Conduct</strong> Email Marketing Campaign <strong>Strategies.</strong>
 
                                     </h2>
 

@@ -22,10 +22,9 @@
                         <div class="row align-items-center">
                             <div class="col-lg-6 col-md-6 aos-init " data-aos="fade-right" data-aos-duration="1000" data-aos-easing="ease">
                                 <div class=" custom_tittle text-left">
-                                    <h1>ANIMATIONS</h1>
+                                    <h1>Unlocking The Power Of Animation For Effective Marketing Communication And Visual Excellence</h1>
                                     <h2 class="">
-                                        <strong>CREATE</strong> WIREFRAME’S LAYOUTS <strong>OF A DIGITAL</strong>
-                                         PRODUCT <strong>THAT</strong> REFLECTS INTERFACE ELEMENTS <strong>ON KEY PAGES.</strong>
+                                    <strong>Create</strong> Wireframes Layouts Of A Digital Product That <strong>Reflects Interface Elements</strong> On Key Pages.
 
                                     </h2>
 

@@ -18,8 +18,8 @@
                         <div class="row align-items-center">
                             <div class="col-lg-6 col-md-6 aos-init " data-aos="fade-right" data-aos-duration="1000" data-aos-easing="ease">
                                 <div class="custom_tittle text-left">
-                                    <h2>TELECOMMUNICATIONS SOLUTIONS DEVELOPMENT
-                                    </h2>
+                                    <h1>Empowering Telecom: Bizionics Bespoke Solutions Journey
+                                    </h1>
 
                                         <p class="p_color text-justify">In the rapidly advancing telecommunications sector, scalable, efficient, innovative solutions are paramount. Bizionic Technologies has established a systematic and agile development process, ensuring telecom businesses stay ahead of the curve. This article delves into the step-by-step journey that Bizionic Technologies undertakes when developing bespoke telecommunications solutions.</p>
 
@@ -43,7 +43,7 @@
 
                     <div class="industryNew_section2_info aos-init " data-aos="fade-up" data-aos-duration="1500" data-aos-easing="ease">
                         <div class="custom_tittle">
-                            <h2><strong>The</strong> Services <strong>We Offered</strong></h2> 
+                            <h2>Systematic Development <strong>Approach</strong></h2> 
                         </div>
 
                         
@@ -154,7 +154,7 @@
                 <div class="auto_container">
                     <div class="newIndPages_section2_tittle   ">
                         <div class="custom_tittle p-0 aos-init"  data-aos="fade-up" data-aos-duration="1000" data-aos-easing="ease">
-                            <h2 class="pb-2">Telecommunications Solutions Development</h2>
+                            <h2 class="pb-2">Agile Solutions For Telecom</h2>
                             <h6 class="p-0"><strong>Process by Bizionic Technologies</strong></h6>
                         </div>
     

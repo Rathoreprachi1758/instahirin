@@ -22,9 +22,9 @@
                         <div class="row align-items-center">
                             <div class="col-lg-6 col-md-6 aos-init " data-aos="fade-right" data-aos-duration="1000" data-aos-easing="ease">
                                 <div class=" custom_tittle text-left">
-                                    <h1>SOLIDITY DEVELOPERS</h1>
+                                    <h1>Solidity Developers</h1>
                                     <h2 class="">
-                                        <strong>DEVELOP</strong> INTELLIGENT <strong>CONTRACTS IN APPS BASED ON ETHEREUM USING THE</strong> SOLIDITY PROGRAMMING <strong>LANGUAGE</strong>.
+                                        <strong>Develop</strong> Intelligent Contracts <strong>In</strong> Apps Based On Ethereum Using The <strong>Solidity</strong> Programming Language.
                                     </h2>
 
                                         <p class="p_color text-justify">Bizionic Technologies Solidity developers are primarily used for blockchain and decentralized application (dApp) development. Solidity is a programming language specifically designed for writing smart contracts on blockchain platforms, with Ethereum being the most prominent one.</p>

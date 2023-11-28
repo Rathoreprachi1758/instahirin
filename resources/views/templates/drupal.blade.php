@@ -20,9 +20,10 @@
               <div class="row align-items-center">
                 <div class="col-lg-6 col-md-6 aos-init " data-aos="fade-right" data-aos-duration="1000" data-aos-easing="ease">
                   <div class=" custom_tittle text-left">
-                    <h1>DRUPAL</h1>
+                    <h1>Drupal</h1>
                     <h2 class="">
-                      <strong>BUILD AND MAINTAIN</strong> WEBSITES, ONLINE DIRECTORIES, E-COMMERCE STORES, INTRANETS <strong>AND OTHER TYPES OF</strong> DIGITAL CONTENT.
+                    Build And <strong>Maintain</strong> Websites, Online Directories, 
+                    E-Commerce Stores, <strong>Intranets</strong> And Other Types <strong>Of</strong> Digital Content.
                     </h2>
                     <p class="p_color text-justify">Bizionic Technologies offers comprehensive Drupal development services to empower businesses with dynamic and feature-rich websites and web applications.</p>
                     <br>

@@ -22,11 +22,12 @@
                         <div class="row align-items-center">
                             <div class="col-lg-6 col-md-6 aos-init " data-aos="fade-right" data-aos-duration="1000" data-aos-easing="ease">
                                 <div class=" custom_tittle text-left">
-                                    <h1>ZENCART</h1>
+                                    <h1>Elevate Your E-Commerce Experience: Bizionic Technologies Zen Cart Development Experts</h1>
                                     <h2 class="">
-                                        <strong>A</strong> USER-FRIENDLY, OPEN SOURCE <strong>SHOPPING
-                                        CART SYATEM ALLOWS</strong> BUSINESSES <strong>TO</strong> 
-                                        HIGHLIGHT FEATURED <strong>AND</strong> SPECIAL PRODUCTS.
+                                        <strong>A</strong> User-Friendly, Open Source <strong>Shopping Cart Syatem Allows</strong> 
+                                        Businesses <strong>To</strong> 
+                                        Highlight Featured <strong>And</strong> Special Products.
+
 
                                     </h2>
 
@@ -52,7 +53,7 @@
 
                     <div class="industryNew_section2_info aos-init" data-aos="fade-up" data-aos-duration="1500" data-aos-easing="ease">
                         <div class="custom_tittle">
-                            <h3>Our <strong>Zen Cart</strong> services include:</h3>
+                            <h3>Strategic Brilliance Unleashed: Bizionic Technologies Consultation And Strategy Services</h3>
   
 
 

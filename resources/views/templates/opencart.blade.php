@@ -22,10 +22,9 @@
                         <div class="row align-items-center">
                             <div class="col-lg-6 col-md-6 aos-init " data-aos="fade-right" data-aos-duration="1000" data-aos-easing="ease">
                                 <div class=" custom_tittle text-left">
-                                    <h1>OPENCART</h1>
+                                    <h1>Opencart</h1>
                                     <h2 class="">
-                                        <strong>CREATE</strong> OPEN-SOURCE, <strong>FULLY</strong> CUSTOMIZE <strong>ECOMMERCE 
-                                        STORE TO</strong> SELL <strong>AND</strong> PURCHAS <strong>ONLINE</strong> PRODUCTS.
+                                    Create <strong>Open-Source,</strong> Fully Customize <strong>Ecommerce</strong> Store To Sell And Purchas <strong>Online Products.</strong>
 
                                     </h2>
 

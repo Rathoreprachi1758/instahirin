@@ -18,8 +18,9 @@
                     <div class="row align-items-center">
                         <div class="col-lg-6 col-md-6 aos-init " data-aos="fade-right" data-aos-duration="1000" data-aos-easing="ease">
                             <div class="custom_tittle text-left">
-                                <h2>FASHION & APPAREL SERVICE DEVELOPMENT SOLUTIONS
-                                </h2>
+                                <h1> 
+                                Empowering Fashion & Apparel: Bizionics Tailored Solutions
+                                </h1>
 
                                     <p class="p_color text-justify">Bizionic Technologies offers a range of comprehensive solutions tailored to the unique needs of the fashion and apparel industry. Our services are designed to streamline operations, enhance customer experiences, and drive growth in this dynamic sector. Here's an overview of our Fashion & Apparel Service Development Solutions.</p>
 
@@ -43,7 +44,7 @@
 
                 <div class="industryNew_section2_info aos-init " data-aos="fade-up" data-aos-duration="1500" data-aos-easing="ease">
                     <div class="custom_tittle">
-                        <h2><strong>The</strong> Services <strong>We Offered</strong></h2> 
+                        <h2>Streamlining Operations <strong>For Efficiency</strong></h2> 
                     </div>
 
                     
@@ -210,7 +211,7 @@
             <div class="auto_container">
                 <div class="newIndPages_section2_tittle   ">
                     <div class="custom_tittle p-0 aos-init"  data-aos="fade-up" data-aos-duration="1000" data-aos-easing="ease">
-                        <h2 class="pb-2">Fashion & Apparel Development</h2>
+                        <h2 class="pb-2">Enhancing Customer Experiences</h2>
                         <h6 class="p-0"><strong>Process by Bizionic Technologies</strong></h6>
                     </div>
 

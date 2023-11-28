@@ -22,9 +22,9 @@
                         <div class="row align-items-center">
                             <div class="col-lg-6 col-md-6 aos-init " data-aos="fade-right" data-aos-duration="1000" data-aos-easing="ease">
                                 <div class=" custom_tittle text-left">
-                                    <h1>C++ DEVELOPERS</h1>
+                                    <h1>Empowering System Software, Games, High-Performance Computing, And More With C++ Proficiency And Efficiency</h1>
                                     <h2 class="">
-                                        DESIGN <strong>AND</strong> BUILD APPLICATIONS <strong>FOR</strong> DESKTOPS <strong>AND</strong> MOBILE <strong>DEVICES</strong>.
+                                    Design <strong>And</strong> Build Applications <strong>For</strong> Desktops <strong>And</strong> Mobile Devices.
                                     </h2>
 
                                         <p class="p_color text-justify">Bizionic Technologies C++ developers specialize in using the C++ programming language to develop software applications and solutions. C++ is a powerful and widely used programming language known for its efficiency, performance, and versatility.</p>

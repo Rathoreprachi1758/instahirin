@@ -22,9 +22,9 @@
                         <div class="row align-items-center">
                             <div class="col-lg-6 col-md-6 aos-init " data-aos="fade-right" data-aos-duration="1000" data-aos-easing="ease">
                                 <div class=" custom_tittle text-left">
-                                    <h1>EMAIL MARKETING SPECIALIST</h1>
+                                    <h1>Email Marketing Specialist</h1>
                                     <h2 class="">
-                                        <strong>IDENTIFY</strong> TARGET AUDIENCE <strong>FOR BRAND,</strong> CREATE EMAIL LISTS, <strong>AND</strong> IMPLEMENT <strong>EMAIL MARKETING</strong> CAMPAIGN STRATEGIES.
+                                        Identify Target <strong>Audience</strong> For Brand, Create <strong>Email</strong> Lists, And Implement <strong>Email</strong> Marketing <strong>Campaign Strategies.</strong>
                                     </h2>
 
                                         <p class="p_color text-justify">Bizionic Marketing Solutions Email Marketing Specialists are used for various purposes within an organization's marketing efforts.</p>

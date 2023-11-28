@@ -22,11 +22,9 @@
                         <div class="row align-items-center">
                             <div class="col-lg-6 col-md-6 aos-init " data-aos="fade-right" data-aos-duration="1000" data-aos-easing="ease">
                                 <div class=" custom_tittle text-left">
-                                    <h1>CHATBOTS COMMERCE</h1>
+                                    <h1>Chatbots Commerce</h1>
                                     <h2 class="">
-                                        <strong>IMPLEMENT</strong> AI-POWERED TECHNOLOGY <strong>TO</strong>
-                                         ENGAGE <strong>CUSTOMERS AT</strong> EVERY STAGE <strong>OF 
-                                         THEIR</strong> ONLINE BUYING JOURNEY.
+                                    Implement <strong>AI-Powered</strong> Technology To Engage <strong>Customers</strong> At Every Stage Of Their <strong>Online Buying Journey.</strong>
 
                                     </h2>
 

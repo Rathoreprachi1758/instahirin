@@ -22,7 +22,8 @@
                         <div class="row align-items-center">
                             <div class="col-lg-6 col-md-6 aos-init " data-aos="fade-right" data-aos-duration="1000" data-aos-easing="ease">
                                 <div class=" custom_tittle text-left pb-0">
-                                    <h1><strong>LOOKING FOR</strong> OTHER MARKETING SKILLS?</h1>
+                                    <h1>Looking For Other Marketing Skills?</h1>
+                                    <h2><strong>Bizionic</strong> Marketing Solution: <strong>Mastering</strong> AI And ML In Modern Marketing</h2>
                                     
 
                                         <p class="p_color text-justify">With their proficient in-house AI and ML teams, "Bizionic Marketing Solution" maintains a leading position in modern marketing practices, effectively integrating artificial intelligence and machine learning into their strategies. This strategic fusion empowers them to adeptly navigate the data-driven and automated marketing landscape adeptly, gaining a distinct competitive advantage. In today's AI-driven, data-centric marketing world, it is imperative for businesses to diligently research the implementation of AI and ML solutions into their marketing endeavours. By choosing to partner with Bizionic, brands can rest assured that they will continuously remain at the cutting edge of the ever-evolving new-age technologies in the marketing landscape.</p>
@@ -56,7 +57,8 @@
             <div class="auto_container">
                 <div class="aboutBizionic_section_detail">
                     <div class="custom_tittle aos-init aos-animate"  data-aos="fade-zoom-in" data-aos-duration="300" data-aos-easing="linear">
-                        <h2 class="text-white text-left pb-2">Bizionic, <strong>Startups to Unicorn’s Lab</strong> </h2>
+                        <h2 class="text-white text-left pb-2"><strong>Navigating</strong> The Future Of <strong>Marketing</strong> 
+                        <br>With Proficiency, Precision, And <strong>Cutting-Edge</strong> Technology </h2>
                         <p class="text-white text-left pb-0">Here are some additional marketing skills and areas where the AI and ML teams from <br>"Bizionic Marketing Solution" could assist:</p>
                     </div>
 

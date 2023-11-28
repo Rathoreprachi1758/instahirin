@@ -20,9 +20,12 @@
               <div class="row align-items-center">
                 <div class="col-lg-6 col-md-6 aos-init " data-aos="fade-right" data-aos-duration="1000" data-aos-easing="ease">
                   <div class=" custom_tittle text-left">
-                    <h1>CRAFT CMS</h1>
+                    <h1>Comprehensive Solutions For Highly Customizable And User-Friendly Web Experiences</h1>
                     <h2 class="">
-                      <strong>CREATE HIGHLY</strong> SCALABLE WEBSITES <strong>AND</strong> WEB APPLICATIONS <strong>OF ANY SIZE WITH</strong> RICH FEATURES <strong>LIKE</strong> CACHING, LOAD BALANCING, ASSET MANAGEMENT, <strong>AND</strong> CONTENT DELIVERY NETWORKS (CDNs).
+                      Create <strong>Highly</strong> Scalable Websites And 
+                      Web Applications Of Any <strong>Size With Rich</strong> 
+                      Features Like <strong>Caching,</strong> Load Balancing, 
+                      Asset Management, And Content Delivery <strong>Networks (Cdns).</strong>
                     </h2>
                     <p class="p_color text-justify">Bizionic Technologies offers comprehensive Craft CMS development services to create highly customizable and user-friendly websites and web applications.</p>
                     <br>

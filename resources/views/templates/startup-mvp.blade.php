@@ -14,8 +14,9 @@
                         <div class="row align-items-center">
                             <div class="col-lg-6 col-md-6 aos-init " data-aos="fade-right" data-aos-duration="1000" data-aos-easing="ease">
                                 <div class=" custom_tittle">
+                                    <h1 class="text-left">Custom MVP Software Development Services</h1>
                                     <h2 class="text-left">
-                                    CUSTOM <b>MVP SOFTWARE<br> DEVELOPMENT</b> SERVICES 
+                                    Custom <strong>Mvp</strong> Software Development <strong>Services</strong>
                                     </h2>
 
                                     <h4 class="text-left"><strong>We</strong> Assist Startups <strong>in Swiftly Launching Important</strong> 
@@ -56,7 +57,7 @@
                     <div class="col-lg-6 col-md-6">
                         <div class="seamlessLimitless_fl">
                             <div class="custom_tittle pb-0 text-left">
-                                <h2 class="pb-3"><strong>The</strong> Positive Aspects <strong>of</strong> MVP</h2>
+                                <h2 class="pb-3">The <strong>Positive</strong> Aspects Of <strong>MVP</strong></h2>
                                 <p class="p_color p-0 text-justify">MVPs are the best tool for early stage businesses providing a quick and strategic way to improving user pleasure, identifying and fixing faults, and maximising system functionality; using this technique, companies may investigate how to achieve product market fit with minimal cost.</p>
                             </div>
                         </div> 

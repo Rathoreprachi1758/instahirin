@@ -22,10 +22,12 @@
                         <div class="row align-items-center">
                             <div class="col-lg-6 col-md-6 aos-init " data-aos="fade-right" data-aos-duration="1000" data-aos-easing="ease">
                                 <div class=" custom_tittle text-left">
-                                    <h1>INFLUENCER MARKETING</h1>
-                                    <h2 class="">
-                                        <strong>COLLABORE BETWEEN</strong> POPULAR SOCIAL-MEDIA 
-                                        USERS <strong>AND</strong> BRANDS <strong>TO</strong> PROMOTE <strong>BRANDS'</strong> PRODUCTS OR SERVICES.
+                                    <h1>Strategic Influence, Authentic Connections: Bizionic Technologies Influencer Marketing Prowess</h1>
+                                    <h2 class=""> 
+
+                                        <strong>Collabore</strong> Between Popular 
+                                        Social-Media Users <strong>And</strong> Brands To Promote Brands 
+                                        Products <strong>Or</strong> Services.
 
                                     </h2>
 

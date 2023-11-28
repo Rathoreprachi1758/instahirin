@@ -22,10 +22,10 @@
                         <div class="row align-items-center">
                             <div class="col-lg-6 col-md-6 aos-init " data-aos="fade-right" data-aos-duration="1000" data-aos-easing="ease">
                                 <div class=" custom_tittle text-left">
-                                    <h1>UX RESEARCHER</h1>
+                                    <h1>UX Researcher</h1>
                                     <h2 class="">
-                                        <strong>UNCOVER</strong> USER BEHAVIORS <strong>AND</strong> NEEDS <strong>TO MAKE</strong> PRODUCTS, 
-                                        SERVICES <strong>AND</strong> WEBSITES <strong>MORE</strong> INTUITIVE <strong>AND</strong> ENJOYABLE <strong>FOR USERS.</strong>
+                                    Uncover <strong>User</strong> Behaviors And Needs To Make <strong>Products,</strong> 
+                                    Services <strong>And</strong> Websites More Intuitive And <strong>Enjoyable For Users.</strong>
 
                                     </h2>
 

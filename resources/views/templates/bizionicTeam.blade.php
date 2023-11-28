@@ -522,9 +522,10 @@
         <div class="auto_container">
             <div class="indust_work_sectionDetail">
                 <div class="custom_tittle">
-                    <h2>Industries <strong>We Work In</strong></h2>
-                    <p class="p_color">We concentrate our software development services on numerous industries where we
-                        have extensive expertise.</p>
+                    <h2>Industries <strong>We Work In</strong> </h2>
+                    <p class="p_color"> 
+                    
+                        We Love To Create Software And Find Simple Solutions To Complex Challenges</p>
                 </div>
 
 

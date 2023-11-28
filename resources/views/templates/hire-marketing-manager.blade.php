@@ -22,10 +22,9 @@
                         <div class="row align-items-center">
                             <div class="col-lg-6 col-md-6 aos-init " data-aos="fade-right" data-aos-duration="1000" data-aos-easing="ease">
                                 <div class=" custom_tittle text-left">
-                                    <h1>MARKETING MANAGER</h1>
+                                    <h1>Marketing Manager</h1>
                                     <h2 class="">
-                                    <strong>INVOLVED IN EVERY</strong> ASPECT OF MARKETING,
-                                    <strong>FROM</strong> ESTIMATES TO BUDGETS, SUBMITTING PROPOSALS TO APPROVAL, <strong>AND</strong> DELIVER.
+                                    Involved In Every Aspect <strong>Of</strong> Marketing, <strong>From</strong> Estimates To Budgets, Submitting Proposals <strong>To Approval,</strong> And Deliver.
                                     </h2>
 
                                         <p class="p_color text-justify">Bizionic Marketing Solutions Marketing Manager is responsible for planning,

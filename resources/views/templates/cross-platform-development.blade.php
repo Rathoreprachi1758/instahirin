@@ -22,11 +22,10 @@
                         <div class="row align-items-center">
                             <div class="col-lg-6 col-md-6 aos-init " data-aos="fade-right" data-aos-duration="1000" data-aos-easing="ease">
                                 <div class=" custom_tittle text-left">
-                                    <h1>CROSS-PLATFORM DEVELOPMENT</h1>
+                                    <h1>Cross-Platform Development</h1>
                                     <h2 class="">
-                                    <strong>DEVELOP SOFTWARE</strong> APPLICATIONS <strong>THAT 
-                                        ARE</strong> COMPATIBLE <strong>WITH MULTIPLE</strong> MOBILE 
-                                        OPERATING SYSTEMS <strong>(OSES) OR</strong> PLATFORMS.
+                                        Develop <strong>Software</strong> Applications That <strong>Are</strong> Compatible 
+                                        With Multiple Mobile Operating <strong>Systems</strong> (OSES) Or <strong>Platforms.</strong>
 
                                     </h2>
 

@@ -52,7 +52,7 @@
 
                             <ul class="pt-3">
                                 <li>
-                                    <h6>1. Scope of this Policy</h6>
+                                    <h2>1. Scope Of This Policy</h2>
 
                                     <ul>
                                         <li><p>1.1. This Policy is an electronic record in the form of an electronic contract formed under the

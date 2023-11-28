@@ -22,9 +22,9 @@
                         <div class="row align-items-center">
                             <div class="col-lg-6 col-md-6 aos-init " data-aos="fade-right" data-aos-duration="1000" data-aos-easing="ease">
                                 <div class=" custom_tittle text-left">
-                                    <h1>HTML5/CSS3 DEVELOPERS</h1>
+                                    <h1>HTML5/CSS3 Developers</h1>
                                     <h2 class="">
-                                        <strong>CREATE</strong> NEXT GENERATION <strong>EXCEPTIONAL</strong> WEBSITES <strong>AND</strong> APPLICATIONS <strong>WITH HTML5 AND CSS3.</strong>
+                                        <strong>Create</strong> Next Generation Exceptional <strong>Websites</strong> And Applications With <strong>HTML5 And CSS3.</strong>
                                     </h2>
 
                                         <p class="p_color text-justify">Bizionic Technologies HTML5/CSS3 developers specialize in front-end web development using HTML5 and CSS3 technologies.</p>

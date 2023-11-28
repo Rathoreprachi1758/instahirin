@@ -22,9 +22,10 @@
                         <div class="row align-items-center">
                             <div class="col-lg-6 col-md-6 aos-init " data-aos="fade-right" data-aos-duration="1000" data-aos-easing="ease">
                                 <div class=" custom_tittle text-left">
-                                    <h1>LARAVEL DEVELOPERS</h1>
+                                    <h1>Laravel Developers</h1>
                                     <h2 class="">
-                                        <strong>BUILD</strong> ROBUST AND SCALABLE <strong>WEB APPLICATIONS</strong> QUICKLY AND EFFICIENTLY <strong>WITH LARAVEL’S PHP FRAMEWORK AND APIs</strong>.
+                                        <strong>Build</strong> Robust And Scalable <strong>Web</strong> Applications Quickly 
+                                        <strong>And</strong> Efficiently With Laravels PHP Framework And <strong>APIS.</strong>
                                     </h2>
 
                                         <p class="p_color text-justify">Bizionic Technologies Laravel developers specialize in working with the Laravel framework, a popular PHP framework for web application development. They leverage Laravel's features and functionalities to build robust, scalable, and efficient web applications.</p>

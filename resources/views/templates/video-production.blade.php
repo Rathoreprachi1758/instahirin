@@ -22,12 +22,13 @@
                         <div class="row align-items-center">
                             <div class="col-lg-6 col-md-6 aos-init " data-aos="fade-right" data-aos-duration="1000" data-aos-easing="ease">
                                 <div class=" custom_tittle text-left">
-                                    <h1>VIDEO PRODUCTION</h1>
-                                    <h2 class="">
-                                        <strong>CREATE A</strong> SHORT <strong>AND</strong> INFORMATIVE <strong>VIDEO THAT</strong> 
-                                        PROMOTES <strong>A</strong> PRODUCT <strong>AND IS</strong> PLAYED BEFORE, 
-                                        DURING, OR AFTER <strong>THE</strong> MAIN VIDEO <strong>OR</strong> USE 
-                                        <strong>FOR</strong> SOCIAL MEDIA <strong>ADVERTISING.</strong>
+                                    <h1>Video Production</h1>
+                                    <h2 class=""> 
+
+
+                                        Create A <strong>Short</strong> And Informative Video 
+                                        That Promotes <strong>A</strong> Product And Is Played Before, <strong>During,</strong> 
+                                        Or After <strong>The</strong> Main Video Or Use For <strong>Social Media Advertising.</strong>
 
                                     </h2>
 

@@ -10501,14 +10501,18 @@ html {
 .currentJobSlider .slick-prev::before , .currentJobSlider .slick-next::before { display: none;}
 
 
+.aboutUs_bgSection .custom_tittle a { max-width: 200px;}
 
 
 
 
+.notification_banner .notifyText {
+    padding: 70px 0px;
+}
 
+.notifyText a { max-width: 160px; margin-top: 20px;}
 
-
-
+.servicesBanner a { max-width: 160px;margin-top: 20px;}
 
 
 

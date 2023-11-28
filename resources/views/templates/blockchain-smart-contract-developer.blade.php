@@ -22,9 +22,9 @@
                         <div class="row align-items-center">
                             <div class="col-lg-6 col-md-6 aos-init " data-aos="fade-right" data-aos-duration="1000" data-aos-easing="ease">
                                 <div class=" custom_tittle text-left">
-                                    <h1>SMART CONTRACT DEVELOPERS</h1>
+                                    <h1>Smart Contract Developers</h1>
                                     <h2 class="">
-                                        FULL-STACK <strong>BLOCKCHAIN DEVELOPMENT SERVICES WITH</strong> SMART CONTRACT <strong>DEVELOPMENT FOR BOTH</strong> PUBLIC AND PRIVATE <strong>BLOCKCHAIN</strong>.
+                                        Full-Stack <strong>Blockchain</strong> Development Services With <strong>Smart</strong> Contract Development For Both Public And <strong>Private Blockchain.</strong>
                                     </h2>
 
                                         <p class="p_color text-justify">Bizionic Technologies Smart contract developers specialize in designing, developing, and deploying smart contracts on blockchain platforms. Smart contracts are self-executing contracts with the terms of the agreement directly written into code. They execute actions and transactions automatically once predefined conditions are met, providing transparency, security, and efficiency in various industries.</p>

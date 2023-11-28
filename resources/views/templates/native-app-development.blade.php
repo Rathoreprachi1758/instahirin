@@ -22,10 +22,10 @@
                         <div class="row align-items-center">
                             <div class="col-lg-6 col-md-6 aos-init " data-aos="fade-right" data-aos-duration="1000" data-aos-easing="ease">
                                 <div class=" custom_tittle text-left">
-                                    <h1>NATIVE APP DEVELOPMENT</h1>
-                                    <h2 class="">
-                                        <strong>BUILD</strong> APPS <strong>FOR</strong> ANDROID, iOS <strong>OR</strong> 
-                                        CROSS-PLATFORM <strong>MOBILE</strong> DEVELOPMENT.
+                                    <h1>Native App Development</h1>
+                                    <h2 class=""> 
+
+                                        Build Apps <strong>For</strong> Android, IOS <strong>Or</strong> Cross-Platform <strong>Mobile</strong> Development.
 
                                     </h2>
 

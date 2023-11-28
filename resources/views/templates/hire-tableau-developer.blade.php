@@ -22,9 +22,11 @@
                         <div class="row align-items-center">
                             <div class="col-lg-6 col-md-6 aos-init " data-aos="fade-right" data-aos-duration="1000" data-aos-easing="ease">
                                 <div class=" custom_tittle text-left">
-                                    <h1>TABLEAU DEVELOPERS</h1>
+                                    <h1>Harnessing Expertise In Data Visualization, Analysis, Sql, And Tableau For Informed, Data-Driven Decision-Making</h1>
                                     <h2 class="">
-                                        <strong>CREATE A</strong> TABLEAU PLATFORM <strong>FOR</strong> DATA ANALYSIS, VISUALIZATION, <strong>AND</strong> BI PROCESS <strong>FOR YOUR</strong> BUSINESS NEEDS.
+                                    
+                                        Create A <strong>Tableau Platform</strong> For Data Analysis, 
+                                        Visualization, <strong>And</strong> Bi Process For <strong>Your Business Needs.</strong>
                                     </h2>
 
                                         <p class="p_color text-justify">Bizionic Technologies Tableau developers specialize in working with Tableau, a popular data visualization and business intelligence software. They use Tableau's features and capabilities to create interactive and visually appealing dashboards, reports, and data visualizations for businesses and organizations.</p>
@@ -49,7 +51,9 @@
 
                     <div class="industryNew_section2_info aos-init " data-aos="fade-up" data-aos-duration="1500" data-aos-easing="ease">
                         <div class="custom_tittle">
-                            <h3><strong>Here are the key areas where</strong> Tableau <strong>developers are involved:</strong></h2>
+                            <h3><strong>Transforming Data Into Insights: Bizionic Technologies</strong> Tableau Developers</h2>
+
+                            
                             
                             
                               

@@ -1,17 +1,17 @@
 <!-- main banner  -->
-<div class="mainBanner_section">
-    <div class="auto_container">
-        <div class="mainBanner_detail marketMain">
+    <div class="mainBanner_section">
+        <div class="auto_container">
+            <div class="mainBanner_detail marketMain">
 
-            <div class="row">
-                <div class="col-lg-6 col-md-6 aos-init " data-aos="fade-right" data-aos-duration="1000"
-                    data-aos-easing="ease">
-                    <div class="mainBanner_text marketingBanner">
-                        <h3><b>BIZIONIC</b>
-                            <small>ASPIRES TO BE</small> THE LAST <br>MARKETING PARTNER <small><br>YOU’LL EVER WORK
-                                WITH.</small>
-                        </h3>
-                    </div>
+                <div class="row">
+                    <div class="col-lg-6 col-md-6 aos-init " data-aos="fade-right" data-aos-duration="1000" data-aos-easing="ease">
+                        <div class="custom_tittle text-left marketingBanner">
+                        <h1 class="text-white"> BIZIONIC</h1>
+                            <h2 class="text-white"> 
+                            Aspires <strong>To</strong> Be The Last <strong>Marketing</strong><br> Partner You’Ll <strong>Ever Work With.</strong>  
+                            </h2>
+                        </div>
+
 
 
                     <div class="marketing_numbers" id="counter">

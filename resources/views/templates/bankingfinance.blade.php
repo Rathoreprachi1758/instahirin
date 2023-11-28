@@ -4,19 +4,16 @@
         <div class="auto_container">
             <div class="mainBanner_detail ">
 
-                <div class="row">
+                <div class="row align-items-center">
                     <div class="col-lg-6 col-md-6 aos-init " data-aos="fade-right" data-aos-duration="1000" data-aos-easing="ease">
-                        <div class="mainBanner_text hireBannerText">
-                            <h3> INNOVATIVE <br>
-                                SOLUTION FOR<br>
-                                 
-                                <b>INDUSTRial <br>SOFTWAREs</b>
-                            </h3>
+                        <div class="custom_tittle text-left hireBannerText">
+                            <h1 class="text-white"> Empower Finance With Bizionic Technologies
+                            </h1>
 
-                            <p>  BIZIONIC understands the everyday challenges of an ordinary businessmen faces, and thus, works with the core dictum of provides an unique identity to their business. Having a team of IT experts, we deliver modern business solutions under one roof. With
+                            <p class="text-white text-justify">  BIZIONIC understands the everyday challenges of an ordinary businessmen faces, and thus, works with the core dictum of provides an unique identity to their business. Having a team of IT experts, we deliver modern business solutions under one roof. With
                                 innovative ideas, unwavering passion, and a dedication to excellence, we aspire to create
                                 a positive impact that will help the industry leaders.</p>
-                            <p>Our exceptional services are a result of our professional staff, vast expertise, and
+                            <p class="text-white text-justify">Our exceptional services are a result of our professional staff, vast expertise, and
                                 successful long-term client relationships. In keeping with industry standards, we provide a wide range of software solutions services which meet all your needs and grow
                                 your business.</p>
 
@@ -91,7 +88,7 @@
                             <div class="col-lg-6 col-md-6 aos-init " data-aos="fade-right" data-aos-duration="1000" data-aos-easing="ease">
                                 <div class="custom_tittle text-left">
                                     <h2>
-                                        BANKING <strong>AND</strong> FINANCE <br> SOLUTIONS
+                                    Banking <strong>And</strong> Finance <br> Solutions  
                                     </h2> 
 
                                         <p class="p_color text-justify">Businesses can only succeed in today's fast-paced world if they can meet challenges like better service quality, quick claims processing, shorter time to market, greater functionality, etc. A business that can't afford these
@@ -128,7 +125,8 @@
                         
                         <div class="">
                             <div class="custom_tittle">
-                                <h2>Banking IT Services <strong>and</strong> Solutions</h2> 
+                                <h2>Meeting Challenges, <strong>Enhancing</strong> Service Quality, And Driving <strong>Financial</strong> Success <strong>With</strong> 
+                                    <br>Customized Banking And <strong>Financial</strong> Software Solutions</h2> 
                                 <p class="p_color pb-0">Development of Professional Software for Particular Banking Needs</p>
                             </div>
 

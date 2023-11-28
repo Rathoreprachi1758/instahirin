@@ -9,21 +9,21 @@
 
             <div class="row">
                 <div class="col-lg-6 col-md-6 aos-init " data-aos="fade-right" data-aos-duration="1000" data-aos-easing="ease">
-                    <div class="mainBanner_text hireBannerText">
-                        <h3> software
-                            development<br>
-                            <b>solutions</b>
-                        </h3>
+                    <div class="custom_tittle text-left hireBannerText">
+                        <h1 class="text-white"> Software
+                        Development<br>
+                            <strong>Solutions</strong> 
+                        </h1>
 
-                        <p> BIZIONIC is a leading software development and marketing solution agency. We take
+                        <p class="text-white text-justify"> BIZIONIC is a leading software development and marketing solution agency. We take
                             immense pride and satisfaction in assisting clients to deliver scalable products using the latest techs and trends. Our team of seasoned developers and project managers provides robust and scalable solutions that cater to your business needs and goals. We guide our customers through all the stages of the software development lifecycle, from the project idea phase to the development, support, and release of products and achieving the
                             desired goals and objectives.</p>
-                        <p>BIZIONIC team amassed extensive domain experience and a comprehension of the
+                        <p class="text-white text-justify">BIZIONIC team amassed extensive domain experience and a comprehension of the
                             environment in which software operates, and have a very in-depth command to
                             understand the software architecture and coding techniques. We create web, mobile, desktop, cloud, and SaaS technologies that aid in accelerating disruption for our partners' businesses and industries. They make the most of our production-ready custom software
                             development services to strategize new ideas and achieve true commercial benefits.</p>
 
-                            <h6>Bizionic, Your Software Solution’s Partner</h6>
+                            <h6 class="text-white">Bizionic, Your Software Solution’s Partner</h6>
 
                             <a href="/get-a-free-consultation" class="btn_default_white">Contact Us</a>
                     </div>
@@ -51,8 +51,9 @@
         <div class="auto_container">
             <div class="technology_master_detail">
                 <div class="custom_tittle">
-                    <h2><strong>Leverage Our</strong> Top Software Development Services <br>
-                        <strong> To Surpass Your Competitors!</strong></h2> 
+                    <h2>
+                    Leverage Our Top <strong>Software Development Services</strong> <br> To Surpass Your Competitors
+                    </h2> 
                 </div>
 
 

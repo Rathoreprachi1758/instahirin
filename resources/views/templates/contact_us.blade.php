@@ -7,7 +7,7 @@
                     data-aos-easing="ease-out-cubic">
                     <div class="biz_brief">
                         <div class="biz_brief_info">
-                            <h3>BIZIONIC in Brief:</h3>
+                            <h3>Unlocking Digital Success: Partner With Bizionic</h3>
                             <ul>
                                 <li>
                                     <strong>10+ Years of Expertise</strong>
@@ -44,8 +44,8 @@
                     data-aos-easing="ease-out-cubic">
                     <div class="contactForm_page">
                         <div class="custom_tittle text-left">
-                            <h2>Get a Free Consultation</h2>
-                            <p>Please fill the form and our representative will get back to you.</p>
+                            <h2>Get A Free Consultation</h2>
+                            <p>Need Assistance? Get In Touch</p>
                         </div>
                         <contact-us-component></contact-us-component>
 

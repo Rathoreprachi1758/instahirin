@@ -22,10 +22,9 @@
                         <div class="row align-items-center">
                             <div class="col-lg-6 col-md-6 aos-init " data-aos="fade-right" data-aos-duration="1000" data-aos-easing="ease">
                                 <div class=" custom_tittle text-left">
-                                    <h1>MOBILE APP DEVELOPMENT</h1>
+                                    <h1>Crafting Solutions With Technical Prowess, User-Centric Design, And Unwavering Commitment To Quality</h1>
                                     <h2 class="">
-                                        <strong>CREATE SOFTWARE AND</strong> APPS <strong>FOR</strong> MOBILES, TABLETS 
-                                        <strong>AND</strong> DIGITAL ASSISTANTS <strong>TO</strong> ENGAGE <strong>MORE</strong> USERS.
+                                    <strong>Create</strong> Software And Apps For <strong>Mobiles,</strong> Tablets And Digital Assistants To Engage <strong>More Users.</strong>
 
                                     </h2>
 

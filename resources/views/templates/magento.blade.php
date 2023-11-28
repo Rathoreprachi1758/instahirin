@@ -22,11 +22,9 @@
                         <div class="row align-items-center">
                             <div class="col-lg-6 col-md-6 aos-init " data-aos="fade-right" data-aos-duration="1000" data-aos-easing="ease">
                                 <div class=" custom_tittle text-left">
-                                    <h1>MAGENTO</h1>
+                                    <h1>Empower Your E-Commerce Journey: Bizionic Technologies Magento Development Mastery</h1>
                                     <h2 class="">
-                                        <strong>CREATE</strong> FLEXIBLE SHOPPING CART <strog>SYSTEM 
-                                        FOR CLIENT WITH</strong> CONTROL <strog>OVER THE LOOK,</strong> 
-                                        CONTENT <strog>AND</strong> FUNCTIONALITY <strog>TO THEIR ONLINE STORE.</strong>
+                                    Create <strong>Flexible</strong> Shopping Cart System For <strong>Client</strong> With Control Over The Look, Content And Functionality To <strong>Their Online Store.</strong>
 
                                     </h2>
 
@@ -52,7 +50,7 @@
 
                     <div class="industryNew_section2_info aos-init" data-aos="fade-up" data-aos-duration="1500" data-aos-easing="ease">
                         <div class="custom_tittle">
-                            <h3>Our <strong>Magento</strong> development services encompass:</h3>
+                            <h3>Captivating Online Shopping Experiences, Driving Sales, And Revenue - Your Partner In E-Commerce Excellence</h3>
   
 
 

@@ -22,10 +22,11 @@
                         <div class="row align-items-center">
                             <div class="col-lg-6 col-md-6 aos-init " data-aos="fade-right" data-aos-duration="1000" data-aos-easing="ease">
                                 <div class=" custom_tittle text-left">
-                                    <h1>WEB DESIGNER</h1>
-                                    <h2 class="">
-                                    CONCEPT, CREATE, PLAN <strong>AND</strong> IMPLEMENT <strong>THE</strong> WEBSITE <strong>IN A WAY THAT IS FUNCTIONAL AND</strong> OFFERS <strong>A</strong> GOOD USER EXPERIENCE.
-
+                                    <h1>Harmonizing Creativity And Functionality For Visually Stunning And User-Friendly Websites</h1>
+                                    <h2 class=""> 
+                                        <strong>Concept,</strong> Create, Plan And <strong>Implement</strong> 
+                                        The Website In <strong>A</strong> Way That Is Functional And Offers 
+                                        A Good <strong>User</strong> Experience.
                                     </h2>
 
                                         <p class="p_color text-justify">Bizionic Marketing Solutions web designers specializes in creating visually appealing and functional websites. They combine their creative and technical skills to design the layout, structure, and overall visual aesthetics of a website. </p>
@@ -50,7 +51,7 @@
 
                     <div class="industryNew_section2_info aos-init " data-aos="fade-up" data-aos-duration="1500" data-aos-easing="ease">
                         <div class="custom_tittle">
-                            <h3><strong>Here are some common uses of  </strong> WEB <strong>designers:</strong></h3>
+                            <h3><strong>Elevate Your Online Presence: Bizionic Marketing Solutions</strong> Web Design Maestros</h3>
 
                              
   

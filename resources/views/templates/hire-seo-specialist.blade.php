@@ -22,9 +22,10 @@
                         <div class="row align-items-center">
                             <div class="col-lg-6 col-md-6 aos-init " data-aos="fade-right" data-aos-duration="1000" data-aos-easing="ease">
                                 <div class=" custom_tittle text-left">
-                                    <h1>SEO (Search Engine Optimization) SPECIALISTS</h1>
+                                    <h1>SEO (Search Engine Optimization) Specialists</h1>
                                     <h2 class="">
-                                        <strong>OPTIMIZE YOUR</strong> WEBSITE'S CONFIGURATION <strong>FOR</strong> EASILY FINDABLE, MORE RELEVANT <strong>AND</strong> POPULAR <strong>TOWARDS USER SEARCH QUERIES.</strong>
+                                    <strong>Optimize</strong> Your Websites <strong>Configuration</strong> For Easily <strong>Findable,</strong> 
+                                    More Relevant And Popular Towards <strong>User Search Queries.</strong>
                                     </h2>
 
                                         <p class="p_color text-justify">Bizionic Marketing Solutions SEO (Search Engine Optimization) specialists specialize in optimizing websites and content to improve their visibility and organic (non-paid)

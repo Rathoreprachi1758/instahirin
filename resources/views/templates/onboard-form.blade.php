@@ -13,11 +13,9 @@
                             <div class="col-lg-8  aos-init " data-aos="fade-right" data-aos-duration="1000"
                                 data-aos-easing="ease">
                                 <div class=" custom_tittle text-left">
-                                    <h1>Bizionic InstaHirin</h1>
+                                    <h1>Bizionic Instahirin</h1>
                                     <h2 class="">
-                                        <strong>Open the door to</strong> endless working
-                                        <strong>opportunities</strong><br> <strong>for</strong> Talent
-                                        <strong>and</strong> Freelancers <strong>across the</strong> GLOBE.
+                                    Open The <strong>Door</strong> To Endless Working <strong>Opportunities</strong> For Talent And Freelancers <strong>Across</strong> The Globe.
                                     </h2>
 
 
@@ -225,7 +223,7 @@
                                         <div class="listOf_topTechnologies">
                                             <div class="custom_tittle text-left">
                                                 <h2><strong>List of</strong> Top Employers Hiring <strong>on Bizionic
-                                                        Technologies</strong></h2>
+                                                        Technologies</strong></h2> 
                                             </div>
 
                                             <div class="listTop_technology">

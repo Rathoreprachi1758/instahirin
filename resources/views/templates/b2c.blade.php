@@ -7,17 +7,15 @@
 
                 <div class="row">
                     <div class="col-lg-6 col-md-6 aos-init " data-aos="fade-right" data-aos-duration="1000" data-aos-easing="ease">
-                        <div class="mainBanner_text hireBannerText">
-                            <h3> INNOVATIVE <br>
-                                SOLUTION FOR<br>
-                                 
-                                <b>INDUSTRial <br>SOFTWAREs</b>
-                            </h3>
+                        <div class="custom_tittle text-left hireBannerText">
+                            <h1 class="text-white">Driving Business Growth Through Dynamic And Customer-Centric Solutions - Your Partner In Reaching New Heights
 
-                            <p>  BIZIONIC understands the everyday challenges of an ordinary businessmen faces, and thus, works with the core dictum of provides an unique identity to their business. Having a team of IT experts, we deliver modern business solutions under one roof. With
+                            </h1>
+
+                            <p class="text-white text-justify">  BIZIONIC understands the everyday challenges of an ordinary businessmen faces, and thus, works with the core dictum of provides an unique identity to their business. Having a team of IT experts, we deliver modern business solutions under one roof. With
                                 innovative ideas, unwavering passion, and a dedication to excellence, we aspire to create
                                 a positive impact that will help the industry leaders.</p>
-                            <p>Our exceptional services are a result of our professional staff, vast expertise, and
+                            <p class="text-white  text-justify">Our exceptional services are a result of our professional staff, vast expertise, and
                                 successful long-term client relationships. In keeping with industry standards, we provide a wide range of software solutions services which meet all your needs and grow
                                 your business.</p>
 
@@ -47,8 +45,7 @@
             <div class="auto_container">
                 <div class="technology_master_detail">
                     <div class="custom_tittle pt-2">
-                    <h2> <strong>Utilize Our</strong> Top Software Services <strong>to<br>
-                             Expand Your Business</strong>   </h2> 
+                    <h2> B2C Excellence With Bizionic <br> <strong>Technologies</strong> </h2> 
                     </div>
 
 
@@ -94,8 +91,8 @@
                             <div class="col-lg-6 col-md-6 aos-init " data-aos="fade-right" data-aos-duration="1000" data-aos-easing="ease">
                                 <div class="custom_tittle text-left">
                                     <h2>
-                                        B2C SOLUTIONS<br>
-                                        <strong>(BUSINESS TO CONSUMER)</strong> 
+                                    B2C Solutions <br>
+                                        <strong>(Business To Consumer)</strong> 
                                     </h2>
 
                                     <h5>Helping Your Business To Reach Its Potential</h5>
