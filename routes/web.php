@@ -35,7 +35,6 @@ Route::get('/{levelOneSlug?}/{levelTwoSlug?}/{levelThreeSlug?}/{levelFourSlug?}'
 // ContactUs Form Submission
 Route::post('/submit-form', [App\Http\Controllers\ContentController::class, 'store'])->name('submit-form');
 
-
 Route::get('/hire/developer/front-end-developement/{planId}', [App\Http\Controllers\ContentController::class, 'proposalGet'])->name('planId');
 
 // Proposal Form Submission
@@ -75,7 +74,7 @@ Route::get('/industries/industries-we-serve/industries/apply-now-form/{jobId}', 
 // Route::get('/thankyou',[App\Http\Controllers\ContentController::class, 'thanksMessage'])->name('Thankyou');
 Route::get('/industries/industries-we-serve/industries/thankyou', [App\Http\Controllers\ContentController::class, 'thanksMessage'])->name('Thankyou');
 //this is slug
-Route::get('/industries/{industries-we-serve}/{industries}/{jobid}', [ContentController::class, 'applyShow']);
+// Route::get('/industries/{industries-we-serve}/{industries}/{jobid}', [ContentController::class, 'applyShow']);
 //
 Route::post('content/process/{jobId}', [ContentController::class, 'process'])->name('content.process');
 Route::get('/hire/developer/front-end-developement/all-jobs', [ContentController::class, 'allJobs'])->name('content.allJobs');
