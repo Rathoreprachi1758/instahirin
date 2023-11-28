@@ -173,12 +173,11 @@
                     <div class="auto_container">
                         <div class="careerPage_inner">
                             <div class="row">
-                                <div class="custom_tittle viewBtn">
+                                <div class="custom_tittle">
                                     <h2 class="text-left p-0"><strong>Current</strong> Open Positions:</h2>
-                                    <a href="" class="btn_default">View All</a>
                                 </div>
                             </div>
-
+                            <div class="row">
                                 @foreach($jobs as $key=>$job)
                                 <div class="col-lg-4 col-md-6 buildCol">
                                     <div class="buildTeam_col">
@@ -190,18 +189,13 @@
                                             target="_blank" class="btn_default">Show more</a> --}}
                                         <a href="/industries/industries-we-serve/industries/jobid?jobId={{ $job->id }}"
                                             target="_blank" class="btn_default">Show more</a>
-
-                                            </div>
-                                        <!-- </div> -->
-                                       
-                                    </div>  
-                                    @endforeach
+                                    </div>
                                 </div>
-                            </div> 
+                                @endforeach
+                            </div>
                         </div>
                     </div>
                 </div>
-
                 {{-- <style>
                     .description {
                         height: 100px;
@@ -211,6 +205,15 @@
             </div>
         </div>
     </div>
+
+
+
+
+
+
+
+
+
 
 
 
