@@ -68,19 +68,17 @@ class NovaServiceProvider extends NovaApplicationServiceProvider
      */
     protected function gate()
     {
-        Gate::define('viewNova', function ($user) {
-            return in_array($user->email, [
-                'admin@bizionic.com',
-                'admin@gmail.com',
-                'admin@admin.com',
-            ]);
-        });
-        Gate::policy(Post2::class, brandpolicy::class);
-        // Nova::gate('viewAny', brandpolicy::class.'@viewAny');
-        // Nova::gate('view', brandpolicy::class.'@view');
-        // protected $policies = [
-        //     Brand::class => BrandPolicy::class,
-        // ];
+        // Gate::define('viewNova', function ($user) {
+        //     //dd($user->email);
+
+        //     return in_array($user->email, [
+        //         'admin@bizionic.com',
+        //         'admin@gmail.com',
+        //         'admin@admin.com',
+        //     ]);
+            
+        // });
+
     }
 
     /**
