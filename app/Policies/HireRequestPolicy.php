@@ -7,47 +7,73 @@ use App\Models\HireRequest;
 
 class HireRequestPolicy
 {
-    /**
-     * Create a new policy instance.
-     */
-    public function __construct()
-    {
-        //
-    }
-
-    ///////
     public function viewAny(User $user): bool
     {
-        return $user->hasRole('admin');
+        return $user->roles === "admin" || $user->roles === "Hr" || $this->hasPermission($user, 'read');
     }
 
-    public function view(User $user, HireRequest $hireRequest): bool
+    public function view(User $user, HireRequest $career): bool
     {
-        return $user->id === $hireRequest->user_id || $user->hasRole('admin');
+        return $user->roles === "admin" || $user->roles === "Hr" || $this->hasPermission($user, 'read');
     }
-
 
     public function create(User $user): bool
     {
-        return $user->exists;
+        return $user->roles === "admin" || $user->roles === "Hr" || $this->hasPermission($user, 'create');
+    }
+    public function update(User $user, HireRequest $career): bool
+    {
+        return $user->roles === "admin" || $user->roles === "Hr" || $this->hasPermission($user, 'update');
     }
 
-    public function update(User $user, HireRequest $hireRequest): bool
+    public function delete(User $user, HireRequest $career): bool
     {
-        return $user->id === $hireRequest->user_id || $user->hasRole('admin');
-    }
-    public function delete(User $user, HireRequest $hireRequest): bool
-    {
-        return $user->id === $hireRequest->user_id || $user->hasRole('admin');
+        return $user->roles === "admin" || $user->roles === "Hr" || $this->hasPermission($user, 'delete');
     }
 
-    public function restore(User $user, HireRequest $hireRequest): bool
+    public function restore(User $user, HireRequest $career): bool
     {
-        return $user->id === $hireRequest->user_id || $user->hasRole('admin');
+        return $user->roles === "admin" || $user->roles === "Hr" || $this->hasPermission($user, 'restore');
+    }
+    public function forceDelete(User $user, HireRequest $career): bool
+    {
+        return $user->roles === "admin" || $user->roles === "Hr" || $this->hasPermission($user, 'forceDelete');
     }
 
-    public function forceDelete(User $user, HireRequest $hireRequest): bool
+    private function hasPermission(User $user, string $permission): bool
     {
-        return $user->hasRole('admin');
+        // $authenticatedRoles =  json_decode($user->permissions, true);
+        // \Log::info('$authenticatedRoles=============================');
+        // // \Log::info($authenticatedRoles);
+        // $arraykeys = array_keys($authenticatedRoles);
+        // \Log::info('$$arraykeys******Expert******************8');
+        // \Log::info($arraykeys);
+        // $data = array_values($arraykeys);
+        // if (in_array('HireRequest', $data)) 
+        // {   
+            
+        //     $authenticatedRoles = $authenticatedRoles['HireRequest'];
+        //     return isset($authenticatedRoles[$permission]) && $authenticatedRoles[$permission] === true;
+        // }
+        // else{
+        //     return false;
+        // }
+        ////
+        $authenticatedRoles = json_decode($user->permissions, true);
+
+        if ($authenticatedRoles !== null) {
+            $arraykeys = array_keys($authenticatedRoles);
+            $data = array_values($arraykeys);
+    
+            if (in_array('HireRequest', $data)) {
+                $authenticatedRoles = $authenticatedRoles['HireRequest'];
+    
+                return isset($authenticatedRoles[$permission]) && $authenticatedRoles[$permission] === true;
+            } else {
+                return false;
+            }
+        } else {
+            return false;
+        }
     }
 }

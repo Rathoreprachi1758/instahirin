@@ -7,6 +7,10 @@ use Laravel\Nova\Nova;
 use Laravel\Nova\NovaApplicationServiceProvider;
 use App\Policies\brandpolicy;
 use App\Models\Post2;
+use \App\Models\User;
+use Illuminate\Support\Facades\File;
+// use NovaComponents\Permissioncard\Permissioncard;
+use novacomponents\Permissioncard\src\Permissioncard;
 
 class NovaServiceProvider extends NovaApplicationServiceProvider
 {
@@ -20,8 +24,30 @@ class NovaServiceProvider extends NovaApplicationServiceProvider
         parent::boot();
 
         Nova::footer(function ($request){
-            return "===========Testing=======";
+            // return "===========Testing=======";
         });
+        // Nova::group('Human resource', [
+        //     \App\Nova\User::class,
+        //     \App\Nova\Post::class,
+        //     \App\Nova\Career::class,
+        //     \App\Nova\HireRequest::class,
+        //     \App\Nova\job::class,
+        // ]);
+
+        $resourcePath = app_path('Nova');
+        $resources = collect(File::files($resourcePath))
+            ->map(function ($file) {
+                $class = '\\App\\Nova\\' . pathinfo($file)['filename'];
+                return class_exists($class) ?  pathinfo($file)['filename'] : null;
+            })
+            ->filter()
+            ->toArray();
+            \Log::info('$resources=====================');
+            \Log::info($resources);
+            $allowedEmails = User::pluck('email')->toArray();
+            \Log::info(' $allowedEmails==========');
+            \Log::info($allowedEmails);
+        // Nova::resources($resources);
     }
 
     /**
@@ -47,18 +73,13 @@ class NovaServiceProvider extends NovaApplicationServiceProvider
     protected function gate()
     {
         Gate::define('viewNova', function ($user) {
-            return in_array($user->email, [
-                'admin@bizionic.com',
-                'admin@gmail.com',
-                'admin@admin.com',
-            ]);
+            //dd($user->email);
+            $allowedEmails = User::pluck('email')->toArray();
+            \Log::info($allowedEmails);
+            return in_array($user->email, $allowedEmails);
+            
         });
-        Gate::policy(Post2::class, brandpolicy::class);
-        // Nova::gate('viewAny', brandpolicy::class.'@viewAny');
-        // Nova::gate('view', brandpolicy::class.'@view');
-        // protected $policies = [
-        //     Brand::class => BrandPolicy::class,
-        // ];
+
     }
 
     /**
@@ -71,6 +92,7 @@ class NovaServiceProvider extends NovaApplicationServiceProvider
         return [
             new \App\Nova\Dashboards\Main,
         ];
+        
     }
 
     /**
@@ -93,9 +115,11 @@ class NovaServiceProvider extends NovaApplicationServiceProvider
     //
     protected function cards()
 {
+    // return [
+    //     new \NovaComponents\Permissioncard\Permissioncard,
+    // ];
     return [
-        // other cards...
-        new \App\Nova\Card\AuthNamecard,
+        new Permissioncard,
     ];
 }
 
@@ -106,7 +130,11 @@ class NovaServiceProvider extends NovaApplicationServiceProvider
      */
     public function register()
     {
-        //
+        // Nova::serving(function (ServingNova $event) {
+        //     //
+        // });
     }
+    ////
+  
 
 }

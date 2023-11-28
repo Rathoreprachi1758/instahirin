@@ -23,14 +23,17 @@ Route::get('sitemap.xml', function () {
 ////
 Route::get('/Sign-In', [Logincontroller::class, 'index'])->name('signin');
 Route::Post('sign-up', [Logincontroller::class, 'store'])->name('submit.signup');
-Route::get('/login', [LoginController::class, 'login'])->name('loginpage');
-Route::post('dashboard', [LoginController::class, 'loginpage'])->name('login');
-
+Route::get('/loginpage', [LoginController::class, 'login'])->name('loginpage');
+// Route::post('dashboard', [LoginController::class, 'authenticate'])->name('login');
+// Route::get('logout', [loginController::class, 'logout']);
+Route::middleware(['auth.check'])->group(function () {
+    Route::post('dashboard', [LoginController::class, 'authenticate'])->name('login');
+    Route::get('logout', [LoginController::class, 'logout']);
+});
 Route::get('/{levelOneSlug?}/{levelTwoSlug?}/{levelThreeSlug?}/{levelFourSlug?}', 'App\Http\Controllers\ContentController@index')->name('index');
 
 // ContactUs Form Submission
 Route::post('/submit-form', [App\Http\Controllers\ContentController::class, 'store'])->name('submit-form');
-
 
 Route::get('/hire/developer/front-end-developement/{planId}', [App\Http\Controllers\ContentController::class, 'proposalGet'])->name('planId');
 
@@ -71,6 +74,6 @@ Route::get('/industries/industries-we-serve/industries/apply-now-form/{jobId}', 
 // Route::get('/thankyou',[App\Http\Controllers\ContentController::class, 'thanksMessage'])->name('Thankyou');
 Route::get('/industries/industries-we-serve/industries/thankyou', [App\Http\Controllers\ContentController::class, 'thanksMessage'])->name('Thankyou');
 //this is slug
-Route::get('/industries/{industries-we-serve}/{industries}/{jobid}', [ContentController::class, 'applyShow']);
+// Route::get('/industries/{industries-we-serve}/{industries}/{jobid}', [ContentController::class, 'applyShow']);
 //
 Route::post('content/process/{jobId}', [ContentController::class, 'process'])->name('content.process');

@@ -8,7 +8,18 @@ use Laravel\Nova\Fields\Gravatar;
 use Laravel\Nova\Fields\ID;
 use Laravel\Nova\Fields\Password;
 use Laravel\Nova\Fields\Text;
+use Laravel\Nova\Fields\BooleanGroup;
+use Laravel\Nova\Fields\Boolean;
+use Laravel\Nova\Fields\Select;
 use Laravel\Nova\Http\Requests\NovaRequest;
+use Illuminate\Validation\Rule;
+use Illuminate\Support\Facades\Auth;
+use App\Models\Role;
+use App\Models\novaresourcelist;
+// use NovaComponents\Permissioncard\Permissioncard;
+// use NovaComponents\Permissioncard\src\Permissioncard;
+
+use Laravel\Nova\Resource;
 
 class User extends Resource
 {
@@ -32,7 +43,9 @@ class User extends Resource
      * @var array
      */
     public static $search = [
-        'id', 'name', 'email',
+        'id',
+        'name',
+        'email',
     ];
 
     /**
@@ -43,27 +56,119 @@ class User extends Resource
      */
     public function fields(NovaRequest $request)
     {
-        return [
-            ID::make()->sortable(),
 
-            Gravatar::make()->maxWidth(50),
+        // $highlightedRole = Auth::check() ? Auth::user()->roles : null;
+        // $hideDropdown =  Auth::user()->roles === "Hr";
+        // use Illuminate\Support\Str;
+        // Str::startsWith(Auth::user()->roles, "sales.")
+        if (Auth::user()->roles === "admin") {
+            return [
+                ID::make()->sortable(),
 
-            Text::make('Name')
-                ->sortable()
-                ->rules('required', 'max:255'),
+                Gravatar::make()->maxWidth(30),
 
-            Text::make('Email')
-                ->sortable()
-                ->rules('required', 'email', 'max:254')
-                ->creationRules('unique:users,email')
-                ->updateRules('unique:users,email,{{resourceId}}'),
+                Text::make('Name')
+                    ->sortable()
+                    ->rules('required', 'max:255'),
 
-            Password::make('Password')
-                ->onlyOnForms()
-                ->creationRules('required', Rules\Password::defaults())
-                ->updateRules('nullable', Rules\Password::defaults()),
-        ];
+                Text::make('Email')
+                    ->sortable()
+                    ->rules('required', 'email', 'max:254')
+                    ->creationRules('unique:users,email')
+                    ->updateRules('unique:users,email,{{resourceId}}'),
+                Password::make('Password')
+                    ->onlyOnForms()
+                    ->creationRules('required', Rules\Password::defaults())
+                    ->updateRules('nullable', Rules\Password::defaults()),
+                Text::make('roles')->sortable()->onlyOnIndex(),
+                // $roles = Role::all()->pluck('role')->unique()->toArray(),
+                Select::make('Roles', 'roles')
+                    ->options(array_combine(Role::all()->pluck('role')->unique()->toArray(), Role::all()->pluck('role')->unique()->toArray()))
+                    ->onlyOnForms(),
+            ];
+        } else {
+   
+            ///
+            $data = [
+                'Read',
+                'create',
+                'update',
+                'delete'
+            ];
+
+            return [
+                ID::make()->sortable(),
+
+                Gravatar::make()->maxWidth(30),
+
+                Text::make('Name')
+                    ->sortable()
+                    ->rules('required', 'max:255'),
+
+                Text::make('Email')
+                    ->sortable()
+                    ->rules('required', 'email', 'max:254')
+                    ->creationRules('unique:users,email')
+                    ->updateRules('unique:users,email,{{resourceId}}'),
+                Password::make('Password')
+                    ->onlyOnForms()
+                    ->creationRules('required', Rules\Password::defaults())
+                    ->updateRules('nullable', Rules\Password::defaults()),
+                Text::make('roles')->sortable()->onlyOnIndex(),
+                Text::make('Authenticated_roles', 'authenticated_roles')
+                    ->onlyOnForms()
+                    ->resolveUsing(function () {
+                        return Auth::check() ? Auth::user()->roles : '';
+                    }),
+               
+                BooleanGroup::make('permissions')->
+                    options(function () {
+                        $authenticatedUserRoles = Auth::user()->roles;
+                        $resources = novaresourcelist::where('autherized_to', $authenticatedUserRoles)->pluck('resource_name')->toArray();
+                        $data = ['read', 'create', 'edit', 'delete'];
+                        $formattedData = [];
+                        \Log::info('$resources');
+                        \Log::info($resources);
+
+                        foreach ($resources as $resource) {
+                            foreach ($data as $action) {
+                                $formattedData["{$resource}:{$action}"] = ucfirst($resource.'_'.$action);
+                            }
+                        }
+                        return $formattedData;
+                    })
+                    ->resolveUsing(function ($value) {
+                        return is_array($value) ? $value[0] : $value;
+                    })
+                    ->fillUsing(function ($request, $model, $attribute, $requestAttribute) {
+                        $data = json_decode($request->{$requestAttribute}, true);
+                        ////
+                        $formattedData = [];
+
+                        foreach ($data as $key => $value) {
+                            list($resource, $action) = explode(':', $key);
+                
+                            if (!isset($formattedData[$resource])) {
+                                $formattedData[$resource] = [];
+                            }
+                
+                            $formattedData[$resource][$action] = $value;
+                        }
+                
+                        // Save the transformed data to the model
+                        $model->{$attribute} = json_encode($formattedData);
+                        // Save the decoded data to the 
+                        \Log::info('This is the data handle formattedData method');
+                        \Log::info($formattedData);
+
+                        // $model->{$attribute} = json_encode($data);
+                    })
+                    ->onlyOnForms(),
+
+            ];
+        }
     }
+
 
     /**
      * Get the cards available for the request.
@@ -73,7 +178,10 @@ class User extends Resource
      */
     public function cards(NovaRequest $request)
     {
-        return [];
+        return [
+            // new \NovaComponents\Permissioncard\Permissioncard,
+            // new Permissioncard,
+        ];
     }
 
     /**
@@ -108,17 +216,4 @@ class User extends Resource
     {
         return [];
     }
-
-    //
-       // public static function authorizedToViewAny($request)
-    // {
-
-    //     return auth()->check() && auth()->user()->can('viewAny', brandpolicy::class);
-
-    // }
-
-    // public function authorizedToView($request)
-    // {
-    //     return $request->user()->can('view', $this);
-    // }
 }

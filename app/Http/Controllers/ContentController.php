@@ -775,7 +775,7 @@ class ContentController extends Controller
         //     foreach ($request->file('document') as $document) {
         //         $originalFilename = $document->getClientOriginalName();
         //         $filename = 'bizionic/images/' . time() . '_' . $originalFilename;
-        //         $document->storeAs('bizionic/images', $filename, 'public');
+        //         $document->storeAs('', $filename, 'public');
 
         //         $uploadedDocuments[] = [
         //             'name' => $originalFilename, // Store the original filename

@@ -9,6 +9,7 @@ use Laravel\Nova\Fields\Select;
 use Laravel\Nova\Fields\Text;
 use Laravel\Nova\Fields\Trix;
 use Laravel\Nova\Http\Requests\NovaRequest;
+use App\Policies\CareerPolicy;
 
 class Career extends Resource
 {
@@ -18,6 +19,8 @@ class Career extends Resource
      * @var class-string<\App\Models\Career>
      */
     public static $model = \App\Models\Career::class;
+
+    protected $policy = \App\Policies\CareerPolicy::class;
 
     /**
      * The single value that should be used to represent the resource when being displayed.
@@ -42,7 +45,8 @@ class Career extends Resource
      * @return array
      */
     public function fields(NovaRequest $request)
-    {
+    {   
+        // $this->authorizeTo(new CareerPolicy);
         return [
             ID::make()->sortable(),
             Text::make('Name','name')->rules('required','min:6,max:255'),

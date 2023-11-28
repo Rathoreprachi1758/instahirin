@@ -70,7 +70,7 @@ class Logincontroller extends Controller
     public function logout(Request $request)
     {
         Auth::logout();
-        return redirect('/');
+        return redirect('/loginpage');
     }
     //
     public function changePassword(Request $request)
