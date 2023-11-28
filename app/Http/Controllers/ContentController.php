@@ -775,7 +775,7 @@ class ContentController extends Controller
         //     foreach ($request->file('document') as $document) {
         //         $originalFilename = $document->getClientOriginalName();
         //         $filename = 'bizionic/images/' . time() . '_' . $originalFilename;
-        //         $document->storeAs('bizionic/images', $filename, 'public');
+        //         $document->storeAs('', $filename, 'public');
 
         //         $uploadedDocuments[] = [
         //             'name' => $originalFilename, // Store the original filename
@@ -904,11 +904,16 @@ class ContentController extends Controller
     }
 
     // proposal get
-    public function proposalGet($planId)
+    public function proposalGet(Request $request)
     {
-        $plan  = PlanPricing::all($planId);
-        return view('templates.proposal-form', ['plan' => $plan]);
+        dd($request->all());
+        // $plan  = PlanPricing::all($planId);
+        // return view('templates.planId', ['plan' => $plan]);
+        $planId = $request->route('planId');
+        $plan = PlanPricing::find($planId);
+        return view('templates.planId', ['plan' => $plan]);
     }
+
 
     // Get Plans and Pricing Categories
     public function getPlansCategory()

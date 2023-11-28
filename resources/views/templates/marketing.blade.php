@@ -433,186 +433,101 @@
                             </div>
                         </div>
 
+                                <div class="markServices_tabs_colInfo">
+                                    <strong>Technical Analysis: </strong>
+                                    <p>By deploying various tools, including Google Analytics and other software, our
+                                        Technical Services deliver high-level support and solutions in providing the
+                                        client with details performance analytics and devising the optimal strategy
+                                        for meeting the desired results.
+                                    </p>
+                                </div>
 
-                        <div class="col-lg-5 col-md-5 aos-init aos-animate" data-aos="fade-left" data-aos-duration="1400" data-aos-easing="ease-in">
-                            <div class="ourStory_section_fr">
-                                <span><img src="/bizionic/images/story_face.png" alt="#" /></span>
+                                <div class="markServices_tabs_colInfo">
+                                    <strong>Creative Solutions: </strong>
+                                    <p>Bring your brands to LIFE; our innovative team can assist in turning your ideas
+                                        into reality. Products have a few seconds to grab the audience's attention; our
+                                        creative and design
+                                        team will help conceptualize and transform your vision.</p>
+                                </div>
                             </div>
                         </div>
-                    </div> 
-                </div>
-
-                <div class="bizionicWay aos-init aos-animate" data-aos="zoom-in" data-aos-duration="600" data-aos-easing="ease-in">
-                    <span><img src="/bizionic/images/wayImage.png" alt="#" /></span>
-                    <strong>The Bizionic way!</strong>
-                </div>
-            </div>
-        </div>
-    </div>
-
-
-
-
-
-     <!-- our story section  -->
-
-     <div class="pricing_section bg_fff">
-        <div class="auto_container">
-            <div class="pricing_section_detail">
-                <div class="custom_tittle aos-init aos-animate" data-aos="fade-up" data-aos-duration="800" data-aos-easing="ease">
-                    <h2 class="pb-2">Plans &<strong> Pricing</strong></h2>
-                    <p class="p_color">Let us make you brand stand out!</p>
-                    <p class="p_color">Elevate your brand's visibility and distinctiveness with the expertise of Bizionic.</p>
+                    </div>
                 </div>
 
 
+                <!-- UI/UX Services tab -->
 
-                <!-- section core 2 -->
+                <div class="markServices_tabsInfo_detail" id="tab2">
 
-                <div class="coreServices_section"> 
+                    <h3 class="tabsMarker uiMarker">
+                        UI/UX <br> Services
+                    </h3>
 
-                    <div class="coreServices_sectionDetail">
-                        <div class="coreTabs">
-                            <ul>
-                                <li><a href="#coreTab1">SEO Packages & Pricing</a> </li>
-                                <li><a href="#coreTab2">Social Media Marketing Packages & Pricing</a></li>
-                                <li><a href="#coreTab3">Pay Per Click Packages & Pricing</a></li> 
-                            </ul>
+                    <div class="row">
+                        <div class="col-lg-4 col-md-4">
+                            <div class="markServices_tabs_col">
+                                <div class="markServices_tabs_colInfo">
+                                    <strong>UI/UX Designs: </strong>
+                                    <p>UI/UX design has become more “trendy”; with the “internet of things.” Our user
+                                        experience (UX) designers team works to create a product, from branding to
+                                        design to usability, providing meaningful and
+                                        enjoyable user experiences.</p>
+                                </div>
+
+                                <div class="markServices_tabs_colInfo">
+                                    <strong>Usability Testing:</strong>
+                                    <p>Our qualitative usability testing collects insights, findings and anecdotes about
+                                        how people use the product or service. Usability testing deploys multiple
+                                        techniques and real users in a user-centered interaction
+                                        approach to evaluate product flows.</p>
+                                </div>
+
+                                <div class="markServices_tabs_colInfo">
+                                    <strong>Usability Audit (UX Audit):</strong>
+                                    <p>Our UX audit uses empirical methods to provide users with behavior analytics and
+                                        let the brand know how to boost
+                                        conversions by making it easier for users to achieve their goals on brand
+                                        websites
+                                        and applications.</p>
+                                </div>
+                            </div>
                         </div>
 
 
-                        <div class="coreTabs_data">
-
-                            <!-- core tab1 -->
-                            <div class="coreTabs_data_show" id="coreTab1"   style="display:block">
-                            
-                                <div class="pricingList">
-                                    <ul>
-                                        <li>
-                                            <div class="pricingList_col">
-                                                <strong class="categoryTittle">Basic</strong>
-
-                                                <h3 class="priceValue">$595 <sub>/Month</sub></h3>
-
-                                                <div class="setupFee">
-                                                    <small>Setup Fees</small>
-                                                    <strong>$400</strong>
-                                                </div>
-
-                                                <div class="priceFeatureList">
-                                                    <ul>
-                                                        <li><p><span><i class="fa fa-check-square-o" aria-hidden="true"></i></span> 20 Keyword Research</p></li>
-                                                        <li><p><span><i class="fa fa-check-square-o" aria-hidden="true"></i></span> Website Analysis & Opportunity</p></li>
-                                                        <li><p><span><i class="fa fa-check-square-o" aria-hidden="true"></i></span> Report</p></li>
-                                                        <li><p><span><i class="fa fa-check-square-o" aria-hidden="true"></i></span> SEO Strategy</p></li>
-                                                        <li><p><span><i class="fa fa-check-square-o" aria-hidden="true"></i></span> On-Page SEO</p></li>
-                                                        <li><p><span><i class="fa fa-check-square-o" aria-hidden="true"></i></span> Monthly Report</p></li> 
-                                                    </ul>
-                                                </div>
-                                            </div>
-                                        </li>
+                        <div class="col-lg-4 col-md-4">
+                            <div class="tabsAvatar">
+                                <span><img src="/bizionic/images/uxAvatar.png" alt="#" /></span>
+                            </div>
+                        </div>
 
 
-                                        <li>
-                                            <div class="pricingList_col mostPopular">
-                                                <strong class="categoryTittleTag">Most Popular</strong>
+                        <div class="col-lg-4 col-md-4">
+                            <div class="markServices_tabs_col">
+                                <div class="markServices_tabs_colInfo">
+                                    <strong>Layout Wireframes:</strong>
+                                    <p>Think of a website or applications wireframe like an architectural blueprint. Our
+                                        wireframes provide a clear overview of the page structure, layout, information
+                                        architecture, user flow, functionality and
+                                        intended behaviors.
+                                    </p>
+                                </div>
 
-                                                <strong class="categoryTittle">Silver</strong>
+                                <div class="markServices_tabs_colInfo">
+                                    <strong>Animations:</strong>
+                                    <p>Our in-house Studio is a design-led team that brings any brand's message to life
+                                        through playful and lovingly crafted 2D, 3D, Long & Short form character
+                                        animation production. Animated stories crafted with
+                                        personality, warmth and wit.
+                                    </p>
+                                </div>
 
-                                                <h3 class="priceValue">$1200 <sub>/Month</sub></h3>
-
-                                                <div class="setupFee">
-                                                    <small>Setup Fees</small>
-                                                    <strong>$400</strong>
-                                                </div>
-
-                                                <div class="priceFeatureList">
-                                                    <ul>
-                                                        <li><p><span><i class="fa fa-check-square-o" aria-hidden="true"></i></span> 30 Keyword Research</p></li>
-                                                        <li><p><span><i class="fa fa-check-square-o" aria-hidden="true"></i></span> Website Analysis & Opportunity</p></li>
-                                                        <li><p><span><i class="fa fa-check-square-o" aria-hidden="true"></i></span> Report</p></li>
-                                                        <li><p><span><i class="fa fa-check-square-o" aria-hidden="true"></i></span> SEO Strategy</p></li>
-                                                        <li><p><span><i class="fa fa-check-square-o" aria-hidden="true"></i></span> 1 Blog/month</p></li>
-                                                        <li><p><span><i class="fa fa-check-square-o" aria-hidden="true"></i></span> On-Page SEO</p></li> 
-                                                        <li><p><span><i class="fa fa-check-square-o" aria-hidden="true"></i></span> Off-Page SEO</p></li> 
-                                                        <li><p><span><i class="fa fa-check-square-o" aria-hidden="true"></i></span> Monthly Report</p></li>  
-                                                    </ul>
-                                                </div>
-                                            </div>
-                                        </li>
-
-
-                                        <li>
-                                            <div class="pricingList_col">
-                                                <strong class="categoryTittle">Gold</strong>
-
-                                                <h3 class="priceValue">$2200 <sub>/Month</sub></h3>
-
-                                                <div class="setupFee">
-                                                    <small>Setup Fees</small>
-                                                    <strong>$700</strong>
-                                                </div>
-
-                                                <div class="priceFeatureList">
-                                                    <ul>
-                                                        <li><p><span><i class="fa fa-check-square-o" aria-hidden="true"></i></span> 60 Keyword Research</p></li>
-                                                        <li><p><span><i class="fa fa-check-square-o" aria-hidden="true"></i></span> Website Analysis & Opportunity</p></li>
-                                                        <li><p><span><i class="fa fa-check-square-o" aria-hidden="true"></i></span> Report</p></li>
-                                                        <li><p><span><i class="fa fa-check-square-o" aria-hidden="true"></i></span> SEO Strategy</p></li>
-                                                        <li><p><span><i class="fa fa-check-square-o" aria-hidden="true"></i></span> 2 Blog/month</p></li>
-                                                        <li><p><span><i class="fa fa-check-square-o" aria-hidden="true"></i></span> Persona analysis</p></li>
-                                                        <li><p><span><i class="fa fa-check-square-o" aria-hidden="true"></i></span> On-Page SEO</p></li> 
-                                                        <li><p><span><i class="fa fa-check-square-o" aria-hidden="true"></i></span> Off-Page SEO</p></li> 
-                                                        <li><p><span><i class="fa fa-check-square-o" aria-hidden="true"></i></span> Monthly Report Meeting</p></li>  
-                                                    </ul>
-                                                </div>
-                                            </div>
-                                        </li>
-
-
-                                        <li>
-                                            <div class="pricingList_col">
-                                                <strong class="categoryTittle">Platinum</strong>
-
-                                                <h3 class="priceValue">$5000 <sub>/Month</sub></h3>
-
-                                                <div class="setupFee">
-                                                    <small>Setup Fees</small>
-                                                    <strong>$9000</strong>
-                                                </div>
-
-                                                <div class="priceFeatureList">
-                                                    <ul>
-                                                        <li><p><span><i class="fa fa-check-square-o" aria-hidden="true"></i></span> 100 Keyword Research</p></li>
-                                                        <li><p><span><i class="fa fa-check-square-o" aria-hidden="true"></i></span> Website Analysis & Opportunity</p></li>
-                                                        <li><p><span><i class="fa fa-check-square-o" aria-hidden="true"></i></span> Report</p></li>
-                                                        <li><p><span><i class="fa fa-check-square-o" aria-hidden="true"></i></span> SEO Strategy</p></li>
-                                                        <li><p><span><i class="fa fa-check-square-o" aria-hidden="true"></i></span> 3 Blog/month</p></li>
-                                                        <li><p><span><i class="fa fa-check-square-o" aria-hidden="true"></i></span> Persona analysis</p></li>
-                                                        <li><p><span><i class="fa fa-check-square-o" aria-hidden="true"></i></span> On-Page SEO</p></li> 
-                                                        <li><p><span><i class="fa fa-check-square-o" aria-hidden="true"></i></span> Off-Page SEO</p></li> 
-                                                        <li><p><span><i class="fa fa-check-square-o" aria-hidden="true"></i></span> Monthly Report Meeting</p></li>  
-                                                    </ul>
-                                                </div>
-                                            </div>
-                                        </li>
-
-                                        <li>
-                                            <div class="pricingList_col">
-                                                <strong class="categoryTittle">Custom</strong> 
-
-                                                <div class="setupFee">
-                                                    <small>Custom <br> Digital Marketing <br> Package</small>
-                                                </div>
-
-                                                <div class="priceFeatureList">
-                                                    <ul>
-                                                        <li><p><span><i class="fa fa-check-square-o" aria-hidden="true"></i></span> Customization as per your requirments</p></li> 
-                                                    </ul>
-                                                </div>
-                                            </div>
-                                        </li>
-                                    </ul>
+                                <div class="markServices_tabs_colInfo">
+                                    <strong>Illustrations:</strong>
+                                    <p>Our team comprises the finest illustrators and animators with informative writing
+                                        genre that clarifies a specific situation or object through demonstrative
+                                        evidence. You only need to look in one place to find the perfect proven artists
+                                        quickly and easily
+                                        for your illustration needs.</p>
                                 </div>
                             
                             </div>
@@ -894,6 +809,7 @@
 
 
 
+<!-- our client Bizionic section -->
 
 
 
@@ -906,154 +822,143 @@
 
     <!-- get connect section -->
 
-
-    <div class="getConnect_section">
-        <div class="auto_container">
-            <div class="getConnect_section_detail">
-                <div class="connected_avatar aos-init aos-animate"  >
-                    <span><img src="/bizionic/images/connected_avatar.png" alt="#" /></span>
-                </div>
-
-                <div class="custom_tittle">
-                    <h2>Get Connected</h2>
-                </div>
-
-                <div class="connected_with aos-init aos-animate"  >
-                    <div class="row">
-                        <div class="col-lg-4 col-md-4">
-                            <div class="connected_with_info">
-                                <span><i class="fa fa-calendar" aria-hidden="true"></i></span>
-                                <small>Team</small>
-
-                                <strong>View our Team <br>
-                                    of Experts </strong>
-                                <b class="spratorLine"></b>
-                                <a href="/bizionic-team">Our Team</a>
-                            </div>
-                        </div>
-
-
-                        <div class="col-lg-4 col-md-4 p-0">
-                            <div class="connected_with_info addBorder">
-                                <span><i class="fa fa-bullhorn" aria-hidden="true"></i></span>
-                                <small>Social</small>
-
-                                <strong>See our ever expanding <br>
-                                    social community  </strong>
-                                <b class="spratorLine"></b>
-                                <a href="/get-a-free-consultation">Connect With Us </a>
-                            </div>
-                        </div>
-
-
-                        <div class="col-lg-4 col-md-4">
-                            <div class="connected_with_info">
-                                <span><i class="fa fa-file-text-o" aria-hidden="true"></i></span>
-                                <small>Blog</small>
-
-                                <strong>Find the latest insights <br>
-                                    in our blog </strong>
-                                <b class="spratorLine"></b>
-                                <a href="/hire/developer/front-end-developement/blogs">See Articles</a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
+            <div class="custom_tittle">
+                <h2>Get Connected</h2>
             </div>
-        </div>
-    </div>
 
-
-
-
-     <!-- global partner  section -->
-
-
-     <div class="globalPartner_section ">
-        <div class="auto_container">
-            <div class="globalPartner_section_detail">
-                <div class="custom_tittle text-left aos-init aos-animate" >
-                    <p>Global Outreach</p>
-                    <h2>Our Partners</h2>
-                </div>
-
-
-                <div class="globalPartner_avatar aos-init aos-animate" >
-                    <span><img src="/bizionic/images/partner_avatar.png" alt="#" /></span>
-                </div>
-
-
-
-                <div class="globalPartner_list aos-init aos-animate" >
-                    <ul>
-                        <lI><a href="#"><img src="/bizionic/images/partnerLogo1.png" alt="#" /></a></lI>
-                        <lI><a href="#"><img src="/bizionic/images/partnerLogo2.png" alt="#" /></a></lI>
-                        <lI><a href="#"><img src="/bizionic/images/partnerLogo3.png" alt="#" /></a></lI>
-                        <lI><a href="#"><img src="/bizionic/images/partnerLogo4.png" alt="#" /></a></lI>
-                        <lI><a href="#"><img src="/bizionic/images/partnerLogo5.png" alt="#" /></a></lI>
-
-                        <lI><a href="#"><img src="/bizionic/images/partnerLogo6.png" alt="#" /></a></lI>
-                        <lI><a href="#"><img src="/bizionic/images/partnerLogo7.png" alt="#" /></a></lI>
-                        <lI><a href="#"><img src="/bizionic/images/partnerLogo8.png" alt="#" /></a></lI>
-                        <lI><a href="#"><img src="/bizionic/images/partnerLogo9.png" alt="#" /></a></lI>
-                        <lI><a href="#"><img src="/bizionic/images/partnerLogo10.png" alt="#" /></a></lI>
-                    </ul>
-                </div>
-            </div>
-        </div>
-     </div>
-
-
-
-
-      <!-- start project section  -->
-
-    <div class="startProj_section marketingStart">
-        <div class="auto_container">
-            <div class="startProj_section_detail">
-                <span class="rocketAvatar"  ><img src="/bizionic/images/rocket_avatar.png" alt="#" /></span>
+            <div class="connected_with aos-init aos-animate">
                 <div class="row">
-                    <div class="col-lg-6 aos-init aos-animate" >
-                        <div class="startProj_info text-center">
-                            <h3><span>LETʼS MAKE</span>
-                                SOMETHING
-                                <em>AMAZING</em>
-                                <b>TOGETHER</b>
-                            </h3> 
+                    <div class="col-lg-4 col-md-4">
+                        <div class="connected_with_info">
+                            <span><i class="fa fa-calendar" aria-hidden="true"></i></span>
+                            <small>Team</small>
+
+                            <strong>View our Team <br>
+                                of Experts </strong>
+                            <b class="spratorLine"></b>
+                            <a href="/bizionic-team">Our Team</a>
                         </div>
                     </div>
 
-                    <div class="col-lg-6 aos-init aos-animate" >
-                        <div class="startProj_info text-center"> 
-                            <a href="/get-a-free-consultation" class="btn_default">Contact Now</a>
+
+                    <div class="col-lg-4 col-md-4 p-0">
+                        <div class="connected_with_info addBorder">
+                            <span><i class="fa fa-bullhorn" aria-hidden="true"></i></span>
+                            <small>Social</small>
+
+                            <strong>See our ever expanding <br>
+                                social community </strong>
+                            <b class="spratorLine"></b>
+                            <a href="/get-a-free-consultation">Connect With Us </a>
+                        </div>
+                    </div>
+
+
+                    <div class="col-lg-4 col-md-4">
+                        <div class="connected_with_info">
+                            <span><i class="fa fa-file-text-o" aria-hidden="true"></i></span>
+                            <small>Blog</small>
+
+                            <strong>Find the latest insights <br>
+                                in our blog </strong>
+                            <b class="spratorLine"></b>
+                            <a href="/hire/developer/front-end-developement/blogs">See Articles</a>
                         </div>
                     </div>
                 </div>
             </div>
         </div>
     </div>
+</div>
 
 
 
-     <!-- togather avatar section  -->
 
-   <div class="togather_avatar">
-        <div class="togather_avatar_inner">
-            <div class="auto_container">
-                <div class="togather_avatar_detail" >
-                    <span><img src="/bizionic/images/togather_avatar.png" alt="#" /></span>
+<!-- global partner  section -->
+
+
+<div class="globalPartner_section ">
+    <div class="auto_container">
+        <div class="globalPartner_section_detail">
+            <div class="custom_tittle text-left aos-init aos-animate">
+                <p>Global Outreach</p>
+                <h2>Our Partners</h2>
+            </div>
+
+
+            <div class="globalPartner_avatar aos-init aos-animate">
+                <span><img src="/bizionic/images/partner_avatar.png" alt="#" /></span>
+            </div>
+
+
+
+            <div class="globalPartner_list aos-init aos-animate">
+                <ul>
+                    <lI><a href="#"><img src="/bizionic/images/partnerLogo1.png" alt="#" /></a></lI>
+                    <lI><a href="#"><img src="/bizionic/images/partnerLogo2.png" alt="#" /></a></lI>
+                    <lI><a href="#"><img src="/bizionic/images/partnerLogo3.png" alt="#" /></a></lI>
+                    <lI><a href="#"><img src="/bizionic/images/partnerLogo4.png" alt="#" /></a></lI>
+                    <lI><a href="#"><img src="/bizionic/images/partnerLogo5.png" alt="#" /></a></lI>
+
+                    <lI><a href="#"><img src="/bizionic/images/partnerLogo6.png" alt="#" /></a></lI>
+                    <lI><a href="#"><img src="/bizionic/images/partnerLogo7.png" alt="#" /></a></lI>
+                    <lI><a href="#"><img src="/bizionic/images/partnerLogo8.png" alt="#" /></a></lI>
+                    <lI><a href="#"><img src="/bizionic/images/partnerLogo9.png" alt="#" /></a></lI>
+                    <lI><a href="#"><img src="/bizionic/images/partnerLogo10.png" alt="#" /></a></lI>
+                </ul>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
+
+<!-- start project section  -->
+
+<div class="startProj_section marketingStart">
+    <div class="auto_container">
+        <div class="startProj_section_detail">
+            <span class="rocketAvatar"><img src="/bizionic/images/rocket_avatar.png" alt="#" /></span>
+            <div class="row">
+                <div class="col-lg-6 aos-init aos-animate">
+                    <div class="startProj_info text-center">
+                        <h3><span>LETʼS MAKE</span>
+                            SOMETHING
+                            <em>AMAZING</em>
+                            <b>TOGETHER</b>
+                        </h3>
+                    </div>
+                </div>
+
+                <div class="col-lg-6 aos-init aos-animate">
+                    <div class="startProj_info text-center">
+                        <a href="/get-a-free-consultation" class="btn_default">Contact Now</a>
+                    </div>
                 </div>
             </div>
         </div>
-   </div>
+    </div>
+</div>
 
 
 
+<!-- togather avatar section  -->
 
+<div class="togather_avatar">
+    <div class="togather_avatar_inner">
+        <div class="auto_container">
+            <div class="togather_avatar_detail">
+                <span><img src="/bizionic/images/togather_avatar.png" alt="#" /></span>
+            </div>
+        </div>
+    </div>
+</div>
 
     
 
 
+<!-- Services provided section -->
 
 
 
@@ -1138,15 +1043,16 @@
                                     <div class="contactUs_info_form p-0">
                                         <div class="row">
 
+                <div class="modal-body">
+                    <div class=" p-2">
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                            <span aria-hidden="true">&times;</span>
+                        </button>
+                        <h3 class="modal-title " id="callModalLabel">Request a Call Back</h3>
+                        <form id="contactForm" action="contact-form" method="post">
+                            <div class="contactUs_info_form p-0">
+                                <div class="row">
 
-                                            <div class="col-lg-6">
-                                                <div class="contactUs_info_field">
-                                                    <strong>Full Name<sup class="text-danger">*</sup></strong>
-                                                    <div class="contactUs_info_fieldInput">
-                                                        <input type="text" name="full_name" placeholder="" value="" />
-                                                    </div>
-                                                </div>
-                                            </div>
 
                                             <div class="col-lg-6">
                                                 <div class="contactUs_info_field">
@@ -1156,16 +1062,18 @@
                                                     </div>
                                                 </div>
                                             </div>
+                                        </div>
+                                    </div>
 
-
-                                            <div class="col-lg-6">
-                                                <div class="contactUs_info_field">
-                                                    <strong>Email<sup class="text-danger">*</sup></strong>
-                                                    <div class="contactUs_info_fieldInput">
-                                                        <input type="text" name="email" placeholder="" value="" />
-                                                    </div>
-                                                </div>
+                                    <div class="col-lg-6">
+                                        <div class="contactUs_info_field">
+                                            <strong>Company Name</strong>
+                                            <div class="contactUs_info_fieldInput">
+                                                <input type="text" name="company_name" placeholder="" value="" />
                                             </div>
+                                        </div>
+                                    </div>
+
 
                                             <div class="col-lg-6">
                                                 <div class="contactUs_info_field">
@@ -1179,6 +1087,8 @@
 
                                                 </div>
                                             </div>
+                                        </div>
+                                    </div>
 
                                             <div class="col-lg-6" hidden>
                                                 <div class="contactUs_info_field">
@@ -1192,6 +1102,8 @@
                                                 </div>
                                             </div>
 
+                                        </div>
+                                    </div>
 
                                             <div class="col-lg-6">
                                                 <div class="contactUs_info_field">
@@ -1204,6 +1116,8 @@
                                                     </div>
                                                 </div>
                                             </div>
+                                        </div>
+                                    </div>
 
 
                                             <div class="col-lg-6">
@@ -1214,22 +1128,30 @@
                                                     </div>
                                                 </div>
                                             </div>
-
-
-                                        </div>
-                                        <input type="time" id="time" name="time" value="" hidden/>
-                                        <input type="date" name="date" value="" hidden/>
-                                        <input type="text" name="type" placeholder="" value="call" hidden/>
-                                        <div class="contactBtn pt-3  mt-3">
-                                            <input type="submit" value="Submit"
-                                                class="btn_default d-block w-100" />
                                         </div>
                                     </div>
-                                    </form>
-                                    
+
+
+                                    <div class="col-lg-6">
+                                        <div class="contactUs_info_field">
+                                            <strong>Contact Number<sup class="text-danger">*</sup></strong>
+                                            <div class="contactUs_info_fieldInput">
+                                                <input type="text" name="contact_number" placeholder="" value="" />
+                                            </div>
+                                        </div>
+                                    </div>
+
+
+                                </div>
+                                <input type="time" id="time" name="time" value="" hidden />
+                                <input type="date" name="date" value="" hidden />
+                                <input type="text" name="type" placeholder="" value="call" hidden />
+                                <div class="contactBtn pt-3  mt-3">
+                                    <input type="submit" value="Submit" class="btn_default d-block w-100" />
                                 </div>
                             </div>
-                        </div>
+                        </form>
+
                     </div>
                 </div>
 
@@ -1257,6 +1179,8 @@
                                                     </div>
                                                 </div>
                                             </div>
+                                        </div>
+                                    </div>
 
 
                                             <div class="col-lg-6">
@@ -1267,99 +1191,94 @@
                                                     </div>
                                                 </div>
                                             </div>
-
-
-                                            <div class="col-lg-6">
-                                                <div class="contactUs_info_field">
-                                                    <strong>Country Name<sup class="text-danger">*</sup></strong>
-                                                    <div class="contactUs_info_fieldSelect">
-                                                        <select class="form-control" name="country_name" id="videoCountrySelect"
-                                                            placeholder="Search or select a country">
-                                                            <!-- Options will be dynamically populated using JavaScript -->
-                                                        </select>
-                                                    </div>
-
-                                                </div>
-                                            </div>
-
-                                            <div class="col-lg-6" hidden>
-                                                <div class="contactUs_info_field">
-                                                    <strong>Country code<sup class="text-danger">*</sup></strong>
-                                                    <div class="contactUs_info_fieldSelect">
-                                                        <select class="form-control" name="country_code" id="videoCountryCodeSelect"
-                                                            placeholder="Search or select a mobile code">
-                                                            <!-- Options will be dynamically populated using JavaScript -->
-                                                        </select>
-                                                    </div>
-                                                </div>
-                                            </div>
-
-
-                                            <div class="col-lg-6">
-                                                <div class="contactUs_info_field">
-                                                    <strong>Mobile code<sup class="text-danger">*</sup></strong>
-                                                    <div class="contactUs_info_fieldSelect">
-                                                        <select class="form-control" name="mobile_code" id="videoMobileCodeSelect"
-                                                            placeholder="Search or select a mobile code">
-                                                            <!-- Options will be dynamically populated using JavaScript -->
-                                                        </select>
-                                                    </div>
-                                                </div>
-                                            </div>
-
-
-                                            <div class="col-lg-6">
-                                                <div class="contactUs_info_field">
-                                                    <strong>Contact Number<sup class="text-danger">*</sup></strong>
-                                                    <div class="contactUs_info_fieldInput">
-                                                        <input type="text" name="contact_number" placeholder="" value="" />
-                                                    </div>
-                                                </div>
-                                            </div>
-
-
-                                            <div class="col-lg-6">
-                                                <div class="contactUs_info_field">
-                                                    <strong>Email<sup class="text-danger">*</sup></strong>
-                                                    <div class="contactUs_info_fieldInput">
-                                                        <input type="text" name="email" placeholder="" value="" />
-                                                    </div>
-                                                </div>
-                                            </div>
-
-                                            <div class="col-lg-6">
-                                                <div class="contactUs_info_field">
-                                                    <strong>Date<sup class="text-danger">*</sup></strong>
-                                                    <input type="date" name="date" />
-                                                </div>
-                                            </div>
-
-
-                                            <div class="col-lg-6">
-                                                <div class="contactUs_info_field">
-                                                    <strong>Time<sup class="text-danger">*</sup></strong>
-                                                    <input type="time" id="time" name="time" />
-                                                </div>
-                                            </div>
-
-
-
-
-
-
-
-                                        </div>
-
-                                        <input type="text" name="type" placeholder="" value="video" hidden/>
-                                        <div class="contactBtn pt-3 mt-3">
-                                            <input type="submit" value="Submit"
-                                                class="btn_default   d-block w-100" />
                                         </div>
                                     </div>
-                                    </form>
-                                    
+
+
+                                    <div class="col-lg-6">
+                                        <div class="contactUs_info_field">
+                                            <strong>Country Name<sup class="text-danger">*</sup></strong>
+                                            <div class="contactUs_info_fieldSelect">
+                                                <select class="form-control" name="country_name" id="videoCountrySelect"
+                                                    placeholder="Search or select a country">
+                                                    <!-- Options will be dynamically populated using JavaScript -->
+                                                </select>
+                                            </div>
+
+                                        </div>
+                                    </div>
+
+                                    <div class="col-lg-6" hidden>
+                                        <div class="contactUs_info_field">
+                                            <strong>Country code<sup class="text-danger">*</sup></strong>
+                                            <div class="contactUs_info_fieldSelect">
+                                                <select class="form-control" name="country_code"
+                                                    id="videoCountryCodeSelect"
+                                                    placeholder="Search or select a mobile code">
+                                                    <!-- Options will be dynamically populated using JavaScript -->
+                                                </select>
+                                            </div>
+                                        </div>
+                                    </div>
+
+
+                                    <div class="col-lg-6">
+                                        <div class="contactUs_info_field">
+                                            <strong>Mobile code<sup class="text-danger">*</sup></strong>
+                                            <div class="contactUs_info_fieldSelect">
+                                                <select class="form-control" name="mobile_code"
+                                                    id="videoMobileCodeSelect"
+                                                    placeholder="Search or select a mobile code">
+                                                    <!-- Options will be dynamically populated using JavaScript -->
+                                                </select>
+                                            </div>
+                                        </div>
+                                    </div>
+
+
+                                    <div class="col-lg-6">
+                                        <div class="contactUs_info_field">
+                                            <strong>Contact Number<sup class="text-danger">*</sup></strong>
+                                            <div class="contactUs_info_fieldInput">
+                                                <input type="text" name="contact_number" placeholder="" value="" />
+                                            </div>
+                                        </div>
+                                    </div>
+
+
+                                    <div class="col-lg-6">
+                                        <div class="contactUs_info_field">
+                                            <strong>Email<sup class="text-danger">*</sup></strong>
+                                            <div class="contactUs_info_fieldInput">
+                                                <input type="text" name="email" placeholder="" value="" />
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <div class="col-lg-6">
+                                        <div class="contactUs_info_field">
+                                            <strong>Date<sup class="text-danger">*</sup></strong>
+                                            <input type="date" name="date" />
+                                        </div>
+                                    </div>
+
+
+                                    <div class="col-lg-6">
+                                        <div class="contactUs_info_field">
+                                            <strong>Time<sup class="text-danger">*</sup></strong>
+                                            <input type="time" id="time" name="time" />
+                                        </div>
+                                    </div>
+
+
+                                </div>
+
+                                <input type="text" name="type" placeholder="" value="video" hidden />
+                                <div class="contactBtn pt-3 mt-3">
+                                    <input type="submit" value="Submit" class="btn_default   d-block w-100" />
                                 </div>
                             </div>
+                        </form>
 
                         </div>
                     </div>

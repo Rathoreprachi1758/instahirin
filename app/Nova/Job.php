@@ -12,6 +12,7 @@ use Laravel\Nova\Http\Requests\NovaRequest;
 use Laravel\Nova\Fields\DateTime;
 use Illuminate\Support\Facades\Gate;
 use App\Policies\brandpolicy;
+use App\Policies\CareerPolicy;
 
 class Job extends Resource
 {
@@ -21,6 +22,8 @@ class Job extends Resource
      * @var class-string<\App\Models\Job>
      */
     public static $model = \App\Models\Job::class;
+
+    protected $policy = \App\Policies\CareerPolicy::class;
 
     /**
      * The single value that should be used to represent the resource when being displayed.

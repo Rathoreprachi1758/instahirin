@@ -6,6 +6,7 @@ use Illuminate\Http\Request;
 use Laravel\Nova\Fields\ID;
 use Laravel\Nova\Fields\Text;
 use Laravel\Nova\Http\Requests\NovaRequest;
+// use App\Policies\CareerPolicy;
 
 class Skill extends Resource
 {
@@ -14,7 +15,15 @@ class Skill extends Resource
      *
      * @var class-string<\App\Models\Skill>
      */
+    // public static $displayInNavigation = false;
+
+
     public static $model = \App\Models\Skill::class;
+
+    // App\Career.php
+
+//    protected $policy = \App\Policies\CareerPolicy::class;
+
 
     /**
      * The single value that should be used to represent the resource when being displayed.
@@ -39,7 +48,8 @@ class Skill extends Resource
      * @return array
      */
     public function fields(NovaRequest $request)
-    {
+    {   
+        // $this->authorizeTo(new CareerPolicy);
         return [
             ID::make()->sortable(),
             Text::make('Title','title')

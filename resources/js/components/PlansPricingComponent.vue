@@ -76,7 +76,8 @@
         </div>
 
         <div class="consult_btn pt-3 pb-0">
-          <!-- href="/hire/developer/front-end-developement/proposal-form" -->
+          <!-- href="/hire/developer/front-end-developement/planId?planId={{}}" -->
+          <!-- :href="generateProposalUrl(selectedPlan)" -->
           <a
             class="btn_default text-white"
             target="_blank"
@@ -198,8 +199,19 @@ export default {
     },
 
     goToProposalForm(planId) {
+      //  window.location.href = `/hire/developer/front-end-developement/${planId}`;
       window.location.href = `/hire/developer/front-end-developement/${planId}`;
     },
+    // generateProposalUrl(selectedPlan) {
+    //   Check if selectedPlan is not null
+    //     if (selectedPlan && selectedPlan.id) {
+    //       const url = `/hire/developer/front-end-developement/${selectedPlan.id}`;
+    //       console.log(url);
+    //       return url;
+    //     }
+    //     return "#";
+    //window.location.href = route("planId", { planId: selectedPlan.id });
+    // },
   },
 };
 </script>

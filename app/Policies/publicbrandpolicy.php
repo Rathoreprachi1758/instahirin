@@ -13,7 +13,7 @@ class publicbrandpolicy
      */
     public function viewAny(User $user): bool
     {
-        //
+        return false;
     }
 
     /**
@@ -21,7 +21,7 @@ class publicbrandpolicy
      */
     public function view(User $user, publicuser $publicuser): bool
     {
-        //
+        return false;
     }
 
     /**
@@ -29,7 +29,7 @@ class publicbrandpolicy
      */
     public function create(User $user): bool
     {
-        //
+        return false;
     }
 
     /**
@@ -37,7 +37,7 @@ class publicbrandpolicy
      */
     public function update(User $user, publicuser $publicuser): bool
     {
-        //
+        return false;
     }
 
     /**
@@ -45,7 +45,7 @@ class publicbrandpolicy
      */
     public function delete(User $user, publicuser $publicuser): bool
     {
-        //
+        return false;
     }
 
     /**
@@ -53,7 +53,7 @@ class publicbrandpolicy
      */
     public function restore(User $user, publicuser $publicuser): bool
     {
-        //
+        return false;
     }
 
     /**
@@ -61,6 +61,6 @@ class publicbrandpolicy
      */
     public function forceDelete(User $user, publicuser $publicuser): bool
     {
-        //
+        return false;
     }
 }

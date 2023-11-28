@@ -18,11 +18,12 @@
                     <div class="col-lg-8">
                         <div class="custom_tittle">
                             <h1 class="text-left">
-                                <strong>Embark on An Exciting</strong> Career Journey <strong>with</strong> BIZIONIC and Beyond...
-                            </h1> 
+                                <strong>Embark on An Exciting</strong> Career Journey <strong>with</strong> BIZIONIC and
+                                Beyond...
+                            </h1>
                         </div>
                     </div>
-                </div> 
+                </div>
 
 
                 <div class="embark_search_section">
@@ -115,7 +116,8 @@
 
                                 <div class="careerFeaturesCol_infoText">
                                     <a href="javascript:void(0)">Sales & Marketing</a>
-                                    <p>Internet Marketing, Marketing, Social Media Marketing, Facebook Marketing, Sales...</p>
+                                    <p>Internet Marketing, Marketing, Social Media Marketing, Facebook Marketing,
+                                        Sales...</p>
                                 </div>
                             </div>
                         </div>
@@ -126,7 +128,8 @@
 
                                 <div class="careerFeaturesCol_infoText">
                                     <a href="javascript:void(0)">Cyber Security</a>
-                                    <p>Application Security, Network Security, Critical Infrastructure Security, IoT Security...</p>
+                                    <p>Application Security, Network Security, Critical Infrastructure Security, IoT
+                                        Security...</p>
                                 </div>
                             </div>
                         </div>
@@ -164,9 +167,9 @@
 
 
     <div class="curentPosition_section bg_f2f2f2">
-        <div class="">
-            <div class="curentPosition_section_detail pb-0">
-            <div class="buildTeam_section openPosition_sec">
+        <div class="auto_container">
+            <div class="curentPosition_section_detail">
+                <div class="buildTeam_section openPosition_sec">
                     <div class="auto_container">
                         <div class="careerPage_inner">
                             <div class="row">
@@ -176,19 +179,17 @@
                                 </div>
                             </div>
 
-                            <div class="sponsorsSection">
-                                <div class="currentJobSlider">
-                                    @foreach($jobs as $key=>$job)
-                                    <div>
-                                        
-                                        <!-- <div class="col-lg-4 col-md-6 buildCol"> -->
-                                            <div class="buildTeam_col">
-                                                <strong>{{$key+1}}. {{$job->title}}:</strong>
-                                                {!!$job->description!!}
-                                                {{-- <a href="{{ route('apply-now-form', ['jobId' => $job->id]) }}"
-                                                    target="_blank" class="btn_default">Show more</a> --}}
-                                                <a href="/industries/industries-we-serve/industries/jobid?jobId={{ $job->id }}"
-                                                    target="_blank" class="btn_default">Show more</a>
+                                @foreach($jobs as $key=>$job)
+                                <div class="col-lg-4 col-md-6 buildCol">
+                                    <div class="buildTeam_col">
+                                        <strong>{{$key+1}}. {{$job->title}}:</strong>
+                                        <div class="description-container">
+                                            {!! $job->description !!}
+                                        </div>
+                                        {{-- <a href="{{ route('apply-now-form', ['jobId' => $job->id]) }}"
+                                            target="_blank" class="btn_default">Show more</a> --}}
+                                        <a href="/industries/industries-we-serve/industries/jobid?jobId={{ $job->id }}"
+                                            target="_blank" class="btn_default">Show more</a>
 
                                             </div>
                                         <!-- </div> -->
@@ -282,7 +283,8 @@
                 <div class="embark_section">
                     <div class="careerPage_inner">
                         <div class="custom_tittle">
-                            <h2 class="text-white d-none"><strong>Embark An Exciting Career Journey with BIZIONIC</strong></h2>
+                            <h2 class="text-white d-none"><strong>Embark An Exciting Career Journey with
+                                    BIZIONIC</strong></h2>
                             <p class="text-justify text-white">At BIZIONIC, we believe in pushing boundaries,
                                 challenging norms, and shaping the "How work should be in the future of the Technologies
                                 and Marketing Domain." We are a trailblazing company that thrives on the passion and
@@ -387,8 +389,10 @@
                         <div class="getEmployed_info">
                             <div class="custom_tittle text-left pb-0">
                                 <h2 class="text-white"><strong>Be Your</strong> Own BOSS</h2>
-                                <p class="text-white">Get <b>employed</b> at your terms, desired companies, time, hours and working conditions.</p>
-                                <a href="/hire/developer/front-end-developement/own-boss-learn-more" class="btn_default_white mt-4">Learn More</a>
+                                <p class="text-white">Get <b>employed</b> at your terms, desired companies, time, hours
+                                    and working conditions.</p>
+                                <a href="/hire/developer/front-end-developement/own-boss-learn-more"
+                                    class="btn_default_white mt-4">Learn More</a>
                             </div>
                         </div>
                     </div>
@@ -401,30 +405,34 @@
                 <!-- looking work section  -->
 
                 <div class="lookingWork_section ">
-                            <div class="accendDream_section">
-                                <div class="accendDream_sectionDetail">
-                                    <div class="custom_tittle text-left pb-0">
-                                        <h3 class="">
-                                            Ascend <strong>Your</strong> Dream Career <strong>Ladder<br> 
-                                            at</strong> Bizionic — <strong>Where</strong> Ambitions <strong>are</strong><br> Sculpted <strong>into Successes.
+                    <div class="accendDream_section">
+                        <div class="accendDream_sectionDetail">
+                            <div class="custom_tittle text-left pb-0">
+                                <h2 class="">
+                                    Ascend <strong>Your</strong> Dream Career <strong>Ladder<br>
+                                        at</strong> Bizionic — <strong>Where</strong> Ambitions <strong>are</strong><br>
+                                    Sculpted <strong>into Successes.
                                         </h2>
                                         <p class="p_color">Join Forces with Our Proficient Software Developers,<br> Creative Designers, and Sharp Marketers.</p>
                                         <a href="/bizionic-team#goto_form" class="btn_default mt-4">Join Team Bizionic</a>
                                     </div>
                                 </div>
                             </div>
+                        </div>
+                    </div>
                     <div class="careerPage_inner">
 
                         <div class="innerSec1">
 
 
-                            
+
 
 
 
 
                             <div class="custom_tittle d-none">
-                                <h2 class="text-left"><strong>For</strong> Tech <strong>and</strong> Marketing Talent <br>
+                                <h2 class="text-left"><strong>For</strong> Tech <strong>and</strong> Marketing Talent
+                                    <br>
                                     looking <strong>to</strong> Work <strong>at BIZIONIC</strong> </h2>
                             </div>
 
@@ -437,7 +445,8 @@
                                         <div class="col-lg-4 col-md-6  lokingCol">
                                             <div class="aboutBizionic_col_info">
                                                 <div class="whyWork-tittle">
-                                                    <span><img src="/bizionic/images/looking_icon1.png" alt="#" /></span>
+                                                    <span><img src="/bizionic/images/looking_icon1.png"
+                                                            alt="#" /></span>
                                                     <h4>Cutting-Edge Technology:</h4>
                                                 </div>
                                                 <p>
@@ -455,13 +464,15 @@
                                         <div class="col-lg-4 col-md-6  lokingCol">
                                             <div class="aboutBizionic_col_info">
                                                 <div class="whyWork-tittle">
-                                                    <span><img src="/bizionic/images/looking_icon2.png" alt="#" /></span>
+                                                    <span><img src="/bizionic/images/looking_icon2.png"
+                                                            alt="#" /></span>
                                                     <h4>Collaborative Environment:</h4>
                                                 </div>
                                                 <p>
 
                                                     Join an inclusive team that fosters creativity, idea-sharing, and
-                                                    continuous learning. The best results come from diverse perspectives and
+                                                    continuous learning. The best results come from diverse perspectives
+                                                    and
                                                     teamwork.
                                                 </p>
                                             </div>
@@ -474,13 +485,15 @@
                                         <div class="col-lg-4 col-md-6  lokingCol">
                                             <div class="aboutBizionic_col_info">
                                                 <div class="whyWork-tittle">
-                                                    <span><img src="/bizionic/images/looking_icon3.png" alt="#" /></span>
+                                                    <span><img src="/bizionic/images/looking_icon3.png"
+                                                            alt="#" /></span>
                                                     <h4>IMPACTFUL PROJECTS:</h4>
                                                 </div>
                                                 <p>
 
                                                     Work on exciting projects for various clients spanning various
-                                                    industries. From global brands to startups, you can make a real impact
+                                                    industries. From global brands to startups, you can make a real
+                                                    impact
                                                     and contribute to their success.
                                                 </p>
                                             </div>
@@ -488,13 +501,16 @@
                                         <div class="col-lg-4 col-md-6  lokingCol">
                                             <div class="aboutBizionic_col_info">
                                                 <div class="whyWork-tittle">
-                                                    <span><img src="/bizionic/images/looking_icon4.png" alt="#" /></span>
+                                                    <span><img src="/bizionic/images/looking_icon4.png"
+                                                            alt="#" /></span>
                                                     <h4>WORK-LIFE BALANCE:</h4>
                                                 </div>
                                                 <p>
 
-                                                    We believe in maintaining a healthy work-life balance. Enjoy flexible
-                                                    work arrangements, wellness programs, and a supportive work culture that
+                                                    We believe in maintaining a healthy work-life balance. Enjoy
+                                                    flexible
+                                                    work arrangements, wellness programs, and a supportive work culture
+                                                    that
                                                     prioritizes your well-being.
                                                 </p>
                                             </div>
@@ -507,14 +523,17 @@
                                         <div class="col-lg-4 col-md-6  lokingCol">
                                             <div class="aboutBizionic_col_info">
                                                 <div class="whyWork-tittle">
-                                                    <span><img src="/bizionic/images/looking_icon5.png" alt="#" /></span>
+                                                    <span><img src="/bizionic/images/looking_icon5.png"
+                                                            alt="#" /></span>
                                                     <h4>CAREER GROWTH:</h4>
                                                 </div>
                                                 <p>
 
-                                                    We are committed to your professional growth and development. Through
+                                                    We are committed to your professional growth and development.
+                                                    Through
                                                     mentorship programs, training opportunities, and challenging
-                                                    assignments, we provide a supportive environment for you to expand your
+                                                    assignments, we provide a supportive environment for you to expand
+                                                    your
                                                     skills and advance your career.
                                                 </p>
                                             </div>
@@ -522,13 +541,15 @@
                                         <div class="col-lg-4 col-md-6 lokingCol">
                                             <div class="aboutBizionic_col_info">
                                                 <div class="whyWork-tittle">
-                                                    <span><img src="/bizionic/images/looking_icon6.png" alt="#" /></span>
+                                                    <span><img src="/bizionic/images/looking_icon6.png"
+                                                            alt="#" /></span>
                                                     <h4>FLEXIBLE WORKING CONTRACT:</h4>
                                                 </div>
                                                 <p>
 
                                                     We believe in providing you with desired employment working model,
-                                                    remote, hybrid, part-time employment, full-time employment, freelancing,
+                                                    remote, hybrid, part-time employment, full-time employment,
+                                                    freelancing,
                                                     or project-based employment.
                                                 </p>
                                             </div>
