@@ -8,6 +8,10 @@
                     <div class="biz_brief">
                         <li>
                             <div class="pricingList_col mostPopular">
+                                @php
+                                    $planId = request('planId');
+                                    $plan = \App\Models\PlanPricing::find($planId);
+                                @endphp
 
                                 {{-- <h5 class="text-center text-white pb-2">{{ $plan->plan_category_id }}</h5> --}}
                                 <strong class="categoryTittle">{{ $plan->title }}</strong>
@@ -18,39 +22,77 @@
                                     <small>Setup Fees</small>
                                     <strong>${{ $plan->setup_fee }}</strong>
                                 </div>
+                                @if ($plan->title === 'CUSTOM')
+                                    <div class="priceFeatureList">
+                                        <ul>
+                                            <li>
+                                                <p><span><i class="fa fa-check-square-o" aria-hidden="true"></i></span>
 
-                                <div class="priceFeatureList">
-                                    <ul>
-                                        <li>
-                                            <p><span><i class="fa fa-check-square-o" aria-hidden="true"></i></span> 200
-                                                Keywords</p>
-                                        </li>
-                                        <li>
-                                            <p><span><i class="fa fa-check-square-o" aria-hidden="true"></i></span> 10
-                                                Ad Groups</p>
-                                        </li>
-                                        <li>
-                                            <p><span><i class="fa fa-check-square-o" aria-hidden="true"></i></span>
-                                                Quarterly Display ads with banner design</p>
-                                        </li>
-                                        <li>
-                                            <p><span><i class="fa fa-check-square-o" aria-hidden="true"></i></span>
-                                                Search, Remarketing ads</p>
-                                        </li>
-                                        <li>
-                                            <p><span><i class="fa fa-check-square-o" aria-hidden="true"></i></span>
-                                                Competitor & Research Analysis</p>
-                                        </li>
-                                        <li>
-                                            <p><span><i class="fa fa-check-square-o" aria-hidden="true"></i></span>
-                                                $2800/month Budget</p>
-                                        </li>
-                                        <li>
-                                            <p><span><i class="fa fa-check-square-o" aria-hidden="true"></i></span>
-                                                Monthly Report</p>
-                                        </li>
-                                    </ul>
-                                </div>
+                                                    
+                                                    Keywords Reaserch</p>
+                                            </li>
+                                            <li>
+                                                <p><span><i class="fa fa-check-square-o" aria-hidden="true"></i></span>
+                                                    Ad Groups</p>
+                                            </li>
+                                            <li>
+                                                <p><span><i class="fa fa-check-square-o" aria-hidden="true"></i></span>
+                                                    Quarterly Display ads with banner design</p>
+                                            </li>
+                                            <li>
+                                                <p><span><i class="fa fa-check-square-o" aria-hidden="true"></i></span>
+                                                    Search, Remarketing ads</p>
+                                            </li>
+                                            <li>
+                                                <p><span><i class="fa fa-check-square-o" aria-hidden="true"></i></span>
+                                                    Competitor & Research Analysis</p>
+                                            </li>
+                                            {{-- <li>
+                                                <p><span><i class="fa fa-check-square-o" aria-hidden="true"></i></span>
+                                                    month Budget</p>
+                                            </li> --}}
+                                            <li>
+                                                <p><span><i class="fa fa-check-square-o" aria-hidden="true"></i></span>
+                                                    Monthly Report</p>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                @else
+                                    <div class="priceFeatureList">
+                                        <ul>
+                                            <li>
+                                                <p><span><i class="fa fa-check-square-o" aria-hidden="true"></i></span>
+                                                    200
+                                                    Keywords</p>
+                                            </li>
+                                            <li>
+                                                <p><span><i class="fa fa-check-square-o" aria-hidden="true"></i></span>
+                                                    10
+                                                    Ad Groups</p>
+                                            </li>
+                                            <li>
+                                                <p><span><i class="fa fa-check-square-o" aria-hidden="true"></i></span>
+                                                    Quarterly Display ads with banner design</p>
+                                            </li>
+                                            <li>
+                                                <p><span><i class="fa fa-check-square-o" aria-hidden="true"></i></span>
+                                                    Search, Remarketing ads</p>
+                                            </li>
+                                            <li>
+                                                <p><span><i class="fa fa-check-square-o" aria-hidden="true"></i></span>
+                                                    Competitor & Research Analysis</p>
+                                            </li>
+                                            <li>
+                                                <p><span><i class="fa fa-check-square-o" aria-hidden="true"></i></span>
+                                                    $2800/month Budget</p>
+                                            </li>
+                                            <li>
+                                                <p><span><i class="fa fa-check-square-o" aria-hidden="true"></i></span>
+                                                    Monthly Report</p>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                @endif
                             </div>
                         </li>
                     </div>
@@ -271,7 +313,8 @@
                                         <div class="contactUs_info_field">
                                             <strong>Full Name<sup class="text-danger">*</sup></strong>
                                             <div class="contactUs_info_fieldInput">
-                                                <input type="text" name="full_name" placeholder="" value="" />
+                                                <input type="text" name="full_name" placeholder=""
+                                                    value="" />
                                             </div>
                                         </div>
                                     </div>
@@ -280,7 +323,8 @@
                                         <div class="contactUs_info_field">
                                             <strong>Company Name</strong>
                                             <div class="contactUs_info_fieldInput">
-                                                <input type="text" name="company_name" placeholder="" value="" />
+                                                <input type="text" name="company_name" placeholder=""
+                                                    value="" />
                                             </div>
                                         </div>
                                     </div>
@@ -290,7 +334,8 @@
                                         <div class="contactUs_info_field">
                                             <strong>Email<sup class="text-danger">*</sup></strong>
                                             <div class="contactUs_info_fieldInput">
-                                                <input type="text" name="email" placeholder="" value="" />
+                                                <input type="text" name="email" placeholder=""
+                                                    value="" />
                                             </div>
                                         </div>
                                     </div>
@@ -312,7 +357,8 @@
                                         <div class="contactUs_info_field">
                                             <strong>Country code<sup class="text-danger">*</sup></strong>
                                             <div class="contactUs_info_fieldSelect">
-                                                <select class="form-control" name="country_code" id="countryCodeSelect"
+                                                <select class="form-control" name="country_code"
+                                                    id="countryCodeSelect"
                                                     placeholder="Search or select a mobile code">
                                                     <!-- Options will be dynamically populated using JavaScript -->
                                                 </select>
@@ -338,7 +384,8 @@
                                         <div class="contactUs_info_field">
                                             <strong>Contact Number<sup class="text-danger">*</sup></strong>
                                             <div class="contactUs_info_fieldInput">
-                                                <input type="text" name="contact_number" placeholder="" value="" />
+                                                <input type="text" name="contact_number" placeholder=""
+                                                    value="" />
                                             </div>
                                         </div>
                                     </div>
@@ -380,7 +427,8 @@
                                         <div class="contactUs_info_field">
                                             <strong>Full Name<sup class="text-danger">*</sup></strong>
                                             <div class="contactUs_info_fieldInput">
-                                                <input type="text" name="full_name" placeholder="" value="" />
+                                                <input type="text" name="full_name" placeholder=""
+                                                    value="" />
                                             </div>
                                         </div>
                                     </div>
@@ -390,7 +438,8 @@
                                         <div class="contactUs_info_field">
                                             <strong>Company Name</strong>
                                             <div class="contactUs_info_fieldInput">
-                                                <input type="text" name="company_name" placeholder="" value="" />
+                                                <input type="text" name="company_name" placeholder=""
+                                                    value="" />
                                             </div>
                                         </div>
                                     </div>
@@ -400,8 +449,8 @@
                                         <div class="contactUs_info_field">
                                             <strong>Country Name<sup class="text-danger">*</sup></strong>
                                             <div class="contactUs_info_fieldSelect">
-                                                <select class="form-control" name="country_name" id="videoCountrySelect"
-                                                    placeholder="Search or select a country">
+                                                <select class="form-control" name="country_name"
+                                                    id="videoCountrySelect" placeholder="Search or select a country">
                                                     <!-- Options will be dynamically populated using JavaScript -->
                                                 </select>
                                             </div>
@@ -441,7 +490,8 @@
                                         <div class="contactUs_info_field">
                                             <strong>Contact Number<sup class="text-danger">*</sup></strong>
                                             <div class="contactUs_info_fieldInput">
-                                                <input type="text" name="contact_number" placeholder="" value="" />
+                                                <input type="text" name="contact_number" placeholder=""
+                                                    value="" />
                                             </div>
                                         </div>
                                     </div>
@@ -451,7 +501,8 @@
                                         <div class="contactUs_info_field">
                                             <strong>Email<sup class="text-danger">*</sup></strong>
                                             <div class="contactUs_info_fieldInput">
-                                                <input type="text" name="email" placeholder="" value="" />
+                                                <input type="text" name="email" placeholder=""
+                                                    value="" />
                                             </div>
                                         </div>
                                     </div>
@@ -470,12 +521,6 @@
                                             <input type="time" id="time" name="time" />
                                         </div>
                                     </div>
-
-
-
-
-
-
 
                                 </div>
 

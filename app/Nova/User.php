@@ -87,64 +87,7 @@ class User extends Resource
                     ->onlyOnForms(),
             ];
         } else {
-            // $data = [
-            //     'Read',
-            //     'create',
-            //     'update',
-            //     'delete'
-            // ];
-            // // $resarr = [];
-            // // $arrres = [];
-            // $fields = [];
-
-            // $fields[] = BooleanGroup::make('permissions')->options(function () use ($data) {
-            //     $resources = ['Job', 'Lead', 'Career']; // Add more resources as needed
-
-            //     // $formattedData = [];
-            //     // $data2 = ['create','read','update','delete'];
-            //     foreach ($resources as $resource) {
-            //         // $resource ;
-            //         // Text::make('resources')->onlyOnForms();
-            //         foreach ($data as $d) {
-            //             // $formattedData [] = $resource." ". $d;
-            //             $formattedData[$resource] = $d;
-
-            //             $jsonData[] = json_encode($formattedData);
-            //             //    return $resource[$d];
-
-            //         }
-
-            //     }
-
-            //     return $jsonData;
-            // })
-            //     ->resolveUsing(function ($value) {
-            //         return is_array($value) ? $value[0] : $value;
-            //     })
-            //     ->fillUsing(function ($request, $model, $attribute, $requestAttribute) {
-            //         $data = json_decode($request->{$requestAttribute}, true);
-
-            //         // Save the decoded data to the model
-            //         $model->{$attribute} = json_encode($data);
-            //     })
-            //     ->onlyOnForms();
-            // BooleanGroup::make($resource)
-            //     ->options([
-            //         'create' => 'Create',
-            //         'read' => 'Read',
-            //         'update' => 'Update',
-            //         'delete' => 'Delete',
-            //     ])
-            //     ->resolveUsing(function ($value) {
-            //         return is_array($value) ? $value[0] : $value;
-            //     })
-            //     ->fillUsing(function ($request, $model, $attribute, $requestAttribute) {
-            //         $model->{$attribute} = $request->{$requestAttribute};
-            //         \Log::info('$request->{$requestAttribute}');
-            //         \Log::info($request->{$requestAttribute});
-            //     })
-            //     ->onlyOnForms();
-
+   
             ///
             $data = [
                 'Read',
@@ -153,33 +96,6 @@ class User extends Resource
                 'delete'
             ];
 
-            // $fields = [];
-
-            // $fields[] = BooleanGroup::make('permissions')->options(function () use ($data) {
-            //     $resources = ['Job', 'Lead', 'Career']; // Add more resources as needed
-
-            //     $formattedData = [];
-
-            //     foreach ($resources as $resource) {
-            //         $formattedData[$resource] = [];
-
-            //         foreach ($data as $d) {
-            //             $formattedData[$resource][] = $d;
-            //         }
-            //     }
-
-            //     return $formattedData;
-            // })
-            // ->resolveUsing(function ($value) {
-            //     return is_array($value) ? $value[0] : $value;
-            // })
-            // ->fillUsing(function ($request, $model, $attribute, $requestAttribute) {
-            //     $data = json_decode($request->{$requestAttribute}, true);
-
-            //     // Save the decoded data to the model
-            //     $model->{$attribute} = json_encode($data);
-            // })
-            // ->onlyOnForms();
             return [
                 ID::make()->sortable(),
 
@@ -204,25 +120,7 @@ class User extends Resource
                     ->resolveUsing(function () {
                         return Auth::check() ? Auth::user()->roles : '';
                     }),
-                // Select::make('Roles', 'resources')
-                //     ->options([
-                //         'Job' => 'Job',
-                //         'Career' => 'Career',
-                //         'HireRequest' => 'HireRequest',
-                //         'Skill' => 'Skill'
-                //     ])
-                //     ->onlyOnForms()
-                //     ->resolveUsing(function ($value) {
-                //         return is_array($value) ? $value[0] : $value;
-                //     })
-                //     ->fillUsing(function ($request, $model, $attribute, $requestAttribute) {
-                //         $model->{$attribute} = $request->{$requestAttribute};
-                //         \Log::info('$request->{$requestAttribute}');
-                //         \Log::info($request->{$requestAttribute});
-                //     }),
-                //
-                // ...$fields,
-                // ->containerClass('checkbox-group'),
+               
                 BooleanGroup::make('permissions')->
                     options(function () {
                         $authenticatedUserRoles = Auth::user()->roles;
