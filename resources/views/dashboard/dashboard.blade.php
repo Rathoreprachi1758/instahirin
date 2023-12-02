@@ -1,8 +1,13 @@
-<h2>This is {{ auth()->user()->roles }}</h2>
+{{-- <h2>This is {{ auth()->user()->roles }}</h2>
 
 <h1>admin</h1>
 <h1>user</h1>
-<h1>company</h1>
+<h1>company</h1> --}}
+
+
+
+
+
 <a style='margin-top:-46px;margin-left:500px' href="/logout"> <svg width="23" height="23" viewBox="0 0 23 23"
     fill="none" xmlns="http://www.w3.org/2000/svg">
     <path

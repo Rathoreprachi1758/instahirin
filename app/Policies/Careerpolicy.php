@@ -51,6 +51,8 @@ class Careerpolicy
     {
 
         $authenticatedRoles = json_decode($user->permissions, true);
+        // \Log::info('======$data');
+        // \Log::info($authenticatedRoles);
 
         if ($authenticatedRoles !== null) {
             $arraykeys = array_keys($authenticatedRoles);

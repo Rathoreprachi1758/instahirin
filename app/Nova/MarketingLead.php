@@ -10,18 +10,22 @@ use Laravel\Nova\Fields\Boolean;
 use Laravel\Nova\Fields\Select;
 use Illuminate\Validation\Rules;
 use Laravel\Nova\Fields\Gravatar;
-use Laravel\Nova\Http\Requests\NovaRequest;
 use App\Models\Role;
+use Laravel\Nova\Http\Requests\NovaRequest;
 use Illuminate\Support\Facades\File;
+use \App\Models\PlanPricing;
+use \App\Models\PlanPricingFeature;
+use \App\Models\PlanPricingCategory;
 
-class NovaResourceList extends Resource
+
+class MarketingLead extends Resource
 {
     /**
      * The model the resource corresponds to.
      *
-     * @var class-string<\App\Models\NovaResourceList>
+     * @var class-string<\App\Models\MarketingLead>
      */
-    public static $model = \App\Models\novaresourcelist::class;
+    public static $model = \App\Models\MarketingLead::class;
 
     /**
      * The single value that should be used to represent the resource when being displayed.
@@ -46,27 +50,18 @@ class NovaResourceList extends Resource
      * @return array
      */
     public function fields(NovaRequest $request)
-    {  
-        $resourcePath = app_path('Nova');
-        $resources = collect(File::files($resourcePath))
-            ->map(function ($file) {
-                $class = '\\App\\Nova\\' . pathinfo($file)['filename'];
-                return class_exists($class) ?  pathinfo($file)['filename'] : null;
-            })
-            ->filter()
-            ->toArray();
-            \Log::info('$resources========$$$$$$$$4=============');
-            \Log::info($resources);
+    {
         return [
             ID::make()->sortable(),
-            Gravatar::make()->maxWidth(30),
-            // Text::make('Resource Name','resource_name')->rules('required'),
-            Select::make('Resource Name','resource_name')->options(array_combine($resources, $resources)),
-            Select::make('Authorized To','autherized_to')->options(array_combine(Role::all()->pluck('role')->unique()->toArray(), Role::all()->pluck('role')->unique()->toArray())),
-            
+            Text::make('Name','name')->rules('required','min:6,max:255'),
+            Text::make('Phone','phone')->rules('required'),
+            Text::make('Email','email')->rules('required','unique:marketing_plan_leads'),
+            Text::make('company','company')->hideFromIndex(),
+            Text::make('Details','message')->hideFromIndex(),
+            Select::make('Plan Category ','plan_category_id')->options(array_combine(range(1, count(PlanPricingCategory::all()->pluck('title')->unique()->toArray())), PlanPricingCategory::all()->pluck('title')->unique()->toArray())),
+            Select::make('Plan ','plan_id')->options(array_combine(range(1, count(PlanPricing::all()->pluck('title')->unique()->toArray())), PlanPricing::all()->pluck('title')->unique()->toArray())),
         ];
     }
-    
 
     /**
      * Get the cards available for the request.
