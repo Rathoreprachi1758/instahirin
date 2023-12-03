@@ -27,6 +27,7 @@
                                         <ul>
                                             <li>
                                                 <p><span><i class="fa fa-check-square-o" aria-hidden="true"></i></span>
+
                                                     
                                                     Keywords Reaserch</p>
                                             </li>
@@ -520,12 +521,6 @@
                                             <input type="time" id="time" name="time" />
                                         </div>
                                     </div>
-
-
-
-
-
-
 
                                 </div>
 
