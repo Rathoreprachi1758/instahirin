@@ -1,14 +1,14 @@
-{{-- @extends('layouts.base') --}}
-@extends('layouts.signup')
+{{-- @extends('layouts.base')
+@extends('layouts.signup') --}}
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css">
 
-<div class="container custom-login" style="padding-top: 100px;">
-    {{-- @include('errors.errors') --}}
-    {{-- @if (session('message'))
+{{-- <div class="container custom-login" style="padding-top: 100px;">
+    @include('errors.errors') 
+  @if (session('message'))
     <div class="alert alert-success">
         {{ session('message') }}
     </div>
-    @endif --}}
+    @endif
 
     <form action="{{ url('/sign-up') }}" method="POST" enctype="multipart/form-data">
         @csrf
@@ -99,4 +99,245 @@
             </p>
         </div>
     </form>
-</div>
+</div> --}}
+<!doctype html>
+<html lang="en-US">
+
+    <head>
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="format-detection" content="telephone=no">
+        <title>Bizionic</title>
+        <!-- bootstrap -->
+        <link rel="stylesheet" href="css/bootstrap.min.css">
+        <!-- custom css -->
+        <link rel="stylesheet " href="css/style.css ">
+        <link rel="stylesheet " href="css/responsive.css ">
+        
+    
+        <!-- aos animation  -->
+        <link rel="stylesheet " href="css/aos.css"> 
+        <!-- font awesome-->
+        <link rel="stylesheet " href="css/font-awesome.min.css"> 
+    
+    
+        <script src="js/jquery-3.4.1.min.js"></script> 
+    
+        <!-- aos animation js  -->
+        <script src="js/aos.js"></script> 
+        <link rel="stylesheet " href="css/owl.carousel.min.css "> 
+        <script src="js/owl.carousel.js "></script>
+
+        <link rel="icon" sizes="96x96" href="images/favicon-96x96.png">
+
+
+    
+    
+    </head>
+
+<body>
+     
+    <div class="wrapper">
+
+       <!-- dashboard header  -->
+
+       <header>
+        <div class="header">
+            <div class="container-xxl container-xl container-lg container-md">
+                <div class="headerDetail">
+                    <div class="logo">
+                        <a href="#"><img src="{{ asset('css/images/logo.png') }}" alt="Logo"></a>
+                    </div>
+
+                    <div class="header_menu">
+                        <!-- <div class="change_langOuter">
+                            <div id="google_translate_element"></div>
+                        </div> -->
+
+                        <div class="authBttns">
+                            <a href="{{ url('/loginpage') }}" class="signin_btn">Sign in</a>
+                            <a href="{{url('/Sign-In')}}" class="signup_btn">Sign Up</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+       </header>
+
+
+
+
+
+       <!-- main  -->
+
+       <main>
+        <div class="main_container">
+            <div class="auth_screens">
+                <div class="container-xxl container-xl container-lg container-md">
+                    <div class="auth_screens_detail">
+                        <div class="row">
+                            <div class="col-xxl-6 col-xl-6 col-lg-6 col-md-7 m-auto">
+                                <div class="auth_info">
+                                    <h3 class="text-center">Sign Up</h3>
+                                    <p class="text-center">Get ready to connect with highly skilled Software Developers, Designers and Marketers
+                                        at one stop to build cost-effective solutions at market place</p>
+
+                                    <div class="auth_form pt-2">
+                                        <div class="row">
+                                            <div class="col-xxl-6 col-xl-6 col-lg-6 col-md-6 ">
+                                                <div class="auth_field">
+                                                    <strong>First Name*</strong>
+                                                    <div class="auth_field_info">
+                                                        <input  type="text" placeholder="" value="" />
+                                                    </div>
+                                                </div>
+                                            </div>
+
+                                            <div class="col-xxl-6 col-xl-6 col-lg-6 col-md-6">
+                                                <div class="auth_field">
+                                                    <strong>Last Name*</strong>
+                                                    <div class="auth_field_info">
+                                                        <input  type="text" placeholder="" value="" />
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="col-12 ">
+                                                <div class="auth_field">
+                                                    <strong>Email*</strong>
+                                                    <div class="auth_field_info">
+                                                        <input  type="text" placeholder="" value="" />
+                                                    </div>
+                                                </div>
+                                            </div>
+
+                                            <div class="col-12">
+                                                <div class="auth_field">
+                                                    <strong>Password*</strong>
+                                                    <div class="auth_field_info">
+                                                        <input  type="password" placeholder="" value="" />
+                                                        <span class="passwEye"><i class="fa fa-eye" aria-hidden="true"></i></span>
+                                                    </div>
+                                                </div>
+                                            </div>
+
+                                            <div class="col-12">
+                                                <div class="auth_field">
+                                                    <strong>Confirm Password*</strong>
+                                                    <div class="auth_field_info">
+                                                        <input  type="password" placeholder="" value="" />
+                                                        <span class="passwEye"><i class="fa fa-eye" aria-hidden="true"></i></span>
+                                                    </div>
+                                                </div>
+                                            </div>
+
+
+                                            <div class="col-xxl-6 col-xl-6 col-lg-6 col-md-6 ">
+                                                <div class="auth_field">
+                                                    <strong>Country Code*</strong>
+                                                    <div class="auth_select_info">
+                                                        <select>
+                                                            <option>Usa</option>
+                                                            <option>Uae</option>
+                                                            <option>Uk</option>
+                                                        </select>
+                                                    </div>
+                                                </div>
+                                            </div>
+
+                                            <div class="col-xxl-6 col-xl-6 col-lg-6 col-md-6">
+                                                <div class="auth_field">
+                                                    <strong>Mobile Number*</strong>
+                                                    <div class="auth_field_info">
+                                                        <input  type="text" placeholder="" value="" />
+                                                    </div>
+                                                </div>
+                                            </div>
+
+
+                                            <div class="col-12">
+                                                <div class="auth_text ">
+                                                    <p class=" pb-2">
+                                                        <label class="checkbox-label">
+                                                            <input type="checkbox">
+                                                            <span class="checkbox-custom rectangular"></span> 
+                                                        </label>
+                                                         By clicking “Sign Up” you agree to Bizionic’s <a href="#">Terms of Use</a>  and <a href="#">Privacy</a>  Statement</p> 
+                                                </div>
+                                            </div>
+
+                                            <div class="col-12">
+                                                <div class="auth_text">
+                                                    <p>
+                                                        <label class="checkbox-label">
+                                                            <input type="checkbox">
+                                                            <span class="checkbox-custom rectangular"></span> 
+                                                        </label>
+                                                        Please click this box if you are happy for us to send you future promotions, offers and communication</p> 
+                                                </div>
+                                            </div>
+
+                                            <div class="col-12">
+                                                <div class="auth_sbmit">
+                                                    <input type="submit" value="Submit" class="btndefault" />
+                                                </div>
+                                            </div>
+
+
+                                            <div class="col-12">
+                                                <div class="forgotPasswText">
+                                                    <p>Already a Bizionic user?  <a href="{{ url('/loginpage') }}">Click here</a></p>  
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+       </main>
+
+
+
+
+       <!-- dashboard footer  -->
+
+       <footer>
+        <div class="footer">
+            <div class="footer_detail">
+                 <p>Copyright &copy;  <a href="https://www.bizionictech.com/" target="_blank">bizionictech.com</a>  | All rights reserved, Bizionic Technologies and Marketing Solutions Private Limited</p>
+            </div>
+        </div>
+       </footer>
+
+
+    </div>
+
+
+
+
+    <script src="js/myscript.js"></script> 
+    <script src="js/merge_script.js"></script> 
+    <!-- bootstrap -->
+    <script src="js/bootstrap.bundle.min.js"></script> 
+
+
+    <script type="text/javascript">
+        function googleTranslateElementInit() {
+            new google.translate.TranslateElement({
+                pageLanguage: 'en'
+            }, 'google_translate_element');
+        }
+    </script>
+
+    <script type="text/javascript" src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit">
+    </script>
+
+   
+</body>
+
+</html>
+
