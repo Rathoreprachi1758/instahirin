@@ -243,6 +243,8 @@ export default {
                             plan: "",
                             details: "",
                         };
+                        //thankyou-page
+                        window.location.href = "/industries/industries-we-serve/industries/thankyou";
                     }
                 })
                 .catch((error) => {

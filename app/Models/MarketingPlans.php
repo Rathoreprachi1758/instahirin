@@ -9,7 +9,7 @@ use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Relations\BelongsTo;
 use Illuminate\Database\Eloquent\Relations\HasMany;
 
-class PlanPricing extends Model
+class MarketingPlans extends Model
 {
     use HasFactory;
 
@@ -39,4 +39,11 @@ class PlanPricing extends Model
     {
         return $this->hasMany(PlanPricingFeature::class, 'plan_id');
     }
+
+    ///
+    public function planPricingCategory(): BelongsTo
+    {
+        return $this->belongsTo(PlanPricingCategory::class, 'plan_category_id');
+    }
+
 }

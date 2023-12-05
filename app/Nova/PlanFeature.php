@@ -4,6 +4,8 @@ namespace App\Nova;
 
 use Illuminate\Http\Request;
 use Laravel\Nova\Fields\ID;
+use App\Nova\MarketingPlans;
+// use App\Models\MarketingPlans;
 use Laravel\Nova\Fields\Text;
 use Laravel\Nova\Fields\BelongsTo;
 use Laravel\Nova\Http\Requests\NovaRequest;
@@ -41,7 +43,8 @@ class PlanFeature extends Resource
     {
         return [
             ID::make()->sortable(),
-            BelongsTo::make('Plan', 'planFeature')->display('title')->noPeeking()->filterable()->nullable(),
+            // BelongsTo::make('MarketingPlans', 'planFeature')->display('title')->noPeeking()->filterable()->nullable(),
+            BelongsTo::make('Marketing Plans', 'planFeature', MarketingPlans::class)->display('title')->noPeeking()->filterable()->nullable(),
             Text::make('Features', 'feature')->rules('required', 'min:6,max:255'),
         ];
     }
