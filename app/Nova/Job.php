@@ -53,6 +53,10 @@ class Job extends Resource
             ID::make()->sortable(),
             Text::make('Title', 'title')->rules('required', 'min:6,max:255'),
             Text::make('Location', 'location'),
+            Text::make('Work Mode', 'work_mode'),
+            Text::make('Company', 'company'),
+            Text::make('Experience', 'experience'),
+            Text::make('Availability', 'availability'),
             Trix::make('Job Description', 'description'),
             Trix::make('Key Responsibilities', 'responsibilities'),
             Trix::make('Qualification', 'qualification'),
@@ -108,24 +112,24 @@ class Job extends Resource
     //     $userRoles = auth()->user()->roles;
 
     // if ($userRoles === 'admin') {
-//     job::authorizedToViewAny($request);
-//     job::authorizedToView($request);
-// } else {
-//     return response('Unauthorized', 403);
-// }
-// public function actions(NovaRequest $request)
-//     {
-//         $userRoles = auth()->user()->roles;
+    //     job::authorizedToViewAny($request);
+    //     job::authorizedToView($request);
+    // } else {
+    //     return response('Unauthorized', 403);
+    // }
+    // public function actions(NovaRequest $request)
+    //     {
+    //         $userRoles = auth()->user()->roles;
 
     //         if ($userRoles === 'admin') {
-//             return [
-//                 job::authorizedToViewAny($request),
-//                 job::authorizedToView($request),
-//             ];
-//         } else {
-//             return response('Unauthorized', 403);
-//         }
-//     }
+    //             return [
+    //                 job::authorizedToViewAny($request),
+    //                 job::authorizedToView($request),
+    //             ];
+    //         } else {
+    //             return response('Unauthorized', 403);
+    //         }
+    //     }
     // public static function authorizedToViewAny($request)
     // {
     //     $user = auth()->user();
@@ -135,11 +139,11 @@ class Job extends Resource
     //     //     dd("in admin");
     //     //     return false;
     //     // }
-        
+
     //     // if ($user->roles === 'user') {
     //     //     dd("in user");
     //     //     return auth()->check() && $user->can('viewAny', brandpolicy::class);
-          
+
     //     // }
     // }
 
