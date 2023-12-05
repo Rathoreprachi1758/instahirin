@@ -103,6 +103,14 @@
   font-weight: bold;
 }
 
+/* .selected-plan {
+  background-color: #1a5196 !important;
+  transform: scaleY(1.0);
+  padding-top: 0px;
+    background-color: #1a5196 !important;
+    font-weight: bold;
+} */
+
 .selected-plan {
   background-color: #1a5196 !important;
   transform: scaleY(1);

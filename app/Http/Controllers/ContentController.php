@@ -13,6 +13,7 @@ use App\Models\Expert;
 use App\Models\Country;
 // use App\Models\Expert;
 use App\Models\Experty;
+use App\Models\MarketingLead;
 // use App\Models\HireRequest;
 // use App\Models\Subscription;
 use App\Models\Countrie;
@@ -38,14 +39,14 @@ use App\Models\InstaHirinOnboardDocument;
 
 class ContentController extends Controller
 {
-    public function index($levelOne = null, $levelTwo = null, $levelThree = null, $levelFour = null,)
+    public function index($levelOne = null, $levelTwo = null, $levelThree = null, $levelFour = null, )
     {
 
         $slugs = array_filter(func_get_args());
         $pageSlug = implode('|', $slugs);
 
         // If there is no
-        $pageSlug =  strlen($pageSlug) ? $pageSlug : 'hire';
+        $pageSlug = strlen($pageSlug) ? $pageSlug : 'hire';
         $page = Page::where('slug', '=', $pageSlug)->first();
         //dd($page->meta_title);
         //dd($page->meta_keywords);
@@ -376,7 +377,7 @@ class ContentController extends Controller
             $formData->company = $validatedData['company'];
             $formData->company_info = $validatedData['company_info'];
             $formData->email = $validatedData['email'];
-            $formData->phone =  $validatedData['country_code'] . $validatedData['phone'];
+            $formData->phone = $validatedData['country_code'] . $validatedData['phone'];
             $formData->website = $validatedData['website'];
             $formData->message = $validatedData['message'];
             $formData->address = $validatedData['address'];
@@ -535,14 +536,14 @@ class ContentController extends Controller
         $formData = new InstaHirinRequirement();
 
         // Set the form data from the validated request
-        $formData->position_title   = $validatedData['position_title'];
-        $formData->work_mode        = $validatedData['work_mode'];
+        $formData->position_title = $validatedData['position_title'];
+        $formData->work_mode = $validatedData['work_mode'];
         $formData->project_description = $validatedData['project_description'];
-        $formData->key_skills       = $validatedData['key_skills'];
+        $formData->key_skills = $validatedData['key_skills'];
         // $formData->key_skills = json_decode($validatedData['key_skills']);
-        $formData->min_experience   = $validatedData['min_experience'];
-        $formData->max_experience   = $validatedData['max_experience'];
-        $formData->employment_type  = $validatedData['employment_type'];
+        $formData->min_experience = $validatedData['min_experience'];
+        $formData->max_experience = $validatedData['max_experience'];
+        $formData->employment_type = $validatedData['employment_type'];
         // changes
         $formData->salary_currency_monthly_project = $validatedData['salary_currency_monthly_project'];
         $formData->min_salary_monthly_project = $validatedData['min_salary_monthly_project'];
@@ -554,16 +555,16 @@ class ContentController extends Controller
         $formData->min_salary_hourly = $validatedData['min_salary_hourly'];
         $formData->max_salary_hourly = $validatedData['max_salary_hourly'];
 
-        $formData->location         = $validatedData['location'];
+        $formData->location = $validatedData['location'];
         $formData->education_qualification = $validatedData['education_qualification'];
-        $formData->company_name     = $validatedData['company_name'];
-        $formData->company_website  = $validatedData['company_website'];
-        $formData->contact_person   = $validatedData['contact_person'];
-        $formData->email            = $validatedData['email'];
+        $formData->company_name = $validatedData['company_name'];
+        $formData->company_website = $validatedData['company_website'];
+        $formData->contact_person = $validatedData['contact_person'];
+        $formData->email = $validatedData['email'];
         $formData->contact_no_country_code = $validatedData['contact_no_country_code'];
-        $formData->contact_no       = $validatedData['contact_no'];
-        $formData->company_details  = $validatedData['company_details'];
-        $formData->company_address  = $validatedData['company_address'];
+        $formData->contact_no = $validatedData['contact_no'];
+        $formData->company_details = $validatedData['company_details'];
+        $formData->company_address = $validatedData['company_address'];
 
         // Process and store the uploaded file
         if ($request->hasFile('document')) {
@@ -677,7 +678,8 @@ class ContentController extends Controller
             'also_work_with' => 'required|json',
             'last_company' => '',
             'company_location' => '',
-            'currently_working_here' => '', // new column
+            'currently_working_here' => '',
+            // new column
             'working_since_date' => 'required',
             'working_since_date2' => '',
             'annual_salary_currency' => 'required',
@@ -704,14 +706,14 @@ class ContentController extends Controller
         $formData = new InstaHirinOnboard();
 
         // Set the form data from the validated request
-        $formData->name             = $validatedData['name'];
-        $formData->contact_details  = $validatedData['contact_details'];
-        $formData->email            = $validatedData['email'];
+        $formData->name = $validatedData['name'];
+        $formData->contact_details = $validatedData['contact_details'];
+        $formData->email = $validatedData['email'];
         $formData->current_location = $validatedData['current_location'];
         //$formData->current_location   = isset($validatedData['current_location']) ? $validatedData['current_location'] : '-';
         $formData->skills_description = $validatedData['skills_description'];
-        $formData->current_title    = $validatedData['current_title'];
-        $formData->experience_year  = $validatedData['experience_year'];
+        $formData->current_title = $validatedData['current_title'];
+        $formData->experience_year = $validatedData['experience_year'];
         $formData->experience_month = $validatedData['experience_month'];
         $formData->key_skills = json_decode($validatedData['key_skills']);
         $formData->expert_in = json_decode($validatedData['expert_in']);
@@ -720,22 +722,22 @@ class ContentController extends Controller
         // $formData->company_location = isset($validatedData['company_location']) ? $validatedData['company_location'] : '-';
         $formData->company_location = $validatedData['company_location'];
         $formData->currently_working_here = isset($validatedData['currently_working_here']) ? $validatedData['currently_working_here'] : '-';
-        $formData->working_since_date      = $validatedData['working_since_date'];
-        $formData->working_since_date2     = isset($validatedData['working_since_date2']) ? $validatedData['working_since_date2'] : '-';
-        $formData->annual_salary_currency  = $validatedData['annual_salary_currency'];
-        $formData->annual_salary           = $validatedData['annual_salary'];
-        $formData->highest_qualification   = $validatedData['highest_qualification'];
-        $formData->notice_period           = isset($validatedData['notice_period']) ? $validatedData['notice_period'] : '-';
-        $formData->availability            = $validatedData['availability'];
-        $formData->availability_date       = $validatedData['availability_date'];
-        $formData->availability_time_from  = $validatedData['availability_time_from'];
-        $formData->availability_time_to    = $validatedData['availability_time_to'];
-        $formData->payment_option          = $validatedData['payment_option'];
-        $formData->sub_payment_option      = isset($validatedData['sub_payment_option']) ? $validatedData['sub_payment_option'] : null;
-        $formData->monthly_rate            = isset($validatedData['monthly_rate']) ? $validatedData['monthly_rate'] : null;
-        $formData->hourly_rate             = isset($validatedData['hourly_rate']) ? $validatedData['hourly_rate'] : null;
-        $formData->project_rate            = isset($validatedData['project_rate']) ? $validatedData['project_rate'] : null;
-        $formData->resume_headline         = $validatedData['resume_headline'];
+        $formData->working_since_date = $validatedData['working_since_date'];
+        $formData->working_since_date2 = isset($validatedData['working_since_date2']) ? $validatedData['working_since_date2'] : '-';
+        $formData->annual_salary_currency = $validatedData['annual_salary_currency'];
+        $formData->annual_salary = $validatedData['annual_salary'];
+        $formData->highest_qualification = $validatedData['highest_qualification'];
+        $formData->notice_period = isset($validatedData['notice_period']) ? $validatedData['notice_period'] : '-';
+        $formData->availability = $validatedData['availability'];
+        $formData->availability_date = $validatedData['availability_date'];
+        $formData->availability_time_from = $validatedData['availability_time_from'];
+        $formData->availability_time_to = $validatedData['availability_time_to'];
+        $formData->payment_option = $validatedData['payment_option'];
+        $formData->sub_payment_option = isset($validatedData['sub_payment_option']) ? $validatedData['sub_payment_option'] : null;
+        $formData->monthly_rate = isset($validatedData['monthly_rate']) ? $validatedData['monthly_rate'] : null;
+        $formData->hourly_rate = isset($validatedData['hourly_rate']) ? $validatedData['hourly_rate'] : null;
+        $formData->project_rate = isset($validatedData['project_rate']) ? $validatedData['project_rate'] : null;
+        $formData->resume_headline = $validatedData['resume_headline'];
         // dd($request->all());
         $formData->save();
 
@@ -926,26 +928,31 @@ class ContentController extends Controller
     // proposal form submission
     public function proposalForm(Request $request)
     {
+
+        // dd($request->all());
         $validatedData = $request->validate([
             'name' => 'required',
             'company' => '',
             'email' => 'required|email',
-            // 'country_code' => '',
-            'phone' => '',
+            'country_code' => 'required',
+            'phone' => 'required',
             'plan_category' => '',
             'plan' => '',
             'details' => '',
         ]);
 
         // Create a new instance of the Hire Request model
-        $formData = new HireRequest();
-
+        // $formData = new HireRequest();
+        $formData = new MarketingLead();
         // Set the form data from the validated request
         $formData->name = $validatedData['name'];
-        $formData->company = '-';
+        $formData->company = $validatedData['company'];
         $formData->email = $validatedData['email'];
         $formData->phone = $validatedData['country_code'] . $validatedData['phone'];
-        $formData->message = $validatedData['message'];
+        $formData->plan_category_id = $validatedData['plan_category'];
+        $formData->plan_id =  $validatedData['plan'];
+        $formData->message = $validatedData['details'];
+        // return $formData->phone;
 
         $formData->save();
     }

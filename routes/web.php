@@ -26,10 +26,10 @@ Route::Post('sign-up', [Logincontroller::class, 'store'])->name('submit.signup')
 Route::get('/loginpage', [LoginController::class, 'login'])->name('loginpage');
 // Route::post('dashboard', [LoginController::class, 'authenticate'])->name('login');
 // Route::get('logout', [loginController::class, 'logout']);
-Route::middleware(['auth.check'])->group(function () {
+// Route::middleware(['auth.check'])->group(function () {
     Route::post('dashboard', [LoginController::class, 'authenticate'])->name('login');
     Route::get('logout', [LoginController::class, 'logout']);
-});
+// });
 Route::get('/{levelOneSlug?}/{levelTwoSlug?}/{levelThreeSlug?}/{levelFourSlug?}', 'App\Http\Controllers\ContentController@index')->name('index');
 
 // ContactUs Form Submission

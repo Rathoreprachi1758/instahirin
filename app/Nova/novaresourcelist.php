@@ -14,12 +14,12 @@ use Laravel\Nova\Http\Requests\NovaRequest;
 use App\Models\Role;
 use Illuminate\Support\Facades\File;
 
-class novaresourcelist extends Resource
+class NovaResourceList extends Resource
 {
     /**
      * The model the resource corresponds to.
      *
-     * @var class-string<\App\Models\novaresourcelist>
+     * @var class-string<\App\Models\NovaResourceList>
      */
     public static $model = \App\Models\novaresourcelist::class;
 
@@ -46,7 +46,7 @@ class novaresourcelist extends Resource
      * @return array
      */
     public function fields(NovaRequest $request)
-    {   
+    {  
         $resourcePath = app_path('Nova');
         $resources = collect(File::files($resourcePath))
             ->map(function ($file) {
@@ -66,6 +66,7 @@ class novaresourcelist extends Resource
             
         ];
     }
+    
 
     /**
      * Get the cards available for the request.
