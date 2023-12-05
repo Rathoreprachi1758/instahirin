@@ -10243,78 +10243,215 @@ html {
 
 
 
-.embarkMain_section { width: 100%; position: relative; background: url(../images/embark_texture.png) top center no-repeat #f5f5f5; background-size:cover;}
+.embarkMain_section {
+    width: 100%;
+    position: relative;
+    background: url(../images/embark_texture.png) top center no-repeat #f5f5f5;
+    background-size: cover;
+}
 
-.embarkMain_section_detail { width: 100%; padding: 80px 0px;}
-
-
-.embark_search_section { width: 100%; display: flex; align-items: center; padding-bottom: 30px;}
-
-.embark_search_info { width: 80%; display: flex; align-items: center; border: 1px solid #b4b4b4; border-radius: 6px; background-color: #fff; padding:15px 20px; justify-content: space-between;}
-
-.embark_search_info input { font-size: 16px; }
-.embark_search_info select { font-size: 16px;}
-
-
-.search1 { width: auto; position: relative;}
-
-.search1 b { position: absolute; left: 0px; top: -3px; font-size: 20px; color: #b4b4b4;}
-
-.search1 input { padding-left: 30px;}
-
-.embark_teamBtn { width: 20%; padding-left: 20px;}
-
-.embark_teamBtn .btn_default{ background-color: #1b5298; border:1px solid #1b5298;}
+.embarkMain_section_detail {
+    width: 100%;
+    padding: 80px 0px;
+}
 
 
-.careerFeaturesCol { padding: 0px !important;}
+.embark_search_section {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    padding-bottom: 30px;
+}
 
-.careerFeaturesCol_info { width: 100%; height: 100%; padding: 35px 45px; background-color: #e5e5e5; display: flex; align-items: center;}
+.embark_search_info {
+    width: 80%;
+    display: flex;
+    align-items: center;
+    border: 1px solid #b4b4b4;
+    border-radius: 6px;
+    background-color: #fff;
+    padding: 15px 20px;
+    justify-content: space-between;
+}
 
-.careerFeaturesCol_info span { width: 65px; display: block;}
-.careerFeaturesCol_info span img { width: 100%; display: block;}
+.embark_search_info input {
+    font-size: 16px;
+}
 
-
-.careerFeaturesCol_infoText { width: calc(100% - 65px); padding-left: 20px;}
-
-.careerFeaturesCol_infoText a { color: #000;font-family: 'avenirblack'; font-size: 18px; margin-bottom: 5px; display: block;}
-.careerFeaturesCol_infoText p { color: #666666; padding: 0px; font-size: 14px;}
-
-
-.colColor { background-color: #fff !important;}
-
-
-
-.curentPosition_section { width: 100%; position: relative;}
-.curentPosition_section_detail { width: 100%; padding: 0px 0px 70px;}
-
-
-
-.hiringSlider_section { width: 100%; position: relative;}
-
-.hiringSlider_section_detail { width: 100%; padding: 70px 0px;}
-
-.hiring_slider { width: 100%; position: relative; max-width: 1150px; margin: auto;}
-
-.sponsorsSection { width: 100%;}
-
-.sponsorSlider { width: 100%;}
-
-.sponsorSlider  span { margin: 10px 15px; background-color: #fff; box-shadow: 0px 0px 10px #ccccccc2; display: flex; align-items: center; height: 100px;}
-
-.sponsorSlider  span img { height: 75px; width: 120px; object-fit: contain; margin: auto; display: block;}
+.embark_search_info select {
+    font-size: 16px;
+}
 
 
-.sponsorSlider .slick-prev  {  display: block; position: absolute; left: -60px; top: 50%; font-size: 0px; 
-    background: url(../images/prev_btn.png) no-repeat; width: 34px; height: 34px; background-size: 100%; }
+.search1 {
+    width: auto;
+    position: relative;
+}
 
-.sponsorSlider .slick-next  { display: block;  position: absolute; right: -60px; top: 50%; font-size: 0px;  
-    background: url(../images/next_btn.png) no-repeat; width: 34px; height: 34px; background-size: 100%;}
+.search1 b {
+    position: absolute;
+    left: 0px;
+    top: -3px;
+    font-size: 20px;
+    color: #b4b4b4;
+}
 
-.sponsorSlider .slick-prev::before , .sponsorSlider .slick-next::before { display: none;}
+.search1 input {
+    padding-left: 30px;
+}
+
+.embark_teamBtn {
+    width: 20%;
+    padding-left: 20px;
+}
+
+.embark_teamBtn .btn_default {
+    background-color: #1b5298;
+    border: 1px solid #1b5298;
+}
 
 
-.newHireUpdate_page { background-color: #efeff0; width: 100%; position: relative; padding: 90px 0px;}
+.careerFeaturesCol {
+    padding: 0px !important;
+}
+
+.careerFeaturesCol_info {
+    width: 100%;
+    height: 100%;
+    padding: 35px 45px;
+    background-color: #e5e5e5;
+    display: flex;
+    align-items: center;
+}
+
+.careerFeaturesCol_info span {
+    width: 65px;
+    display: block;
+}
+
+.careerFeaturesCol_info span img {
+    width: 100%;
+    display: block;
+}
+
+
+.careerFeaturesCol_infoText {
+    width: calc(100% - 65px);
+    padding-left: 20px;
+}
+
+.careerFeaturesCol_infoText a {
+    color: #000;
+    font-family: 'avenirblack';
+    font-size: 18px;
+    margin-bottom: 5px;
+    display: block;
+}
+
+.careerFeaturesCol_infoText p {
+    color: #666666;
+    padding: 0px;
+    font-size: 14px;
+}
+
+
+.colColor {
+    background-color: #fff !important;
+}
+
+
+
+.curentPosition_section {
+    width: 100%;
+    position: relative;
+}
+
+.curentPosition_section_detail {
+    width: 100%;
+    padding: 0px 0px 70px;
+}
+
+
+
+.hiringSlider_section {
+    width: 100%;
+    position: relative;
+}
+
+.hiringSlider_section_detail {
+    width: 100%;
+    padding: 70px 0px;
+}
+
+.hiring_slider {
+    width: 100%;
+    position: relative;
+    max-width: 1150px;
+    margin: auto;
+}
+
+.sponsorsSection {
+    width: 100%;
+}
+
+.sponsorSlider {
+    width: 100%;
+}
+
+.sponsorSlider span {
+    margin: 10px 15px;
+    background-color: #fff;
+    box-shadow: 0px 0px 10px #ccccccc2;
+    display: flex;
+    align-items: center;
+    height: 100px;
+}
+
+.sponsorSlider span img {
+    height: 75px;
+    width: 120px;
+    object-fit: contain;
+    margin: auto;
+    display: block;
+}
+
+
+.sponsorSlider .slick-prev {
+    display: block;
+    position: absolute;
+    left: -60px;
+    top: 50%;
+    font-size: 0px;
+    background: url(../images/prev_btn.png) no-repeat;
+    width: 34px;
+    height: 34px;
+    background-size: 100%;
+}
+
+.sponsorSlider .slick-next {
+    display: block;
+    position: absolute;
+    right: -60px;
+    top: 50%;
+    font-size: 0px;
+    background: url(../images/next_btn.png) no-repeat;
+    width: 34px;
+    height: 34px;
+    background-size: 100%;
+}
+
+.sponsorSlider .slick-prev::before,
+.sponsorSlider .slick-next::before {
+    display: none;
+}
+
+
+.newHireUpdate_page {
+    background-color: #efeff0;
+    width: 100%;
+    position: relative;
+    padding: 90px 0px;
+}
 
 .newHireUpdate_page::after {
     width: 100%;
@@ -10329,58 +10466,123 @@ html {
 
 
 
-.whyWork-tittle { background-color: #ededed; padding: 30px 20px 20px;}
-
-.whyWork-tittle span {display: flex; justify-content: center; align-items: center; margin-bottom: 20px;}
-
-.whyWork-tittle span img { height: 60px; object-fit: contain; width: 60px; margin: auto;}
-
-.whyWork-tittle h4 {
-    font-size: 18px !important; padding-bottom: 0px !important; text-align: center;
+.whyWork-tittle {
+    background-color: #ededed;
+    padding: 30px 20px 20px;
 }
 
-.lookingWork_section { background-color: #f3f4f4;}
+.whyWork-tittle span {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 20px;
+}
 
-.lookingWork_section .aboutBizionic_col_info { background-color: #fff; padding: 0px; height: 100%;}
+.whyWork-tittle span img {
+    height: 60px;
+    object-fit: contain;
+    width: 60px;
+    margin: auto;
+}
 
+.whyWork-tittle h4 {
+    font-size: 18px !important;
+    padding-bottom: 0px !important;
+    text-align: center;
+}
 
-.lokingCol { padding: 15px !important;}
+.lookingWork_section {
+    background-color: #f3f4f4;
+}
 
-.lookingWork_section .aboutBizionic_col_info p { padding: 20px 20px;  }
-
-
-
-
-.getEmployed_section  {width: 100%; position: relative; background: url(../images/getEmp_bg.png) top center no-repeat #f5f5f5; background-size:cover;}
-
-.getEmployed_info { width: 50%; padding: 120px 70px; background-color: rgba(23, 111, 180, .5);}
-
-.getEmployed_info a { max-width: 150px;}
-
-.getEmployed_info .custom_tittle p { padding-right: 50px;
-    font-size: 24px;}
-
-
-
-
-.advaceCareer_hire .applyNow_text { display: none;}
-
-.advaceCareer_hire .advanceCareer_section { background: none !important;}
-.advaceCareer_hire .careerPage_inner { background: none !important; padding: 90px 0px 0px;}
-
-.advaceCareer_hire .custom_tittle h2 { text-align: center !important;}
-.advaceCareer_hire .custom_tittle p { text-align: center !important;}
+.lookingWork_section .aboutBizionic_col_info {
+    background-color: #fff;
+    padding: 0px;
+    height: 100%;
+}
 
 
+.lokingCol {
+    padding: 15px !important;
+}
+
+.lookingWork_section .aboutBizionic_col_info p {
+    padding: 20px 20px;
+}
 
 
-.accendDream_section {width: 100%; position: relative; background: url(../images/dreamCareer_bg.png) top center no-repeat; background-size:cover;}
 
-.accendDream_sectionDetail { width: 100%; padding: 140px 200px 90px 290px;}
 
-.accendDream_sectionDetail a { max-width: 150px;background-color: #1b5298; border:1px solid #1b5298;}
+.getEmployed_section {
+    width: 100%;
+    position: relative;
+    background: url(../images/getEmp_bg.png) top center no-repeat #f5f5f5;
+    background-size: cover;
+}
 
-.revoBtn { min-width: 330px;}
+.getEmployed_info {
+    width: 50%;
+    padding: 120px 70px;
+    background-color: rgba(23, 111, 180, .5);
+}
+
+.getEmployed_info a {
+    max-width: 150px;
+}
+
+.getEmployed_info .custom_tittle p {
+    padding-right: 50px;
+    font-size: 24px;
+}
+
+
+
+
+.advaceCareer_hire .applyNow_text {
+    display: none;
+}
+
+.advaceCareer_hire .advanceCareer_section {
+    background: none !important;
+}
+
+.advaceCareer_hire .careerPage_inner {
+    background: none !important;
+    padding: 90px 0px 0px;
+}
+
+.advaceCareer_hire .custom_tittle h2 {
+    text-align: center !important;
+}
+
+.advaceCareer_hire .custom_tittle p {
+    text-align: center !important;
+}
+
+
+
+
+.accendDream_section {
+    width: 100%;
+    position: relative;
+    background: url(../images/dreamCareer_bg.png) top center no-repeat;
+    background-size: cover;
+}
+
+.accendDream_sectionDetail {
+    width: 100%;
+    padding: 140px 200px 90px 290px;
+}
+
+.accendDream_sectionDetail a {
+    max-width: 150px;
+    background-color: #1b5298;
+    border: 1px solid #1b5298;
+}
+
+.revoBtn {
+    min-width: 330px;
+}
 
 
 
@@ -10389,45 +10591,101 @@ html {
 
 /* revolutionBanner_sectionDetail */
 
-.revolutionBanner_section   {width: 100%;}
+.revolutionBanner_section {
+    width: 100%;
+}
 
-.revolutionBanner_sectionDetail { width:100% ; padding: 0px 0px 90px;}
+.revolutionBanner_sectionDetail {
+    width: 100%;
+    padding: 0px 0px 90px;
+}
 
-.revolutionBanner_info { width: 100%; position: relative; background: url(../images/revolution_banner.png) top center no-repeat; background-size:cover; padding: 80px 60px;}
+.revolutionBanner_info {
+    width: 100%;
+    position: relative;
+    background: url(../images/revolution_banner.png) top center no-repeat;
+    background-size: cover;
+    padding: 80px 60px;
+}
 
-.revolutionBanner_infoText { width: 100%;}
+.revolutionBanner_infoText {
+    width: 100%;
+}
 
-.revolutionBanner_infoText h1 { font-size: 44px;}
-
-
-.revolution_inner { width: 100%; position: relative;background-color: #f3f4f4;}
-
-.revolution_inner_detail { width: 100%; padding: 45px 0px;}
-
-.revolution_info { width: 100%; padding: 70px 60px; margin: 45px 0px;}
-
-
-.revolution_infoDetail { width: 100%; padding: 50px 40px; background-color: #ebebeb; height: 100%;}
-
-.revolution_infoDetail  h6 { font-family: 'avenirmedium'; text-align: center; padding-bottom: 25px;}
-
-.revolution_infoDetail p { text-align: justify;}
-.revolution_infoDetail p strong {  font-family: 'avenirblack'; }
-
-.readmorePage .getEmployed_section { background: none;}
-
-.learnOwn_bossFl {  width: 100%; padding: 50px 20px 50px 50px;}
-
-.frBoss { padding: 0px !important;}
-
-.flBoss { padding-right: 0px !important;}
+.revolutionBanner_infoText h1 {
+    font-size: 44px;
+}
 
 
-.readmorePage .getEmployed_section {background-color: #16509a;}
+.revolution_inner {
+    width: 100%;
+    position: relative;
+    background-color: #f3f4f4;
+}
 
-.learnOwn_bossFr { width: 100%; padding-right: 50px;}
+.revolution_inner_detail {
+    width: 100%;
+    padding: 45px 0px;
+}
 
-.learnOwn_bossFl .custom_tittle h1 { font-size: 48px; }
+.revolution_info {
+    width: 100%;
+    padding: 70px 60px;
+    margin: 45px 0px;
+}
+
+
+.revolution_infoDetail {
+    width: 100%;
+    padding: 50px 40px;
+    background-color: #ebebeb;
+    height: 100%;
+}
+
+.revolution_infoDetail h6 {
+    font-family: 'avenirmedium';
+    text-align: center;
+    padding-bottom: 25px;
+}
+
+.revolution_infoDetail p {
+    text-align: justify;
+}
+
+.revolution_infoDetail p strong {
+    font-family: 'avenirblack';
+}
+
+.readmorePage .getEmployed_section {
+    background: none;
+}
+
+.learnOwn_bossFl {
+    width: 100%;
+    padding: 50px 20px 50px 50px;
+}
+
+.frBoss {
+    padding: 0px !important;
+}
+
+.flBoss {
+    padding-right: 0px !important;
+}
+
+
+.readmorePage .getEmployed_section {
+    background-color: #16509a;
+}
+
+.learnOwn_bossFr {
+    width: 100%;
+    padding-right: 50px;
+}
+
+.learnOwn_bossFl .custom_tittle h1 {
+    font-size: 48px;
+}
 
 
 .paginationBlog ul li {
@@ -10440,14 +10698,23 @@ html {
     color: #fff;
 }
 
-.portfolioPage { background: #dbdcdd;}
-.portfolioPage .at_bizionic_section_detail { width: 100%; position: relative; background: url(../images/portfolio_pattern.png) top center no-repeat #ffffff;  padding: 80px 60px;}
+.portfolioPage {
+    background: #dbdcdd;
+}
+
+.portfolioPage .at_bizionic_section_detail {
+    width: 100%;
+    position: relative;
+    background: url(../images/portfolio_pattern.png) top center no-repeat #ffffff;
+    padding: 80px 60px;
+}
 
 
 .at_bizionicSteps_col a {
     display: block;
     width: 100%;
-    overflow: hidden; position: relative;
+    overflow: hidden;
+    position: relative;
 }
 
 .at_bizionicSteps_col a img {
@@ -10528,11 +10795,44 @@ html {
 
 
 
+.portfolioCol a b {
+    transition: all .6s ease;
+    border-radius: 3px;
+    font-size: 20px;
+    color: #fff;
+    width: 38px;
+    height: 30px;
+    border: 2px solid #fff;
+    text-align: center;
+    line-height: 30px;
+    position: absolute;
+    right: -100px;
+    bottom: 20px;
+}
+
+.portfolioCol a:hover b {
+    right: 20px;
+}
+
+.portfolioCol {
+    padding: 0px !important;
+}
 
 
+.portfolioPage .at_bizionic_steps {
+    padding: 0px !important;
+    ;
+}
+
+.portfolioPage {
+    padding-bottom: 80px;
+}
 
 
+.infoTxt {
+    padding-top: 10px;
+}
 
-
-
-
+.infoTxt p b {
+    font-weight: bold;
+}

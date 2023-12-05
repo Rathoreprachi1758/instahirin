@@ -10,14 +10,16 @@
                             <div class="pricingList_col mostPopular">
                                 @php
                                     $planId = request('planId');
-                                    $plan = \App\Models\PlanPricing::find($planId);
+                                    $plan = \App\Models\MarketingPlans::find($planId);
                                 @endphp
 
                                 {{-- <h5 class="text-center text-white pb-2">{{ $plan->plan_category_id }}</h5> --}}
                                 <strong class="categoryTittle">{{ $plan->title }}</strong>
-
+                                @if ($plan->title === 'PLATINUM' && $plan->plan_category_id === 3)
+                                <strong class="categoryTittle">{{ $plan->price }}% Monthly Ad Spend</strong>
+                            @else
                                 <h3 class="priceValue">${{ $plan->price }} <sub>/Month</sub></h3>
-
+                            @endif
                                 <div class="setupFee">
                                     <small>Setup Fees</small>
                                     <strong>${{ $plan->setup_fee }}</strong>
@@ -28,7 +30,6 @@
                                             <li>
                                                 <p><span><i class="fa fa-check-square-o" aria-hidden="true"></i></span>
 
-                                                    
                                                     Keywords Reaserch</p>
                                             </li>
                                             <li>

@@ -14,7 +14,7 @@
 
                 <div class="coreServices_section">
                     <div class="coreServices_sectionDetail">
-                        <div class="coreTabs" style="color:white">
+                        <div class="coreTabs" style="color: white">
                             <ul>
                                 <li
                                     v-for="category in categories"
@@ -70,8 +70,34 @@
                                                     >
 
                                                     <h3 class="priceValue">
-                                                        ${{ plan.price }}
-                                                        <sub>/Month</sub>
+                                                        <span
+                                                            v-if="
+                                                                plan.price ===
+                                                                    '15' &&
+                                                                plan.title ===
+                                                                    'PLATINUM'
+                                                            "
+                                                            ><h5
+                                                                style="
+                                                                    color: #1a5196;
+                                                                "
+                                                            >
+                                                                {{
+                                                                    plan.price
+                                                                }}% of Monthly
+                                                                Ad Spend
+                                                            </h5></span
+                                                        >
+                                                        <span
+                                                            v-else="
+                                                                plan.price ===
+                                                                '15'
+                                                            "
+                                                            >${{ plan.price }}
+                                                            <sub
+                                                                >/Month</sub
+                                                            ></span
+                                                        >
                                                     </h3>
 
                                                     <div class="setupFee">
@@ -136,8 +162,8 @@
 
 <style scoped>
 .selected-category {
-  background-color: #1a5196 !important;
-  font-weight: bold;
+    background-color: #1a5196 !important;
+    font-weight: bold;
 }
 
 /* .selected-plan {
@@ -150,7 +176,7 @@
 
 .selected-plan {
     background-color: #1a5196 !important;
-    transform: scaleY(1.0);
+    transform: scaleY(1);
     padding-top: 0px;
 }
 
@@ -252,7 +278,8 @@ export default {
         },
 
         goToProposalForm(planId) {
-            const url = `/hire/developer/front-end-developement/planId?planId=${planId}`;
+            // const url = `/hire/developer/front-end-developement/planId?planId=${planId}`;
+            const url = `marketing/marketing-services-we-provide/plans-and-pricing/get-plan?planId=${planId}`;
 
             window.location.href = url;
             console.log("Navigating to:", url);

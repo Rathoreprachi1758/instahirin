@@ -26,16 +26,19 @@ Route::Post('sign-up', [Logincontroller::class, 'store'])->name('submit.signup')
 Route::get('/loginpage', [LoginController::class, 'login'])->name('loginpage');
 // Route::post('dashboard', [LoginController::class, 'authenticate'])->name('login');
 // Route::get('logout', [loginController::class, 'logout']);
-Route::middleware(['auth.check'])->group(function () {
+// Route::middleware(['auth.check'])->group(function () {
     Route::post('dashboard', [LoginController::class, 'authenticate'])->name('login');
     Route::get('logout', [LoginController::class, 'logout']);
-});
+// });
+Route::get('forgot-password', [LoginController::class, 'forgotpassword']);
 Route::get('/{levelOneSlug?}/{levelTwoSlug?}/{levelThreeSlug?}/{levelFourSlug?}', 'App\Http\Controllers\ContentController@index')->name('index');
 
 // ContactUs Form Submission
 Route::post('/submit-form', [App\Http\Controllers\ContentController::class, 'store'])->name('submit-form');
 
 Route::get('/hire/developer/front-end-developement/{planId}', [App\Http\Controllers\ContentController::class, 'proposalGet'])->name('planId');
+//marketing url
+Route::get('/marketing/marketing-services-we-provide/plans-and-pricing/get-plan/{planId}', [App\Http\Controllers\ContentController::class, 'proposalGet'])->name('planId');
 
 // Proposal Form Submission
 Route::post('/submit-proposal-form', [App\Http\Controllers\ContentController::class, 'proposalForm'])->name('submit-proposal-form');

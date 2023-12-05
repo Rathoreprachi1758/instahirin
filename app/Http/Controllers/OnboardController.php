@@ -13,7 +13,7 @@ class OnboardController extends Controller
     {
         // $phoneCodes = Country::pluck('phone', 'id')->toArray(); // Convert Collection to array
         $phoneCodes = Country::all(['name', 'phone']);
-        // Log::info('Fetched phone codes:', $phoneCodes);
+        Log::info('Fetched phone codes:'. $phoneCodes);
         return response()->json($phoneCodes);
     }
 

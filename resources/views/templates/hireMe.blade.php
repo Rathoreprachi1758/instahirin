@@ -26,7 +26,7 @@
                 </div>
 
 
-                <div class="embark_search_section">
+                {{-- <div class="embark_search_section">
                     <div class="embark_search_info">
                         <div class="search1">
                             <input type="" placeholder="Enter skills / designations / companies" />
@@ -50,7 +50,7 @@
                     <div class="embark_teamBtn">
                         <a href="#goto_form" class="btn_default">Join Team Bizionic</a>
                     </div>
-                </div>
+                </div> --}}
 
 
                 <div class="careerFeatures">
@@ -178,20 +178,21 @@
                                 </div>
                             </div>
                             <div class="row">
-                                @foreach($jobs as $key=>$job)
+
+                                {{-- @foreach($jobs as $key=>$job)
                                 <div class="col-lg-4 col-md-6 buildCol">
                                     <div class="buildTeam_col">
                                         <strong>{{$key+1}}. {{$job->title}}:</strong>
                                         <div class="description-container">
                                             {!! $job->description !!}
                                         </div>
-                                        {{-- <a href="{{ route('apply-now-form', ['jobId' => $job->id]) }}"
-                                            target="_blank" class="btn_default">Show more</a> --}}
                                         <a href="/industries/industries-we-serve/industries/jobid?jobId={{ $job->id }}"
                                             target="_blank" class="btn_default">Show more</a>
                                     </div>
                                 </div>
-                                @endforeach
+                                @endforeach --}}
+                                <job-experts-component></job-experts-component>
+
                             </div>
                         </div>
                     </div>
@@ -436,7 +437,8 @@
                             <div class="custom_tittle d-none">
                                 <h2 class="text-left"><strong>For</strong> Tech <strong>and</strong> Marketing Talent
                                     <br>
-                                    looking <strong>to</strong> Work <strong>at BIZIONIC</strong> </h2>
+                                    looking <strong>to</strong> Work <strong>at BIZIONIC</strong>
+                                </h2>
                             </div>
 
                             <div class="lookingWork_list">

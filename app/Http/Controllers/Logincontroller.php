@@ -2,11 +2,12 @@
 
 namespace App\Http\Controllers;
 
+use Auth;
+use GuzzleHttp\Client;
+use App\Models\User;
+use App\Models\Country;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Http;
-use GuzzleHttp\Client;
-use Auth;
-use App\Models\User;
 use Illuminate\Validation\Rule;
 use Illuminate\Support\Facades\Hash;
 use Redirect;
@@ -16,18 +17,24 @@ class Logincontroller extends Controller
 
     public function index()
     {
-        return view("dashboard.registration");
+        $countryCodes =  Country::all(['name', 'phone']);
+        return view("dashboard.registration",["countryCodes"=> $countryCodes]);
     }
     public function store(Request $request)
     {
+        
         $request->validate([
             'firstName' => 'required',
             'lastName' => 'required',
             'email' => ['required', 'email', Rule::unique('users', 'email')],
             'password' => 'required',
             'password_confirmation' => 'required|same:password',
+            'country_code'=>'required',
+            'Mobile_Number'=>'required',
+            'privacy_statement'=>'required',
             // 'Admin_status' => 'required',
         ]);
+        dd($request->all());
         $firstName = $request->firstName;
         $lastName = $request->lastName;
         $name = $firstName . ' ' . $lastName;
@@ -57,22 +64,26 @@ class Logincontroller extends Controller
         // return "Hii";
     }
     public function authenticate(Request $request)
-    {   
-         $credentials = $request->only('email', 'password');
-         if (Auth::attempt($credentials)) {
-           return view('dashboard.dashboard');
+    {
+        $credentials = $request->only('email', 'password');
+        if (Auth::attempt($credentials)) {
+            return view('dashboard.dashboard');
 
         } else {
             return redirect()->back()->with('message', 'Something went wrong, please try again');
         }
-        
+
     }
     public function logout(Request $request)
     {
         Auth::logout();
         return redirect('/loginpage');
     }
-    //
+
+    public function forgotpassword(Request $request)
+    {
+       return view('dashboard.forgotpassword');
+    }
     public function changePassword(Request $request)
     {
         return view('change-password');
