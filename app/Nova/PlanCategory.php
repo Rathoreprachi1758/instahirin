@@ -3,6 +3,7 @@
 namespace App\Nova;
 
 use App\Nova\Plans;
+use App\Nova\MarketingPlans;
 use Laravel\Nova\Fields\ID;
 use Illuminate\Http\Request;
 use Laravel\Nova\Fields\Text;
@@ -45,7 +46,7 @@ class PlanCategory extends Resource
         return [
             ID::make()->sortable(),
             Text::make('Title', 'title')->rules('required', 'min:6,max:255'),
-            HasMany::make('Plan', 'hasPlans', Plan::class)->hideFromIndex(),
+            HasMany::make('Plan', 'hasPlans', MarketingPlans::class)->hideFromIndex(),
         ];
     }
 

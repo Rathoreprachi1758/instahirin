@@ -13,13 +13,13 @@ use App\Models\Expert;
 use App\Models\Country;
 // use App\Models\Expert;
 use App\Models\Experty;
-use App\Models\MarketingLead;
+use App\Models\MarketingPlanLeads;
 // use App\Models\HireRequest;
 // use App\Models\Subscription;
 use App\Models\Countrie;
 use App\Models\TimeZones;
 use App\Models\HireRequest;
-use App\Models\PlanPricing;
+use App\Models\MarketingPlans;
 //use Laravel\Nova\Fields\Timezone;
 use App\Models\Subscription;
 use Illuminate\Http\Request;
@@ -912,7 +912,7 @@ class ContentController extends Controller
         // $plan  = PlanPricing::all($planId);
         // return view('templates.planId', ['plan' => $plan]);
         $planId = $request->route('planId');
-        $plan = PlanPricing::find($planId);
+        $plan = MarketingPlans::find($planId);
         return view('templates.planId', ['plan' => $plan]);
     }
 
@@ -929,7 +929,7 @@ class ContentController extends Controller
     public function proposalForm(Request $request)
     {
 
-        // dd($request->all());
+        //dd($request->all());
         $validatedData = $request->validate([
             'name' => 'required',
             'company' => '',
@@ -943,7 +943,7 @@ class ContentController extends Controller
 
         // Create a new instance of the Hire Request model
         // $formData = new HireRequest();
-        $formData = new MarketingLead();
+        $formData = new MarketingPlanLeads();
         // Set the form data from the validated request
         $formData->name = $validatedData['name'];
         $formData->company = $validatedData['company'];

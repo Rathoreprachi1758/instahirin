@@ -10,14 +10,15 @@ use Laravel\Nova\Fields\HasMany;
 use Laravel\Nova\Fields\BelongsTo;
 use Laravel\Nova\Http\Requests\NovaRequest;
 
-class Plan extends Resource
+
+class MarketingPlans extends Resource
 {
     /**
      * The model the resource corresponds to.
      *
-     * @var class-string<\App\Models\Plan>
+     * @var class-string<\App\Models\MarketingPlans>
      */
-    public static $model = \App\Models\PlanPricing::class;
+    public static $model = \App\Models\MarketingPlans::class;
 
     /**
      * The single value that should be used to represent the resource when being displayed.
@@ -32,7 +33,7 @@ class Plan extends Resource
      * @var array
      */
     public static $search = [
-        'id', 'title'
+        'id',
     ];
 
     /**
