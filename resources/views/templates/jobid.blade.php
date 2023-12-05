@@ -16,6 +16,11 @@ $job = \App\Models\Job::find($jobId);
                 <h1>About the Job:</h1>
                 <h4 class="pb-2 pt-2">Job Title: <strong>{{ $job->title }}</strong></h4>
                 <h4>Location: <strong>{{ $job->location }}</strong></h4>
+                <h4>Experience: <strong>{{ $job->experience }}</strong></h4>
+                <h4>Company: <strong>{{ $job->company }}</strong></h4>
+                <h4>Work Mode: <strong>{{ $job->work_mode }}</strong></h4>
+                <h4>CTC: <strong>{{ $job->ctc }}</strong></h4>
+                <h4>Availabililty: <strong>{{ $job->availability }}</strong></h4>
 
 
                 <h6 class="pt-3 pb-0">About Us:</h6>

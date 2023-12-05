@@ -44,6 +44,8 @@ import FundingApplyNow from "./components/FundingApplyNowComponent.vue";
 import Thankyou from "./components/Thankyou.vue";
 import Proposal from "./components/ProposalFormComponent.vue";
 import Pricing from "./components/PlansPricingComponent.vue";
+import JobExpertsComponent from "./components/JobExpertsComponent.vue";
+import JobsListComponent from "./components/JobsListComponent.vue";
 
 app.component("experts-component", ExpertsComponent);
 app.component("experts-list-component", ExpertsListComponent);
@@ -57,6 +59,7 @@ app.component("enquire-component", Enquire);
 app2.component("subscription-component", SubscriptionComponent);
 app.component("hire-talent-component", HireTalent);
 app.component("jobs-component", Jobs);
+
 app.component("on-board-component", OnBoard);
 app.component("monthly-rate-component", MonthlyRate);
 app.component("hourly-rate-component", HourRate);
@@ -67,6 +70,8 @@ app.component("funding-apply-now-component", FundingApplyNow);
 app.component("Thankyou-component", Thankyou);
 app.component("proposal-component", Proposal);
 app.component("pricing-component", Pricing);
+app.component("job-experts-component", JobExpertsComponent);
+app.component("jobs-list-component", JobsListComponent);
 
 // import ExampleComponent from './components/ExampleComponent.vue';
 // app.component('example-component', ExampleComponent);

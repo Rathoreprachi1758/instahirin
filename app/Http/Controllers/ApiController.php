@@ -2,11 +2,13 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Job;
 use App\Models\Client;
 use App\Models\Expert;
-use App\Models\ExpertCategory;
 use Illuminate\Http\Request;
+use App\Models\ExpertCategory;
 use Illuminate\Support\Facades\DB;
+
 class ApiController extends Controller
 {
     //
@@ -18,9 +20,9 @@ class ApiController extends Controller
 
     public function experts(Request $request)
     {
-        if(empty($request->page))
+        if (empty($request->page))
             return response()->json(Expert::with(['experties', 'skills'])->orderBy('created_at', 'desc')->get(), 200)->header('Content-Type', 'text/json');
-        else    
+        else
             return response()->json(Expert::with(['experties', 'skills'])->orderBy('created_at', 'desc')->paginate(9), 200)->header('Content-Type', 'text/json');
     }
 
@@ -30,7 +32,7 @@ class ApiController extends Controller
         // $keyword = explode(',',$request->input('keyword'));
         // $keyword = explode(' ',implode(',',$keyword));
         $keyword = array($request->input('keyword'));
-         return  response()->json(Expert::with(['experties', 'skills'])->whereHas('experties', function ($query) use ($keyword) {
+        return  response()->json(Expert::with(['experties', 'skills'])->whereHas('experties', function ($query) use ($keyword) {
             $query->whereIn('title', $keyword);
         })->orWhereHas('skills', function ($query) use ($keyword) {
             $query->whereIn('title', $keyword);
@@ -52,11 +54,10 @@ class ApiController extends Controller
         $keyword = $request->input('keyword');
         $availabl = $request->input('availabl');
 
-        return response()->json(Expert::with(['experties', 'skills'])->whereHas('experties', function ($query) use ($keyword,$availabl) {
+        return response()->json(Expert::with(['experties', 'skills'])->whereHas('experties', function ($query) use ($keyword, $availabl) {
             $query->where('title', $keyword);
-            if(!empty($availabl))
+            if (!empty($availabl))
                 $query->where('availability', $availabl);
-
         })->orderBy('created_at', 'desc')->get(), 200)->header('Content-Type', 'text/json');
     }
 
@@ -74,5 +75,94 @@ class ApiController extends Controller
     public function clients(Request $request)
     {
         return response()->json(Client::orderBy('id', 'asc')->get(), 200)->header('Content-Type', 'text/json');
+    }
+
+    // fetch all the jobs
+    public function jobs(Request $request)
+    {
+        if (empty($request->page))
+            return response()->json(Job::with('skills')->orderBy('created_at', 'desc')->get(), 200)->header('Content-Type', 'text/json');
+        else
+            return response()->json(Job::with('skills')->orderBy('created_at', 'desc')->paginate(9), 200)->header('Content-Type', 'text/json');
+    }
+
+    //* Method for Filter Jobs By Skill
+    public function jobs_by_skills(Request $request)
+    {
+        // Validation if keyword is not found
+        $keyword = $request->input('keyword');
+
+        return response()->json(Job::with(['skills'])->orWhereHas('skills', function ($query) use ($keyword) {
+            $query->where('title', $keyword);
+        })->orderBy('created_at', 'desc')->get(), 200)->header('Content-Type', 'text/json');
+    }
+
+    // method for fetching experience column values from job table
+    public function getExperienceOptions(Request $request)
+    {
+        $experienceOptions = Job::distinct()->pluck('experience');
+
+        return response()->json($experienceOptions);
+    }
+
+    // method for fetching location column values from job table
+    public function getJobLocations(Request $request)
+    {
+        $query = $request->input('query');
+
+        // Fetch location suggestions based on the query
+        $locations = Job::where('location', 'like', "$query%")->distinct()->pluck('location');
+
+        return response()->json($locations);
+    }
+
+    // method for fetching title column values from job table
+    public function getJobTitles(Request $request)
+    {
+        $query = $request->input('query');
+
+        // Fetch title suggestions based on the query
+        $titles = Job::where('title', 'like', "$query%")->distinct()->pluck('title');
+
+        return response()->json($titles);
+    }
+
+    // method for searching jobs
+    public function jobs_search(Request $request)
+    {
+        // Validation for the incoming data
+        $validatedData = $request->validate([
+            'title' => 'nullable|string',
+            'experience' => 'nullable|string',
+            'location' => 'nullable|string',
+        ]);
+
+        // Extract values from the validated data
+        $title = $validatedData['title'];
+        $experience = $validatedData['experience'];
+        $location = $validatedData['location'];
+
+        // Build the query to filter jobs
+        $query = Job::query()->with('skills');
+
+        // Filter by title
+        if ($title) {
+            $query->where('title', $title);
+        }
+
+        // Filter by experience
+        if ($experience) {
+            $query->where('experience', $experience);
+        }
+
+        // Filter by location
+        if ($location) {
+            $query->where('location', $location);
+        }
+
+        // Execute the query and return the results
+        $jobs = $query->orderBy('created_at', 'desc')->get();
+
+        return response()->json($jobs, 200)->header('Content-Type', 'text/json');
     }
 }
