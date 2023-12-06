@@ -10264,44 +10264,53 @@ html {
 }
 
 .embark_search_info {
-    width: 80%;
+    width: 84%;
     display: flex;
     align-items: center;
-    border: 1px solid #b4b4b4;
+    border: 1px solid #b4b4b459;
     border-radius: 6px;
     background-color: #fff;
-    padding: 15px 20px;
+    padding: 15px 10px;
     justify-content: space-between;
 }
 
-.embark_search_info input {
+/* .embark_search_info input {
     font-size: 16px;
 }
 
 .embark_search_info select {
     font-size: 16px;
-}
+} */
 
 
 .search1 {
-    width: auto;
+    width: 45%; margin:0px 10px;
+    position: relative;
+}
+
+.search2 {
+    width: 20%; margin:0px 10px;
+    position: relative;
+}
+
+.search3 {
+    width: 20%; margin:0px 10px;
     position: relative;
 }
 
 .search1 b {
     position: absolute;
-    left: 0px;
-    top: -3px;
+    left: 10px;
+    top: 5px;
     font-size: 20px;
     color: #b4b4b4;
 }
 
-.search1 input {
-    padding-left: 30px;
+.search1 input { 
 }
 
 .embark_teamBtn {
-    width: 20%;
+    width: 16%;
     padding-left: 20px;
 }
 
@@ -10836,3 +10845,58 @@ html {
 .infoTxt p b {
     font-weight: bold;
 }
+
+
+.settOpenPosition { background: none !important;}
+
+.settOpenPosition .careerPage_inner { padding: 0px !important;}
+
+
+.search1 { background-color: #f8f8f8;}
+.search1 .multiselect { position: static !important; width: 100% !important;  max-width: 100% !important; padding: 10px 15px  10px 15px !important;}
+
+.search1 .multiselect__content-wrapper { position: absolute !important; background: #fff !important; z-index: 3; padding: 20px 0px  !important; left: 0px; top: 40px;width: 100% !important; box-shadow: 0px 0px 2px #ccc;}
+
+.search1 .multiselect__content-wrapper ul { padding: 0px !important; margin: 0px !important;width: 100% !important;}
+
+
+
+.search1 .multiselect__placeholder { padding-left: 25px;}
+
+.search1 .multiselect__input { padding-left: 25px;}
+
+.search1 .multiselect__element  { text-transform: capitalize !important; padding: 5px 15px; cursor: pointer; font-size: 13px !important;}
+
+.search1 .multiselect__element:hover { background-color: #f8f8f8;}
+
+.search1 .multiselect__single { padding-left: 25px !important;}
+
+
+.search2 { background-color: #f8f8f8;padding-right: 15px;}
+.search2 select { padding: 9px 15px !important; width: 100%; font-size: 13px;}
+
+
+
+
+
+.search3 { background-color: #f8f8f8; }
+.search3 .multiselect { position: static !important; width: 100% !important;  max-width: 100% !important; padding: 10px 15px !important;}
+
+.search3 .multiselect__content-wrapper { position: absolute !important; background: #fff !important; padding: 20px 0px !important; left: 0px; top: 30px; }
+
+.search3 .multiselect__content-wrapper ul { padding: 0px !important; margin: 0px !important;}
+
+.search3 .multiselect__placeholder { padding-left: 0px;}
+
+.search3 .multiselect__input { padding-left: 0px;}
+
+.search3 .multiselect__element  { text-transform: capitalize !important; padding: 5px 15px; cursor: pointer; font-size: 13px !important;}
+
+.search3 .multiselect__element:hover { background-color: #f8f8f8;}
+
+.search3 .multiselect__single { padding-left: 0px !important;}
+
+
+.searchResult input { border-radius: 50px !important;}
+
+

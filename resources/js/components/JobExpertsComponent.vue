@@ -16,7 +16,7 @@
           ></multiselect2>
           <b><i class="fa fa-search" aria-hidden="true"></i></b>
         </div>
-        <div class="searchSelect">
+        <div class="searchSelect search2">
           <select v-model="selectedExperience" @change="filterJobsByExperience">
             <option value="" disabled>Select experience</option>
             <option
@@ -29,7 +29,7 @@
           </select>
         </div>
 
-        <div class="search2">
+        <div class="search3">
           <multiselect
             v-model="selectedLocation"
             :options="locationOptions"
@@ -41,7 +41,6 @@
           ></multiselect>
         </div>
 
-        <div class="search2"></div>
         <div class="searchResult">
           <input type="submit" value="Search" class="btn_default" @click="searchJobs" />
         </div>
@@ -54,8 +53,8 @@
 
     <!--* Expert Slider Section -->
 
-    <div class="auto_container">
-      <div class="showAll_btn mt-3">
+    <div class="">
+      <div class="showAll_btn">
         <a href="/hire/developer/developers-other/hirin-view-all-job" class="btn_default"
           >Show All</a
         >

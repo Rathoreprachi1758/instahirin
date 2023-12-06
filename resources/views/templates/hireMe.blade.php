@@ -169,15 +169,15 @@
     <div class="curentPosition_section bg_f2f2f2">
         <div class="auto_container">
             <div class="curentPosition_section_detail">
-                <div class="buildTeam_section openPosition_sec">
-                    <div class="auto_container">
+                <div class="buildTeam_section settOpenPosition">
+                    <div class="">
                         <div class="careerPage_inner">
                             <div class="row">
                                 <div class="custom_tittle">
                                     <h2 class="text-left p-0"><strong>Current</strong> Open Positions:</h2>
                                 </div>
                             </div>
-                            <div class="row">
+                            <div class="openSection">
 
                                 {{-- @foreach($jobs as $key=>$job)
                                 <div class="col-lg-4 col-md-6 buildCol">
@@ -415,7 +415,7 @@
                                 <h2 class="">
                                     Ascend <strong>Your</strong> Dream Career <strong>Ladder<br>
                                         at</strong> Bizionic — <strong>Where</strong> Ambitions <strong>are</strong><br>
-                                    Sculpted <strong>into Successes.
+                                    Sculpted <strong>into Successes.</strong>
                                         </h2>
                                         <p class="p_color">Join Forces with Our Proficient Software Developers,<br> Creative Designers, and Sharp Marketers.</p>
                                         <a href="/bizionic-team#goto_form" class="btn_default mt-4">Join Team Bizionic</a>
@@ -424,7 +424,7 @@
                             </div>
                         </div>
                     </div>
-                    <div class="careerPage_inner">
+                    <div class="careerPage_inner lookingWork_section"  >
 
                         <div class="innerSec1">
 
@@ -441,7 +441,7 @@
                                 </h2>
                             </div>
 
-                            <div class="lookingWork_list">
+                            <div class="lookingWork_list ">
                                 <h2 class="text-center">Why <strong>Work</strong> with Bizionic</h2>
 
                                 <div class="lookingWork_list_info">
