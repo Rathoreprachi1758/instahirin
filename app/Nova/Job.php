@@ -53,10 +53,35 @@ class Job extends Resource
             ID::make()->sortable(),
             Text::make('Title', 'title')->rules('required', 'min:6,max:255'),
             Text::make('Location', 'location'),
-            Text::make('Work Mode', 'work_mode'),
+            Text::make('CTC', 'ctc'),
+            Select::make('Work Mode', ' work_mode')->options(
+                [
+                    'Full Time' => 'Full Time',
+                    'Part Time' => 'Part Time',
+                    "Daily Bases" => "Daily Bases",
+                    'Weekly' => 'Weekly',
+                    'Period' => 'Period',
+                    "Freelance" => "Freelance",
+                    "Project Base" => "Project Base",
+                    "Contract Base" => "Contract Base",
+                    'Hourly' => 'Hourly'
+                ]
+            )->displayUsingLabels()->filterable()->hideFromIndex(),
             Text::make('Company', 'company'),
             Text::make('Experience', 'experience'),
-            Text::make('Availability', 'availability'),
+            // Text::make('Availability', 'availability'),
+            Select::make('Availability', 'availability')->options([
+                'Full Time' => 'Full Time', 'Part-Time' => 'Part-Time',
+                'Project Base' => 'Project Base',
+                'Hourly' => 'Hourly',
+                'On-Site' => 'On-Site',
+                'Freelancing' => 'Freelancing',
+                'Contract' => 'Contract',
+                'Shift' => 'Shift',
+                'Consulting' => 'Consulting',
+                'Volunteer' => 'Volunteer',
+                'Internships' => 'Internships'
+            ])->displayUsingLabels()->filterable()->hideFromIndex(),
             Trix::make('Job Description', 'description'),
             Trix::make('Key Responsibilities', 'responsibilities'),
             Trix::make('Qualification', 'qualification'),

@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Models\Job;
+use App\Models\Skill;
 use App\Models\Client;
 use App\Models\Expert;
 use Illuminate\Http\Request;
@@ -100,7 +101,7 @@ class ApiController extends Controller
     // method for fetching experience column values from job table
     public function getExperienceOptions(Request $request)
     {
-        $experienceOptions = Job::distinct()->pluck('experience');
+        $experienceOptions = Skill::distinct()->pluck('title');
 
         return response()->json($experienceOptions);
     }
