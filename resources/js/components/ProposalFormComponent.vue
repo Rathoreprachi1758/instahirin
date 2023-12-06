@@ -111,56 +111,59 @@
                 </div>
                 <!-- plan_category -->
                 <div class="col-lg-6 col-md-12">
-                    <div class="project_form_select">
-                        <select
+                    <div class="project_form_field">
+                        <!-- <select
                             class="form-select"
                             aria-label="Default select example"
                             v-model="formData.plan_category"
                             name="plan_category"
                             id="plan_category"
                         >
-                            <!-- <option disabled selected>Select hiring type</option> -->
                             <option value="">Select a option</option>
-                            <!-- <option value="dedicated_developer"> -->
                             <option value="1">
                                 Search Engine Optimization(SEO)
                             </option>
-                            <!-- <option value="dedicated"> -->
                             <option value="2">
                                 Social Media Management(SMM)
                             </option>
-                            <option value="3">
-                                <!-- <option value="developers"></option> -->
-                                Google Advarts And PPC
-                            </option>
-                        </select>
+                            <option value="3">Google Advarts And PPC</option>
+                        </select> -->
+                       <input
+                            type="tel"
+                            v-model="this.planCategory"
+                            name="plan_category"
+                            id="plan_category"
+                            placeholder="Plan Category"
+                        /> 
                     </div>
                 </div>
 
-                <!-- plan -->
+                 <!-- plan -->
                 <div class="col-lg-6 col-md-12">
-                    <div class="project_form_select">
-                        <select
+                    <div class="project_form_field">
+                        <!-- <select
                             class="form-select"
                             aria-label="Default select example"
                             v-model="formData.plan"
                             name="plan"
                             id="plan"
                         >
-                            <!-- <option value="">Select a option</option>
-                            <option value="dedicated">GOLD</option>
-                            <option value="developers">SILVER</option>
-                            <option value="developers">PLATINUM</option>
-                            <option value="below_10K">CUSTOM</option> -->
                             <option value="">Select a option</option>
-                            <option value="1">GOLD</option>
-                            <option value="2">SILVER</option>
-                            <option value="3">PLATINUM</option>
-                            <option value="4">CUSTOM</option>
-                        </select>
+                            <option value="GOLD">GOLD</option>
+                            <option value="SILVER">SILVER</option>
+                            <option value="PLATINUM">PLATINUM</option>
+                            <option value="CUSTOM">CUSTOM</option>
+                        </select> -->
+                        <input
+                            type="tel"
+                            v-model="this.planTitle"
+                            name="plan"
+                            id="plan"
+                            placeholder="Plan"
+                        />
                     </div>
                 </div>
-
+                <!-- /// -->
                 <!-- details -->
                 <div class="col-lg-12 col-md-12">
                     <div class="project_form_textarea">
@@ -189,6 +192,16 @@
 
 <script>
 export default {
+    props: {
+        planTitle: {
+      type: String,
+      required: true
+    },
+    planCategory: {
+      type: String,
+      required: true
+    }
+    },
     data() {
         return {
             formData: {
@@ -206,8 +219,11 @@ export default {
             phoneCodes: [],
         };
     },
+    // props: ["plan"],
     mounted() {
         this.fetchPhoneCodes();
+        console.log("planDetails:", this.planTitle);
+        console.log("planDetails:", this.planCategory);
     },
     methods: {
         store() {
@@ -217,8 +233,8 @@ export default {
             form.append("email", this.formData.email);
             form.append("country_code", this.formData.country_code);
             form.append("phone", this.formData.phone);
-            form.append("plan_category", this.formData.plan_category);
-            form.append("plan", this.formData.plan);
+            form.append("plan_category", this.planCategory);
+            form.append("plan", this.planTitle);
             form.append("details", this.formData.details);
             //   form.append("document", this.formData.document);
 
@@ -244,7 +260,8 @@ export default {
                             details: "",
                         };
                         //thankyou-page
-                        window.location.href = "/industries/industries-we-serve/industries/thankyou";
+                        window.location.href =
+                            "/industries/industries-we-serve/industries/thankyou";
                     }
                 })
                 .catch((error) => {

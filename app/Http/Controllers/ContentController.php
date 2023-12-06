@@ -908,7 +908,7 @@ class ContentController extends Controller
     // proposal get
     public function proposalGet(Request $request)
     {
-        dd($request->all());
+        // dd($request->all());
         // $plan  = PlanPricing::all($planId);
         // return view('templates.planId', ['plan' => $plan]);
         $planId = $request->route('planId');
@@ -949,11 +949,10 @@ class ContentController extends Controller
         $formData->company = $validatedData['company'];
         $formData->email = $validatedData['email'];
         $formData->phone = $validatedData['country_code'] . $validatedData['phone'];
-        $formData->plan_category_id = $validatedData['plan_category'];
-        $formData->plan_id =  $validatedData['plan'];
+        $formData->plan_categories = $validatedData['plan_category'];
+        $formData->selected_plan =  $validatedData['plan'];
         $formData->message = $validatedData['details'];
         // return $formData->phone;
-
         $formData->save();
     }
 }

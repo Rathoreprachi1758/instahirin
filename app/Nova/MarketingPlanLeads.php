@@ -59,8 +59,8 @@ class MarketingPlanLeads extends Resource
             Text::make('Email', 'email')->rules('required', 'unique:marketing_plan_leads'),
             Text::make('company', 'company')->hideFromIndex(),
             Text::make('Details', 'message')->hideFromIndex(),
-            Select::make('Plan Category ','plan_category_id')->options(array_combine(range(1, count(PlanPricingCategory::all()->pluck('title')->unique()->toArray())), PlanPricingCategory::all()->pluck('title')->unique()->toArray())),
-            Select::make('Marketing Plan ', 'plan_id')->options(array_combine(range(1, count(MarketingPlans::all()->pluck('title')->unique()->toArray())), MarketingPlans::all()->pluck('title')->unique()->toArray())),
+            Select::make('Plan Category ','plan_categories')->options(array_combine(PlanPricingCategory::all()->pluck('title')->unique()->toArray(), PlanPricingCategory::all()->pluck('title')->unique()->toArray())),
+            Select::make('Marketing Plan ', 'selected_plan')->options(array_combine(MarketingPlans::all()->pluck('title')->unique()->toArray(), MarketingPlans::all()->pluck('title')->unique()->toArray())),
             ///
             // Select::make('Plan Category', 'plan_category_id')
             //     ->options(
