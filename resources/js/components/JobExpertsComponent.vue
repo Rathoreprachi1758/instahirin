@@ -17,15 +17,25 @@
           <b><i class="fa fa-search" aria-hidden="true"></i></b>
         </div>
         <div class="searchSelect">
-          <select v-model="selectedExperience" @change="filterJobsByExperience">
-            <option value="" disabled>Select experience</option>
-            <option
+          <select v-model="selectedExperience">
+            <option value="" selected disabled>Select experience</option>
+            <!-- <option
               v-for="experience in experienceOptions"
               :key="experience"
               :value="experience"
             >
               {{ experience }}
-            </option>
+            </option> -->
+            <option value="1+ year of Experience">1+ year of Experience</option>
+            <option value="2+ year of Experience">3+ year of Experience</option>
+            <option value="3+ year of Experience">2+ year of Experience</option>
+            <option value="4+ year of Experience">4+ year of Experience</option>
+            <option value="5+ year of Experience">5+ year of Experience</option>
+            <option value="6+ year of Experience">6+ year of Experience</option>
+            <option value="7+ year of Experience">7+ year of Experience</option>
+            <option value="8+ year of Experience">8+ year of Experience</option>
+            <option value="9+ year of Experience">9+ year of Experience</option>
+            <option value="10+ year of Experience">10+ year of Experience</option>
           </select>
         </div>
 
@@ -57,7 +67,7 @@
     <div class="auto_container">
       <div class="showAll_btn mt-3">
         <a href="/hire/developer/developers-other/hirin-view-all-job" class="btn_default"
-          >Show All</a
+          >View All</a
         >
       </div>
       <div class="meetTeam_sliderSection pt-0">
@@ -294,7 +304,7 @@ export default {
     fetchExperienceOptions() {
       // Fetch the experience options from the jobs table
       axios
-        .get("/api/v1/job-experience")
+        .get("/api/v1/job-skills")
         .then((response) => {
           this.experienceOptions = response.data;
         })
