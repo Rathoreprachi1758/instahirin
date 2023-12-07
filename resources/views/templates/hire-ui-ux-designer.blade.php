@@ -22,9 +22,10 @@
                         <div class="row align-items-center">
                             <div class="col-lg-6 col-md-6 aos-init " data-aos="fade-right" data-aos-duration="1000" data-aos-easing="ease">
                                 <div class=" custom_tittle text-left">
-                                    <h1>UI/UX DESIGNER</h1>
+                                    <h1>Elevating Digital Products With Expertise In User Research, Interface Design, And Interaction Design For Optimal User Experiences</h1>
                                     <h2 class="">
-                                        <strong>DESIGN AND CREATE</strong> USER'S JOURNEY <strong>TO</strong> SOLVE PROBLEMS, <strong>ALONG WITH</strong> UI <strong>TO</strong> FOCUS <strong>MAKING</strong> PRODUCT <strong>OR</strong> INTERFACE BEAUTIFUL.
+                                        <strong>Elevating</strong> Digital Products With <strong>Expertise</strong> In User Research, <strong>Interface</strong> 
+                                        Design, And Interaction Design For Optimal User <strong>Experiences</strong>
                                     </h2>
 
                                         <p class="p_color text-justify">Bizionic Marketing Solutions UI/UX designers focuses on creating user-friendly and visually appealing interfaces for digital products, such as websites, mobile apps, software applications, and other interactive platforms. UI stands for User Interface, which refers to the visual elements and layout of a digital product, while UX stands for User Experience, which encompasses the overall interaction and usability of the product. </p>

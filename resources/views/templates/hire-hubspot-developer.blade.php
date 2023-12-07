@@ -22,9 +22,9 @@
                         <div class="row align-items-center">
                             <div class="col-lg-6 col-md-6 aos-init " data-aos="fade-right" data-aos-duration="1000" data-aos-easing="ease">
                                 <div class=" custom_tittle text-left">
-                                    <h1>HUBSPOT DEVELOPERS</h1>
+                                    <h1>Hubspot Developers</h1>
                                     <h2 class="">
-                                        <strong>BUILD</strong> APPS AND WEBSITES <strong>TO HELP BUSINESSES AROUND THE WORLD</strong> GROW BETTER.
+                                    Build Apps <strong>And</strong> Websites <strong>To</strong> Help Businesses Around <strong>The</strong> World <strong>Grow</strong> Better.
                                     </h2>
 
                                         <p class="p_color text-justify">Bizionic Technologies HubSpot developers specialize in using the HubSpot platform to develop and customize marketing, sales, and customer service solutions for businesses. HubSpot is an all-in-one inbound marketing and sales software that provides tools for lead generation, customer relationship management (CRM), content management, email marketing, automation, analytics, and more.</p>

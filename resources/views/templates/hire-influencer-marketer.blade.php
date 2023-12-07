@@ -22,10 +22,11 @@
                         <div class="row align-items-center">
                             <div class="col-lg-6 col-md-6 aos-init " data-aos="fade-right" data-aos-duration="1000" data-aos-easing="ease">
                                 <div class=" custom_tittle text-left">
-                                    <h1>INFLUENCER MARKETER</h1>
+                                    <h1>Influencer Marketer</h1>
                                     <h2 class="">
-                                        <strong>ENABLES YOUR BUSINESSES TO</strong> COLLABORATE <strong>WITH</strong> INDIVIDUALS <strong>WHO HAVE A</strong> FOLLOWING <strong>TO</strong> INCREASE <strong>YOUR’S</strong> BRAND EXPOSURE.
-
+                                        Enables <strong>Your</strong> Businesses <strong>To</strong> 
+                                        Collaborate With Individuals <strong>Who</strong> Have A Following 
+                                        <strong>To</strong> Increase Yours <strong>Brand</strong> Exposure.
                                     </h2>
 
                                         <p class="p_color text-justify">Bizionic Marketing Solutions Influencer Marketers specialize in leveraging the power of influencers to promote products, services, or brands.</p>

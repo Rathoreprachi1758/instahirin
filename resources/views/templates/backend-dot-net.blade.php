@@ -22,9 +22,9 @@
                         <div class="row align-items-center">
                             <div class="col-lg-6 col-md-6 aos-init " data-aos="fade-right" data-aos-duration="1000" data-aos-easing="ease">
                                 <div class=" custom_tittle text-left">
-                                    <h1>.NET DEVELOPERS</h1>
+                                    <h1>.Net Developers</h1>
                                     <h2 class="">
-                                        <strong>BUILD</strong> FLAWLESS, ERROR FREE <strong>APPLICATION DEVELOPMENT SUITE TO ANY TYPE OF</strong> BUSINESS NEED
+                                        Build <strong>Flawless,</strong> Error <strong>Free</strong> Application Development Suite <strong>To</strong> Any Type Of Business Need
                                     </h2>
 
                                         <p class="p_color text-justify">.NET Developers at Bizionic Technologies specialize in developing software applications using the .NET framework, a versatile and widely used platform for building various applications.</p>

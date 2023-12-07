@@ -22,9 +22,9 @@
                         <div class="row align-items-center">
                             <div class="col-lg-6 col-md-6 aos-init " data-aos="fade-right" data-aos-duration="1000" data-aos-easing="ease">
                                 <div class=" custom_tittle text-left">
-                                    <h1>BLOCKCHAIN DEVELOPERS</h1>
-                                    <h2 class="">
-                                        <strong>BUILD</strong> DECENTRALIZED APPLICATIONS (dApps) <strong>AND</strong> SMART CONTRACTS <strong>WITH</strong> BLOCKCHAIN TECHNOLOGY.
+                                    <h1>Blockchain Developers</h1>
+                                    <h2 class=""> 
+                                        Build Decentralized <strong>Applications</strong> (DApps) <strong>And</strong> Smart Contracts <strong>With</strong> Blockchain <strong>Technology.</strong>
                                     </h2>
 
                                         <p class="p_color text-justify">Push the limits of your valuable business with our modern blockchain innovations. Our Blockchain developers are responsible for designing, implementing, and maintaining blockchain-based applications and systems.</p>

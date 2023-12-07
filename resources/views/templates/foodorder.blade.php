@@ -5,19 +5,16 @@
         <div class="auto_container">
             <div class="mainBanner_detail ">
 
-                <div class="row">
+                <div class="row align-items-center">
                     <div class="col-lg-6 col-md-6 aos-init " data-aos="fade-right" data-aos-duration="1000" data-aos-easing="ease">
-                        <div class="mainBanner_text hireBannerText">
-                            <h3> INNOVATIVE <br>
-                                SOLUTION FOR<br>
-                                 
-                                <b>INDUSTRial <br>SOFTWAREs</b>
-                            </h3>
+                        <div class="custom_tittle text-left hireBannerText">
+                            <h1 class="text-white"> Elevate Your Culinary Presence: Bizionic Technologies In Food And Beverage
+                            </h1>
 
-                            <p>  BIZIONIC understands the everyday challenges of an ordinary businessmen faces, and thus, works with the core dictum of provides an unique identity to their business. Having a team of IT experts, we deliver modern business solutions under one roof. With
+                            <p class="text-white text-justify">  BIZIONIC understands the everyday challenges of an ordinary businessmen faces, and thus, works with the core dictum of provides an unique identity to their business. Having a team of IT experts, we deliver modern business solutions under one roof. With
                                 innovative ideas, unwavering passion, and a dedication to excellence, we aspire to create
                                 a positive impact that will help the industry leaders.</p>
-                            <p>Our exceptional services are a result of our professional staff, vast expertise, and
+                            <p class="text-white  text-justify">Our exceptional services are a result of our professional staff, vast expertise, and
                                 successful long-term client relationships. In keeping with industry standards, we provide a wide range of software solutions services which meet all your needs and grow
                                 your business.</p>
 
@@ -94,8 +91,8 @@
                             <div class="col-lg-6 col-md-6 aos-init " data-aos="fade-right" data-aos-duration="1000" data-aos-easing="ease">
                                 <div class="custom_tittle text-left">
                                     <h2>
-                                        FOOD <strong>AND</strong> FMCG <br>  
-                                        SOLUTIONS 
+                                    Food <strong>And</strong> Fmcg <br>      
+                                        Solutions 
                                     </h2> 
 
                                         <p class="p_color text-justify">The food and beverage sector is always growing as more and more,
@@ -129,7 +126,8 @@
 
                     <div class="industryNew_section2_info aos-init b2c_colSection " data-aos="fade-up" data-aos-duration="1500" data-aos-easing="ease">
                         <div class="custom_tittle">
-                            <h2>Together, <strong>We Create The</strong> Perfect Partnership</h2> 
+                            <h2>Leading <strong>The</strong> Technological Wave With <strong>App</strong> Development, <strong>Shopping</strong> Cart Integration, 
+                                And Cutting-Edge Experiences For <strong>Higher</strong> Customer Retention</h2> 
                             <p class="p_color">You concentrate on the clients, and we'll focus on expanding your business.</p>
                         </div>
 

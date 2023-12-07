@@ -22,12 +22,12 @@
                         <div class="row align-items-center">
                             <div class="col-lg-6 col-md-6 aos-init " data-aos="fade-right" data-aos-duration="1000" data-aos-easing="ease">
                                 <div class=" custom_tittle text-left">
-                                    <h1>NOPCOMMERCE</h1>
-                                    <h2 class="">
-                                        <strong>BUILD</strong> E-COMMERCE PLATEFORM <strong>WITH RICH</strong> 
-                                        FEATURES <strong>LIKE</strong> MOBILE COMMERCE, MULTI-STORE 
-                                        SUPPORT, VENDOR MANAGEMENT, MARKETING, 
-                                        SHIPPING <strong>AND</strong> PAYMENT GATEWAYS.
+                                    <h1>Nopcommerce</h1>
+                                    <h2 class=""> 
+
+                                        Build <strong>E-Commerce</strong> Plateform With Rich <strong>Features</strong> 
+                                        Like Mobile Commerce, <strong>Multi-Store</strong> Support, Vendor 
+                                        Management, <strong>Marketing,</strong> Shipping And <strong>Payment Gateways.</strong>
 
                                     </h2>
 

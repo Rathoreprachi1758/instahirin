@@ -1,4 +1,4 @@
-<div class="aboutProject_section getFree proposalPage">
+{{-- <div class="aboutProject_section getFree proposalPage">
     <div class="auto_container">
 
         <div class="contactUs_detail">
@@ -494,4 +494,4 @@
         </div>
     </div>
 
-</div>
+</div> --}}

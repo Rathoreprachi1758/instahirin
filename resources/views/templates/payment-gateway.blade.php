@@ -22,10 +22,10 @@
                         <div class="row align-items-center">
                             <div class="col-lg-6 col-md-6 aos-init " data-aos="fade-right" data-aos-duration="1000" data-aos-easing="ease">
                                 <div class=" custom_tittle text-left">
-                                    <h1>PAYMENT GATEWAY INTEGRATION SOLUTIONS</h1>
+                                    <h1>Payment Gateway Integration Solutions</h1>
                                     <h2 class="">
-                                        SEAMLESS PAYMENT GATEWAY <strong>INTEGRATION 
-                                        SOLUTIONS BY</strong> BIZIONIC MARKETING <strong>SOLUTIONS</strong>
+                                    <strong>Seamless</strong> Payment Gateway <strong>Integration</strong> 
+                                    Solutions <strong>By</strong> Bizionic Marketing Solutions
 
                                     </h2>
 

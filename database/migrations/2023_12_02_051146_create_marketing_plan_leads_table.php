@@ -17,14 +17,14 @@ return new class extends Migration
             $table->string('company');
             $table->string('email');
             $table->string('phone');
-            // $table->string('plan_categories');
-            // $table->string('selected_plan');
-            $table->unsignedBigInteger('plan_category_id');
-            $table->foreign('plan_category_id')->references('id')->on('plan_categories');
+            $table->string('plan_categories');
+            $table->string('selected_plan');
+            // $table->unsignedBigInteger('plan_category_id');
+            // $table->foreign('plan_category_id')->references('id')->on('plan_categories');
         
-            // Foreign key for plans table
-            $table->unsignedBigInteger('plan_id');
-            $table->foreign('plan_id')->references('id')->on('plans');
+            // // Foreign key for plans table
+            // $table->unsignedBigInteger('plan_id');
+            // $table->foreign('plan_id')->references('id')->on('plans');
             $table->string('message');
             $table->timestamps();
         });

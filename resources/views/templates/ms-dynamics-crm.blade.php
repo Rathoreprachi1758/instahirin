@@ -24,9 +24,8 @@
                                 <div class=" custom_tittle text-left">
                                     <h1>MS Dynamics CRM</h1>
                                     <h2 class="">
-                                        <strong>MANAGE</strong> CUSTOMER DATABASE,
-                                        GENERATE NEW LEADS, ENGAGE CUSTOMERS, 
-                                        <strong>AND</strong> RESOLVE CUSTOMER SERVICE ISSUES <strong>FOR BUSINESSES NEEDS.</strong>
+                                        <strong>Manage</strong> Customer Database, <strong>Generate</strong> New Leads, 
+                                        Engage Customers, <strong>And</strong> Resolve Customer Service <strong>Issues For Businesses Needs.</strong>
 
                                     </h2>
 

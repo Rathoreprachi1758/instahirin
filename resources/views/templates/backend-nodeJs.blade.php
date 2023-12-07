@@ -22,9 +22,10 @@
                         <div class="row align-items-center">
                             <div class="col-lg-6 col-md-6 aos-init " data-aos="fade-right" data-aos-duration="1000" data-aos-easing="ease">
                                 <div class=" custom_tittle text-left">
-                                    <h1>Node.js DEVELOPERS</h1>
+                                    <h1>Node.Js Developers</h1>
                                     <h2 class="">
-                                        <strong>A</strong> DEVELOPMENT <strong>OF</strong> APPLICATIONS <strong>OFFERING</strong> ADVANCED FEATURES <strong>AND</strong> FUNCTIONALITY.
+                                        Bizionic Technologies: <strong>Your Gateway To Expert</strong> Node.Js <strong>Development</strong> 
+                                           
                                     </h2>
 
                                         <p class="p_color text-justify">Bizionic Technologies Node.js developers specialize in building applications using the Node.js runtime environment, which allows JavaScript to run on the server side. Node.js is known for its event-driven, non-blocking I/O model, making it well-suited for building scalable and high-performance applications.</p>
@@ -49,7 +50,7 @@
 
                     <div class="industryNew_section2_info aos-init " data-aos="fade-up" data-aos-duration="1500" data-aos-easing="ease">
                         <div class="custom_tittle">
-                            <h3><strong>Here are some key areas where </strong> Node.js <strong>developers are used:</strong></h2>
+                            <h3>Hire Node Js Developers</h2>
                               
                         </div>
 

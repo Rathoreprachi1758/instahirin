@@ -22,12 +22,9 @@
                         <div class="row align-items-center">
                             <div class="col-lg-6 col-md-6 aos-init " data-aos="fade-right" data-aos-duration="1000" data-aos-easing="ease">
                                 <div class=" custom_tittle text-left">
-                                    <h1>DevOps</h1>
+                                    <h1>Bizionics Devops Services Enable Businesses To Achieve Faster Development Cycles, Increased Collaboration Between Development And Operations Teams, Enhanced Software Quality, And Improved Deployment Reliability.</h1>
                                     <h2 class="">
-                                        <strong>CREATE</strong> TOOLS <strong>AND</strong> PRACTICES COMBINATIONS 
-                                        <strong>TO</strong> DELIVER <strong>APPLICATIONS AND SERVICES</strong> 
-                                        FASTER <strong>THAN</strong> TRADITIONAL <strong>SOFTWARE</strong> DEVELOPMENT 
-                                        <strong>AND</strong> INCREASE <strong>BUSINESSES</strong> ABILITY.
+                                    <strong>Create</strong> Virtual <strong>3D</strong> Environments Or Other Sensory <strong>Environment</strong> With Computer Modeling And Simulation To Interact <strong>Customers For Businesses.</strong>
 
                                     </h2>
 

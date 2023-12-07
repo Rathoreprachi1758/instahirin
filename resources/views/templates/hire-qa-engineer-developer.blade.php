@@ -22,9 +22,10 @@
                         <div class="row align-items-center">
                             <div class="col-lg-6 col-md-6 aos-init " data-aos="fade-right" data-aos-duration="1000" data-aos-easing="ease">
                                 <div class=" custom_tittle text-left">
-                                    <h1>QA SOFTWARE ENGINEER</h1>
+                                    <h1>QA Software Engineer</h1>
                                     <h2 class="">
-                                    TESTS <strong>AND</strong> ASSURES THE QUALITY <strong>OF SOFTWARES, WEBSITES, APPS, PROGRAMS, AND MORE, TO</strong> FIX THE BUGS AND ISSUES.
+                                    Tests <strong>And</strong> Assures The Quality <strong>Of</strong> Softwares, <strong>Websites,</strong> 
+                                    Apps, Programs, <strong>And</strong> More, To Fix The <strong>Bugs</strong> And Issues.
                                     </h2>
 
                                         <p class="p_color text-justify">QA testers or analysts dive deep into a program or software to uncover bugs and issues. Bizionic Technologies QA (Quality Assurance) software engineers are highly skilled in software testing and quality assurance using contemporary technologies.</p>

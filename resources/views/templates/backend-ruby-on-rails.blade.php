@@ -22,9 +22,9 @@
                         <div class="row align-items-center">
                             <div class="col-lg-6 col-md-6 aos-init " data-aos="fade-right" data-aos-duration="1000" data-aos-easing="ease">
                                 <div class=" custom_tittle text-left">
-                                    <h1>RUBY ON RAILS DEVELOPERS</h1>
+                                    <h1>Ruby On Rails Developers</h1>
                                     <h2 class="">
-                                        <strong>A</strong> DEVELOPMENT <strong>OF</strong> APPLICATIONS <strong>OFFERING</strong> ADVANCED FEATURES <strong>AND</strong> FUNCTIONALITY.
+                                        <strong>A</strong> Development <strong>Of</strong> Applications <strong>Offering</strong> Advanced Features <strong>And</strong> Functionality.
                                     </h2>
 
                                         <p class="p_color text-justify">Ruby on Rails developers usually develop back-end components, connect the application with the other (often third-party) web services, and support the front-end developers by integrating their work with the application.</p>
@@ -49,7 +49,8 @@
 
                     <div class="industryNew_section2_info aos-init " data-aos="fade-up" data-aos-duration="1500" data-aos-easing="ease">
                         <div class="custom_tittle">
-                            <h3><strong>Here are some key areas where</strong> Ruby on Rails  <strong>developers are utilized:</strong></h2>
+                            <h3><strong>Elevate Your Projects With Bizionic Technologies Experienced</strong> Ruby On Rails Developers  </h2>
+                             
                              
                               
                               

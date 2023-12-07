@@ -1,7 +1,7 @@
 <template>
 <div class="clientBizionic_section bg_e5e6e7 clientMarketing">
         <div class="auto_container">
-            <div class="clientBizionic_section_detail aos-init aos-animate"  data-aos="fade-up" data-aos-duration="500" data-aos-easing="ease-in">
+            <div class="clientBizionic_section_detail">
             <div class="custom_tittle">
                     <h2 class="pb-1"><b>These are some of our</b> satisfied clients,</h2>
                     <h2><b>and this is what they have to say...</b></h2>

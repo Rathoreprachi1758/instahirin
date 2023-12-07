@@ -22,12 +22,11 @@
                         <div class="row align-items-center">
                             <div class="col-lg-6 col-md-6 aos-init " data-aos="fade-right" data-aos-duration="1000" data-aos-easing="ease">
                                 <div class=" custom_tittle text-left">
-                                    <h1>CHATBOTS</h1>
+                                    <h1>Chatbots</h1>
                                     <h2 class="">
-                                        <strong>INTERCEPT AND DEFLECT</strong> POTENTIAL TICKETS, 
-                                        EASING <strong>AGENTS' WORKLOADS,</strong> HANDLE <strong>REPETITIVE 
-                                        TASKS,</strong> RESPOND <strong>TO GENERAL QUESTIONS,</strong> OFFER 
-                                        <strong>SELF-SERVICE OPTIONS AND</strong> MUCH MORE...
+                                    Intercept <strong>And</strong> Deflect Potential Tickets, <strong>Easing</strong> 
+                                    Agents <strong>Workloads,</strong> Handle Repetitive Tasks, Respond <strong>To</strong> 
+                                    General Questions, Offer <strong>Self-Service</strong> Options And Much <strong>More.</strong>
 
                                     </h2>
 

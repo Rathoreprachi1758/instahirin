@@ -22,9 +22,9 @@
                         <div class="row align-items-center">
                             <div class="col-lg-6 col-md-6 aos-init " data-aos="fade-right" data-aos-duration="1000" data-aos-easing="ease">
                                 <div class=" custom_tittle text-left">
-                                    <h1>iOS APP DEVELOPERS</h1>
+                                    <h1>IOS App Developers</h1>
                                     <h2 class="">
-                                        <strong>CREATE</strong> APPLICATIONS <strong>FOR MOBILE DEVICES POWERED BY</strong> APPLE'S iOS <strong>OPERATING SYSTEM</strong>.
+                                        <strong>Unleashing IOS Excellence:</strong> Bizionic Technologies <strong>Skilled App Developers</strong>
                                     </h2>
 
                                         <p class="p_color text-justify">iOS app developers specialize in building applications specifically for Apple's iOS platform, which powers devices like iPhones, iPads, and iPods touch. They possess expertise in programming languages like Swift or Objective-C and deeply understand the iOS SDK (Software Development Kit) and related tools.</p>
@@ -49,7 +49,7 @@
 
                     <div class="industryNew_section2_info aos-init " data-aos="fade-up" data-aos-duration="1500" data-aos-easing="ease">
                         <div class="custom_tittle">
-                            <h3>iOS app    <strong>developers are employed for various purposes and use cases, including:</strong></h2>
+                            <h3>Meeting Diverse Needs In The Vibrant Ios Ecosystem - Your Gateway To Mobile App Development Excellence</h3>
                             
                              
                               

@@ -22,10 +22,9 @@
                         <div class="row align-items-center">
                             <div class="col-lg-6 col-md-6 aos-init " data-aos="fade-right" data-aos-duration="1000" data-aos-easing="ease">
                                 <div class=" custom_tittle text-left">
-                                    <h1>iOS GAMES</h1>
+                                    <h1>IOS Games</h1>
                                     <h2 class="">
-                                        <strong>CREATE</strong> ROBUST <strong>AND</strong> 
-                                        INTUITIVE GAMES <strong>FOR</strong> iOS <strong>AND</strong> MAC.
+                                    <strong>Create Robust And Intuitive Games For</strong> IOS And MAC.
 
                                     </h2>
 

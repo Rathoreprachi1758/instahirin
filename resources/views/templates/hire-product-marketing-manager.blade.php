@@ -22,9 +22,10 @@
                         <div class="row align-items-center">
                             <div class="col-lg-6 col-md-6 aos-init " data-aos="fade-right" data-aos-duration="1000" data-aos-easing="ease">
                                 <div class=" custom_tittle text-left">
-                                    <h1>PRODUCT MARKETING MANAGER</h1>
+                                    <h1>Product Marketing Manager</h1>
                                     <h2 class="">
-                                        <strong>PRODUCT MARKETING IS</strong> MORE THAN <strong>CREATIVE IDEAS, IT’S A</strong> STRATEGIC WAY <strong>OF DOING</strong> BUSINESS <strong>AND</strong> BOOST REVENUE.
+                                        Product <strong>Marketing</strong> Is More Than Creative Ideas, 
+                                            <strong>Its</strong> A Strategic Way <strong>Of</strong> Doing Business And <strong>Boost Revenue.</strong>
                                     </h2>
 
                                         <p class="p_color text-justify">Bizionic Marketing Solutions Product Marketing Managers are responsible for driving the success of a product or service by developing and executing strategic marketing plans. They work closely with cross-functional teams, including product development, sales, and marketing, to understand customer needs, differentiate the product in the market, and drive adoption and revenue. </p>

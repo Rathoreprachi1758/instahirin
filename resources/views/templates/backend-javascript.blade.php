@@ -22,10 +22,11 @@
                         <div class="row align-items-center">
                             <div class="col-lg-6 col-md-6 aos-init " data-aos="fade-right" data-aos-duration="1000" data-aos-easing="ease">
                                 <div class=" custom_tittle text-left">
-                                    <h1>JavaScript DEVELOPERS</h1>
+                                    <h1>Javascript Developers</h1>
                                     <h2 class="">
-                                        <strong>A</strong> LIGHTWEIGHT, INTERPRETED, <strong>AND</strong> JUST-IN-TIME <strong>COMPILED PROGRAMMING LANGUAGE WITH</strong> FIRST-CLASS FUNCTIONS.
+                                    Empowering <strong>Your Vision With Expertise In Browser And Server-Side</strong> Javascript
                                     </h2>
+                                      
 
                                         <p class="p_color text-justify">Bizionic Technologies JavaScript developers specialize in developing web applications using the JavaScript programming language. JavaScript is a versatile language that runs in web browsers and can also be used on the server side with platforms like Node.js.</p>
                                            <br>
@@ -49,7 +50,7 @@
 
                     <div class="industryNew_section2_info aos-init " data-aos="fade-up" data-aos-duration="1500" data-aos-easing="ease">
                         <div class="custom_tittle">
-                            <h3><strong>Here are some key areas where</strong> JavaScript  <strong>developers are used:</strong></h2>
+                            <h3>Bizionic Technologies - <strong>Your Gateway To Versatile And Proficient</strong> Javascript Development</h2>
                               
                              
                               

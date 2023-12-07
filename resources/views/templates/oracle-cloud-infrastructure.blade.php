@@ -22,12 +22,11 @@
                         <div class="row align-items-center">
                             <div class="col-lg-6 col-md-6 aos-init " data-aos="fade-right" data-aos-duration="1000" data-aos-easing="ease">
                                 <div class=" custom_tittle text-left">
-                                    <h1>ORACLE CLOUD INFRASTRUCTURE (OCI)</h1>
-                                    <h2 class="">
-                                        <strong>BUILD A</strong> CLOUD SERVICES PLATFORM
-                                        <strong>AND</strong> RUN <strong>A WIDE RANGE OF</strong> APPLICATIONS 
-                                        <strong>IN A</strong> HIGHLY-AVAILABLE, CONSISTENTLY 
-                                        HIGH-PERFORMANCE ENVIRONMENT.
+                                    <h1>Oracle Cloud Infrastructure (OCI) Consultants</h1>
+                                    <h2 class=""> 
+
+
+                                    Build And <strong>Run</strong> Wide Range Of Applications <strong>In</strong> Highly-Available, Consistently <strong>High-Performance</strong> Environment
 
                                     </h2>
 

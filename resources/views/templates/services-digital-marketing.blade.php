@@ -22,11 +22,10 @@
                         <div class="row align-items-center">
                             <div class="col-lg-6 col-md-6 aos-init " data-aos="fade-right" data-aos-duration="1000" data-aos-easing="ease">
                                 <div class=" custom_tittle text-left">
-                                    <h1>DIGITAL MARKETING</h1>
+                                    <h1>Digital Marketing</h1>
                                     <h2 class="">
-                                        <strong>TO</strong> MAXIMISE BRAND <strong>OUTCOMES,</strong> DEVELOP 
-                                        <strong>CONTENT,</strong> MONITOR <strong>ACTIVITY,</strong> RESPOND <strong>TO 
-                                        QUESTIONS,</strong> ANALYSE <strong>TRENDS, AND</strong> MANAGE <strong>CONCERNS.</strong>
+                                    To Maximise <strong>Brand</strong> Outcomes, Develop Content, <strong>Monitor</strong> 
+                                    Activity, Respond <strong>To</strong> Questions, <strong>Analyse</strong> Trends, <strong>And</strong> Manage Concerns.
 
                                     </h2>
 

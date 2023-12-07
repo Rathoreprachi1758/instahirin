@@ -11,11 +11,10 @@
     <input type="hidden" name="_token" :value="csrfToken" />
 
     <div class="mainForm_fr">
-      <div class="custom_tittle text-left">
-        <h2>
-          <strong>Open the door to</strong> endless working
-          <strong>opportunities with Bizionic InstaHirin.</strong>
-        </h2>
+      <div class="custom_tittle text-left"> 
+          <h2 class="">
+          Open The <strong>Door</strong> To Endless Working <strong>Opportunities</strong> For Talent And Freelancers <strong>Across</strong> The Globe.
+          </h2>
         <p class="p_color">Please fill the initial information for prescreening.</p>
       </div>
       <!-- Success & Failure Messages -->

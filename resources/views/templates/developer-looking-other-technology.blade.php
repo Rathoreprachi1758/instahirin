@@ -22,7 +22,8 @@
                         <div class="row align-items-center">
                             <div class="col-lg-6 col-md-6 aos-init " data-aos="fade-right" data-aos-duration="1000" data-aos-easing="ease">
                                 <div class=" custom_tittle text-left pb-0">
-                                    <h1><strong>LOOKING FOR</strong> OTHER TECHNOLOGY?</h1>
+                                    <h1>Looking For Other Technology?</h1>
+                                    <h2>Bizionic Technologies: <strong>Pioneering</strong> The Future Of Innovation</h2>
                                     
 
                                         <p class="p_color text-justify">Welcome to Bizionic Technologies, where innovation and creativity converge to create cutting-edge technological solutions. As a forward-thinking technology development company, we are committed to empowering businesses and individuals with the "new-age" and "emerging" cutting-edge and transformative wave of technologies that can revolutionize how businesses operate, and individuals interact with technology. These technologies continually evolve, leading to new applications and capabilities previously considered beyond reach.</p>
@@ -56,7 +57,7 @@
             <div class="auto_container">
                 <div class="aboutBizionic_section_detail">
                     <div class="custom_tittle aos-init aos-animate"  data-aos="fade-zoom-in" data-aos-duration="300" data-aos-easing="linear">
-                        <h2 class="text-white text-left">Bizionic, <strong>Startups to Unicorn’s Lab</strong> </h2>
+                        <h2 class="text-white text-left">Empowering Today, <strong>Transforming</strong> Tomorrow - Where <br>Creativity Meets <strong>Cutting-Edge</strong> Technology </h2>
                     </div>
 
                     <div class="aboutBizionic_col">

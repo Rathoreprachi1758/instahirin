@@ -14,18 +14,13 @@
                         <div class="row align-items-center">
                             <div class="col-lg-6 col-md-6 aos-init " data-aos="fade-right" data-aos-duration="1000" data-aos-easing="ease">
                                 <div class=" custom_tittle">
-                                    <h2 class="text-left">
-                                        EXPLORE <strong>OUR</strong> <b>CONSULTING</b> 
-                                        SERVICES <strong>TO</strong> REALISE <strong>THE</strong> FULL 
-                                        POTENTIAL <strong>OF</strong> <b>AWS NEPTUNE.</b>
-                                    </h2>
+                                    <h1 class="text-left">
+                                    Explore Our Consulting Services To Realise The Full Potential Of AWS Neptune.
+                                    </h1>
 
-                                    <h4 class="text-left">
-                                        <strong>Our</strong> AWS Neptune Consulting <strong>Services 
-                                        assist you in</strong> Optimising <strong>your</strong> Graph 
-                                        Databases, <strong>allowing you to turn</strong> Data 
-                                        <strong>into</strong> Insights <strong>and drive</strong> Company Success.
-                                    </h4>
+                                    <h2 class="text-left">
+                                    <strong>Explore</strong> Our Consulting Services <strong>To</strong> Realise The Full Potential <strong>Of</strong> Aws Neptune.
+                                    </h2>
 
                                         <p class="p_color text-justify">Improving the AWS Neptune Development Services to Make a Difference in the World.</p>
 
@@ -62,8 +57,9 @@
                     <div class="col-lg-6 col-md-6">
                         <div class="seamlessLimitless_fl">
                             <div class="custom_tittle pb-0 text-left">
-                                <h2 class="pb-3"><strong>Wha</strong>t We Offers <strong>on</strong> AWS 
-                                    Neptune Consulting <strong>Services</strong></h2>
+                                <h2 class="pb-3">
+                                What <strong>We</strong> Offers On <strong>Aws</strong> Neptune Consulting <strong>Services</strong>
+                                </h2>
                                 <p class="p_color p-0 text-justify">Our AWS Neptune consulting services provide end-to-end graph database solutions, from deployment to maintenance.</p>
                             </div>
                         </div> 

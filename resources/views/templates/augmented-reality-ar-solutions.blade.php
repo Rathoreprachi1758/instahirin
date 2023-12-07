@@ -22,10 +22,9 @@
                         <div class="row align-items-center">
                             <div class="col-lg-6 col-md-6 aos-init " data-aos="fade-right" data-aos-duration="1000" data-aos-easing="ease">
                                 <div class=" custom_tittle text-left">
-                                    <h1>AUGMENTED REALITY (AR) SOLUTIONS</h1>
+                                    <h1>Augmented Reality (AR) Solutions</h1>
                                     <h2 class="">
-                                        <strong><strong>CREATE</strong> AR PRODUCTS <strong>THAT</strong> SUPERIMPOSE 
-                                            <strong>COMPUTER-GENERATED</strong> IMAGES <strong>INTO THE</strong> REAL WORLD.</strong>
+                                    Elevate <strong>User</strong> Experiences With Bizionic Technologies <strong>Ar Developers</strong>
 
                                     </h2>
 
@@ -51,7 +50,7 @@
 
                     <div class="industryNew_section2_info aos-init" data-aos="fade-up" data-aos-duration="1500" data-aos-easing="ease">
                         <div class="custom_tittle">
-                            <h3>Our <strong>AR</strong> services encompass:</h3>
+                            <h3>Blending Innovation And Creativity For Captivating <strong>Ar Solutions Across Industries</strong></h3>
   
 
 

@@ -22,9 +22,10 @@
                         <div class="row align-items-center">
                             <div class="col-lg-6 col-md-6 aos-init " data-aos="fade-right" data-aos-duration="1000" data-aos-easing="ease">
                                 <div class=" custom_tittle text-left">
-                                    <h1>SOCIAL MEDIA MANAGER</h1>
+                                    <h1>Social Media Manager</h1>
                                     <h2 class="">
-                                        <strong>SET UP CONTENT</strong> STRATEGY <strong>AND DRIVE</strong> ENGAGEMENT <strong>ON</strong> SOCIAL CHANNELS <strong>FOR</strong> BRAND EXPOSUR.
+                                    Set <strong>Up</strong> Content Strategy And <strong>Drive</strong> 
+                                    Engagement On Social <strong>Channels</strong> For Brand <strong>Exposur.</strong>
                                     </h2>
 
                                         <p class="p_color text-justify">Bizionic Marketing Solutions Social Media Manager specializes in managing and implementing social media strategies for businesses or brands. They are responsible for creating, scheduling, and analyzing content across various social media platforms to engage with the target audience and achieve specific marketing goals.  </p>

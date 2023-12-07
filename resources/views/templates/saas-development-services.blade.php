@@ -22,11 +22,10 @@
                         <div class="row align-items-center">
                             <div class="col-lg-6 col-md-6 aos-init " data-aos="fade-right" data-aos-duration="1000" data-aos-easing="ease">
                                 <div class=" custom_tittle text-left">
-                                    <h1>SaaS DEVELOPMENT SERVICES</h1>
+                                    <h1>SAAS Development Services</h1>
                                     <h2 class="">
-                                        <strong>DEVELOP A</strong> SOFTWARE DISTRIBUTION 
-                                        MODEL <strong>TO</strong> HOST APPLICATIONS <strong>AND MAKE 
-                                        THEM</strong> PUBLIC <strong>FOR</strong> END USERS <strong>OVER THE INTERNET.</strong>
+                                    Develop <strong>A</strong> Software Distribution Model <strong>To</strong> Host Applications 
+                                    And <strong>Make</strong> Them Public For End Users <strong>Over</strong> The <strong>Internet.</strong>
 
                                     </h2>
 

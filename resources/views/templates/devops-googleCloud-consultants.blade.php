@@ -22,9 +22,10 @@
                         <div class="row align-items-center">
                             <div class="col-lg-6 col-md-6 aos-init " data-aos="fade-right" data-aos-duration="1000" data-aos-easing="ease">
                                 <div class=" custom_tittle text-left">
-                                    <h1>GOOGLE CLOUD CONSULTANTS</h1>
+                                    <h1>Google Cloud Consultants</h1>
                                     <h2 class="">
-                                        HIGH-PERFORMANCE <strong>INFRASTRUCTURE FOR</strong> CLOUD COMPUTING, DATA ANALYTICS <strong>AND</strong> MACHINE LEARNING.
+                                        High-Performance <strong>Infrastructure</strong> For Cloud 
+                                        Computing, Data <strong>Analytics</strong> And Machine <strong>Learning.</strong>
                                     </h2>
 
                                         <p class="p_color text-justify">Google Cloud consultants are hired to assist businesses in leveraging the Google Cloud platform to design, implement, and optimize their cloud infrastructure and services. Google Cloud provides many cloud computing services, including computing, storage, networking, databases, analytics, machine learning, and more.</p>

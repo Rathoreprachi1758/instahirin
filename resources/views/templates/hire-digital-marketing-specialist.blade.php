@@ -22,11 +22,11 @@
                         <div class="row align-items-center">
                             <div class="col-lg-6 col-md-6 aos-init " data-aos="fade-right" data-aos-duration="1000" data-aos-easing="ease">
                                 <div class=" custom_tittle text-left">
-                                    <h1>DIGITAL MARKETING SPECIALIST</h1>
+                                    <h1>Digital Marketing Specialist</h1>
                                     <h2 class="">
-                                    CREATE <strong>CONTENT,</strong> MONITOR <strong>ACTIVITY,</strong> ANSWER
-                                        <strong>QUESTIONS,</strong> ANALYZE <strong>TRENDS, AND</strong> RESOLVE
-                                        <strong>ISSUES TO MAXIMIZE</strong> BRAND RESULTS.
+                                    Create <strong>Content,</strong> Monitor Activity, <strong>Answer</strong> 
+                                    Questions, Analyze <strong>Trends, And</strong> Resolve 
+                                    Issues To Maximize <strong>Brand Results.</strong>
                                     </h2>
 
                                         <p class="p_color text-justify">Bizionic Marketing Solution's Digital Marketing specialist focuses on implementing and managing digital marketing strategies and tactics to achieve specific marketing

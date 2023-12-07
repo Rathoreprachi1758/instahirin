@@ -22,12 +22,10 @@
                         <div class="row align-items-center">
                             <div class="col-lg-6 col-md-6 aos-init " data-aos="fade-right" data-aos-duration="1000" data-aos-easing="ease">
                                 <div class=" custom_tittle text-left">
-                                    <h1>SugarCRM</h1>
+                                    <h1>Enhancing Business Dynamics: Bizionic Technologies Skilled Sugarcrm Developers</h1>
                                     <h2 class="">
-                                            <strong>CREATE</strong> CRM PLATFORM <strong>THAT</strong> HELPS 
-                                            MARKETING, SALES, <strong>AND</strong> SERVICE 
-                                            TEAMS <strong>REACH NEW LEVELS OF</strong> PERFORMANCE <strong>AND</strong> 
-                                            PREDICTIVE <strong>WITH HIGH-DEFINITION CX.</strong>
+                                    Create <strong>Crm</strong> Platform That Helps Marketing, Sales, <strong>And</strong> Service Teams 
+                                    Reach <strong>New Levels Of</strong> Performance And Predictive With <strong>High-Definition Cx.</strong>
 
                                     </h2>
 
@@ -53,7 +51,7 @@
 
                     <div class="industryNew_section2_info aos-init" data-aos="fade-up" data-aos-duration="1500" data-aos-easing="ease">
                         <div class="custom_tittle">
-                            <h3>Our <strong>SugarCRM</strong> services include:</h3>
+                            <h3>Tailoring CRM Solutions <strong>For Optimal Customer Experiences, Sales Efficiency, And Business Performance</strong></h3>
   
 
 

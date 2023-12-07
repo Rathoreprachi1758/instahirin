@@ -22,9 +22,10 @@
                         <div class="row align-items-center">
                             <div class="col-lg-6 col-md-6 aos-init " data-aos="fade-right" data-aos-duration="1000" data-aos-easing="ease">
                                 <div class=" custom_tittle text-left">
-                                    <h1>REACT NATIVE DEVELOPERS</h1>
+                                    <h1>React Native Developers</h1>
                                     <h2 class="">
-                                        <strong>A</strong> LIGHTWEIGHT, INTERPRETED, <strong>AND</strong> JUST-IN-TIME <strong>COMPILED PROGRAMMING LANGUAGE WITH</strong> FIRST-CLASS FUNCTIONS.
+                                        <strong>A</strong> Lightweight, Interpreted, <strong>And</strong> Just-In-Time <strong>Compiled Programming Language With</strong> First-Class Functions.
+   
                                     </h2>
 
                                         <p class="p_color text-justify">iOS app developers specialize in building applications specifically for Apple's iOS platform, which powers devices like iPhones, iPads, and iPods touch. They possess expertise in programming languages like Swift or Objective-C and deeply understand the iOS SDK (Software Development Kit) and related tools.</p>
@@ -49,10 +50,10 @@
 
                     <div class="industryNew_section2_info aos-init " data-aos="fade-up" data-aos-duration="1500" data-aos-easing="ease">
                         <div class="custom_tittle">
-                            <h3><strong>Here are some key areas where</strong> React Native    <strong>developers are commonly utilized:</strong></h2>
+                            <h3><strong>Elevate Your Presence In The Apple</strong> Ecosystem    <strong>With Our Skilled Ios App Developers</strong></h2>
 
                             
-                             
+                              
                               
                               
                         </div>

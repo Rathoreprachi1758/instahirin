@@ -22,9 +22,10 @@
                         <div class="row align-items-center">
                             <div class="col-lg-6 col-md-6 aos-init " data-aos="fade-right" data-aos-duration="1000" data-aos-easing="ease">
                                 <div class=" custom_tittle text-left">
-                                    <h1>SALESFORCE DEVELOPERS</h1>
+                                    <h1>Salesforce Developers</h1>
                                     <h2 class="">
-                                        UNITE YOUR TEAMS <strong>AROUND YOUR CUSTOMERS, GET</strong> ACTIONABLE INSIGHTS <strong>FROM DATA,</strong> ATTRACT PROSPECTS <strong>WITH</strong> WORLD'S #1 CRM.
+                                    Unite <strong>Your</strong> Teams Around Your Customers, <strong>Get</strong> Actionable 
+                                    Insights <strong>From Data,</strong> Attract Prospects With <strong>Worlds</strong> #1 Crm.
                                     </h2>
 
                                         <p class="p_color text-justify">Bizionic Technologies Salesforce developers specialize in developing and customizing applications on the Salesforce platform. Salesforce is a cloud-based customer relationship management (CRM) platform that offers various features and functionalities to help businesses manage their sales, marketing, customer service, and other operations.</p>

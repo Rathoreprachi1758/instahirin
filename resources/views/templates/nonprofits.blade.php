@@ -18,8 +18,8 @@
                     <div class="row align-items-center">
                         <div class="col-lg-6 col-md-6 aos-init " data-aos="fade-right" data-aos-duration="1000" data-aos-easing="ease">
                             <div class="custom_tittle text-left">
-                                <h2>NON-PROFIT DEVELOPMENT
-                                </h2>
+                                <h1>Tailored Non-Profit Development Services By Bizionic Technologies
+                                </h1>
 
                                     <p class="p_color text-justify">Bizionic Technologies offers a comprehensive range of Non-profit development services to support and empower Non-profit organisations in achieving their missions and goals. Our Non-profit development services are tailored to address the unique needs and challenges Non-profits face in today's digital landscape. Below are the some of the Non-profit development services provided by Bizionic Technologies.</p>
 
@@ -43,7 +43,7 @@
 
                 <div class="industryNew_section2_info aos-init " data-aos="fade-up" data-aos-duration="1500" data-aos-easing="ease">
                     <div class="custom_tittle">
-                        <h2><strong>The</strong> Services <strong>We Offered</strong></h2> 
+                        <h2>Supporting Non-Profit <strong>Missions</strong></h2> 
                     </div>
 
                     
@@ -193,7 +193,7 @@
             <div class="auto_container">
                 <div class="newIndPages_section2_tittle   ">
                     <div class="custom_tittle p-0 aos-init"  data-aos="fade-up" data-aos-duration="1000" data-aos-easing="ease">
-                        <h2 class="pb-2">Non-Profit Development Services</h2>
+                        <h2 class="pb-2">Addressing Digital Challenges</h2>
                         <h6 class="p-0"><strong>Process by Bizionic Technologies</strong></h6>
                     </div>
 

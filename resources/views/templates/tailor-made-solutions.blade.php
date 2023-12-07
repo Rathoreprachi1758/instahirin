@@ -22,11 +22,13 @@
                         <div class="row align-items-center">
                             <div class="col-lg-6 col-md-6 aos-init " data-aos="fade-right" data-aos-duration="1000" data-aos-easing="ease">
                                 <div class=" custom_tittle text-left">
-                                    <h1>TAILOR MADE TECHNOLOGY DEVELOPMENT SERVICES</h1>
+                                    <h1>Tailor Made Technology Development Services</h1>
                                     <h2 class="">
-                                        ADVANCE <strong>AND</strong> IMPROVE <strong>EXISTING</strong> TECHNOLOGIES 
-                                        <strong>OR</strong> DEVELOP <strong>WHOLLY</strong> NEW <strong>ONES BASED ON</strong> BUSINESS 
-                                        NEEDS <strong>THROUGH</strong> STUDY, TESTING, <strong>AND</strong> INNOVATION.
+
+                                        Advance <strong>And</strong> Improve <strong>Existing</strong> 
+                                        Technologies <strong>Or</strong> Develop <strong>Wholly</strong> New 
+                                        <strong>Ones Based On</strong> Business Needs <strong>Through</strong> 
+                                        Study, Testing, <strong>And</strong> Innovation.
 
                                     </h2>
 
@@ -52,7 +54,7 @@
 
                     <div class="industryNew_section2_info aos-init" data-aos="fade-up" data-aos-duration="1500" data-aos-easing="ease">
                         <div class="custom_tittle">
-                            <h3>Let's dive into their offering:</h3>
+                            <h3>Beyond Services, Embracing Uniqueness - Bizionic Technologies Partnership Promise</h3>
   
 
 

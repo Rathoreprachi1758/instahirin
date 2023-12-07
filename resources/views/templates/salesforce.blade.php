@@ -20,12 +20,11 @@
         <div class="row align-items-center">
           <div class="col-lg-6 col-md-6 aos-init " data-aos="fade-right" data-aos-duration="1000" data-aos-easing="ease">
             <div class=" custom_tittle text-left">
-              <h1>SALESFORCE</h1>
+              <h1>Salesforce</h1>
               <h2 class="">
-                  <strong>HELPS</strong> BUSINESSES <strong>KEEP TRACK ON</strong> CUSTOMERS 
-                  INTERACTION <strong>AND SALES DATA WITH SALESFORCE 
-                  RICH FEATURES LIKE</strong> EMAIL MARKETING, LEAD 
-                  CAPTURE, LEAD SCORING <strong>AND</strong> MUCH MORE...
+                Helps <strong>Businesses</strong> Keep Track On <strong>Customers</strong> Interaction 
+                And Sales <strong>Data</strong> With Salesforce Rich Features Like <strong>Email</strong> 
+                Marketing, Lead Capture, <strong>Lead Scoring</strong> And Much More...
               </h2>
               <p class="p_color text-justify">Bizionic Technologies provides a comprehensive range of Salesforce development services to empower businesses with advanced customer relationship management and automation solutions.</p>
               <br>

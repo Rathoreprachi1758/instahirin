@@ -22,11 +22,10 @@
                         <div class="row align-items-center">
                             <div class="col-lg-6 col-md-6 aos-init " data-aos="fade-right" data-aos-duration="1000" data-aos-easing="ease">
                                 <div class=" custom_tittle text-left">
-                                    <h1>PAY-PER-CLICK (PPC) ADVERTISING</h1>
+                                    <h1>Pay-Per-Click (PPC) Advertising</h1>
                                     <h2 class="">
-                                        <strong>EARN</strong> MONEY <strong>FROM</strong> PPC <strong>BY PLACING</strong>
-                                        ADS <strong>ON YOUR SITE OR EXECUTING</strong> PAID 
-                                        <strong>AD</strong> CAMPAIGNS <strong>FOR YOUR AFFILIATE</strong> NETWORKS.
+                                    Earn <strong>Money</strong> From PPC By Placing Ads On Your <strong>Site</strong> Or 
+                                    Executing Paid Ad <strong>Campaigns</strong> For <strong>Your Affiliate Networks.</strong>
 
                                     </h2>
 

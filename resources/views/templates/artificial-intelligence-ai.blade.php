@@ -22,11 +22,9 @@
                         <div class="row align-items-center">
                             <div class="col-lg-6 col-md-6 aos-init " data-aos="fade-right" data-aos-duration="1000" data-aos-easing="ease">
                                 <div class=" custom_tittle text-left">
-                                    <h1>ARTIFICIAL INTELLIGENCE (AI)</h1>
+                                    <h1>Efficiency, Cost-Effectiveness, And Quality In Mobile App Solutions Aligned With Your Business Goals And User Expectations</h1>
                                     <h2 class="">
-                                        <strong>CREATE</strong> SOFTWARE <strong>AND</strong> APPS <strong>THAT</strong> 
-                                        PERFORM COMPLEX TASKS <strong>THROUGH</strong> MACHINE LEARNING <strong>(ML) 
-                                        AND</strong> ARTIFICIAL INTELLIGENCE <strong>(AI).</strong>
+                                    <strong>Create</strong> Software And Apps That <strong>Perform</strong> Complex <strong>Tasks</strong> Through Machine Learning (ML) And <strong>Artificial Intelligence (AI).</strong>
 
                                     </h2>
 
@@ -52,7 +50,7 @@
 
                     <div class="industryNew_section2_info aos-init" data-aos="fade-up" data-aos-duration="1500" data-aos-easing="ease">
                         <div class="custom_tittle">
-                            <h3>Our <strong>AI</strong> services include:</h3>
+                            <h3><strong>Unlock Innovation, Amplify Success - Your Partner In The</strong> Ai-Powered Business Era</h3>
   
 
 

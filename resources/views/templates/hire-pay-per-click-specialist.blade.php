@@ -22,9 +22,11 @@
                         <div class="row align-items-center">
                             <div class="col-lg-6 col-md-6 aos-init " data-aos="fade-right" data-aos-duration="1000" data-aos-easing="ease">
                                 <div class=" custom_tittle text-left">
-                                    <h1>PPC (Pay-Per-Click) AND GOOGLE ADS SPECIALISTS.</h1>
+                                    <h1>Ppc (Pay-Per-Click) And Google Ads Specialists.</h1>
                                     <h2 class="">
                                         CREATE, UPDATE <strong>AND</strong> MONITORE <strong>THE AD COPIES, ADJUST</strong> KEYWORDS, <strong>FIND</strong> SUITABLE BIDS <strong>FOR ORGANIZATION'S</strong> ONLINE MARKETING <strong>STRATEGY.</strong>
+                                        <strong>Create,</strong> Update And Monitore The Ad <strong>Copies,</strong> Adjust <strong>Keywords,</strong> 
+                                        Find Suitable Bids For Organizations Online <strong>Marketing Strategy.</strong>
                                     </h2>
 
                                         <p class="p_color text-justify">Bizionic Marketing Solutions PPC (Pay-Per-Click) and Google Ads specialists specialize in managing and optimizing PPC advertising campaigns, specifically using the Google Ads platform. </p>

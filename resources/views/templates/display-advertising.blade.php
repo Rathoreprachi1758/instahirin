@@ -22,11 +22,12 @@
                         <div class="row align-items-center">
                             <div class="col-lg-6 col-md-6 aos-init " data-aos="fade-right" data-aos-duration="1000" data-aos-easing="ease">
                                 <div class=" custom_tittle text-left">
-                                    <h1>DISPLAY ADVERTISING</h1>
-                                    <h2 class="">
-                                        ADVERTISE ONLINE <strong>USING</strong> BANNER ADS
-                                         <strong>ALONG WITH OTHER</strong> VISUAL AD <strong>FORMATS
-                                          TO</strong> PROMOTE <strong>PRODUCTS ON</strong> SITES, APPS OR SOCIAL MEDIA.
+                                    <h1>Display Advertising</h1>
+                                    <h2 class=""> 
+
+                                          Advertise Online <strong>Using</strong> Banner Ads 
+                                          <strong>Along With Other</strong> Visual Ad <strong>Formats To</strong> 
+                                          Promote <strong>Products On</strong> Sites, Apps Or Social Media.
 
                                     </h2>
 
@@ -52,7 +53,7 @@
 
                     <div class="industryNew_section2_info aos-init " data-aos="fade-up" data-aos-duration="1500" data-aos-easing="ease">
                         <div class="custom_tittle">
-                            <h3><strong>Here are the key aspects of our </strong> Display Advertising  <strong> services:</strong></h3>
+                            <h3><strong>Maximize Impact, Drive Conversions - Bizionic Technologies </strong> Display Advertising Mastery</h3>
 
 
                               

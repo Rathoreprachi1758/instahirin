@@ -22,12 +22,11 @@
                         <div class="row align-items-center">
                             <div class="col-lg-6 col-md-6 aos-init " data-aos="fade-right" data-aos-duration="1000" data-aos-easing="ease">
                                 <div class=" custom_tittle text-left">
-                                    <h1>TECHNOLOGY TRAINING AND WORKSHOPS</h1>
+                                    <h1>Technology Training And Workshops</h1>
                                     <h2 class="">
-                                        <strong>USERS CAN BE</strong> TRAINED <strong>BY</strong> EDUCATIING, 
-                                        INSTRUCTING <strong>OR HELD A</strong> WORKSHOP <strong>ABOUT A 
-                                        PARTICULAR</strong> SOFTWARE, PRODUCT, <strong>OR</strong> SYSTEM, 
-                                        <strong>FOR</strong> BUSINESS <strong>DEVELOPMENT</strong> ENDEAVOUR.
+                                    Users <strong>Can</strong> Be Trained By Educatiing, <strong>Instructing</strong> 
+                                    Or Held <strong>A</strong> Workshop About <strong>A</strong> Particular Software, 
+                                    Product, <strong>Or</strong> System, For <strong>Business</strong> Development Endeavour.
 
                                     </h2>
 

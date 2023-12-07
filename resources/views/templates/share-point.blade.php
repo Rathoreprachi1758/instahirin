@@ -20,11 +20,9 @@
         <div class="row align-items-center">
           <div class="col-lg-6 col-md-6 aos-init " data-aos="fade-right" data-aos-duration="1000" data-aos-easing="ease">
             <div class=" custom_tittle text-left">
-              <h1>SHAREPOINT</h1>
+              <h1>Optimizing Collaboration With Bizionic Technologies Sharepoint Developers</h1>
               <h2 class="">
-                <strong>CREATE</strong> VERSATILE DEVELOPMENT <strong>FOR</strong> 
-                CLIENT-SIDE COMPONENTS, ADD-INS <strong>AND</strong> 
-                SOLUTIONS <strong>FOR</strong> BUSINESS NEEDS.
+              <strong>Create</strong> Versatile Development <strong>For</strong> Client-Side Components, Add-Ins And Solutions <strong>For</strong> Business <strong>Needs.</strong>
               </h2>
               <p class="p_color text-justify">Bizionic Technologies offers a range of expert SharePoint development services to empower businesses with robust collaboration and content management solutions.</p>
               <br>

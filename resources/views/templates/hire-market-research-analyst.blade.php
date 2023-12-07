@@ -22,10 +22,10 @@
                         <div class="row align-items-center">
                             <div class="col-lg-6 col-md-6 aos-init " data-aos="fade-right" data-aos-duration="1000" data-aos-easing="ease">
                                 <div class=" custom_tittle text-left">
-                                    <h1>MARKET RESEARCH ANALYST</h1>
+                                    <h1>Market Research Analyst</h1>
                                     <h2 class="">
-                                        RESEARCH, COMPILE <strong>AND</strong> ANALYZE DATA
-                                        <strong>ON</strong> PRODUCTS <strong>AND</strong> MARKET CONDITIONS <strong>TO IDENTIFY</strong> POTENTIAL <strong>AND</strong> SALES OPPORTUNITIES.
+                                    Research, <strong>Compile</strong> And Analyze <strong>Data</strong> On Products <strong>And</strong> 
+                                    Market <strong>Conditions</strong> To Identify Potential And <strong>Sales Opportunities.</strong>
                                     </h2>
 
                                         <p class="p_color text-justify">A market research analyst is a professional who collects and analyzes data to help organizations make informed business decisions. They gather information about market trends, customer preferences, competitor activities, and other relevant data to provide insights and recommendations to stakeholders.</p>

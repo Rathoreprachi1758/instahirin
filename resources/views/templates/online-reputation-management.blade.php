@@ -22,11 +22,9 @@
                         <div class="row align-items-center">
                             <div class="col-lg-6 col-md-6 aos-init " data-aos="fade-right" data-aos-duration="1000" data-aos-easing="ease">
                                 <div class=" custom_tittle text-left">
-                                    <h1>ONLINE REPUTATION MANAGEMENT</h1>
+                                    <h1>Online Reputation Management</h1>
                                     <h2 class="">
-                                        MANAGE, MONITOR <strong>AND</strong> 
-                                        MAINTAIN <strong>THE ONLINE</strong> PUBLIC PERCEPTION 
-                                        <strong>OF A</strong> BRAND, BUSINESS, <strong>OR</strong> PERSON.
+                                    Manage, <strong>Monitor</strong> And Maintain The Online <strong>Public</strong> Perception Of A Brand, Business, <strong>Or</strong> Person.
 
                                     </h2>
 

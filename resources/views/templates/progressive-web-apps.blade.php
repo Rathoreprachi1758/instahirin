@@ -22,11 +22,14 @@
                         <div class="row align-items-center">
                             <div class="col-lg-6 col-md-6 aos-init " data-aos="fade-right" data-aos-duration="1000" data-aos-easing="ease">
                                 <div class=" custom_tittle text-left">
-                                    <h1>PROGRESSIVE WEB APPS (PWAs)</h1>
+                                    <h1>Progressive Web Apps (PWAS)</h1>
                                     <h2 class="">
                                         <strong>BUILD</strong> APPLICATION SOFTWARE <strong>DELIVERED</strong> 
                                         THROUGH WEB <strong>USING COMMON WEB</strong> TECHNOLOGIES 
                                         <strong>INCLUDING</strong> HTML, CSS, JAVASCRIPT, <strong>AND</strong> WEBASSEMBLY.
+
+                                        Build Application <strong>Software Delivered</strong> Through Web 
+                                        <strong>Using</strong> Common Web Technologies Including <strong>HTML, CSS,</strong> Javascript, <strong>And</strong> Webassembly.
 
                                     </h2>
 

@@ -18,8 +18,10 @@
                     <div class="row align-items-center">
                         <div class="col-lg-6 col-md-6 aos-init " data-aos="fade-right" data-aos-duration="1000" data-aos-easing="ease">
                             <div class="custom_tittle text-left">
-                                <h2>SaaS, SOFTWARE AS A SERVICE DEVELOPMENT SOLUTIONS
-                                </h2>
+                                <h1> 
+                                 Unlocking Business Potential:  Saas Development Solutions
+                                </h1>
+                                <h2>Crafting Evolving <strong>Solutions</strong></h2>
 
                                     <p class="p_color text-justify">Bizionic Technologies specialises in developing cutting-edge Software as a Service (SaaS) solutions that cater to the evolving needs of businesses and organisations. Our SaaS Services Development process aims to create robust, scalable, and user-friendly software products delivered through the cloud. Below are an overview of our approach to SaaS Services Development.</p>
 
@@ -43,7 +45,7 @@
 
                 <div class="industryNew_section2_info aos-init " data-aos="fade-up" data-aos-duration="1500" data-aos-easing="ease">
                     <div class="custom_tittle">
-                        <h2><strong>The</strong> Services <strong>We Offered</strong></h2> 
+                        <h2>Cloud-Powered Scalability</h2> 
                     </div>
 
                     

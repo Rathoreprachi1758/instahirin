@@ -22,9 +22,9 @@
                         <div class="row align-items-center">
                             <div class="col-lg-6 col-md-6 aos-init " data-aos="fade-right" data-aos-duration="1000" data-aos-easing="ease">
                                 <div class=" custom_tittle text-left">
-                                    <h1>Craft CMS DEVELOPERS</h1>
+                                    <h1>Crafting Excellence With Craft Cms Developers At Bizionic Technologies</h1>
                                     <h2 class="">
-                                        <strong>CREATE</strong> FLEXIBLE, USER-FRIENDLY CMS <strong>FOR CUSTOM</strong> DIGITAL EXPERIENCES <strong>ON THE WEB AND BEYOND.</strong>
+                                    Create Flexible, <strong>User-Friendly</strong> Cms For Custom Digital Experiences On <strong>The Web And Beyond.</strong>
                                     </h2>
 
                                         <p class="p_color text-justify">Bizionic Technologies Craft CMS developers specialize in building websites and web applications using the Craft CMS platform. Craft CMS is a flexible and powerful content management system allowing developers to create custom websites easily. Craft CMS developers are skilled in web development technologies such as PHP, Twig templating language, HTML, CSS, and JavaScript.</p>
@@ -49,7 +49,7 @@
 
                     <div class="industryNew_section2_info aos-init " data-aos="fade-up" data-aos-duration="1500" data-aos-easing="ease">
                         <div class="custom_tittle">
-                            <h3><strong>They are employed for  </strong> various purposes <strong>and use cases, including:</strong></h2>
+                            <h3>Versatility Unleashed - <strong>Elevating Web Solutions With Craft CMS Across Diverse Industries And Requirements</strong></h2>
                               
                             
                               

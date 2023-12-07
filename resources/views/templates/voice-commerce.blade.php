@@ -22,10 +22,9 @@
                         <div class="row align-items-center">
                             <div class="col-lg-6 col-md-6 aos-init " data-aos="fade-right" data-aos-duration="1000" data-aos-easing="ease">
                                 <div class=" custom_tittle text-left">
-                                    <h1>VOICE COMMERCE</h1>
+                                    <h1>Voice Commerce</h1>
                                     <h2 class="">
-                                        <strong>EXPERIENCE THE</strong> FUTURE <strong>OF</strong> SHOPPING
-                                        <strong>WITH</strong> BIZIONIC MARKETING <strong>SOLUTIONS'</strong> VOICE COMMERCE SOLUTION
+                                        Experience <strong>The</strong> Future Of Shopping With Bizionic <strong>Marketing</strong> Solutions Voice Commerce <strong>Solution</strong>
 
                                     </h2>
 

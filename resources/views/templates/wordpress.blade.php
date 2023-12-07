@@ -21,8 +21,14 @@
             <div class="row align-items-center">
               <div class="col-lg-6 col-md-6 aos-init " data-aos="fade-right" data-aos-duration="1000" data-aos-easing="ease">
                 <div class=" custom_tittle text-left">
-                  <h1>WORDPRESS</h1>
-                  <h2 class=""> CREATE <strong>AND</strong> CUSTOMIZE <strong>ANY TYPE OF BUSINESS</strong> WEBSITES, <strong>FROM A</strong> BLOG <strong>TO AN</strong> ECOMMERCE STORE <strong>WITH WORLD'S MOST-USED</strong> WEBSITE BUILDER. </h2>
+                  <h1>Empowering Online Presence: Bizionic Technologies Wordpress Development Experts</h1>
+                  
+                  <h2>
+                  Create <strong>And</strong> Customize Any Type <strong>Of</strong> 
+                  Business Websites, From <strong>A</strong> Blog To An Ecommerce 
+                  Store With <strong>Worlds</strong> Most-Used Website Builder.
+                  </h2>
+                  
                   <p class="p_color text-justify">Bizionic Technologies offers comprehensive WordPress development services to empower businesses with dynamic and user-friendly websites and web applications.</p>
                   <br>
                   <a href="#gotoContact" class="btn_default mt-4">Contact Us</a>
@@ -39,7 +45,7 @@
           </div>
           <div class="industryNew_section2_info aos-init" data-aos="fade-up" data-aos-duration="1500" data-aos-easing="ease">
             <div class="custom_tittle">
-              <h3>Our services include:</h3>
+              <h3>Crafting Tailored Solutions Aligned With Business Objectives And User Expectations</h3>
             </div>
           </div>
         </div>
