@@ -22,10 +22,10 @@
                         <div class="row align-items-center">
                             <div class="col-lg-6 col-md-6 aos-init " data-aos="fade-right" data-aos-duration="1000" data-aos-easing="ease">
                                 <div class=" custom_tittle text-left">
-                                    <h1>SEM (Search Engine Marketing) SPECIALISTS </h1>
+                                    <h1>SEM (Search Engine Marketing) Specialists </h1>
                                     <h2 class="">
-                                    PROMOTE <strong>AND</strong> ADVERTISE <strong>TO HELP COMPANIES' CONTENT</strong> RANK HIGHER <strong>AMONG</strong>
-                                    SEARCH ENGINE TRAFFIC.
+                                    <strong>Promote</strong> And Advertise <strong>To</strong> Help Companies 
+                                    Content Rank Higher <strong>Among Search Engine Traffic.</strong>
                                     </h2>
 
                                         <p class="p_color text-justify">Bizionic Marketing Solutions SEM (Search Engine Marketing) specialists specialises in various capacities to drive targeted traffic and increase visibility through search engine advertising.  </p>

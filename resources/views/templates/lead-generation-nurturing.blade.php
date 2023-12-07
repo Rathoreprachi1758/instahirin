@@ -22,11 +22,13 @@
                         <div class="row align-items-center">
                             <div class="col-lg-6 col-md-6 aos-init " data-aos="fade-right" data-aos-duration="1000" data-aos-easing="ease">
                                 <div class=" custom_tittle text-left">
-                                    <h1>LEAD GENERATION AND NURTURING</h1>
+                                    <h1>Lead Generation And Nurturing</h1>
                                     <h2 class="">
                                         ATTRACT PROSPECTS <strong>TO YOUR</strong> BUSINESS, 
                                         NURTURE <strong>THEIR</strong> INTEREST, <strong>AND</strong> TURN 
                                         <strong>THEM INTO</strong> LONG-TERM CUSTOMERS.
+
+                                        Attract Prospects To Your <strong>Business,</strong> Nurture Their <strong>Interest,</strong> And Turn Them Into <strong>Long-Term</strong> Customers.
 
                                     </h2>
 
@@ -52,7 +54,7 @@
 
                     <div class="industryNew_section2_info aos-init" data-aos="fade-up" data-aos-duration="1500" data-aos-easing="ease">
                         <div class="custom_tittle">
-                            <h3>Here's an in-depth exploration of their comprehensive services:</h3>
+                            <h3>Transform Interest Into Commitment, Leads Into Loyal Brand Patrons With Precision And Purpose</h3>
   
 
 

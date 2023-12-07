@@ -22,10 +22,11 @@
                         <div class="row align-items-center">
                             <div class="col-lg-6 col-md-6 aos-init " data-aos="fade-right" data-aos-duration="1000" data-aos-easing="ease">
                                 <div class=" custom_tittle text-left">
-                                    <h1>MOTION DESIGNER</h1>
+                                    <h1>Motion Designer</h1>
                                     <h2 class="">
                                         <strong>CREATE</strong> MOVING CONTENT <strong>AND</strong> GRAPHICS <strong>FOR</strong> VARIOUS MEDIA’S, WORKING WITH</strong> ANIMATION, AUDIO, <strong>AND</strong> VISUAL EFFECTS.
 
+                                        Create <strong>Moving Content And</strong> Graphics For Various Medias, Working With Animation, Audio, And <strong>Visual Effects.</strong>
                                     </h2>
 
                                         <p class="p_color text-justify">Bizionic Marketing Solutions motion designers specializes in creating visually engaging and dynamic animations, videos, and motion graphics. They combine design principles, animation techniques, and storytelling to bring static visuals to life and communicate messages effectively. </p>

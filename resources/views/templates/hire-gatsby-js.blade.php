@@ -22,9 +22,10 @@
                         <div class="row align-items-center">
                             <div class="col-lg-6 col-md-6 aos-init " data-aos="fade-right" data-aos-duration="1000" data-aos-easing="ease">
                                 <div class=" custom_tittle text-left">
-                                    <h1>GatsbyJS DEVELOPERS</h1>
+                                    <h1>Gatsbyjs Developers</h1>
                                     <h2 class="">
-                                        TOGETHER, <strong>WE ACCELERATING</strong> GROWTH <strong>AND BRINGING</strong> COMPOSABLE ARCHITECTURES <strong>TO THE</strong> MODERN WEB.
+                                    Together, <strong>We</strong> Accelerating Growth And <strong>Bringing</strong> 
+                                    Composable <strong>Architectures</strong> To The Modern <strong>Web.</strong>
                                     </h2>
 
                                         <p class="p_color text-justify">Bizionic Technologies GatsbyJS developers build high-performance websites and applications using a modern web development framework based on React.js. GatsbyJS developers are skilled in utilizing the GatsbyJS framework to develop fast, optimized, and scalable websites.</p>

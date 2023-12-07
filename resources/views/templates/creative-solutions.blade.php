@@ -22,11 +22,9 @@
                         <div class="row align-items-center">
                             <div class="col-lg-6 col-md-6 aos-init " data-aos="fade-right" data-aos-duration="1000" data-aos-easing="ease">
                                 <div class=" custom_tittle text-left">
-                                    <h1>CREATIVE SOLUTIONS</h1>
+                                    <h1>Driving Growth And Engagement With Compelling And Impactful Creative Solutions</h1>
                                     <h2 class="">
-                                        CREATE <strong>AND</strong> INTEGRATE <strong>WITH</strong> PEOPLE, 
-                                        PROCESSES <strong>AND</strong> TECHNOLOGY <strong>TO</strong> DELIVER 
-                                        SOLUTIONS <strong>TAILORED TO CLIENT’S AND</strong> BUSINESS <strong>OBJECTIVES.</strong>
+                                    Exceptional <strong>Solutions</strong> Aligned With Your Brand <strong>Vision</strong> And Marketing Goals - Where Creativity <strong>Meets</strong> Success
 
                                     </h2>
 
@@ -52,7 +50,7 @@
 
                     <div class="industryNew_section2_info aos-init " data-aos="fade-up" data-aos-duration="1500" data-aos-easing="ease">
                         <div class="custom_tittle">
-                            <h3><strong>Some of the key</strong> creative solutions   <strong>we offer include:</strong></h3>
+                            <h3><strong>Bizionic Marketing Solutions: Elevating Brands Through</strong> Creative Excellence</h3>
 
                               
                               

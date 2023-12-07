@@ -11,15 +11,19 @@
                                 @php
                                     $planId = request('planId');
                                     $plan = \App\Models\MarketingPlans::find($planId);
+                                    $planfeature = \App\Models\PlanPricingFeature::where('plan_id',$planId)->pluck('feature');
+                                    $plancat = \App\Models\PlanPricingCategory::where('id',$plan->plan_category_id)->pluck('title')->first();
+                                    // echo($plancat);
+                                    // die;
                                 @endphp
 
                                 {{-- <h5 class="text-center text-white pb-2">{{ $plan->plan_category_id }}</h5> --}}
                                 <strong class="categoryTittle">{{ $plan->title }}</strong>
                                 @if ($plan->title === 'PLATINUM' && $plan->plan_category_id === 3)
-                                <strong class="categoryTittle">{{ $plan->price }}% Monthly Ad Spend</strong>
-                            @else
-                                <h3 class="priceValue">${{ $plan->price }} <sub>/Month</sub></h3>
-                            @endif
+                                    <strong class="categoryTittle">{{ $plan->price }}% Monthly Ad Spend</strong>
+                                @else
+                                    <h3 class="priceValue">${{ $plan->price }} <sub>/Month</sub></h3>
+                                @endif
                                 <div class="setupFee">
                                     <small>Setup Fees</small>
                                     <strong>${{ $plan->setup_fee }}</strong>
@@ -48,10 +52,6 @@
                                                 <p><span><i class="fa fa-check-square-o" aria-hidden="true"></i></span>
                                                     Competitor & Research Analysis</p>
                                             </li>
-                                            {{-- <li>
-                                                <p><span><i class="fa fa-check-square-o" aria-hidden="true"></i></span>
-                                                    month Budget</p>
-                                            </li> --}}
                                             <li>
                                                 <p><span><i class="fa fa-check-square-o" aria-hidden="true"></i></span>
                                                     Monthly Report</p>
@@ -60,38 +60,14 @@
                                     </div>
                                 @else
                                     <div class="priceFeatureList">
+                                        @foreach($planfeature as $feature)
                                         <ul>
                                             <li>
-                                                <p><span><i class="fa fa-check-square-o" aria-hidden="true"></i></span>
-                                                    200
-                                                    Keywords</p>
-                                            </li>
-                                            <li>
-                                                <p><span><i class="fa fa-check-square-o" aria-hidden="true"></i></span>
-                                                    10
-                                                    Ad Groups</p>
-                                            </li>
-                                            <li>
-                                                <p><span><i class="fa fa-check-square-o" aria-hidden="true"></i></span>
-                                                    Quarterly Display ads with banner design</p>
-                                            </li>
-                                            <li>
-                                                <p><span><i class="fa fa-check-square-o" aria-hidden="true"></i></span>
-                                                    Search, Remarketing ads</p>
-                                            </li>
-                                            <li>
-                                                <p><span><i class="fa fa-check-square-o" aria-hidden="true"></i></span>
-                                                    Competitor & Research Analysis</p>
-                                            </li>
-                                            <li>
-                                                <p><span><i class="fa fa-check-square-o" aria-hidden="true"></i></span>
-                                                    $2800/month Budget</p>
-                                            </li>
-                                            <li>
-                                                <p><span><i class="fa fa-check-square-o" aria-hidden="true"></i></span>
-                                                    Monthly Report</p>
+                                                <p><span><i class="fa fa-check-square-o" aria-hidden="true"></i></span>{{$feature}}</p>
                                             </li>
                                         </ul>
+                                        @endforeach
+                                        
                                     </div>
                                 @endif
                             </div>
@@ -105,7 +81,8 @@
                             <h2>Proposal Request Form</h2>
                             <p>Please fill the form and our representative will get back to you.</p>
                         </div>
-                        <proposal-component></proposal-component>
+                        <proposal-component :plan-title="'{{ $plan->title }}'" :plan-category="'{{ $plancat }}'"></proposal-component>
+
 
                     </div>
                 </div>

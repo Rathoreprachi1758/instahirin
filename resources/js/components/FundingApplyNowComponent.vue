@@ -193,7 +193,7 @@
 
       <div class="fundingApplyForm_info_section">
         <div class="custom_tittle">
-          <h5 class="text-left pb-0">Social Media</h5>
+          <h5 class="text-left pb-0">Accessible Funding Solutions</h5>
         </div>
 
         <div class="row">
@@ -272,7 +272,7 @@
 
       <div class="fundingApplyForm_info_section">
         <div class="custom_tittle">
-          <h5 class="text-left pb-0">Financials</h5>
+          <h5 class="text-left pb-0">Financial Aid And Money Grant Forms</h5>
         </div>
 
         <!-- raising_capital -->

@@ -22,11 +22,10 @@
                         <div class="row align-items-center">
                             <div class="col-lg-6 col-md-6 aos-init " data-aos="fade-right" data-aos-duration="1000" data-aos-easing="ease">
                                 <div class=" custom_tittle text-left">
-                                    <h1>DATA ANALYTICS AND BUSINESS INTELLIGENCE</h1>
+                                    <h1>Data Analytics And Business Intelligence</h1>
                                     <h2 class="">
-                                        <strong>TRANSFORM</strong> RAW DATA <strong>INTO A</strong> 
-                                        MEANINGFUL FORMAT <strong>AND ENHANCE IT</strong> 
-                                        DECISION-MAKING <strong>THROUGH BI'S FOR</strong> BUSINESSES.
+                                    Transform <strong>Raw</strong> Data Into A Meaningful <strong>Format</strong> And 
+                                    Enhance <strong>It</strong> Decision-Making Through Bis For Businesses.
 
                                     </h2>
 

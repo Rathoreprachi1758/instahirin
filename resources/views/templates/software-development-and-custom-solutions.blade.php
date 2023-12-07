@@ -22,11 +22,9 @@
                         <div class="row align-items-center">
                             <div class="col-lg-6 col-md-6 aos-init " data-aos="fade-right" data-aos-duration="1000" data-aos-easing="ease">
                                 <div class=" custom_tittle text-left">
-                                    <h1>SOFTWARE DEVELOPMENT AND CUSTOM SOLUTIONS</h1>
+                                    <h1>Software Development And Custom Solutions</h1>
                                     <h2 class="">
-                                        <strong>CREATE COMPUTER</strong> APPLICATIONS 
-                                        <strong>THAT</strong> ALLOW <strong>USERS TO DO</strong> SPECIFIC TASKS 
-                                        <strong>AND</strong> RUN DEVICES <strong>OR</strong> CONTROL NETWORKS.
+                                    Create <strong>Computer</strong> Applications That Allow Users To Do <strong>Specific</strong> Tasks And Run Devices Or <strong>Control Networks.</strong>
 
                                     </h2>
 

@@ -22,9 +22,9 @@
                         <div class="row align-items-center">
                             <div class="col-lg-6 col-md-6 aos-init " data-aos="fade-right" data-aos-duration="1000" data-aos-easing="ease">
                                 <div class=" custom_tittle text-left">
-                                    <h1>Next.js DEVELOPERS</h1>
+                                    <h1>Unleash Next.Js Excellence: Bizionic Technologies Skilled Developers</h1>
                                     <h2 class="">
-                                        <strong>CREATE</strong> FULL-STACK WEB APPLICATIONS <strong>WITH</strong> POWERFUL INTEGRATING <strong>RUST-BASED</strong> JAVASCRIPT <strong>TOOLS TO FASTEST BUILDS</strong>.
+                                        <strong>Create</strong> Full-Stack Web Applications With <strong>Powerful</strong> Integrating Rust-Based Javascript Tools To <strong>Fastest Builds.</strong>
                                     </h2>
 
                                         <p class="p_color text-justify">Bizionic Technologies Next.js uses a popular React framework for building server-rendered React applications and static websites. Next.js developers are skilled in using the Next.js framework to develop high-performance, scalable, and SEO-friendly web applications.</p>
@@ -50,7 +50,7 @@
 
                     <div class="industryNew_section2_info aos-init " data-aos="fade-up" data-aos-duration="1500" data-aos-easing="ease">
                         <div class="custom_tittle">
-                            <h3><strong>Here are some simple use cases and scenarios where</strong> Next.js <strong>developers are employed:</strong></h2>
+                            <h3><strong>Your Gateway To Robust Web Solutions - Elevate Your Projects With</strong> Next.Js Expertise</h2>
                               
                         </div>
 

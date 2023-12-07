@@ -20,7 +20,6 @@
                                     v-for="category in categories"
                                     :key="category.id"
                                 >
-                                    <!-- <a :href="'#coreTab' + category.id">{{ category.title }}</a> -->
                                     <a
                                         @click.prevent="showCategory(category)"
                                         :class="{
@@ -77,7 +76,9 @@
                                                                 plan.title ===
                                                                     'PLATINUM'
                                                             "
-                                                            ><h5
+                                                        >
+                                                            <h6
+                                                                class="priceValue"
                                                                 style="
                                                                     color: #1a5196;
                                                                 "
@@ -86,13 +87,9 @@
                                                                     plan.price
                                                                 }}% of Monthly
                                                                 Ad Spend
-                                                            </h5></span
+                                                            </h6></span
                                                         >
-                                                        <span
-                                                            v-else="
-                                                                plan.price ===
-                                                                '15'
-                                                            "
+                                                        <span v-else
                                                             >${{ plan.price }}
                                                             <sub
                                                                 >/Month</sub

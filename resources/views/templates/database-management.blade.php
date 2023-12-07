@@ -22,11 +22,10 @@
                         <div class="row align-items-center">
                             <div class="col-lg-6 col-md-6 aos-init " data-aos="fade-right" data-aos-duration="1000" data-aos-easing="ease">
                                 <div class=" custom_tittle text-left">
-                                    <h1>DATABASE MANAGEMENT</h1>
+                                    <h1>Database Management</h1>
                                     <h2 class="">
-                                        STORE, MANAGE, CONTROL <strong>AND</strong> 
-                                        TRANSFORM DATA <strong>INTO INFORMATION TO</strong> 
-                                        SUPPORT <strong>MAKING</strong> DECISIONS <strong>FOR</strong> BUSINESS NEEDS.
+                                    <strong>Store,</strong> Manage, Control <strong>And</strong> Transform Data <strong>Into</strong> 
+                                    Information <strong>To</strong> Support Making Decisions For Business Needs.
 
                                     </h2>
 

@@ -22,11 +22,11 @@
                         <div class="row align-items-center">
                             <div class="col-lg-6 col-md-6 aos-init " data-aos="fade-right" data-aos-duration="1000" data-aos-easing="ease">
                                 <div class=" custom_tittle text-left">
-                                    <h1>VIRTUAL REALITY (VR) SOLUTIONS</h1>
+                                    <h1>Virtual Reality (VR) Solutions</h1>
                                     <h2 class="">
-                                        <strong>CREATE VIRTUAL 3D ENVIRONMENTS OR
-                                                OTHER SENSORY ENVIRONMENT WITH COMPUTER MODELING AND 
-                                                SIMULATION TO INTERACT CUSTOMERS FOR BUSINESSES.</strong>
+                                    Create <strong>Virtual</strong> 3D Environments <strong>Or</strong> 
+                                    Other Sensory <strong>Environment</strong> With Computer 
+                                    Modeling And Simulation To Interact <strong>Customers</strong> For Businesses.
 
                                     </h2>
 

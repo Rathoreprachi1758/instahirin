@@ -34,10 +34,13 @@ class Logincontroller extends Controller
             'privacy_statement'=>'required',
             // 'Admin_status' => 'required',
         ]);
-        dd($request->all());
+        // dd($request->all());
         $firstName = $request->firstName;
         $lastName = $request->lastName;
         $name = $firstName . ' ' . $lastName;
+        $countrycode = $request->country_code;
+        $phone = $request->Mobile_Number;
+        $mobilenumber = $countrycode. ' ' . $phone;
         $user = new User;
 
         $user->name = $name;
@@ -46,8 +49,8 @@ class Logincontroller extends Controller
         $a = $request->password;
         $data = Hash::make($a);
         $user->password = $data;
-        $user->country_code = $request->Country_Code;
-        $user->mobilenumber = $request->Mobile_Number;
+        // $user->country_code = $request->Country_Code;
+        $user->mobilenumber = $mobilenumber;
         $user->save();
         if ($user->wasRecentlyCreated) {
             return view('dashboard.login-page', ['message' => ' Signup Succesfully']);

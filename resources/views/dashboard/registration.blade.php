@@ -8,7 +8,7 @@
                     <div class="headerDetail">
                         <div class="logo">
                             <a href="#"><img src="{{ asset('css/images/logo.png') }}" alt="Logo"></a>
-                            
+
                         </div>
 
                         <div class="header_menu">
@@ -26,13 +26,14 @@
                 <div class="auth_screens">
                     <div class="container-xxl container-xl container-lg container-md">
                         <div class="auth_screens_detail">
-                            <div class="row">
+                            <div class="row" style="margin-top: -59px">
                                 <div class="col-xxl-6 col-xl-6 col-lg-6 col-md-7 m-auto">
                                     <div class="auth_info">
                                         <h3 class="text-center">Sign Up</h3>
-                                        <p class="text-center">Get ready to connect with highly skilled Software
-                                            Developers, Designers and Marketers
-                                            at one stop to build cost-effective solutions at market place</p>
+                                        <p class="text-center"><h5>Connecting Global Talent, Creating Global Solutions</h5>
+                                            <h6 style="font-size: 1rem">Prepare to join a comprehensive work marketplace, bustling with
+                                            an extensive range of elite Software Developers, Designers, and Marketers,
+                                            alongside businesses seeking outstanding talent and project execution.</h6></p>
                                         <form action="{{ url('/sign-up') }}" method="POST"
                                             enctype="multipart/form-data">
                                             @csrf
@@ -94,13 +95,12 @@
                                                                         aria-hidden="true"></i></span>
                                                             </div>
                                                         </div>
-                                                    </div>
-
+                                                    </div>                                                
                                                     <div class="col-12">
                                                         <div class="auth_field">
                                                             <strong>Confirm Password*</strong>
                                                             <div class="auth_field_info">
-                                                                <input type="text" name="password_confirmation"
+                                                                <input type="password" name="password_confirmation"
                                                                     class="form-control" id="password_confirmation"
                                                                     placeholder="Confirm password " minlength="5"
                                                                     required>
@@ -119,8 +119,8 @@
                                                                 <select name='country_code'>
                                                                     @foreach ($countryCodes as $country)
                                                                         <option
-                                                                            value="{{ $country->name . ' ' . $country->phone }}">
-                                                                            +{{ $country->name . ' ' . $country->phone }}
+                                                                            value="+ {{$country->phone}}">
+                                                                            + {{ $country->name . ' ' . $country->phone }}
                                                                         </option>
                                                                     @endforeach
                                                                 </select>
@@ -134,7 +134,7 @@
                                                                 <input type="text" name="Mobile_Number"
                                                                     class="form-control" id="Mobile Number"
                                                                     placeholder="Mobile Number" minlength="9" required>
-                                                                @error('lastName')
+                                                                @error('Mobile_Number')
                                                                     <div class="text-danger">{{ $message }}</div>
                                                                 @enderror
                                                             </div>

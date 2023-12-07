@@ -22,9 +22,11 @@
                         <div class="row align-items-center">
                             <div class="col-lg-6 col-md-6 aos-init " data-aos="fade-right" data-aos-duration="1000" data-aos-easing="ease">
                                 <div class=" custom_tittle text-left">
-                                    <h1>FLUTTER DEVELOPERS</h1>
+                                    <h1>Flutter Developers</h1>
                                     <h2 class="">
-                                        <strong>BUILD</strong> HIGH-QUALITY, ROBUST <strong>AND</strong> INTUITIVE <strong>APPLICATIONS FOR</strong> EVERY SCREEN <strong>WITH</strong> FLUTTER <strong>DEVELOPMENT</strong>
+                                    
+                                        Build <strong>High-Quality,</strong> Robust And Intuitive <strong>Applications</strong> 
+                                        For Every Screen With <strong>Flutter Development</strong>
                                     </h2>
 
                                         <p class="p_color text-justify">Bizionic Technologies Flutter developers specialize in building cross-platform mobile applications using the Flutter framework. Flutter is an open-source UI toolkit developed by Google that allows developers to create high-performance apps for multiple platforms, including iOS, Android, and the web, using a single codebase. Flutter developers are proficient in Dart programming language and utilize Flutter's extensive set of libraries and widgets.</p>

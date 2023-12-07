@@ -22,10 +22,12 @@
                         <div class="row align-items-center">
                             <div class="col-lg-6 col-md-6 aos-init " data-aos="fade-right" data-aos-duration="1000" data-aos-easing="ease">
                                 <div class=" custom_tittle text-left">
-                                    <h1>USER EXPERIENCE (UX) DESIGNER</h1>
+                                    <h1>User Experience (UX) Designer</h1>
                                     <h2 class="">
-                                        ACQUIRE <strong>AND</strong> INTEGRATE <strong>THE ENTIRE</strong> PROCESS <strong>OF</strong> A PRODUCT, 
-                                        <strong>INCLUDING</strong> ALL ASPECTS <strong>OF </strong>BRANDING, DESIGN, USABILITY <strong>AND</strong> FUNCTION.
+                                    Acquire <strong>And</strong> Integrate <strong>The Entire</strong> Process <strong>Of</strong> A Product, 
+                                        <strong>Including</strong> All Aspects <strong>Of</strong> Branding, Design, Usability <strong>And</strong> Function.
+
+                                                    
 
                                     </h2>
 
@@ -51,7 +53,7 @@
 
                     <div class="industryNew_section2_info aos-init " data-aos="fade-up" data-aos-duration="1500" data-aos-easing="ease">
                         <div class="custom_tittle">
-                            <h3> UX designers <strong>employ a variety of methods and techniques to understand user behavior and preferences like:</strong></h3>
+                            <h3> <strong>Crafting Engaging Experiences: Bizionic Technologies</strong> UX Design Collaboration</h3>
 
                             
 

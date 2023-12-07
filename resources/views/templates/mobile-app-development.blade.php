@@ -22,10 +22,9 @@
                         <div class="row align-items-center">
                             <div class="col-lg-6 col-md-6 aos-init " data-aos="fade-right" data-aos-duration="1000" data-aos-easing="ease">
                                 <div class=" custom_tittle text-left">
-                                    <h1>MOBILE APP DEVELOPMENT</h1>
+                                    <h1>With Bizionics Mobile App Technologies Services, Businesses Can Develop Captivating And User-Friendly Mobile Applications That Cater To Their Target Audience, Offering Exceptional And Memorable Mobile Experiences.</h1>
                                     <h2 class="">
-                                        CREATE, TEST, <strong>AND</strong> DEVELOP <strong>APPLICATIONS FOR 
-                                        MOBILE</strong> DEVICES <strong>USEING</strong> PROGRAMMING LANGUAGES.
+                                    <strong>Create,</strong> Test, And Develop <strong>Applications</strong> For Mobile Devices Useing <strong>Programming</strong> Languages.
 
                                     </h2>
 

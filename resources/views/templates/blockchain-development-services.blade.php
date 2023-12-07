@@ -22,10 +22,10 @@
                         <div class="row align-items-center">
                             <div class="col-lg-6 col-md-6 aos-init " data-aos="fade-right" data-aos-duration="1000" data-aos-easing="ease">
                                 <div class=" custom_tittle text-left">
-                                    <h1>BLOCKCHAIN DEVELOPMENT SERVICES</h1>
+                                    <h1>Blockchain Development Services</h1>
                                     <h2 class="">
-                                        <strong>CREATE A</strong> DISTRIBUTED, PUBLIC, AND 
-                                        DECENTRALISED DATABASE <strong>TO</strong> STORE DIGITAL TRANSACTIONS.
+                                    Create A <strong>Distributed,</strong> Public, And <strong>Decentralised</strong> 
+                                    Database To Store Digital <strong>Transactions.</strong>
 
                                     </h2>
 

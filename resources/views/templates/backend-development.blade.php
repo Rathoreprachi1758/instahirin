@@ -22,12 +22,11 @@
                         <div class="row align-items-center">
                             <div class="col-lg-6 col-md-6 aos-init " data-aos="fade-right" data-aos-duration="1000" data-aos-easing="ease">
                                 <div class=" custom_tittle text-left">
-                                    <h1>BACKEND DEVELOPMENT</h1>
+                                    <h1>Backend Development</h1>
                                     <h2 class="">
-                                        <strong>WORKS ON</strong> SERVER-SIDE SOFTWARE <strong>TO 
-                                        ENSURE THAT WEBSITE</strong> PERFORMS CORRECTLY 
-                                        <strong>ALONG WITH FOCUSING ON</strong> DATABASES, BACK-END 
-                                        LOGIC, APIS, ARCHITECTURE, <strong>AND</strong> SERVERS.
+                                    Works <strong>On</strong> Server-Side Software To <strong>Ensure</strong> That 
+                                    Website <strong>Performs</strong> Correctly Along With Focusing On 
+                                    Databases, <strong>Back-End Logic,</strong> Apis, Architecture, And Servers.
 
                                     </h2>
 

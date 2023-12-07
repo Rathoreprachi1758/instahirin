@@ -22,12 +22,11 @@
                         <div class="row align-items-center">
                             <div class="col-lg-6 col-md-6 aos-init " data-aos="fade-right" data-aos-duration="1000" data-aos-easing="ease">
                                 <div class=" custom_tittle text-left">
-                                    <h1>SYSTEM AND TECHNOLOGY AUDIT</h1>
+                                    <h1>System And Technology Audit</h1>
                                     <h2 class="">
-                                        <strong>EXAMINE AND EVALUATE</strong> IT INFRASTRUCTURE, 
-                                        POLICIES, OPERATIONS, ASSETS, <strong>AND</strong> DATA 
-                                        INTEGRITY <strong>TO ENSURE THEY’RE</strong> ALIGNED 
-                                        <strong>WITH THE</strong> BUSINESS'S <strong>OVERALL</strong> GOALS.
+                                        Examine <strong>And</strong> Evaluate It Infrastructure, <strong>Policies,</strong> 
+                                        Operations, <strong>Assets,</strong> And Data Integrity To <strong>Ensure 
+                                        They’Re Aligned With The <strong>Businesss</strong> Overall Goals.
 
                                     </h2>
 

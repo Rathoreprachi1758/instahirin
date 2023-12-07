@@ -21,7 +21,7 @@ Route::get('sitemap.xml', function () {
     return response()->file('sitemap.xml');
 });
 ////
-Route::get('/Sign-In', [Logincontroller::class, 'index'])->name('signin');
+Route::get('/get-sign-Up', [Logincontroller::class, 'index'])->name('signin');
 Route::Post('sign-up', [Logincontroller::class, 'store'])->name('submit.signup');
 Route::get('/loginpage', [LoginController::class, 'login'])->name('loginpage');
 // Route::post('dashboard', [LoginController::class, 'authenticate'])->name('login');
@@ -80,3 +80,4 @@ Route::get('/industries/industries-we-serve/industries/thankyou', [App\Http\Cont
 // Route::get('/industries/{industries-we-serve}/{industries}/{jobid}', [ContentController::class, 'applyShow']);
 //
 Route::post('content/process/{jobId}', [ContentController::class, 'process'])->name('content.process');
+Route::get('/hire/developer/front-end-developement/all-jobs', [ContentController::class, 'allJobs'])->name('content.allJobs');

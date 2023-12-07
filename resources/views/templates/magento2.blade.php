@@ -22,11 +22,10 @@
                         <div class="row align-items-center">
                             <div class="col-lg-6 col-md-6 aos-init " data-aos="fade-right" data-aos-duration="1000" data-aos-easing="ease">
                                 <div class=" custom_tittle text-left">
-                                    <h1>MAGENTO 2</h1>
+                                    <h1>Magento 2</h1>
                                     <h2 class="">
-                                        <strong>CREATE</strong> POWERFUL, SCALABLE ARCHITECTURE 
-                                        CMS <strong>FOR E-COMMERCE SOLUTIONS AND REACH</strong> 
-                                        NEW CUSTOMERS <strong>TO</strong> BOOST SALES.
+                                    Create Powerful, <strong>Scalable</strong> Architecture Cms For 
+                                    E-Commerce Solutions And Reach New Customers To <strong>Boost Sales.</strong>
 
                                     </h2>
 

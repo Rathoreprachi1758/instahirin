@@ -22,9 +22,10 @@
                         <div class="row align-items-center">
                             <div class="col-lg-6 col-md-6 aos-init " data-aos="fade-right" data-aos-duration="1000" data-aos-easing="ease">
                                 <div class=" custom_tittle text-left">
-                                    <h1>SAP DEVELOPERS</h1>
+                                    <h1>SAP Developers</h1>
                                     <h2 class="">
-                                        PROBLEM-SOLVING <strong>SOLUTIONS AND</strong> IMPROVEMENTS IN CODING <strong>TO SPEED-UP</strong> BUSINESS SOFTWARES <strong>PERFORMANCE</strong>.
+                                    Problem-Solving <strong>Solutions</strong> And Improvements <strong>In</strong> 
+                                    Coding To Speed-Up Business <strong>Softwares Performance.</strong>
                                     </h2>
 
                                         <p class="p_color text-justify">Bizionic Technologies C++ developers specialize in using the C++ programming language to develop software applications and solutions. C++ is a powerful and widely used programming language known for its efficiency, performance, and versatility.</p>

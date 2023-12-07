@@ -22,11 +22,10 @@
                         <div class="row align-items-center">
                             <div class="col-lg-6 col-md-6 aos-init " data-aos="fade-right" data-aos-duration="1000" data-aos-easing="ease">
                                 <div class=" custom_tittle text-left">
-                                    <h1>USABILITY TESTING</h1>
+                                    <h1>Usability Testing</h1>
                                     <h2 class="">
-                                        <strong>TEST THE</strong> FUNCTIONALITY <strong>OF A</strong> WEBSITE, 
-                                        APP, <strong>OR</strong> OTHER DIGITAL PRODUCT <strong>BY OBSERVING</strong> 
-                                        REAL USERS <strong>AND</strong> COMPLETE TASKS <strong>ON IT.</strong>
+                                    Test <strong>The</strong> Functionality Of <strong>A</strong> Website, App, Or Other <strong>Digital</strong> 
+                                    Product <strong>By</strong> Observing Real Users And Complete <strong>Tasks On It.</strong>
 
                                     </h2>
 

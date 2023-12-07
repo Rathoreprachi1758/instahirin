@@ -22,10 +22,9 @@
                         <div class="row align-items-center">
                             <div class="col-lg-6 col-md-6 aos-init " data-aos="fade-right" data-aos-duration="1000" data-aos-easing="ease">
                                 <div class=" custom_tittle text-left">
-                                    <h1>HTML5 GAMES</h1>
+                                    <h1>HTML5 Games</h1>
                                     <h2 class="">
-                                        <strong>CREATE</strong> HTML5 GAMES <strong>BASED ON LATEST</strong> 
-                                        JAVASCRIPT SYNTAX <strong>AND</strong> ES6 <strong>CONTENT</strong> CANVAS.
+                                    Create HTML5 Games <strong>Based</strong> On Latest Javascript Syntax And <strong>Es6</strong> Content <strong>Canvas.</strong>
 
                                     </h2>
 

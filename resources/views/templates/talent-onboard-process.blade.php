@@ -8,7 +8,7 @@
                 <div class="auto_container">
                     <div class="hireForm_banner_detail">
                         <div class="custom_tittle">
-                            <h2 class="text-white">TALENT ONBOARDING ASSESSMENT PROCESS</h2>
+                            <h1 class="text-white">Talent Onboarding Assessment Process</h1>
                             <p class="text-white text-justify">Create a successful remote workforce with international competence without the costs and challenges of creating a subsidiary.</p>
                             <p class="text-white text-justify">A dedicated project management team is also assigned to each project to ensure monitoring, timely completion, and immediate replacements if required.</p>
                             <p class="text-white text-justify p-0">By providing the parties with access to dependable, skilled, and experienced mediator project managers and the ecosystem to ensure project completion and obligation fulfillment, Bizionic fills the <b>global talent pool and project management ecosystem gap.</b></p>
@@ -23,7 +23,8 @@
             <!-- tittle section 1  -->
                 <div class="talent_vetting_head">
                     <div class="custom_tittle">
-                        <h2 class="text-white"><strong>BIZIONIC TALENT</strong> ASSESSMENT <strong>AND</strong> DEVELOPMENT <strong>PROCESS</strong></h2>
+                        <h2 class="text-white">Talent <strong>Onboarding</strong> Assessment Process</h2>
+                        
                         <p class="text-white text-justify">Bizionic implements an evolution assessment process to ensure a smooth and effective Talent pre-onboarding and talent development process. This process assesses the talent's progress and suitability for the role throughout the pre-onboarding phase and the continuous development of the talent's skill set to meet enhanced role requirements.</p>
                     </div>
                 </div>
@@ -279,7 +280,8 @@
              <!-- tittle section 3  -->
                 <div class="talent_vetting_head">
                     <div class="custom_tittle">
-                        <h2 class="text-white"><strong>TALENT</strong> VETTING <strong>AND</strong> ONBOARDING <strong>PROCESS</strong></h2>
+                        <h2 class="text-white">Bizionic <strong>Talent</strong> Assessment And <strong>Development Process</strong></h2>
+                        
                         <p class="text-white text-justify">Bizionic implements an evolution Talent vetting process to ensure a smooth and effective Talent pre-onboarding operation. This process
                             assesses the Talent's progress and suitability for the role throughout the pre-onboarding phase.</p>
                     </div>

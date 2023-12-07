@@ -22,9 +22,9 @@
                         <div class="row align-items-center">
                             <div class="col-lg-6 col-md-6 aos-init " data-aos="fade-right" data-aos-duration="1000" data-aos-easing="ease">
                                 <div class=" custom_tittle text-left">
-                                    <h1>CONTENT MARKETER</h1>
+                                    <h1>Content Marketer</h1>
                                     <h2 class="">
-                                        <strong>CREATE</strong> PRINTS, VISUALS <strong>AND</strong> VIDEO CONTENTS <strong>THAT A BUSINESS CAN</strong> ENGAGE TARGET AUDIENCE.
+                                    Create Prints, <strong>Visuals</strong> And Video Contents That A <strong>Business</strong> Can Engage Target <strong>Audience.</strong>
                                     </h2>
 
                                         <p class="p_color text-justify">Bizionic Marketing Solution's Content Marketer specializes in creating, planning, and distributing valuable and relevant content to attract and engage a target a udience. They play a crucial role in content strategy development, content creation, and content distribution across various channels  </p>

@@ -9,7 +9,10 @@
             <div class="mainBanner_text">
                 <h3 class="aos-init " data-aos="fade-right" data-aos-duration="500" data-aos-easing="ease-in">
                     
-                    <em>Digital Marketing <br> Services in</em> <br> <b>CHINA</b>
+                    <em>Digital Marketing <br> Services in</em> <br> <b>China</b>
+ 
+                    
+
                 </h3>
 
                 <span class="anim_bouncing aos-init " data-aos="fade-up" data-aos-duration="500" data-aos-easing="ease-in"><img src="/bizionic/images/china_laptop.png" alt="#" /></span>
@@ -43,7 +46,9 @@
             <div class="marketServicesPage_sectionDetail">
 
                 <div class="custom_tittle">
-                    <h2>Content <strong>and</strong>  Influencer Marketing <strong>in CHINA</strong>  </h2>
+                
+                   <h2>Content <strong>And</strong> Influencer Marketing <strong>In</strong> China
+                </h2>
                 </div>
 
                 <div class="row">
@@ -79,7 +84,8 @@
             <div class="marketServicesPage_sectionDetail">
 
                 <div class="custom_tittle">
-                    <h2>Paid <strong>and</strong> Organic Search Engine Marketing  <strong>in CHINA</strong> </h2>
+                    <h2>Paid <strong>And</strong> Organic Search Engine Marketing <strong>In</strong> China
+                </h2>
                 </div>
 
                 <div class="row">

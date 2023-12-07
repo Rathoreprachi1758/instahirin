@@ -22,11 +22,9 @@
                         <div class="row align-items-center">
                             <div class="col-lg-6 col-md-6 aos-init " data-aos="fade-right" data-aos-duration="1000" data-aos-easing="ease">
                                 <div class=" custom_tittle text-left">
-                                    <h1>COCO2DX GAMES</h1>
+                                    <h1>Coco2Dx Games</h1>
                                     <h2 class="">
-                                        <strong>CREATE</strong> 2D, 3D <strong>OPEN-SOURCE AND 
-                                        CROSS PLATFORM</strong> GAMES <strong>WITH</strong> SPEED, 
-                                        STABILITY, <strong>AND</strong> EASY OF USE.
+                                    Create 2D, 3D Open-Source <strong>And</strong> Cross Platform Games With Speed, <strong>Stability,</strong> And Easy <strong>Of</strong> Use.
 
                                     </h2>
 

@@ -22,11 +22,11 @@
                         <div class="row align-items-center">
                             <div class="col-lg-6 col-md-6 aos-init " data-aos="fade-right" data-aos-duration="1000" data-aos-easing="ease">
                                 <div class=" custom_tittle text-left">
-                                    <h1>SOCIAL MEDIA SOLUTIONS</h1>
+                                    <h1>Social Media Solutions</h1>
                                     <h2 class="">
-                                        <strong>DEVELOPE</strong> STRATEGIES <strong>TO</strong> INCREASE FOLLOWERS,
-                                         CREATE <strong>AND</strong> ANALYTICS <strong>SOCIAL</strong> CAMPAIGNS, <strong>PRODUCE</strong>
-                                          CONTENT, <strong>AND</strong> COMMUNICATE <strong>WITH</strong> KEY STAKEHOLDERS.
+                                        Develope <strong>Strategies</strong> To Increase <strong>Followers,</strong> 
+                                        Create And <strong>Analytics</strong> Social Campaigns, <strong>Produce</strong> Content, 
+                                        And Communicate With <strong>Key</strong> Stakeholders.
 
                                     </h2>
 

@@ -22,9 +22,10 @@
                         <div class="row align-items-center">
                             <div class="col-lg-6 col-md-6 aos-init " data-aos="fade-right" data-aos-duration="1000" data-aos-easing="ease">
                                 <div class=" custom_tittle text-left">
-                                    <h1>Vue.js DEVELOPERS</h1>
-                                    <h2 class="">
-                                        <strong>AN</strong> APPROACHABLE, PERFORMANT <strong>AND</strong> VERSATILE FRAMEWORK <strong>FOR BUILDING WEB</strong> USER INTERFACES.
+                                    <h1>Unleashing Vue.Js Versatility: Bizionic Technologies Proficient Developers</h1>
+                                    <h2 class=""> 
+
+                                        An Approachable, <strong>Performant</strong> And Versatile Framework For Building <strong>Web User</strong> Interfaces.
                                     </h2>
 
                                         <p class="p_color text-justify">Bizionic Technologies Vue.js developers are experts in a popular JavaScript framework for building user interfaces and single-page applications. In addition, Vue.js developers are skilled in using Vue.js to develop interactive and responsive web applications.</p>
@@ -49,7 +50,8 @@
 
                     <div class="industryNew_section2_info aos-init " data-aos="fade-up" data-aos-duration="1500" data-aos-easing="ease">
                         <div class="custom_tittle">
-                            <h3><strong>Here are some simple use cases and scenarios where </strong> Vue.js <strong>developers are employed:</strong></h2>
+                            <h3><strong>Empowering Projects Of Any Scale With </strong> Vue.js Expertise<strong> And Adaptability</strong></h2>
+
                         </div>
 
                         

@@ -22,11 +22,11 @@
                         <div class="row align-items-center">
                             <div class="col-lg-6 col-md-6 aos-init " data-aos="fade-right" data-aos-duration="1000" data-aos-easing="ease">
                                 <div class=" custom_tittle text-left">
-                                    <h1>EXHIBITION DESIGNER</h1>
+                                    <h1>Transforming Spaces With Expertise In Spatial Design, Storytelling, And Interactive Technologies For Captivating Exhibitions</h1>
                                     <h2 class="">
-                                        <strong>CREATES</strong> FIXTURES <strong>AND</strong> DISPLAY STANDS <strong>FOR</strong> EVENTS <strong>SUCH 
-                                        AS</strong> EXHIBITIONS, CONFERENCES, TRADE SHOWS <strong>AND</strong> TEMPORARY 
-                                        DISPLAYS <strong>FOR</strong> MALLS, MUSEUMS, LIBRARIES <strong>AND</strong> MORE.
+                                    Creates Fixtures <strong>And</strong> Display Stands For Events Such As 
+                                    <strong>Exhibitions,</strong> Conferences, Trade Shows 
+                                    <strong>And</strong> Temporary Displays For Malls, Museums, <strong>Libraries And More.</strong>
                                     </h2>
 
                                         <p class="p_color text-justify">Bizionic Marketing Solutions exhibition designer specializes in creating engaging and immersive exhibition experiences. They combine artistic creativity, spatial design knowledge, and storytelling techniques to design exhibition spaces that effectively communicate information, engage visitors, and create memorable experiences. </p>

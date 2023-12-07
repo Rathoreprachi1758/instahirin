@@ -22,9 +22,9 @@
                         <div class="row align-items-center">
                             <div class="col-lg-6 col-md-6 aos-init " data-aos="fade-right" data-aos-duration="1000" data-aos-easing="ease">
                                 <div class=" custom_tittle text-left">
-                                    <h1>ANGULAR DEVELOPERS</h1>
+                                    <h1>Angular Developers</h1>
                                     <h2 class="">
-                                        <strong>BUILD A</strong> SINGLE-PAGE <strong>APPLICATIONS USING</strong> HTML <strong>AND</strong> TYPESCRIPT
+                                        Build A Single-Page <strong>Applications</strong> Using Html And <strong>Typescript</strong>
                                     </h2>
 
                                         <p class="p_color text-justify">Bizionic Technologies Angular developers specialize in using the Angular framework to develop web applications. Angular is a popular open-source framework maintained by Google and is widely used for building dynamic, single-page applications (SPAs) and progressive web applications (PWAs). Angular developers leverage their expertise in the framework to create robust, scalable, and interactive web applications with a rich user interface.</p>
@@ -49,7 +49,7 @@
 
                     <div class="industryNew_section2_info aos-init " data-aos="fade-up" data-aos-duration="1500" data-aos-easing="ease">
                         <div class="custom_tittle">
-                            <h3><strong>Here are some key uses of  </strong>Angular<strong> development:</strong></h2>
+                            <h3>Empowering Innovation With Modern, Scalable, And Interactive Web Applications Across Diverse Platforms</h2>
                         </div>
 
                         

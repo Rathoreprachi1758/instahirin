@@ -22,11 +22,10 @@
                         <div class="row align-items-center">
                             <div class="col-lg-6 col-md-6 aos-init " data-aos="fade-right" data-aos-duration="1000" data-aos-easing="ease">
                                 <div class=" custom_tittle text-left">
-                                    <h1>TECHNICAL ANALYSIS</h1>
-                                    <h2 class="">
-                                        <strong>ANALYZE THE</strong> TRENDS IN STATISTICS 
-                                        <strong>THAT ARE COLLECTED FROM</strong> ACTIVITIES 
-                                        <strong>AND</strong> MOVEMENT <strong>OF</strong> PRODUCT BEHAVIORS.
+                                    <h1>Strategic Excellence In Technical Analysis: Bizionic Marketing Solutions</h1>
+                                    <h2 class=""> 
+
+                                        Analyze The <strong>Trends</strong> In Statistics That Are <strong>Collected</strong> From Activities And Movement Of <strong>Product Behaviors.</strong>
 
                                     </h2>
 
@@ -52,7 +51,7 @@
 
                     <div class="industryNew_section2_info aos-init " data-aos="fade-up" data-aos-duration="1500" data-aos-easing="ease">
                         <div class="custom_tittle">
-                            <h3><strong>Our</strong> Technical Analysis   <strong>services include:</strong></h3>
+                            <h3>Empowering Your Competitive Edge With Adaptive Innovation And Unparalleled Value</h3>
 
                               
  

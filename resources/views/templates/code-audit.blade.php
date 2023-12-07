@@ -22,12 +22,10 @@
                         <div class="row align-items-center">
                             <div class="col-lg-6 col-md-6 aos-init " data-aos="fade-right" data-aos-duration="1000" data-aos-easing="ease">
                                 <div class=" custom_tittle text-left">
-                                    <h1>CODE AUDIT</h1>
+                                    <h1>Code Audit</h1>
                                     <h2 class="">
-                                        <strong>EXAMINE</strong> SOURCE CODE <strong>OF YOUR 
-                                        PROGRAMMING</strong> PROJECT <strong>TO FINDOUT 
-                                        ANY</strong> BUGS, ERRORS, <strong>AND</strong> AREAS <strong>THAT 
-                                        FALL SHORT OF</strong> QUALITY STANDARDS.
+                                        Examine <strong>Source</strong> Code Of Your <strong>Programming</strong> Project To Findout Any Bugs, 
+                                        Errors, <strong>And</strong> Areas That Fall Short Of Quality <strong>Standards.</strong>
 
                                     </h2>
 

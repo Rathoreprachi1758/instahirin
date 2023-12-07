@@ -18,8 +18,9 @@
                     <div class="row align-items-center">
                         <div class="col-lg-6 col-md-6 aos-init " data-aos="fade-right" data-aos-duration="1000" data-aos-easing="ease">
                             <div class="custom_tittle text-left">
-                                <h2>PROFESSIONAL SERVICES DEVELOPMENT
-                                </h2>
+                               
+                                <h1>Crafting Tailored Technology Solutions: Professional Services Development
+                                </h1>
 
                                     <p class="p_color text-justify">Professional Services Development by Bizionic Technologies encompasses a strategic and client-focused approach to crafting tailored technology solutions that meet the unique needs of businesses and organizations across various industries. Our process is designed to deliver innovative, efficient, and sustainable solutions. Below are an overview of our Professional Services Development approach.</p>
 
@@ -43,7 +44,7 @@
 
                 <div class="industryNew_section2_info aos-init " data-aos="fade-up" data-aos-duration="1500" data-aos-easing="ease">
                     <div class="custom_tittle">
-                        <h2><strong>The</strong> Services <strong>We Offered</strong></h2> 
+                        <h2>Supporting Non-Profit <strong>Missions</strong></h2> 
                     </div>
 
                     
@@ -186,7 +187,7 @@
             <div class="auto_container">
                 <div class="newIndPages_section2_tittle   ">
                     <div class="custom_tittle p-0 aos-init"  data-aos="fade-up" data-aos-duration="1000" data-aos-easing="ease">
-                        <h2 class="pb-2">Professional Solutions Development</h2>
+                        <h2 class="pb-2">Client-Focused Innovation</h2>
                         <h6 class="p-0"><strong>Process by Bizionic Technologies</strong></h6>
                     </div>
 

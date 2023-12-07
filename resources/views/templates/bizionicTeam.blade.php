@@ -522,9 +522,10 @@
         <div class="auto_container">
             <div class="indust_work_sectionDetail">
                 <div class="custom_tittle">
-                    <h2>Industries <strong>We Work In</strong></h2>
-                    <p class="p_color">We concentrate our software development services on numerous industries where we
-                        have extensive expertise.</p>
+                    <h2>Industries <strong>We Work In</strong> </h2>
+                    <p class="p_color"> 
+                    
+                        We Love To Create Software And Find Simple Solutions To Complex Challenges</p>
                 </div>
 
 
@@ -655,8 +656,17 @@
 
 
     <div class="aboutProject_section bg_f2f2f2 services_formOuter">
-        <div class="auto_container">
-            <div class="aboutProject_section_detail">
+        <div class="auto_container pb-4">
+
+
+                        <div class="advaceCareer_hire pb-5" id="goto_form">
+
+                            <jobs-component></jobs-component>
+
+                        </div>
+
+
+            <div class="aboutProject_section_detail d-none">
 
                 <div class="custom_tittle">
                     <h2 class=""><strong>We love to</strong> create software <strong>and find simple <br>

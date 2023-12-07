@@ -22,11 +22,9 @@
                         <div class="row align-items-center">
                             <div class="col-lg-6 col-md-6 aos-init " data-aos="fade-right" data-aos-duration="1000" data-aos-easing="ease">
                                 <div class=" custom_tittle text-left">
-                                    <h1>WEB DEVELOPMENT</h1>
+                                    <h1>With Bizionics Web Development Services, Businesses Can Achieve An Impressive Online Presence, Enhanced User Experiences, And Improved Functionality.</h1>
                                     <h2 class="">
-                                        CREATE, BUILD, <strong>AND</strong> MAINTAIN <strong>WEBSITES 
-                                        OR WEB APPLICATIONS THAT</strong> RUNS SMOOTHLY 
-                                        <strong>TO</strong> GENERATE REVENUE <strong>FOR</strong> BUSINESSES.
+                                    Create, <strong>Build,</strong> And Maintain Websites <strong>Or</strong> Web Applications <strong>That</strong> Runs Smoothly To Generate Revenue For Businesses.
 
                                     </h2>
 

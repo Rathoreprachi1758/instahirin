@@ -22,9 +22,9 @@
                         <div class="row align-items-center">
                             <div class="col-lg-6 col-md-6 aos-init " data-aos="fade-right" data-aos-duration="1000" data-aos-easing="ease">
                                 <div class=" custom_tittle text-left">
-                                    <h1>PRODUCT DESIGNER</h1>
+                                    <h1>Product Designer</h1>
                                     <h2 class="">
-                                        <strong>CREATE</strong> PRODUCTS <strong>BASED ON THE</strong> NEEDS OF CONSUMERS <strong>AND</strong> BUSINESS OBJECTIVES.
+                                    <strong>Create</strong> Products Based <strong>On</strong> The Needs Of Consumers And Business Objectives.
 
                                     </h2>
 

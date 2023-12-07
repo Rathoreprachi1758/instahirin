@@ -22,12 +22,11 @@
                         <div class="row align-items-center">
                             <div class="col-lg-6 col-md-6 aos-init " data-aos="fade-right" data-aos-duration="1000" data-aos-easing="ease">
                                 <div class=" custom_tittle text-left">
-                                    <h1>UI/UX SERVICES</h1>
+                                    <h1>UI/UX Services</h1>
                                     <h2 class="">
-                                        <strong>ENHANCE THE</strong> USERS' EXPERIENCE <strong>BASED
-                                        ON</strong> BUSINESS OBJECTIVES, USERS' PERSPECTIVE, 
-                                        QUALITATIVE <strong>AND</strong> QUANTITATIVE DATA, <strong>AND THE 
-                                        UX CONSULTANT'S</strong> DOMAIN EXPERTISE.
+                                        <strong>Enhance</strong> The <strong>Users</strong> Experience Based On Business Objectives, 
+                                        Users Perspective, <strong>Qualitative</strong> And Quantitative Data, <strong>And</strong> 
+                                        The Ux Consultants <strong>Domain</strong> Expertise.
 
                                     </h2>
 

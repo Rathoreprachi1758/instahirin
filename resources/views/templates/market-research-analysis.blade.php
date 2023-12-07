@@ -22,11 +22,11 @@
                         <div class="row align-items-center">
                             <div class="col-lg-6 col-md-6 aos-init " data-aos="fade-right" data-aos-duration="1000" data-aos-easing="ease">
                                 <div class=" custom_tittle text-left">
-                                    <h1>MARKET RESEARCH AND ANALYSIS</h1>
+                                    <h1>Market Research And Analysis</h1>
                                     <h2 class="">
-                                        <strong>EVALUATE THE</strong> VIABILITY <strong>FOR A</strong> NEW 
-                                        SERVICE <strong>OR</strong> PRODUCT <strong>THROUGH</strong> RESEARCH 
-                                        <strong>CONDUCTED</strong> DIRECTLY FROM</strong> POTENTIAL CUSTOMERS.
+                                        Evaluate <strong>The</strong> Viability For <strong>A</strong> 
+                                        New Service <strong>Or</strong> Product Through Research 
+                                        <strong>Conducted</strong> Directly From Potential Customers.
 
                                     </h2>
 

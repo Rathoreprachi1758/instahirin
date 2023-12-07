@@ -22,9 +22,9 @@
                         <div class="row align-items-center">
                             <div class="col-lg-6 col-md-6 aos-init " data-aos="fade-right" data-aos-duration="1000" data-aos-easing="ease">
                                 <div class=" custom_tittle text-left">
-                                    <h1>C# DEVELOPERS</h1>
+                                    <h1>Building Desktop Software, Web Applications, Mobile Apps, Games, And More With C# Proficiency And Versatility</h1>
                                     <h2 class="">
-                                        <strong>CREATE</strong> APPS AND PROGRAMS <strong>FOR</strong> WINDOWS <strong>OPERATING SYSTEMS BY UTILIZING</strong> .NET FRAMEWORK.
+                                    <strong>Create</strong> Apps And Programs For Windows <strong>Operating Systems</strong> By Utilizing .Net Framework.
                                     </h2>
 
                                         <p class="p_color text-justify">Bizionic Technologies C# developers specialize in using the C# programming language to develop software applications and solutions. C# is a versatile and widely-used language developed by Microsoft, primarily used for building applications on the Microsoft .NET framework.</p>
@@ -49,7 +49,7 @@
 
                     <div class="industryNew_section2_info aos-init " data-aos="fade-up" data-aos-duration="1500" data-aos-easing="ease">
                         <div class="custom_tittle">
-                            <h3><strong>Here are some key uses of</strong> C# <strong>development:</strong></h2>
+                            <h3><strong>Versatile Excellence In Software Development: Bizionic Technologies</strong> C# Developers</h2>
                             
                               
                               

@@ -2,8 +2,7 @@
     <div class="auto_container">
         <div class="fundingApplyForm_pageDetail">
             <div class="custom_tittle">
-                <h3 class="text-left"><strong>Please fill the initial information for </strong>Start-up Funding
-                    Initiative.</h3>
+                <h3 class="text-left"><strong>Apply Now:</strong> Secure The Funding <strong>You Need</strong></h3>
             </div>
 
 
@@ -106,7 +105,7 @@
 
                 <div class="fundingApplyForm_info_section">
                     <div class="custom_tittle">
-                        <h5 class="text-left pb-0">Social Media </h5>
+                        <h5 class="text-left pb-0">Accessible Funding Solutions </h5>
                     </div>
 
 
@@ -156,7 +155,7 @@
 
                 <div class="fundingApplyForm_info_section">
                     <div class="custom_tittle">
-                        <h5 class="text-left pb-0">Financials </h5>
+                        <h5 class="text-left pb-0">Financial Aid And Money Grant Forms </h5>
                     </div>
 
 

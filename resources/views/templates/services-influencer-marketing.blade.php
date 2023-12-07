@@ -22,11 +22,10 @@
                         <div class="row align-items-center">
                             <div class="col-lg-6 col-md-6 aos-init " data-aos="fade-right" data-aos-duration="1000" data-aos-easing="ease">
                                 <div class=" custom_tittle text-left">
-                                    <h1>INFLUENCER MARKETING</h1>
+                                    <h1>Influencer Marketing</h1>
                                     <h2 class="">
-                                        FACILITATES <strong>YOUR BUSINESS TO</strong> COLLABORATE 
-                                        <strong>WITH</strong> INDIVIDUALS <strong>WHO HAVE A</strong> FOLLOWING 
-                                        <strong>IN ORDER TO</strong> BOOST BRAND <strong>EXPOSURE.</strong>
+                                    <strong>Facilitates</strong> Your Business To <strong>Collaborate</strong> With <strong>Individuals</strong> 
+                                    Who Have A Following In Order To <strong>Boost Brand Exposure.</strong>
 
                                     </h2>
 

@@ -22,10 +22,9 @@
                         <div class="row align-items-center">
                             <div class="col-lg-6 col-md-6 aos-init " data-aos="fade-right" data-aos-duration="1000" data-aos-easing="ease">
                                 <div class=" custom_tittle text-left">
-                                    <h1>PROGRAMMATIC ADS</h1>
+                                    <h1>Programmatic Ads</h1>
                                     <h2 class="">
-                                        <strong>LEVERAGING</strong> USER BEHAVIOR <strong>AND</strong> ACTIVITY 
-                                        DATA <strong>AND</strong> DELIVER PERSONALIZED ADS.
+                                    Leveraging User <strong>Behavior</strong> And Activity Data And Deliver <strong>Personalized Ads.</strong>
 
                                     </h2>
 

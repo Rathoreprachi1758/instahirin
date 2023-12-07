@@ -22,10 +22,9 @@
                         <div class="row align-items-center">
                             <div class="col-lg-6 col-md-6 aos-init " data-aos="fade-right" data-aos-duration="1000" data-aos-easing="ease">
                                 <div class=" custom_tittle text-left">
-                                    <h1>XAMARIN</h1>
+                                    <h1>Xamarin</h1>
                                     <h2 class="">
-                                        DESIGN, DEVELOP, <strong>AND</strong> BUILD CROSS-PLATFORM 
-                                        <strong>MOBILE</strong> APPLICATIONS <strong>FOR BOTH</strong> ANDROID <strong>AND</strong> iOS.
+                                    <strong>Design,</strong> Develop, And Build <strong>Cross-Platform</strong> Mobile Applications For Both <strong>Android</strong> And <strong>IOS.</strong>
 
                                     </h2>
 

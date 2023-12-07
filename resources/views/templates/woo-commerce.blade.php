@@ -22,10 +22,10 @@
                         <div class="row align-items-center">
                             <div class="col-lg-6 col-md-6 aos-init " data-aos="fade-right" data-aos-duration="1000" data-aos-easing="ease">
                                 <div class=" custom_tittle text-left">
-                                    <h1>WOOCOMMERCE</h1>
-                                    <h2 class="">
-                                        <strong>BUILD SOFTWARE-AS-A-SERVICE</strong> (SaaS) PLATFORM <strong>THAT ALLOWS</strong> 
-                                        BUSINESSES <strong>TO</strong> CREATE <strong>AND</strong> MANAGE <strong>THEIR</strong> ONILE STORE.
+                                    <h1>Woocommerce Developers</h1>
+                                    <h2 class=""> 
+
+                                        Create <strong>A</strong> Fully Customizable Online Store With Simple And <strong>User-Friendly</strong> Features.
 
                                     </h2>
 

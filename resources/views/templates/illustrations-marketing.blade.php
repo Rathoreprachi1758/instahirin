@@ -22,11 +22,10 @@
                         <div class="row align-items-center">
                             <div class="col-lg-6 col-md-6 aos-init " data-aos="fade-right" data-aos-duration="1000" data-aos-easing="ease">
                                 <div class=" custom_tittle text-left">
-                                    <h1>ILLUSTRATIONS</h1>
+                                    <h1>Elevate Your Visual Presence: Bizionic Marketing Solutions Illustration Services</h1>
                                     <h2 class="">
-                                        DECORATE, INTERPRETE <strong>OR</strong> VISUAL EXPLANE <strong>OF
-                                         A</strong> TEXT, CONCEPT <strong>OR</strong> PROCESS <strong>FURTHER</strong> DESIGNED
-                                          <strong>FOR</strong> PRINT <strong>OR</strong> DIGITALLY PUBLISHED <strong>MEDIA.</strong>
+                                    <strong>Decorate,</strong> Interprete <strong>Or</strong> Visual Explane Of <strong>A</strong> Text, Concept Or 
+                                    Process Further Designed For Print <strong>Or</strong> Digitally Published Media.
 
                                     </h2>
 

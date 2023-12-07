@@ -8,7 +8,7 @@
 
                             <ul class="pt-3">
                                 <li>
-                                    <h6>1. About the Cookie Policy</h6>
+                                    <h6>1. About The Cookie Policy</h6>
 
                                     <ul>
                                         <li><p>1.1. When you visit or use the website bizionictech.com and its mobile-optimized version and other
@@ -25,7 +25,7 @@
                                 </li>
 
                                 <li>
-                                    <h6>2. Use of Cookies and Similar Technologies</h6>
+                                    <h6>2. Use Of Cookies And Similar Technologies</h6>
 
                                     <ul>
                                         <li><p>The platform uses cookies and similar technologies, such as pixels, to provide, improve, protect,

@@ -22,11 +22,10 @@
                         <div class="row align-items-center">
                             <div class="col-lg-6 col-md-6 aos-init " data-aos="fade-right" data-aos-duration="1000" data-aos-easing="ease">
                                 <div class=" custom_tittle text-left">
-                                    <h1>MEDIA OUTREACH AND RELATIONSHIP MANAGEMENT</h1>
+                                    <h1>Media Outreach And Relationship Management</h1>
                                     <h2 class="">
-                                        INFORM <strong>PEOPLE ABOUT YOUR</strong> BUSINESS'S 
-                                        MISSION, POLICIES, <strong>AND</strong> PRACTISES <strong>IN A</strong> 
-                                        POSITIVE, CONSISTENT, <strong>AND</strong> CREDIBLE MANNER.
+                                    Inform <strong>People</strong> About Your Businesss Mission, <strong>Policies,</strong> 
+                                    And Practises In <strong>A</strong> Positive, Consistent, And <strong>Credible Manner.</strong>
 
                                     </h2>
 

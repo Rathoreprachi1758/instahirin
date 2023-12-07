@@ -22,11 +22,11 @@
                         <div class="row align-items-center">
                             <div class="col-lg-6 col-md-6 aos-init " data-aos="fade-right" data-aos-duration="1000" data-aos-easing="ease">
                                 <div class=" custom_tittle text-left">
-                                    <h1>ONLINE ADVERTISING</h1>
+                                    <h1>Online Advertising</h1>
                                     <h2 class="">
-                                        <strong>CREATE</strong> ADVERTISING MATERIALS <strong>THAT 
-                                        APPEARS IN SITES OR EMAILS FOR</strong> MARKETING 
-                                        STRATEGY <strong>TO</strong> GENERATE REVENUE <strong>FOR</strong> BUSINESSES.
+
+                                        Create <strong>Advertising</strong> Materials That Appears <strong>In</strong> Sites Or Emails 
+                                        For Marketing Strategy To <strong>Generate Revenue</strong> For Businesses.
 
                                     </h2>
 
@@ -51,7 +51,7 @@
 
                     <div class="industryNew_section2_info aos-init " data-aos="fade-up" data-aos-duration="1500" data-aos-easing="ease">
                         <div class="custom_tittle">
-                            <h3><strong>Our </strong> Online Advertising  <strong> Solutions:</strong></h3>
+                            <h3><strong>Unlock Remarkable Growth With Bizionic</strong> Marketing Solutions</h3>
 
                               
   

@@ -22,11 +22,10 @@
                         <div class="row align-items-center">
                             <div class="col-lg-6 col-md-6 aos-init " data-aos="fade-right" data-aos-duration="1000" data-aos-easing="ease">
                                 <div class=" custom_tittle text-left">
-                                    <h1>CONTENT STRATEGY AND PLANNING</h1>
+                                    <h1>Content Strategy And Planning</h1>
                                     <h2 class="">
-                                        <strong>TO</strong> ENGAGE MORE <strong>AUDIENCES,</strong> 
-                                        CREATE, BUILD, DELIVER, <strong>AND</strong> CONTROL 
-                                        <strong>ON</strong> USEFUL, USEABLE, <strong>AND</strong> EFFECTIVE CONTENT.
+                                        To Engage <strong>More</strong> Audiences, Create, <strong>Build,</strong> Deliver, 
+                                        And Control <strong>On</strong> Useful, Useable, And Effective <strong>Content.</strong>
 
                                     </h2>
 

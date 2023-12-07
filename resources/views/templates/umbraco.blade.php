@@ -22,10 +22,10 @@
                         <div class="row align-items-center">
                             <div class="col-lg-6 col-md-6 aos-init " data-aos="fade-right" data-aos-duration="1000" data-aos-easing="ease">
                                 <div class=" custom_tittle text-left">
-                                    <h1>UMBRACO</h1>
-                                    <h2 class="">
-                                        <strong>BUILD HIGH-PERFORMING,</strong> SECURE, RELIABLE, 
-                                        <strong>AND EASY-TO-MANAGE</strong> WEBSITES, SERVICES, <strong>AND</strong> APPS.
+                                    <h1>Umbraco</h1>
+                                    <h2 class=""> 
+                                        <strong>Build</strong> High-Performing, Secure, <strong>Reliable,</strong> 
+                                        And Easy-To-Manage Websites, Services, <strong>And Apps.</strong>
 
                                     </h2>
 

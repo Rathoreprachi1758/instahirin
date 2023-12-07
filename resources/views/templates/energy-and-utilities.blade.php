@@ -18,7 +18,8 @@
                         <div class="row align-items-center">
                             <div class="col-lg-6 col-md-6 aos-init " data-aos="fade-right" data-aos-duration="1000" data-aos-easing="ease">
                                 <div class="custom_tittle text-left">
-                                    <h2>ENERGY AND UTILITIES SOLUTIONS DEVELOPMENT
+                                    <h1>Empowering The Energy & Utilities Sector: Bizionics Comprehensive Solutions</h1>
+                                    <h2>Leading <strong>Digital Transformation</strong>
                                     </h2>
 
                                         <p class="p_color text-justify">The energy and utilities sector has always been at the heart of global development, driving industries and sustaining economies. As this sector embraces digital transformation, Bizionic Technologies is at the forefront, delivering cutting-edge solutions to tackle evolving challenges and ensure sustainability. Let's delve into the comprehensive solutions development framework that Bizionic offers for the energy and utilities sector.</p>
@@ -43,7 +44,7 @@
 
                     <div class="industryNew_section2_info aos-init " data-aos="fade-up" data-aos-duration="1500" data-aos-easing="ease">
                         <div class="custom_tittle">
-                            <h2><strong>The</strong> Services <strong>We Offered</strong></h2> 
+                            <h2>Addressing Evolving Sector Challenges</h2> 
                         </div>
 
                         

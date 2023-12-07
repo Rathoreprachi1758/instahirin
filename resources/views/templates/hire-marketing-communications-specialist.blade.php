@@ -22,9 +22,9 @@
                         <div class="row align-items-center">
                             <div class="col-lg-6 col-md-6 aos-init " data-aos="fade-right" data-aos-duration="1000" data-aos-easing="ease">
                                 <div class=" custom_tittle text-left">
-                                    <h1>MARKETING COMMUNICATIONS SPECIALIST</h1>
+                                    <h1>Marketing Communications Specialist</h1>
                                     <h2 class="">
-                                        <strong>CREATES</strong> MESSAGES <strong>THAT</strong> INFORM, EDUCATE, <strong>OR</strong> PERSUADE <strong>CUSTOMERS ABOUT</strong> CERTAIN GOODS <strong>AND</strong> SERVICES.
+                                        <strong>Creates</strong> Messages That <strong>Inform,</strong> Educate, Or Persuade Customers About Certain Goods <strong>And Services.</strong>
                                     </h2>
 
                                         <p class="p_color text-justify">Bizionic Marketing Solutions marketing communications specialist specializes in developing and implementing effective communication strategies to promote products, services, or brands. They play a crucial role in conveying messages to target

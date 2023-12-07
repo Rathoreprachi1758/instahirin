@@ -22,13 +22,14 @@
                         <div class="row align-items-center">
                             <div class="col-lg-6 col-md-6 aos-init " data-aos="fade-right" data-aos-duration="1000" data-aos-easing="ease">
                                 <div class=" custom_tittle text-left">
-                                    <h1>MICROSOFT AZURE</h1>
-                                    <h2 class="">
-                                        <strong>CREATE AND BUILD PUBLIC</strong> CLOUD 
-                                        COMPUTING PLATFORM <strong>WITH SOLUTIONS 
-                                        INCLUDING</strong> IaaS, PaaS, <strong>AND</strong> SaaS <strong>AND 
-                                        USED IT FOR</strong> ANALYTICS, VIRTUAL COMPUTING, 
-                                        STORAGE, NETWORKING, <strong>AND</strong> MUCH MORE.
+                                    <h1>Bizionic Technologies: Transforming Business With Microsoft Azure</h1>
+                                    <h2 class=""> 
+
+
+                                        Create <strong>And</strong> Build Public Cloud <strong>Computing</strong> 
+                                        Platform With <strong>Solutions</strong> Including Iaas, Paas, 
+                                        And Saas And Used It For <strong>Analytics,</strong> Virtual 
+                                        Computing, <strong>Storage, Networking,</strong> And Much More.
 
                                     </h2>
 
@@ -54,7 +55,7 @@
 
                     <div class="industryNew_section2_info aos-init" data-aos="fade-up" data-aos-duration="1500" data-aos-easing="ease">
                         <div class="custom_tittle">
-                            <h3><strong>Our </strong> Microsoft Azure  <strong>services include the following:</strong></h3>
+                            <h3>Scalable, Secure, And Innovative Solutions For Thriving In The Digital Era</h3>
   
                         </div>
 

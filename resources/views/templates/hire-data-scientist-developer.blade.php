@@ -22,9 +22,10 @@
                         <div class="row align-items-center">
                             <div class="col-lg-6 col-md-6 aos-init " data-aos="fade-right" data-aos-duration="1000" data-aos-easing="ease">
                                 <div class=" custom_tittle text-left">
-                                    <h1>DATA SCIENTISTS</h1>
+                                    <h1>Data Scientists</h1>
                                     <h2 class="">
-                                        <strong>USE DATA TO</strong> UNDERSTAND <strong>AND</strong> EXPLAIN <strong>THE PHENOMENA, AND</strong> HELP ORGANIZATIONS <strong>MAKE</strong> BETTER DECISIONS.
+                                    Use <strong>Data</strong> To Understand And Explain <strong>The</strong> Phenomena, 
+                                    And Help Organizations <strong>Make</strong> Better <strong>Decisions.</strong>
                                     </h2>
 
                                         <p class="p_color text-justify">Bizionic Technologies Data Scientists, also known as data science developers, data engineers or machine learning engineers, play a crucial role in developing and deploying data-driven solutions.</p>

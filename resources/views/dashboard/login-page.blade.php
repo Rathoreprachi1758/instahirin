@@ -63,7 +63,7 @@
                         <div class="header_menu">
                             <div class="authBttns">
                                 <a href="{{ url('/loginpage') }}" class="signin_btn">Sign in</a>
-                                <a href="{{ url('/Sign-In') }}" class="signup_btn">Sign Up</a>
+                                <a href="{{ url('/get-sign-Up') }}" class="signup_btn">Sign Up</a>
                             </div>
                         </div>
                     </div>
@@ -84,7 +84,7 @@
                         <div class="auth_screens_detail">
                             <form action="{{ url('/dashboard') }}" method="POST" enctype="multipart/form-data">
                                 @csrf
-                                <div class="row">
+                                <div class="row" style="margin-top: -59px">
                                     <div class="col-xxl-6 col-xl-6 col-lg-6 col-md-7 m-auto">
                                         <div class="auth_info">
                                             <h3 class="text-center">Log In</h3>
@@ -95,7 +95,7 @@
                                                         <div class="auth_field">
                                                             <strong>Email</strong>
                                                             <div class="auth_field_info">
-                                                                <input type="email" name="email" id="email" class="form-control" placeholder="Enter Your Password" />
+                                                                <input type="email" name="email" id="email" class="form-control" placeholder="Enter Your Email" />
                                                             </div>
                                                         </div>
                                                     </div>

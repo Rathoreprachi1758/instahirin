@@ -22,10 +22,11 @@
                         <div class="row align-items-center">
                             <div class="col-lg-6 col-md-6 aos-init " data-aos="fade-right" data-aos-duration="1000" data-aos-easing="ease">
                                 <div class=" custom_tittle text-left">
-                                    <h1>IBM CLOUD</h1>
+                                    <h1>IBM Cloud</h1>
                                     <h2 class="">
-                                        <strong>A</strong> HYBRID CLOUDS <strong>SOLUTIONS THAT ENABLE TO</strong> 
-                                        DEVELOP APPS <strong>ONCE AND</strong> DEPLOY <strong>THEM FROM</strong> ANYWHERE.
+                                        <strong>A</strong> Hybrid Clouds <strong>Solutions That Enable To</strong> 
+                                        Develop Apps <strong>Once And</strong> Deploy <strong>Them From</strong> Anywhere.
+
 
                                     </h2>
 
@@ -51,8 +52,9 @@
 
                     <div class="industryNew_section2_info aos-init" data-aos="fade-up" data-aos-duration="1500" data-aos-easing="ease">
                         <div class="custom_tittle">
-                            <h3><strong>Our </strong> IBM Cloud  <strong>services encompass various domains to cater to diverse business needs:</strong></h3>
+                            <h3>Unlocking Scalable And Secure Solutions For Digital Transformation Success</h3>
   
+                            
 
                         </div>
 

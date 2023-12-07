@@ -22,11 +22,10 @@
                         <div class="row align-items-center">
                             <div class="col-lg-6 col-md-6 aos-init " data-aos="fade-right" data-aos-duration="1000" data-aos-easing="ease">
                                 <div class=" custom_tittle text-left">
-                                    <h1>CYBERSECURITY AND INFORMATION SECURITY</h1>
+                                    <h1>Cybersecurity And Information Security</h1>
                                     <h2 class="">
-                                        <strong>INVOLVES</strong> INFORMATION SECURITY <strong>TO</strong> 
-                                        PROTECT <strong>YOUR</strong> DATA <strong>ACROSS ALL MEDIUMS 
-                                        AND</strong> STORE <strong>IT IN</strong> CYBERSPACE.
+                                    Involves <strong>Information</strong> Security To <strong>Protect</strong> Your 
+                                    Data Across <strong>All</strong> Mediums And Store It In <strong>Cyberspace.</strong>
 
                                     </h2>
 
