@@ -37,9 +37,7 @@ class Job extends Resource
      *
      * @var array
      */
-    public static $search = [
-        'id',
-    ];
+    public static $search = ['id'];
 
     /**
      * Get the fields displayed by the resource.
@@ -53,41 +51,61 @@ class Job extends Resource
             ID::make()->sortable(),
             Text::make('Title', 'title')->rules('required', 'min:6,max:255'),
             Text::make('Location', 'location'),
-            Text::make('CTC', 'ctc'),
-            Select::make('Work Mode', ' work_mode')->options(
-                [
+            // Text::make('CTC', 'ctc'),
+            Select::make('CTC Currency', ' ctc_currency')
+                ->options([
+                    'USD' => 'USD',
+                    'INR' => 'INR',
+                ])
+                ->displayUsingLabels()
+                ->filterable()
+                ->hideFromIndex(),
+            Text::make('Minimum Price', 'min_price'),
+            Text::make('Maximum Price', 'max_price'),
+            Select::make('Work Mode', ' work_mode')
+                ->options([
                     'Full Time' => 'Full Time',
                     'Part Time' => 'Part Time',
-                    "Daily Bases" => "Daily Bases",
+                    'Daily Bases' => 'Daily Bases',
                     'Weekly' => 'Weekly',
                     'Period' => 'Period',
-                    "Freelance" => "Freelance",
-                    "Project Base" => "Project Base",
-                    "Contract Base" => "Contract Base",
-                    'Hourly' => 'Hourly'
-                ]
-            )->displayUsingLabels()->filterable()->hideFromIndex(),
+                    'Freelance' => 'Freelance',
+                    'Project Base' => 'Project Base',
+                    'Contract Base' => 'Contract Base',
+                    'Hourly' => 'Hourly',
+                ])
+                ->displayUsingLabels()
+                ->filterable()
+                ->hideFromIndex(),
             Text::make('Company', 'company'),
             Text::make('Experience', 'experience'),
             // Text::make('Availability', 'availability'),
-            Select::make('Availability', 'availability')->options([
-                'Full Time' => 'Full Time', 'Part-Time' => 'Part-Time',
-                'Project Base' => 'Project Base',
-                'Hourly' => 'Hourly',
-                'On-Site' => 'On-Site',
-                'Freelancing' => 'Freelancing',
-                'Contract' => 'Contract',
-                'Shift' => 'Shift',
-                'Consulting' => 'Consulting',
-                'Volunteer' => 'Volunteer',
-                'Internships' => 'Internships'
-            ])->displayUsingLabels()->filterable()->hideFromIndex(),
+            Select::make('Availability', 'availability')
+                ->options([
+                    'Full Time' => 'Full Time',
+                    'Part-Time' => 'Part-Time',
+                    'Project Base' => 'Project Base',
+                    'Hourly' => 'Hourly',
+                    'On-Site' => 'On-Site',
+                    'Freelancing' => 'Freelancing',
+                    'Contract' => 'Contract',
+                    'Shift' => 'Shift',
+                    'Consulting' => 'Consulting',
+                    'Volunteer' => 'Volunteer',
+                    'Internships' => 'Internships',
+                ])
+                ->displayUsingLabels()
+                ->filterable()
+                ->hideFromIndex(),
             Trix::make('Job Description', 'description'),
             Trix::make('Key Responsibilities', 'responsibilities'),
             Trix::make('Qualification', 'qualification'),
             Trix::make('Preferred Qualification', 'prefer_qualification'),
             Trix::make('What We Offer', 'we_offer'),
-            Select::make('Status', 'status')->options(['Open' => 'Open', 'Closed' => 'Closed'])->displayUsingLabels()->filterable(),
+            Select::make('Status', 'status')
+                ->options(['Open' => 'Open', 'Closed' => 'Closed'])
+                ->displayUsingLabels()
+                ->filterable(),
         ];
     }
 
