@@ -21,7 +21,7 @@ Route::get('sitemap.xml', function () {
     return response()->file('sitemap.xml');
 });
 ////
-Route::get('/Sign-In', [Logincontroller::class, 'index'])->name('signin');
+Route::get('/get-sign-Up', [Logincontroller::class, 'index'])->name('signin');
 Route::Post('sign-up', [Logincontroller::class, 'store'])->name('submit.signup');
 Route::get('/loginpage', [LoginController::class, 'login'])->name('loginpage');
 // Route::post('dashboard', [LoginController::class, 'authenticate'])->name('login');

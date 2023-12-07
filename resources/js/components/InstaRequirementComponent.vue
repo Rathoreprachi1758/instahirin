@@ -71,7 +71,7 @@
       <!-- Project Description -->
       <div class="col-lg-12 col-md-12">
         <div class="requireForm_lable">
-          <strong class="req_lable">Skills / Project Descriptions:</strong>
+          <strong class="req_lable">Job / Project Descriptions:</strong>
           <div class="project_form_textarea">
             <textarea
               placeholder="...."
