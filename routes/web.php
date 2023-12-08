@@ -31,6 +31,7 @@ Route::get('/loginpage', [LoginController::class, 'login'])->name('loginpage');
     Route::get('logout', [LoginController::class, 'logout']);
 // });
 Route::get('forgot-password', [LoginController::class, 'forgotpassword']);
+Route::post('password-reset', [LoginController::class,'resetpassword']);
 Route::get('/{levelOneSlug?}/{levelTwoSlug?}/{levelThreeSlug?}/{levelFourSlug?}', 'App\Http\Controllers\ContentController@index')->name('index');
 
 // ContactUs Form Submission
