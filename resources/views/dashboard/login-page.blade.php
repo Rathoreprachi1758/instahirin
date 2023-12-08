@@ -58,7 +58,7 @@
                     <div class="container-xxl container-xl container-lg container-md">
                         <div class="headerDetail">
                             <div class="logo">
-                                <a href="#"><img src="{{ asset('css/images/logo.png') }}" alt="Logo"></a>
+                                <a href="{{url('/about-us')}}"><img src="{{ asset('css/images/logo.png') }}" alt="Logo"></a>
                             </div>
 
                             <div class="header_menu">
@@ -120,8 +120,8 @@
                                                             <div class="auth_text">
                                                                 <p>By clicking “Log in” you agree to Bizionic’s <a
                                                                         href="#">Terms of Use</a> and <a
-                                                                        href="{{ url('industries/industries-we-serve/industries/privacy-policy') }}">Privacy</a>
-                                                                    Statement</p>
+                                                                        href="{{ url('industries/industries-we-serve/industries/privacy-policy') }}"
+                                                                        target="_blank">Privacy</a>
                                                             </div>
                                                         </div>
 
@@ -135,7 +135,7 @@
                                 </form>
                                 <div class="col-12">
                                     <div class="forgotPasswText">
-                                        <p>Not a Bizionic user yet? <a href="{{ url('/Sign-In') }}">Sign Up</a></p>
+                                        <p>Not a Bizionic user yet? <a href="{{ url('/get-sign-Up') }}">Sign Up</a></p>
                                         <p><a href="{{ url('/forgot-password') }}">Forgot Password?</a> </p>
                                     </div>
                                 </div>
