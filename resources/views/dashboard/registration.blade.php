@@ -8,7 +8,7 @@
                 <div class="container-xxl container-xl container-lg container-md">
                     <div class="headerDetail">
                         <div class="logo">
-                            <a href="#"><img src="{{ asset('css/images/logo.png') }}" alt="Logo"></a>
+                            <a href="{{url('/about-us')}}"><img src="{{ asset('css/images/logo.png') }}" alt="Logo"></a>
 
                         </div>
 
