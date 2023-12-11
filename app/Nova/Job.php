@@ -13,6 +13,7 @@ use Laravel\Nova\Fields\DateTime;
 use Illuminate\Support\Facades\Gate;
 use App\Policies\brandpolicy;
 use App\Policies\CareerPolicy;
+use GMP;
 
 class Job extends Resource
 {
@@ -78,9 +79,25 @@ class Job extends Resource
                 ->filterable()
                 ->hideFromIndex(),
             Text::make('Company', 'company'),
-            Text::make('Experience', 'experience'),
+            // Text::make('Experience', 'experience'),
+            Select::make('Experience', 'experience')
+                ->options([
+                    '1+ Year of Experience' => '1+ Year of Experience',
+                    '2+ Year of Experience' => '2+ Year of Experience',
+                    '3+ Year of Experience' => '3+ Year of Experience',
+                    '4+ Year of Experience' => '4+ Year of Experience',
+                    '5+ Year of Experience' => '5+ Year of Experience',
+                    '6+ Year of Experience' => '6+ Year of Experience',
+                    '7+ Year of Experience' => '7+ Year of Experience',
+                    '8+ Year of Experience' => '8+ Year of Experience',
+                    '9+ Year of Experience' => '9+ Year of Experience',
+                    '10+ Year of Experience' => '10+ Year of Experience',
+                ])
+                ->displayUsingLabels()
+                ->filterable()
+                ->hideFromIndex(),
             // Text::make('Availability', 'availability'),
-            Select::make('Availability', 'availability')
+            Select::make('Employment Type', 'availability')
                 ->options([
                     'Full Time' => 'Full Time',
                     'Part-Time' => 'Part-Time',
@@ -98,9 +115,25 @@ class Job extends Resource
                 ->filterable()
                 ->hideFromIndex(),
             Trix::make('Job Description', 'description'),
-            Trix::make('Key Responsibilities', 'responsibilities'),
-            Trix::make('Qualification', 'qualification'),
-            Trix::make('Preferred Qualification', 'prefer_qualification'),
+            Trix::make('Key Skills', 'responsibilities'),
+            // Text::make('Key Skills', 'key_skills')->resolveUsing(function ($value) {
+            //     if (is_array($value)) {
+            //         return implode(', ', array_column($value, 'name'));
+            //     }
+            //     return $value;
+            // }),
+            // Trix::make('Educational Qualification', 'qualification'),
+            Select::make('Educational Qualification', 'qualification')
+                ->options([
+                    'Any' => 'Any',
+                    'Graduate' => 'Graduate',
+                    'Postgraduate' => 'Postgraduate',
+                    'Doctorate' => 'Doctorate',
+                ])
+                ->displayUsingLabels()
+                ->filterable()
+                ->hideFromIndex(),
+            Trix::make('Job Filling Duration', 'prefer_qualification'),
             Trix::make('What We Offer', 'we_offer'),
             Select::make('Status', 'status')
                 ->options(['Open' => 'Open', 'Closed' => 'Closed'])

@@ -132,7 +132,7 @@
                     <p>{{ job.experience }}</p>
                   </div>
                   <div class="ourExperience_col">
-                    <strong>Availability</strong>
+                    <strong>Employment Type</strong>
                     <p>{{ job.availability }}</p>
                   </div>
                 </div>
