@@ -11,7 +11,7 @@
       <div class="applyNow_textInfo">
         <div class="">
           <h4 class="p-0">Set Alert for Similar Jobs</h4>
-          <p class="texte_787878 p-0">PHP Developer, Hyderabad, Telangana, India</p>
+          <!-- <p class="texte_787878 p-0">PHP Developer, Hyderabad, Telangana, India</p> -->
         </div>
         <a href="#" class="btn_default">Set Alert</a>
       </div>
