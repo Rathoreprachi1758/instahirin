@@ -133,7 +133,22 @@ class Job extends Resource
                 ->displayUsingLabels()
                 ->filterable()
                 ->hideFromIndex(),
-            Trix::make('Job Filling Duration', 'prefer_qualification'),
+            // Trix::make('Job Filling Duration', 'prefer_qualification'),
+            Select::make('Job Filling Duration', 'prefer_qualification')
+                ->options([
+                    'Immediate' => 'Immediate',
+                    'Within One Month' => 'Within One Month',
+                    'Within 60 Days' => 'Within 60 Days',
+                    'Within 90 Days' => 'Within 90 Days',
+                    'Now Hiring' => 'Now Hiring',
+                    'Immediate Vacancy' => 'Immediate Vacancy',
+                    'Urgently Required' => 'Urgently Required',
+                    'Fast-Track Hiring' => 'Fast-Track Hiring',
+                    'Direct Recruitment' => 'Direct Recruitment',
+                ])
+                ->displayUsingLabels()
+                ->filterable()
+                ->hideFromIndex(),
             Trix::make('What We Offer', 'we_offer'),
             Select::make('Status', 'status')
                 ->options(['Open' => 'Open', 'Closed' => 'Closed'])
