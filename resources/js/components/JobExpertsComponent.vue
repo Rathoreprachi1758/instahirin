@@ -87,7 +87,10 @@
                       <p><b>Company -</b> {{ job.company }}</p>
                       <p><b>Location -</b> {{ job.location }}</p>
                       <p><b>Work Mode -</b> {{ job.work_mode }}</p>
-                      <p><b>CTC -</b> {{ job.ctc }}</p>
+                      <p>
+                        <b>CTC -</b> {{ job.ctc_currency }} {{ job.min_price }} -
+                        {{ job.max_price }}
+                      </p>
                     </div>
                   </div>
                 </div>
@@ -129,7 +132,7 @@
                     <p>{{ job.experience }}</p>
                   </div>
                   <div class="ourExperience_col">
-                    <strong>Availability</strong>
+                    <strong>Employment Type</strong>
                     <p>{{ job.availability }}</p>
                   </div>
                 </div>
