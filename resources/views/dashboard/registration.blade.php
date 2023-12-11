@@ -37,7 +37,7 @@
                                                 Prepare to join a comprehensive work marketplace, bustling with
                                                 an extensive range of elite Software Developers, Designers, and
                                                 Marketers,
-                                                alongside businesses seeking outstanding talent and project execution.
+                                                Businesses seeking outstanding talent and project execution.
                                             </p>
                                         </div>
                                         <form action="{{ url('/sign-up') }}" method="POST"

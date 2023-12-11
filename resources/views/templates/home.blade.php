@@ -279,7 +279,8 @@
                         data-aos-easing="">
                         <div class="aboutBizionic_col_info">
                             <h4>#1. Cost Saving:</h4>
-                            <p><span><img src="/bizionic/images/offer_icon1.png" alt="#" /></span> As a startup or a
+                            <p><span><img src="/bizionic/images/offer_icon1.png" alt="#" /></span> As a startup
+                                or a
                                 matured company, your focus should be on realizing the big IDEA, not letting development
                                 Cost and selecting the right tech stack as core pain points that
                                 distract you from achieving your project goals.
@@ -310,7 +311,8 @@
 
                         <div class="aboutBizionic_col_info">
                             <h4>#2. In-House Talent:</h4>
-                            <p><span><img src="/bizionic/images/about_icon3.png" alt="#" /></span> Most of our 150+
+                            <p><span><img src="/bizionic/images/about_icon3.png" alt="#" /></span> Most of our
+                                150+
                                 project managers, software developers and engineers are based in Bizionic offices across
                                 India, full-time employed with all benefits and employee
                                 retention schemes, and fully dedicated to the hired
@@ -327,7 +329,8 @@
                         data-aos-easing="">
                         <div class="aboutBizionic_col_info">
                             <h4>#3. Flexible Cooperation Models:</h4>
-                            <p><span><img src="/bizionic/images/offer_icon3.png" alt="#" /></span> Hire a full-time
+                            <p><span><img src="/bizionic/images/offer_icon3.png" alt="#" /></span> Hire a
+                                full-time
                                 dedicated developer or a team of
                                 software engineers on a project basis. Fixed price or T&M? We ensure that our clients
                                 are provided with the best, most cost-effective, and deliverable collaboration models
@@ -353,7 +356,8 @@
 
                         <div class="aboutBizionic_col_info">
                             <h4>#5. Bizionic Track Record:</h4>
-                            <p><span><img src="/bizionic/images/offer_icon5.png" alt="#" /></span> Bizionic's project
+                            <p><span><img src="/bizionic/images/offer_icon5.png" alt="#" /></span> Bizionic's
+                                project
                                 managers, software developers and
                                 engineers comprise industry veterans and experienced past employees from major local and
                                 international
@@ -479,7 +483,8 @@
             <div class="custom_tittle">
                 <h2 class="">"Hire Now" <strong>with BIZIONIC</strong> </h2>
                 <h6 class="d-none">Acquire Global Talent in Minutes</h6>
-                <p class="p_color d-none">Create a successful remote workforce with international competence without the
+                <p class="p_color d-none">Create a successful remote workforce with international competence without
+                    the
                     costs and challenges associated with creating a subsidiary. The entire talent pool is vetted,
                     prescreened, and authenticated, including the verification of academic credentials, prior work
                     experience, projects, and technical expertise, as well as for any criminal or other background
@@ -508,8 +513,8 @@
                                 <ul>
                                     <li>
                                         <p>
-                                            <a href="#" class="chrckIcon"><img src="/bizionic/images/checkList_icon.png"
-                                                    alt="#" /></a>
+                                            <a href="#" class="chrckIcon"><img
+                                                    src="/bizionic/images/checkList_icon.png" alt="#" /></a>
                                             Personal Information
                                             <a href="#" class="verified_icon"><img
                                                     src="/bizionic/images/verified_icon.png" alt="#" /></a>
@@ -517,8 +522,8 @@
                                     </li>
                                     <li>
                                         <p>
-                                            <a href="#" class="chrckIcon"><img src="/bizionic/images/checkList_icon.png"
-                                                    alt="#" /></a>
+                                            <a href="#" class="chrckIcon"><img
+                                                    src="/bizionic/images/checkList_icon.png" alt="#" /></a>
                                             Pre-Screening Check
                                             <a href="#" class="verified_icon"><img
                                                     src="/bizionic/images/verified_icon.png" alt="#" /></a>
@@ -526,8 +531,8 @@
                                     </li>
                                     <li>
                                         <p>
-                                            <a href="#" class="chrckIcon"><img src="/bizionic/images/checkList_icon.png"
-                                                    alt="#" /></a>
+                                            <a href="#" class="chrckIcon"><img
+                                                    src="/bizionic/images/checkList_icon.png" alt="#" /></a>
                                             Skills and Competencies
                                             <a href="#" class="verified_icon"><img
                                                     src="/bizionic/images/verified_icon.png" alt="#" /></a>
@@ -535,8 +540,8 @@
                                     </li>
                                     <li>
                                         <p>
-                                            <a href="#" class="chrckIcon"><img src="/bizionic/images/checkList_icon.png"
-                                                    alt="#" /></a>
+                                            <a href="#" class="chrckIcon"><img
+                                                    src="/bizionic/images/checkList_icon.png" alt="#" /></a>
                                             Work Experience
                                             <a href="#" class="verified_icon"><img
                                                     src="/bizionic/images/verified_icon.png" alt="#" /></a>
@@ -544,8 +549,8 @@
                                     </li>
                                     <li>
                                         <p>
-                                            <a href="#" class="chrckIcon"><img src="/bizionic/images/checkList_icon.png"
-                                                    alt="#" /></a>
+                                            <a href="#" class="chrckIcon"><img
+                                                    src="/bizionic/images/checkList_icon.png" alt="#" /></a>
                                             Interview Evaluation
                                             <a href="#" class="verified_icon"><img
                                                     src="/bizionic/images/verified_icon.png" alt="#" /></a>
@@ -553,8 +558,8 @@
                                     </li>
                                     <li>
                                         <p>
-                                            <a href="#" class="chrckIcon"><img src="/bizionic/images/checkList_icon.png"
-                                                    alt="#" /></a>
+                                            <a href="#" class="chrckIcon"><img
+                                                    src="/bizionic/images/checkList_icon.png" alt="#" /></a>
                                             Additional Assessments
                                             <a href="#" class="verified_icon"><img
                                                     src="/bizionic/images/verified_icon.png" alt="#" /></a>
@@ -562,8 +567,8 @@
                                     </li>
                                     <li>
                                         <p>
-                                            <a href="#" class="chrckIcon"><img src="/bizionic/images/checkList_icon.png"
-                                                    alt="#" /></a>
+                                            <a href="#" class="chrckIcon"><img
+                                                    src="/bizionic/images/checkList_icon.png" alt="#" /></a>
                                             Education and Certifications
                                             <a href="#" class="verified_icon"><img
                                                     src="/bizionic/images/verified_icon.png" alt="#" /></a>
@@ -571,8 +576,8 @@
                                     </li>
                                     <li>
                                         <p>
-                                            <a href="#" class="chrckIcon"><img src="/bizionic/images/checkList_icon.png"
-                                                    alt="#" /></a>
+                                            <a href="#" class="chrckIcon"><img
+                                                    src="/bizionic/images/checkList_icon.png" alt="#" /></a>
                                             References
                                             <a href="#" class="verified_icon"><img
                                                     src="/bizionic/images/verified_icon.png" alt="#" /></a>
@@ -580,8 +585,8 @@
                                     </li>
                                     <li>
                                         <p>
-                                            <a href="#" class="chrckIcon"><img src="/bizionic/images/checkList_icon.png"
-                                                    alt="#" /></a>
+                                            <a href="#" class="chrckIcon"><img
+                                                    src="/bizionic/images/checkList_icon.png" alt="#" /></a>
                                             Background Check
                                             <a href="#" class="verified_icon"><img
                                                     src="/bizionic/images/verified_icon.png" alt="#" /></a>
@@ -589,8 +594,8 @@
                                     </li>
                                     <li>
                                         <p>
-                                            <a href="#" class="chrckIcon"><img src="/bizionic/images/checkList_icon.png"
-                                                    alt="#" /></a>
+                                            <a href="#" class="chrckIcon"><img
+                                                    src="/bizionic/images/checkList_icon.png" alt="#" /></a>
                                             Cultural Fit
                                             <a href="#" class="verified_icon"><img
                                                     src="/bizionic/images/verified_icon.png" alt="#" /></a>
@@ -644,7 +649,8 @@
                                 </ul>
 
 
-                                <a href="#" class="btn_default_white">Revolutionize Your Talent Acquisition Journey!</a>
+                                <a href="#" class="btn_default_white">Revolutionize Your Talent Acquisition
+                                    Journey!</a>
                             </div>
                         </div>
                     </div>
@@ -678,7 +684,8 @@
             </div>
 
 
-            <div class="man_avatar magnifier_img"><img src="/bizionic/images/hireMagifier.png" alt="#" /></div>
+            <div class="man_avatar magnifier_img"><img src="/bizionic/images/hireMagifier.png" alt="#" />
+            </div>
 
         </div>
     </div>
