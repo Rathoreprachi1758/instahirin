@@ -222,8 +222,8 @@ export default {
     // props: ["plan"],
     mounted() {
         this.fetchPhoneCodes();
-        console.log("planDetails:", this.planTitle);
-        console.log("planDetails:", this.planCategory);
+        console.log("planTitle:", this.planTitle);
+        console.log("planCategory:", this.planCategory);
     },
     methods: {
         store() {
