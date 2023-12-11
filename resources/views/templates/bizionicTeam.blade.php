@@ -523,8 +523,8 @@
             <div class="indust_work_sectionDetail">
                 <div class="custom_tittle">
                     <h2>Industries <strong>We Work In</strong> </h2>
-                    <p class="p_color"> 
-                    
+                    <p class="p_color">
+
                         We Love To Create Software And Find Simple Solutions To Complex Challenges</p>
                 </div>
 
@@ -659,11 +659,11 @@
         <div class="auto_container pb-4">
 
 
-                        <div class="advaceCareer_hire pb-5" id="goto_form">
+            <div class="advaceCareer_hire pb-5" id="goto_form">
 
-                            <jobs-component></jobs-component>
+                <jobs-component></jobs-component>
 
-                        </div>
+            </div>
 
 
             <div class="aboutProject_section_detail d-none">
@@ -681,42 +681,6 @@
                         <p class="text-center">If you have an idea in mind of how to enhance your <b>business
                                 processes,</b> don’t hesitate <br>
                             to <b>contact us</b> and discover more about our technologies!</p>
-                        {{-- <div class="row">
-                            <div class="col-lg-6 col-md-12">
-                                <div class="project_form_field">
-                                    <input type="text" value="" placeholder="Name*" />
-                                </div>
-                            </div>
-
-                            <div class="col-lg-6 col-md-12">
-                                <div class="project_form_field">
-                                    <input type="text" value="" placeholder="Phone / Skype / Whatsapp" id="phone" />
-                                </div>
-                            </div>
-
-
-                            <div class="col-lg-6 col-md-12">
-                                <div class="project_form_field">
-                                    <input type="text" value="" placeholder="Enter business email" />
-                                </div>
-                            </div>
-
-
-                            <div class="col-lg-12 col-md-12">
-                                <div class="project_form_textarea">
-                                    <textarea placeholder="What can we build together....."></textarea>
-                                </div>
-                            </div>
-
-                            <div class="col-lg-12 col-md-12">
-                                <div class="addFile_button ">
-
-                                    <div class="project_form_submit">
-                                        <input type="submit" value="Contact Us" class="btn_default" />
-                                    </div>
-                                </div>
-                            </div>
-                        </div> --}}
                         <div class="row">
                             <team-component></team-component>
                         </div>

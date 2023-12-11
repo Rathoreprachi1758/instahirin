@@ -20,7 +20,7 @@ $job = \App\Models\Job::find($jobId);
                 <h4>Company: <strong>{{ $job->company }}</strong></h4>
                 <h4>Work Mode: <strong>{{ $job->work_mode }}</strong></h4>
                 <h4>CTC: <strong>{{ $job->ctc }}</strong></h4>
-                <h4>Availabililty: <strong>{{ $job->availability }}</strong></h4>
+                <h4>Employment Type: <strong>{{ $job->availability }}</strong></h4>
 
 
                 <h6 class="pt-3 pb-0">About Us:</h6>
