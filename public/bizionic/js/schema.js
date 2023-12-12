@@ -155,5 +155,5 @@ module.exports = {
     instaHiringSchema,
     hireMeSchema,
     getConnectedSchema,
-    proposalFormSchema,
+    proposalFormSchema
 };
