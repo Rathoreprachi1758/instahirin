@@ -7,6 +7,7 @@ use Laravel\Nova\Fields\File;
 use Laravel\Nova\Fields\ID;
 use Laravel\Nova\Fields\Select;
 use Laravel\Nova\Fields\Text;
+use Laravel\Nova\Fields\Tag;
 use Laravel\Nova\Fields\Trix;
 use Laravel\Nova\Http\Requests\NovaRequest;
 use Laravel\Nova\Fields\DateTime;
@@ -116,9 +117,10 @@ class Job extends Resource
                 ->hideFromIndex(),
             Trix::make('Job Description', 'description'),
             Trix::make('Key Skills', 'responsibilities'),
-            // Text::make('Key Skills', 'key_skills')->resolveUsing(function ($value) {
+            // Tag::make('Experties', 'experties')->showCreateRelationButton()->preload()->displayAsList(),
+            // Text::make('Key Skills', 'responsibilities')->resolveUsing(function ($value) {
             //     if (is_array($value)) {
-            //         return implode(', ', array_column($value, 'name'));
+            //         return implode(', ', array_column($value, 'title'));
             //     }
             //     return $value;
             // }),
