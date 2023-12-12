@@ -9,13 +9,17 @@
             v-model="selectedSearch"
             :options="searchOptions"
             :searchable="true"
+            :multiple="true"
             :close-on-select="true"
+            :internal-search="true"
+            :clear-on-select="false"
             placeholder="Enter skills / designations / companies"
             class="multiselect"
             :class="{ 'multiselect-container': true }"
           ></multiselect2>
           <b><i class="fa fa-search" aria-hidden="true"></i></b>
         </div>
+
         <div class="searchSelect search2">
           <select v-model="selectedExperience">
             <option value="" selected disabled>Select experience</option>
@@ -263,7 +267,7 @@ export default {
       selectedExperience: null,
       selectedLocation: null,
       searchOptions: [],
-      selectedSearch: null,
+      selectedSearch: [],
       //   locationQuery: "",
       //   showLocationDropdown: false,
 
@@ -332,7 +336,7 @@ export default {
 
     fetchSearchOptions() {
       axios
-        .get("/api/v1/job-title")
+        .get("/api/v1/job-skills")
         .then((response) => {
           this.searchOptions = response.data;
         })

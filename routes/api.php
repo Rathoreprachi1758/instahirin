@@ -34,7 +34,7 @@ Route::prefix('v1')->group(function () {
     Route::post('/jobs/skills', [ApiController::class, 'jobs_by_skills']);
     Route::get('/job-skills', [ApiController::class, 'getExperienceOptions']);
     Route::get('/job-locations', [ApiController::class, 'getJobLocations']);
-    Route::get('/job-title', [ApiController::class, 'getJobTitles']);
+    Route::get('/job-skills', [ApiController::class, 'getSearchSkills']);
     Route::post('/jobs-search', [ApiController::class, 'jobs_search']);
     Route::get('/clients', [ApiController::class, 'clients']);
     Route::get('/getPhone', [OnboardController::class, 'getPhoneCodes'])->name('getPhone');

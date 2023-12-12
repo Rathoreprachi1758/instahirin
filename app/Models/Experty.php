@@ -2,8 +2,9 @@
 
 namespace App\Models;
 
-use Illuminate\Database\Eloquent\Factories\HasFactory;
+use App\Models\Job;
 use Illuminate\Database\Eloquent\Model;
+use Illuminate\Database\Eloquent\Factories\HasFactory;
 
 class Experty extends Model
 {
@@ -11,4 +12,9 @@ class Experty extends Model
     protected $table = 'experties';
 
     protected $guarded = [];
+
+    public function jobs()
+    {
+        return $this->belongsToMany(Job::class);
+    }
 }
