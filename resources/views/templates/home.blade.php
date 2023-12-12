@@ -382,123 +382,69 @@
                 <h2><strong>Our</strong> End-to-End Software Development <strong>Process</strong></h2>
             </div>
 
-            <div class="endProcess_img">
-                <span><img src="/bizionic/images/endProcess_flowImg.png" alt="#" /></span>
-            </div>
-        </div>
+            <div class="aboutBizionic_col">
+                <div class="row">
+
+                    <div class="col-lg-6 col-md-6 aos-init aos-animate" data-aos="fade-right" data-aos-duration="500"
+                        data-aos-easing="">
+                        <div class="aboutBizionic_col_info">
+                            <h4>#1. Cost Saving:</h4>
+                            <p><span><img src="/bizionic/images/offer_icon1.png" alt="#" /></span> As a startup or a
+                                matured company, your focus should be on realizing the big IDEA, not letting development
+                                Cost and selecting the right tech stack as core pain points that
+                                distract you from achieving your project goals.
 
 
-        <!-- section core 2 -->
+                            </p><br>
+                            <p>By utilizing the Bizionic hire solution services</p>
 
-        <div class="coreServices_section">
-            <div class="custom_tittle">
-                <h2><strong>Our</strong> Core Services</h2>
-            </div>
-
-            <div class="coreServices_sectionDetail">
-                <div class="coreTabs">
-                    <ul>
-                        <li><a href="#coreTab1">Software Development</a> </li>
-                        <li><a href="#coreTab2">Web Development</a></li>
-                        <li><a href="#coreTab3">Application Development</a></li>
-                        <li><a href="#coreTab4">Software Testing</a></li>
-                        <li><a href="#coreTab5">E-Commerce Solutions</a></li>
-                    </ul>
-                </div>
-
-
-                <div class="coreTabs_data">
-
-                    <!-- core tab1 -->
-                    <div class="coreTabs_data_show" style="display:block" id="coreTab1">
-                        <div class="row">
-                            <div class="col-lg-8 col-md-7">
-                                <div class="coreTabs_data_text">
-                                    <h5>SOFTWARE DEVELOPMENT: </h5>
-                                    <p>Software Development is one of our most popular services. Our clients can reach
-                                        us for the standard or customized software development according to their
-                                        business needs. The Bizionic Team of Software Experts helps design, develop,
-                                        implement, test, deploy, and maintain software.</p>
-                                    <p>Software development services allow businesses to grow, expand, and streamline to
-                                        new heights. Clients can reduce costs, automate tasks, and increase efficiency
-                                        with well-developed products.</p>
-                                    <ul>
-                                        <li>
-                                            <p>Custom Software Development</p>
-                                        </li>
-                                        <li>
-                                            <p>Software Product Development</p>
-                                        </li>
-                                        <li>
-                                            <p>Software Development Consulting</p>
-                                        </li>
-                                        <li>
-                                            <p>Enterprise Software Development</p>
-                                        </li>
-                                        <li>
-                                            <p>Software Testing Service</p>
-                                        </li>
-                                        <li>
-                                            <p>Software Maintenance and Support</p>
-                                        </li>
-                                    </ul>
-                                </div>
-                            </div>
+                            <ul class="abt_list">
+                                <li>
+                                    <p>Clients save around 38%- 50% on their total costs, including fixed costs
+                                        salary, incentives, benefits, and the employer's other obligations, by hiring
+                                        in-house talent compared to hiring offshore talent at Bizionic.</p>
+                                </li>
+                                <li>
+                                    <p>Global talent pool in minutes.</p>
+                                </li>
+                                <li>
+                                    <p>Overcome cross-technology and services product knowledge limitations.</p>
+                                </li>
+                                <li>
+                                    <p>In today’s economic situation, keeping a flexible, low-cost and
+                                        non-obligation technology development team structure is highly advisable.</p>
+                                </li>
+                            </ul>
+                        </div>
 
 
-                            <div class="col-lg-4 col-md-5">
-                                <div class="coreTabs_data_avatar">
-                                    <span><img src="/bizionic/images/core_img1.png" alt="#" /></span>
-                                </div>
-                            </div>
+                        <div class="aboutBizionic_col_info">
+                            <h4>#2. In-House Talent:</h4>
+                            <p><span><img src="/bizionic/images/about_icon3.png" alt="#" /></span> Most of our 150+
+                                project managers, software developers and engineers are based in Bizionic offices across
+                                India, full-time employed with all benefits and employee
+                                retention schemes, and fully dedicated to the hired
+                                clients and projects. A developed reporting and
+                                communication infrastructure will monitor the day-to-day
+                                activity and progress of the offshore talent.</p>
                         </div>
                     </div>
 
 
 
-                    <!-- core tab2 -->
-                    <div class="coreTabs_data_show" id="coreTab2">
-                        <div class="row">
-                            <div class="col-lg-8 col-md-7">
-                                <div class="coreTabs_data_text">
-                                    <h5>WEB DEVELOPMENT: </h5>
-                                    <p>Bizionic has diverse experience in developing high-end, attractive, and
-                                        responsive websites which can be the most cost-effective way of reaching
-                                        potential customers. We developed customized error-free website solutions for
-                                        your business needs, enriched with advanced features and responsive designs that
-                                        define your core business. Our end-to-end web development services incorporate
-                                        the design, development, testing, deployment, and maintenance of websites.</p>
-                                    <ul>
-                                        <li>
-                                            <p>Custom Website Development</p>
-                                        </li>
-                                        <li>
-                                            <p>Responsive Web Design</p>
-                                        </li>
-                                        <li>
-                                            <p>Web Redesign Services</p>
-                                        </li>
-                                        <li>
-                                            <p>Web App Integration</p>
-                                        </li>
-                                        <li>
-                                            <p>Web Consulting Services</p>
-                                        </li>
-                                        <li>
-                                            <p>Maintenance & Support</p>
-                                        </li>
-                                    </ul>
-                                </div>
-                            </div>
 
-
-                            <div class="col-lg-4 col-md-5">
-                                <div class="coreTabs_data_avatar">
-                                    <span><img src="/bizionic/images/core_img2.png" alt="#" /></span>
-                                </div>
-                            </div>
+                    <div class="col-lg-6 col-md-6 aos-init aos-animate" data-aos="fade-left" data-aos-duration="500"
+                        data-aos-easing="">
+                        <div class="aboutBizionic_col_info">
+                            <h4>#3. Flexible Cooperation Models:</h4>
+                            <p><span><img src="/bizionic/images/offer_icon3.png" alt="#" /></span> Hire a full-time
+                                dedicated developer or a team of
+                                software engineers on a project basis. Fixed price or T&M? We ensure that our clients
+                                are provided with the best, most cost-effective, and deliverable collaboration models
+                                depending on their budgets and project
+                                requirements.
+                            </p>
                         </div>
-                    </div>
 
 
 
@@ -539,11 +485,17 @@
                             </div>
 
 
-                            <div class="col-lg-4 col-md-5">
-                                <div class="coreTabs_data_avatar">
-                                    <span><img src="/bizionic/images/core_img3.png" alt="#" /></span>
-                                </div>
-                            </div>
+                        <div class="aboutBizionic_col_info">
+                            <h4>#5. Bizionic Track Record:</h4>
+                            <p><span><img src="/bizionic/images/offer_icon5.png" alt="#" /></span> Bizionic's project
+                                managers, software developers and
+                                engineers comprise industry veterans and experienced past employees from major local and
+                                international
+                                software houses with a minimal 5+ years of experience in related technologies and
+                                project managers over 10+ in multiple technologies and business verticals. We have
+                                worked with over 250+ satisfied clients and have completed more than
+                                500+ project deliveries.
+                            </p>
                         </div>
                     </div>
 
@@ -800,239 +752,140 @@
                         </div>
 
 
-                        <div class="col-lg-4 col-md-4">
-                            <div class="tabsAvatar">
-                                <span><img src="/bizionic/images/uxAvatar.png" alt="#" /></span>
-                            </div>
-                        </div>
+
+<!-- meet team sectin  -->
 
 
-                        <div class="col-lg-4 col-md-4">
-                            <div class="markServices_tabs_col">
-                                <div class="markServices_tabs_colInfo">
-                                    <strong>Layout Wireframes:</strong>
-                                    <p>Think of a website or applications wireframe like an architectural blueprint. Our
-                                        wireframes provide a clear overview of the page structure, layout, information
-                                        architecture, user flow, functionality and
-                                        intended behaviors.
-                                    </p>
-                                </div>
+<div class="meetTeam_section d-none">
 
-                                <div class="markServices_tabs_colInfo">
-                                    <strong>Animations:</strong>
-                                    <p>Our in-house Studio is a design-led team that brings any brand's message to life
-                                        through playful and lovingly crafted 2D, 3D, Long & Short form character
-                                        animation production. Animated stories crafted with
-                                        personality, warmth and wit.
-                                    </p>
-                                </div>
-
-                                <div class="markServices_tabs_colInfo">
-                                    <strong>Illustrations:</strong>
-                                    <p>Our team comprises the finest illustrators and animators with informative writing
-                                        genre that clarifies a specific situation or object through demonstrative
-                                        evidence. You only need to look in one place to find the perfect proven artists
-                                        quickly and easily
-                                        for your illustration needs.</p>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
+    <div class="meetTeam_section_detail">
 
 
-
-                <!-- 360 eCommerce Solutions -->
-
-                <div class="markServices_tabsInfo_detail" id="tab3">
-
-                    <h3 class="tabsMarker ecomMarker">
-                        360 E-Commerce <br> Solutions
-                    </h3>
-
-                    <div class="row">
-                        <div class="col-lg-4 col-md-4">
-                            <div class="markServices_tabs_col">
-                                <div class="markServices_tabs_colInfo">
-                                    <strong>E-Commerce Store:</strong>
-                                    <p>Our 360 e-Commerce solutions will assist in creating robust, easy navigation,
-                                        user-friendly, and conversion-focused
-                                        commerce platforms (Web and
-                                        Applications) that generate results & assistin growing brands' digital presence
-                                        and sales channels.</p>
-                                </div>
-
-                                <div class="markServices_tabs_colInfo">
-                                    <strong>Payment Gateway:</strong>
-                                    <p>We partner with major payment gateway providers and assist brands in managing
-                                        their e-Commerce platform with seamless secured payment solutions integration,
-                                        enabling the platform to provide services to
-                                        users across geographic regions.</p>
-                                </div>
-
-                                <div class="markServices_tabs_colInfo">
-                                    <strong>Voice Commerce:</strong>
-                                    <p>By leveraging voice recognition technology based on artificial intelligence, we
-                                        assist brands in enabling users to use voice
-                                        commands to make purchases on various integrated platforms without clicking
-                                        multiple buttons.</p>
-                                </div>
-                            </div>
-                        </div>
-
-
-                        <div class="col-lg-4 col-md-4">
-                            <div class="tabsAvatar ">
-                                <span><img src="/bizionic/images/ecommerceAvatar.png" alt="#" /></span>
-                            </div>
-                        </div>
-
-
-                        <div class="col-lg-4 col-md-4">
-                            <div class="markServices_tabs_col">
-                                <div class="markServices_tabs_colInfo">
-                                    <strong>Chatbots Commerce:</strong>
-                                    <p>Our WhatsApp and Web/device-based Chatbot commerce solutions can assist brands in
-                                        integrating real-time conversation solutions, promoting products and services on
-                                        active devices, capturing leads, and
-                                        provide real-time customer assistance.
-                                    </p>
-                                </div>
-
-                                <div class="markServices_tabs_colInfo">
-                                    <strong>Customer Service Automation:</strong>
-                                    <p>With our automated customer services
-                                        solutions, brands can streamline workflows & reduce human dependencies, enhance
-                                        business deliveries and customer
-                                        satisfaction, and build brand trust &
-                                        recognition with the users.
-                                    </p>
-                                </div>
-
-                                <div class="markServices_tabs_colInfo">
-                                    <strong>Artificial Intelligence:</strong>
-                                    <p>Our AI and predictive analytics solution will assist brands in delivering an
-                                        outstanding customer and user experience in
-                                        e-Commerce and making intelligent
-                                        business decisions driven by customer data
-                                        and behavioral analysis.</p>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="consult_btn">
-                    <a href="/get-a-free-consultation" class="btn_default mt-2">Get a Free Consultation</a>
-                </div>
+        <div class="auto_container">
+            <div class="custom_tittle">
+                <h2 class="">"Hire Now" <strong>with BIZIONIC</strong> </h2>
+                <h6 class="d-none">Acquire Global Talent in Minutes</h6>
+                <p class="p_color d-none">Create a successful remote workforce with international competence without the
+                    costs and challenges associated with creating a subsidiary. The entire talent pool is vetted,
+                    prescreened, and authenticated, including the verification of academic credentials, prior work
+                    experience, projects, and technical expertise, as well as for any criminal or other background
+                    checks. A dedicated project management team is also assigned to each project to ensure monitoring,
+                    timely completion, and immediate replacements if required. By providing the parties with access to
+                    dependable, skilled, and experienced mediator project managers and the ecosystem to ensure project
+                    completion and obligation fulfillment, Bizionic fills the global talent pool and project management
+                    ecosystem gap.</p>
             </div>
         </div>
-    </div>
-</div>
 
 
 
 
 
 
-<div class="ourEndProcess_section bg_e5e6e7 pt-5 onmainPage">
-    <div class="auto_container">
 
-        <!-- section model 3 -->
+        <div class="talentCheck_list">
+            <div class="auto_container">
+                <div class="talentCheck_list_info">
+                    <div class="row">
+                        <div class="col-lg-6 col-md-6">
+                            <div class="talentCheckList">
+                                <h4><b>Bizionic,</b> Talent Onboarding Checklist</h4>
 
-        <div class="sourcingModel_section pt-2">
-            <div class="custom_tittle">
-                <h2><strong>Our</strong> Talent Sourcing Models</h2>
-                <p class="p_color text-justify p-0">We at Bizionic believe in diversity, therefore we do not stick to a
-                    single outsourcing model while providing software development outsourcing services.
-                    We understand that all businesses are different and that our business model shall be formed
-                    according to their needs and problems.</p>
-                <p class="p_color text-justify pb-2">We specialize in offering three business models as, <b>IT Staff
-                        Augmentation, Dedicated Teams, and Project Based Outsourcing.</b></p>
-            </div>
+                                <ul>
+                                    <li>
+                                        <p>
+                                            <a href="#" class="chrckIcon"><img src="/bizionic/images/checkList_icon.png"
+                                                    alt="#" /></a>
+                                            Personal Information
+                                            <a href="#" class="verified_icon"><img
+                                                    src="/bizionic/images/verified_icon.png" alt="#" /></a>
+                                        </p>
+                                    </li>
+                                    <li>
+                                        <p>
+                                            <a href="#" class="chrckIcon"><img src="/bizionic/images/checkList_icon.png"
+                                                    alt="#" /></a>
+                                            Pre-Screening Check
+                                            <a href="#" class="verified_icon"><img
+                                                    src="/bizionic/images/verified_icon.png" alt="#" /></a>
+                                        </p>
+                                    </li>
+                                    <li>
+                                        <p>
+                                            <a href="#" class="chrckIcon"><img src="/bizionic/images/checkList_icon.png"
+                                                    alt="#" /></a>
+                                            Skills and Competencies
+                                            <a href="#" class="verified_icon"><img
+                                                    src="/bizionic/images/verified_icon.png" alt="#" /></a>
+                                        </p>
+                                    </li>
+                                    <li>
+                                        <p>
+                                            <a href="#" class="chrckIcon"><img src="/bizionic/images/checkList_icon.png"
+                                                    alt="#" /></a>
+                                            Work Experience
+                                            <a href="#" class="verified_icon"><img
+                                                    src="/bizionic/images/verified_icon.png" alt="#" /></a>
+                                        </p>
+                                    </li>
+                                    <li>
+                                        <p>
+                                            <a href="#" class="chrckIcon"><img src="/bizionic/images/checkList_icon.png"
+                                                    alt="#" /></a>
+                                            Interview Evaluation
+                                            <a href="#" class="verified_icon"><img
+                                                    src="/bizionic/images/verified_icon.png" alt="#" /></a>
+                                        </p>
+                                    </li>
+                                    <li>
+                                        <p>
+                                            <a href="#" class="chrckIcon"><img src="/bizionic/images/checkList_icon.png"
+                                                    alt="#" /></a>
+                                            Additional Assessments
+                                            <a href="#" class="verified_icon"><img
+                                                    src="/bizionic/images/verified_icon.png" alt="#" /></a>
+                                        </p>
+                                    </li>
+                                    <li>
+                                        <p>
+                                            <a href="#" class="chrckIcon"><img src="/bizionic/images/checkList_icon.png"
+                                                    alt="#" /></a>
+                                            Education and Certifications
+                                            <a href="#" class="verified_icon"><img
+                                                    src="/bizionic/images/verified_icon.png" alt="#" /></a>
+                                        </p>
+                                    </li>
+                                    <li>
+                                        <p>
+                                            <a href="#" class="chrckIcon"><img src="/bizionic/images/checkList_icon.png"
+                                                    alt="#" /></a>
+                                            References
+                                            <a href="#" class="verified_icon"><img
+                                                    src="/bizionic/images/verified_icon.png" alt="#" /></a>
+                                        </p>
+                                    </li>
+                                    <li>
+                                        <p>
+                                            <a href="#" class="chrckIcon"><img src="/bizionic/images/checkList_icon.png"
+                                                    alt="#" /></a>
+                                            Background Check
+                                            <a href="#" class="verified_icon"><img
+                                                    src="/bizionic/images/verified_icon.png" alt="#" /></a>
+                                        </p>
+                                    </li>
+                                    <li>
+                                        <p>
+                                            <a href="#" class="chrckIcon"><img src="/bizionic/images/checkList_icon.png"
+                                                    alt="#" /></a>
+                                            Cultural Fit
+                                            <a href="#" class="verified_icon"><img
+                                                    src="/bizionic/images/verified_icon.png" alt="#" /></a>
+                                        </p>
+                                    </li>
+                                </ul>
 
 
-            <div class="sourceModel_column">
-                <div class="row">
-
-                    <div class="col-lg-4 col-md-6 modelCol">
-                        <div class="sourceModel_colInfo">
-                            <div class="sourceModel_colHead">
-                                <h5>InstaHire</h5>
-                                <lable>"Hire Talent in Minutes"</lable>
-                            </div>
-
-                            <div class="sourceModel_inner">
-                                <div class="sourceModel_avatar">
-                                    <span><img src="/bizionic/images/model_avatar1.png" alt="#" /></span>
-                                </div>
-
-                                <div class="sourceModel_list">
-                                    <ul>
-                                        <li>
-                                            <p>Hire in Minutes” and
-                                                “Hire Beyond Borders” </p>
-                                        </li>
-                                        <li>
-                                            <p>Hire prescreened and
-                                                qualified Talent in minutes!</p>
-                                        </li>
-                                        <li>
-                                            <p>Create a successful remote workforce with international competence!</p>
-                                        </li>
-                                        <li>
-                                            <p>A dedicated project management team assigned to individual projects</p>
-                                        </li>
-                                    </ul>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-
-
-                    <div class="col-lg-4 col-md-6 modelCol">
-                        <div class="sourceModel_colInfo">
-                            <div class="sourceModel_colHead">
-                                <h5>IT Staff Augmentation</h5>
-                                <!-- <lable>"Hire Talent in Minutes"</lable> -->
-                            </div>
-
-                            <div class="sourceModel_inner">
-                                <div class="sourceModel_avatar">
-                                    <span><img src="/bizionic/images/model_avatar2.png" alt="#" /></span>
-                                </div>
-
-                                <div class="sourceModel_list">
-                                    <ul>
-                                        <li>
-                                            <p>Hire a temporary staff</p>
-                                        </li>
-                                        <li>
-                                            <p>Suitable for both long-term
-                                                and short-term projects</p>
-                                        </li>
-                                        <li>
-                                            <p>Enhances efficiencies</p>
-                                        </li>
-                                        <li>
-                                            <p>Meets strict deadlines</p>
-                                        </li>
-                                        <li>
-                                            <p>Costs optimization</p>
-                                        </li>
-                                    </ul>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-
-
-
-                    <div class="col-lg-4 col-md-6 modelCol">
-                        <div class="sourceModel_colInfo">
-                            <div class="sourceModel_colHead">
-                                <h5>Dedicated Teams</h5>
-                                <!-- <lable>"Hire Talent in Minutes"</lable> -->
+                                <a href="#" class="btn_default_white">Talent Onboarding Assessment Process</a>
                             </div>
 
                             <div class="sourceModel_inner">
@@ -1040,86 +893,56 @@
                                     <span><img src="/bizionic/images/model_avatar3.png" alt="#" /></span>
                                 </div>
 
-                                <div class="sourceModel_list">
-                                    <ul>
-                                        <li>
-                                            <p>Hire a professional team</p>
-                                        </li>
-                                        <li>
-                                            <p>Team of expert developers, engineers, and project managers</p>
-                                        </li>
-                                        <li>
-                                            <p>Suitable for long-term projects and controls costs with effective
-                                                planning</p>
-                                        </li>
-                                        <li>
-                                            <p>Flexible project scoping with complete control</p>
-                                        </li>
-                                    </ul>
-                                </div>
+
+
+                        <div class="col-lg-6 col-md-6">
+                            <div class="talentCheckList frList_sec">
+                                <h4><b>Find Global Talent in </b> Minutes, <b>On board in</b> Hours! </h4>
+
+                                <ul>
+                                    <li>
+                                        <p>
+                                            Bizionic enables businesses to find global talent in minutes and helps in
+                                            hassle-free on boarding.
+                                        </p>
+                                    </li>
+                                    <li>
+                                        <p>
+                                            Cost-effective workforce solutions to achieve better productivity, on-time
+                                            deliverables, and balanced work cultures is what we promote.
+                                        </p>
+                                    </li>
+                                    <li>
+                                        <p>
+                                            With our dedicated project managers and project management and
+                                            monitoring tools, Bizionic ensures your project is delivered with precision.
+                                        </p>
+                                    </li>
+                                    <li>
+                                        <p>
+                                            While the world runs on time, we offer quick solutions for hiring top talent
+                                            without compromising agility and efficiency.
+                                        </p>
+                                    </li>
+                                    <li>
+                                        <p>
+                                            “Hiring beyond borders” is no more a challenge as you can hire Global
+                                            “Talent
+                                            in Minutes” with the Bizionic Hiring Platform, saving costs and time.
+                                        </p>
+                                    </li>
+                                </ul>
+
+
+                                <a href="#" class="btn_default_white">Revolutionize Your Talent Acquisition Journey!</a>
                             </div>
-                        </div>
-                    </div>
-
-
-                    <div class="col-lg-4 col-md-6 modelCol">
-                        <div class="sourceModel_colInfo">
-                            <div class="sourceModel_colHead">
-                                <h5>Project Based Outsourcing</h5>
-                                <!-- <lable>"Hire Talent in Minutes"</lable> -->
-                            </div>
-
-                            <div class="sourceModel_inner">
-                                <div class="sourceModel_avatar">
-                                    <span><img src="/bizionic/images/model_avatar4.png" alt="#" /></span>
-                                </div>
-
-                                <div class="sourceModel_list">
-                                    <ul>
-                                        <li>
-                                            <p>Project Based Outsourcing</p>
-                                        </li>
-                                        <li>
-                                            <p>Fixed project scope</p>
-                                        </li>
-                                        <li>
-                                            <p>Minimum client involvement </p>
-                                        </li>
-                                        <li>
-                                            <p>Minimize risks and costs involved</p>
-                                        </li>
-                                        <li>
-                                            <p>Accelerate project delivery</p>
-                                        </li>
-                                    </ul>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-
-
-
-
-                    <div class="col-lg-4 col-md-6 modelCol">
-                        <div class="sourceModel_colInfo">
-
-                            <div class="connect_col">
-                                <div class="connectText">
-                                    <h3><strong>Connect</strong> with <strong>Us</strong><br> and we will provide<br>
-                                        you with the best<br> <strong>Solutions!</strong></h3>
-                                    <a href="/get-a-free-consultation" class="btn_default">Contact Now</a>
-
-
-                                    <span class="connectRoc"><img src="/bizionic/images/rocket_avatar.png"
-                                            alt="#" /></span>
-                                </div>
-                            </div>
-
                         </div>
                     </div>
                 </div>
             </div>
         </div>
+        <experts-component></experts-component>
+    </div>
 
 
     </div>
@@ -1336,10 +1159,7 @@
                     </div>
 
 
-                </div>
-            </div>
-
-
+            <div class="man_avatar magnifier_img"><img src="/bizionic/images/hireMagifier.png" alt="#" /></div>
 
         </div>
     </div>
@@ -1360,306 +1180,3 @@
 
 
 @include('partials.services')
-
-
-
-<!-- get in touch section  -->
-
-<div class="get_in_touchSection">
-    <div class="auto_container">
-        <div class="get_in_touchSection_detail text-center align-center justify-content-center ">
-            <div class="custom_tittle">
-                <h2 class="p-0"><strong>Need Assistance?</strong> Get in touch</h2>
-            </div>
-
-            <div class="row text-center align-center justify-content-center text-primary mt-4 pt-4">
-
-                <div class="col-lg-3 col-md-6 pt-4 pb-4  colSet">
-                    <!-- <a href="https://chat.whatsapp.com/9059360184"> -->
-                    <a href="https://api.whatsapp.com/send?phone=919059360184" target="_blank">
-                        <i class="pt-3 fa fa-whatsapp fa-3x" aria-hidden="true"></i><br>
-                        <p class="mt-4 h5">Whats app</p>
-                        <!-- <a href="https://api.whatsapp.com/send?phone=916302464538">Send Message</a> -->
-                    </a>
-                </div>
-
-                <div class="vr"></div>
-                <div class="col-lg-3 col-md-6  pt-4 pb-4 colSet" id="showPopup" data-toggle="modal"
-                    data-target="#callModal">
-
-                    <i class="pt-3 fa fa-phone fa-3x"></i>
-                    <p class="mt-4 h5 cursor-pointer">Call</p>
-
-                </div>
-                <div class="vr"></div>
-
-                <div class="col-lg-3 col-md-6  pt-4 pb-4  colSet" data-toggle="modal" data-target="#videoCallModal">
-
-                    <i class="pt-3 fa fa-video-camera fa-3x" aria-hidden="true"></i>
-                    <p class="mt-4 h5 cursor-pointer">Video Call</p>
-
-                </div>
-
-                <div class="vr"></div>
-                <div class="col-lg-3 col-md-6  pt-4 pb-4  colSet">
-                    <a href="mailto:services@eshare.ai">
-                        <i class="pt-3 fa fa-envelope-o fa-3x" aria-hidden="true"></i>
-                        <p class="mt-4 h5">Email</p>
-                    </a>
-                </div>
-
-
-            </div>
-
-        </div>
-    </div>
-
-
-
-
-
-    <!-- Call Modal -->
-    <div class="modal fade" id="callModal" tabindex="-1" role="dialog" aria-labelledby="callModalLabel"
-        aria-hidden="true">
-        <div class="modal-dialog" role="document">
-            <div class="modal-content">
-
-                <div class="modal-body">
-                    <div class=" p-2">
-                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                            <span aria-hidden="true">&times;</span>
-                        </button>
-                        <h3 class="modal-title " id="callModalLabel">Request a Call Back</h3>
-                        <form id="contactForm" action="contact-form" method="post">
-                            <div class="contactUs_info_form p-0">
-                                <div class="row">
-
-
-                                    <div class="col-lg-6">
-                                        <div class="contactUs_info_field">
-                                            <strong>Full Name<sup class="text-danger">*</sup></strong>
-                                            <div class="contactUs_info_fieldInput">
-                                                <input type="text" name="full_name" placeholder="" value="" />
-                                            </div>
-                                        </div>
-                                    </div>
-
-                                    <div class="col-lg-6">
-                                        <div class="contactUs_info_field">
-                                            <strong>Company Name</strong>
-                                            <div class="contactUs_info_fieldInput">
-                                                <input type="text" name="company_name" placeholder="" value="" />
-                                            </div>
-                                        </div>
-                                    </div>
-
-
-                                    <div class="col-lg-6">
-                                        <div class="contactUs_info_field">
-                                            <strong>Email<sup class="text-danger">*</sup></strong>
-                                            <div class="contactUs_info_fieldInput">
-                                                <input type="text" name="email" placeholder="" value="" />
-                                            </div>
-                                        </div>
-                                    </div>
-
-                                    <div class="col-lg-6">
-                                        <div class="contactUs_info_field">
-                                            <strong>Country Name<sup class="text-danger">*</sup></strong>
-                                            <div class="contactUs_info_fieldSelect">
-                                                <select class="form-control" name="country_name" id="countrySelect"
-                                                    placeholder="Search or select a country">
-                                                    <!-- Options will be dynamically populated using JavaScript -->
-                                                </select>
-                                            </div>
-
-                                        </div>
-                                    </div>
-
-                                    <div class="col-lg-6" hidden>
-                                        <div class="contactUs_info_field">
-                                            <strong>Country code<sup class="text-danger">*</sup></strong>
-                                            <div class="contactUs_info_fieldSelect">
-                                                <select class="form-control" name="country_code" id="countryCodeSelect"
-                                                    placeholder="Search or select a mobile code">
-                                                    <!-- Options will be dynamically populated using JavaScript -->
-                                                </select>
-                                            </div>
-                                        </div>
-                                    </div>
-
-
-                                    <div class="col-lg-6">
-                                        <div class="contactUs_info_field">
-                                            <strong>Mobile code<sup class="text-danger">*</sup></strong>
-                                            <div class="contactUs_info_fieldSelect">
-                                                <select class="form-control" name="mobile_code" id="mobileCodeSelect"
-                                                    placeholder="Search or select a mobile code">
-                                                    <!-- Options will be dynamically populated using JavaScript -->
-                                                </select>
-                                            </div>
-                                        </div>
-                                    </div>
-
-
-                                    <div class="col-lg-6">
-                                        <div class="contactUs_info_field">
-                                            <strong>Contact Number<sup class="text-danger">*</sup></strong>
-                                            <div class="contactUs_info_fieldInput">
-                                                <input type="text" name="contact_number" placeholder="" value="" />
-                                            </div>
-                                        </div>
-                                    </div>
-
-
-                                </div>
-                                <input type="time" id="time" name="time" value="" hidden />
-                                <input type="date" name="date" value="" hidden />
-                                <input type="text" name="type" placeholder="" value="call" hidden />
-                                <div class="contactBtn pt-3  mt-3">
-                                    <input type="submit" value="Submit" class="btn_default d-block w-100" />
-                                </div>
-                            </div>
-                        </form>
-
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-
-
-    <!-- Video Call Modal -->
-    <div class="modal fade" id="videoCallModal" tabindex="-1" role="dialog" aria-labelledby="videoCallModalLabel"
-        aria-hidden="true">
-        <div class="modal-dialog" role="document">
-            <div class="modal-content">
-
-                <div class="modal-body">
-                    <div class=" p-2">
-                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                            <span aria-hidden="true">&times;</span>
-                        </button>
-                        <h3 class="modal-title " id="callModalLabel">Book a Video Call</h3>
-                        <form id="contactForm" action="contact-form" method="post">
-                            <div class="contactUs_info_form p-0">
-                                <div class="row">
-                                    <div class="col-lg-6">
-                                        <div class="contactUs_info_field">
-                                            <strong>Full Name<sup class="text-danger">*</sup></strong>
-                                            <div class="contactUs_info_fieldInput">
-                                                <input type="text" name="full_name" placeholder="" value="" />
-                                            </div>
-                                        </div>
-                                    </div>
-
-
-                                    <div class="col-lg-6">
-                                        <div class="contactUs_info_field">
-                                            <strong>Company Name</strong>
-                                            <div class="contactUs_info_fieldInput">
-                                                <input type="text" name="company_name" placeholder="" value="" />
-                                            </div>
-                                        </div>
-                                    </div>
-
-
-                                    <div class="col-lg-6">
-                                        <div class="contactUs_info_field">
-                                            <strong>Country Name<sup class="text-danger">*</sup></strong>
-                                            <div class="contactUs_info_fieldSelect">
-                                                <select class="form-control" name="country_name" id="videoCountrySelect"
-                                                    placeholder="Search or select a country">
-                                                    <!-- Options will be dynamically populated using JavaScript -->
-                                                </select>
-                                            </div>
-
-                                        </div>
-                                    </div>
-
-                                    <div class="col-lg-6" hidden>
-                                        <div class="contactUs_info_field">
-                                            <strong>Country code<sup class="text-danger">*</sup></strong>
-                                            <div class="contactUs_info_fieldSelect">
-                                                <select class="form-control" name="country_code"
-                                                    id="videoCountryCodeSelect"
-                                                    placeholder="Search or select a mobile code">
-                                                    <!-- Options will be dynamically populated using JavaScript -->
-                                                </select>
-                                            </div>
-                                        </div>
-                                    </div>
-
-
-                                    <div class="col-lg-6">
-                                        <div class="contactUs_info_field">
-                                            <strong>Mobile code<sup class="text-danger">*</sup></strong>
-                                            <div class="contactUs_info_fieldSelect">
-                                                <select class="form-control" name="mobile_code"
-                                                    id="videoMobileCodeSelect"
-                                                    placeholder="Search or select a mobile code">
-                                                    <!-- Options will be dynamically populated using JavaScript -->
-                                                </select>
-                                            </div>
-                                        </div>
-                                    </div>
-
-
-                                    <div class="col-lg-6">
-                                        <div class="contactUs_info_field">
-                                            <strong>Contact Number<sup class="text-danger">*</sup></strong>
-                                            <div class="contactUs_info_fieldInput">
-                                                <input type="text" name="contact_number" placeholder="" value="" />
-                                            </div>
-                                        </div>
-                                    </div>
-
-
-                                    <div class="col-lg-6">
-                                        <div class="contactUs_info_field">
-                                            <strong>Email<sup class="text-danger">*</sup></strong>
-                                            <div class="contactUs_info_fieldInput">
-                                                <input type="text" name="email" placeholder="" value="" />
-                                            </div>
-                                        </div>
-                                    </div>
-
-                                    <div class="col-lg-6">
-                                        <div class="contactUs_info_field">
-                                            <strong>Date<sup class="text-danger">*</sup></strong>
-                                            <input type="date" name="date" />
-                                        </div>
-                                    </div>
-
-
-                                    <div class="col-lg-6">
-                                        <div class="contactUs_info_field">
-                                            <strong>Time<sup class="text-danger">*</sup></strong>
-                                            <input type="time" id="time" name="time" />
-                                        </div>
-                                    </div>
-
-
-
-
-
-
-
-                                </div>
-
-
-                                <input type="text" name="type" placeholder="" value="video" hidden />
-                                <div class="contactBtn pt-3 mt-3">
-                                    <input type="submit" value="Submit" class="btn_default   d-block w-100" />
-                                </div>
-                            </div>
-                        </form>
-
-                    </div>
-                </div>
-
-            </div>
-        </div>
-    </div>
-
-</div>

@@ -82,7 +82,7 @@
                             <p>Please fill the form and our representative will get back to you.</p>
                         </div>
                         <proposal-component :plan-title="'{{ $plan->title }}'" :plan-category="'{{ $plancat }}'"></proposal-component>
-
+                        {{-- <proposal-component></proposal-component> --}}
 
                     </div>
                 </div>

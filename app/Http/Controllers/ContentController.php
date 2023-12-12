@@ -44,11 +44,14 @@ class ContentController extends Controller
 
         $slugs = array_filter(func_get_args());
         $pageSlug = implode('|', $slugs);
+        // dd($pageSlug);
 
         // If there is no
-        $pageSlug = strlen($pageSlug) ? $pageSlug : 'hire';
+        // $pageSlug = strlen($pageSlug) ? $pageSlug : 'hire';
+        //dd($pageSlug);
+        $pageSlug = strlen($pageSlug) ? $pageSlug : 'about-us';
         $page = Page::where('slug', '=', $pageSlug)->first();
-        //dd($page->meta_title);
+        // dd($pageSlug);
         //dd($page->meta_keywords);
         //dd($page->meta_description);
 
@@ -929,7 +932,7 @@ class ContentController extends Controller
     public function proposalForm(Request $request)
     {
 
-        //dd($request->all());
+        // dd($request->all());
         $validatedData = $request->validate([
             'name' => 'required',
             'company' => '',
