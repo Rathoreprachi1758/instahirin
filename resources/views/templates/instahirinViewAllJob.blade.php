@@ -35,8 +35,12 @@
 </div> --}}
 
 <div class="advaceCareer_hire pb-5" id="goto_form">
+    <div class="auto_container">
+        <div class="jobs_on_view">
+            <jobs-component></jobs-component>
 
-    <jobs-component></jobs-component>
+        </div>
+    </div>
 
 </div>
 
