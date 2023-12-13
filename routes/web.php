@@ -5,6 +5,7 @@ use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\ContentController;
 use App\Http\Controllers\OnboardController;
 use App\Http\Controllers\Logincontroller;
+use App\Http\Controllers\profileController;
 
 /*
 |--------------------------------------------------------------------------
@@ -24,14 +25,18 @@ Route::get('sitemap.xml', function () {
 Route::get('/get-sign-Up', [Logincontroller::class, 'index'])->name('signin');
 Route::Post('sign-up', [Logincontroller::class, 'store'])->name('submit.signup');
 Route::get('/loginpage', [LoginController::class, 'login'])->name('loginpage');
-// Route::post('dashboard', [LoginController::class, 'authenticate'])->name('login');
-// Route::get('logout', [loginController::class, 'logout']);
-// Route::middleware(['auth.check'])->group(function () {
+// Route::middleware(['middleware' =>'auth.check'])->group(function () {
     Route::post('dashboard', [LoginController::class, 'authenticate'])->name('login');
     Route::get('logout', [LoginController::class, 'logout']);
+    //profile
+    Route::get('profile', [ProfileController::class, 'index']);
+    Route::get('user-information',[profileController::class,'user_info']);
 // });
+
+Route::get('reset-password', [LoginController::class, 'resetpswd']);
 Route::get('forgot-password', [LoginController::class, 'forgotpassword']);
-Route::post('password-reset', [LoginController::class,'resetpassword']);
+
+
 Route::get('/{levelOneSlug?}/{levelTwoSlug?}/{levelThreeSlug?}/{levelFourSlug?}', 'App\Http\Controllers\ContentController@index')->name('index');
 
 // ContactUs Form Submission

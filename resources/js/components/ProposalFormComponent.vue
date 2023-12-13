@@ -3,7 +3,9 @@
 </script>
 
 <template>
-    <div v-if="planTitle && planCategory">
+    <!-- <h1>{{ this.planCategory }}</h1> -->
+    <div v-if="this.planTitle && this.planCategory">
+
         <div class="connected_form_info">
             <div
                 class="alert alert-success text-center"
