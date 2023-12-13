@@ -3,7 +3,7 @@
 </script>
 
 <template>
-    <div v-if="this && planTitle && planCategory">
+    <div v-if="this && (planTitle && planCategory)">
         <div class="connected_form_info">
             <div
                 class="alert alert-success text-center"
@@ -364,10 +364,12 @@ export default {
         planTitle: {
             type: String,
             required: true,
+            default: ''
         },
         planCategory: {
             type: String,
             required: true,
+            default: ''
         },
     },
     data() {
@@ -393,9 +395,10 @@ export default {
         if (!this.planTitle || !this.planCategory) {
             console.error("planTitle or planCategory is empty or undefined.");
             return;
+        }else{
+            console.log("planTitle:", this.planTitle);
+            console.log("Category:", this.planCategory);
         }
-        console.log("planTitle:", this.planTitle);
-        console.log("Category:", this.planCategory);
     },
     methods: {
         store() {
