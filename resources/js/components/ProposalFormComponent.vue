@@ -3,9 +3,7 @@
 </script>
 
 <template>
-    <!-- <h1>{{ this.planCategory }}</h1> -->
-    <div v-if="this.planTitle && this.planCategory">
-
+    <div v-if="!showDropDowns">
         <div class="connected_form_info">
             <div
                 class="alert alert-success text-center"
@@ -366,10 +364,12 @@ export default {
         planTitle: {
             type: String,
             required: true,
+            default: ''
         },
         planCategory: {
             type: String,
             required: true,
+            default: ''
         },
     },
     data() {
@@ -384,9 +384,12 @@ export default {
                 plan_category: "",
                 plan: "",
                 details: "",
+                planTitle: '',
+                planCategory: ''
                 // document: null,
             },
             phoneCodes: [],
+            showDropDowns: true
         };
     },
     // props: ["plan"],
@@ -395,9 +398,11 @@ export default {
         if (!this.planTitle || !this.planCategory) {
             console.error("planTitle or planCategory is empty or undefined.");
             return;
+        }else{
+            this.showDropDowns = false
+            console.log("planTitle:", this.planTitle);
+            console.log("Category:", this.planCategory);
         }
-        console.log("planTitle:", this.planTitle);
-        console.log("Category:", this.planCategory);
     },
     methods: {
         store() {

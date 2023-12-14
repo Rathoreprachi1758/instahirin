@@ -33,7 +33,7 @@ $job = \App\Models\Job::find($jobId);
                 {{-- {{ $job->description }} --}}
                 {{ strip_tags($job->description) }}
 
-                <h6 class="">Key Responsibilities:</h6>
+                <h6 class="">Key Skills:</h6>
                 {{-- <div class="discList ml-4 pt-0 pb-3">{{ $job->responsibilities }}</div> --}}
                 {{-- {{ $job->responsibilities }} --}}
                 {{-- {!! html_entity_decode($job->responsibilities) !!} --}}

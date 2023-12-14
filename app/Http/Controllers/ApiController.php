@@ -8,6 +8,7 @@ use App\Models\Client;
 use App\Models\Expert;
 use Illuminate\Http\Request;
 use App\Models\ExpertCategory;
+use App\Models\Experty;
 use Illuminate\Support\Facades\DB;
 
 class ApiController extends Controller
@@ -99,9 +100,9 @@ class ApiController extends Controller
     }
 
     // method for fetching experience column values from job table
-    public function getExperienceOptions(Request $request)
+    public function getSearchSkills(Request $request)
     {
-        $experienceOptions = Skill::distinct()->pluck('title');
+        $experienceOptions = Experty::distinct()->pluck('title');
 
         return response()->json($experienceOptions);
     }
@@ -133,13 +134,13 @@ class ApiController extends Controller
     {
         // Validation for the incoming data
         $validatedData = $request->validate([
-            'title' => 'nullable|string',
+            'title' => 'array',
             'experience' => 'nullable|string',
             'location' => 'nullable|string',
         ]);
 
         // Extract values from the validated data
-        $title = $validatedData['title'];
+        $selectedSkills = $validatedData['title'];
         $experience = $validatedData['experience'];
         $location = $validatedData['location'];
 
@@ -147,8 +148,13 @@ class ApiController extends Controller
         $query = Job::query()->with('skills');
 
         // Filter by title
-        if ($title) {
-            $query->where('title', $title);
+        // if ($title) {
+        //     $query->where('title', $title);
+        // }
+        if ($selectedSkills) {
+            $query->whereHas('skills', function ($q) use ($selectedSkills) {
+                $q->whereIn('title', $selectedSkills);
+            });
         }
 
         // Filter by experience
