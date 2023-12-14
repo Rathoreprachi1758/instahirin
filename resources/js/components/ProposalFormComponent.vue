@@ -3,360 +3,194 @@
 </script>
 
 <template>
-    <div v-if="!showDropDowns">
-        <div class="connected_form_info">
-            <div
-                class="alert alert-success text-center"
-                role="alert"
-                id="success"
-                ref="successMessage"
-            >
-                Thank you for the We will contact you shortly.
-            </div>
+    <!-- <div v-if="!showDropDowns"> -->
+    <div class="connected_form_info">
+        <div
+            class="alert alert-success text-center"
+            role="alert"
+            id="success"
+            ref="successMessage"
+        >
+            Thank you for the We will contact you shortly.
+        </div>
 
-            <div
-                class="alert alert-danger text-center"
-                role="alert"
-                id="failure"
-                ref="failureMessage"
-            >
-                Sorry! There is some problem sending your inquiry at the moment,
-                Please try again.
-            </div>
-            <div class="project_form">
-                <div class="row">
-                    <!-- name -->
-                    <div class="col-lg-6 col-md-12">
-                        <div class="project_form_field">
-                            <input
-                                type="text"
-                                name="name"
-                                id="name"
-                                v-model="formData.name"
-                                placeholder="Name*"
-                            />
-                        </div>
+        <div
+            class="alert alert-danger text-center"
+            role="alert"
+            id="failure"
+            ref="failureMessage"
+        >
+            Sorry! There is some problem sending your inquiry at the moment,
+            Please try again.
+        </div>
+        <div class="project_form">
+            <div class="row">
+                <!-- name -->
+                <div class="col-lg-6 col-md-12">
+                    <div class="project_form_field">
+                        <input
+                            type="text"
+                            name="name"
+                            id="name"
+                            v-model="formData.name"
+                            placeholder="Name*"
+                        />
                     </div>
+                </div>
 
-                    <!-- company -->
-                    <div class="col-lg-6 col-md-12">
-                        <div class="project_form_field">
-                            <input
-                                type="text"
-                                name="company"
-                                id="company"
-                                v-model="formData.company"
-                                placeholder="Company Name*"
-                            />
-                        </div>
+                <!-- company -->
+                <div class="col-lg-6 col-md-12">
+                    <div class="project_form_field">
+                        <input
+                            type="text"
+                            name="company"
+                            id="company"
+                            v-model="formData.company"
+                            placeholder="Company Name*"
+                        />
                     </div>
+                </div>
 
-                    <!-- Email -->
-                    <div class="col-lg-6 col-md-12">
-                        <div class="project_form_field">
-                            <input
-                                type="email"
-                                v-model="formData.email"
-                                name="email"
-                                id="email"
-                                placeholder="Enter business email"
-                            />
-                        </div>
+                <!-- Email -->
+                <div class="col-lg-6 col-md-12">
+                    <div class="project_form_field">
+                        <input
+                            type="email"
+                            v-model="formData.email"
+                            name="email"
+                            id="email"
+                            placeholder="Enter business email"
+                        />
                     </div>
+                </div>
 
-                    <!-- contact details -->
-                    <div class="col-lg-6 col-md-12">
-                        <div class="row">
-                            <div class="col-md-4">
-                                <div
-                                    class="project_form_field"
-                                    style="
-                                        border: 1px solid #ccc;
-                                        padding: 10px;
-                                        width: 129px;
-                                        height: 51px;
-                                    "
+                <!-- contact details -->
+                <div class="col-lg-6 col-md-12">
+                    <div class="row">
+                        <div class="col-md-4">
+                            <div
+                                class="project_form_field"
+                                style="
+                                    border: 1px solid #ccc;
+                                    padding: 10px;
+                                    width: 129px;
+                                    height: 51px;
+                                "
+                            >
+                                <select
+                                    name="country_code"
+                                    id="country_code"
+                                    required
+                                    v-model="formData.country_code"
+                                    @change="validateField('country_code')"
+                                    ref="country_codeField"
                                 >
-                                    <select
-                                        name="country_code"
-                                        id="country_code"
-                                        required
-                                        v-model="formData.country_code"
-                                        @change="validateField('country_code')"
-                                        ref="country_codeField"
+                                    <option value="">+ Country code</option>
+                                    <!-- <option value="+91">India</option> -->
+                                    <option
+                                        v-for="(country, id) in phoneCodes"
+                                        :value="country.phone"
+                                        :key="id"
                                     >
-                                        <option value="">+ Country code</option>
-                                        <!-- <option value="+91">India</option> -->
-                                        <option
-                                            v-for="(country, id) in phoneCodes"
-                                            :value="country.phone"
-                                            :key="id"
-                                        >
-                                            {{ country.name }} +{{
-                                                country.phone
-                                            }}
-                                        </option>
-                                    </select>
-                                </div>
+                                        {{ country.name }} +{{ country.phone }}
+                                    </option>
+                                </select>
                             </div>
-                            <div class="col-md-8">
-                                <div class="project_form_field">
-                                    <input
-                                        type="tel"
-                                        v-model="formData.phone"
-                                        name="phone"
-                                        id="phone"
-                                        placeholder="Phone / Skype / Whatsapp"
-                                    />
-                                </div>
+                        </div>
+                        <div class="col-md-8">
+                            <div class="project_form_field">
+                                <input
+                                    type="tel"
+                                    v-model="formData.phone"
+                                    name="phone"
+                                    id="phone"
+                                    placeholder="Phone / Skype / Whatsapp"
+                                />
                             </div>
                         </div>
                     </div>
-                    <!-- plan_category -->
-                    <div class="col-lg-6 col-md-12">
-                        <div class="project_form_field">
-                            <input
+                </div>
+                <!-- plan_category -->
+                <div class="col-lg-6 col-md-12">
+                    <div class="project_form_field">
+                        <!-- <input
                                 type="tel"
                                 v-model="this.planCategory"
                                 name="plan_category"
                                 id="plan_category"
                                 placeholder="Plan Category"
-                            />
-                        </div>
-                    </div>
+                            /> -->
+                        <!-- <input
+                            type="text"
+                            v-model="formData.plan_category"
+                            name="plan_category"
+                            id="plan_category"
+                            placeholder="Plan Category"
+                            readonly
+                        /> -->
 
-                    <!-- plan -->
-                    <div class="col-lg-6 col-md-12">
-                        <div class="project_form_field">
-                            <input
+                        <input
+                            type="text"
+                            name="plan_category"
+                            id="plan_category"
+                            placeholder="Plan Category"
+                            readonly
+                        />
+
+                    </div>
+                </div>
+
+                <!-- plan -->
+                <div class="col-lg-6 col-md-12">
+                    <div class="project_form_field">
+                        <!-- <input
                                 type="tel"
                                 v-model="this.planTitle"
                                 name="plan"
                                 id="plan"
                                 placeholder="Plan"
-                            />
-                        </div>
-                    </div>
-                    <!-- /// -->
-                    <!-- details -->
-                    <div class="col-lg-12 col-md-12">
-                        <div class="project_form_textarea">
-                            <textarea
-                                name="details"
-                                id="details"
-                                v-model="formData.details"
-                                placeholder="Tell us more*"
-                            ></textarea>
-                        </div>
-                    </div>
-
-                    <div class="col-lg-12 col-md-12">
-                        <div class="addFile_button justify-content-end">
-                            <div class="project_form_submit">
-                                <button class="btn_default" @click="store">
-                                    Submit
-                                </button>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-    <div v-else>
-        <div class="connected_form_info">
-            <div
-                class="alert alert-success text-center"
-                role="alert"
-                id="success"
-                ref="successMessage"
-            >
-                Thank you for the We will contact you shortly.
-            </div>
-
-            <div
-                class="alert alert-danger text-center"
-                role="alert"
-                id="failure"
-                ref="failureMessage"
-            >
-                Sorry! There is some problem sending your inquiry at the moment,
-                Please try again.
-            </div>
-            <div class="project_form">
-                <div class="row">
-                    <!-- name -->
-                    <div class="col-lg-6 col-md-12">
-                        <div class="project_form_field">
-                            <input
-                                type="text"
-                                name="name"
-                                id="name"
-                                v-model="formData.name"
-                                placeholder="Name*"
-                            />
-                        </div>
-                    </div>
-
-                    <!-- company -->
-                    <div class="col-lg-6 col-md-12">
-                        <div class="project_form_field">
-                            <input
-                                type="text"
-                                name="company"
-                                id="company"
-                                v-model="formData.company"
-                                placeholder="Company Name*"
-                            />
-                        </div>
-                    </div>
-
-                    <!-- Email -->
-                    <div class="col-lg-6 col-md-12">
-                        <div class="project_form_field">
-                            <input
-                                type="email"
-                                v-model="formData.email"
-                                name="email"
-                                id="email"
-                                placeholder="Enter business email"
-                            />
-                        </div>
-                    </div>
-
-                    <!-- contact details -->
-                    <div class="col-lg-6 col-md-12">
-                        <div class="row">
-                            <div class="col-md-4">
-                                <div
-                                    class="project_form_field"
-                                    style="
-                                        border: 1px solid #ccc;
-                                        padding: 10px;
-                                        width: 129px;
-                                        height: 51px;
-                                    "
-                                >
-                                    <select
-                                        name="country_code"
-                                        id="country_code"
-                                        required
-                                        v-model="formData.country_code"
-                                        @change="validateField('country_code')"
-                                        ref="country_codeField"
-                                    >
-                                        <option value="">+ Country code</option>
-                                        <!-- <option value="+91">India</option> -->
-                                        <option
-                                            v-for="(country, id) in phoneCodes"
-                                            :value="country.phone"
-                                            :key="id"
-                                        >
-                                            {{ country.name }} +{{
-                                                country.phone
-                                            }}
-                                        </option>
-                                    </select>
-                                </div>
-                            </div>
-                            <div class="col-md-8">
-                                <div class="project_form_field">
-                                    <input
-                                        type="tel"
-                                        v-model="formData.phone"
-                                        name="phone"
-                                        id="phone"
-                                        placeholder="Phone / Skype / Whatsapp"
-                                    />
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <!-- plan_category -->
-                    <div class="col-lg-6 col-md-12">
-                        <div
-                            class="project_form_field"
-                            style="
-                                border: 1px solid #ccc;
-                                padding: 10px;
-                                width: 360px; /* adjust width as needed */
-                            "
-                        >
-                            <select
-                                class="form-select"
-                                aria-label="Default select example"
-                                v-model="formData.plan_category"
-                                name="plan_category"
-                                id="plan_category"
-                                style="width: 341px"
-                            >
-                                <option value="">Select an option</option>
-                                <option
-                                    value="Search Engine Optimization (SEO)"
-                                >
-                                    Search Engine Optimization (SEO)
-                                </option>
-                                <option value="Social Media Management (SMM)">
-                                    Social Media Management (SMM)
-                                </option>
-                                <option value="Google Adverts And PPC">
-                                    Google Adverts And PPC
-                                </option>
-                            </select>
-                        </div>
-                    </div>
-
-                    <!-- plan -->
-                    <div class="col-lg-6 col-md-12">
-                        <div
-                            class="project_form_field"
-                            style="
-                                border: 1px solid #ccc;
-                                padding: 10px;
-                                width: 360px;
-                            "
-                        >
-                            <select
-                                class="form-select"
-                                aria-label="Default select example"
-                                v-model="formData.plan"
+                            /> -->
+                               <!-- <input
+                                type="tel"
+                                v-model="this.formData.plan"
                                 name="plan"
                                 id="plan"
-                                style="width: 341px"
-                            >
-                                <option value="">Select a option</option>
-                                <option value="GOLD">GOLD</option>
-                                <option value="SILVER">SILVER</option>
-                                <option value="PLATINUM">PLATINUM</option>
-                                <option value="CUSTOM">CUSTOM</option>
-                            </select>
-                        </div>
+                                placeholder="Plan"
+                            /> -->
+                            <input
+                                type="tel"
+                                name="plan"
+                                id="plan"
+                                placeholder="Plan"
+                            />
                     </div>
-                    <!-- details -->
-                    <div class="col-lg-12 col-md-12">
-                        <div class="project_form_textarea">
-                            <textarea
-                                name="details"
-                                id="details"
-                                v-model="formData.details"
-                                placeholder="Tell us more*"
-                            ></textarea>
-                        </div>
+                </div>
+                <!-- /// -->
+                <!-- details -->
+                <div class="col-lg-12 col-md-12">
+                    <div class="project_form_textarea">
+                        <textarea
+                            name="details"
+                            id="details"
+                            v-model="formData.details"
+                            placeholder="Tell us more*"
+                        ></textarea>
                     </div>
+                </div>
 
-                    <div class="col-lg-12 col-md-12">
-                        <div class="addFile_button justify-content-end">
-                            <div class="project_form_submit">
-                                <button class="btn_default" @click="store">
-                                    Submit
-                                </button>
-                            </div>
+                <div class="col-lg-12 col-md-12">
+                    <div class="addFile_button justify-content-end">
+                        <div class="project_form_submit">
+                            <button class="btn_default" @click="store">
+                                Submit
+                            </button>
                         </div>
                     </div>
                 </div>
             </div>
         </div>
     </div>
+    <!-- </div> -->
 </template>
 
 <script>
@@ -365,12 +199,12 @@ export default {
         planTitle: {
             type: String,
             required: true,
-            default: ''
+            default: "",
         },
         planCategory: {
             type: String,
             required: true,
-            default: ''
+            default: "",
         },
     },
     data() {
@@ -400,7 +234,10 @@ export default {
             console.error("planTitle or planCategory is empty or undefined.");
             return;
         } else {
-            this.showDropDowns = false;
+            // this.formData.plan_category = this.planCategory;
+            // this.formData.plan = this.planTitle;
+            document.getElementById('plan').value = this.planTitle;
+            document.getElementById('plan_category').value = this.planCategory;
             console.log("planTitle:", this.planTitle);
             console.log("Category:", this.planCategory);
         }
