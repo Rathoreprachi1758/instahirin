@@ -230,7 +230,8 @@
                             <div class="col-md-4">
                                 <div
                                     class="project_form_field"
-                                    style=" border: 1px solid #ccc;
+                                    style="
+                                        border: 1px solid #ccc;
                                         padding: 10px;
                                         width: 129px;
                                         height: 51px;
@@ -384,12 +385,12 @@ export default {
                 plan_category: "",
                 plan: "",
                 details: "",
-                planTitle: '',
-                planCategory: ''
+                planTitle: "",
+                planCategory: "",
                 // document: null,
             },
             phoneCodes: [],
-            showDropDowns: true
+            showDropDowns: true,
         };
     },
     // props: ["plan"],
@@ -398,8 +399,8 @@ export default {
         if (!this.planTitle || !this.planCategory) {
             console.error("planTitle or planCategory is empty or undefined.");
             return;
-        }else{
-            this.showDropDowns = false
+        } else {
+            this.showDropDowns = false;
             console.log("planTitle:", this.planTitle);
             console.log("Category:", this.planCategory);
         }
@@ -412,7 +413,7 @@ export default {
             form.append("email", this.formData.email);
             form.append("country_code", this.formData.country_code);
             form.append("phone", this.formData.phone);
-            if (this.planCategory === null || this.planCategory === undefined ) {
+            if (this.planCategory === null || this.planCategory === undefined) {
                 form.append("plan_category", this.formData.plan_category);
                 form.append("plan", this.formData.plan);
             } else {
