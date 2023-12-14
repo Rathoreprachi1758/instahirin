@@ -951,7 +951,7 @@ class ContentController extends Controller
         $formData->name = $validatedData['name'];
         $formData->company = $validatedData['company'];
         $formData->email = $validatedData['email'];
-        $formData->phone = $validatedData['country_code'] . $validatedData['phone'];
+        $formData->phone = '+'.$validatedData['country_code'] . $validatedData['phone'];
         $formData->plan_categories = $validatedData['plan_category'];
         $formData->selected_plan =  $validatedData['plan'];
         $formData->message = $validatedData['details'];
