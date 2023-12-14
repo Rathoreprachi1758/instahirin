@@ -3,7 +3,7 @@
 </script>
 
 <template>
-    <div v-if="planTitle && planCategory">
+    <div v-if="!showDropDowns">
         <div class="connected_form_info">
             <div
                 class="alert alert-success text-center"
@@ -387,6 +387,7 @@ export default {
                 // document: null,
             },
             phoneCodes: [],
+            showDropDowns: true
         };
     },
     // props: ["plan"],
@@ -396,6 +397,7 @@ export default {
             console.error("planTitle or planCategory is empty or undefined.");
             return;
         }else{
+            this.showDropDowns = false
             console.log("planTitle:", this.planTitle);
             console.log("Category:", this.planCategory);
         }
