@@ -97,7 +97,7 @@
                                                 aria-hidden="true"></i></span> Home <em class="menu_icon"><i
                                                 class="fa fa-angle-down" aria-hidden="true"></i></em></a>
                                 </li>
-                                <li><a href=""><span><i class="fa fa-id-card"
+                                <li><a href="/profile"><span><i class="fa fa-id-card"
                                                 aria-hidden="true"></i></span> Profile
                                         <em class="menu_icon"><i class="fa fa-angle-down"
                                                 aria-hidden="true"></i></em></a>
@@ -207,3 +207,15 @@
         </div>
     </div>
 </main>
+{{-- // --}}
+ <!-- dashboard footer  -->
+
+ <footer>
+    <div class="footer">
+        <div class="footer_detail">
+            <p>Copyright &copy; <a href="https://www.bizionictech.com/" target="_blank">bizionictech.com</a> |
+                All
+                rights reserved, Bizionic Technologies and Marketing Solutions Private Limited</p>
+        </div>
+    </div>
+</footer>

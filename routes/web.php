@@ -30,7 +30,8 @@ Route::get('/loginpage', [LoginController::class, 'login'])->name('loginpage');
     Route::get('logout', [LoginController::class, 'logout']);
     //profile
     Route::get('profile', [ProfileController::class, 'index']);
-    Route::get('user-information',[profileController::class,'user_info']);
+    Route::get('kyc-info',[profileController::class,'user_info']);
+    Route::get('credit-request',[profileController::class,'creditrequest']);
 // });
 
 Route::get('reset-password', [LoginController::class, 'resetpswd']);
