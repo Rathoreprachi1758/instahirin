@@ -384,6 +384,8 @@ export default {
                 plan_category: "",
                 plan: "",
                 details: "",
+                planTitle: '',
+                planCategory: ''
                 // document: null,
             },
             phoneCodes: [],
