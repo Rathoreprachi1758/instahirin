@@ -19,7 +19,8 @@ $job = \App\Models\Job::find($jobId);
                 <h4>Experience: <strong>{{ $job->experience }}</strong></h4>
                 <h4>Company: <strong>{{ $job->company }}</strong></h4>
                 <h4>Work Mode: <strong>{{ $job->work_mode }}</strong></h4>
-                <h4>CTC: <strong>{{ $job->ctc }}</strong></h4>
+                <h4>CTC Range: <strong>{{ $job->ctc_currency }} {{ $job->min_price }} - {{ $job->max_price }}</strong>
+                </h4>
                 <h4>Employment Type: <strong>{{ $job->availability }}</strong></h4>
 
 
@@ -34,10 +35,12 @@ $job = \App\Models\Job::find($jobId);
                 {{ strip_tags($job->description) }}
 
                 <h6 class="">Key Skills:</h6>
-                {{-- <div class="discList ml-4 pt-0 pb-3">{{ $job->responsibilities }}</div> --}}
-                {{-- {{ $job->responsibilities }} --}}
-                {{-- {!! html_entity_decode($job->responsibilities) !!} --}}
-                {!! $job->responsibilities !!}
+                {{-- {!! $job->responsibilities !!} --}}
+                <ul>
+                    @foreach ($job->skills as $skill)
+                    <li>{{ $skill->title }}</li>
+                    @endforeach
+                </ul>
 
 
                 <h6 class="pt-3">Qualifications:</h6>
