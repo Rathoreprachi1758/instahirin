@@ -5,8 +5,10 @@
 
             <div class="hiringInfo">
                 <div class="custom_tittle text-left pb-0">
-                    <h3 class="text-white"><strong>Why </strong><span class="page-dev"> HTML5/CSS3 Developers </span>
-                        <strong>From BIZIONIC:</strong>
+                    <h3 class="text-white"><strong>Why </strong><span class="page-dev text-capitalize"> HTML5/CSS3
+                            Developers
+                        </span>
+                        <strong> from BIZIONIC</strong>
                     </h3>
                     <p class=" text-justify text-white">BIZIONIC has a reputation for conducting intensive project
                         requirement research and pre-screening the candidates to present the right talent to satisfy our
@@ -54,7 +56,7 @@
         data-aos-easing="ease-out-cubic">
         <div class="contactForm_page">
             <div class="custom_tittle text-left">
-                <h3 class="p_color pb-5"><span class="page-dev">Hire HTML5/CSS3 Developers</span>:</h3>
+                <h3 class="p_color pb-5"><span class="page-dev text-capitalize">Hire HTML5/CSS3 Developers</span></h3>
                 <p class="p-0">Please fill the form and our representative will get back to you.</p>
             </div>
             <div class="alert alert-success text-center" role="alert" id="hire_success"> Thank you for the message. We

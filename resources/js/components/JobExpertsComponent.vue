@@ -31,8 +31,8 @@
               {{ experience }}
             </option> -->
             <option value="1+ year of Experience">1+ year of Experience</option>
-            <option value="2+ year of Experience">3+ year of Experience</option>
-            <option value="3+ year of Experience">2+ year of Experience</option>
+            <option value="2+ year of Experience">2+ year of Experience</option>
+            <option value="3+ year of Experience">3+ year of Experience</option>
             <option value="4+ year of Experience">4+ year of Experience</option>
             <option value="5+ year of Experience">5+ year of Experience</option>
             <option value="6+ year of Experience">6+ year of Experience</option>
@@ -88,11 +88,11 @@
                   <div class="meetProfile_tittle">
                     <strong>{{ job.title }}</strong>
                     <div class="infoTxt">
-                      <p><b>Company -</b> {{ job.company }}</p>
-                      <p><b>Location -</b> {{ job.location }}</p>
-                      <p><b>Work Mode -</b> {{ job.work_mode }}</p>
+                      <p><b>Company:</b> {{ job.company }}</p>
+                      <p><b>Location:</b> {{ job.location }}</p>
+                      <p><b>Work Mode:</b> {{ job.work_mode }}</p>
                       <p>
-                        <b>CTC -</b> {{ job.ctc_currency }} {{ job.min_price }} -
+                        <b>CTC Range:</b> {{ job.ctc_currency }} {{ job.min_price }} -
                         {{ job.max_price }}
                       </p>
                     </div>
@@ -128,6 +128,11 @@
                 <div class="descriptionText">
                   <label class="expertTittle">• Qualification</label>
                   <p v-html="job.qualification"></p>
+                </div>
+
+                <div class="descriptionText">
+                  <label class="expertTittle">• Hiring Timeline</label>
+                  <p v-html="job.prefer_qualification"></p>
                 </div>
 
                 <div class="ourExperience">
@@ -283,7 +288,7 @@ export default {
     // this.fetchCategories();
     // this.fetchExperts();
     this.fetchJobs();
-    this.fetchExperienceOptions();
+    // this.fetchExperienceOptions();
     this.fetchLocationOptions();
     this.fetchSearchOptions();
   },
@@ -307,17 +312,17 @@ export default {
         });
     },
 
-    fetchExperienceOptions() {
-      // Fetch the experience options from the jobs table
-      axios
-        .get("/api/v1/job-skills")
-        .then((response) => {
-          this.experienceOptions = response.data;
-        })
-        .catch((error) => {
-          console.error(error);
-        });
-    },
+    // fetchExperienceOptions() {
+    //   // Fetch the experience options from the jobs table
+    //   axios
+    //     .get("/api/v1/job-skills")
+    //     .then((response) => {
+    //       this.experienceOptions = response.data;
+    //     })
+    //     .catch((error) => {
+    //       console.error(error);
+    //     });
+    // },
 
     fetchLocationOptions() {
       axios
@@ -331,7 +336,7 @@ export default {
     },
 
     onLocationSelected(location) {
-      this.selectedLocation = location; // Use location.text
+      this.selectedLocation = location;
     },
 
     fetchSearchOptions() {

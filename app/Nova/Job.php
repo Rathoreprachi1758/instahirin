@@ -54,7 +54,7 @@ class Job extends Resource
             Text::make('Title', 'title')->rules('required', 'min:6,max:255'),
             Text::make('Location', 'location'),
             // Text::make('CTC', 'ctc'),
-            Select::make('CTC Currency', ' ctc_currency')
+            Select::make('CTC Currency', 'ctc_currency')
                 ->options([
                     'USD' => 'USD',
                     'INR' => 'INR',
@@ -64,7 +64,7 @@ class Job extends Resource
                 ->hideFromIndex(),
             Text::make('Minimum Price', 'min_price'),
             Text::make('Maximum Price', 'max_price'),
-            Select::make('Work Mode', ' work_mode')
+            Select::make('Work Mode', 'work_mode')
                 ->options([
                     'Full Time' => 'Full Time',
                     'Part Time' => 'Part Time',
@@ -116,15 +116,8 @@ class Job extends Resource
                 ->filterable()
                 ->hideFromIndex(),
             Trix::make('Job Description', 'description'),
-            Trix::make('Key Skills', 'responsibilities'),
-            // Tag::make('Experties', 'experties')->showCreateRelationButton()->preload()->displayAsList(),
-            // Text::make('Key Skills', 'responsibilities')->resolveUsing(function ($value) {
-            //     if (is_array($value)) {
-            //         return implode(', ', array_column($value, 'title'));
-            //     }
-            //     return $value;
-            // }),
-            // Trix::make('Educational Qualification', 'qualification'),
+            // Trix::make('Key Skills', 'responsibilities'),
+            Tag::make('Key Skills', 'keySkills')->showCreateRelationButton()->preload()->displayAsList(),
             Select::make('Educational Qualification', 'qualification')
                 ->options([
                     'Any' => 'Any',
@@ -136,7 +129,7 @@ class Job extends Resource
                 ->filterable()
                 ->hideFromIndex(),
             // Trix::make('Job Filling Duration', 'prefer_qualification'),
-            Select::make('Job Filling Duration', 'prefer_qualification')
+            Select::make('Hiring Timeline', 'prefer_qualification')
                 ->options([
                     'Immediate' => 'Immediate',
                     'Within One Month' => 'Within One Month',

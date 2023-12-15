@@ -32,7 +32,7 @@ Route::prefix('v1')->group(function () {
     // fetch all the jobs route
     Route::get('/jobs', [ApiController::class, 'jobs']);
     Route::post('/jobs/skills', [ApiController::class, 'jobs_by_skills']);
-    Route::get('/job-skills', [ApiController::class, 'getExperienceOptions']);
+    //Route::get('/job-skills', [ApiController::class, 'getExperienceOptions']);
     Route::get('/job-locations', [ApiController::class, 'getJobLocations']);
     Route::get('/job-skills', [ApiController::class, 'getSearchSkills']);
     Route::post('/jobs-search', [ApiController::class, 'jobs_search']);
