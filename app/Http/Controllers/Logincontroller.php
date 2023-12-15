@@ -19,21 +19,21 @@ class Logincontroller extends Controller
 
     public function index()
     {
-        $countryCodes =  Country::all(['name', 'phone']);
-        return view("dashboard.registration",["countryCodes"=> $countryCodes]);
+        $countryCodes = Country::all(['name', 'phone']);
+        return view("dashboard.registration", ["countryCodes" => $countryCodes]);
     }
     public function store(Request $request)
     {
-        
+
         $request->validate([
             'firstName' => 'required',
             'lastName' => 'required',
             'email' => ['required', 'email', Rule::unique('users', 'email')],
             'password' => 'required',
             'password_confirmation' => 'required|same:password',
-            'country_code'=>'required',
-            'Mobile_Number'=>'required',
-            'privacy_statement'=>'required',
+            'country_code' => 'required',
+            'Mobile_Number' => 'required',
+            'privacy_statement' => 'required',
             // 'Admin_status' => 'required',
         ]);
         // dd($request->all());
@@ -42,7 +42,7 @@ class Logincontroller extends Controller
         $name = $firstName . ' ' . $lastName;
         $countrycode = $request->country_code;
         $phone = $request->Mobile_Number;
-        $mobilenumber = $countrycode. ' ' . $phone;
+        $mobilenumber = $countrycode . ' ' . $phone;
         $user = new User;
 
         $user->name = $name;
@@ -53,6 +53,8 @@ class Logincontroller extends Controller
         $user->password = $data;
         // $user->country_code = $request->Country_Code;
         $user->mobilenumber = $mobilenumber;
+        // $user->country = '';
+        // $user->nationality = '';
         $user->save();
         if ($user->wasRecentlyCreated) {
             return view('dashboard.login-page', ['message' => ' Signup Succesfully']);
@@ -87,18 +89,18 @@ class Logincontroller extends Controller
 
     public function forgotpassword(Request $request)
     {
-       return view('dashboard.forgotpassword');
+          return view('dashboard.forgotpassword');
     }
-
-    public function resetpassword(Request $request)
-    {
-        //dd($request->all());
-        $email = $request->restoring_password;
-        $data = [
-            'password' => 'Hii',
-        ];
-        Mail::to($email)->send(new MailNotify($data));
-    }
+    //
+    // public function resetpassword(Request $request)
+    // {
+    //     //dd($request->all());
+    //     $email = $request->restoring_password;
+    //     $data = [
+    //         'password' => 'Hii',
+    //     ];
+    //     Mail::to($email)->send(new MailNotify($data));
+    // }
     // public function changePassword(Request $request)
     // {
     //     return view('change-password');
@@ -129,5 +131,9 @@ class Logincontroller extends Controller
     //     return back()->with('success', "Password Changed Successfully");
     // }
 
+    public function resetpswd(Request $request)
+    {
+        return view('dashboard.reset-password');
+    }
 
 }

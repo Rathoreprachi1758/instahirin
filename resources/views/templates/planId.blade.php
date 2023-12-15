@@ -11,8 +11,10 @@
                                 @php
                                     $planId = request('planId');
                                     $plan = \App\Models\MarketingPlans::find($planId);
-                                    $planfeature = \App\Models\PlanPricingFeature::where('plan_id',$planId)->pluck('feature');
-                                    $plancat = \App\Models\PlanPricingCategory::where('id',$plan->plan_category_id)->pluck('title')->first();
+                                    $planfeature = \App\Models\PlanPricingFeature::where('plan_id', $planId)->pluck('feature');
+                                    $plancat = \App\Models\PlanPricingCategory::where('id', $plan->plan_category_id)
+                                        ->pluck('title')
+                                        ->first();
                                     // echo($plancat);
                                     // die;
                                 @endphp
@@ -60,14 +62,15 @@
                                     </div>
                                 @else
                                     <div class="priceFeatureList">
-                                        @foreach($planfeature as $feature)
-                                        <ul>
-                                            <li>
-                                                <p><span><i class="fa fa-check-square-o" aria-hidden="true"></i></span>{{$feature}}</p>
-                                            </li>
-                                        </ul>
+                                        @foreach ($planfeature as $feature)
+                                            <ul>
+                                                <li>
+                                                    <p><span><i class="fa fa-check-square-o"
+                                                                aria-hidden="true"></i></span>{{ $feature }}</p>
+                                                </li>
+                                            </ul>
                                         @endforeach
-                                        
+
                                     </div>
                                 @endif
                             </div>
@@ -81,8 +84,8 @@
                             <h2>Proposal Request Form</h2>
                             <p>Please fill the form and our representative will get back to you.</p>
                         </div>
-                        <proposal-component :plan-title="'{{ $plan->title }}'" :plan-category="'{{ $plancat }}'"></proposal-component>
-
+                        <proposal-component plan-title="{{$plan->title}}" plan-category="{{$plancat}}"></proposal-component>
+                        {{-- <proposal-component></proposal-component> --}}
 
                     </div>
                 </div>
@@ -92,8 +95,6 @@
 
     </div>
 </div>
-
-
 
 
 <!-- Services provided section -->

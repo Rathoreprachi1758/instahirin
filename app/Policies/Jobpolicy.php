@@ -91,7 +91,7 @@ class Jobpolicy
 
     public function delete(User $user, Job $Job): bool
     {
-        return $user->roles === "admin" || $user->roles === "Hr" || $this->hasPermission($user, 'delete');
+        return $user->roles === "admin" || $user->roles === "Hr" || $user->roles === "Hr" || $this->hasPermission($user, 'delete');
     }
 
     public function restore(User $user, Job $Job): bool

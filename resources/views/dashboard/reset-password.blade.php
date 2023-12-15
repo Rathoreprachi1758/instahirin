@@ -1,4 +1,5 @@
-{{-- <x-header data="forgot page component" /> --}}
+{{-- <x-header reset page/> --}}
+
 <head>
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
@@ -26,7 +27,7 @@
     <link rel="stylesheet " href="css/owl.carousel.min.css ">
     <script src="js/owl.carousel.js "></script>
 
-    <link rel="icon" sizes="96x96" href="{{asset('css/images/favicon-96x96.png')}}">
+    <link rel="icon" sizes="96x96" href="{{ asset('css/images/favicon-96x96.png') }}">
 
 
 
@@ -44,7 +45,7 @@
                 <div class="container-xxl container-xl container-lg container-md">
                     <div class="headerDetail">
                         <div class="logo">
-                            <a href="#"><img src="{{ asset('css/images/logo.png') }}" alt="Logo"></a>
+                            <a href="#"><img src="{{ asset('css/images/logo.png ') }}" /></a>
                         </div>
 
                         <div class="header_menu">
@@ -53,8 +54,8 @@
                         </div> -->
 
                             <div class="authBttns">
-                                <a href="{{ url('/loginpage') }}" class="signin_btn">Sign in</a>
-                                <a href="{{ url('/Sign-In') }}" class="signup_btn">Sign Up</a>
+                                <a href="signin.html" class="signin_btn">Sign in</a>
+                                <a href="signup.html" class="signup_btn">Sign Up</a>
                             </div>
                         </div>
                     </div>
@@ -76,54 +77,41 @@
                             <div class="row">
                                 <div class="col-xxl-6 col-xl-6 col-lg-6 col-md-7 m-auto">
                                     <div class="auth_info">
-                                        <h3 class="text-center">Forgot Password</h3>
-                                        <p class="pt-2">Recover your account by following these simple steps!</p>
-
-                                        <div class="followingSteps">
-                                            <p>1. Enter your Bizionic email address below.</p>
-                                            <p>2. Wait for password recovery details to be sent.</p>
-                                            <p>3. Follow instructions mentioned in the email and be re-united with
-                                                Bizionic</p>
-
-                                        </div>
+                                        <h3 class="text-center">Reset Password</h3>
+                                        <p class="text-center">Reset your Password for Bizionic account</p>
 
                                         <div class="auth_form pt-2">
                                             <div class="row">
-                                                <div class="col-12 ">
-                                                    <div class="auth_field">
-                                                        <form action="{{ url('/password-reset') }}" method="POST" enctype="multipart/form-data">
-                                                            @csrf
-                                                            <div class="auth_field_info">
-                                                                <input type="text" placeholder="Enter Your Email" name='restoring password' />
-                                                            </div>
-                                                            <div class="col-12 pt-3">
-                                                                <div class="auth_sbmit">
-                                                                    <input type="submit" value="Submit"
-                                                                        class="btndefault" />
-                                                                </div>
-                                                            </div>
-                                                        </form>
-                                                    </div>
-                                                </div>
-
-
-
 
                                                 <div class="col-12">
-                                                    <div class="forgotPasswText">
-                                                        <p>Did you recall your password? <a
-                                                                href="{{ url('/loginpage') }}">Login</a></p>
+                                                    <div class="auth_field">
+                                                        <strong>New Password</strong>
+                                                        <div class="auth_field_info">
+                                                            <input type="password" placeholder="" value="" />
+                                                            <span class="passwEye"><i class="fa fa-eye"
+                                                                    aria-hidden="true"></i></span>
+                                                        </div>
                                                     </div>
                                                 </div>
-                                            </div>
-                                        </div>
 
-                                        <div class="alert alert-warning alertcustom" role="alert">
-                                            <p>We have received your request for resetting your password. You will
-                                                receive an email soon with instructions on how to reset your password.
-                                            </p>
-                                            <button type="button" class="btn-close" data-bs-dismiss="alert"
-                                                aria-label="Close">Ok</button>
+                                                <div class="col-12">
+                                                    <div class="auth_field">
+                                                        <strong>Confirm New Password</strong>
+                                                        <div class="auth_field_info">
+                                                            <input type="password" placeholder="" value="" />
+                                                            <span class="passwEye"><i class="fa fa-eye"
+                                                                    aria-hidden="true"></i></span>
+                                                        </div>
+                                                    </div>
+                                                </div>
+
+                                                <div class="col-12 pt-4">
+                                                    <div class="auth_sbmit">
+                                                        <input type="submit" value="Update" class="btndefault" />
+                                                    </div>
+                                                </div>
+
+                                            </div>
                                         </div>
                                     </div>
                                 </div>
@@ -173,5 +161,3 @@
 
 
 </body>
-
-</html>

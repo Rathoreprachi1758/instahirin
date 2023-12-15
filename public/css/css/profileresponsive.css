@@ -1,0 +1,372 @@
+@charset "utf-8";
+
+/* CSS Document */
+
+@media only screen and (min-width: 1366px) and (max-width: 1599px) {
+}
+
+@media only screen and (min-width: 1280px) and (max-width: 1365px) {
+  .fr-section_detail {
+    padding: 40px 25px;
+  }
+}
+
+@media only screen and (min-width: 1024px) and (max-width: 1279px) {
+  .kycForm_field strong {
+    font-size: 11px;
+  }
+
+  .verify_section .p_userInfo_editInput {
+    min-width: 150px;
+  }
+
+  .enterOtp {
+    padding-left: 14px;
+  }
+
+  .enterOtpFields input {
+    margin: 0px 1px;
+    width: 16px;
+    font-size: 11px;
+  }
+  .enterOtpFields {
+    padding: 0px 7px;
+  }
+}
+
+@media only screen and (min-width: 768px) and (max-width: 1023px) {
+  h1 {
+    font-size: 36px;
+  }
+
+  h2 {
+    font-size: 30px;
+  }
+
+  h3 {
+    font-size: 26px;
+  }
+
+  h4 {
+    font-size: 24px;
+  }
+
+  h5 {
+    font-size: 22px;
+  }
+
+  h6 {
+    font-size: 20px;
+  }
+
+  .fl-bar {
+    width: 275px;
+  }
+
+  .dashboardHeader .logo {
+    padding: 15px 15px;
+  }
+  .profile_dropdown {
+    width: 250px;
+  }
+  .db_tittle {
+    padding: 25px 15px;
+  }
+
+  .db_nav {
+    padding: 15px 15px 30px;
+  }
+  .db_nav ul li a {
+    padding: 8px 15px;
+  }
+
+  .fr-section {
+    padding: 0px 0px 0px 275px;
+  }
+
+  .fr-section_detail {
+    padding: 35px 25px;
+  }
+  .footer_detail p {
+    font-size: 13px;
+  }
+
+  .custom_tabs ul li a {
+    font-size: 13px;
+    padding: 12px 20px;
+  }
+
+  .enterOtp {
+    padding-left: 15px;
+  }
+
+  .verify_section .p_userInfo_editInput {
+    min-width: 145px;
+  }
+  .statusAlert {
+    padding: 12px 20px;
+  }
+}
+
+@media only screen and (max-width: 767px) {
+  h1 {
+    font-size: 30px;
+  }
+
+  h2 {
+    font-size: 26px;
+  }
+
+  h3 {
+    font-size: 24px;
+  }
+
+  h4 {
+    font-size: 22px;
+  }
+
+  h5 {
+    font-size: 20px;
+  }
+
+  h6 {
+    font-size: 18px;
+  }
+
+  .footer {
+    position: static;
+  }
+
+  .auth_screens {
+    padding: 60px 15px 0px;
+  }
+
+  .main_container {
+    padding-bottom: 50px;
+  }
+
+  .footer_detail {
+    padding: 20px 15px;
+  }
+  .footer_detail p {
+    font-size: 13px;
+  }
+
+  .auth_sbmit .btndefault {
+    max-width: 350px;
+    margin: auto;
+  }
+
+  .auth_info > p {
+    font-size: 14px;
+  }
+
+  .authBttns a {
+    font-size: 13px !important;
+  }
+
+  .signin_btn {
+    padding: 6px 14px;
+  }
+
+  .forgotPasswText {
+    display: block;
+  }
+
+  .forgotPasswText p {
+    padding: 5px 0px;
+  }
+
+  .alertcustom {
+    max-width: 90%;
+    bottom: 10px;
+    left: 50%;
+    margin-left: -45%;
+  }
+
+  .fl-bar .db_tittle {
+    display: none;
+  }
+
+  .fl-bar {
+    background: #fff;
+    padding-bottom: 0px;
+    width: 250px;
+    transform: translateX(-250px);
+    z-index: 21;
+    transition: all 0.2s ease;
+    -moz-transition: all 0.2s ease;
+    -ms-transition: all 0.2s ease;
+    -o-transition: all 0.2s ease;
+    -webkit-transition: all 0.2s ease;
+  }
+
+  .header {
+    z-index: 22;
+  }
+  .nav-list {
+    height: calc(100% - 0px);
+  }
+  .db_nav {
+    padding: 15px 15px 15px;
+  }
+
+  .db_nav ul li a {
+    font-size: 13px;
+    padding: 8px 15px;
+  }
+
+  .menu_icon {
+    right: 18px;
+  }
+
+  .mobileBtn {
+    width: 100%;
+    background: #000;
+    padding: 15px;
+    position: fixed;
+    left: 0px;
+    top: 89px;
+    z-index: 2;
+    display: flex;
+    justify-content: flex-end;
+  }
+
+  .buergerMenu {
+    width: auto;
+  }
+
+  /* .buergerMenu a { width: 30px; display: block;}
+.buergerMenu a img { width: 100%; display: block;} */
+  .menu-toggle {
+    height: 20px;
+    width: 25px;
+    display: block;
+    position: relative;
+    cursor: pointer;
+  }
+
+  .menu-toggle,
+  .menu-toggle:hover {
+    color: #000;
+  }
+
+  .menu-toggle-bar {
+    display: block;
+    position: absolute;
+    top: 50%;
+    margin-top: -1px;
+    right: 0;
+    width: 100%;
+    height: 2px;
+    background-color: #fff;
+    transition: all 0.3s ease;
+  }
+
+  .menu-toggle-bar.menu-toggle-bar--top {
+    transform: translate(0, -7px);
+  }
+
+  .menu-toggle-bar.menu-toggle-bar--bottom {
+    transform: translate(0, 7px);
+  }
+
+  .nav-open .menu-toggle-bar.menu-toggle-bar--top {
+    transform: translate(0, 0) rotate(45deg);
+    background-color: #fff;
+  }
+
+  .nav-open .menu-toggle-bar.menu-toggle-bar--middle {
+    opacity: 0;
+  }
+
+  .nav-open .menu-toggle-bar.menu-toggle-bar--bottom {
+    transform: translate(0, 0) rotate(-45deg);
+    background-color: #fff;
+  }
+
+  .nav-open .fl-bar {
+    transform: translateX(0px);
+  }
+
+  .db_footer {
+    position: fixed;
+  }
+
+  .fr-section {
+    height: auto;
+    padding: 0px;
+  }
+  .db_footer .footer_detail p {
+    font-size: 11px;
+  }
+  .fr-section_detail {
+    padding: 0px 20px 50px;
+  }
+  .db_tittle {
+    padding: 80px 15px 20px;
+    margin-bottom: 20px;
+  }
+
+  .db-blocksHead {
+    padding: 30px 20px 0px;
+    flex-flow: column-reverse;
+  }
+  .db-blocksHeadAvatar {
+    width: 100%;
+    padding-top: 0px;
+    padding-bottom: 25px;
+  }
+  .db-blocksHeadTittle {
+    width: 100%;
+    padding-right: 0px;
+  }
+  .db-blocksFooter {
+    padding: 15px 20px;
+  }
+  .profile_dropdown {
+    width: auto;
+    padding: 0px 15px;
+  }
+  .profile_dropdown ul li > a {
+    font-size: 14px;
+  }
+  .profile_dropdown ul li > a img {
+    width: 34px;
+    height: 34px;
+  }
+
+  .profile_dropList {
+    min-width: 140px;
+    left: auto;
+    right: -20px;
+  }
+
+  .custom_tabs ul li a {
+    font-size: 12px;
+    padding: 10px 20px;
+  }
+
+  .verify_section {
+    flex-wrap: wrap;
+  }
+
+  .enterOtp {
+    padding-left: 12px;
+    padding-bottom: 6px;
+  }
+  .enterOtpFields {
+    padding: 0px 5px;
+  }
+
+  .statusAlert_info {
+    border: 0px !important;
+  }
+
+  .statusAlert {
+    padding: 12px 15px;
+  }
+}
+
+@media only screen and (min-width: 480px) and (max-width: 767px) {
+}

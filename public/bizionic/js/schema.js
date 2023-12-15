@@ -136,6 +136,14 @@ const getConnectedSchema = {
         "Connect with Bizionic Technologies and Unleash a World of Possibilities in Technology and Marketing SolutionsJoin hands with Bizionic Technologies to explore a universe of innovative solutions and limitless opportunities in the realms of technology and marketing. Our expertise and dedication open doors to your success in the digital landscape.",
 };
 
+///
+const proposalFormSchema = {
+    "@context": "http://schema.org",
+    "@type": "Webpage",
+    name: " proposalpage - Bizionic Technologies",
+    description:
+        "Connect with Bizionic Technologies and Unleash a World of Possibilities in Technology and Marketing SolutionsJoin hands with Bizionic Technologies to explore a universe of innovative solutions and limitless opportunities in the realms of technology and marketing. Our expertise and dedication open doors to your success in the digital landscape.",
+};
 // Export the Schema objects
 module.exports = {
     homepageSchema,
@@ -147,4 +155,5 @@ module.exports = {
     instaHiringSchema,
     hireMeSchema,
     getConnectedSchema,
+    proposalFormSchema
 };

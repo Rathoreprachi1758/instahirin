@@ -3,6 +3,7 @@
 </script>
 
 <template>
+    <!-- <div v-if="!showDropDowns"> -->
     <div class="connected_form_info">
         <div
             class="alert alert-success text-center"
@@ -112,55 +113,56 @@
                 <!-- plan_category -->
                 <div class="col-lg-6 col-md-12">
                     <div class="project_form_field">
-                        <!-- <select
-                            class="form-select"
-                            aria-label="Default select example"
+                        <!-- <input
+                                type="tel"
+                                v-model="this.planCategory"
+                                name="plan_category"
+                                id="plan_category"
+                                placeholder="Plan Category"
+                            /> -->
+                        <!-- <input
+                            type="text"
                             v-model="formData.plan_category"
                             name="plan_category"
                             id="plan_category"
-                        >
-                            <option value="">Select a option</option>
-                            <option value="1">
-                                Search Engine Optimization(SEO)
-                            </option>
-                            <option value="2">
-                                Social Media Management(SMM)
-                            </option>
-                            <option value="3">Google Advarts And PPC</option>
-                        </select> -->
-                       <input
-                            type="tel"
-                            v-model="this.planCategory"
+                            placeholder="Plan Category"
+                            readonly
+                        /> -->
+
+                        <input
+                            type="text"
                             name="plan_category"
                             id="plan_category"
                             placeholder="Plan Category"
-                        /> 
+                            readonly
+                        />
+
                     </div>
                 </div>
 
-                 <!-- plan -->
+                <!-- plan -->
                 <div class="col-lg-6 col-md-12">
                     <div class="project_form_field">
-                        <!-- <select
-                            class="form-select"
-                            aria-label="Default select example"
-                            v-model="formData.plan"
-                            name="plan"
-                            id="plan"
-                        >
-                            <option value="">Select a option</option>
-                            <option value="GOLD">GOLD</option>
-                            <option value="SILVER">SILVER</option>
-                            <option value="PLATINUM">PLATINUM</option>
-                            <option value="CUSTOM">CUSTOM</option>
-                        </select> -->
-                        <input
-                            type="tel"
-                            v-model="this.planTitle"
-                            name="plan"
-                            id="plan"
-                            placeholder="Plan"
-                        />
+                        <!-- <input
+                                type="tel"
+                                v-model="this.planTitle"
+                                name="plan"
+                                id="plan"
+                                placeholder="Plan"
+                            /> -->
+                               <!-- <input
+                                type="tel"
+                                v-model="this.formData.plan"
+                                name="plan"
+                                id="plan"
+                                placeholder="Plan"
+                            /> -->
+                            <input
+                                type="tel"
+                                name="plan"
+                                id="plan"
+                                placeholder="Plan"
+                            />
                     </div>
                 </div>
                 <!-- /// -->
@@ -188,19 +190,22 @@
             </div>
         </div>
     </div>
+    <!-- </div> -->
 </template>
 
 <script>
 export default {
     props: {
         planTitle: {
-      type: String,
-      required: true
-    },
-    planCategory: {
-      type: String,
-      required: true
-    }
+            type: String,
+            required: true,
+            default: "",
+        },
+        planCategory: {
+            type: String,
+            required: true,
+            default: "",
+        },
     },
     data() {
         return {
@@ -214,16 +219,28 @@ export default {
                 plan_category: "",
                 plan: "",
                 details: "",
+                planTitle: "",
+                planCategory: "",
                 // document: null,
             },
             phoneCodes: [],
+            showDropDowns: true,
         };
     },
     // props: ["plan"],
     mounted() {
         this.fetchPhoneCodes();
-        console.log("planTitle:", this.planTitle);
-        console.log("planCategory:", this.planCategory);
+        if (!this.planTitle || !this.planCategory) {
+            console.error("planTitle or planCategory is empty or undefined.");
+            return;
+        } else {
+            // this.formData.plan_category = this.planCategory;
+            // this.formData.plan = this.planTitle;
+            document.getElementById('plan').value = this.planTitle;
+            document.getElementById('plan_category').value = this.planCategory;
+            console.log("planTitle:", this.planTitle);
+            console.log("Category:", this.planCategory);
+        }
     },
     methods: {
         store() {
@@ -233,8 +250,13 @@ export default {
             form.append("email", this.formData.email);
             form.append("country_code", this.formData.country_code);
             form.append("phone", this.formData.phone);
-            form.append("plan_category", this.planCategory);
-            form.append("plan", this.planTitle);
+            if (this.planCategory === null || this.planCategory === undefined) {
+                form.append("plan_category", this.formData.plan_category);
+                form.append("plan", this.formData.plan);
+            } else {
+                form.append("plan_category", this.planCategory);
+                form.append("plan", this.planTitle);
+            }
             form.append("details", this.formData.details);
             //   form.append("document", this.formData.document);
 
@@ -242,7 +264,6 @@ export default {
                 .post("/submit-proposal-form", form)
                 .then((response) => {
                     if (response.status === 200) {
-                        // Handle the successful response here
                         this.$refs.successMessage.style.display = "block";
                         setTimeout(() => {
                             this.$refs.successMessage.style.display = "none";

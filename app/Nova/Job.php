@@ -118,13 +118,6 @@ class Job extends Resource
             Trix::make('Job Description', 'description'),
             // Trix::make('Key Skills', 'responsibilities'),
             Tag::make('Key Skills', 'keySkills')->showCreateRelationButton()->preload()->displayAsList(),
-            // Text::make('Key Skills', 'responsibilities')->resolveUsing(function ($value) {
-            //     if (is_array($value)) {
-            //         return implode(', ', array_column($value, 'title'));
-            //     }
-            //     return $value;
-            // }),
-            // Trix::make('Educational Qualification', 'qualification'),
             Select::make('Educational Qualification', 'qualification')
                 ->options([
                     'Any' => 'Any',
