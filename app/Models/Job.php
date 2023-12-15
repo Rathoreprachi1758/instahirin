@@ -48,12 +48,6 @@ class Job extends Model
     //     return $this->belongsToMany(Experty::class);
     // }
 
-    public function experties(): BelongsToMany
-    {
-        return $this->belongsToMany(Experty::class);
-    }
-
-
     public function keySkills(): BelongsToMany
     {
         return $this->belongsToMany(Experty::class);
