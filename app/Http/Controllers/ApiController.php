@@ -99,7 +99,7 @@ class ApiController extends Controller
         })->orderBy('created_at', 'desc')->get(), 200)->header('Content-Type', 'text/json');
     }
 
-    // method for fetching experience column values from job table
+    //* method for fetching experience column values from job table
     public function getSearchSkills(Request $request)
     {
         $experienceOptions = Experty::distinct()->pluck('title');
@@ -107,7 +107,7 @@ class ApiController extends Controller
         return response()->json($experienceOptions);
     }
 
-    // method for fetching location column values from job table
+    //* method for fetching location column values from job table
     public function getJobLocations(Request $request)
     {
         $query = $request->input('query');

@@ -46,7 +46,7 @@ $job = \App\Models\Job::find($jobId);
                 {!! $job->qualification !!}
 
 
-                <h6 class="pt-3">Preferred Qualifications:</h6>
+                <h6 class="pt-3">Hiring Timeline:</h6>
                 {{-- <div class="discList ml-4 pt-0 pb-3">{{ $job->prefer_qualification }}</div> --}}
                 {{-- {{ $job->prefer_qualification }} --}}
                 {!! $job->prefer_qualification !!}
