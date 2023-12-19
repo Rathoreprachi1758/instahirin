@@ -19,7 +19,8 @@ $job = \App\Models\Job::find($jobId);
                 <h5>Experience: <strong>{{ $job->experience }}</strong></h5>
                 <h5>Company: <strong>{{ $job->company }}</strong></h5>
                 <h5>Work Mode: <strong>{{ $job->work_mode }}</strong></h5>
-                <h5>CTC Range: <strong>{{ $job->ctc_currency }} {{ $job->min_price }} - {{ $job->max_price }}</strong>
+                <h5>CTC Range: <strong>{{ $job->ctc_currency }} {{ $job->min_price }} - {{ $job->max_price }} {{
+                        $job->salary_period }}</strong>
                 </h5>
                 <h5>Employment Type: <strong>{{ $job->availability }}</strong></h5>
 
