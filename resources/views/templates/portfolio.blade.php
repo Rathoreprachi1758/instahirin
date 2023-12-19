@@ -1,6 +1,7 @@
 <!-- togather avatar section  -->
-
-
+<head>
+    <link rel="canonical" href="https://www.bizionictech.com/hire/developer/front-end-developement/portfolio">
+</head>
 <!-- our work section  -->
 
 <div class="at_bizionic_section portfolioPage ">
@@ -575,7 +576,8 @@
                                         <div class="contactUs_info_field">
                                             <strong>Full Name<sup class="text-danger">*</sup></strong>
                                             <div class="contactUs_info_fieldInput">
-                                                <input type="text" name="full_name" placeholder="" value="" />
+                                                <input type="text" name="full_name" placeholder=""
+                                                    value="" />
                                             </div>
                                         </div>
                                     </div>
@@ -584,7 +586,8 @@
                                         <div class="contactUs_info_field">
                                             <strong>Company Name</strong>
                                             <div class="contactUs_info_fieldInput">
-                                                <input type="text" name="company_name" placeholder="" value="" />
+                                                <input type="text" name="company_name" placeholder=""
+                                                    value="" />
                                             </div>
                                         </div>
                                     </div>
@@ -594,7 +597,8 @@
                                         <div class="contactUs_info_field">
                                             <strong>Email<sup class="text-danger">*</sup></strong>
                                             <div class="contactUs_info_fieldInput">
-                                                <input type="text" name="email" placeholder="" value="" />
+                                                <input type="text" name="email" placeholder=""
+                                                    value="" />
                                             </div>
                                         </div>
                                     </div>
@@ -616,7 +620,8 @@
                                         <div class="contactUs_info_field">
                                             <strong>Country code<sup class="text-danger">*</sup></strong>
                                             <div class="contactUs_info_fieldSelect">
-                                                <select class="form-control" name="country_code" id="countryCodeSelect"
+                                                <select class="form-control" name="country_code"
+                                                    id="countryCodeSelect"
                                                     placeholder="Search or select a mobile code">
                                                     <!-- Options will be dynamically populated using JavaScript -->
                                                 </select>
@@ -642,7 +647,8 @@
                                         <div class="contactUs_info_field">
                                             <strong>Contact Number<sup class="text-danger">*</sup></strong>
                                             <div class="contactUs_info_fieldInput">
-                                                <input type="text" name="contact_number" placeholder="" value="" />
+                                                <input type="text" name="contact_number" placeholder=""
+                                                    value="" />
                                             </div>
                                         </div>
                                     </div>
@@ -684,7 +690,8 @@
                                         <div class="contactUs_info_field">
                                             <strong>Full Name<sup class="text-danger">*</sup></strong>
                                             <div class="contactUs_info_fieldInput">
-                                                <input type="text" name="full_name" placeholder="" value="" />
+                                                <input type="text" name="full_name" placeholder=""
+                                                    value="" />
                                             </div>
                                         </div>
                                     </div>
@@ -694,7 +701,8 @@
                                         <div class="contactUs_info_field">
                                             <strong>Company Name</strong>
                                             <div class="contactUs_info_fieldInput">
-                                                <input type="text" name="company_name" placeholder="" value="" />
+                                                <input type="text" name="company_name" placeholder=""
+                                                    value="" />
                                             </div>
                                         </div>
                                     </div>
@@ -704,8 +712,8 @@
                                         <div class="contactUs_info_field">
                                             <strong>Country Name<sup class="text-danger">*</sup></strong>
                                             <div class="contactUs_info_fieldSelect">
-                                                <select class="form-control" name="country_name" id="videoCountrySelect"
-                                                    placeholder="Search or select a country">
+                                                <select class="form-control" name="country_name"
+                                                    id="videoCountrySelect" placeholder="Search or select a country">
                                                     <!-- Options will be dynamically populated using JavaScript -->
                                                 </select>
                                             </div>
@@ -745,7 +753,8 @@
                                         <div class="contactUs_info_field">
                                             <strong>Contact Number<sup class="text-danger">*</sup></strong>
                                             <div class="contactUs_info_fieldInput">
-                                                <input type="text" name="contact_number" placeholder="" value="" />
+                                                <input type="text" name="contact_number" placeholder=""
+                                                    value="" />
                                             </div>
                                         </div>
                                     </div>
@@ -755,7 +764,8 @@
                                         <div class="contactUs_info_field">
                                             <strong>Email<sup class="text-danger">*</sup></strong>
                                             <div class="contactUs_info_fieldInput">
-                                                <input type="text" name="email" placeholder="" value="" />
+                                                <input type="text" name="email" placeholder=""
+                                                    value="" />
                                             </div>
                                         </div>
                                     </div>

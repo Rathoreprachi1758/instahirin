@@ -1,4 +1,6 @@
-   
+   <head>
+    <link rel="canonical" href="https://www.bizionictech.com/hire/developer/other-developers/hire-salesforce-developers">
+   </head>
    <div class="bg_cfd1d2">
 
  

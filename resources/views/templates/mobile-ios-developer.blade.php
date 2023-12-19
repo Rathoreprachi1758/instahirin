@@ -1,8 +1,7 @@
-   
+   <head>
+    <link rel="canonical" href="https://www.bizionictech.com/hire/developer/mobile-app-developers/hire-ios-app-developers">
+   </head>
    <div class="bg_cfd1d2">
-
- 
-   
    <!-- main banner img -->
    
    <div class="mainBanner_layout">

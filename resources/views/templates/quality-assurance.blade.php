@@ -1,8 +1,8 @@
-   
-   <div class="bg_cfd1d2">
 
- 
-   
+   <div class="bg_cfd1d2">
+    <head>
+        <link rel="canonical" href="https://www.bizionictech.com/technology/technology-we-master/technologies/quality-assurance">
+    </head>
    <!-- main banner img -->
    
    <div class="mainBanner_layout">

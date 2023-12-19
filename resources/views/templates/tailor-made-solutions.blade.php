@@ -1,4 +1,6 @@
-   
+   <head>
+    <link rel="canonical" href="https://www.bizionictech.com/services/services-we-excel-at/others/tailor-made-solutions">
+   </head>
    <div class="bg_cfd1d2">
 
  

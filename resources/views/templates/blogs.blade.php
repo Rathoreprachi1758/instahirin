@@ -1,9 +1,8 @@
-
- 
-
+<head>
+    <link rel="canonical" href="https://www.bizionictech.com/hire/developer/front-end-developement/blogs">
+</head>
  <!-- togather avatar section  -->
 
-     
         <div class="latestBlog_section">
             <div class="auto_container">
                 <div class="latestBlog_section_detail">

@@ -374,7 +374,7 @@
               id="location"
             /> -->
             <GoogleVue
-              apiKey="AIzaSyDY1vginH3C8j_tCqQRwIyE7awXfUQk-ck"
+              apiKey="AIzaSyAI4caNs9dzbHxSeT0gDuZFFRu1xAsA7N0"
               v-model="location"
               css-class="css-class-here"
               placeholder="Write your company location"
@@ -653,6 +653,7 @@
 </style>
 
 <script>
+
 // window.csrfToken = "mXyhGMTmEasXYLZmDUm8NAnmRP9ufj74yTGIvqfR";
 import { ref } from "vue";
 import axios from "axios";

@@ -26,15 +26,18 @@ Route::get('/get-sign-Up', [Logincontroller::class, 'index'])->name('signin');
 Route::Post('sign-up', [Logincontroller::class, 'store'])->name('submit.signup');
 Route::get('/loginpage', [LoginController::class, 'login'])->name('loginpage');
 // Route::middleware(['middleware' =>'auth.check'])->group(function () {
-    Route::post('dashboard', [LoginController::class, 'authenticate'])->name('login');
-    Route::get('logout', [LoginController::class, 'logout']);
-    //profile
-    Route::get('profile', [ProfileController::class, 'index']);
-    Route::get('kyc-info',[profileController::class,'user_info']);
-    Route::get('credit-request',[profileController::class,'creditrequest']);
+Route::post('dashboard', [LoginController::class, 'authenticate'])->name('login');
+Route::get('logout', [LoginController::class, 'logout']);
+//profile
+Route::get('profile', [ProfileController::class, 'index']);
+Route::post('change-password', [Logincontroller::class, 'changePasswordSave']);
+
+Route::get('kyc-info', [profileController::class, 'user_info']);
+Route::get('credit-request', [profileController::class, 'creditrequest']);
 // });
 
 Route::get('reset-password', [LoginController::class, 'resetpswd']);
+Route::post('password-reset', [Logincontroller::class, 'resetpassword']);
 Route::get('forgot-password', [LoginController::class, 'forgotpassword']);
 
 

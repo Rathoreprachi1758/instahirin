@@ -1,3 +1,6 @@
+<head>
+    <link rel="canonical" href="https://www.bizionictech.com/get-a-free-consultation">
+</head>
 <div class="aboutProject_section getFree">
     <div class="auto_container">
 
