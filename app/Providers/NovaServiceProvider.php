@@ -23,7 +23,7 @@ class NovaServiceProvider extends NovaApplicationServiceProvider
     {
         parent::boot();
 
-        Nova::footer(function ($request){
+        Nova::footer(function ($request) {
             // return "===========Testing=======";
         });
         // Nova::group('Human resource', [
@@ -42,11 +42,11 @@ class NovaServiceProvider extends NovaApplicationServiceProvider
             })
             ->filter()
             ->toArray();
-            \Log::info('$resources=====================');
-            \Log::info($resources);
-            $allowedEmails = User::pluck('email')->toArray();
-            \Log::info(' $allowedEmails==========');
-            \Log::info($allowedEmails);
+        \Log::info('$resources=====================');
+        \Log::info($resources);
+        $allowedEmails = User::pluck('email')->toArray();
+        \Log::info(' $allowedEmails==========');
+        \Log::info($allowedEmails);
         // Nova::resources($resources);
     }
 
@@ -77,9 +77,7 @@ class NovaServiceProvider extends NovaApplicationServiceProvider
             $allowedEmails = User::pluck('email')->toArray();
             \Log::info($allowedEmails);
             return in_array($user->email, $allowedEmails);
-            
         });
-
     }
 
     /**
@@ -92,7 +90,6 @@ class NovaServiceProvider extends NovaApplicationServiceProvider
         return [
             new \App\Nova\Dashboards\Main,
         ];
-        
     }
 
     /**
@@ -114,14 +111,14 @@ class NovaServiceProvider extends NovaApplicationServiceProvider
     }
     //
     protected function cards()
-{
-    // return [
-    //     new \NovaComponents\Permissioncard\Permissioncard,
-    // ];
-    return [
-        new Permissioncard,
-    ];
-}
+    {
+        // return [
+        //     new \NovaComponents\Permissioncard\Permissioncard,
+        // ];
+        return [
+            new Permissioncard,
+        ];
+    }
 
     /**
      * Register any application services.
@@ -135,6 +132,6 @@ class NovaServiceProvider extends NovaApplicationServiceProvider
         // });
     }
     ////
-  
+
 
 }

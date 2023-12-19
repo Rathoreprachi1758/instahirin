@@ -64,6 +64,24 @@ class Job extends Resource
                 ->hideFromIndex(),
             Text::make('Minimum Price', 'min_price'),
             Text::make('Maximum Price', 'max_price'),
+            Select::make('Salary Period', 'salary_period')
+                ->options([
+                    'Daily' => 'Daily',
+                    'Hourly' => 'Hourly',
+                    'Bi-Weekly' => 'Bi-Weekly',
+                    'Weekly' => 'Weekly',
+                    'Monthly' => 'Monthly',
+                    'Yearly' => 'Yearly',
+                    'Commission' => 'Commission',
+                    'Contractual' => 'Contractual',
+                    'Project' => 'Project',
+                    'Lump Sum Payment' => 'Lump Sum Payment',
+                    'Milestone-Based Payments' => 'Milestone-Based Payments',
+                    'Retainer Fee' => 'Retainer Fee',
+                ])
+                ->displayUsingLabels()
+                ->filterable()
+                ->hideFromIndex(),
             Select::make('Work Mode', 'work_mode')
                 ->options([
                     'Full Time' => 'Full Time',

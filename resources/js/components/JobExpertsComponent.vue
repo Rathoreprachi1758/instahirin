@@ -93,7 +93,7 @@
                       <p><b>Work Mode:</b> {{ job.work_mode }}</p>
                       <p>
                         <b>CTC Range:</b> {{ job.ctc_currency }} {{ job.min_price }} -
-                        {{ job.max_price }}
+                        {{ job.max_price }} {{ job.salary_period }}
                       </p>
                     </div>
                   </div>
