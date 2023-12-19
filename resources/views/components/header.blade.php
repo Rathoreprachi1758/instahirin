@@ -7,14 +7,14 @@
     <!-- bootstrap -->
     <link rel="stylesheet" href="css/bootstrap.min.css">
     <!-- custom css -->
-    <link rel="stylesheet " href="{{asset('css/css/style.css')}} ">
-    <link rel="stylesheet " href="{{asset('css/css/responsive.css')}} ">
+    <link rel="stylesheet " href="{{ asset('css/css/style.css') }} ">
+    <link rel="stylesheet " href="{{ asset('css/css/responsive.css') }} ">
 
 
     <!-- aos animation  -->
-    <link rel="stylesheet " href="{{asset('css/css/aos.css')}}">
+    <link rel="stylesheet " href="{{ asset('css/css/aos.css') }}">
     <!-- font awesome-->
-    <link rel="stylesheet " href="{{asset('css/css/font-awesome.min.css')}}">
+    <link rel="stylesheet " href="{{ asset('css/css/font-awesome.min.css') }}">
 
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 
@@ -96,9 +96,17 @@
                                     <a href="javascript:void(0)" class="active"><span><i class="fa fa-user-circle-o"
                                                 aria-hidden="true"></i></span> Home <em class="menu_icon"><i
                                                 class="fa fa-angle-down" aria-hidden="true"></i></em></a>
+                                    {{-- <form action="{{ url('/dashboard') }}" method="post">
+                                        @csrf
+                                        <button type="submit" class="active">
+                                            <span><i class="fa fa-user-circle-o" aria-hidden="true"></i></span> Home
+                                            <em class="menu_icon"><i class="fa fa-angle-down"
+                                                    aria-hidden="true"></i></em>
+                                        </button>
+                                    </form> --}}
                                 </li>
-                                <li><a href="/profile"><span><i class="fa fa-id-card"
-                                                aria-hidden="true"></i></span> Profile
+                                <li><a href="/profile"><span><i class="fa fa-id-card" aria-hidden="true"></i></span>
+                                        Profile
                                         <em class="menu_icon"><i class="fa fa-angle-down"
                                                 aria-hidden="true"></i></em></a>
                                 </li>
@@ -208,9 +216,9 @@
     </div>
 </main>
 {{-- // --}}
- <!-- dashboard footer  -->
+<!-- dashboard footer  -->
 
- <footer>
+<footer>
     <div class="footer">
         <div class="footer_detail">
             <p>Copyright &copy; <a href="https://www.bizionictech.com/" target="_blank">bizionictech.com</a> |

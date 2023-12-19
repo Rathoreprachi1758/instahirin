@@ -1,16 +1,13 @@
    
+   <head>
+    <link rel="canonical" href="https://www.bizionictech.com/technology/technology-we-master/mobile-application/native-app-development">
+   </head>
    <div class="bg_cfd1d2">
-
- 
-   
    <!-- main banner img -->
    
    <div class="mainBanner_layout">
     <span><img src="/bizionic/images/hire_main_banner.png" alt="#" /></span>
    </div>
-
-
-
 
     <div class="onHire_immerPage">
         <div class="industryNew_section  bg_f2f2f2">

@@ -161,11 +161,12 @@
                 @change="handlePlaceChanged"
               >
               </GoogleMapComponent> -->
+              <!-- apiKey="AIzaSyDY1vginH3C8j_tCqQRwIyE7awXfUQk-ck" -->
               <GoogleVue
-                apiKey="AIzaSyDY1vginH3C8j_tCqQRwIyE7awXfUQk-ck"
+                apiKey="AIzaSyAI4caNs9dzbHxSeT0gDuZFFRu1xAsA7N0"
                 v-model="current_location"
                 css-class="css-class-here"
-                placeholder="Write your company location"
+                placeholder="current location"
               />
             </div>
           </div>
@@ -420,7 +421,7 @@
             /> -->
             <div class="project_form_field">
               <GoogleAddressAutocomplete
-                apiKey="AIzaSyDY1vginH3C8j_tCqQRwIyE7awXfUQk-ck"
+                apiKey="AIzaSyAI4caNs9dzbHxSeT0gDuZFFRu1xAsA7N0"
                 v-model="company_location"
                 css-class="css-class-here"
                 placeholder="Write your company location"

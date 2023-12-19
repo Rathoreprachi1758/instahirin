@@ -1,10 +1,8 @@
 
-
-
     <!-- industry new section section -->
-
-
-
+    <head>
+        <link rel="canonical" href="https://www.bizionictech.com/industries/industries-we-serve/industries/startups">
+    </head>
     <div class="industryNew_section  ind_innerPages">
             <div class="auto_container">
                 <div class="industryNew_section_detail">

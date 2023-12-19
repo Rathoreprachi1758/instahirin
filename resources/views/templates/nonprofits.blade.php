@@ -1,9 +1,6 @@
-
-
- 
-
-
-
+<head>
+    <link rel="canonical" href="https://www.bizionictech.com/industries/industries-we-serve/industries/nonprofits">
+</head>
     <!-- industry new section section -->
 
 

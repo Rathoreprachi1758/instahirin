@@ -1,10 +1,7 @@
-
-
-
+<head>
+    <link rel="canonical" href="https://www.bizionictech.com/industries/industries-we-serve/industries/startup-mvp">
+</head>
     <!-- industry new section section -->
-
-
-
         <div class="industryNew_section  ind_innerPages startup_innerPages">
             <div class="auto_container">
                 <div class="industryNew_section_detail">
