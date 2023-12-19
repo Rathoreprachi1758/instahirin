@@ -103,7 +103,11 @@ class InstaHirinRequirement extends Resource
                 ->prunable(),
             Boolean::make('Notify about AI Recommended Applicants', 'notify_ai_applicants')->trueValue('Yes')->falseValue('No')->hideFromIndex(),
             Select::make('Status', 'status')->options(['New' => 'New', 'In Review' => 'In Reivew', 'Reviewed' => 'Reviewed'])->displayUsingLabels()->filterable(),
+            // \Laravel\Nova\Fields\Text::make('Post a Job', function () {
+            //     $url = route('nova.post-to-jobs', $this->resourceId);
 
+            //     return '<a href="' . $url . '" class="cursor-pointer ml-2 text-70 underline">Post a Job</a>';
+            // })->asHtml()->hideWhenCreating()->hideWhenUpdating(),
 
         ];
     }
@@ -149,7 +153,9 @@ class InstaHirinRequirement extends Resource
      */
     public function actions(NovaRequest $request)
     {
-        return [];
+        return [
+            new Actions\PostToJobs,
+        ];
     }
 
     // public function fieldsForIndex(NovaRequest $request)

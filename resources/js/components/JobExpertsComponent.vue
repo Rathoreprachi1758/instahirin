@@ -93,7 +93,7 @@
                       <p><b>Work Mode:</b> {{ job.work_mode }}</p>
                       <p>
                         <b>CTC Range:</b> {{ job.ctc_currency }} {{ job.min_price }} -
-                        {{ job.max_price }}
+                        {{ job.max_price }} {{ job.salary_period }}
                       </p>
                     </div>
                   </div>
@@ -136,13 +136,13 @@
                 </div>
 
                 <div class="ourExperience">
-                  <div class="ourExperience_col">
-                    <strong>Experience</strong>
-                    <p>{{ job.experience }}</p>
+                  <div class="descriptionText">
+                    <label class="expertTittle">• Experience</label>
+                    <p v-html="job.experience"></p>
                   </div>
-                  <div class="ourExperience_col">
-                    <strong>Employment Type</strong>
-                    <p>{{ job.availability }}</p>
+                  <div class="descriptionText">
+                    <label class="expertTittle">• Employment Type</label>
+                    <p v-html="job.availability"></p>
                   </div>
                 </div>
 

@@ -14,14 +14,15 @@ $job = \App\Models\Job::find($jobId);
         <div class="policy_pages_detail">
             <div class="policy_pages_content">
                 <h1>About the Job:</h1>
-                <h4 class="pb-2 pt-2">Job Title: <strong>{{ $job->title }}</strong></h4>
-                <h4>Location: <strong>{{ $job->location }}</strong></h4>
-                <h4>Experience: <strong>{{ $job->experience }}</strong></h4>
-                <h4>Company: <strong>{{ $job->company }}</strong></h4>
-                <h4>Work Mode: <strong>{{ $job->work_mode }}</strong></h4>
-                <h4>CTC Range: <strong>{{ $job->ctc_currency }} {{ $job->min_price }} - {{ $job->max_price }}</strong>
-                </h4>
-                <h4>Employment Type: <strong>{{ $job->availability }}</strong></h4>
+                <h5 class="pb-2 pt-2">Job Title: <strong>{{ $job->title }}</strong></h5>
+                <h5>Location: <strong>{{ $job->location }}</strong></h5>
+                <h5>Experience: <strong>{{ $job->experience }}</strong></h5>
+                <h5>Company: <strong>{{ $job->company }}</strong></h5>
+                <h5>Work Mode: <strong>{{ $job->work_mode }}</strong></h5>
+                <h5>CTC Range: <strong>{{ $job->ctc_currency }} {{ $job->min_price }} - {{ $job->max_price }} {{
+                        $job->salary_period }}</strong>
+                </h5>
+                <h5>Employment Type: <strong>{{ $job->availability }}</strong></h5>
 
 
                 <h6 class="pt-3 pb-0">About Us:</h6>
@@ -32,27 +33,36 @@ $job = \App\Models\Job::find($jobId);
 
                 <h6 class="">Job Description:</h6>
                 {{-- {{ $job->description }} --}}
-                {{ strip_tags($job->description) }}
+                {{-- {{ strip_tags($job->description) }} --}}
+                <div class="discList ml-4 pt-0 pb-3">
+                    {!! $job->description !!}
+                </div>
 
                 <h6 class="">Key Skills:</h6>
                 {{-- {!! $job->responsibilities !!} --}}
-                <ul>
-                    @foreach ($job->skills as $skill)
-                    <li>{{ $skill->title }}</li>
-                    @endforeach
-                </ul>
+                <div class="discList ml-4 pt-0 pb-3">
+                    <ul>
+                        @foreach ($job->skills as $skill)
+                        <li>{{ $skill->title }}</li>
+                        @endforeach
+                    </ul>
+                </div>
 
 
                 <h6 class="pt-3">Qualifications:</h6>
                 {{-- <div class="discList ml-4 pt-0 pb-3">{{ $job->qualification }}</div> --}}
                 {{-- {{ $job->qualification }} --}}
-                {!! $job->qualification !!}
+                <div class="discList ml-4 pt-0 pb-3">
+                    {!! $job->qualification !!}
+                </div>
 
 
                 <h6 class="pt-3">Hiring Timeline:</h6>
                 {{-- <div class="discList ml-4 pt-0 pb-3">{{ $job->prefer_qualification }}</div> --}}
                 {{-- {{ $job->prefer_qualification }} --}}
-                {!! $job->prefer_qualification !!}
+                <div class="discList ml-4 pt-0 pb-3">
+                    {!! $job->prefer_qualification !!}
+                </div>
 
 
                 <h6 class="pt-3">What We Offer:</h6>
