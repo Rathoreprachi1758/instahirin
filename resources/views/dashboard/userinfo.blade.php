@@ -2,11 +2,22 @@
 {{-- <h1 style="margin-left:675px">This is user info</h1> --}}
 <link rel="stylesheet " href="{{ asset('css/css/profilestyle.css') }} ">
 <link rel="stylesheet " href="{{ asset('css/css/profileresponsive.css') }} ">
-
 <div class="fr-section">
     <div class="fr-section_detail" style="margin-top: -88px;">
         <div class="dashboard_innerPages">
+            {{-- @include('errors.errors') --}}
+            @if (Session::has('message'))
+                <div class="alert alert-success">
+                    <span style="margin-left:330px">{{ Session::get('message') }}</span>
+                </div>
+            @endif
+            @if (Session::has('danger'))
+                <div class="alert alert-danger">
+                    <span style="margin-left:330px">{{ Session::get('danger') }}</span>
+                </div>
+            @endif
             <div class="custom_tabs_section">
+
                 <div class="custom_tabs">
                     <ul>
                         <li>
@@ -330,9 +341,15 @@
                                             <div class="p_userInfo_editInput">
                                                 <input type="password" value="" class="w-100"
                                                     name='current_password' placeholder="Current Password" />
+                                                <span class="passwEye togglePassword" style="margin-right: 409px"
+                                                    onclick="togglePasswordVisibility(this)">
+                                                    <i class="fa fa-eye" style="color:#080816"
+                                                        aria-hidden="true"></i>
+                                                </span>
                                             </div>
                                             @error('current_password')
-                                                <div class="alert alert-danger">{{ $message }}</div>
+                                                <span class="valid"
+                                                    style="font-size: 12px;color:#c62424">{{ $message }}</span>
                                             @enderror
                                         </div>
                                     </div>
@@ -349,9 +366,15 @@
                                             <div class="p_userInfo_editInput">
                                                 <input type="password" value="" class="w-100"
                                                     name='new_password' placeholder="New Password" />
+                                                <span class="passwEye togglePassword" style="margin-right: 409px"
+                                                    onclick="togglePasswordVisibility(this)">
+                                                    <i class="fa fa-eye" style="color:#080816"
+                                                        aria-hidden="true"></i>
+                                                </span>
                                             </div>
                                             @error('new_password')
-                                                <div class="alert alert-danger">{{ $message }}</div>
+                                                <span class="valid"
+                                                    style="font-size: 12px;color:#c62424">{{ $message }}</span>
                                             @enderror
                                         </div>
                                     </div>
@@ -368,10 +391,16 @@
                                             <div class="p_userInfo_editInput">
                                                 <input type="password" value="" class="w-100"
                                                     name='confirm_password' placeholder="Confirm new password" />
+                                                <span class="passwEye togglePassword" style="margin-right: 409px"
+                                                    onclick="togglePasswordVisibility(this)">
+                                                    <i class="fa fa-eye" style="color:#080816"
+                                                        aria-hidden="true"></i>
+                                                </span>
                                             </div>
                                             @error('confirm_password')
-                                            <div class="alert" style=>{{ $message }}</div>
-                                        @enderror
+                                                <span class="valid"
+                                                    style="font-size: 12px;color:#c62424">{{ $message }}</span>
+                                            @enderror
                                         </div>
                                     </div>
                                 </li>

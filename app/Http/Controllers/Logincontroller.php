@@ -12,6 +12,7 @@ use Illuminate\Validation\Rule;
 use Illuminate\Support\Facades\Mail;
 use App\Mail\MailNotify;
 use Illuminate\Support\Facades\Hash;
+use Illuminate\Support\Facades\Validator;
 use Redirect;
 
 class Logincontroller extends Controller
@@ -57,7 +58,7 @@ class Logincontroller extends Controller
         // $user->nationality = '';
         $user->save();
         if ($user->wasRecentlyCreated) {
-            return view('dashboard.login-page', ['message' => ' Signup Succesfully']);
+            return view('dashboard.login-page')->with('message', 'Login Succesfully');
 
         } else {
             return redirect()->back()->with('message', 'Something went wrong, please try again');
@@ -72,14 +73,32 @@ class Logincontroller extends Controller
     }
     public function authenticate(Request $request)
     {
+        $this->validate($request, [
+            'email' => [
+                'required',
+                'string',
+                'email',
+                Rule::exists('users', 'email'),
+            ],
+            'password' => [
+                'required',
+                'string',
+                function ($attribute, $value, $fail) use ($request) {
+                    $email = $request->input('email');       
+                    $user = User::where('email', $email)->first();       
+                    if (!$user || !Hash::check($value, $user->password)) {
+                        $fail('Invalid email or password. Please try again.');
+                    }
+                },
+            ],
+        ]);
         $credentials = $request->only('email', 'password');
+        //dd($credentials);
         if (Auth::attempt($credentials)) {
             return view('dashboard.dashboard');
-
         } else {
-            return redirect()->back()->with('message', 'Something went wrong, please try again');
+            return redirect()->back()->with('message', 'Invalid email or password. Please try again.');
         }
-
     }
     public function logout(Request $request)
     {
@@ -89,7 +108,7 @@ class Logincontroller extends Controller
 
     public function forgotpassword(Request $request)
     {
-          return view('dashboard.forgotpassword');
+        return view('dashboard.forgotpassword');
     }
     //
     public function resetpassword(Request $request)
@@ -109,32 +128,40 @@ class Logincontroller extends Controller
 
     public function changePasswordSave(Request $request)
     {
-        
-        
-        $this->validate($request, [
-            'current_password' => 'required|string',
-            'new_password' => 'required|confirmed|min:5|string',
-            'confirm_password' => 'required|same:new_password|min:5|string'
+        $validator = $this->validate($request, [
+            'current_password' => [
+                'required',
+                'string',
+                function ($attribute, $value, $fail) {
+                    if (!Hash::check($value, auth()->user()->password)) {
+                        $fail('The current password is incorrect.');
+                    }
+                },
+            ],
+            'new_password' => 'required|min:5|string|different:current_password',
+            'confirm_password' => 'required|min:5|string|same:new_password',
         ]);
-
-        dd($request->all());
-
         $auth = Auth::user();
-
+        // dd($auth);
         // The passwords matches
-        if (!Hash::check($request->get('current_password'), $auth->password)) {
-            return back()->with('error', "Current Password is Invalid");
-        }
+        // if (!Hash::check($request->get('current_password'), $auth->password)) {
+        //     return back()->with('error', "Current Password is Invalid");
+        // }
 
         // Current password and new password same
-        if (strcmp($request->get('current_password'), $request->new_password) == 0) {
-            return redirect()->back()->with("error", "New Password cannot be same as your current password.");
+        // if (strcmp($request->get('current_password'), $request->new_password) == 0) {
+        //     return redirect()->back()->with("error", "New Password cannot be same as your current password.");
+        // }
+        $user = User::find($auth->id);
+        if ($user) {
+            $user->password = Hash::make($request->new_password);
+            $user->save();
+            return redirect()->back()->with('message', 'Password changed successfully');
+        } else {
+            return redirect()->back()->with('danger', 'Something went wrong');
         }
 
-        $user = User::find($auth->id);
-        $user->password = Hash::make($request->new_password);
-        $user->save();
-        return back()->with('success', "Password Changed Successfully");
+        // return view('dashboard.userinfo',['userdata' => $userdata])->with('success', 'Password changed successfully');
     }
 
     public function resetpswd(Request $request)

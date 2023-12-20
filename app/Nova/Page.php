@@ -8,6 +8,7 @@ use Laravel\Nova\Fields\ID;
 use Laravel\Nova\Fields\Select;
 use Laravel\Nova\Fields\Text;
 use Laravel\Nova\Fields\Textarea;
+use Laravel\Nova\Fields\Trix;
 use Laravel\Nova\Http\Requests\NovaRequest;
 use File;
 use Laravel\Nova\Fields\DateTime;
@@ -55,7 +56,9 @@ class Page extends Resource
             Text::make('Meta Title', 'meta_title')->rules('min:6,max:255'),
             Text::make('Meta Keywords', 'meta_keywords')->rules('min:6,max:255'),
             Textarea::make('Meta Description', 'meta_description')->rules('min:6,max:500'),
+            Textarea::make('Canonical Tag', 'html_content')->rules('min:6,max:500'),
             Select::make('Template', 'template')->options($this->getAllTemplates())->rules('required'),
+            // Trix::make('HTML Content', 'html_content'),
         ];
     }
 
