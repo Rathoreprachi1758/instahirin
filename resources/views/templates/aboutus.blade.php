@@ -1,7 +1,7 @@
 <!-- main banner  -->
-<head>
+{{-- <head>
     <link rel="canonical" href="https://www.bizionictech.com/about-us">
-</head>
+</head> --}}
 <div class="mainBanner_section aboutUs_bgSection">
     
     <div class="auto_container">

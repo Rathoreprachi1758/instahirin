@@ -13,13 +13,20 @@ class profileController extends Controller
         // return $userdata;
         return view('dashboard.userinfo',['userdata' => $userdata]);
     }
+    
+    public function edituserinfo(Request $request)
+    {   
+        // $id = $request->id;
+        // //return $id;
+        // $projects = p::find($id);
+        // //return $projects;
+        // $login = $request->login_field;
+        // $projects->login_field = json_encode($login);
+        // $projects->save();
+        // return redirect()->route('project.index')->with('success', 'LOGINFIELDS HAS BEEN UPDATED SUCCESSFULLY');
 
-    // public function changepassword(Request $request)
-    // {
-    //     //return 'Hii';
-    //     dd($request->all());
-    // }
-
+        return "hii";
+    }
     public function user_info(Request $request)
     {
         return view('dashboard.kycinfo');

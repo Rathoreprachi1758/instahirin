@@ -76,12 +76,14 @@
                         <div class="contactForm_page">
                             <div class="custom_tittle text-left">
                                 <h3 class="p_color pb-3"><strong>Post</strong> Project / Job Details:</h3>
-                                <p class="p-0">Please provides initials information and our representive will get back
+                                <p class="p-0">Please provides initials information and our representive will get
+                                    back
                                     to you.</p>
                             </div>
                             <div class="alert alert-success text-center" role="alert" id="hire_success"> Thank you for
                                 the message. We will contact you shortly. </div>
-                            <div class="alert alert-danger text-center" role="alert" id="hire_failure"> Sorry! There is
+                            <div class="alert alert-danger text-center" role="alert" id="hire_failure"> Sorry! There
+                                is
                                 some problem sending your query at the moment, Please try again. </div>
                             <insta-requirement-component></insta-requirement-component>
                             {{-- <form action="{{ route('instaHirinRequirements') }}" method="POST"
@@ -159,7 +161,7 @@
                                                     <select class="form-select" aria-label="Default select example"
                                                         name="min_experience" id="min_experience">
                                                         <option selected value="">Min</option>
-                                                        @for($i = 1;$i<16;$i++) <option value="{{$i}}">{{$i}}</option>
+                                                        @for ($i = 1; $i < 16; $i++) <option value="{{$i}}">{{$i}}</option>
                                                             @endfor
                                                     </select>
                                                 </div>
@@ -174,7 +176,7 @@
                                                     <select class="form-select" aria-label="Default select example"
                                                         name="max_experience" id="max_experience">
                                                         <option selected value="">Max</option>
-                                                        @for($i = 1;$i<16;$i++) <option value="{{$i}}">{{$i}}</option>
+                                                        @for ($i = 1; $i < 16; $i++) <option value="{{$i}}">{{$i}}</option>
                                                             @endfor
                                                     </select>
                                                 </div>
@@ -419,7 +421,7 @@
                                                     <select class="form-select" aria-label="Default select example"
                                                         name="contact_no_country_code" id="contact_no_country_code">
                                                         <option value="">Country Code</option>
-                                                        @for($n=0;$n<count($countries);$n++) <option
+                                                        @for ($n = 0; $n < count($countries); $n++) <option
                                                             value="{{$countries[$n]->phone}}">{{$countries[$n]->name}}
                                                             </option>
                                                             @endfor

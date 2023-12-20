@@ -23,13 +23,14 @@ Route::get('sitemap.xml', function () {
 });
 ////
 Route::get('/get-sign-Up', [Logincontroller::class, 'index'])->name('signin');
-Route::Post('sign-up', [Logincontroller::class, 'store'])->name('submit.signup');
+Route::Post('signin', [Logincontroller::class, 'store'])->name('submit.signup');
 Route::get('/loginpage', [LoginController::class, 'login'])->name('loginpage');
 // Route::middleware(['middleware' =>'auth.check'])->group(function () {
 Route::post('dashboard', [LoginController::class, 'authenticate'])->name('login');
 Route::get('logout', [LoginController::class, 'logout']);
 //profile
 Route::get('profile', [ProfileController::class, 'index']);
+Route::put('edit-contact',[ProfileController::class, 'edituserinfo']);
 Route::post('change-password', [Logincontroller::class, 'changePasswordSave']);
 
 Route::get('kyc-info', [profileController::class, 'user_info']);
