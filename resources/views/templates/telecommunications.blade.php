@@ -1,13 +1,7 @@
-
-
- 
-
-
-
+<head>
+    <link rel="canonical" href="https://www.bizionictech.com/industries/industries-we-serve/industries/telecommunications">
+</head>
     <!-- industry new section section -->
-
-
-
         <div class="industryNew_section  bg_f2f2f2 overflow-hidden">
             <div class="auto_container">
                 <div class="pageSection_icon manufactureMask"><img src="/bizionic/images/ind_telecomMask.png" alt="#" /></div>

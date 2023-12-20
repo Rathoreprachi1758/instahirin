@@ -1,12 +1,9 @@
 
-
- 
-
-
-
     <!-- industry new section section -->
 
-
+    <head>
+        <link rel="canonical" href="https://www.bizionictech.com/industries/industries-we-serve/industries/manufacturing">
+    </head>
 
         <div class="industryNew_section  bg_f2f2f2 overflow-hidden">
             <div class="auto_container">

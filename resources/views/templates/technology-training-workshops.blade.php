@@ -1,8 +1,8 @@
    
+   <head>
+    <link rel="canonical" href="https://www.bizionictech.com/services/services-we-excel-at/technology/technology-training-workshops">
+   </head>
    <div class="bg_cfd1d2">
-
- 
-   
    <!-- main banner img -->
    
    <div class="mainBanner_layout">

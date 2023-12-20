@@ -1,6 +1,8 @@
 
     <!-- main banner  -->
-
+    <head>
+        <link rel="canonical" href="https://www.bizionictech.com/industries/industries-we-serve/industries/e-commerce">
+    </head>
     <div class="mainBanner_section servicesBanner">
         <div class="auto_container">
             <div class="mainBanner_detail ">

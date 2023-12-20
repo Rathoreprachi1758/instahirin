@@ -1,4 +1,6 @@
-   
+   <head>
+    <link rel="canonical" href="https://www.bizionictech.com/technology/technology-we-master/e-commerce/nop-commerce">
+   </head>
    <div class="bg_cfd1d2">
 
  

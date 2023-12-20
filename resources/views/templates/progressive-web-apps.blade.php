@@ -1,4 +1,6 @@
-   
+   <head>
+    <link rel="canonical" href="https://www.bizionictech.com/technology/technology-we-master/mobile-application/progressive-web-apps">
+   </head>
    <div class="bg_cfd1d2">
 
  

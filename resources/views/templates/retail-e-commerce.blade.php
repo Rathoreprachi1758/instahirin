@@ -1,9 +1,6 @@
-
-
- 
-
-
-
+<head>
+    <link rel="canonical" href="https://www.bizionictech.com/industries/industries-we-serve/industries/retail-e-commerce">
+</head>
     <!-- industry new section section -->
 
 

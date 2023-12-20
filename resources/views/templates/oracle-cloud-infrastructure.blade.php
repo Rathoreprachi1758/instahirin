@@ -1,8 +1,7 @@
-   
+   <head>
+    <link rel="canonical" href="https://www.bizionictech.com/hire/developer/devops-services/hire-oracle-cloud-infra-consultants">
+   </head>
    <div class="bg_cfd1d2">
-
- 
-   
    <!-- main banner img -->
    
    <div class="mainBanner_layout">
@@ -24,8 +23,6 @@
                                 <div class=" custom_tittle text-left">
                                     <h1>Oracle Cloud Infrastructure (OCI) Consultants</h1>
                                     <h2 class=""> 
-
-
                                     Build And <strong>Run</strong> Wide Range Of Applications <strong>In</strong> Highly-Available, Consistently <strong>High-Performance</strong> Environment
 
                                     </h2>

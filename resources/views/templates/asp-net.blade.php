@@ -1,23 +1,17 @@
    
+   <head>
+    <link rel="canonical" href="https://www.bizionictech.com/technology/technology-we-master/net/asp-net">
+   </head>
    <div class="bg_cfd1d2">
-
- 
-   
    <!-- main banner img -->
    
    <div class="mainBanner_layout">
     <span><img src="/bizionic/images/hire_main_banner.png" alt="#" /></span>
    </div>
-
-
-
-
     <div class="onHire_immerPage">
         <div class="industryNew_section  bg_f2f2f2">
             <div class="auto_container">
                 <div class="industryNew_section_detail">
-
-
                     <div class="industryNew_section1">
                         <div class="row align-items-center">
                             <div class="col-lg-6 col-md-6 aos-init " data-aos="fade-right" data-aos-duration="1000" data-aos-easing="ease">

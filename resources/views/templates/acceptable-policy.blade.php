@@ -1,4 +1,6 @@
-   
+   <head>
+        <link rel="canonical" href="https://www.bizionictech.com/industries/industries-we-serve/industries/acceptable-policy">
+   </head>
    <div class="policy_pages">
         <div class="auto_container">
             <div class="policy_pages_detail">

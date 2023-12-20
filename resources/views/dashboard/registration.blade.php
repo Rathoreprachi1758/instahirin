@@ -20,7 +20,7 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 
     <script src="js/jquery-3.4.1.min.js"></script>
-
+    <link rel="canonical" href="https://www.bizionictech.com/get-sign-Up">
     <!-- aos animation js  -->
     <script src="js/aos.js"></script>
     <link rel="stylesheet " href="css/owl.carousel.min.css ">

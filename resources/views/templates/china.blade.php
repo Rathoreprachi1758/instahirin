@@ -1,6 +1,8 @@
 
 
-
+<head>
+    <link rel="canonical" href="https://www.bizionictech.com/marketing/marketing-services-we-provide/more/china">
+</head>
 <!-- main banner  -->
 
 <div class="mainBanner_section marketServices_page chinaPage">
