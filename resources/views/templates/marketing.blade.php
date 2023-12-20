@@ -1,16 +1,18 @@
 <!-- main banner  -->
-    <div class="mainBanner_section">
-        <div class="auto_container">
-            <div class="mainBanner_detail marketMain">
+<div class="mainBanner_section">
+    <div class="auto_container">
+        <div class="mainBanner_detail marketMain">
 
-                <div class="row">
-                    <div class="col-lg-6 col-md-6 aos-init " data-aos="fade-right" data-aos-duration="1000" data-aos-easing="ease">
-                        <div class="custom_tittle text-left marketingBanner">
+            <div class="row">
+                <div class="col-lg-6 col-md-6 aos-init " data-aos="fade-right" data-aos-duration="1000"
+                    data-aos-easing="ease">
+                    <div class="custom_tittle text-left marketingBanner">
                         <h1 class="text-white"> BIZIONIC</h1>
-                            <h2 class="text-white"> 
-                            Aspires <strong>To</strong> Be The Last <strong>Marketing</strong><br> Partner You’Ll <strong>Ever Work With.</strong>  
-                            </h2>
-                        </div>
+                        <h2 class="text-white">
+                            <strong>The</strong> Last Marketing Partner <strong> You'll Need –</strong>
+                            <strong>Where the</strong> Search Journey <strong>Ends and <br></strong> Triumph Starts.
+                        </h2>
+                    </div>
 
 
 
@@ -84,7 +86,7 @@
 
         <div class="col-lg-6 col-md-6">
             <div class="bizionic_know_fr">
-                    <span class=" aos-init aos-animate" data-aos="fade-left" data-aos-duration="1000"
+                <span class=" aos-init aos-animate" data-aos="fade-left" data-aos-duration="1000"
                     data-aos-easing="ease"><img src="/bizionic/images/eye-catch.gif" alt="#" /></span>
             </div>
         </div>
