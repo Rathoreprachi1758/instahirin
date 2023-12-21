@@ -43,7 +43,7 @@ class Logincontroller extends Controller
         $name = $firstName . ' ' . $lastName;
         $countrycode = $request->country_code;
         $phone = $request->Mobile_Number;
-        $mobilenumber = $countrycode . ' ' . $phone;
+        // $mobilenumber = $countrycode . ' ' . $phone;
         $user = new User;
 
         $user->name = $name;
@@ -52,8 +52,8 @@ class Logincontroller extends Controller
         $a = $request->password;
         $data = Hash::make($a);
         $user->password = $data;
-        // $user->country_code = $request->Country_Code;
-        $user->mobilenumber = $mobilenumber;
+        $user->country_code = $request->country_code;
+        $user->mobilenumber = $request->Mobile_Number;
         // $user->country = '';
         // $user->nationality = '';
         $user->save();

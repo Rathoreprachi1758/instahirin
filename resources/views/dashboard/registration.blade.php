@@ -67,7 +67,8 @@
                                     <div class="auth_info">
                                         <h3 class="text-center">Sign Up</h3>
                                         <div class="text-center">
-                                            <h5 style="font-size: 25px;">Connecting Global Talent, Creating Global Solutions</h5>
+                                            <h5 style="font-size: 25px;">Connecting Global Talent, Creating Global
+                                                Solutions</h5>
                                             <p style="font-size: 1rem;margin-top:-13px">
                                                 Prepare to join a comprehensive work marketplace bustling with an
                                                 extensive range of elite Software Developers, Designers, Cloud Services
@@ -186,7 +187,8 @@
                                                             <div class="auth_field_info">
                                                                 <input type="text" name="Mobile_Number"
                                                                     class="form-control" id="Mobile Number"
-                                                                    placeholder="Mobile Number" minlength="9"
+                                                                    placeholder="Mobile Number"
+                                                                    title="Numericals  only allowed" minlength="9"
                                                                     required value="{{ old('Mobile_Number') }}">
                                                                 @error('Mobile_Number')
                                                                     <div class="text-danger">{{ $message }}</div>

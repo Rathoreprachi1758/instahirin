@@ -107,6 +107,7 @@ class ContentController extends Controller
             'title' => 'Title',
             'description' => 'Desc',
             'keywords' => 'keywords',
+            'canonical'=>'canonical',
             'menus' => json_decode(json_encode((object) $menusResponse['menuItems']), FALSE),
             'template' => 'hireForm',
             'expert' => $expert,

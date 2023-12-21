@@ -56,7 +56,7 @@
             src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAI4caNs9dzbHxSeT0gDuZFFRu1xAsA7N0&libraries=places&callback=Function.prototype">
         </script> --}}
            <script type="text/javascript"
-            src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAI4caNs9dzbHxSeT0gDuZFFRu1xAsA7N0&libraries=places&callback=Function.prototype">
+            src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCWCwDO2UDvwai9BBUyvxGS6t436Eot7Wc&libraries=places&callback=Function.prototype">
         </script>
         <link rel="stylesheet" href="/bizionic/css/owl.carousel.min.css" />
         <link rel="icon" sizes="96x96" href="/bizionic/images/favicon-96x96.png">

@@ -1,8 +1,8 @@
 <x-header data="profile component" />
 <!-- main content sections -->
-    <!-- custom css -->
-    <link rel="stylesheet " href="{{asset('css/css/profilestyle.css')}} ">
-    <link rel="stylesheet " href="{{asset('css/css/profileresponsive.css')}} ">
+<!-- custom css -->
+<link rel="stylesheet " href="{{ asset('css/css/profilestyle.css') }} ">
+<link rel="stylesheet " href="{{ asset('css/css/profileresponsive.css') }} ">
 
 <div class="fr-section">
     <div class="fr-section_detail" style="margin-top: -88px;">
@@ -11,9 +11,9 @@
                 <div class="custom_tabs">
                     <ul>
                         <li>
-                            <a href="/profile" class="active">User Information</a>
+                            <a href="/profile">User Information</a>
                         </li>
-                        <li><a href="/kyc-info">KYC Information</a></li>
+                        <li><a href="/kyc-info" class="active">KYC Information</a></li>
                         <li><a href="/credit-request">Credit Request</a></li>
                     </ul>
                 </div>
@@ -41,5 +41,3 @@
 <link rel="stylesheet " href="{{ asset('css/css/font-awesome.min.css') }}" />
 
 <script src="{{ asset('css/js/jquery-3.4.1.min.js') }}"></script>
-
-
