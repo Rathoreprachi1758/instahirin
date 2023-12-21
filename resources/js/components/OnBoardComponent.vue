@@ -163,7 +163,7 @@
               </GoogleMapComponent> -->
               <!-- apiKey="AIzaSyDY1vginH3C8j_tCqQRwIyE7awXfUQk-ck" -->
               <GoogleVue
-                apiKey="AIzaSyAI4caNs9dzbHxSeT0gDuZFFRu1xAsA7N0"
+                apiKey="AIzaSyCWCwDO2UDvwai9BBUyvxGS6t436Eot7Wc"
                 v-model="current_location"
                 css-class="css-class-here"
                 placeholder="current location"
@@ -422,7 +422,7 @@
             <!-- apiKey="AIzaSyAI4caNs9dzbHxSeT0gDuZFFRu1xAsA7N0" -->
             <div class="project_form_field">
               <GoogleAddressAutocomplete
-              apiKey="AIzaSyAI4caNs9dzbHxSeT0gDuZFFRu1xAsA7N0"
+              apiKey="AIzaSyCWCwDO2UDvwai9BBUyvxGS6t436Eot7Wc"
                 v-model="company_location"
                 css-class="css-class-here"
                 placeholder="Write your company location"
