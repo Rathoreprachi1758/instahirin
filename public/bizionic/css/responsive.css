@@ -1829,9 +1829,11 @@ h6 { font-size: 18px; }
 }
 
 
+.hirinLinks_info h6 { font-size: 16px; }
 
-
-
+.hirinLinks_info ul li a { 
+    font-size: 14px;
+}
 
 
 
@@ -3829,9 +3831,12 @@ h6 { font-size: 18px; }
 .search3 { margin: 0px !important;width: 100% !important;}
 
 
-
-
-
+.hirin_logo { padding-bottom: 10px;}
+.hirinLinks_info { padding: 15px 0px;}
+.hirinSection_detail {
+    width: 100%;
+    padding: 60px 0px 40px;
+}
 
 
 
