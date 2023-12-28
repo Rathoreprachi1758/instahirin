@@ -37,6 +37,7 @@ class PostToJobs extends Action
                 'location' => $instaRequirement->location,
                 'qualification' => $instaRequirement->education_qualification,
                 'company' => $instaRequirement->company_name,
+                'prefer_qualification' => $instaRequirement->company_address,
 
             ]);
 
