@@ -1,7 +1,7 @@
 <template>
   <div class="project_form_field">
     <GoogleAddressAutocomplete
-      apiKey="AIzaSyAI4caNs9dzbHxSeT0gDuZFFRu1xAsA7N0"
+      apiKey="AIzaSyCWCwDO2UDvwai9BBUyvxGS6t436Eot7Wc"
       :value="modelValue"
       :class="cssClass"
       :placeholder="placeholder"

@@ -28,7 +28,15 @@
     <link rel="icon" sizes="96x96" href="{{ asset('css/images/favicon-96x96.png') }}">
 
 
-
+    <script>
+        function togglePasswordVisibility(icon) {
+            var passwordInput = icon.previousElementSibling;
+            var type = passwordInput.type === 'password' ? 'text' : 'password';
+            passwordInput.type = type;
+            icon.querySelector('i').classList.toggle('fa-eye');
+            icon.querySelector('i').classList.toggle('fa-eye-slash');
+        }
+    </script>
 
 </head>
 

@@ -1,4 +1,5 @@
 {{-- <x-header data="user page component" /> --}}
+
 <head>
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
@@ -26,7 +27,7 @@
     <link rel="stylesheet " href="css/owl.carousel.min.css ">
     <script src="js/owl.carousel.js "></script>
 
-    <link rel="icon" sizes="96x96" href="{{asset('css/images/favicon-96x96.png')}}">
+    <link rel="icon" sizes="96x96" href="{{ asset('css/images/favicon-96x96.png') }}">
 
 
 
@@ -41,7 +42,8 @@
                 <div class="container-xxl container-xl container-lg container-md">
                     <div class="headerDetail">
                         <div class="logo">
-                            <a href="{{url('/about-us')}}"><img src="{{ asset('css/images/logo.png') }}" alt="Logo"></a>
+                            <a href="{{ url('/about-us') }}"><img src="{{ asset('css/images/logo.png') }}"
+                                    alt="Logo"></a>
 
                         </div>
 
@@ -65,15 +67,16 @@
                                     <div class="auth_info">
                                         <h3 class="text-center">Sign Up</h3>
                                         <div class="text-center">
-                                            <h5>Connecting Global Talent, Creating Global Solutions</h5>
-                                            <p style="font-size: 1rem;">
-                                                Prepare to join a comprehensive work marketplace, bustling with
-                                                an extensive range of elite Software Developers, Designers, and
-                                                Marketers,
-                                                Businesses seeking outstanding talent and project execution.
+                                            <h5 style="font-size: 25px;">Connecting Global Talent, Creating Global
+                                                Solutions</h5>
+                                            <p style="font-size: 1rem;margin-top:-13px">
+                                                Prepare to join a comprehensive work marketplace bustling with an
+                                                extensive range of elite Software Developers, Designers, Cloud Services
+                                                and Cyber Security Professionals, Marketers, and Businesses seeking
+                                                outstanding talent and project execution.
                                             </p>
                                         </div>
-                                        <form action="{{ url('/sign-up') }}" method="POST"
+                                        <form action="{{ route('submit.signup') }}" method="POST"
                                             enctype="multipart/form-data">
                                             @csrf
                                             <div class="auth_form pt-2">
@@ -126,27 +129,36 @@
                                                         <div class="auth_field">
                                                             <strong>Password*</strong>
                                                             <div class="auth_field_info">
-                                                                <input type="password" name="password" class="form-control" id="password" placeholder="Password" autocomplete="off" required>
+                                                                <input type="password" name="password"
+                                                                    class="form-control" id="password"
+                                                                    placeholder="Password" autocomplete="off" required>
                                                                 @error('password')
-                                                                <div class="text-danger">{{ $message }}</div>
+                                                                    <div class="text-danger">{{ $message }}</div>
                                                                 @enderror
-                                                                <span class="passwEye togglePassword" onclick="togglePasswordVisibility(this)">
-                                                                    <i class="fa fa-eye" style="color:#080816" aria-hidden="true"></i>
+                                                                <span class="passwEye togglePassword"
+                                                                    onclick="togglePasswordVisibility(this)">
+                                                                    <i class="fa fa-eye" style="color:#080816"
+                                                                        aria-hidden="true"></i>
                                                                 </span>
                                                             </div>
                                                         </div>
                                                     </div>
-                                                    
+
                                                     <div class="col-12">
                                                         <div class="auth_field">
                                                             <strong>Confirm Password*</strong>
                                                             <div class="auth_field_info">
-                                                                <input type="password" name="password_confirmation" class="form-control" id="password_confirmation" placeholder="Confirm password" minlength="5" required>
+                                                                <input type="password" name="password_confirmation"
+                                                                    class="form-control" id="password_confirmation"
+                                                                    placeholder="Confirm password" minlength="5"
+                                                                    required>
                                                                 @error('password_confirmation')
-                                                                <div class="text-danger">{{ $message }}</div>
+                                                                    <div class="text-danger">{{ $message }}</div>
                                                                 @enderror
-                                                                <span class="passwEye togglePassword" onclick="togglePasswordVisibility(this)">
-                                                                    <i class="fa fa-eye" style="color:#080816" aria-hidden="true"></i>
+                                                                <span class="passwEye togglePassword"
+                                                                    onclick="togglePasswordVisibility(this)">
+                                                                    <i class="fa fa-eye" style="color:#080816"
+                                                                        aria-hidden="true"></i>
                                                                 </span>
                                                             </div>
                                                         </div>
@@ -156,10 +168,13 @@
                                                             <strong>Country Code*</strong>
                                                             <div class="auth_select_info">
                                                                 <select name='country_code' required>
-                                                                    <option value="" disabled>Select a country code</option>
+                                                                    <option value="" disabled>Select a country
+                                                                        code</option>
                                                                     @foreach ($countryCodes as $country)
-                                                                        <option value="+{{ $country->phone }}" @if ($loop->first) selected @endif>
-                                                                            + {{ $country->name . ' ' . $country->phone }}
+                                                                        <option value="+{{ $country->phone }}"
+                                                                            @if ($loop->first) selected @endif>
+                                                                            +
+                                                                            {{ $country->name . ' ' . $country->phone }}
                                                                         </option>
                                                                     @endforeach
                                                                 </select>
@@ -172,7 +187,8 @@
                                                             <div class="auth_field_info">
                                                                 <input type="text" name="Mobile_Number"
                                                                     class="form-control" id="Mobile Number"
-                                                                    placeholder="Mobile Number" minlength="9" 
+                                                                    placeholder="Mobile Number"
+                                                                    title="Numericals  only allowed" minlength="9"
                                                                     required value="{{ old('Mobile_Number') }}">
                                                                 @error('Mobile_Number')
                                                                     <div class="text-danger">{{ $message }}</div>
@@ -184,7 +200,8 @@
                                                         <div class="auth_text ">
                                                             <p class=" pb-2">
                                                                 <label class="checkbox-label">
-                                                                    <input type="checkbox" name='privacy_statement'  @if(old('privacy_statement')) checked @endif>
+                                                                    <input type="checkbox" name='privacy_statement'
+                                                                        @if (old('privacy_statement')) checked @endif>
                                                                     <span class="checkbox-custom rectangular"></span>
                                                                 </label>
                                                                 @error('privacy_statement')
@@ -202,7 +219,9 @@
                                                         <div class="auth_text">
                                                             <p>
                                                                 <label class="checkbox-label">
-                                                                    <input type="checkbox" name='future_promotions' required  @if(old('future_promotions')) checked @endif>
+                                                                    <input type="checkbox" name='future_promotions'
+                                                                        required
+                                                                        @if (old('future_promotions')) checked @endif>
                                                                     <span class="checkbox-custom rectangular"></span>
                                                                 </label>
                                                                 Please click this box if you are happy for us to send
@@ -270,25 +289,16 @@
 
     <script type="text/javascript" src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit">
     </script>
-    {{-- <script>
-        function togglePasswordVisibility(icon) {
-            var passwordField = icon.closest('.auth_field_info').querySelector('input[type="password"]');
-            var type = passwordField.type === 'password' ? 'text' : 'password';
-            passwordField.type = type;
-            icon.querySelector('i').classList.toggle('fa-eye');
-            icon.querySelector('i').classList.toggle('fa-eye-slash');
-        }
-    </script> --}}
     <script>
         function togglePasswordVisibility(icon) {
-            var passwordInput = icon.previousElementSibling; // Assuming the input is always before the icon
+            var passwordInput = icon.previousElementSibling;
             var type = passwordInput.type === 'password' ? 'text' : 'password';
             passwordInput.type = type;
             icon.querySelector('i').classList.toggle('fa-eye');
             icon.querySelector('i').classList.toggle('fa-eye-slash');
         }
     </script>
-    
+
 
 
 </body>

@@ -374,7 +374,7 @@
               id="location"
             /> -->
             <GoogleVue
-              apiKey="AIzaSyAI4caNs9dzbHxSeT0gDuZFFRu1xAsA7N0"
+              apiKey="AIzaSyAI4aNs9dzbHxSeT0gDuZFFRu1xAsA7N0"
               v-model="location"
               css-class="css-class-here"
               placeholder="Write your company location"

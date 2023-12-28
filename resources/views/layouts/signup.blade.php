@@ -52,9 +52,12 @@
         {{-- <script type="text/javascript"
             src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDY1vginH3C8j_tCqQRwIyE7awXfUQk-ck&libraries=places">
         </script> --}}
-        <script type="text/javascript"
+        {{-- <script type="text/javascript"
             src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAI4caNs9dzbHxSeT0gDuZFFRu1xAsA7N0&libraries=places&callback=Function.prototype">
-        </script>
+        </script> --}}
+        <script type="text/javascript"
+        src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCWCwDO2UDvwai9BBUyvxGS6t436Eot7Wc&libraries=places&callback=Function.prototype">
+    </script>
         {{-- <script type="text/javascript">
             function initMap() {
       }

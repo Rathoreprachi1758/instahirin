@@ -29,6 +29,9 @@
         <title>@yield('meta_title', 'https://www.bizionictech.com/')</title>
         <meta name="description" ,
             content="@yield('meta_description', 'We build e-commerce site, management site, Android, iOS apps, and teach software development courses online.Laravel, Java, NodeJs, PHP technology.')">
+        {{-- // --}}
+        @yield('html_content')
+        
         <meta name="keywords" ,
             content="@yield('meta_keywords', 'We build e-commerce site, management site, Android, iOS apps, and teach software development courses online.Laravel, Java, NodeJs, PHP technology.')">
         <!-- bootstrap -->
@@ -49,8 +52,11 @@
         <script type="text/javascript" src="/bizionic/js/slick.js"></script>
         <script type="text/javascript" src="/bizionic/js/owl.carousel.js"></script>
         <script type="text/javascript" src="/bizionic/js/countries.js"></script>
-        <script type="text/javascript"
+        {{-- <script type="text/javascript"
             src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAI4caNs9dzbHxSeT0gDuZFFRu1xAsA7N0&libraries=places&callback=Function.prototype">
+        </script> --}}
+           <script type="text/javascript"
+            src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCWCwDO2UDvwai9BBUyvxGS6t436Eot7Wc&libraries=places&callback=Function.prototype">
         </script>
         <link rel="stylesheet" href="/bizionic/css/owl.carousel.min.css" />
         <link rel="icon" sizes="96x96" href="/bizionic/images/favicon-96x96.png">

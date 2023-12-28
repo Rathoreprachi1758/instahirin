@@ -23,17 +23,21 @@ Route::get('sitemap.xml', function () {
 });
 ////
 Route::get('/get-sign-Up', [Logincontroller::class, 'index'])->name('signin');
-Route::Post('sign-up', [Logincontroller::class, 'store'])->name('submit.signup');
+Route::Post('signin', [Logincontroller::class, 'store'])->name('submit.signup');
 Route::get('/loginpage', [LoginController::class, 'login'])->name('loginpage');
 // Route::middleware(['middleware' =>'auth.check'])->group(function () {
 Route::post('dashboard', [LoginController::class, 'authenticate'])->name('login');
 Route::get('logout', [LoginController::class, 'logout']);
 //profile
 Route::get('profile', [ProfileController::class, 'index']);
+// Route::get('edit-contact/{id}', [ProfileController::class, 'edituserinfo'])->name('edit.contact');
+Route::patch('edit-contact/{id}', [ProfileController::class, 'edituserinfo'])->name('edit.contact');
+Route::patch('edit-nationality/{id}', [ProfileController::class, 'editnation'])->name('edit.nation');
 Route::post('change-password', [Logincontroller::class, 'changePasswordSave']);
 
 Route::get('kyc-info', [profileController::class, 'user_info']);
 Route::get('credit-request', [profileController::class, 'creditrequest']);
+Route::post('credit-request-submit', [profileController::class, 'creditrequest_submit'])->name('creadit.request');
 // });
 
 Route::get('reset-password', [LoginController::class, 'resetpswd']);

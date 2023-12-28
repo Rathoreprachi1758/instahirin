@@ -54,7 +54,7 @@ class ContentController extends Controller
         // dd($pageSlug);
         //dd($page->meta_keywords);
         //dd($page->meta_description);
-
+        // dd($page->html_content);
         $template = $page ? $page->template : '404';
 
         if ($template == '404') {
@@ -64,13 +64,15 @@ class ContentController extends Controller
         $menusResponse = Cache::get('menus', nova_get_menu_by_slug('header'));
         //        echo "<pre>";print_r($menusResponse['menuItems']);exit;f
         // dd($template);
+        // dd($page->html_content);
         if ($page->slug == 'hire-me') {
             $jobs = Job::where('status', 'Open')->get();
-
+            
             return view('welcome', [
                 'title' => $page->meta_title,
                 'description' => $page->meta_description,
                 'keywords' => $page->meta_keywords,
+                'canonical' => $page->html_content,
                 'menus' => json_decode(json_encode((object) $menusResponse['menuItems']), FALSE),
                 'template' => $template,
                 'jobs' => $jobs,
@@ -83,6 +85,7 @@ class ContentController extends Controller
             'title' => $page->meta_title,
             'description' => $page->meta_description,
             'keywords' => $page->meta_keywords,
+            'canonical' => $page->html_content,
             'menus' => json_decode(json_encode((object) $menusResponse['menuItems']), FALSE),
             'template' => $template,
             // 'expert' => $expert, // made a change expert here
@@ -104,6 +107,7 @@ class ContentController extends Controller
             'title' => 'Title',
             'description' => 'Desc',
             'keywords' => 'keywords',
+            'canonical'=>'canonical',
             'menus' => json_decode(json_encode((object) $menusResponse['menuItems']), FALSE),
             'template' => 'hireForm',
             'expert' => $expert,
