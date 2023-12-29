@@ -17,6 +17,115 @@
                         <li><a href="/credit-request">Credit Request</a></li>
                     </ul>
                 </div>
+                <br>
+                <div class="kycForm_section">
+                    <div class="custom_tittle">
+                        <h4>KYC Application Form</h4>
+                    </div>
+                    <br>
+                    @if (Session::has('message'))
+                        <div class="alert alert-success">
+                            <span style="margin-left:330px">{{ Session::get('message') }}</span>
+                        </div>
+                    @endif
+                    @if (Session::has('danger'))
+                        <div class="alert alert-danger">
+                            <span style="margin-left:330px">{{ Session::get('danger') }}</span>
+                        </div>
+                    @endif
+                    <!-- row 1 -->
+                    <div class="row">
+                        <div class="col-xxl-6 col-xl-6 col-lg-6 col-md-12">
+                            <div class="kycForm_field">
+                                <strong>Company Name (Applicable if you are a
+                                    Company)</strong>
+                                <div class="kycForm_field_info">
+                                    <input type="text" placeholder="" value="" />
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-xxl-6 col-xl-6 col-lg-6 col-md-12">
+                            <div class="kycForm_field">
+                                <strong>Trade license number</strong>
+                                <div class="kycForm_field_info">
+                                    <input type="text" placeholder="" value="" />
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- row 1 -->
+                    <div class="row">
+                        <div class="col-xxl-6 col-xl-6 col-lg-6 col-md-12">
+                            <div class="kycForm_field">
+                                <strong>Date of incorporation</strong>
+                                <div class="kycForm_field_info">
+                                    <input type="text" placeholder="" value="" id="datepicker" />
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-xxl-6 col-xl-6 col-lg-6 col-md-12">
+                            <div class="kycForm_field">
+                                <strong>Place of incorporation</strong>
+                                <div class="kycForm_field_info">
+                                    <input type="text" placeholder="" value="" />
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- row 1 -->
+                    <div class="row">
+                        <div class="col-xxl-6 col-xl-6 col-lg-6 col-md-12">
+                            <div class="kycForm_field">
+                                <strong>Company Address (line 1)</strong>
+                                <div class="kycForm_field_info">
+                                    <input type="text" placeholder="" value="" />
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-xxl-6 col-xl-6 col-lg-6 col-md-12">
+                            <div class="kycForm_field">
+                                <strong>Company Address (line 2)</strong>
+                                <div class="kycForm_field_info">
+                                    <input type="text" placeholder="" value="" />
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- row 1 -->
+                    <div class="row">
+                        <div class="col-xxl-6 col-xl-6 col-lg-6 col-md-12">
+                            <div class="kycForm_field">
+                                <strong>Beneficiary owner</strong>
+                                <div class="kycForm_field_info">
+                                    <input type="text" placeholder="" value="" />
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-xxl-6 col-xl-6 col-lg-6 col-md-12">
+                            <div class="kycForm_field">
+                                <strong>Cnationality</strong>
+                                <div class="kycForm_field_info">
+                                    <input type="text" placeholder="" value="" />
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- row 1 -->
+                    <div class="row">
+                        <div class="col-xxl-6 col-xl-6 col-lg-6 col-md-12">
+                            <div class="kycForm_field">
+                                <strong>Get/tax Identification Number</strong>
+                                <div class="kycForm_field_info">
+                                    <input type="text" placeholder="" value="" />
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
             </div>
         </div>
     </div>

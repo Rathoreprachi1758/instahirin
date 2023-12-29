@@ -36,7 +36,7 @@
                                 </div>
 
                                 <div class="db-blocksFooter">
-                                    <a href="#" class="gotoPage">
+                                    <a href="/profile" class="gotoPage">
                                         <span><i class="fa fa-angle-right" aria-hidden="true"></i></span>
                                         <strong>Go to profile</strong>
                                     </a>

@@ -23,7 +23,6 @@
 <link rel="stylesheet " href="{{ asset('css/css/font-awesome.min.css') }}" />
 
 <script src="{{ asset('css/js/jquery-3.4.1.min.js') }}"></script>
-
 <div class="fr-section">
     <div class="fr-section_detail" style="margin-top: -88px;">
         <div class="dashboard_innerPages">
@@ -41,33 +40,58 @@
                         </li>
                     </ul>
                 </div>
-                <form action="{{route('creadit.request')}}" method="post" id="creadit_request">
+                <br>
+                @if (Session::has('message'))
+                    <div class="alert alert-success">
+                        <span style="margin-left:330px">{{ Session::get('message') }}</span>
+                    </div>
+                @endif
+                @if (Session::has('danger'))
+                    <div class="alert alert-danger">
+                        <span style="margin-left:330px">{{ Session::get('danger') }}</span>
+                    </div>
+                @endif
+                <form action="{{ route('creadit.request') }}" method="post" id="creadit_request"
+                    enctype="multipart/form-data">
                     @csrf
                     <div class="container-fluid" style="margin-top:10px">
-
+                        <p style="font-size: 12px;">
+                            <strong>Description:</strong> The Bizionic
+                            fund request facility offers you the
+                            flexibility of funding for Employee/Talent,
+                            with access to additional funds. You can use
+                            these funds any time to make payments. In
+                            order to avail the facility, simply go to your
+                            eWallet profile, submit a request, and a
+                            representative from our team will get in touch
+                            with you.
+                        </p>
+                        <h4>Credit Request Form</h4>
                         <div class="row">
                             <div class="col-xxl-6 col-xl-6 col-lg-6 col-md-6">
                                 <div class="kycForm_field">
                                     <strong>Cheque A/c Holder Name *</strong>
                                     <div class="kycForm_field_info">
-                                        <input type="text" name="Account_holder_name" placeholder="" value="{{ old('Account_holder_name') }}">
+                                        <input type="text" name="Account_holder_name" placeholder=""
+                                            value="{{ old('Account_holder_name') }}">
                                     </div>
-                                        @error('Account_holder_name')
-                                            <div class="text-danger">{{ $message }}</div>
-                                        @enderror 
-                                    
+                                    @error('Account_holder_name')
+                                        <div class="text-danger">{{ $message }}</div>
+                                    @enderror
+
                                 </div>
                             </div>
                             <div class="col-xxl-6 col-xl-6 col-lg-6 col-md-6">
                                 <div class="kycForm_field">
                                     <strong>Cheque A/c No or IBAN No *</strong>
                                     <div class="kycForm_field_info">
-                                        <input type="text" name="Account_no"placeholder="" value="{{ old('Account_no') }}">
+                                        <input type="text" name="Account_no"placeholder=""
+                                            value="{{ old('Account_no') }}">
                                     </div>
-                                        @error('Account_no')
-                                            <div class="text-danger">{{ $message }}</div>
-                                        @enderror 
-                                    
+                                    @error('Account_no')
+                                        <div class="text-danger">{{ $message }}</div>
+                                    @enderror
+
                                 </div>
                             </div>
                         </div>
@@ -78,21 +102,23 @@
                                 <div class="kycForm_field">
                                     <strong>Cheque Amount *</strong>
                                     <div class="kycForm_field_info">
-                                        <input type="text" placeholder="" name="Cheque_amount" value="{{old('Cheque_amount')}}" id="datepicker" />
+                                        <input type="text" placeholder="" name="Cheque_amount"
+                                            value="{{ old('Cheque_amount') }}" id="datepicker" />
                                     </div>
                                     @error('Cheque_amount')
                                         <div class="text-danger">{{ $message }}</div>
-                                        @enderror
+                                    @enderror
                                 </div>
                             </div>
                             <div class="col-xxl-6 col-xl-6 col-lg-6 col-md-6">
                                 <div class="kycForm_field">
                                     <strong>Cheque No *</strong>
                                     <div class="kycForm_field_info">
-                                        <input type="text" name="cheque_no" placeholder="" value="{{old('cheque_no')}}" />
+                                        <input type="text" name="cheque_no" placeholder=""
+                                            value="{{ old('cheque_no') }}" />
                                     </div>
                                     @error('cheque_no')
-                                    <div class="text-danger">{{ $message }}</div>
+                                        <div class="text-danger">{{ $message }}</div>
                                     @enderror
                                 </div>
                             </div>
@@ -104,10 +130,11 @@
                                 <div class="kycForm_field">
                                     <strong>Cheque Issuing Bank *</strong>
                                     <div class="kycForm_field_info">
-                                        <input type="text" name="issued_bank" placeholder="" value="{{old('issued_bank')}}" />
+                                        <input type="text" name="issued_bank" placeholder=""
+                                            value="{{ old('issued_bank') }}" />
                                     </div>
                                     @error('issued_bank')
-                                    <div class="text-danger">{{ $message }}</div>
+                                        <div class="text-danger">{{ $message }}</div>
                                     @enderror
                                 </div>
                             </div>
@@ -121,18 +148,23 @@
                                     <div class="kycForm_file">
                                         <label class="uploadFile">
                                             <span class="filename"></span>
-                                            <input type="file" class="inputfile form-control" name="file" />
+                                            <input type="file" class="inputfile form-control" name="file"
+                                                id="fileInput" value="{{ old('file') }}"
+                                                onchange="previewImage(this)" />
                                             <i class="fa fa-upload" aria-hidden="true"></i>
                                         </label>
                                     </div>
                                     @error('file')
-                                        <div class="text-danger">{{$message}}</div>
+                                        <div class="text-danger">{{ $message }}</div>
                                     @enderror
                                     <p>
                                         * JPG, PNG, PDF and GIF formats are accepted with a file size not exceeding more
-                                        than 25
-                                        MB.
+                                        than 25 MB.
                                     </p>
+                                    <div id="imagePreview" style="display: none;">
+                                        <img src="#" alt="Uploaded Image"
+                                            style="max-width: 100%; max-height: 200px;">
+                                    </div>
                                 </div>
                             </div>
                         </div>
@@ -144,7 +176,7 @@
                                         <div class="auth_text">
                                             <p>
                                                 <label class="checkbox-label">
-                                                    <input type="checkbox" name="checkbox" required/>
+                                                    <input type="checkbox" name="checkbox" />
                                                     <span class="checkbox-custom rectangular"></span>
                                                 </label>
                                                 I/We hereby apply for the Participation Guarantee and other credit
@@ -153,6 +185,9 @@
                                                 <a href="#">read more</a>
                                             </p>
                                         </div>
+                                        @error('checkbox')
+                                            <div class="text-danger">{{ $message }}</div>
+                                        @enderror
                                     </div>
 
                                     <div class="customSubmitBtn kycSubmit">
@@ -169,3 +204,23 @@
 
     </div>
 </div>
+<script>
+    function previewImage(input) {
+        var fileInput = input;
+        var filename = fileInput.files[0].name;
+        var filenameSpan = document.querySelector('.filename');
+        var imagePreview = document.getElementById('imagePreview');
+
+        filenameSpan.textContent = filename;
+        if (fileInput.files && fileInput.files[0]) {
+            var reader = new FileReader();
+
+            reader.onload = function(e) {
+                imagePreview.style.display = 'block';
+                imagePreview.querySelector('img').src = e.target.result;
+            };
+
+            reader.readAsDataURL(fileInput.files[0]);
+        }
+    }
+</script>
