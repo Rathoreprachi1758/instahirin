@@ -895,7 +895,78 @@
     @include('partials.services')
 
 
+<!-- hirinSection -->
+<div class="hirinSection">
+    <div class="auto_container">
+        <div class="hirinSection_detail">
+            <div class="hirin_logo">
+                <a href="#"><img src="/bizionic/images/hirinLogo.png" alt="#" /></a>
+            </div>
 
+            <div class="row">
+                <div class="col-lg-3 col-md-3 hirinLinks">
+                    <div class="hirinLinks_info">
+                        <h6><u>FOR EMPLOYERS</u></h6>
+                        <ul>
+                            <li><a href="#">Hire Global Talent</a></li>
+                            <li><a href="#">Hire Short-Term Resources</a></li>
+                            <li><a href="#">Hire Freelancers</a></li>
+                            <li><a href="#">Hire Consultants</a></li>
+                            <li><a href="#">Post Jobs</a></li>
+                            <li><a href="#">Post Projects</a></li>
+                            <li><a href="#">Project Management</a></li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-3 hirinLinks">
+                    <div class="hirinLinks_info">
+                        <h6><u>FOR TALENT</u></h6>
+                        <ul>
+                            <li><a href="#">Post Resume</a></li> 
+                            <li><a href="#">Get Directly Hired</a></li> 
+                            <li><a href="#">Get Projects</a></li> 
+                            <li><a href="#">Freelancer Jobs</a></li> 
+                            <li><a href="#">Find Contract Work</a></li> 
+                            <li><a href="#">Get Consultant Role</a></li> 
+                            <li><a href="#">InstaHirin Expert Support</a></li> 
+                            <li><a href="#">Skill Development</a></li> 
+                        </ul>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-3 hirinLinks">
+                    <div class="hirinLinks_info">
+                        <h6><u>GLOBAL TALENT TEAM</u></h6>
+                        <ul>
+                            <li><a href="#">Global Workforce</a></li>  
+                            <li><a href="#">Remote Team</a></li>  
+                            <li><a href="#">Remote Developers</a></li>  
+                            <li><a href="#">EOR Guide</a></li>  
+                            <li><a href="#">Payroll Guide</a></li>  
+                            <li><a href="#">Project Management</a></li>  
+                            <li><a href="#">Multi Currency payment</a></li>  
+                        </ul>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-3 hirinLinks">
+                    <div class="hirinLinks_info">
+                        <h6><u>QUICK LINKS</u></h6>
+                        <ul>
+                            <li><a href="#">Blogs</a></li>  
+                            <li><a href="#">Terms of Services</a></li>
+                            <li><a href="/industries/industries-we-serve/industries/acceptable-policy">Acceptable
+                                    Policy</a></li>
+                            <li><a href="/industries/industries-we-serve/industries/cookies-policy">Cookies
+                                    Policy</a></li>
+                            <li><a href="/industries/industries-we-serve/industries/privacy-policy">Privacy
+                                    Policy</a></li>
+                            <li><a href="#">Services Agreement</a></li>  
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
 
 
     <div class="get_in_touchSection">
