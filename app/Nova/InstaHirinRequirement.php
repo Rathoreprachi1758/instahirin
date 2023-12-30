@@ -53,12 +53,13 @@ class InstaHirinRequirement extends Resource
             Text::make('Project Description', 'project_description')->rules('required', 'min:6,max:255')->hideFromIndex(),
             // Text::make('Key Skills', 'key_skills')->rules('required', 'min:6,max:255')->hideFromIndex(),
 
-            Text::make('Key Skills', 'key_skills')->resolveUsing(function ($value) {
-                if (is_array($value)) {
-                    return implode(', ', array_column($value, 'name'));
-                }
-                return $value;
-            }),
+            // Text::make('Key Skills', 'key_skills')->resolveUsing(function ($value) {
+            //     if (is_array($value)) {
+            //         return implode(', ', array_column($value, 'name'));
+            //     }
+            //     return $value;
+            // }),
+            Tag::make('Key Skills', 'experty')->showCreateRelationButton()->preload()->displayAsList(),
             // Tag::make('Skills', 'skills')->showCreateRelationButton()->preload()->displayAsList(),
             Select::make('Employment Role/Type', 'employment_type')->options([
                 'Full Time' => 'Full Time', 'Part-Time' => 'Part-Time',

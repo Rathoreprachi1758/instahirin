@@ -27,7 +27,7 @@ class PostToJobs extends Action
     {
         foreach ($models as $instaRequirement) {
             // Create a new Job entry
-            Job::create([
+            $job = Job::create([
                 'title' => $instaRequirement->position_title,
                 'work_mode' => $instaRequirement->work_mode,
                 'description' => $instaRequirement->project_description,
@@ -43,9 +43,11 @@ class PostToJobs extends Action
                 'company' => $instaRequirement->company_name,
                 // hiring timeline
                 'prefer_qualification' => $instaRequirement->company_address,
-
-
             ]);
+
+            // Transfer skills
+            $skills = $instaRequirement->experty()->pluck('id')->toArray();
+            $job->keySkills()->attach($skills);
 
             // Delete the entry from InstaHirinRequirement
             $instaRequirement->delete();
