@@ -33,11 +33,17 @@ class PostToJobs extends Action
                 'description' => $instaRequirement->project_description,
                 // 'key_skills' => $instaRequirement->key_skills,
                 'availability' => $instaRequirement->employment_type,
-                'ctc_currency' => $instaRequirement->salary_currency_monthly_project,
+                'ctc_currency' => $instaRequirement->salary_currency_yearly,
+                'min_price' => $instaRequirement->min_salary_yearly,
+                'max_price' => $instaRequirement->max_salary_yearly,
+                // 'salary_period',
+                // 'experience',
                 'location' => $instaRequirement->location,
                 'qualification' => $instaRequirement->education_qualification,
                 'company' => $instaRequirement->company_name,
+                // hiring timeline
                 'prefer_qualification' => $instaRequirement->company_address,
+
 
             ]);
 
