@@ -4301,8 +4301,8 @@ html {
     color: #414042;
     text-align: justify;
     padding-bottom: 0px;
-    max-height: 40px;
-    min-height: 40px;
+    max-height: 45px;
+    min-height: 20px;
     overflow: hidden;
 }
 
@@ -11051,38 +11051,46 @@ html {
 
 
 
-.hirinSection { width: 100%; position: relative; background-color: #ccc;}
+.hirinSection {
+    width: 100%;
+    position: relative;
+    background-color: #ccc;
+}
 
-.hirinSection_detail { width: 100%; padding: 70px 0px;}
+.hirinSection_detail {
+    width: 100%;
+    padding: 70px 0px;
+}
 
-.hirin_logo { width: 100%; position: relative; padding-bottom: 35px; }
+.hirin_logo {
+    width: 100%;
+    position: relative;
+    padding-bottom: 35px;
+}
 
-.hirin_logo a {max-width: 220px; display: block;}
-.hirin_logo a img { width: 100%; display: block;}
+.hirin_logo a {
+    max-width: 220px;
+    display: block;
+}
 
-.hirinLinks_info { width: 100%;}
+.hirin_logo a img {
+    width: 100%;
+    display: block;
+}
 
-.hirinLinks_info ul li { padding: 3px 0px;}
+.hirinLinks_info {
+    width: 100%;
+}
 
-.hirinLinks_info ul li a { color: #000; font-size: 16px;}
+.hirinLinks_info ul li {
+    padding: 3px 0px;
+}
 
-.hirinLinks_info ul li a:hover { text-decoration: underline !important;}
+.hirinLinks_info ul li a {
+    color: #000;
+    font-size: 16px;
+}
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+.hirinLinks_info ul li a:hover {
+    text-decoration: underline !important;
+}
