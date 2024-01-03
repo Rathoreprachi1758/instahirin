@@ -1,4 +1,4 @@
-@ -1, 9187+1, 9297 @@ .page-dev {
+.page-dev {
     text-transform: capitalize;
 }
 
@@ -575,7 +575,7 @@ p {
 }
 
 .main_nav ul li.has_nav>a {
-    padding-right: 22px;
+    padding-right: 15px !important;
 }
 
 .main_nav ul li a i {
