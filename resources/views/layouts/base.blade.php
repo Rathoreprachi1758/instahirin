@@ -6,8 +6,8 @@
     {{-- Paste this code as high in the
 
     <head> of the page as possible --}}
-        <script>
-            (function(w, d, s, l, i) {
+    <script>
+        (function(w, d, s, l, i) {
             w[l] = w[l] || [];
             w[l].push({
                 'gtm.start': new Date().getTime(),
@@ -21,49 +21,47 @@
                 'https://www.googletagmanager.com/gtm.js?id=' + i + dl;
             f.parentNode.insertBefore(j, f);
         })(window, document, 'script', 'dataLayer', 'GTM-THZV9RC4');
-        </script>
-        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
-        <meta name="viewport" content="width=device-width, initial-scale=1" />
-        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-        <meta name="format-detection" content="telephone=no">
-        <title>@yield('meta_title', 'https://www.bizionictech.com/')</title>
-        <meta name="description" ,
-            content="@yield('meta_description', 'We build e-commerce site, management site, Android, iOS apps, and teach software development courses online.Laravel, Java, NodeJs, PHP technology.')">
-        {{-- // --}}
-        @yield('html_content')
-        
-        <meta name="keywords" ,
-            content="@yield('meta_keywords', 'We build e-commerce site, management site, Android, iOS apps, and teach software development courses online.Laravel, Java, NodeJs, PHP technology.')">
-        <!-- bootstrap -->
-        <link rel="stylesheet" href="/bizionic/css/bootstrap.min.css">
-        <!-- custom css -->
-        <link rel="stylesheet " href="/bizionic/css/style.css ">
-        <link rel="stylesheet " href="/bizionic/css/responsive.css ">
-        <link rel="stylesheet" href="/bizionic/css/aos.css" />
+    </script>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="format-detection" content="telephone=no">
+    <title>@yield('meta_title', 'https://www.bizionictech.com/')</title>
+    <meta name="description" , content="@yield('meta_description', 'We build e-commerce site, management site, Android, iOS apps, and teach software development courses online.Laravel, Java, NodeJs, PHP technology.')">
+    {{-- // --}}
+    @yield('html_content')
 
-        <!-- font awesome-->
-        <link rel="stylesheet " href="/bizionic/css/font-awesome.min.css ">
-        <script src="/bizionic/js/jquery-3.4.1.min.js"></script>
-        {{-- Schema Js file --}}
-        <script src="/bizionic/js/schema.js"></script>
-        <!-- slick slider -->
-        <link rel=" stylesheet " type="text/css " href="/bizionic/css/slick.css ">
-        <link rel="stylesheet " type="text/css " href="/bizionic/css/slick-theme.css ">
-        <script type="text/javascript" src="/bizionic/js/slick.js"></script>
-        <script type="text/javascript" src="/bizionic/js/owl.carousel.js"></script>
-        <script type="text/javascript" src="/bizionic/js/countries.js"></script>
-        {{-- <script type="text/javascript"
+    <meta name="keywords" , content="@yield('meta_keywords', 'We build e-commerce site, management site, Android, iOS apps, and teach software development courses online.Laravel, Java, NodeJs, PHP technology.')">
+    <!-- bootstrap -->
+    <link rel="stylesheet" href="/bizionic/css/bootstrap.min.css">
+    <!-- custom css -->
+    <link rel="stylesheet " href="/bizionic/css/style.css ">
+    <link rel="stylesheet " href="/bizionic/css/responsive.css ">
+    <link rel="stylesheet" href="/bizionic/css/aos.css" />
+
+    <!-- font awesome-->
+    <link rel="stylesheet " href="/bizionic/css/font-awesome.min.css ">
+    <script src="/bizionic/js/jquery-3.4.1.min.js"></script>
+    {{-- Schema Js file --}}
+    <script src="/bizionic/js/schema.js"></script>
+    <!-- slick slider -->
+    <link rel=" stylesheet " type="text/css " href="/bizionic/css/slick.css ">
+    <link rel="stylesheet " type="text/css " href="/bizionic/css/slick-theme.css ">
+    <script type="text/javascript" src="/bizionic/js/slick.js"></script>
+    <script type="text/javascript" src="/bizionic/js/owl.carousel.js"></script>
+    <script type="text/javascript" src="/bizionic/js/countries.js"></script>
+    {{-- <script type="text/javascript"
             src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAI4caNs9dzbHxSeT0gDuZFFRu1xAsA7N0&libraries=places&callback=Function.prototype">
         </script> --}}
-           <script type="text/javascript"
-            src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCWCwDO2UDvwai9BBUyvxGS6t436Eot7Wc&libraries=places&callback=Function.prototype">
-        </script>
-        <link rel="stylesheet" href="/bizionic/css/owl.carousel.min.css" />
-        <link rel="icon" sizes="96x96" href="/bizionic/images/favicon-96x96.png">
-        @vite(['resources/css/app.css', 'resources/js/app.js'])
-        <!-- Hotjar Tracking Code for https://www.bizionictech.com/ -->
-        <script>
-            (function(h, o, t, j, a, r) {
+    <script type="text/javascript"
+        src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCWCwDO2UDvwai9BBUyvxGS6t436Eot7Wc&libraries=places&callback=Function.prototype">
+    </script>
+    <link rel="stylesheet" href="/bizionic/css/owl.carousel.min.css" />
+    <link rel="icon" sizes="96x96" href="/bizionic/images/favicon-96x96.png">
+    @vite(['resources/css/app.css', 'resources/js/app.js'])
+    <!-- Hotjar Tracking Code for https://www.bizionictech.com/ -->
+    <script>
+        (function(h, o, t, j, a, r) {
             h.hj = h.hj || function() {
                 (h.hj.q = h.hj.q || []).push(arguments)
             };
@@ -77,10 +75,10 @@
             r.src = t + h._hjSettings.hjid + j + h._hjSettings.hjsv;
             a.appendChild(r);
         })(window, document, 'https://static.hotjar.com/c/hotjar-', '.js?sv=');
-        </script>
-        <!-- Meta Pixel Code -->
-        <script>
-            ! function(f, b, e, v, n, t, s) {
+    </script>
+    <!-- Meta Pixel Code -->
+    <script>
+        ! function(f, b, e, v, n, t, s) {
             if (f.fbq) return;
             n = f.fbq = function() {
                 n.callMethod ?
@@ -100,17 +98,17 @@
             'https://connect.facebook.net/en_US/fbevents.js');
         fbq('init', '990314288786309');
         fbq('track', 'PageView');
-        </script>
-        <noscript><img height="1" width="1" style="display:none"
-                src="https://www.facebook.com/tr?id=990314288786309&ev=PageView&noscript=1" /></noscript>
-        <!-- End Meta Pixel Code -->
+    </script>
+    <noscript><img height="1" width="1" style="display:none"
+            src="https://www.facebook.com/tr?id=990314288786309&ev=PageView&noscript=1" /></noscript>
+    <!-- End Meta Pixel Code -->
 
 
 
-        <!-- Google tag (gtag.js) -->
-        <script async src="https://www.googletagmanager.com/gtag/js?id=G-603H2KERC7"></script>
-        <script>
-            window.dataLayer = window.dataLayer || [];
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-603H2KERC7"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
 
         function gtag() {
             dataLayer.push(arguments);
@@ -118,11 +116,11 @@
         gtag('js', new Date());
 
         gtag('config', 'G-603H2KERC7');
-        </script>
+    </script>
 
 
 
-    </head>
+</head>
 
 <body>
     <div class="wrapper">
@@ -137,8 +135,8 @@
             <div class="header flotNav_added">
 
                 <!-- header up bar  -->
-                <div class="header_up">
-                    <div class="auto_container">
+                <div class="header_up position: relative;" >
+                    <div class="auto_container" >
                         <div class="header_up_detail">
                             <div class="logo_socialInfo">
                                 <div class="social_info">
@@ -161,17 +159,124 @@
                                     <a href="https://www.eshare.ai/" target="_blank"><img
                                             src="/bizionic/images/eshareWhite_logo.png" alt="#" /></a>
                                 </div>
+                                {{-- // --}}
+                                <div class="eshareWhite_logo">
+                                    <a href="https://leadnest.ai/admin/signin" target="_blank"><img
+                                            src="\bizionic\images\leadnest.png" alt="#" /></a>
+                                </div>
                             </div>
-
-
                             <div class="trendingNav">
-                                <div class="trendingNav_links">
+                                {{-- <div class="main_nav">
+                                </div> --}}
+                                <div class="trendingNav_links" >
                                     <ul>
                                         {{-- <li><a href="/industries/industries-we-serve/industries/startups">Startup
                                                 Funding</a></li>
                                         <li><a href="#">Trending News</a></li> --}}
+                                        {{-- @include('partials.nav', ['menus' => $menus]) --}}
                                         <li><a href="/industries/industries-we-serve/industries/startups">Startup
                                                 Funding</a></li>
+                                        <div class="sub_nav"></div>
+                                        <a href="javascript:void(0)" class="closeNav">&nbsp;</a>
+                                        @foreach ($menus as $key => $menu)
+                                            @php
+                                                $hasNav = !$loop->last && count($menu->children) ? true : false;
+                                                $btnDefault = $menu->data->is_action_item ? true : false;
+                                                $customClass = $menu->data->is_action_item ? $menu->data->is_action_item : '';
+                                                $floatingMenuClass = 'floatingMenu ' . $menu->data->slug . 'Floating_menu';
+                                            @endphp
+                                            {{-- <a href="{{route('index',$menu->data->slug)}}" @class([$customClass=>$btnDefault])>{{$menu->name}}<small><i class="fa fa-angle-down" aria-hidden="true"></i></small></a> --}}
+                                            @if ($menu->name == 'Services' || $menu->name == 'Industries')
+                                                <li class="has_nav"><a href="{{ route('index', $menu->data->slug) }}"
+                                                        class="{{ $customClass ?? '' }} {{ $btnDefault ?? '' }}">
+                                                        {{ $menu->name }}
+                                                        <small><i class="fa fa-angle-down"
+                                                                aria-hidden="true"></i></small></a>
+
+                                                    @if (count($menu->children))
+                                                        @php
+                                                            $menuColumns = true;
+                                                        @endphp
+                                                        <div @class([$floatingMenuClass => true]) style="position: absolute;     top: auto; z-index: 1;">
+                                                            <div class="row">
+                                                                @foreach ($menu->children as $ckey => $cmenu)
+                                                                    @php
+                                                                        $hasChilCustomClass = $cmenu->data->is_action_item ? true : false;
+                                                                        $chilcustomClass = $cmenu->data->is_action_item ? $cmenu->data->is_action_item : '';
+                                                                    @endphp
+                                                                    <div @class([$chilcustomClass => $hasChilCustomClass])>
+                                                                        <div class="floatingMenu_col">
+                                                                            <h6>
+                                                                                <span></span>
+                                                                                {{ $cmenu->name }}
+                                                                                <em class="chevRowDown"><i
+                                                                                        class="fa fa-angle-down"
+                                                                                        aria-hidden="true"></i></em>
+                                                                            </h6>
+                                                                            @if (count($cmenu->children))
+                                                                                <div class="floatingMenu_col_list ">
+                                                                                    <div class="floatingMenu_info">
+                                                                                        <div class="row">
+                                                                                            @foreach ($cmenu->children as $segmentKey => $segment)
+                                                                                                @if (count($segment->children))
+                                                                                                    @php
+                                                                                                        $hasSegmentClass = $segment->data->is_action_item ? true : false;
+                                                                                                        $segmentcustomClass = $segment->data->is_action_item ? $segment->data->is_action_item : '';
+                                                                                                        $lastOuterClass = $loop->last ? 'innerColum_menu_outer border_0' : 'innerColum_menu_outer';
+                                                                                                    @endphp
+                                                                                                    <div
+                                                                                                        @class([$segmentcustomClass => $hasSegmentClass])>
+                                                                                                        <div
+                                                                                                            @class([$lastOuterClass => true])>
+                                                                                                            @foreach ($segment->children as $cItemkey => $cMenuItem)
+                                                                                                                <div
+                                                                                                                    class="innerColum_menu">
+                                                                                                                    @php
+                                                                                                                        $cMenuItemName = $cMenuItem->name == 'spacer' ? '' : $cMenuItem->name;
+                                                                                                                    @endphp
+                                                                                                                    <strong>{{ $cMenuItemName }}</strong>
+                                                                                                                    @if (count($cMenuItem->children))
+                                                                                                                        <ul>
+                                                                                                                            @foreach ($cMenuItem->children as $childItemkey => $childMenuItem)
+                                                                                                                                @php
+                                                                                                                                    $hasChildMenuItemClass = $childMenuItem->data->is_action_item ? true : false;
+                                                                                                                                    $childMenuItemClass = $childMenuItem->data->is_action_item ? $childMenuItem->data->is_action_item : '';
+
+                                                                                                                                @endphp
+                                                                                                                                <li
+                                                                                                                                    @class([$childMenuItemClass => $hasChildMenuItemClass])>
+                                                                                                                                    <a href="{{ url("/{$menu->data->slug}/{$cmenu->data->slug}/{$cMenuItem->data->slug}/{$childMenuItem->data->slug}") }}"
+                                                                                                                                        class="">{{ $childMenuItem->name }}</a>
+                                                                                                                                </li>
+                                                                                                                            @endforeach
+                                                                                                                        </ul>
+                                                                                                                    @endif
+                                                                                                                </div>
+                                                                                                            @endforeach
+                                                                                                        </div>
+                                                                                                    </div>
+                                                                                                @endif
+                                                                                            @endforeach
+                                                                                        </div>
+                                                                                    </div>
+                                                                                </div>
+                                                                            @endif
+                                                                        </div>
+                                                                    </div>
+                                                                @endforeach
+                                                                {{-- <div class=" col-lg-3 col-md-3 columnSett  pl-0">
+                                                                            @include('partials.menu_address')
+                                                                        </div> --}}
+                                                            </div>
+                                                        </div>
+                                                    @endif
+                                                </li>
+                                            @endif
+
+                                        @endforeach
+                                        {{-- // --}}
+                                        {{-- <li><a href="/industries/industries-we-serve/industries/startups">Startup
+                                                Funding</a></li> --}}
                                         <li><a href="/hire/developer/front-end-developement/portfolio">Portfolio</a>
                                         </li>
                                         <li><a href="/hire/developer/front-end-developement/blogs">Blogs</a></li>
@@ -182,32 +287,32 @@
                                     <div id="google_translate_element"></div>
                                 </div>
                                 {{-- <div class="authBtns"> --}}
-                                    <div class="authBtns">
-                                        <ul>
-                                            <li><a href="{{ url('/loginpage') }}">Sign In</a></li>
-                                            <li><a href="{{ route('signin') }}">Sign Up</a>
-                                            </li>
+                                {{-- <div class="authBtns">
+                                    <ul>
+                                        <li><a href="{{ url('/loginpage') }}">Sign In</a></li>
+                                        <li><a href="{{ route('signin') }}">Sign Up</a>
+                                        </li>
 
-                                        </ul>
-                                    </div>
-                                </div>
+                                    </ul>
+                                </div> --}}
                             </div>
-                        </div>
-                    </div>
-
-                    <div class="auto_container">
-                        <div class="header_detail">
-                            <div class="main_logo">
-                                <a href="/about-us"><img src="/bizionic/images/logo.png" alt="#" /></a>
-                            </div>
-                            <div class="menuIcon"></div>
-                            @include('partials.nav')
-
-
-
                         </div>
                     </div>
                 </div>
+
+                <div class="auto_container">
+                    <div class="header_detail">
+                        <div class="main_logo">
+                            <a href="/about-us"><img src="/bizionic/images/logo.png" alt="#" /></a>
+                        </div>
+                        <div class="menuIcon"></div>
+                        @include('partials.nav')
+
+
+
+                    </div>
+                </div>
+            </div>
 
         </header>
         <main class="main_container" id="app">
@@ -322,16 +427,17 @@
                                                     aria-hidden="true"></i></a>
                                             <a href="https://www.instagram.com/bizionic_technologies/" target="_blank"
                                                 class="s_inst"><i class="fa fa-instagram" aria-hidden="true"></i></a>
-                                            <a href="https://twitter.com/bizionictech" target="_blank" class="s_tw"><i
-                                                    class="fa fa-twitter-square" aria-hidden="true"></i></a>
+                                            <a href="https://twitter.com/bizionictech" target="_blank"
+                                                class="s_tw"><i class="fa fa-twitter-square"
+                                                    aria-hidden="true"></i></a>
                                             <a href="https://www.linkedin.com/company/bizionic-technologies-and-marketing-solutions/"
                                                 target="_blank" class="s_link"><i class="fa fa-linkedin-square"
                                                     aria-hidden="true"></i></a>
                                             <a href="https://www.youtube.com/channel/UCDz2zqtte5EZ3_6OAfMl4rw"
                                                 class="s_yout" target="_blank"><i class="fa fa-youtube-play"
                                                     aria-hidden="true"></i></a>
-                                            <a href="#" class="s_slide" target="_blank"><i class="fa fa-slideshare"
-                                                    aria-hidden="true"></i></a>
+                                            <a href="#" class="s_slide" target="_blank"><i
+                                                    class="fa fa-slideshare" aria-hidden="true"></i></a>
                                         </div>
 
                                     </div>

@@ -101,17 +101,9 @@
                         <div class="db_nav">
                             <ul>
                                 <li>
-                                    <a href="javascript:void(0)" class="active"><span><i class="fa fa-user-circle-o"
+                                    <a href="/dashboard-return" class="active"><span><i class="fa fa-user-circle-o"
                                                 aria-hidden="true"></i></span> Home <em class="menu_icon"><i
                                                 class="fa fa-angle-down" aria-hidden="true"></i></em></a>
-                                    {{-- <form action="{{ url('/dashboard') }}" method="post">
-                                        @csrf
-                                        <button type="submit" class="active">
-                                            <span><i class="fa fa-user-circle-o" aria-hidden="true"></i></span> Home
-                                            <em class="menu_icon"><i class="fa fa-angle-down"
-                                                    aria-hidden="true"></i></em>
-                                        </button>
-                                    </form> --}}
                                 </li>
                                 <li><a href="/profile"><span><i class="fa fa-id-card" aria-hidden="true"></i></span>
                                         Profile
