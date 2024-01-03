@@ -187,7 +187,7 @@
                                             @endphp
                                             {{-- <a href="{{route('index',$menu->data->slug)}}" @class([$customClass=>$btnDefault])>{{$menu->name}}<small><i class="fa fa-angle-down" aria-hidden="true"></i></small></a> --}}
                                             @if ($menu->name == 'Services' || $menu->name == 'Industries')
-                                                <li class="has_nav" style=" width: 100px; "><a href="{{ route('index', $menu->data->slug) }}"
+                                                <li class="has_nav"><a href="{{ route('index', $menu->data->slug) }}"
                                                         class="{{ $customClass ?? '' }} {{ $btnDefault ?? '' }}">
                                                         {{ $menu->name }}
                                                         <small><i class="fa fa-angle-down"
