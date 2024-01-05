@@ -539,7 +539,7 @@
       </div>
 
       <!-- Company Address -->
-      <div class="col-lg-12 col-md-12">
+      <!-- <div class="col-lg-12 col-md-12">
         <div class="requireForm_lable">
           <strong class="req_lable">Company Address:</strong>
           <div class="project_form_textarea">
@@ -558,6 +558,33 @@
               <span id="current">{{ characterCount3 }}</span>
               <span id="maximum">/ 5000</span>
             </div>
+          </div>
+        </div>
+      </div> -->
+
+      <!-- Hiring Timeline -->
+      <div class="col-lg-12 col-md-12">
+        <div class="requireForm_lable">
+          <strong class="req_lable">Hiring Timeline:</strong>
+          <div class="project_form_select">
+            <select
+              class="form-select"
+              aria-label="Default select example"
+              v-model="company_address"
+              name="company_address"
+              id="company_address"
+            >
+              <option value="" disabled>Select Hiring Timeline</option>
+              <option value="Immediate">Immediate</option>
+              <option value="Within One Month">Within One Month</option>
+              <option value="Within 60 Days">Within 60 Days</option>
+              <option value="Within 90 Days">Within 90 Days</option>
+              <option value="Now Hiring">Now Hiring</option>
+              <option value="Immediate Vacancy">Immediate Vacancy</option>
+              <option value="Urgently Required">Urgently Required</option>
+              <option value="Fast-Track Hiring">Fast-Track Hiring</option>
+              <option value="Direct Recruitment">Direct Recruitment</option>
+            </select>
           </div>
         </div>
       </div>
@@ -653,7 +680,6 @@
 </style>
 
 <script>
-
 // window.csrfToken = "mXyhGMTmEasXYLZmDUm8NAnmRP9ufj74yTGIvqfR";
 import { ref } from "vue";
 import axios from "axios";

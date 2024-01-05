@@ -388,7 +388,6 @@ class ContentController extends Controller
             $formData->website = $validatedData['website'];
             $formData->message = $validatedData['message'];
             $formData->address = $validatedData['address'];
-            $formData->from_date = $validatedData['from_date'];
             $formData->to_date = $validatedData['to_date'];
             $formData->from_time = $validatedData['from_time'];
             $formData->to_time = $validatedData['to_time'];
@@ -563,6 +562,7 @@ class ContentController extends Controller
         $formData->max_salary_hourly = $validatedData['max_salary_hourly'];
 
         $formData->location = $validatedData['location'];
+        // return $validatedData['location'];
         $formData->education_qualification = $validatedData['education_qualification'];
         $formData->company_name = $validatedData['company_name'];
         $formData->company_website = $validatedData['company_website'];

@@ -1,4 +1,4 @@
-@ -1, 9187+1, 9297 @@ .page-dev {
+.page-dev {
     text-transform: capitalize;
 }
 
@@ -575,7 +575,7 @@ p {
 }
 
 .main_nav ul li.has_nav>a {
-    padding-right: 22px;
+    padding-right: 15px !important;
 }
 
 .main_nav ul li a i {
@@ -4293,7 +4293,7 @@ html {
 
 .descriptionText {
     width: 100%;
-    padding-bottom: 30px;
+    padding-bottom: 25px;
 }
 
 .descriptionText p {
@@ -4301,8 +4301,8 @@ html {
     color: #414042;
     text-align: justify;
     padding-bottom: 0px;
-    max-height: 70px;
-    min-height: 70px;
+    max-height: 45px;
+    min-height: 20px;
     overflow: hidden;
 }
 
@@ -4310,7 +4310,7 @@ html {
 
 .ourExperties {
     width: 100%;
-    padding-bottom: 40px;
+    padding-bottom: 20px;
 }
 
 .expertTittle {
@@ -4394,7 +4394,7 @@ html {
 
 .ourExperience {
     width: 100%;
-    padding-bottom: 25px;
+    padding-bottom: 0px;
     display: flex;
 }
 

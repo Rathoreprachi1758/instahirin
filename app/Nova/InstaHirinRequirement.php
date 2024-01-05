@@ -53,12 +53,13 @@ class InstaHirinRequirement extends Resource
             Text::make('Project Description', 'project_description')->rules('required', 'min:6,max:255')->hideFromIndex(),
             // Text::make('Key Skills', 'key_skills')->rules('required', 'min:6,max:255')->hideFromIndex(),
 
-            Text::make('Key Skills', 'key_skills')->resolveUsing(function ($value) {
-                if (is_array($value)) {
-                    return implode(', ', array_column($value, 'name'));
-                }
-                return $value;
-            }),
+            // Text::make('Key Skills', 'key_skills')->resolveUsing(function ($value) {
+            //     if (is_array($value)) {
+            //         return implode(', ', array_column($value, 'name'));
+            //     }
+            //     return $value;
+            // }),
+            Tag::make('Key Skills', 'experty')->showCreateRelationButton()->preload()->displayAsList(),
             // Tag::make('Skills', 'skills')->showCreateRelationButton()->preload()->displayAsList(),
             Select::make('Employment Role/Type', 'employment_type')->options([
                 'Full Time' => 'Full Time', 'Part-Time' => 'Part-Time',
@@ -91,7 +92,22 @@ class InstaHirinRequirement extends Resource
             Text::make('Contact # Country Code', 'contact_no_country_code')->rules('nullable')->hideFromIndex(),
             Text::make('Contact #', 'contact_no')->rules('nullable')->hideFromIndex(),
             Text::make('Company Details', 'company_details')->hideFromIndex(),
-            Text::make('Company Address', 'company_address')->hideFromIndex(),
+            // Text::make('Company Address', 'company_address')->hideFromIndex(),
+            Select::make('Hiring Timeline', 'company_address')
+                ->options([
+                    'Immediate' => 'Immediate',
+                    'Within One Month' => 'Within One Month',
+                    'Within 60 Days' => 'Within 60 Days',
+                    'Within 90 Days' => 'Within 90 Days',
+                    'Now Hiring' => 'Now Hiring',
+                    'Immediate Vacancy' => 'Immediate Vacancy',
+                    'Urgently Required' => 'Urgently Required',
+                    'Fast-Track Hiring' => 'Fast-Track Hiring',
+                    'Direct Recruitment' => 'Direct Recruitment',
+                ])
+                ->displayUsingLabels()
+                ->filterable()
+                ->hideFromIndex(),
             // File::make('Document', 'document')->hideFromIndex(),
             File::make('Document', 'document')
                 ->disk('public')

@@ -2,13 +2,20 @@
 
 namespace App\Models;
 
-use Illuminate\Database\Eloquent\Factories\HasFactory;
+use App\Models\Experty;
 use Illuminate\Database\Eloquent\Model;
+use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Relations\BelongsToMany;
 
 class InstaHirinRequirement extends Model
 {
     use HasFactory;
+
+    protected $table = 'insta_hirin_requirements';
+
+    protected $casts = [
+        'key_skills' => 'json',
+    ];
 
 
     public function getKeySkillsAttribute($value)
@@ -16,8 +23,14 @@ class InstaHirinRequirement extends Model
         return json_decode($value, true);
     }
 
-    public function skills(): BelongsToMany
+    // public function skills(): BelongsToMany
+    // {
+    //     return $this->belongsToMany(Skill::class);
+    // }
+
+
+    public function experty(): BelongsToMany
     {
-        return $this->belongsToMany(Skill::class);
+        return $this->belongsToMany(Experty::class);
     }
 }
