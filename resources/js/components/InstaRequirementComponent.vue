@@ -57,12 +57,21 @@
               aria-label="Default select example"
             >
               <option selected></option>
-              <option value="In Office">In Office</option>
+              <!-- <option value="In Office">In Office</option>
               <option value="Remote">Remote</option>
               <option value="Hybrid">Hybrid</option>
               <option value="Flexi Work">Flexi Work</option>
               <option value="Job Sharing">Job Sharing</option>
-              <option value="Limited Contract">Limited Contract</option>
+              <option value="Limited Contract">Limited Contract</option> -->
+              <option value="Full Time">Full Time</option>
+              <option value="Part Time">Part Time</option>
+              <option value="Daily Bases">Daily Bases</option>
+              <option value="Weekly">Weekly</option>
+              <option value="Period">Period</option>
+              <option value="Freelance">Freelance</option>
+              <option value="Project Base">Project Base</option>
+              <option value="Contract Base">Contract Base</option>
+              <option value="Hourly">Hourly</option>
             </select>
           </div>
         </div>
@@ -135,7 +144,7 @@
           <strong class="req_lable">Work Experience (Years):</strong>
         </div>
       </div>
-      <div class="col-lg-3 col-md-3">
+      <div class="col-lg-12 col-md-12">
         <div class="requireForm_lable">
           <div class="project_form_select">
             <select
@@ -145,18 +154,28 @@
               name="min_experience"
               id="min_experience"
             >
-              <option selected value="">Min</option>
+              <option selected value="">Experience</option>
               <!-- @for($i = 1;$i<16;$i++)
                 <option value="{{$i}}">{{ $i }}</option>
                 @endfor -->
-              <option v-for="i in 15" :key="i" :value="i">
+              <!-- <option v-for="i in 15" :key="i" :value="i">
                 {{ i }}
-              </option>
+              </option> -->
+              <option value="1+ year of Experience">1+ year of Experience</option>
+              <option value="2+ year of Experience">2+ year of Experience</option>
+              <option value="3+ year of Experience">3+ year of Experience</option>
+              <option value="4+ year of Experience">4+ year of Experience</option>
+              <option value="5+ year of Experience">5+ year of Experience</option>
+              <option value="6+ year of Experience">6+ year of Experience</option>
+              <option value="7+ year of Experience">7+ year of Experience</option>
+              <option value="8+ year of Experience">8+ year of Experience</option>
+              <option value="9+ year of Experience">9+ year of Experience</option>
+              <option value="10+ year of Experience">10+ year of Experience</option>
             </select>
           </div>
         </div>
       </div>
-      <div class="col-lg-1 col-md-1 p-0">
+      <!-- <div class="col-lg-1 col-md-1 p-0">
         <label class="text-center d-block mt-3">To</label>
       </div>
       <div class="col-lg-3 col-md-3">
@@ -170,16 +189,13 @@
               id="max_experience"
             >
               <option selected value="">Max</option>
-              <!-- @for($i = 1;$i<16;$i++)
-                <option value="{{$i}}">{{ $i }}</option>
-                @endfor -->
               <option v-for="i in 15" :key="i" :value="i">
                 {{ i }}
               </option>
             </select>
           </div>
         </div>
-      </div>
+      </div> -->
 
       <!-- Employment Role Type -->
       <div class="col-lg-12 col-md-12">
@@ -357,6 +373,36 @@
               name="max_salary_hourly"
               id="max_salary_hourly"
             />
+          </div>
+        </div>
+      </div>
+
+      <!-- Salary Period -->
+      <div class="col-lg-12 col-md-12">
+        <div class="requireForm_lable">
+          <strong class="req_lable">Salary Period:</strong>
+          <div class="project_form_select">
+            <select
+              class="form-select"
+              aria-label="Default select example"
+              v-model="salary_period"
+              name="salary_period"
+              id="salary_period"
+            >
+              <option disabled selected>Select the Salary Period</option>
+              <option value="Daily">Daily</option>
+              <option value="Hourly">Hourly</option>
+              <option value="Bi-Weekly">Bi-Weekly</option>
+              <option value="Weekly">Weekly</option>
+              <option value="Monthly">Monthly</option>
+              <option value="Yearly">Yearly</option>
+              <option value="Commission">Commission</option>
+              <option value="Contractual">Contractual</option>
+              <option value="Project">Project</option>
+              <option value="HoLump Sum Payment">Lump Sum Payment</option>
+              <option value="Milestone-Based Payments">Milestone-Based Payments</option>
+              <option value="Retainer Fee">Retainer Fee</option>
+            </select>
           </div>
         </div>
       </div>
@@ -706,7 +752,7 @@ export default {
       skills: [],
       isLoadingSkills: false,
       min_experience: "",
-      max_experience: "",
+      //   max_experience: "",
       employment_type: "",
       salary_currency_monthly_project: "",
       min_salary_monthly_project: "",
@@ -717,6 +763,7 @@ export default {
       salary_currency_hourly: "",
       min_salary_hourly: "",
       max_salary_hourly: "",
+      salary_period: "",
       location: "",
       education_qualification: "",
       company_name: "",
@@ -939,7 +986,7 @@ export default {
       formData.append("project_description", this.project_description);
       formData.append("key_skills", JSON.stringify(this.selectedSkills));
       formData.append("min_experience", this.min_experience);
-      formData.append("max_experience", this.max_experience);
+      //   formData.append("max_experience", this.max_experience);
       formData.append("employment_type", this.employment_type);
       formData.append(
         "salary_currency_monthly_project",
@@ -953,6 +1000,7 @@ export default {
       formData.append("salary_currency_hourly", this.salary_currency_hourly);
       formData.append("min_salary_hourly", this.min_salary_hourly);
       formData.append("max_salary_hourly", this.max_salary_hourly);
+      formData.append("salary_period", this.salary_period);
       formData.append("location", this.location);
       formData.append("education_qualification", this.education_qualification);
       formData.append("company_name", this.company_name);
@@ -979,7 +1027,7 @@ export default {
           this.project_description = "";
           this.selectedSkills = [];
           this.min_experience = "";
-          this.max_experience = "";
+          //   this.max_experience = "";
           this.employment_type = "";
           this.salary_currency_monthly_project = "";
           this.min_salary_monthly_project = "";
@@ -990,6 +1038,7 @@ export default {
           this.salary_currency_hourly = "";
           this.min_salary_hourly = "";
           this.max_salary_hourly = "";
+          this.salary_period = "";
           this.location = "";
           this.education_qualification = "";
           this.company_name = "";

@@ -75,18 +75,26 @@ class Jobpolicy
         return $user->roles === "admin" || $user->roles === "Hr" || $this->hasPermission($user, 'read');
     }
 
-    public function view(User $user, Job $Job): bool
+    // public function view(User $user, Job $Job): bool
+    // {
+    //     return $user->roles === "admin" || $user->roles === "Hr" || $this->hasPermission($user, 'read');
+    //     // return true;
+    // }
+    public function view(): bool
     {
-        return $user->roles === "admin" || $user->roles === "Hr" || $this->hasPermission($user, 'read');
+        // return $user->roles === "admin" || $user->roles === "Hr" || $this->hasPermission($user, 'read');
+        return true;
     }
 
     public function create(User $user): bool
     {
         return $user->roles === "admin" || $user->roles === "Hr" || $this->hasPermission($user, 'create');
+        // return true;
     }
     public function update(User $user, Job $Job): bool
     {
         return $user->roles === "admin" || $user->roles === "Hr" || $this->hasPermission($user, 'update');
+        // return true;
     }
 
     public function delete(User $user, Job $Job): bool
@@ -157,7 +165,5 @@ class Jobpolicy
         } else {
             return false;
         }
-
-        
     }
 }
