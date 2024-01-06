@@ -39,8 +39,17 @@ Route::patch('edit-nationality/{id}', [ProfileController::class, 'editnation'])-
 Route::post('change-password', [Logincontroller::class, 'changePasswordSave']);
 
 Route::get('kyc-info', [profileController::class, 'user_info']);
+Route::Post('kyc-submit', [profileController::class, 'kyc_submit'])->name('kyc.submit');
 Route::get('credit-request', [profileController::class, 'creditrequest']);
 Route::post('credit-request-submit', [profileController::class, 'creditrequest_submit'])->name('creadit.request');
+//Activity
+Route::get('Employer-activity',[profileController::class, 'Employer_activity']);
+Route::get('job-post',function(){
+    return view('dashboard.Activity_employer.post');
+});
+// {
+//    return view('dashboard.activity_employer');
+// });
 // });
 
 Route::get('reset-password', [LoginController::class, 'resetpswd']);
