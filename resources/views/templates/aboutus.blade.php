@@ -3,7 +3,7 @@
     <link rel="canonical" href="https://www.bizionictech.com/about-us">
 </head> --}}
 <div class="mainBanner_section aboutUs_bgSection">
-    
+
     <div class="auto_container">
         <div class="mainBanner_detail">
             <div class="row">
@@ -11,22 +11,27 @@
                     <div class=" custom_tittle aos-init " data-aos="fade-right" data-aos-duration="500"
                         data-aos-easing="ease-in">
                         <h1 class="text-white text-uppercase text-left">
-                            Your <strong>Innovation</strong> Hub For <strong>Software Development,</strong> Ai, <strong>Blockchain,</strong> 
-                            And <strong>Marketing</strong> Solutions - Where Ideas Take Flight And Achieve <strong>Global</strong> Impact
+                            Your <strong>Innovation</strong> Hub For <strong>Software Development,</strong> Ai,
+                            <strong>Blockchain,</strong>
+                            And <strong>Marketing</strong> Solutions - Where Ideas Take Flight And Achieve
+                            <strong>Global</strong> Impact
                         </h1>
                         {{-- <h1 style="color:aliceblue">About page</h1> --}}
 
-                        <p class="text-white text-justify">Welcome to Bizionic, a leading software development and marketing company
+                        <p class="text-white text-justify">Welcome to Bizionic, a leading software development and
+                            marketing company
                             that empowers businesses to thrive digitally. With a comprehensive suite of services, we
                             combine cutting-edge software development expertise with strategic marketing solutions to
                             help our clients achieve
                             their goals and outshine their competition.</p>
-                        <p class="text-white text-justify">Partnering with Bizionic means gaining a dedicated team passionate about
+                        <p class="text-white text-justify">Partnering with Bizionic means gaining a dedicated team
+                            passionate about
                             your success. We work collaboratively, keeping you informed and involved throughout the
                             entire process. Our commitment to delivering on time, within budget, and exceeding your
                             expectations remains
                             unwavering.</p>
-                        <p class="text-white text-justify">Embrace the power of integrated software development and marketing with
+                        <p class="text-white text-justify">Embrace the power of integrated software development and
+                            marketing with
                             Bizionic. Contact us today to embark on a transformative journey to elevate your brand,
                             expand your reach, and
                             accelerate your business growth. Let's pave the way for digital success in an ever-evolving
@@ -55,7 +60,8 @@
                     <div class="who_we_are_text  aos-init aos-animate" data-aos="fade-right" data-aos-duration="800"
                         data-aos-easing="ease">
                         <div class="custom_tittle">
-                            <h2 class="text-left p_color">Bizionic, <strong>Your Software Development</strong> Partner</h2>
+                            <h2 class="text-left p_color">Bizionic, <strong>Your Software Development</strong> Partner
+                            </h2>
                             <h6 class="text-justify p_color pb-2"><strong>Startups to Unicorn's Lab</strong></h6>
                             <p class="text-justify p_color"><b>Bizionic Technologies and Marketing Solution
                                     (Bizionic)</b> is a Startup to Unicorn
@@ -1669,3 +1675,30 @@
     </div>
 
 </div>
+<script>
+    var Tawk_API = Tawk_API || {},
+        Tawk_LoadStart = new Date();
+    (function() {
+        var s1 = document.createElement("script"),
+            s0 = document.getElementsByTagName("script")[0];
+        s1.async = true;
+        s1.src = 'https://embed.tawk.to/64fed1bab1aaa13b7a7627d4/1ha1m6h7g';
+        s1.charset = 'UTF-8';
+        s1.setAttribute('crossorigin', '*');
+        s0.parentNode.insertBefore(s1, s0);
+    })();
+    
+</script>
+<!--Start of Tawk.to Script-->
+<script type="text/javascript">
+    var Tawk_API=Tawk_API||{}, Tawk_LoadStart=new Date();
+    (function(){
+    var s1=document.createElement("script"),s0=document.getElementsByTagName("script")[0];
+    s1.async=true;
+    s1.src='https://embed.tawk.to/6597988c0ff6374032bcccd5/1hjc2nq71';
+    s1.charset='UTF-8';
+    s1.setAttribute('crossorigin','*');
+    s0.parentNode.insertBefore(s1,s0);
+    })();
+    </script>
+    <!--End of Tawk.to Script-->
