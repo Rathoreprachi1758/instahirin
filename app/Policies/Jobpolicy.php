@@ -80,10 +80,15 @@ class Jobpolicy
     //     return $user->roles === "admin" || $user->roles === "Hr" || $this->hasPermission($user, 'read');
     //     // return true;
     // }
-    public function view(): bool
+    // public function view(): bool
+    // {
+    //     // return $user->roles === "admin" || $user->roles === "Hr" || $this->hasPermission($user, 'read');
+    //     return true;
+    // }
+    public function view(User $user): bool
     {
-        // return $user->roles === "admin" || $user->roles === "Hr" || $this->hasPermission($user, 'read');
-        return true;
+        return $user->roles === "admin" || $user->roles === "Hr" || $this->hasPermission($user, 'read');
+        // return true;
     }
 
     public function create(User $user): bool
@@ -113,45 +118,6 @@ class Jobpolicy
 
     private function hasPermission(User $user, string $permission): bool
     {
-
-        // $authenticatedRoles = json_decode($user->permissions, true);
-        // \Log::info('$authenticatedRoles=============================');
-        // \Log::info($authenticatedRoles);
-        // return isset($authenticatedRoles[$permission]) && $authenticatedRoles[$permission] === true;
-        // $authenticatedRoles = json_decode($user->permissions, true);
-        // \Log::info('$authenticatedRoles=============================');
-        // \Log::info($authenticatedRoles);
-        // $arraykeys = array_keys($authenticatedRoles);
-        // \Log::info('$$arraykeys************************8');
-        // \Log::info($arraykeys);
-        // $valuesArray = array_values($arraykeys);
-        // \Log::info('$$valuesArray&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&');
-        // // \Log::info($valuesArray[1]);
-        // $key = [];
-        // foreach ($valuesArray as $key => $value) {
-        //     //  $key = $value;
-        //     \Log::info('===========Job $key============');
-        //     \Log::info($key);
-        //     \Log::info('===========Job $value============');
-        //     \Log::info($value);
-        //     if ($value === 'Job') {
-        //         $authenticatedRoles = $authenticatedRoles[$value];
-        //         \Log::info('===========This is job $authenticatedRoles============');
-        //         // $authenticatedRoles = $authenticatedRoles[$value];
-        //         \Log::info($authenticatedRoles);
-        //         \Log::info('===========This is job $authenticatedRoles============');
-        //         return isset($authenticatedRoles[$permission]) && $authenticatedRoles[$permission] === true;
-        //     }
-        //     else{
-        //         return false;
-        //     }
-
-        //     //  \Log::info($authenticatedRoles);
-        //     // if(isset($key))
-        //     // {
-        //     //     $authenticatedRoles = $authenticatedRoles[$key];
-        //     // }
-        //     // return false;
         $authenticatedRoles = json_decode($user->permissions, true);
         if ($authenticatedRoles !== null) {
             $arraykeys = array_keys($authenticatedRoles);

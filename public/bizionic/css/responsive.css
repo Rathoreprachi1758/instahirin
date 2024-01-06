@@ -1,793 +1,4073 @@
-@@ -1,3580 +1,3584 @@
+
 @charset "utf-8";
 /* CSS Document */
 
-@media only screen and (min-width:1366px) and (max-width:1700px) {
-
-
-    .innerColum_menu_outer { 
-        padding: 5px 12px 10px 12px;     min-height: 525px;
+@media only screen and (min-width: 1366px) and (max-width: 1700px) {
+    .innerColum_menu_outer {
+        padding: 5px 12px 10px 12px;
+        min-height: 525px;
     }
 
     .labs_location {
         width: 100%;
         padding: 20px 20px 10px 20px;
     }
-    .hireFloating_menu .innerColum_menu_outer { 
+    .hireFloating_menu .innerColum_menu_outer {
         min-height: 570px;
     }
 }
 
-@media only screen and (min-width:1280px) and (max-width:1365px) {
-
-
-    .man_avatar { 
-        right: -30px; 
+@media only screen and (min-width: 1280px) and (max-width: 1365px) {
+    .man_avatar {
+        right: -30px;
     }
-    
-    .innerColum_menu_outer { 
-        padding: 5px 12px 10px 12px;     min-height: 480px;
+
+    .innerColum_menu_outer {
+        padding: 5px 12px 10px 12px;
+        min-height: 480px;
     }
 
     .labs_location_info p {
-        font-size: 12px; 
+        font-size: 12px;
     }
 
-    .labs_location_info h6 strong { 
+    .labs_location_info h6 strong {
         font-size: 15px;
     }
-    .labs_location_info { 
+    .labs_location_info {
         padding-bottom: 20px;
     }
     .innerColum_menu ul li {
         padding: 0px;
     }
     .technologyFloating_menu {
-        width: 80vw !important; 
+        width: 80vw !important;
     }
-    .floatingMenu_col_list ul li { 
-        font-size: 12px;}
+    .floatingMenu_col_list ul li {
+        font-size: 12px;
+    }
 
+    .labs_location {
+        width: 100%;
+        padding: 20px 20px 10px 20px;
+    }
 
-        .labs_location {
-            width: 100%;
-            padding: 20px 20px 10px 20px;
-        }
-
-.hireFloating_menu .innerColum_menu_outer { 
-    min-height: 560px;
-}
-
-
-
+    .hireFloating_menu .innerColum_menu_outer {
+        min-height: 560px;
+    }
 }
 
 @media only screen and (min-width: 1024px) and (max-width: 1279px) {
+    .main_nav ul li {
+        margin-left: 15px;
+    }
+    .main_nav ul li.has_nav > a {
+        padding-right: 14px;
+    }
+    .main_nav ul li a {
+        font-size: 14px;
+    }
 
-.main_nav ul li {
-    margin-left: 15px 
-} 
-.main_nav ul li.has_nav > a {
-    padding-right: 18px;
-}
-.main_nav ul li a { 
-    font-size: 14px;}
-    
-.byNumber_infoText label {
-    font-size: 18px;
-}
-.byNumber_infoText strong {
-    font-size: 26px;
-}
-.clientBizionic_reviews_info span { 
-    padding-bottom: 30px;
-    line-height: 1;
-}
+    .byNumber_infoText label {
+        font-size: 18px;
+    }
+    .byNumber_infoText strong {
+        font-size: 26px;
+    }
+    .clientBizionic_reviews_info span {
+        padding-bottom: 30px;
+        line-height: 1;
+    }
 
-.connected_form { 
-    padding-right: 50px;
-}
+    .connected_form {
+        padding-right: 50px;
+    }
 
+    .aboutBizionic_col_info p span img {
+        height: 45px;
+    }
+    .aboutBizionic_col_info p span {
+        width: 100px;
+        height: 100px;
+        padding: 6px;
+        margin: 5px 20px 5px 0px;
+    }
 
-.aboutBizionic_col_info p span img {
-    height: 45px; 
-}
-.aboutBizionic_col_info p span {
-    width: 100px;
-    height: 100px;
-    padding: 6px; 
-    margin: 5px 20px 5px 0px;
-}
+    .aboutBizionic_col_info p {
+        font-size: 16px;
+        line-height: 1.5;
+    }
 
-.aboutBizionic_col_info p { 
-    font-size: 16px; 
-    line-height: 1.5;
-}
+    .aboutBizionic_col .row {
+        margin: 0px -25px;
+    }
+    .aboutBizionic_col_info {
+        padding: 10px 10px;
+    }
 
-.aboutBizionic_col .row {
-    margin: 0px -25px;
-}
-.aboutBizionic_col_info { 
-    padding: 10px 10px;
-}
+    .hireMain .marketing_banner_fr span {
+        transform: scale(1);
+    }
 
-.hireMain .marketing_banner_fr span {
-    transform: scale(1);
-}
+    .mainBanner_text h3 {
+        font-size: 42px;
+    }
 
-.mainBanner_text h3 { 
-    font-size: 42px;}
+    .hiretalent .man_avatar {
+        max-width: 401px;
+        right: -40px;
+        bottom: 100px;
+    }
 
-.hiretalent .man_avatar {
-    max-width: 401px;
-    right: -40px;
-    bottom: 100px;
-}
+    .hiretalent .addFile_button p {
+        padding-right: 25px;
+        padding-bottom: 0px;
+        min-width: auto;
+    }
+    .hiretalent .addFile_button p br {
+        display: none;
+    }
 
-.hiretalent .addFile_button p {padding-right: 25px; padding-bottom: 0px;min-width: auto;}
-.hiretalent .addFile_button p br { display: none;}
+    .mainBanner_text h3 b {
+        font-size: 38px;
+    }
+    .industryNew_section1_info h3 strong {
+        font-size: 28px;
+    }
 
+    .buildTeam_col {
+        padding: 30px 20px 20px;
+    }
 
-.mainBanner_text h3 b {
-    font-size: 38px; 
-}
-.industryNew_section1_info h3 strong {
-    font-size: 28px; 
-}
+    .infoLinks {
+        display: block;
+    }
 
-.buildTeam_col { 
-    padding: 30px 20px 20px; 
-}
+    .bizionic_about {
+        padding-top: 0px;
+    }
 
-.infoLinks {
-    display: block; 
-}
+    .dateTime_range {
+        flex-wrap: wrap;
+    }
 
-.bizionic_about { 
-    padding-top: 0px;
-}
+    .meetProfile {
+        display: block;
+    }
 
+    .hiringInfo .meetProfile_tittle {
+        width: 100%;
+    }
 
-.dateTime_range { flex-wrap: wrap;
-}
+    .baidu_avatar2 span {
+        max-width: 600px;
+    }
 
+    .provider_section .provide_col {
+        padding: 10px !important;
+    }
 
-.meetProfile { 
-    display: block;  
-}
+    .frList_sec {
+    }
 
-.hiringInfo .meetProfile_tittle {
-    width: 100%;
-}
+    .careerPage_inner {
+        padding: 70px 40px;
+    }
 
+    .hire_me_button:after {
+        width: 86px;
+        height: 38px;
+        left: -16px;
+        top: -11px;
+    }
 
-.baidu_avatar2 span {
-    max-width: 600px; 
-}
+    .hire_me_button {
+        margin: 0px 12px 0px 9px;
+    }
 
-.provider_section .provide_col {
-    padding: 10px !important;
-}
+    .postRequirment_avatar span img {
+        height: 100%;
+        object-fit: cover;
+    }
 
-.frList_sec {
-     
-}
+    .postRequirment_avatar span {
+        height: 100%;
+    }
 
-.careerPage_inner { 
-    padding: 70px 40px;
-}
+    .postRequirment_avatar {
+        height: 100%;
+    }
+    .instaHirin_section .howWork_section {
+        padding-left: 0px;
+    }
 
+    .aboutUs_bgSection {
+        background-position-x: 78% !important;
+    }
 
-.hire_me_button:after { 
-    width: 86px;
-    height: 38px; 
-    left: -16px;
-    top: -11px; 
-}
+    .aboutUs_bgSection .mainBanner_text {
+        padding-top: 0px;
+    }
 
-.hire_me_button { 
-    margin: 0px 12px 0px 9px;
-}
+    .bNumber {
+        padding-left: 35px;
+    }
+    .bNumber .byNumber_infoText label {
+        font-size: 14px;
+        text-align: center;
+    }
 
-.postRequirment_avatar span img { 
-    height: 100%;
-    object-fit: cover;
-}
+    .coreTabs ul li a {
+        padding: 15px 10px;
+        font-size: 14px;
+    }
 
-.postRequirment_avatar span  { 
-    height: 100%; 
-}
+    .coreTabs_data_show {
+        padding: 25px;
+    }
 
-.postRequirment_avatar   { 
-    height: 100%; 
-}
-.instaHirin_section .howWork_section {
-    padding-left: 0px;
-}
+    .coreTabs_data_text ul {
+        margin-left: 30px;
+    }
+    .sourceModel_colHead h5 {
+        font-size: 18px;
+    }
+    .sourceModel_colHead {
+        min-height: 72px;
+        padding: 15px 20px;
+    }
 
+    .sourceModel_inner {
+        padding: 35px 25px;
+    }
+    .connectText h3 {
+        line-height: 1.6;
+        padding-bottom: 25px;
+        font-size: 22px;
+    }
 
-
-.aboutUs_bgSection {
-    background-position-x: 78% !important;}
-
-.aboutUs_bgSection .mainBanner_text { 
-    padding-top: 0px;
-}
-
-.bNumber { 
-    padding-left: 35px;
-}
-.bNumber .byNumber_infoText label {
-    font-size: 14px; 
-    text-align: center;
-}
-
-.coreTabs ul li a {
-    padding: 15px 10px; 
-    font-size: 14px; 
-}
-
-.coreTabs_data_show { 
-    padding: 25px; 
-}
-
-.coreTabs_data_text ul {
-    margin-left: 30px;
-}
-.sourceModel_colHead h5 { 
-    font-size: 18px; 
-}
-.sourceModel_colHead {
-    min-height: 72px; 
-    padding: 15px 20px;
-}
-
-.sourceModel_inner { 
-    padding: 35px 25px;
-}
-.connectText h3 { 
-    line-height: 1.6;
-    padding-bottom: 25px;
-    font-size: 22px;
-}
-
-.indust_work_col a span img { 
-    width: 65px;
-    height: 65px; 
-}
-.indust_work_col a strong { 
-    font-size: 15px; 
-}
-.protectPrivacy span {
-    font-size: 13px; 
-    padding: 10px 10px;
-}
-.protectPrivacy span img {
-    width: 18px; 
-    margin-right: 5px;
-}
-/* .project_form_field input { 
+    .indust_work_col a span img {
+        width: 65px;
+        height: 65px;
+    }
+    .indust_work_col a strong {
+        font-size: 15px;
+    }
+    .protectPrivacy span {
+        font-size: 13px;
+        padding: 10px 10px;
+    }
+    .protectPrivacy span img {
+        width: 18px;
+        margin-right: 5px;
+    }
+    /* .project_form_field input { 
     padding: 11px 15px; 
     font-size: 12px;
 }
 .project_form_field { 
     margin: 10px 0px;
 } */
-.tellUs_sec p { 
-    font-size: 16px!important;}
+    .tellUs_sec p {
+        font-size: 16px !important;
+    }
 
-.indP_col {
-    padding: 16px 15px;
-}
+    .indP_col {
+        padding: 16px 15px;
+    }
 
-.indPortfolioText { 
-    font-size: 20px; 
-}
+    .indPortfolioText {
+        font-size: 20px;
+    }
 
-.bizionicTeam_mainInfo_text { 
-    padding-right: 20px;
-}
+    .bizionicTeam_mainInfo_text {
+        padding-right: 20px;
+    }
 
+    .flotNav_added .header_detail {
+        position: relative;
+    }
 
-.flotNav_added .header_detail {
-    position: relative;
-}
+    .main_logo a {
+        width: 120px;
+    }
 
-.main_logo a {
-    width: 120px;}
+    .fixed_header .main_logo a {
+        width: 110px;
+    }
+    .main_container {
+        padding-top: 142px;
+    }
 
-.fixed_header .main_logo a {
-    width: 110px;
-}
-.main_container {
-    padding-top: 142px; 
-}
+    .main_nav {
+        display: none;
+        width: 100%;
+        background: #fff;
+        position: fixed;
+        left: 0px;
+        top: 0px;
+        height: 100%;
+        z-index: 5;
+        padding: 60px 20px;
+        overflow-y: auto;
+    }
+    .main_nav ul {
+        display: block;
+    }
 
-.main_nav { display: none;
-    width: 100%;
-    background: #fff;
-    position: fixed;
-    left: 0px;
-    top: 0px;
-    height: 100%;
-    z-index: 5;
-    padding: 60px 20px;
-    overflow-y: auto;
-}
-.main_nav ul { display: block;}
+    .main_nav ul li {
+        padding: 5px 0px;
+        margin: 0px;
+    }
 
-.main_nav ul li {
-    padding: 5px 0px;margin: 0px;
-}
+    .main_nav ul li a {
+        display: block;
+        padding: 5px 0px;
+        font-size: 14px;
+    }
 
-.main_nav ul li a { display: block; padding: 5px 0px;font-size: 14px;}
+    .floatingMenu {
+        padding: 3px 0px;
+        width: 100%;
+        position: static;
+        margin-left: 0px !important;
+        display: none;
+        max-width: 100%;
+    }
 
-.floatingMenu {
-    padding: 3px 0px;
-    width: 100%; 
-    position: static; 
-    margin-left: 0px !important;
-    display: none;    max-width: 100%;
-}
- 
-.floatingMenu_col_list {
-    padding: 10px 0px 10px;
-}
+    .floatingMenu_col_list {
+        padding: 10px 0px 10px;
+    }
 
-.chevRowDown { display: block;}
+    .chevRowDown {
+        display: block;
+    }
 
-.clickH6 .chevRowDown {transform: rotate(180deg); }
+    .clickH6 .chevRowDown {
+        transform: rotate(180deg);
+    }
 
-.main_nav ul li small { 
-    top: 5px; 
-}
-.floatingMenu_col span img {
-    width: 25px;
-    height: 25px; 
-}
-.floatingMenu_col h6 { 
-    padding: 12px 0px; 
-    font-size: 13px;
-    border-bottom: 1px solid #155093; 
-}
-.floatingMenu_col_list ul li {font-size: 14px;
-    padding: 1px 0px !important;}
+    .main_nav ul li small {
+        top: 5px;
+    }
+    .floatingMenu_col span img {
+        width: 25px;
+        height: 25px;
+    }
+    .floatingMenu_col h6 {
+        padding: 12px 0px;
+        font-size: 13px;
+        border-bottom: 1px solid #155093;
+    }
+    .floatingMenu_col_list ul li {
+        font-size: 14px;
+        padding: 1px 0px !important;
+    }
 
- .floatingMenu_col_list ul li a {  padding: 0px !important;
-    font-size: 12px !important;}
+    .floatingMenu_col_list ul li a {
+        padding: 0px !important;
+        font-size: 12px !important;
+    }
 
-.main_nav .btn_default { 
-    transform: translateY(0px);
-}
- 
+    .main_nav .btn_default {
+        transform: translateY(0px);
+    }
 
+    .menuIcon {
+        width: 30px;
+        height: 20px;
+        right: 0px;
+        top: 39px;
+        border-bottom: 2px solid #000;
+        border-top: 2px solid #000;
+        z-index: 2;
+        transition: all 0.2s ease;
+        -moz-transition: all 0.2s ease;
+        -o-transition: all 0.2s ease;
+        -webkit-transition: all 0.2s ease;
+    }
+    .menuIcon:after {
+        width: 80%;
+        height: 2px;
+        background: #000;
+        content: "";
+        display: block;
+        right: 0;
+        top: 7px;
+    }
+    .menuIcon,
+    .menuIcon:after {
+        position: absolute;
+        transition: all 0.4s ease;
+    }
+    .menuIcon,
+    .menu_clos {
+        display: block;
+        cursor: pointer;
+    }
+    .menuIcon:hover:after {
+        right: 20%;
+    }
 
-.menuIcon {
-       width: 30px;
-       height: 20px;
-       right: 0px;
-       top: 39px;
-       border-bottom: 2px solid #000;
-       border-top: 2px solid #000;
-       z-index: 2;transition: all .2s ease;
-       -moz-transition: all .2s ease;
-       -o-transition: all .2s ease;
-       -webkit-transition: all .2s ease;
-   }
-   .menuIcon:after {
-       width: 80%;
-       height: 2px;
-       background: #000;
-       content: "";
-       display: block;
-       right: 0;
-       top: 7px
-   }
-   .menuIcon,
-   .menuIcon:after {
-       position: absolute;
-       transition: all .4s ease
-   }
-   .menuIcon,
-   .menu_clos {
-       display: block;
-       cursor: pointer
-   }
-   .menuIcon:hover:after {
-       right: 20%
-   }
-    
-   
     .closeNav {
-           display: block;
-           background: url(../images/closeNav.png) no-repeat;
-           width: 18px;
-           height: 18px;
-           position: absolute;
-           color: #fff;
-           right: 15px;
-           top: 20px;
-           
-           background-size: 100%
-       }
-
-
-  .fixed_header  .menuIcon { top: 36px;} 
-
-
-  .hire_me_button {
-    margin: 0px  ;     transform: translateY(0px);display: inline-block !important; 
-    min-width: 148px; text-align: center;
-}
-.main_nav .btn_default {display: inline-block !important; }
-
-.innerColum_menu_outer {
-    width: 100%;
-    height: 100%;
-    border-right: 1px solid #5a5a5a;
-    padding: 10px 10px 10px 10px;
-    min-height: 575px;
-}
-
-.innerColum_menu strong { 
-    font-size: 12px;}
-
-
-
-
-
-.hireMain .row { align-items: flex-start;}
-
-.quick_links { 
-    padding-top: 0px;
-}
-
-.markServices_section .custom_tittle {
-    padding: 70px 0px 30px;
-}
-.markServices_tabsInfo_detail { 
-    padding: 70px 0px 30px 0px; 
-}
-
-.aboutRead_more .aboutBizionic_section_detail {
-    padding: 80px 0px 0px 0px;
-}
-
-.technologyBanner .mainBanner_text h3 b {
-    font-size: 38px; 
-}
-
-.technologyBanner .mainBanner_text h3 {
-    font-size: 28px; 
-}
-
-.technology_master_text { 
-    padding: 0px 5px 25px;
-}
-
-.technologyForm .addFile_button p {
-    min-width: auto;
-}
-
-.industryNew_section1 .row { align-items: flex-start !important;}
-
-.onboardSkill_options { 
-    padding: 60px 40px 40px;
-}
-
-.skilled_setting ul li a { 
-    padding: 35px 5px; 
-}
-
-.skilled_setting ul li a strong { 
-    font-size: 12px;
-}
-
-.meetTeam_sliderSection .meetProfile { display: flex;}
-
-.viewAll_listing .meetProfile { display: flex;}
-
-.instaHirin_banner_inner { 
-    padding-bottom: 150px;
-}
-
-.onboardPage .provider_section .industryNew_section2_cols {
-    transform: translateY(-50px);
-}
-
-.listTop_technology ul li { 
-    padding: 16px 15px;
-}
-
-.onHire_immerPage .industryNew_section2_cols .custom_tittle { padding-left: 15px; padding-right: 15px;}
-
-.biz_brief_info ul li { 
-    font-size: 18px; 
-    padding: 14px 0px;
-}
-
-.biz_brief_info ul li strong {
-    font-size: 18px;}
-
-
-.ind_innerPages .custom_tittle h2 b {
-    font-size: 48px; 
-}
-
-.header_up_detail { 
-    padding: 8px 0px;}
-
-.industryNew_section_detail { 
-    padding: 70px 0px;
-}
-.wedo_sction .hireForm_banner_detail {
-    padding: 60px 50px;
-}
-.wedo_sction .industryNew_section2_cols { 
-    padding: 70px 50px 60px;
-}
-.nevStarup_setting {
-    padding: 70px 50px 60px; 
-}
-.indCol {
-    padding: 10px;
-}
-.proposal_sectionTittle { 
-    padding: 70px 50px; 
-}
-.funding_info { 
-    padding: 70px 50px;
-}
-.aboutProject_section_detail { 
-    padding: 70px 0px; 
-}
-.startup_innerPages .industryNew_section_detail { 
-    padding: 70px 40px 70px;
-}
-
-.seamlessLimitless_section_detail { 
-    padding: 70px 0px;
-}
-.needMvp_section_detail { 
-    padding: 70px 0px;
-}
-
-.mvpDev_col_info { 
-    padding: 30px 15px 30px;
-}
-.mvpBenefits_flowSection { 
-    padding: 70px 50px 70px;
-}
-.designSolution_section .industryNew_section2_colsInfo { 
-    padding: 30px 20px 30px 20px;
-}
-.inspired_col {
-    padding-left: 15px;
-    padding-right: 15px;
-}
-.inspiredPassion_section_detail { 
-    padding: 70px 0px 60px;
-}
-
-.startupMvp_section .seamlessLimitless_fl { padding-right: 20px;}
-
-.startupMvp_section .seamlessLimitless_fr span {
-    max-width: 380px; 
-}
-
-.awsNepture_list_info { 
-    padding: 60px 50px; 
-}
-.awsNepture_list ul li {
-    padding: 30px 0px;
-}
-
-.inspiredPassion_cil_info { 
-    padding: 30px 25px 30px;
-}
-.startupServices_section_detail { 
-    padding: 70px 0px 70px; 
-}
-
-.startupWhy .inspired_col {
-    padding-top: 15px;
-    padding-bottom: 15px;
-}
-.startupHowWork .inspired_col {
-    padding: 10px;
-}
-.startupHowWork .inspiredPassion_section_detail {
-    padding: 70px 0px 70px;
-}
-
-
-
-.priceFeatureList ul li p { 
-    font-size: 12px;}
-
-.priceFeatureList { 
-    padding: 20px 8px 0px;
-}
-
-.accendDream_sectionDetail { 
-    padding: 100px 100px 90px 150px;
-}
-
-.sponsorSlider .slick-next { 
-    right: -22px; 
-    width: 28px;
-    height: 28px; 
-}
-.sponsorSlider .slick-prev { 
-    left: -22px; 
-    width: 28px;
-    height: 28px; 
-}
-
-.revolution_infoDetail { 
-    padding: 40px 25px; 
-}
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
- 
-
-
-
+        display: block;
+        background: url(../images/closeNav.png) no-repeat;
+        width: 18px;
+        height: 18px;
+        position: absolute;
+        color: #fff;
+        right: 15px;
+        top: 20px;
+
+        background-size: 100%;
+    }
+
+    .fixed_header .menuIcon {
+        top: 36px;
+    }
+
+    .hire_me_button {
+        margin: 0px;
+        transform: translateY(0px);
+        display: inline-block !important;
+        min-width: 148px;
+        text-align: center;
+    }
+    .main_nav .btn_default {
+        display: inline-block !important;
+    }
+
+    .innerColum_menu_outer {
+        width: 100%;
+        height: 100%;
+        border-right: 1px solid #5a5a5a;
+        padding: 10px 10px 10px 10px;
+        min-height: 575px;
+    }
+
+    .innerColum_menu strong {
+        font-size: 12px;
+    }
+
+    .hireMain .row {
+        align-items: flex-start;
+    }
+
+    .quick_links {
+        padding-top: 0px;
+    }
+
+    .markServices_section .custom_tittle {
+        padding: 70px 0px 30px;
+    }
+    .markServices_tabsInfo_detail {
+        padding: 70px 0px 30px 0px;
+    }
+
+    .aboutRead_more .aboutBizionic_section_detail {
+        padding: 80px 0px 0px 0px;
+    }
+
+    .technologyBanner .mainBanner_text h3 b {
+        font-size: 38px;
+    }
+
+    .technologyBanner .mainBanner_text h3 {
+        font-size: 28px;
+    }
+
+    .technology_master_text {
+        padding: 0px 5px 25px;
+    }
+
+    .technologyForm .addFile_button p {
+        min-width: auto;
+    }
+
+    .industryNew_section1 .row {
+        align-items: flex-start !important;
+    }
+
+    .onboardSkill_options {
+        padding: 60px 40px 40px;
+    }
+
+    .skilled_setting ul li a {
+        padding: 35px 5px;
+    }
+
+    .skilled_setting ul li a strong {
+        font-size: 12px;
+    }
+
+    .meetTeam_sliderSection .meetProfile {
+        display: flex;
+    }
+
+    .viewAll_listing .meetProfile {
+        display: flex;
+    }
+
+    .instaHirin_banner_inner {
+        padding-bottom: 150px;
+    }
+
+    .onboardPage .provider_section .industryNew_section2_cols {
+        transform: translateY(-50px);
+    }
+
+    .listTop_technology ul li {
+        padding: 16px 15px;
+    }
+
+    .onHire_immerPage .industryNew_section2_cols .custom_tittle {
+        padding-left: 15px;
+        padding-right: 15px;
+    }
+
+    .biz_brief_info ul li {
+        font-size: 18px;
+        padding: 14px 0px;
+    }
+
+    .biz_brief_info ul li strong {
+        font-size: 18px;
+    }
+
+    .ind_innerPages .custom_tittle h2 b {
+        font-size: 48px;
+    }
+
+    .header_up_detail {
+        padding: 8px 0px;
+    }
+
+    .industryNew_section_detail {
+        padding: 70px 0px;
+    }
+    .wedo_sction .hireForm_banner_detail {
+        padding: 60px 50px;
+    }
+    .wedo_sction .industryNew_section2_cols {
+        padding: 70px 50px 60px;
+    }
+    .nevStarup_setting {
+        padding: 70px 50px 60px;
+    }
+    .indCol {
+        padding: 10px;
+    }
+    .proposal_sectionTittle {
+        padding: 70px 50px;
+    }
+    .funding_info {
+        padding: 70px 50px;
+    }
+    .aboutProject_section_detail {
+        padding: 70px 0px;
+    }
+    .startup_innerPages .industryNew_section_detail {
+        padding: 70px 40px 70px;
+    }
+
+    .seamlessLimitless_section_detail {
+        padding: 70px 0px;
+    }
+    .needMvp_section_detail {
+        padding: 70px 0px;
+    }
+
+    .mvpDev_col_info {
+        padding: 30px 15px 30px;
+    }
+    .mvpBenefits_flowSection {
+        padding: 70px 50px 70px;
+    }
+    .designSolution_section .industryNew_section2_colsInfo {
+        padding: 30px 20px 30px 20px;
+    }
+    .inspired_col {
+        padding-left: 15px;
+        padding-right: 15px;
+    }
+    .inspiredPassion_section_detail {
+        padding: 70px 0px 60px;
+    }
+
+    .startupMvp_section .seamlessLimitless_fl {
+        padding-right: 20px;
+    }
+
+    .startupMvp_section .seamlessLimitless_fr span {
+        max-width: 380px;
+    }
+
+    .awsNepture_list_info {
+        padding: 60px 50px;
+    }
+    .awsNepture_list ul li {
+        padding: 30px 0px;
+    }
+
+    .inspiredPassion_cil_info {
+        padding: 30px 25px 30px;
+    }
+    .startupServices_section_detail {
+        padding: 70px 0px 70px;
+    }
+
+    .startupWhy .inspired_col {
+        padding-top: 15px;
+        padding-bottom: 15px;
+    }
+    .startupHowWork .inspired_col {
+        padding: 10px;
+    }
+    .startupHowWork .inspiredPassion_section_detail {
+        padding: 70px 0px 70px;
+    }
+
+    .priceFeatureList ul li p {
+        font-size: 12px;
+    }
+
+    .priceFeatureList {
+        padding: 20px 8px 0px;
+    }
+
+    .accendDream_sectionDetail {
+        padding: 100px 100px 90px 150px;
+    }
+
+    .sponsorSlider .slick-next {
+        right: -22px;
+        width: 28px;
+        height: 28px;
+    }
+    .sponsorSlider .slick-prev {
+        left: -22px;
+        width: 28px;
+        height: 28px;
+    }
+
+    .revolution_infoDetail {
+        padding: 40px 25px;
+    }
 }
 
-@media only screen and (min-width:768px) and (max-width:1023px) {
+@media only screen and (min-width: 768px) and (max-width: 1023px) {
+    h1 {
+        font-size: 24px;
+    }
+    h2 {
+        font-size: 22px;
+    }
+    h3 {
+        font-size: 20px;
+    }
+    h4 {
+        font-size: 20px;
+    }
+    h5 {
+        font-size: 18px;
+    }
+    h6 {
+        font-size: 18px;
+    }
 
+    .main_logo a {
+        width: 120px;
+    }
 
-h1 { font-size: 24px; }
-h2 { font-size: 22px; }
-h3 { font-size: 20px; }
-h4 { font-size: 20px;}
-h5 { font-size: 18px; }
-h6 { font-size: 18px; }
+    .fixed_header .main_logo a {
+        width: 110px;
+    }
+    .main_container {
+        padding-top: 100px;
+    }
 
+    .main_nav {
+        display: none;
+        width: 100%;
+        background: #fff;
+        position: fixed;
+        left: 0px;
+        top: 0px;
+        height: 100%;
+        z-index: 5;
+        padding: 60px 20px;
+        overflow-y: auto;
+    }
+    .main_nav ul {
+        display: block;
+    }
 
+    .main_nav ul li {
+        padding: 5px 0px;
+        margin: 0px;
+    }
 
-.main_logo a {
-    width: 120px;}
+    .main_nav ul li a {
+        display: block;
+        padding: 5px 0px;
+        font-size: 14px;
+    }
 
-.fixed_header .main_logo a {
-    width: 110px;
-}
-.main_container {
-    padding-top: 100px; 
-}
+    .floatingMenu {
+        padding: 3px 0px;
+        width: 100%;
+        position: static;
+        margin-left: 0px !important;
+        display: none;
+        max-width: 100%;
+    }
 
-.main_nav { display: none;
-    width: 100%;
-    background: #fff;
-    position: fixed;
-    left: 0px;
-    top: 0px;
-    height: 100%;
-    z-index: 5;
-    padding: 60px 20px;
-    overflow-y: auto;
-}
-.main_nav ul { display: block;}
+    .floatingMenu_col_list {
+        padding: 10px 0px 10px;
+    }
 
-.main_nav ul li {
-    padding: 5px 0px;margin: 0px;
-}
+    .chevRowDown {
+        display: block;
+    }
 
-.main_nav ul li a { display: block; padding: 5px 0px;font-size: 14px;}
+    .clickH6 .chevRowDown {
+        transform: rotate(180deg);
+    }
 
-.floatingMenu {
-    padding: 3px 0px;
-    width: 100%; 
-    position: static; 
-    margin-left: 0px !important;
-    display: none;    max-width: 100%;
-}
- 
-.floatingMenu_col_list {
-    padding: 10px 0px 10px; 
-}
+    .main_nav ul li small {
+        top: 5px;
+    }
+    .floatingMenu_col span img {
+        width: 25px;
+        height: 25px;
+    }
+    .floatingMenu_col h6 {
+        padding: 12px 0px;
+        font-size: 14px;
+        border-bottom: 1px solid #155093;
+    }
+    .floatingMenu_col_list ul li {
+        font-size: 16px;
+        padding: 4px 0px !important;
+    }
 
-.chevRowDown { display: block;}
+    .floatingMenu_col_list ul li a {
+        padding: 0px !important;
+        font-size: 12px;
+    }
 
-.clickH6 .chevRowDown {transform: rotate(180deg); }
+    .main_nav .btn_default {
+        transform: translateY(0px);
+    }
 
-.main_nav ul li small { 
-    top: 5px; 
-}
-.floatingMenu_col span img {
-    width: 25px;
-    height: 25px; 
-}
-.floatingMenu_col h6 { 
-    padding: 12px 0px; 
-    font-size: 14px;
-    border-bottom: 1px solid #155093; 
-}
-.floatingMenu_col_list ul li {font-size: 16px;
-    padding: 4px 0px !important;}
+    .menuIcon {
+        width: 30px;
+        height: 20px;
+        right: 0px;
+        top: 39px;
+        border-bottom: 2px solid #000;
+        border-top: 2px solid #000;
+        z-index: 2;
+        transition: all 0.2s ease;
+        -moz-transition: all 0.2s ease;
+        -o-transition: all 0.2s ease;
+        -webkit-transition: all 0.2s ease;
+    }
+    .menuIcon:after {
+        width: 80%;
+        height: 2px;
+        background: #000;
+        content: "";
+        display: block;
+        right: 0;
+        top: 7px;
+    }
+    .menuIcon,
+    .menuIcon:after {
+        position: absolute;
+        transition: all 0.4s ease;
+    }
+    .menuIcon,
+    .menu_clos {
+        display: block;
+        cursor: pointer;
+    }
+    .menuIcon:hover:after {
+        right: 20%;
+    }
 
- .floatingMenu_col_list ul li a {  padding: 0px !important;
-    font-size: 12px;}
-
-.main_nav .btn_default { 
-    transform: translateY(0px);
-}
- 
-
-
-.menuIcon {
-       width: 30px;
-       height: 20px;
-       right: 0px;
-       top: 39px;
-       border-bottom: 2px solid #000;
-       border-top: 2px solid #000;
-       z-index: 2;transition: all .2s ease;
-       -moz-transition: all .2s ease;
-       -o-transition: all .2s ease;
-       -webkit-transition: all .2s ease;
-   }
-   .menuIcon:after {
-       width: 80%;
-       height: 2px;
-       background: #000;
-       content: "";
-       display: block;
-       right: 0;
-       top: 7px
-   }
-   .menuIcon,
-   .menuIcon:after {
-       position: absolute;
-       transition: all .4s ease
-   }
-   .menuIcon,
-   .menu_clos {
-       display: block;
-       cursor: pointer
-   }
-   .menuIcon:hover:after {
-       right: 20%
-   }
-    
-   
     .closeNav {
-           display: block;
-           background: url(../images/closeNav.png) no-repeat;
-           width: 18px;
-           height: 18px;
-           position: absolute;
-           color: #fff;
-           right: 15px;
-           top: 20px;
-           
-           background-size: 100%
-       }
+        display: block;
+        background: url(../images/closeNav.png) no-repeat;
+        width: 18px;
+        height: 18px;
+        position: absolute;
+        color: #fff;
+        right: 15px;
+        top: 20px;
+
+        background-size: 100%;
+    }
+
+    .fixed_header .menuIcon {
+        top: 36px;
+    }
+
+    .mainBanner_detail {
+        padding: 60px 0px;
+    }
+    .byNumber_section_detail {
+        padding: 60px 0px;
+    }
+
+    .byNumber_steps_info {
+        margin: 10px 0px;
+    }
+
+    .at_bizionic_section_detail {
+        padding: 60px 0px;
+    }
+    .startProj_section_detail {
+        padding: 60px 0px 200px;
+    }
+
+    .aboutBizionic_col .row {
+        margin: 0px -25px;
+    }
+    .aboutBizionic_col_info {
+        padding: 10px 10px;
+    }
+    .clientBizionic_section_detail {
+        padding: 60px 0px;
+    }
+
+    .clientBizionic_reviews_info {
+        padding: 30px 20px;
+    }
+
+    .clientBizionic_reviews_info span {
+        padding-bottom: 20px;
+        line-height: 1;
+    }
+
+    .clientBizionic_reviews {
+        padding-left: 0px;
+    }
+    .clientBizionic_partners ul li {
+        width: 25%;
+    }
+    .clientBizionic_partners ul li a {
+        height: 80px;
+    }
+
+    .clientBizionic_partners ul li a img {
+        width: 50px;
+        height: 30px;
+    }
+
+    .aboutProject_section_detail {
+        padding: 60px 0px;
+    }
+    .project_form_field {
+        margin: 10px 0px;
+    }
+
+    .connected_form_info ul li {
+    }
+
+    .connected_form_info ul {
+        margin: 0px;
+        padding-bottom: 20px;
+    }
+    .copyRight p {
+        padding-left: 50px;
+    }
+    .connected_form {
+        padding-right: 0px;
+    }
+
+    .mainBanner_text h3 {
+        padding-bottom: 25px;
+        font-size: 30px;
+    }
+
+    .mainBanner_text h3 b {
+        font-size: 34px;
+    }
+
+    .aboutBizionic_col_info p span img {
+        height: 55px;
+    }
+    .aboutBizionic_col_info p span {
+        width: 90px;
+        height: 90px;
+        padding: 5px;
+        margin: 5px 15px 5px 0px;
+    }
+
+    .aboutBizionic_col_info p {
+        font-size: 16px;
+        line-height: 1.5;
+    }
+
+    .protectPrivacy span {
+        font-size: 14px;
+        padding: 12px 15px;
+    }
+
+    .marketing_numbers ul li {
+        padding: 25px 0px;
+    }
+
+    .bizionic_know_fl h3 {
+        font-size: 30px;
+    }
+
+    .bizionic_know_fl h3 strong {
+        font-size: 42px;
+    }
+
+    .bizionic_know_fl {
+        transform: translateY(-40px);
+        padding: 52px 40px;
+    }
+
+    .marketMain {
+        padding-bottom: 100px !important;
+    }
+
+    .markServices_tabsBtn_info ul li a {
+        padding: 20px 15px;
+        font-size: 15px;
+    }
+
+    .markServices_tabsInfo_detail {
+        padding: 50px 0px;
+    }
+
+    .markServices_tabs_colInfo strong {
+        padding: 6px 15px 5px 15px;
+    }
+    .markServices_tabs_colInfo p {
+        line-height: 1.4;
+        font-size: 15px;
+    }
+
+    .markServices_tabs_colInfo {
+        padding: 10px 0px;
+    }
+    .digital_menu_info ul li a {
+        padding: 15px 15px;
+        font-size: 18px;
+    }
+
+    .bizionicWay span {
+        max-width: 250px;
+    }
+
+    .portfolioAvatar span {
+        max-width: 500px;
+    }
+
+    .clientMarketing .clientBizionic_section_detail {
+        padding-top: 100px;
+        padding-bottom: 60px;
+    }
+
+    .connected_avatar span {
+        max-width: 500px;
+    }
+
+    .connected_with_info strong {
+        font-size: 18px;
+        padding-bottom: 30px;
+    }
+
+    .globalPartner_list ul li {
+        width: 25%;
+        padding: 20px 20px;
+    }
+    .globalPartner_list ul li a img {
+        height: 35px;
+    }
+
+    .marketingStart .btn_default {
+        margin-top: 30px;
+    }
+
+    .togather_avatar_detail span {
+        max-width: 500px;
+    }
+
+    .blog_column_info {
+        padding: 0px 0px 0px;
+    }
+
+    .blog_column .row {
+        margin: 0px -15px;
+    }
+    .blog_column_info h5 {
+        padding-left: 5px;
+        font-size: 16px;
+    }
+
+    .blog_column_info .social_info a {
+        margin: 0px 8px 0px 0px;
+        width: 34px;
+        height: 34px;
+    }
+
+    .chinaPage .mainBanner_text span {
+        max-width: 520px;
+        margin-top: -100px;
+        margin-bottom: 40px;
+    }
+
+    .marketServicesPage_sectionDetail .custom_tittle {
+        padding-bottom: 20px;
+    }
+
+    .marketServicesPage_sectionDetail {
+        padding: 80px 0px;
+    }
+
+    .section2_avatar span {
+    }
+    .baidu_avatar2 span {
+        max-width: 450px;
+        margin-top: -200px;
+    }
+
+    .china_seo_avatar span {
+        max-width: 650px;
+    }
+    .baidu_avatar2 span {
+        max-width: 500px;
+    }
+
+    .hireMain .marketing_banner_fr span {
+        transform: scale(1);
+    }
+
+    .hiretalent .aboutProject_section_detail {
+        padding: 70px 0px;
+    }
+
+    .hiretalent .man_avatar {
+        max-width: 370px;
+        right: -40px;
+        bottom: 100px;
+    }
+
+    .hiretalent .addFile_button {
+        display: block;
+        padding-top: 0px;
+    }
+
+    .howWork_text_info {
+        padding-left: 20px;
+        padding-right: 0px;
+    }
+
+    .howWork_text_info p {
+        line-height: 1.7;
+        font-size: 14px;
+    }
+
+    .howWork_section ul li {
+        padding-bottom: 10px;
+    }
+
+    .technologyBanner .mainBanner_text h3 br {
+        display: none;
+    }
+
+    .technologyBanner .mainBanner_text h3 {
+        font-size: 26px;
+    }
+    .technologyBanner .mainBanner_text h3 b {
+        font-size: 38px;
+        line-height: 1.3;
+    }
+
+    .technology_master_detail .custom_tittle p br {
+        display: none;
+    }
+
+    .technology_master_info {
+        padding: 50px 20px;
+    }
+
+    .technologyWorking_detail {
+        padding: 50px 0px;
+    }
+
+    .technologyLook_text {
+        padding-right: 0px;
+    }
+
+    .addFile_button {
+        display: block;
+    }
+
+    .addFile_button p {
+        padding-bottom: 20px;
+        min-width: auto;
+    }
+
+    .industryNew_section1_info h3 strong {
+        font-size: 48px;
+    }
+
+    .provide_col {
+        padding: 10px !important;
+    }
+
+    .floatingMenu_col span img {
+        width: 28px;
+        height: 28px;
+    }
+
+    .floatingMenu {
+        padding: 15px;
+        width: 800px;
+        margin-left: -240px;
+    }
+
+    .floatingMenu_col h6 {
+        font-size: 14px;
+    }
+
+    .floatingMenu_col_list ul {
+        margin-left: 10px;
+    }
+
+    .floatingMenu_col_list {
+        padding: 10px 5px 20px;
+    }
+
+    .floatingMenu_col_list ul li a {
+        font-size: 12px;
+    }
+
+    .buildCol {
+        padding: 15px 15px;
+    }
+
+    .buildTeam_section_detail {
+        padding: 0px 20px 0px;
+    }
+
+    .mainBanner_detail.hireMain {
+        padding-bottom: 80px;
+    }
+
+    .social_info {
+        padding-top: 20px;
+    }
+
+    .meetTeam_nav_info ul li a {
+        padding: 15px 10px;
+        font-size: 14px;
+    }
+
+    .otherSearch {
+        width: 30%;
+        padding-left: 10px;
+    }
+
+    .infoLinks {
+        display: block;
+    }
+
+    .bizionic_about {
+        padding-top: 0px;
+    }
+
+    .servicesText_list .technology_master_text {
+        padding: 60px 40px;
+    }
+
+    .aboutRead_more .aboutBizionic_section_detail {
+        padding: 70px 0px;
+    }
+
+    .aboutBizionic_col_info h4 {
+        font-size: 18px;
+    }
+
+    .aboutRead_more .aboutBizionic_col_info p {
+        display: block;
+    }
+
+    .aboutRead_more .aboutBizionic_col_info p span {
+        min-width: 110px;
+        min-height: 80px;
+    }
+    .aboutRead_more .aboutBizionic_col_info {
+        padding: 10px 20px;
+    }
+
+    .dateTime_range {
+        flex-wrap: wrap;
+    }
+    .dateTime_range .project_form_field {
+        max-width: 100px;
+        min-width: 100px;
+    }
+
+    .meetProfile {
+        display: block;
+    }
+
+    .hiringInfo .meetProfile_tittle {
+        width: 100%;
+    }
+
+    .talentCheck_list_info {
+        padding: 60px 0px;
+    }
+
+    .frList_sec ul li p {
+        font-size: 15px;
+    }
+
+    .careerPage_container {
+        transform: translateY(-35px);
+    }
+
+    .careerPage_inner {
+        padding: 70px 40px;
+    }
+    .advanceCareer_form {
+        padding: 25px;
+    }
+
+    .flotNav_added .header_detail {
+        position: relative;
+    }
+
+    .frList_sec {
+        padding: 35px 25px;
+    }
+
+    .technology_provides ul li a img {
+        width: 95px;
+        height: 95px;
+    }
+
+    .technology_provides ul li {
+        padding: 5px 5px !important;
+    }
+    .technology_provides ul {
+        margin: 0px -5px !important;
+    }
+    .technology_master_list ul li {
+        padding: 15px 0px;
+    }
+
+    .technology_master_text {
+        padding: 0px 0px 25px;
+    }
+
+    .technologyForm .addFile_button p {
+        min-width: 100%;
+    }
+    .technologyForm .addFile_button p {
+        min-width: auto;
+    }
+
+    .openPosition_sec .careerPage_inner {
+        padding: 70px 20px;
+    }
+
+    .instaHirin_banner_info {
+        padding: 25px;
+        position: relative;
+        margin-top: -110px;
+    }
+
+    .instaHirin_banner_inner {
+        padding: 0px;
+    }
+
+    .hireIn_input {
+        margin: 0px !important;
+    }
+
+    .postRequirment_section_detail .row {
+        flex-flow: column-reverse;
+    }
+
+    .postRequirment_section_detail .row .col-lg-6 {
+        padding: 0px 15px !important;
+    }
+
+    .talentCheckList ul {
+        margin-left: 0px !important;
+        margin-bottom: 30px !important;
+    }
+
+    .talentCheckList ul li p {
+        font-size: 15px;
+    }
+    .chrckIcon {
+        max-width: 16px;
+        margin-right: 6px;
+        padding-top: 3px;
+    }
+
+    .verified_icon {
+        max-width: 55px;
+        margin-left: 5px;
+    }
+
+    .instaHirin_section {
+        padding: 35px 25px;
+    }
+
+    .instaHirin_section .howWork_section {
+        padding-left: 0px;
+    }
+
+    .instaHirin_section .howWork_section ul li {
+        padding-bottom: 20px;
+    }
+
+    .instaHirin_section .howWork_text_info h4 {
+        font-size: 18px;
+    }
+
+    .biz_brief {
+        width: 100%;
+        padding: 50px 20px;
+    }
+    .requireForm_lable strong {
+        display: block;
+        padding-top: 10px;
+    }
+
+    .instaRequire_info .custom_tittle p {
+        padding: 15px 0px;
+        line-height: 1.5;
+        font-size: 16px;
+    }
+    .instaRequire_info {
+        padding-left: 0px;
+    }
+
+    .aboutUs_bgSection .mainBanner_text {
+        padding-top: 0px;
+    }
+
+    .aboutUs_bgSection .mainBanner_text {
+        min-height: auto;
+    }
+
+    .aboutUs_bgSection {
+        background-position-x: 70%;
+    }
+
+    .who_we_are_section::after {
+        display: none;
+    }
+
+    .bNumber {
+        padding: 0px;
+        padding-top: 30px;
+    }
+
+    .bNumber .custom_tittle h2 {
+        padding-bottom: 0px !important;
+    }
+
+    .bNumber .byNumber_infoText label {
+        font-size: 18px;
+    }
+
+    .bNumber .byNumber_infoText p {
+        font-size: 15px;
+    }
+
+    .coreTabs {
+        overflow-x: auto;
+    }
+
+    .coreTabs ul {
+        width: 1200px;
+    }
+
+    .coreTabs_data_show {
+        padding: 30px;
+    }
+
+    .coreTabs_data_text ul {
+        margin-left: 30px;
+    }
+
+    .sourceModel_inner {
+        padding: 40px 25px;
+    }
+
+    .connectText {
+        width: 100%;
+        padding: 50px 50px 20px;
+        min-height: 520px;
+    }
+    .indust_work_col {
+        min-height: 220px;
+    }
+    .indust_work_col a strong {
+        font-size: 15px;
+    }
+    .coreTabs_data_text {
+        width: 100%;
+        padding-right: 0px;
+    }
+    .tellUs_sec::after {
+        display: none;
+    }
+
+    .tellUs_sec .coreTabs_data_text {
+        padding-bottom: 40px;
+    }
+
+    .addFile {
+        padding-bottom: 20px;
+    }
+
+    .indP_col {
+        padding: 15px 10px;
+    }
+
+    .indPortfolioText {
+        font-size: 18px;
+    }
+    .indPortfolioText b {
+        width: 30px;
+        height: 25px;
+        font-size: 15px;
+    }
+    .technology_master_detail {
+        padding: 60px 0px;
+    }
+
+    .b2bInnerText {
+        padding: 40px;
+    }
+    .process_avatar {
+        padding: 0px 25px;
+    }
+    .servicesProvided_info ul {
+        justify-content: flex-start;
+        margin-left: 15px;
+    }
+
+    .bizionicTeam_mainInfo_text {
+        padding-right: 0px;
+    }
+    .bizionicTeam_section_detail {
+        padding: 50px 25px;
+    }
+
+    .bizionicTeam_section.teamSec2 {
+        padding-bottom: 60px;
+    }
+
+    .onTeamPage .indust_work_sectionDetail {
+        padding: 60px 0px;
+    }
+
+    .indust_work_sectionDetail {
+        padding: 60px 0px;
+    }
+
+    .hire_me_button {
+        margin: 0px;
+        transform: translateY(0px);
+        display: inline-block !important;
+        min-width: 148px;
+        text-align: center;
+    }
+    .main_nav .btn_default {
+        display: inline-block !important;
+    }
+
+    .innerColum_menu_outer {
+        width: 100%;
+        height: 100%;
+        border-right: 1px solid #5a5a5a;
+        padding: 10px 10px 10px 10px;
+        min-height: 575px;
+    }
+
+    .innerColum_menu strong {
+        font-size: 12px;
+    }
+
+    .hireMain .row {
+        align-items: flex-start;
+    }
+
+    .aboutBizionic_section_detail {
+        padding-bottom: 50px;
+    }
+
+    .quick_links {
+        padding-top: 0px;
+    }
+
+    .sourcingModel_section {
+        padding-bottom: 0px;
+    }
+
+    .servicesForm .project_form_field {
+        padding: 0px 0px;
+    }
+    .servicesForm .project_form_textarea {
+        padding: 0px 0px;
+    }
+
+    .marketingStart .startProj_info h3 {
+        font-size: 48px;
+    }
+
+    .marketingStart .rocketAvatar {
+        max-width: 600px;
+    }
+
+    .latestBlog_section_detail {
+        padding: 70px 0px 50px;
+    }
+
+    .newTecnologyList .technology_master_inner {
+        margin: 0px 0px !important;
+    }
+    .newTecnologyList .col-md-12 {
+        margin: 15px 0px !important;
+    }
+
+    .newTecnologyList {
+        padding: 0px !important;
+    }
+
+    .keySuccess_col {
+        padding: 0px 10px;
+    }
+
+    .nativeSupport_list ul li {
+        width: 20%;
+    }
+
+    .seamlessLimitless_fl {
+        padding: 50px 30px;
+    }
+    .seamlessLimitless_fr span {
+        padding: 30px;
+    }
+
+    .seamlessLimitless_fl .custom_tittle p {
+        font-size: 17px;
+        line-height: 1.6;
+    }
+
+    .innerNofification_pages .mainBanner_detail {
+        padding: 50px 30px 30px;
+    }
+
+    .notification_banner {
+        padding-bottom: 50px;
+    }
+    .onboardSkill_options .skilled_setting ul li {
+        width: 20% !important;
+        padding: 12px 0px !important;
+    }
+
+    .onboardSkill_options .custom_tittle {
+        padding-bottom: 0px;
+    }
+
+    .skilled_setting ul li a {
+        padding: 30px 5px;
+        font-size: 12px;
+    }
+
+    .meetTeam_info {
+        padding: 35px 18px 20px;
+    }
+
+    .meetTeam_sliderSection .meetProfile {
+        display: flex;
+        align-items: flex-start;
+    }
+
+    .meetTeam_sliderSection .hireBttn .btn_default {
+        font-size: 12px;
+    }
+
+    .viewAll_search_bar {
+        width: 90% !important;
+        margin: auto !important;
+        padding: 50px 20px 0px !important;
+    }
+
+    .viewAll_listing > ul > li {
+        width: 50%;
+    }
+
+    .talentOnboard_page_detail {
+        width: 90%;
+    }
+
+    .talentOnboard_page .hireForm_banner_detail {
+        padding-bottom: 150px;
+        padding-top: 100px;
+    }
+
+    .talentOnboard_page .hireForm_banner_detail .custom_tittle {
+        padding: 0px 30px;
+    }
+
+    .talentProcess_bullets {
+    }
+
+    .talentProcess_bullets span {
+        margin-bottom: 20px;
+        width: 80px;
+        height: 80px;
+        min-width: 80px;
+    }
+    .talentProcess_bullets span img {
+        height: 35px;
+    }
+    .talentProcess_section .aboutBizionic_col_info h4 {
+        font-size: 15px;
+    }
+    .talentProcess_section .aboutBizionic_col_info p {
+        font-size: 14px;
+    }
+
+    .global_talent_quotesCol p {
+        font-size: 16px;
+    }
+
+    .onboardPage .postRequirment_text {
+        padding: 70px 30px 110px;
+    }
+
+    .onboardPage .provider_section .industryNew_section2_cols {
+        padding: 0px 10px 0px;
+    }
+
+    .mainForm_fl .talentCheck_list_info {
+        padding: 50px 25px;
+    }
+    .mainForm_fl .talentCheckList h4 {
+        font-size: 24px;
+        line-height: 1.6;
+    }
+    .mainForm_fl .talentCheckList ul li p {
+        flex-wrap: nowrap;
+    }
+
+    .mainForm_fr {
+        padding: 50px 25px;
+    }
+
+    .listOf_topTechnologies {
+        padding: 50px 25px;
+    }
+
+    .listTop_technology ul li {
+        padding: 18px 15px;
+    }
+
+    .industryNew_section_detail {
+        padding: 70px 0px;
+    }
+
+    .marketingFormSetting .row {
+        align-items: flex-start !important;
+    }
+
+    .industryNew_section1 .row {
+        align-items: flex-start !important;
+    }
+
+    .header_up_detail {
+        padding: 8px 0px;
+    }
+
+    .logo_socialInfo .social_info a {
+        margin-right: 8px !important;
+        font-size: 14px !important;
+    }
+    .eshareWhite_logo a {
+        width: 85px;
+    }
+
+    .change_langOuter {
+        width: 110px;
+        padding: 1px 2px;
+        margin-left: 5px;
+    }
+
+    .change_langOuter .goog-te-combo {
+        font-size: 9px;
+    }
+
+    .authBtns {
+        padding-left: 0px;
+    }
+    .authBtns ul li a {
+        padding: 4px 8px;
+        font-size: 9px;
+    }
+    .eshareWhite_logo {
+        margin-left: 35px;
+    }
+    .main_container {
+        padding-top: 141px;
+    }
+    .startup_innerPages .industryNew_section_detail {
+        padding: 60px 40px 60px;
+    }
+    .startup_innerPages .industryNew_section1 .custom_tittle h2 b {
+        font-size: 34px;
+    }
+
+    .mvpDev_col {
+        padding: 15px;
+    }
+
+    .mvpBenefits_flowSection {
+        padding: 60px 40px 60px;
+    }
+
+    .ind_innerPages .custom_tittle h2 b {
+        font-size: 42px;
+        line-height: 1.2;
+    }
+
+    .wedo_sction .hireForm_banner_detail {
+        padding: 50px 40px;
+    }
+    .wedo_sction .industryNew_section2_cols {
+        padding: 60px 40px 50px;
+    }
+    .nevStarup_setting {
+        padding: 60px 40px 50px;
+    }
+    .proposal_sectionTittle {
+        padding: 50px 40px;
+    }
+    .funding_info {
+        padding: 50px 40px;
+    }
+
+    .seamlessLimitless_section_detail {
+        padding: 60px 0px;
+    }
+    .needMvp_section_detail {
+        padding: 60px 0px;
+    }
+
+    .inspiredPassion_section_detail {
+        padding: 60px 0px 30px;
+    }
+    .inspired_col {
+        padding: 15px;
+    }
+
+    .wedo_sction .industryNew_section2_cols {
+        padding: 60px 20px 50px;
+    }
+    .awsNepture_list_info {
+        padding: 50px 30px;
+    }
+
+    .inspiredPassion_row {
+        padding-top: 0px;
+    }
+
+    .wedo_sction .custom_tittle p br {
+        display: none;
+    }
+
+    .startupServices_info {
+        padding: 50px 40px;
+    }
+
+    .startupServices_section_detail {
+        padding: 60px 0px 60px;
+    }
+
+    .startupMvp_section .seamlessLimitless_fl {
+        padding-right: 0px;
+    }
+
+    .startupHowWork .inspired_col {
+        padding: 15px;
+    }
+
+    .pricingList_col {
+        padding: 20px 10px 50px;
+    }
+
+    .priceFeatureList {
+        padding: 20px 5px 0px;
+    }
+
+    .categoryTittle {
+        font-size: 14px;
+        padding-bottom: 10px;
+    }
+
+    .setupFee small {
+        margin-right: 5px;
+        font-size: 12px;
+    }
+    .setupFee strong {
+        font-size: 14px;
+    }
+    .priceFeatureList ul li {
+        padding: 10px 0px;
+    }
+
+    .priceFeatureList ul li p {
+        font-size: 12px;
+    }
+
+    .priceFeatureList ul li p span {
+        padding-right: 6px;
+        font-size: 15px;
+    }
+    .categoryTittleTag {
+        max-width: 100px;
+        padding: 5px 8px;
+        font-size: 12px;
+    }
+    .embark_search_info {
+        width: 100%;
+        padding: 15px 20px;
+        justify-content: space-between;
+        margin-bottom: 20px;
+    }
+    .embark_teamBtn {
+        width: 28%;
+        padding-left: 0px;
+    }
+    .embark_search_section {
+        flex-flow: column;
+    }
+
+    .sponsorSlider .slick-next {
+        right: -22px;
+        width: 28px;
+        height: 28px;
+    }
+    .sponsorSlider .slick-prev {
+        left: -22px;
+        width: 28px;
+        height: 28px;
+    }
+    .getEmployed_info {
+        padding: 50px 25px;
+    }
+
+    .getEmployed_info .custom_tittle p {
+        padding-right: 20px;
+        font-size: 20px;
+    }
+
+    .accendDream_sectionDetail {
+        padding: 70px 150px 70px 80px;
+    }
+    .whyWork-tittle h4 {
+        font-size: 16px !important;
+    }
+    .advaceCareer_hire .careerPage_inner {
+        padding: 50px 0px 0px;
+    }
+
+    .learnOwn_bossFl {
+        padding: 50px 40px 40px;
+    }
+
+    .learnOwn_bossFr {
+        padding-right: 0px;
+    }
+
+    .revolution_info {
+        padding: 60px 40px;
+    }
+    .revolution_infoDetail {
+        padding: 40px 25px;
+    }
+    .revolutionCol {
+        padding: 10px !important;
+    }
+
+    .portfolioPage .at_bizionic_section_detail {
+        padding: 60px 30px;
+    }
+}
+
+@media only screen and (max-width: 767px) {
+    h1 {
+        font-size: 24px;
+        line-height: 1.4;
+    }
+    h2 {
+        font-size: 22px;
+        line-height: 1.4;
+    }
+    h3 {
+        font-size: 20px;
+    }
+    h4 {
+        font-size: 20px;
+    }
+    h5 {
+        font-size: 18px;
+    }
+    h6 {
+        font-size: 18px;
+    }
+
+    .main_logo a {
+        width: 120px;
+    }
+
+    .fixed_header .main_logo a {
+        width: 110px;
+    }
+    .main_container {
+        padding-top: 100px;
+    }
+
+    .main_nav {
+        display: none;
+        width: 100%;
+        background: #fff;
+        position: fixed;
+        left: 0px;
+        top: 0px;
+        height: 100%;
+        z-index: 5;
+        padding: 50px 20px;
+        overflow-y: auto;
+    }
+    .main_nav ul {
+        display: block;
+    }
+
+    .main_nav ul li {
+        padding: 5px 0px;
+        margin: 0px;
+    }
+
+    .main_nav ul li a {
+        display: block;
+        padding: 5px 0px;
+        font-size: 14px;
+    }
+
+    .floatingMenu {
+        padding: 3px 0px;
+        width: 100%;
+        position: static;
+        margin-left: 0px !important;
+        display: none;
+        max-width: 100%;
+    }
+
+    .floatingMenu_col_list {
+        padding: 10px 0px 10px;
+        display: none;
+    }
+
+    .chevRowDown {
+        display: block;
+    }
+
+    .clickH6 .chevRowDown {
+        transform: rotate(180deg);
+    }
+
+    .main_nav ul li small {
+        top: 5px;
+    }
+    .has_nav small {
+        transform: rotate(0deg) !important;
+    }
+    .rotate_icon small {
+        transform: rotate(180deg) !important;
+    }
+
+    .floatingMenu_col span img {
+        width: 25px;
+        height: 25px;
+    }
+    .floatingMenu_col h6 {
+        padding: 12px 0px;
+        font-size: 14px;
+        border-bottom: 1px solid #155093;
+    }
+    .floatingMenu_col_list ul li {
+        font-size: 16px;
+        padding: 4px 0px !important;
+    }
+
+    .floatingMenu_col_list ul li a {
+        padding: 0px !important;
+        font-size: 12px;
+    }
+
+    .main_nav .btn_default {
+        transform: translateY(0px);
+    }
+
+    .menuIcon {
+        width: 30px;
+        height: 20px;
+        right: 0px;
+        top: 39px;
+        border-bottom: 2px solid #000;
+        border-top: 2px solid #000;
+        z-index: 2;
+        transition: all 0.2s ease;
+        -moz-transition: all 0.2s ease;
+        -o-transition: all 0.2s ease;
+        -webkit-transition: all 0.2s ease;
+    }
+    .menuIcon:after {
+        width: 80%;
+        height: 2px;
+        background: #000;
+        content: "";
+        display: block;
+        right: 0;
+        top: 7px;
+    }
+    .menuIcon,
+    .menuIcon:after {
+        position: absolute;
+        transition: all 0.4s ease;
+    }
+    .menuIcon,
+    .menu_clos {
+        display: block;
+        cursor: pointer;
+    }
+    .menuIcon:hover:after {
+        right: 20%;
+    }
+
+
+    .closeNav {
+        display: block;
+        background: url(../images/closeNav.png) no-repeat;
+        width: 18px;
+        height: 18px;
+        position: absolute;
+        color: #fff;
+        right: 15px;
+        top: 20px;
+
+        background-size: 100%;
+    }
+
+    .fixed_header .menuIcon {
+        top: 36px;
+    }
+
+    .mainBanner_detail {
+        padding: 60px 0px;
+    }
+
+    .byNumber_section_detail {
+        width: 100%;
+        padding: 60px 0px;
+    }
+
+    .byNumber_infoText strong {
+        font-size: 26px;
+    }
+    .byNumber_infoText label {
+        font-size: 18px;
+    }
+    .byNumber_steps_info {
+        margin: 10px 0px;
+    }
+    .at_bizionic_section_detail {
+        padding: 60px 0px;
+    }
+
+    .at_bizionic_section_detail .custom_tittle p {
+        padding-bottom: 10px;
+        font-size: 18px;
+    }
+
+    .at_bizionic_bottomTittle p {
+        font-size: 16px;
+    }
+    .startProj_section_detail {
+        padding: 60px 0px 180px 0px;
+    }
+
+    .aboutBizionic_section_detail {
+        padding: 60px 0px 30px;
+    }
+
+    .aboutBizionic_section_detail .custom_tittle p {
+        font-size: 16px;
+    }
+
+    .clientBizionic_section_detail {
+        padding: 60px 0px;
+    }
+
+    .clientBizionic_info {
+        padding: 20px 20px;
+    }
+
+    .clientBizionic_partners ul li {
+        width: 33.33%;
+    }
+    .clientBizionic_partners ul li a {
+        height: 75px;
+    }
+
+    .clientBizionic_partners ul li a img {
+        width: 50px;
+        height: 30px;
+    }
+
+    .clientBizionic_partners {
+        margin-bottom: 50px;
+    }
+
+    .clientBizionic_reviews {
+        padding-left: 0px;
+    }
+    .clientBizionic_reviews_info {
+        padding: 25px 15px;
+    }
+
+    .clientBizionic_reviews_info span {
+        padding-bottom: 20px;
+        line-height: 1;
+    }
+
+    .clientBizionic_reviews_info p {
+        line-height: 1.5;
+        font-size: 14px;
+    }
+    .aboutProject_section_detail {
+        padding: 60px 0px;
+    }
+    .aboutProject_section_detail .custom_tittle p {
+        padding: 0px;
+        font-size: 16px;
+    }
+
+    .project_form_field {
+        margin: 10px 0px;
+    }
+    .addFile_button {
+        align-items: center;
+        justify-content: center;
+        flex-flow: column;
+    }
+    .addFile {
+        padding-bottom: 20px;
+        margin: auto;
+    }
+
+    .servicesProvided_section_detail {
+        padding: 60px 0px;
+    }
+    .servicesProvided_info ul li {
+        padding: 3px 8px;
+        font-size: 14px;
+    }
+    .servicesProvided_info ul li a {
+        font-size: 13px;
+    }
+    .connected_form {
+        padding-right: 0px;
+    }
+    .connected_form_info ul {
+        margin: 0px 0px;
+        padding-bottom: 30px;
+        flex-wrap: wrap;
+    }
+    .connected_form_info ul li {
+        width: 100%;
+        padding: 0px 0px 25px;
+    }
+    .connected_form_info ul li:last-child {
+        padding: 0px;
+    }
+    .connected_form_field input {
+        padding: 0px 0px;
+    }
+
+    .btn_subcribe {
+        text-align: left !important;
+        padding-bottom: 0px;
+    }
+
+    .bizionic_about {
+        padding-top: 40px;
+    }
+
+    .footerBottom_detail {
+        padding: 20px 0px 12px;
+        justify-content: center;
+        align-items: center;
+        flex-flow: column;
+    }
+    .copyRight {
+        text-align: center;
+        padding-bottom: 10px;
+    }
+
+    .social_info a {
+        margin: 0px 8px;
+    }
+
+    .clientBizionic_reviews .owl-dots {
+        left: -12px;
+    }
+
+    .quick_links ul li {
+        padding: 5px 0px;
+    }
+
+    .mainBanner_text h3 b {
+        font-size: 32px;
+    }
+
+    .mainBanner_text h3 {
+        padding-bottom: 20px;
+        font-size: 26px;
+        line-height: 1.5;
+    }
+    .mainBanner_text strong {
+        font-size: 16px;
+    }
+
+    .mainBanner_text p {
+        font-size: 16px;
+    }
+
+    .byNumber_infoText {
+        padding: 30px 20px;
+    }
+
+    .aboutBizionic_section_detail .custom_tittle h4 {
+        font-size: 16px;
+        line-height: 1.5;
+    }
+
+    .aboutBizionic_col_info p span img {
+        height: 40px;
+    }
+
+    .aboutBizionic_col_info p span {
+        width: 70px;
+        height: 70px;
+        padding: 5px;
+        margin: 5px 15px 1px 0px;
+    }
+    .aboutBizionic_col_info p {
+        font-size: 16px;
+    }
+
+    .man_avatar {
+        display: none;
+    }
+
+    .project_form {
+        padding: 10px 15px 20px;
+    }
+    .protectPrivacy span {
+        font-size: 15px;
+    }
+
+    .copyRight p {
+        font-size: 12px;
+    }
+
+    .footerUp_detail {
+        padding: 50px 0px 40px;
+    }
+
+    .marketingBanner {
+        padding-bottom: 0px;
+    }
+
+    .marketing_numbers .byNumber_infoText {
+        padding: 8px 0px 25px 20px;
+    }
+
+    .marketing_numbers ul li {
+        padding: 30px 0px;
+    }
+
+    .marketMain {
+        padding-bottom: 100px !important;
+    }
+
+    .marketing_banner_fr {
+        padding-top: 40px;
+    }
+
+    .bizionic_know_fl {
+        transform: translateY(0px);
+        padding: 40px 20px;
+    }
+
+    .bizionic_know_fl h3 strong {
+        font-size: 36px;
+    }
+
+    .bizionic_know_fl h3 {
+        font-size: 30px;
+    }
+
+    .markServices_section .custom_tittle {
+        padding: 60px 0px 30px;
+    }
+
+    .markServices_section .custom_tittle h2 {
+        padding-bottom: 10px;
+    }
+
+    .markServices_tabsBtn_info ul {
+        display: block;
+    }
+    .markServices_tabsBtn_info ul li {
+        width: 100%;
+    }
+
+    .markServices_tabsBtn_info ul li a {
+        padding: 18px 15px 16px;
+        font-size: 16px;
+    }
+
+    .markServices_tabsInfo_detail {
+        padding: 50px 0px;
+    }
+    .digitalServices_section_detail {
+        padding: 60px 0px 0px;
+    }
+    .digital_menu_info ul li a {
+        padding: 12px 10px;
+        font-size: 16px;
+    }
+
+    .areaIntrest_section_detail {
+        padding: 60px 0px;
+    }
+    .areaIntrest_avatar {
+        padding-top: 0px;
+        padding-bottom: 25px;
+    }
+
+    .custom_tittle p {
+        font-size: 16px;
+    }
+    .seeOur a {
+        font-size: 16px;
+    }
+
+    .ourStory_section_detail {
+        padding: 60px 0px;
+    }
+
+    .ourStory_section_fr {
+        padding-top: 40px;
+    }
+    .ourStory_section_fr span {
+        max-width: 250px;
+    }
+    .bizionicWay span {
+        max-width: 250px;
+    }
+
+    .bizionicWay {
+        margin-top: 30px;
+    }
+    .bizionicWay strong {
+        font-size: 20px;
+        padding-top: 10px;
+    }
+    .portfolioAvatar {
+        padding: 0px 20px 10px;
+    }
+
+    .clientMarketing .clientBizionic_section_detail {
+        padding-top: 70px;
+        padding-bottom: 60px;
+    }
+
+    .addBorder {
+        border: 0px;
+    }
+
+    .connected_with_info {
+        padding: 30px 15px 30px;
+    }
+    .globalPartner_avatar {
+        padding: 0px 0px 20px;
+        margin-top: 0px;
+    }
+
+    .globalPartner_list ul {
+        margin: 0px 0px;
+    }
+    .globalPartner_list ul li {
+        width: 50%;
+        padding: 15px 20px;
+    }
+
+    .globalPartner_section_detail {
+        padding: 60px 0px 45px;
+    }
+    .marketingStart .startProj_info h3 {
+        font-size: 36px;
+        margin-left: 40px;
+    }
+
+    .marketingStart .startProj_info h3 span {
+        left: -75px;
+        top: 50px;
+        font-size: 20px;
+    }
+
+    .marketingStart .startProj_info {
+        padding-bottom: 40px;
+    }
+
+    .togather_avatar {
+        padding-top: 40px;
+    }
+
+    .togather_avatar_detail {
+        padding: 60px 0px;
+    }
+
+    .latestBlog_section_detail {
+        padding: 60px 0px 30px;
+    }
+
+    .blog_column_info {
+        padding: 35px 20px 35px;
+    }
+
+    .blog_avatar {
+        width: 100%;
+        padding: 10px 0px 10px;
+    }
+
+    .mainBanner_text span {
+        margin-top: 0px;
+        margin-bottom: 40px;
+    }
+    .marketServicesPage_sectionDetail {
+        padding: 60px 0px;
+    }
+    .marketServicesPage_sectionDetail .custom_tittle {
+        padding-bottom: 0px;
+    }
+    .marketServices_text {
+        padding-right: 0px;
+    }
+
+    .influencerAvatar {
+        margin-top: 20px;
+        padding-bottom: 40px;
+    }
+
+    .section2_avatar span {
+        margin-top: 0px;
+    }
+
+    .baidu_avatar2 span {
+        margin-top: 0px;
+        padding-top: 20px;
+    }
+
+    .indiaPage .indiaMarketing_avatar {
+        padding-top: 20px;
+    }
+
+    .influencer_section_detail {
+        padding: 60px 0px;
+    }
+
+    .influencer_gallry_info ul li {
+        flex: 50%;
+        max-width: 50%;
+        padding: 0px 4px;
+    }
+    .influencer_gallry_info ul {
+        justify-content: center;
+    }
+
+    .influencer_id_stats {
+        padding: 20px;
+    }
+
+    .influencer_id_statsInfo {
+        padding: 25px 0px;
+    }
+    .inf_id img {
+        width: 55px;
+        height: 55px;
+    }
+    .inf_id {
+        margin-right: 15px;
+    }
+    .influencer_id_text {
+        width: calc(100% - 70px);
+    }
+    .followerInfo strong {
+        font-size: 16px;
+    }
+    .digitechMap {
+        padding-top: 50px;
+        padding-left: 0px;
+    }
+
+    .digitecMap_image {
+        padding-top: 40px;
+    }
+
+    .hireMain .marketing_banner_fr span {
+        transform: scale(1);
+    }
+
+    .hireMain .marketing_numbers ul li {
+        width: 50%;
+        padding: 30px 0px;
+    }
+
+    .hireMain .marketing_numbers {
+        padding-bottom: 0px;
+    }
+
+    .hiretalent .aboutProject_section_detail {
+        padding: 60px 0px;
+    }
+
+    .hiretalent .project_form_textarea textarea {
+        min-height: 200px;
+    }
+
+    .addFile_button p br {
+        display: none;
+    }
+
+    .howWork_text_info {
+        padding-left: 15px;
+        padding-right: 0px;
+    }
+
+    .howWork_section ul li {
+        padding-bottom: 20px;
+    }
+
+    .howWork_text_info h4 {
+        font-size: 18px;
+    }
+
+    .howWork_text_info p {
+        font-size: 14px;
+    }
+
+    .howWork_section h4 {
+        padding-bottom: 25px !important;
+    }
+
+    .technologyBanner .mainBanner_text h3 br {
+        display: none;
+    }
+
+    .technologyBanner .mainBanner_text h3 {
+        font-size: 24px;
+    }
+    .technologyBanner .mainBanner_text h3 b {
+        font-size: 34px;
+        line-height: 1.3;
+    }
+
+    .technologyBanner .mainBanner_text h6 {
+        font-size: 20px;
+        padding-top: 0px;
+    }
+
+    .technology_numbers {
+        padding-top: 40px;
+    }
+
+    .technology_master_detail {
+        padding: 60px 0px;
+    }
+
+    .technology_master_list ul li {
+        padding: 20px 0px;
+    }
+
+    .technology_master_detail .custom_tittle {
+        padding-bottom: 10px;
+    }
+
+    .technology_master_info {
+        padding: 40px 20px;
+    }
+    .technology_master_text {
+        padding: 0px 0px 20px;
+    }
+
+    .technology_provides ul li {
+        padding: 7px 7px !important;
+    }
+
+    .technology_provides ul li a img {
+        width: 100px;
+        height: 100px;
+    }
+
+    .technology_provides ul {
+        justify-content: center;
+    }
+
+    .technology_master_list ul li:nth-of-type(2n) .technology_master_info .row {
+        flex-flow: wrap;
+    }
+
+    .technology_master_list ul li:nth-of-type(2n) .technology_provides ul {
+        justify-content: center;
+    }
+
+    .technologyWorking_detail {
+        width: 100%;
+        padding: 60px 0px;
+    }
+
+    .technologyWorking_info ul li a img {
+        height: 45px;
+        width: 90px;
+    }
+
+    .technologyWorking_info ul li {
+        padding: 20px 15px;
+    }
+
+    .technology_master_detail .custom_tittle h2 br {
+        display: none;
+    }
+
+    .lavrageServices .servicesProvided_info ul {
+        font-size: 14px;
+    }
+
+    .lavrageServices .servicesProvided_info ul li a {
+        display: block;
+        text-align: center;
+        font-size: 13px;
+    }
+
+    .lavrageServices .servicesProvided_info ul li {
+        padding: 7px 7px;
+    }
+
+    .services_avatar a img {
+        max-width: 100px;
+    }
+
+    .services_avatar {
+        padding: 50px 25px;
+    }
+
+    .services_formOuter .project_form {
+        padding: 50px 20px 50px;
+    }
+
+    .servicesForm p br {
+        display: none;
+    }
+
+    .servicesForm .project_form_field {
+        padding: 0px 0px;
+    }
+
+    .servicesForm .project_form_textarea {
+        padding: 0px 0px;
+    }
+
+    .services_formOuter .custom_tittle h2 br {
+        display: none;
+    }
+
+    /* contact-us and folating menu style  */
+
+    .biz_brief {
+        width: 100%;
+        padding: 50px 20px;
+    }
+
+    .biz_brief_info ul li strong {
+        font-size: 18px;
+    }
+    .biz_brief_info ul li p {
+        font-size: 15px;
+    }
+
+    .biz_brief_info ul li {
+        padding: 12px 0px;
+    }
+
+    .contactForm_page {
+        padding: 50px 20px;
+        transform: translateX(0px);
+    }
+
+    .marketing_numbers .byNumber_infoText strong {
+        font-size: 30px;
+    }
+    .industryNew_section1_info h3 strong {
+        font-size: 44px;
+    }
+
+    .provide_col {
+        padding: 15px !important;
+    }
+
+    .industryNew_section_detail {
+        padding: 60px 0px;
+    }
+
+    .servicesForm p {
+        font-size: 16px;
+    }
+    .bizionic_about p {
+        padding: 3px 0px;
+        font-size: 14px;
+    }
+
+    .additional_benefits_section {
+        padding: 60px 0px;
+    }
+
+    .additional_benefits_section_detail {
+        padding: 40px 25px 40px;
+    }
+
+    .additional_benefits_text ul {
+        margin-left: 20px;
+    }
+    .additional_benefits_text ul li {
+        padding: 10px 0px;
+        font-size: 18px;
+    }
+    .b2b_process .additional_benefits_text ul li {
+        padding: 6px 0px;
+    }
+    .process_avatar span img {
+        width: 100%;
+    }
+
+    .b2c_colSection .industryNew_section2_colsInfo {
+        padding: 30px 20px 20px 20px;
+    }
+    .b2c_colSection .industryNew_section2_colsInfo span {
+        margin-bottom: 30px;
+    }
+    .industryNew_section2_colsInfo h6 {
+        font-size: 16px;
+    }
+
+    .bankingSec1 .provide_col {
+        padding: 15px 0px !important;
+    }
+    .appDev_ection .industryNew_section2_cols {
+        padding: 0px 0px 80px;
+    }
+    .appDev_ection {
+        padding: 30px 10px;
+    }
+    .appDev_ection .technology_master_detail {
+        padding: 0px 10px 25px;
+    }
+
+    .financialSec .servicesProvided_info ul {
+        justify-content: flex-start;
+    }
+
+    .appDev_ection .servicesProvided_info ul li {
+        font-size: 16px;
+        padding: 10px 10px;
+        margin-left: 20px;
+    }
+
+    .appDev_ection .servicesProvided_info ul li:first-child {
+        margin-left: 20px;
+        list-style: disc;
+    }
+    .process_avatar {
+        padding-top: 30px;
+    }
+
+    .additional_benefits_text ul li p {
+        font-size: 15px;
+    }
+
+    .mainBanner_layout span img {
+        min-height: 150px;
+        object-fit: cover;
+    }
+
+    .buildCol {
+        padding: 15px 0px;
+    }
+
+    .buildTeam_section_detail {
+        padding: 0px 20px 0px;
+    }
+
+    .counter_section_detail .marketing_numbers ul {
+        flex-wrap: wrap;
+    }
+    .counter_section_detail .marketing_numbers ul li {
+        width: 50%;
+    }
+
+    .meetTeam_sliderSection {
+        padding: 40px 0px 0px;
+    }
+
+    .meetTeam_sliderSection .owl-prev {
+        top: auto !important;
+        bottom: -45px !important;
+        margin-top: 0px !important;
+        left: 50px !important;
+    }
+    .meetTeam_sliderSection .owl-next {
+        top: auto !important;
+        bottom: -45px !important;
+        margin-top: 0px !important;
+        right: 50px !important;
+    }
+
+    .meetTeam_info {
+        padding: 30px 20px 20px;
+    }
+
+    .footerBottom_detail .main_logo {
+        display: none;
+    }
+
+    .meetTeam_nav_info {
+        width: 100%;
+    }
+
+    .meetTeam_nav_inner {
+        display: block;
+    }
+
+    .meetTeam_nav_info ul {
+        display: block;
+    }
+
+    .meetTeam_nav_info ul li {
+        width: 100%;
+    }
+
+    .meetTeam_nav_info ul li a {
+        padding: 15px 15px;
+        font-size: 16px;
+    }
+
+    .otherSearch {
+        width: 100%;
+        padding-left: 0px;
+        padding-bottom: 20px;
+        max-width: 450px;
+        margin: auto;
+    }
+
+    .addFile_button p {
+        font-size: 14px;
+        padding-right: 0px;
+        min-width: auto;
+    }
+
+    .social_info {
+        padding-top: 20px;
+    }
+    .infoLinks {
+        display: flex;
+        align-items: flex-start;
+        flex-flow: column;
+    }
+
+    .technologyLook_text {
+        padding: 0px;
+    }
+    .technologyForm .addFile_button p {
+        min-width: auto;
+        padding-bottom: 25px;
+        text-align: justify;
+    }
+
+    .mainBanner_text h6 {
+        font-size: 20px;
+    }
+
+    .servicesText_list .technology_master_text {
+        padding: 50px 25px;
+        background: #ebebeb;
+    }
+
+    .aboutRead_more .aboutBizionic_section_detail {
+        padding: 60px 0px;
+    }
+
+    .aboutBizionic_col_info h4 {
+        font-size: 18px;
+    }
+
+    .aboutRead_more .aboutBizionic_col_info p {
+        display: block;
+    }
+
+    .aboutRead_more .aboutBizionic_col_info p span {
+        min-width: 110px;
+        min-height: 80px;
+    }
+    .aboutRead_more .aboutBizionic_col_info {
+        padding: 10px 20px;
+    }
+
+    .hireForm_banner_detail {
+        padding: 60px 0px;
+    }
+
+    .hireForm_banner_detail .custom_tittle p br {
+        display: none;
+    }
+
+    .meetProfile {
+        display: block;
+    }
+
+    .hiringInfo .meetProfile_tittle {
+        width: 100%;
+    }
+
+    .dateTime_range {
+        display: block;
+    }
+
+    .dateTime_range .project_form_field {
+        max-width: 100%;
+        margin: 8px 0px !important;
+        min-width: 100%;
+    }
+
+    .dateTime_range label {
+        min-width: 100%;
+        text-align: left !important;
+    }
+
+    .checkbox-label {
+        font-size: 13px;
+    }
+
+    .servicesProvided_info h3 {
+        font-size: 20px;
+    }
+
+    .talentCheck_list {
+        margin-top: 0px;
+    }
+
+    .talentCheck_list:after {
+        top: 0px;
+        width: 100%;
+    }
+
+    .talentCheckList ul li p {
+        font-size: 14px;
+    }
+    .chrckIcon {
+        max-width: 18px;
+        margin-right: 7px;
+    }
+    .verified_icon {
+        max-width: 45px;
+        margin-left: 5px;
+    }
+    .frList_sec {
+        padding-left: 0px;
+    }
+    .frList_sec h4 {
+        color: #fff;
+    }
+    .frList_sec h4 b {
+        color: #fff;
+    }
+
+    .frList_sec ul li {
+        color: #fff;
+        margin-left: 15px;
+    }
+
+    .frList_sec ul li p {
+        color: #fff;
+        text-transform: inherit;
+    }
+
+    .careerPage_container {
+        transform: translateY(0px);
+    }
+
+    .careerPage_inner {
+        padding: 50px 25px;
+    }
+
+    .embark_section_list p {
+        padding-bottom: 15px;
+        text-align: center;
+    }
+
+    .lookingWork_list_info .aboutBizionic_col_info p {
+        font-size: 16px;
+        flex-flow: column;
+    }
+
+    .lookingWork_list_info .aboutBizionic_col_info p span {
+        margin-bottom: 20px;
+    }
+
+    .lookingWork_list_info .aboutBizionic_col_info h4 {
+        font-size: 18px;
+    }
+
+    .openPosition_sec .careerPage_inner {
+        padding: 50px 5px;
+    }
+
+    .openPosition_sec .custom_tittle {
+        padding-bottom: 10px;
+    }
+
+    .openPosition_sec .buildTeam_col {
+        padding: 40px 20px 30px;
+    }
+
+    .advanceCareer_form {
+        padding: 15px;
+    }
+
+    .advanceCareer_section {
+        margin-bottom: 50px;
+    }
+
+    .flotNav_added .header_detail {
+        position: relative;
+    }
+
+    .talentCheckList .btn_default,
+    .talentCheckList .btn_default_white {
+        max-width: 360px;
+        margin-top: 20px;
+        font-size: 13px;
+        margin-bottom: 20px;
+    }
+    .talentCheck_list_info {
+        width: 100%;
+        padding: 60px 0px 10px 0px;
+    }
+
+    .clientBizionic_info .row {
+        flex-flow: column-reverse;
+    }
+
+    .clientBizionic_partners {
+        margin-top: 20px;
+        overflow-x: auto;
+        margin-bottom: 0px;
+    }
+
+    .clientBizionic_partners ul {
+        flex-wrap: inherit;
+        width: 2500px;
+    }
+
+    .chinaPage .mainBanner_text span {
+        margin-top: -60px;
+        margin-bottom: 40px;
+    }
+
+    .chinaAgency_list ul li {
+        margin-left: 15px;
+    }
+
+    .chinaAgency_list ul li p {
+        font-size: 15px;
+        padding-bottom: 10px;
+    }
+
+    .chinaAgency_list {
+        padding-bottom: 40px;
+    }
+
+    .provider_section .industryNew_section2_cols {
+        transform: translateY(-60px);
+    }
+
+    .industryNew_section2_info .custom_tittle {
+        padding-bottom: 0px;
+    }
+
+    .marketingTalent_info .custom_tittle p {
+        font-size: 15px;
+        line-height: 1.6;
+    }
+    .marketing_talent_section {
+        margin-bottom: 50px;
+    }
+
+    .instaHirin_banner_info {
+        position: relative;
+        padding: 20px;
+    }
+
+    .instaHirin_banner_inner {
+        padding-left: 0px;
+        padding-bottom: 10px;
+    }
+    .hireIn_minForm {
+        display: block;
+    }
+
+    .hireIn_input {
+        width: 100%;
+    }
+
+    .hireIn_btn {
+        padding-left: 0px;
+    }
+    .meetTeam_nav {
+        margin-top: 40px;
+    }
+
+    .postRequirment_section_detail .row .col-lg-6 {
+        padding: 0px;
+    }
+
+    .postRequirment_section {
+        padding: 50px 0px;
+    }
+    .postRequirment_text {
+        padding: 20px;
+    }
+
+    .talentCheckList ul {
+        margin: 0px !important;
+    }
+
+    .talentCheckList ul li {
+        padding: 10px 0px;
+        width: 100%;
+    }
+    .globalTalent_list .row .col-lg-6 {
+        padding-right: 15px !important;
+        padding-left: 15px !important;
+    }
+
+    .frList_sec {
+        background: none !important;
+        padding: 30px 0px;
+    }
+    .frList_sec h4 {
+        color: #000;
+        font-size: 28px;
+    }
+    .frList_sec h4 br {
+        display: none;
+    }
+    .frList_sec ul li {
+        color: #000;
+    }
+    .frList_sec ul li p {
+        color: #000;
+        text-transform: inherit;
+    }
+
+    .frList_sec h4 b {
+        color: #000;
+    }
+    .instaHirin_section {
+        padding: 30px 20px;
+    }
+    .instaHirin_section .howWork_section {
+        padding-left: 0px;
+    }
+
+    .instaRequire_info {
+        padding-left: 0px;
+    }
+
+    .hireFormSetting .row .col-lg-5 {
+        padding-right: 15px !important;
+        padding-left: 15px !important;
+    }
+
+    .requireForm_lable strong {
+        padding-top: 10px;
+    }
+    .col-lg-1 .text-center {
+        margin: 0px !important;
+        text-align: left !important;
+        padding-left: 15px;
+    }
+
+    .aboutUs_bgSection .mainBanner_text {
+        padding-top: 0px;
+    }
+    .aboutUs_bgSection {
+        background-position-x: 72%;
+    }
+    .who_we_are_section::after {
+        display: none;
+    }
+
+    .who_we_are_detail {
+        padding: 60px 0px;
+    }
+
+    .bNumber {
+        padding-left: 0px;
+        padding-top: 50px;
+    }
+
+    .bNumber .custom_tittle h2 {
+        padding-bottom: 0px !important;
+    }
+
+    .at_bizionic_bottomTittle {
+        padding-bottom: 20px;
+    }
+    .at_bizionic_steps {
+        padding-bottom: 30px;
+        padding-top: 0px;
+    }
+    .ourEndProcess_section_detail {
+        padding: 60px 0px;
+    }
+
+    .coreTabs {
+        overflow-x: auto;
+    }
+
+    .coreTabs ul {
+        width: 1100px;
+    }
+    .coreTabs ul li a {
+        padding: 15px 10px;
+        font-size: 14px;
+    }
+
+    .coreTabs_data_show {
+        padding: 20px;
+    }
+
+    .coreTabs_data_text {
+        padding-right: 0px;
+    }
+
+    .coreTabs_data_text ul {
+        margin-left: 20px;
+    }
+
+    .coreTabs_data_text ul li p {
+        text-align: left;
+        font-size: 14px;
+    }
+
+    .sourceModel_inner {
+        padding: 25px;
+    }
+
+    .sourceModel_colHead {
+        min-height: auto;
+    }
+
+    .sourceModel_colHead h5 {
+        font-size: 16px;
+    }
+
+    .sourceModel_list ul li p {
+        text-align: left;
+        font-size: 14px;
+    }
+
+    .connectText {
+        padding: 40px 20px 20px;
+        min-height: 470px;
+    }
+
+    .sourcingModel_section {
+        padding-bottom: 40px;
+    }
+
+    .indust_work_section::after {
+        height: 330px;
+    }
+
+    .indust_work_sectionDetail {
+        padding: 0px 0px 60px;
+    }
+
+    .tellUs_sec::after {
+        display: none;
+    }
+
+    .indP_col {
+        padding: 25px 15px;
+    }
+    .indPortfolioText {
+        font-size: 20px;
+    }
+
+    .b2bInnerText {
+        padding: 0px 0px 25px;
+    }
+
+    .banking_section_change .industryNew_section2_cols {
+        transform: translate(0);
+    }
+
+    .banking_section_change .industryNew_section_detail {
+        padding: 60px 0px 50px;
+    }
+
+    .provider_section .servicesProvided_info {
+        padding: 30px 20px 30px;
+    }
+    .provider_section .servicesProvided_info ul {
+        margin-left: 15px;
+    }
+
+    .provider_section .servicesProvided_info ul li {
+        font-size: 15px;
+    }
+
+    .servicesProvided_info ul {
+        justify-content: flex-start;
+    }
+
+    .bizionicTeam_section_detail {
+        padding: 50px 20px;
+    }
+
+    .bizionicTeam_mainInfo .row {
+        flex-flow: wrap;
+    }
+    .bizionicTeam_profile {
+        padding-top: 0px;
+        padding-bottom: 25px;
+    }
+
+    .bizionicTeam_mainInfo_text {
+        padding-right: 0px;
+    }
+
+    .bizionic_team_list_detail .hireForm_banner_detail {
+        padding: 40px 25px;
+    }
+
+    .onHire_immerPage .provider_section .row .custom_tittle {
+        padding-top: 25px !important;
+    }
+
+    .marketServices_fr {
+        padding-top: 25px;
+    }
+
+    .quick_links {
+        padding-top: 45px;
+    }
+
+    .quick_links h5 {
+        padding-bottom: 15px;
+        font-size: 18px;
+    }
+
+    .newTecnologyList {
+        padding: 0px !important;
+        padding-right: 0px !important;
+    }
+
+    .newTecnologyList .technology_master_inner {
+        padding: 40px 20px !important;
+        margin: 0px !important;
+    }
+
+    .newTecnologyList .ml-4 {
+        margin-top: 40px !important;
+        margin-bottom: 10px !important;
+    }
+
+    .notification_banner .mainBanner_detail {
+        padding: 0px 0px;
+    }
+
+    .notification_banner .mainBanner_section {
+        background-size: cover;
+    }
+
+    .notification_banner .marketing_banner_fr {
+        padding-top: 0px;
+        padding-bottom: 50px;
+    }
+
+    .notification_banner {
+        padding-bottom: 0px;
+    }
+
+    .keySuccess_col {
+        padding: 20px 0px;
+    }
+
+    .nativeSupport_list ul li {
+        width: 33.33%;
+    }
+
+    .seamlessLimitless_section_detail {
+        padding: 60px 0px;
+    }
+
+    .seamlessLimitless_fl {
+        padding: 40px 25px;
+    }
+
+    .seamlessLimitless_fr span {
+        padding: 25px;
+    }
+
+    .onboardSkill_options {
+        padding: 40px 25px 40px;
+    }
+
+    .onboardSkill_options .skilled_setting {
+        padding-top: 0px;
+    }
+
+    .onboardSkill_options .skilled_setting ul li {
+        width: 33.33% !important;
+        padding: 9px 5px;
+    }
+
+    .onboardSkill_options .custom_tittle h2 {
+        padding: 0px;
+    }
+
+    .skilled_setting ul li {
+        width: 50% !important;
+    }
+
+    .skilled_setting ul li a {
+        padding: 30px 5px;
+    }
+
+    .skilled_setting ul li a img {
+        width: 40px;
+        height: 40px;
+        margin-bottom: 15px;
+    }
+
+    .skilled_setting ul li a strong {
+        font-size: 12px;
+        line-height: 1.2;
+        min-height: 40px;
+    }
+
+    .carousel__slide {
+        width: 100% !important;
+    }
+
+    .meetTeam_sliderSection {
+        padding-bottom: 40px;
+    }
+
+    .meetTeam_section_detail {
+        padding: 60px 0px;
+    }
+
+    .innerNofification_pages .mainBanner_detail {
+        padding: 60px 25px 0px !important;
+    }
+    .innerpages_tabsModify_detail {
+        padding: 60px 0px;
+    }
+
+    .innerpages_tabsModify .custom_tittle {
+        padding: 50px 20px 50px;
+    }
+
+    .viewAll_search_bar {
+        padding: 20px 20px 0px !important;
+    }
+
+    .viewAll_listing > ul > li {
+        width: 100%;
+    }
+
+    .showListView .meetTeam_info {
+        padding: 20px 20px 20px;
+    }
+
+    .showListView .meetProfile {
+        display: flex;
+    }
+    .showListView .descriptionText p {
+        font-size: 14px;
+    }
+
+    .talentOnboard_page .hireForm_banner_detail {
+        padding-top: 70px;
+        padding-bottom: 100px;
+    }
+
+    .talentOnboard_page .hireForm_banner_detail .custom_tittle {
+        padding: 0px 0px;
+    }
+    .talentOnboard_page_detail {
+        transform: translateY(-70px);
+        width: 90%;
+    }
+
+    .talent_vetting_head {
+        padding: 50px 20px 30px;
+    }
+    .vettingList_section {
+        width: 100%;
+        padding: 50px 20px;
+    }
+
+    .vettingList_info .howWork_text_info h4 {
+        font-size: 14px;
+        padding-bottom: 10px !important;
+    }
+
+    .vettingList_infoBullets ul li {
+        padding-bottom: 10px !important ;
+    }
+
+    .vettingList_info .howWork_text_info {
+        padding-left: 10px !important;
+    }
+
+    .vettingList_infoBullets ul {
+        padding-left: 20px;
+    }
+    .vettingList_infoBullets ul li p {
+        padding-left: 5px;
+        line-height: 1.4;
+    }
+
+    .talent_vetting_head .custom_tittle p {
+        font-size: 16px;
+        line-height: 1.5;
+        padding: 0px;
+    }
+    .talentProcess_section {
+        padding: 50px 20px;
+    }
+
+    .talentProcess_bullets {
+        width: 100%;
+        display: block;
+    }
+
+    .talentProcess_bullets span {
+        margin: 10px 10px 15px 0px;
+        float: none;
+    }
+    .talentProcess_section .aboutBizionic_col_info h4 {
+        font-size: 16px;
+    }
+
+    .global_talent_quotesCol p {
+        font-size: 16px;
+    }
+
+    .onboardPage .provider_section .industryNew_section2_cols {
+        padding: 0px 0px 0px;
+    }
+
+    .mainForm_fl .talentCheck_list_info {
+        padding: 50px 20px;
+    }
+
+    .mainForm_fl .talentCheckList h4 {
+        font-size: 24px;
+        line-height: 1.4;
+    }
+
+    .onboardPage .mainForm_fl .chrckIcon {
+        max-width: 14px;
+        margin-right: 5px;
+    }
+    .onboardPage .mainForm_fl .talentCheckList ul li p {
+        font-size: 14px;
+        flex-wrap: nowrap;
+    }
+
+    .onboardPage .mainForm_fl .talentCheckList ul li {
+        width: 100%;
+        padding: 8px 0px;
+    }
+
+    .listOf_topTechnologies {
+        padding: 50px 25px;
+    }
+
+    .listTop_technology ul li {
+        padding: 20px 20px;
+    }
+
+    .mainForm_row .flForm_sec {
+        padding-right: 15px !important;
+    }
+
+    .mainForm_row .frForm_sec {
+        padding-left: 15px !important;
+    }
+
+    .mainForm_fr {
+        padding: 50px 20px;
+    }
+
+    .suggested_keySkills ul li button {
+        padding: 10px 15px;
+        font-size: 11px;
+    }
+    .suggested_keySkills ul li a {
+        padding: 10px 15px;
+        font-size: 12px;
+    }
+
+    .rate_edits {
+        padding-bottom: 25px;
+    }
+
+    .suggested_keySkills ul li span i {
+        font-size: 16px;
+        right: -3px;
+        top: -2px;
+    }
+
+    .onhire_innerPages .abt_list li p {
+        text-align: left;
+        font-size: 16px;
+        line-height: 1.4;
+    }
+
+    .matrixTable_sectionDetail .hireForm_banner_detail {
+        padding: 50px 20px;
+    }
+
+    .matrixTable {
+        width: 100%;
+        overflow-x: auto;
+    }
+
+    .matrixTable .table {
+        width: 1200px;
+    }
+
+    .fundingApplyForm_pageDetail {
+        padding: 60px 0px;
+    }
+
+    .fundingApplyForm_info {
+        padding: 40px 20px;
+    }
+
+    .ind_innerPages .custom_tittle h2 b {
+        font-size: 42px;
+    }
+
+    .wedo_sction .hireForm_banner_detail {
+        padding: 50px 20px 50px;
+    }
+    .wedo_sction .industryNew_section2_cols {
+        padding: 50px 20px 50px;
+        transform: translate(0px) !important;
+    }
+
+    .nevStarup_setting {
+        padding: 50px 20px 50px;
+    }
+
+    .colSet {
+        border-bottom: 1px solid #dee2e6 !important;
+        border-right: 0px !important;
+    }
+
+    .header_up_detail {
+        padding: 6px 0px;
+    }
+    .logo_socialInfo .social_info {
+        display: none;
+    }
+
+    .trendingNav_links {
+        display: none;
+    }
+
+    .header_detail .trendingNav_links {
+        display: block;
+    }
+
+    .eshareWhite_logo {
+        margin-left: 0px;
+    }
+
+    .eshareWhite_logo a {
+        width: 70px;
+    }
+
+    .authBtns ul li a {
+        background: none !important;
+        padding: 0px !important;
+        font-size: 9px;
+        border: 0px;
+        color: #fff;
+    }
+
+    .change_langOuter .goog-te-combo {
+        font-size: 9px;
+    }
+    .change_langOuter {
+        width: 110px;
+        min-height: 15px;
+        margin-left: 10px;
+    }
+
+    .authBtns ul li {
+        padding: 0px 0px 0px 7px;
+    }
+    .authBtns {
+        padding-left: 3px;
+    }
+    .main_container {
+        padding-top: 136px;
+    }
+
+    .proposal_sectionTittle {
+        padding: 40px 20px;
+    }
+
+    .funding_info {
+        padding: 40px 20px;
+    }
+    .appProcssSec {
+        padding: 0px !important;
+    }
+
+    .startup_innerPages .industryNew_section_detail {
+        padding: 50px 20px 40px;
+    }
+
+    .startup_innerPages .industryNew_section1_avatar {
+        padding-top: 25px;
+    }
+
+    .startupMvp_section .seamlessLimitless_fr span {
+        padding-top: 30px;
+        padding-bottom: 40px;
+    }
+    .mvpDev_process {
+        padding: 40px 15px 30px;
+    }
+
+    .mvpDev_col {
+        padding-top: 10px;
+        padding-bottom: 10px;
+    }
+
+    .mvpDev_col_info {
+        padding: 30px 15px 30px;
+    }
+    .needMvp_section_detail {
+        padding: 60px 0px;
+    }
+
+    .mvpBenefits_flowSection {
+        padding: 50px 20px 40px;
+    }
+
+    .mvpBenefits_flow {
+        padding-top: 0px;
+    }
+
+    .startup_innerPages .industryNew_section1 .custom_tittle h2 b {
+        word-wrap: break-word;
+    }
+
+    .designSolution_section .industryNew_section2_cols {
+        padding: 60px 0px 60px !important;
+    }
+    .designSolution_section .industryNew_section2_colsInfo {
+        padding: 40px 20px 40px 20px;
+    }
+    .inspiredPassion_cil_info {
+        padding: 40px 20px 30px;
+    }
+
+    .inspired_col {
+        padding-top: 10px;
+        padding-bottom: 10px;
+    }
+
+    .awsNepture_info_fl .custom_tittle {
+        padding-right: 0px;
+        padding-bottom: 40px !important;
+    }
+    .awsNepture_list ul li {
+        padding: 20px 0px;
+    }
+    .inspiredPassion_section_detail {
+        padding: 60px 0px 50px;
+    }
+
+    .startupWhy .inspired_col {
+        padding-top: 15px;
+        padding-bottom: 15px;
+    }
+    .inspiredPassion_row {
+        padding-top: 0px;
+    }
+
+    .nevStarup_setting .indust_work_col {
+        padding: 25px 20px;
+    }
+    .startupServices_info {
+        padding: 40px 20px;
+    }
+    .startupServices_section_detail {
+        padding: 60px 0px 60px;
+    }
+
+    .modernizationSection .industryNew_section2_colsInfo {
+        margin: 15px 0px;
+    }
+
+    .modernizationSection .provide_col {
+        padding: 0px 15px !important;
+    }
+
+    .awsNepture_list_info {
+        padding: 40px 20px;
+    }
+
+    .newInd_pages_addSec .seamlessLimitless_fl {
+        padding: 50px 20px 45px;
+    }
+
+    .newInd_pages_addSec .seamlessLimitless_fr {
+        padding: 0px;
+    }
+
+    .newIndPages_section2_tittle {
+        padding: 45px 0px;
+    }
+
+    .newInd_pagesSec2 .industryNew_section2_cols {
+        transform: none !important;
+    }
+
+    .custom_tittle {
+        padding-bottom: 0px;
+    }
+
+    .blogsSection_detail {
+        padding: 60px 0px;
+    }
+
+    .blogAvatar img {
+        height: 155px;
+    }
+
+    .pricingList ul {
+        display: block;
+    }
+
+    .pricingList ul li {
+        width: 100%;
+    }
+    .priceValue {
+        padding-bottom: 10px;
+    }
+    .priceFeatureList {
+        padding: 10px 10px 0px;
+    }
+    .priceFeatureList ul li {
+        padding: 10px 0px;
+    }
+
+    .embarkMain_section_detail {
+        padding: 60px 0px;
+    }
+    .embark_search_section {
+        display: block;
+    }
+
+    .embark_search_info {
+        width: 100%;
+        display: block;
+        margin-bottom: 20px;
+    }
+    .search1 {
+        width: 100%;
+        padding: 10px 0px;
+        border-bottom: 1px solid #ccc;
+    }
+
+    .searchSelect {
+        width: 100%;
+        padding: 10px 0px;
+        border-bottom: 1px solid #ccc;
+    }
+
+    .search2 {
+        width: 100%;
+        padding: 10px 0px;
+        border-bottom: 1px solid #ccc;
+        margin-bottom: 25px;
+    }
+
+    .search1 b {
+        top: 8px;
+    }
+    .embark_teamBtn {
+        width: 100%;
+        padding-left: 0px;
+    }
+    .careerFeaturesCol {
+        padding: 15px !important;
+    }
+    .careerFeaturesCol_info {
+        padding: 30px 25px;
+        align-items: flex-start;
+    }
+    .sponsorSlider .slick-next {
+        right: -22px;
+        width: 28px;
+        height: 28px;
+    }
+    .sponsorSlider .slick-prev {
+        left: -22px;
+        width: 28px;
+        height: 28px;
+    }
+    .hiringSlider_section_detail {
+        padding: 50px 0px;
+    }
+
+    .revoBtn {
+        max-width: 330px !important;
+        min-width: auto;
+    }
+
+    .getEmployed_section {
+        padding: 15px;
+    }
+
+    .getEmployed_info {
+        width: 100%;
+        padding: 50px 20px;
+    }
+
+    .getEmployed_info .custom_tittle p {
+        padding-right: 0px;
+        font-size: 18px;
+    }
+
+    .accendDream_sectionDetail {
+        padding: 50px 20px 50px 20px;
+    }
+    .accendDream_section {
+        background-position-x: 64%;
+    }
+
+    .lokingCol {
+        padding: 15px 5px !important;
+    }
+
+    .revolutionBanner_info {
+        padding: 50px 20px;
+        background-position-x: 38%;
+    }
+
+    .revolutionBanner_infoText h1 {
+        font-size: 24px;
+    }
+    .revolutionBanner_sectionDetail {
+        padding: 0px 0px 60px;
+    }
+    .revolution_info {
+        padding: 40px 20px;
+        margin: 25px 0px;
+    }
+
+    .revolution_infoDetail {
+        padding: 40px 20px;
+    }
+
+    .revolutionCol {
+        padding: 10px !important;
+    }
+
+    .learnOwn_bossFl {
+        padding: 40px 10px 10px 10px;
+    }
+
+    .revolutionBanner_sectionDetail .getEmployed_section > .row {
+        flex-flow: column-reverse;
+    }
+    .learnOwn_bossFr {
+        padding: 40px 0px 0px;
+    }
+    .learnOwn_bossFl .custom_tittle h1 {
+        font-size: 24px;
+    }
+
+    .search1 {
+        margin: 0px !important;
+        width: 100% !important;
+    }
+    .search2 {
+        margin: 0px !important;
+        width: 100% !important;
+    }
+    .search3 {
+        margin: 0px !important;
+        width: 100% !important;
+    }
+}
+
+@media only screen and (min-width: 400px) and (max-width: 767px) {
 
 
   .fixed_header  .menuIcon { top: 36px;} 
@@ -3844,4 +7124,5 @@ h6 { font-size: 18px; }
 
 @media only screen and (min-width:400px) and (max-width:767px) {
          
+
 }
