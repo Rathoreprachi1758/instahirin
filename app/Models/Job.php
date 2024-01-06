@@ -28,6 +28,7 @@ class Job extends Model
         'min_price',
         'max_price',
         'experience',
+        'salary_period',
         'location',
         'work_mode',
         'company',

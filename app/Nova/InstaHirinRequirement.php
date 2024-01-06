@@ -49,7 +49,21 @@ class InstaHirinRequirement extends Resource
         return [
             ID::make()->sortable(),
             Text::make('Position Title', 'position_title')->rules('required', 'min:6,max:255'),
-            Text::make('Work Mode', 'work_mode')->rules('required', 'min:6,max:255'),
+            Select::make('Work Mode', 'work_mode')
+                ->options([
+                    'Full Time' => 'Full Time',
+                    'Part Time' => 'Part Time',
+                    'Daily Bases' => 'Daily Bases',
+                    'Weekly' => 'Weekly',
+                    'Period' => 'Period',
+                    'Freelance' => 'Freelance',
+                    'Project Base' => 'Project Base',
+                    'Contract Base' => 'Contract Base',
+                    'Hourly' => 'Hourly',
+                ])
+                ->displayUsingLabels()
+                ->filterable()
+                ->hideFromIndex(),
             Text::make('Project Description', 'project_description')->rules('required', 'min:6,max:255')->hideFromIndex(),
             // Text::make('Key Skills', 'key_skills')->rules('required', 'min:6,max:255')->hideFromIndex(),
 
@@ -60,6 +74,22 @@ class InstaHirinRequirement extends Resource
             //     return $value;
             // }),
             Tag::make('Key Skills', 'experty')->showCreateRelationButton()->preload()->displayAsList(),
+            Select::make('Experience', 'min_experience')
+                ->options([
+                    '1+ Year of Experience' => '1+ Year of Experience',
+                    '2+ Year of Experience' => '2+ Year of Experience',
+                    '3+ Year of Experience' => '3+ Year of Experience',
+                    '4+ Year of Experience' => '4+ Year of Experience',
+                    '5+ Year of Experience' => '5+ Year of Experience',
+                    '6+ Year of Experience' => '6+ Year of Experience',
+                    '7+ Year of Experience' => '7+ Year of Experience',
+                    '8+ Year of Experience' => '8+ Year of Experience',
+                    '9+ Year of Experience' => '9+ Year of Experience',
+                    '10+ Year of Experience' => '10+ Year of Experience',
+                ])
+                ->displayUsingLabels()
+                ->filterable()
+                ->hideFromIndex(),
             // Tag::make('Skills', 'skills')->showCreateRelationButton()->preload()->displayAsList(),
             Select::make('Employment Role/Type', 'employment_type')->options([
                 'Full Time' => 'Full Time', 'Part-Time' => 'Part-Time',
@@ -83,6 +113,24 @@ class InstaHirinRequirement extends Resource
             Text::make('Minimum Salary Hourly', 'min_salary_hourly')->hideFromIndex(),
             Text::make('Maximum Salary Hourly', 'max_salary_hourly')->hideFromIndex(),
 
+            Select::make('Salary Period', 'salary_period')
+                ->options([
+                    'Daily' => 'Daily',
+                    'Hourly' => 'Hourly',
+                    'Bi-Weekly' => 'Bi-Weekly',
+                    'Weekly' => 'Weekly',
+                    'Monthly' => 'Monthly',
+                    'Yearly' => 'Yearly',
+                    'Commission' => 'Commission',
+                    'Contractual' => 'Contractual',
+                    'Project' => 'Project',
+                    'Lump Sum Payment' => 'Lump Sum Payment',
+                    'Milestone-Based Payments' => 'Milestone-Based Payments',
+                    'Retainer Fee' => 'Retainer Fee',
+                ])
+                ->displayUsingLabels()
+                ->filterable()
+                ->hideFromIndex(),
             Text::make('Location', 'location')->hideFromIndex(),
             Select::make('Education Qualification', 'education_qualification')->options(['Post Graduation' => 'Post Graduation', 'Graduation' => 'Graduation', 'Doctorate' => 'Doctorate'])->displayUsingLabels()->filterable()->hideFromIndex(),
             Text::make('Company Name', 'company_name')->rules('nullable'),
