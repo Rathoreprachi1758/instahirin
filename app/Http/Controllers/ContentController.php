@@ -46,17 +46,8 @@ class ContentController extends Controller
 
         $slugs = array_filter(func_get_args());
         $pageSlug = implode('|', $slugs);
-        // dd($pageSlug);
-
-        // If there is no
-        // $pageSlug = strlen($pageSlug) ? $pageSlug : 'hire';
-        //dd($pageSlug);
         $pageSlug = strlen($pageSlug) ? $pageSlug : 'about-us';
         $page = Page::where('slug', '=', $pageSlug)->first();
-        // dd($pageSlug);
-        //dd($page->meta_keywords);
-        //dd($page->meta_description);
-        // dd($page->html_content);
         $template = $page ? $page->template : '404';
 
         if ($template == '404') {
@@ -64,8 +55,7 @@ class ContentController extends Controller
         }
 
         $menusResponse = Cache::get('menus', nova_get_menu_by_slug('header'));
-        //        echo "<pre>";print_r($menusResponse['menuItems']);exit;f
-        // dd($template);
+        //echo "<pre>";print_r($menusResponse['menuItems']);exit;
         // dd($page->html_content);
         if ($page->slug == 'hire-me') {
             $jobs = Job::where('status', 'Open')->get();
@@ -959,7 +949,7 @@ class ContentController extends Controller
         $formData->email = $validatedData['email'];
         $formData->phone = '+' . $validatedData['country_code'] . $validatedData['phone'];
         $formData->plan_categories = $validatedData['plan_category'];
-        $formData->selected_plan =  $validatedData['plan'];
+        $formData->selected_plan = $validatedData['plan'];
         $formData->message = $validatedData['details'];
         // return $formData->phone;
         $formData->save();

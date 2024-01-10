@@ -275,7 +275,7 @@
                         </div>
                     </div>
                 </div>
-
+                {{-- verification is pending --}}
                 <div class="p_userInfo_list">
                     <ul>
                         <li>
@@ -394,6 +394,7 @@
                         </li>
                     </ul>
                 </div>
+                {{-- verification is pending --}}
             </div>
             @endforeach
             <!-- chamge password sec -->

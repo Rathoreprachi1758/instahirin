@@ -27,7 +27,15 @@
 
     <link rel="icon" sizes="96x96" href="{{ asset('css/images/favicon-96x96.png') }}">
 
+    <style>
+        .has_list ul {
+            display: none;
+        }
 
+        .has_list.open_sublist ul {
+            display: block;
+        }
+    </style>
     <script>
         function togglePasswordVisibility(icon) {
             var passwordInput = icon.previousElementSibling;
@@ -35,6 +43,10 @@
             passwordInput.type = type;
             icon.querySelector('i').classList.toggle('fa-eye');
             icon.querySelector('i').classList.toggle('fa-eye-slash');
+        }
+        //
+        function toggleSublist(element) {           
+            element.classList.toggle('open_sublist');
         }
     </script>
 
@@ -110,14 +122,15 @@
                                         <em class="menu_icon"><i class="fa fa-angle-down"
                                                 aria-hidden="true"></i></em></a>
                                 </li>
-                                <li class="has_list"><a href="javascript:void(0)"><span><i class="fa fa-clock-o"
-                                                aria-hidden="true"></i></span> Activity
-                                        <em class="menu_icon"><i class="fa fa-angle-down"
-                                                aria-hidden="true"></i></em></a>
-
+                                <li class="has_list open_sublist" onclick="toggleSublist(this)">
+                                    <a href="javascript:void(0)">
+                                        <span><i class="fa fa-clock-o" aria-hidden="true"></i></span>
+                                        Activity
+                                        <em class="menu_icon"><i class="fa fa-angle-down" aria-hidden="true"></i></em>
+                                    </a>
                                     <ul>
-                                        <li><a href="javascript:void(0)">Employer / Company</a></li>
-                                        <li><a href="javascript:void(0)">Employee / Talent</a></li>
+                                        <li><a href="{{url('Employer-activity')}}">► Employer / Company</a></li>
+                                        <li><a href="javascript:void(0)">► Employee / Talent</a></li>
                                     </ul>
                                 </li>
                                 <li><a href="javascript:void(0)"><span><i class="fa fa-male"
@@ -215,7 +228,6 @@
         </div>
     </div>
 </main>
-{{-- // --}}
 <!-- dashboard footer  -->
 
 <footer>
