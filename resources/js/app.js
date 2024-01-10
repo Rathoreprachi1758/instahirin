@@ -46,6 +46,7 @@ import Proposal from "./components/ProposalFormComponent.vue";
 import Pricing from "./components/PlansPricingComponent.vue";
 import JobExpertsComponent from "./components/JobExpertsComponent.vue";
 import JobsListComponent from "./components/JobsListComponent.vue";
+import HireMeApplication from "./components/HireMeApplication.vue";
 
 app.component("experts-component", ExpertsComponent);
 app.component("experts-list-component", ExpertsListComponent);
@@ -72,6 +73,7 @@ app.component("proposal-component", Proposal);
 app.component("pricing-component", Pricing);
 app.component("job-experts-component", JobExpertsComponent);
 app.component("jobs-list-component", JobsListComponent);
+app.component("hire-me-application", HireMeApplication);
 
 // import ExampleComponent from './components/ExampleComponent.vue';
 // app.component('example-component', ExampleComponent);

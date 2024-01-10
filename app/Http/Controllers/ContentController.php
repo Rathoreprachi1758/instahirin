@@ -13,22 +13,24 @@ use App\Models\Expert;
 use App\Models\Country;
 // use App\Models\Expert;
 use App\Models\Experty;
-use App\Models\MarketingPlanLeads;
+use App\Models\Countrie;
 // use App\Models\HireRequest;
 // use App\Models\Subscription;
-use App\Models\Countrie;
 use App\Models\TimeZones;
 use App\Models\HireRequest;
-use App\Models\MarketingPlans;
-//use Laravel\Nova\Fields\Timezone;
 use App\Models\Subscription;
 use Illuminate\Http\Request;
+//use Laravel\Nova\Fields\Timezone;
 use App\Models\TeamContactUs;
+use App\Models\MarketingPlans;
 use App\Models\FundingApplyNow;
+use App\Models\HireMeApplication;
 use App\Models\AvailabilityData;
 use App\Models\InstaHirinOnboard;
+use App\Models\MarketingPlanLeads;
 use Illuminate\Support\Facades\DB;
 use App\Models\PlanPricingCategory;
+use App\Models\HireAvailabilityData;
 use App\Models\InstaHirinRequirement;
 use Illuminate\Support\Facades\Cache;
 use App\Models\Hire_requests_calender;
@@ -39,7 +41,7 @@ use App\Models\InstaHirinOnboardDocument;
 
 class ContentController extends Controller
 {
-    public function index($levelOne = null, $levelTwo = null, $levelThree = null, $levelFour = null, )
+    public function index($levelOne = null, $levelTwo = null, $levelThree = null, $levelFour = null,)
     {
 
         $slugs = array_filter(func_get_args());
@@ -67,7 +69,7 @@ class ContentController extends Controller
         // dd($page->html_content);
         if ($page->slug == 'hire-me') {
             $jobs = Job::where('status', 'Open')->get();
-            
+
             return view('welcome', [
                 'title' => $page->meta_title,
                 'description' => $page->meta_description,
@@ -107,7 +109,7 @@ class ContentController extends Controller
             'title' => 'Title',
             'description' => 'Desc',
             'keywords' => 'keywords',
-            'canonical'=>'canonical',
+            'canonical' => 'canonical',
             'menus' => json_decode(json_encode((object) $menusResponse['menuItems']), FALSE),
             'template' => 'hireForm',
             'expert' => $expert,
@@ -955,7 +957,7 @@ class ContentController extends Controller
         $formData->name = $validatedData['name'];
         $formData->company = $validatedData['company'];
         $formData->email = $validatedData['email'];
-        $formData->phone = '+'.$validatedData['country_code'] . $validatedData['phone'];
+        $formData->phone = '+' . $validatedData['country_code'] . $validatedData['phone'];
         $formData->plan_categories = $validatedData['plan_category'];
         $formData->selected_plan =  $validatedData['plan'];
         $formData->message = $validatedData['details'];
@@ -965,11 +967,132 @@ class ContentController extends Controller
 
 
     // jobs get method
-    public function allJobs(){
+    public function allJobs()
+    {
         $jobs = Job::where('status', 'Open')->get();
 
         return view('templates.all-jobs', ['jobs' => $jobs]);
-   }
+    }
 
 
+    // Hire Me Application Form Controller
+    public function HireApplication(Request $request)
+    {
+        // Validate the request data, including the uploaded file
+        // Log::info('Request data:', $request->all());
+        // dd('Hii9');
+        $validatedData = $request->validate([
+            'name' => 'required',
+            'contact_details' => 'required',
+            'email' => 'required',
+            'current_location' => 'required',
+            'skills_description' => 'required',
+            'current_title' => 'required',
+            'experience_year' => 'required',
+            'experience_month' => 'required',
+            'employment_type' => '',
+            // 'key_skills' => 'required|json',
+            // 'expert_in' => 'required|json',
+            // 'also_work_with' => 'required|json',
+            'last_company' => '',
+            'company_location' => '',
+            'currently_working_here' => '',
+            // new column
+            'working_since_date' => 'required',
+            'working_since_date2' => '',
+            'annual_salary_currency' => 'required',
+            'annual_salary' => 'required',
+            'highest_qualification' => 'required',
+            'notice_period' => 'required',
+            'availability_date' => '',
+            'availability_time_from' => '',
+            'availability_time_to' => '',
+            'availability_time_zone' => '',
+            // 'document' => 'required|array',
+            // 'document.*' => 'file|mimes:pdf,doc,docx|max:5120'
+        ]);
+
+        DB::beginTransaction();
+
+        // Create a new instance of the Hire Request model
+        $formData = new HireMeApplication();
+
+        // Set the form data from the validated request
+        $formData->name = $validatedData['name'];
+        $formData->contact_details = $validatedData['contact_details'];
+        $formData->email = $validatedData['email'];
+        $formData->current_location = $validatedData['current_location'];
+        //$formData->current_location   = isset($validatedData['current_location']) ? $validatedData['current_location'] : '-';
+        $formData->skills_description = $validatedData['skills_description'];
+        $formData->current_title = $validatedData['current_title'];
+        $formData->experience_year = $validatedData['experience_year'];
+        $formData->experience_month = $validatedData['experience_month'];
+        $formData->employment_type = $validatedData['employment_type'];
+        // $formData->key_skills = json_decode($validatedData['key_skills']);
+        // $formData->expert_in = json_decode($validatedData['expert_in']);
+        // $formData->also_work_with = json_decode($validatedData['also_work_with']);
+        $formData->last_company = isset($validatedData['last_company']) ? $validatedData['last_company'] : '-';
+        // $formData->company_location = isset($validatedData['company_location']) ? $validatedData['company_location'] : '-';
+        $formData->company_location = $validatedData['company_location'];
+        $formData->currently_working_here = isset($validatedData['currently_working_here']) ? $validatedData['currently_working_here'] : '-';
+        $formData->working_since_date = $validatedData['working_since_date'];
+        $formData->working_since_date2 = isset($validatedData['working_since_date2']) ? $validatedData['working_since_date2'] : '-';
+        $formData->annual_salary_currency = $validatedData['annual_salary_currency'];
+        $formData->annual_salary = $validatedData['annual_salary'];
+        $formData->highest_qualification = $validatedData['highest_qualification'];
+        $formData->notice_period = isset($validatedData['notice_period']) ? $validatedData['notice_period'] : '-';
+        if ($request->hasFile('document')) {
+            $file = $request->file('document');
+            $filename = 'bizionic/images/' . time() . '_' . $file->getClientOriginalName();
+            $file->storeAs('', $filename, 'public');
+            $formData->document = $filename;
+        }
+        // dd($request->all());
+        $formData->save();
+
+        // $formData->keySkills()->sync($request->input('key_skills'));
+        $formData->keySkills()->sync(json_decode($request->input('key_skills')));
+        $formData->expertIn()->sync(json_decode($request->input('expert_in')));
+        $formData->alsoWorkWith()->sync(json_decode($request->input('also_work_with')));
+        // Storing Availability Data
+        foreach ($request->availability_date as $key => $date) {
+            $availabilityData = new HireAvailabilityData([
+                'availability_date' => $date,
+                'availability_time_from' => $request->availability_time_from[$key],
+                'availability_time_to' => $request->availability_time_to[$key],
+                'availability_time_zone' => $request->availability_time_zone[$key],
+            ]);
+
+            $formData->hireAvailabilityData()->save($availabilityData);
+        }
+
+
+        // // ?  New code
+        // if ($request->hasFile('document')) {
+        //     // Create a temporary zip file
+        //     $zipFileName = 'bizionic/images/' . time() . '_documents.zip';
+        //     $zip = new ZipArchive();
+        //     if ($zip->open(storage_path('app/public/' . $zipFileName), ZipArchive::CREATE) === true) {
+        //         foreach ($request->file('document') as $document) {
+        //             $originalFilename = $document->getClientOriginalName();
+        //             $filename = 'bizionic/images/' . time() . '_' . $originalFilename;
+        //             $document->storeAs('', $filename, 'public');
+        //             // Add the file to the zip archive
+        //             $zip->addFile(storage_path('app/public/' . $filename), $originalFilename);
+        //         }
+        //         $zip->close();
+
+        //         // Save the zip file information in the database
+        //         $formData->document = $zipFileName;
+        //         $formData->save();
+        //     }
+        // }
+
+
+
+        DB::commit();
+
+        // Return a response indicating success
+        return response()->json(['message' => 'Form submitted successfully']);
+    }
 }
