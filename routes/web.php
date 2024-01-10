@@ -27,7 +27,7 @@ Route::Post('signin', [Logincontroller::class, 'store'])->name('submit.signup');
 Route::get('/loginpage', [LoginController::class, 'login'])->name('loginpage');
 // Route::middleware(['middleware' =>'auth.check'])->group(function () {
 Route::post('dashboard', [LoginController::class, 'authenticate'])->name('login');
-Route::get('dashboard-return',function(){
+Route::get('dashboard-return', function () {
     return view('dashboard.dashboard');
 });
 Route::get('logout', [LoginController::class, 'logout']);
@@ -79,6 +79,8 @@ Route::post('/hire', [ContentController::class, 'hire'])->name('hire');
 Route::post('/insta-hirin-requirements', [ContentController::class, 'instaHirinRequirements'])->name('instaHirinRequirements');
 //Route::post('/insta-hirin-onboard', [ContentController::class, 'instaHirinOnboard'])->name('instaHirinOnboard');
 Route::post('/submitForm', [ContentController::class, 'submitForm'])->name('submitForm');
+Route::post('/submitHireApplication', [ContentController::class, 'HireApplication'])->name('HireApplication');
+
 //Route::get('/helloworld', [ContentController::class,'helloWorld'])->name('helloWorld');
 // Team Form Submission
 Route::post('/submit-team-form', [ContentController::class, 'teamForm'])->name('team');
