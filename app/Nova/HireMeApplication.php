@@ -175,6 +175,7 @@ class HireMeApplication extends Resource
                 'Volunteer' => 'Volunteer',
                 'Internships' => 'Internships'
             ])->displayUsingLabels()->filterable()->hideFromIndex(),
+            Boolean::make('Virtual Assistance Call', 'virtual_assistance_call')->trueValue('Yes')->falseValue('No')->hideFromIndex(),
 
             Select::make('Status', 'status')
                 ->options(['New' => 'New', 'In Review' => 'In Reivew', 'Reviewed' => 'Reviewed'])

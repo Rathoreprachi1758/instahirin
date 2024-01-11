@@ -5,14 +5,14 @@
     "src": "resources/css/app.css"
   },
   "resources/js/app.css": {
-    "file": "assets/app-97504703.css",
+    "file": "assets/app-dd7890a6.css",
     "src": "resources/js/app.css"
   },
   "resources/js/app.js": {
     "css": [
-      "assets/app-97504703.css"
+      "assets/app-dd7890a6.css"
     ],
-    "file": "assets/app-3abba317.js",
+    "file": "assets/app-2254f9f4.js",
     "isEntry": true,
     "src": "resources/js/app.js"
   },
