@@ -27,11 +27,11 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="format-detection" content="telephone=no">
     <title>@yield('meta_title', 'https://www.bizionictech.com/')</title>
-    <meta name="description" , content="@yield('meta_description', 'We build e-commerce site, management site, Android, iOS apps, and teach software development courses online.Laravel, Java, NodeJs, PHP technology.')">
+    <meta name="description" content="@yield('meta_description', 'We build e-commerce site, management site, Android, iOS apps, and teach software development courses online.Laravel, Java, NodeJs, PHP technology.')">
     {{-- // --}}
     @yield('html_content')
 
-    <meta name="keywords" , content="@yield('meta_keywords', 'We build e-commerce site, management site, Android, iOS apps, and teach software development courses online.Laravel, Java, NodeJs, PHP technology.')">
+    <meta name="keywords" content="@yield('meta_keywords', 'We build e-commerce site, management site, Android, iOS apps, and teach software development courses online.Laravel, Java, NodeJs, PHP technology.')">
     <!-- bootstrap -->
     <link rel="stylesheet" href="/bizionic/css/bootstrap.min.css">
     <!-- custom css -->
@@ -135,8 +135,8 @@
             <div class="header flotNav_added">
 
                 <!-- header up bar  -->
-                <div class="header_up position: relative;" >
-                    <div class="auto_container" >
+                <div class="header_up position: relative;">
+                    <div class="auto_container">
                         <div class="header_up_detail">
                             <div class="logo_socialInfo">
                                 <div class="social_info">
@@ -168,7 +168,7 @@
                             <div class="trendingNav">
                                 {{-- <div class="main_nav">
                                 </div> --}}
-                                <div class="trendingNav_links" >
+                                <div class="trendingNav_links">
                                     <ul>
                                         {{-- <li><a href="/industries/industries-we-serve/industries/startups">Startup
                                                 Funding</a></li>
@@ -197,7 +197,8 @@
                                                         @php
                                                             $menuColumns = true;
                                                         @endphp
-                                                        <div @class([$floatingMenuClass => true]) style="position: absolute;     top: auto; z-index: 1;">
+                                                        <div @class([$floatingMenuClass => true])
+                                                            style="position: absolute;     top: auto; z-index: 1;">
                                                             <div class="row">
                                                                 @foreach ($menu->children as $ckey => $cmenu)
                                                                     @php
@@ -264,9 +265,9 @@
                                                                         </div>
                                                                     </div>
                                                                 @endforeach
-                                                                {{-- <div class=" col-lg-3 col-md-3 columnSett  pl-0">
-                                                                            @include('partials.menu_address')
-                                                                        </div> --}}
+                                                                <div class=" col-lg-3 col-md-3 columnSett  pl-0">
+                                                                    @include('partials.menu_address')
+                                                                </div>
                                                             </div>
                                                         </div>
                                                     @endif

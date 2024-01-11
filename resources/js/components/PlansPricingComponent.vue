@@ -85,8 +85,9 @@
                                                             >
                                                                 {{
                                                                     plan.price
-                                                                }}% of Monthly
-                                                                Ad Spend
+                                                                }}% Ad<sub
+                                                                >/Month</sub
+                                                            >
                                                             </h6></span
                                                         >
                                                         <span v-else
@@ -97,7 +98,7 @@
                                                         >
                                                     </h3>
 
-                                                    <div class="setupFee">
+                                                    <div class="setupFee" >
                                                         <small
                                                             >Setup Fees</small
                                                         >

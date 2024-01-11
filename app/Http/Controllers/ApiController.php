@@ -81,7 +81,8 @@ class ApiController extends Controller
 
     // fetch all the jobs
     public function jobs(Request $request)
-    {
+    {   
+        // return $request->page;
         if (empty($request->page))
             return response()->json(Job::with('skills')->orderBy('created_at', 'desc')->get(), 200)->header('Content-Type', 'text/json');
         else

@@ -1,5 +1,5 @@
 <x-header data="post-profile component" />
-<link rel="stylesheet " href="{{ asset('css/css/Employer_activity_style.css') }} ">
+<link rel="stylesheet " href="{{ asset('css/css/Employer_activity_responsive.css') }} ">
 <link rel="stylesheet " href="{{ asset('css/css/Employer_activity_style.css') }} ">
 <div class="fr-section" style="margin-top: -72px">
     <div class="fr-section_detail">
@@ -17,16 +17,18 @@
                     </p>
                 </div>
                 <div class="custom_tabs">
+                    {{-- class="active" --}}
                     <ul>
-                        <li><a href="#tab1" class="active">Post a Job</a></li>
-                        <li><a href="#tab2">My Job</a></li>
-                        <li><a href="#tab3">My Job Applicants</a></li>
-                        <li><a href="#tab4">Job Talents</a></li>
-                        <li><a href="#tab5">InstaHirin Shortlist</a></li>
-                        <li><a href="#tab6">Interview Scheduled</a></li>
-                        <li><a href="#tab7">Job Status</a></li>
-                        <li><a href="#tab8">Hired</a></li>
-                        <li><a href="#tab9">History</a></li>
+                        <li><a href="/Employer-activity" class="active" >Post a Job</a></li>
+                        <li><a href="/My-job-activity">My Job</a></li>
+                        <li><a href="/My-job-Applicants-activity">My Job Applicants</a></li>
+                        <li><a href="/job-talents-activity">Job Talents</a></li>
+                        <li><a href="/Instahirin-activity">InstaHirin Shortlist</a></li>
+                        <li><a href="/Interview-schedule">Interview Scheduled</a></li>
+                        <li><a href="/Job-status">Job Status</a></li>
+                        <li><a href="/employment-contract-form">Employment Contract</a></li>
+                        <li><a href="/Job-Hire">Hired</a></li>
+                        <li><a href="/History ">History</a></li>
                     </ul>
                 </div>
                 {{-- // --}}

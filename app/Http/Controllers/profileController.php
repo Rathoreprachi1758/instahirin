@@ -5,10 +5,14 @@ namespace App\Http\Controllers;
 use Auth;
 use Illuminate\Http\Request;
 use App\Models\User;
+use App\Models\Job;
 use App\Models\Country;
 use App\Models\Creditrequest;
 use App\Models\CompanyKycInformation;
+use App\Models\InstaHirinRequirement;
+use App\Models\InstaHirinOnboard;
 use Illuminate\Support\Facades\File;
+use Illuminate\Support\Facades\Schema;
 
 class profileController extends Controller
 {
@@ -138,7 +142,6 @@ class profileController extends Controller
         if (!File::exists($uploadFolder)) {
             File::makeDirectory($uploadFolder);
         }
-        // return  $uploadFolder;
         $uploadFields = [
             'Scanned_passport',
             'back_side_copy',
@@ -165,6 +168,155 @@ class profileController extends Controller
 
     public function Employer_activity(Request $request)
     {
-        return view('dashboard.activity_employer');
+        return view('dashboard.activity_employer', ['countryCodes' => $this->countrycodes]);
     }
+    public function post_job(Request $request)
+    {
+        $request->validate([
+            'position_title' => 'required',
+            'work_mode' => 'required',
+            'project_description' => 'required',
+            'key_skills' => 'required',
+            'min_experience' => '',
+            'max_experience' => '',
+            'employment_type' => '',
+            // changes
+            'salary_currency_monthly_project' => '',
+            'min_salary_monthly_project' => '',
+            'max_salary_monthly_project' => '',
+            'salary_currency_yearly' => '',
+            'min_salary_yearly' => '',
+            'max_salary_yearly' => '',
+            'salary_currency_hourly' => '',
+            'min_salary_hourly' => '',
+            'max_salary_hourly' => '',
+            'location' => '',
+            'education_qualification' => '',
+            'company_name' => '',
+            'company_website' => '',
+            'contact_person' => '',
+            'email' => 'required|email',
+            'contact_no_country_code' => '',
+            'contact_no' => '',
+            'company_details' => '',
+            'company_address' => '',
+            'document' => 'file',
+            'notify_ai_applicants' => '',
+        ]);
+
+        //Log::info('Request data:', $request->all());
+        // Create a new instance of the Hire Request model
+        $formData = new InstaHirinRequirement();
+        $formData->position_title = $request->position_title;
+        $formData->work_mode = $request->work_mode;
+        $formData->project_description = $request->project_description;
+        $formData->key_skills = $request->key_skills;
+        $formData->user_id = Auth::id();
+        // $formData->key_skills = json_decode($request->'key_skills']);
+        $formData->min_experience = $request->min_experience;
+        $formData->max_experience = $request->max_experience;
+        $formData->employment_type = $request->employment_type;
+        // changes
+        $formData->salary_currency_monthly_project = $request->salary_currency_monthly_project;
+        $formData->min_salary_monthly_project = $request->min_salary_monthly_project;
+        $formData->max_salary_monthly_project = $request->max_salary_monthly_project;
+        $formData->salary_currency_yearly = $request->salary_currency_yearly;
+        $formData->min_salary_yearly = $request->min_salary_yearly;
+        $formData->max_salary_yearly = $request->max_salary_yearly;
+        $formData->salary_currency_hourly = $request->salary_currency_hourly;
+        $formData->min_salary_hourly = $request->min_salary_hourly;
+        $formData->max_salary_hourly = $request->max_salary_hourly;
+
+        $formData->location = $request->location;
+        // return $request->'location'];
+        $formData->education_qualification = $request->education_qualification;
+        $formData->company_name = $request->company_name;
+        $formData->company_website = $request->company_website;
+        $formData->contact_person = $request->contact_person;
+        $formData->email = $request->email;
+        $formData->contact_no_country_code = $request->contact_no_country_code;
+        $formData->contact_no = $request->contact_no;
+        $formData->company_details = $request->company_details;
+        $formData->company_address = $request->company_address;
+
+        // Process and store the uploaded file
+        if ($request->hasFile('document')) {
+            $file = $request->file('document');
+            $filename = 'bizionic/images/' . time() . '_' . $file->getClientOriginalName();
+            $file->storeAs('', $filename, 'public');
+            $formData->document = $filename;
+        }
+        // $formData->notify_ai_applicants   = $validatedData['notify_ai_applicants'];
+        $formData->notify_ai_applicants = isset($request->notify_ai_applicants) ? 'Yes' : 'No';
+        $formData->save();
+        //
+        $instaRequirement = InstaHirinRequirement::find($formData->id);
+        $job = Job::create([
+            'title' => $instaRequirement->position_title,
+            'work_mode' => $instaRequirement->work_mode,
+            'description' => $instaRequirement->project_description,
+            // 'key_skills' => $instaRequirement->key_skills,
+            'availability' => $instaRequirement->employment_type,
+            'ctc_currency' => $instaRequirement->salary_currency_yearly,
+            'min_price' => $instaRequirement->min_salary_yearly,
+            'max_price' => $instaRequirement->max_salary_yearly,
+            // 'salary_period',
+            // 'experience',
+            'location' => $instaRequirement->location,
+            'qualification' => $instaRequirement->education_qualification,
+            'company' => $instaRequirement->company_name,
+            // hiring timeline
+            'prefer_qualification' => $instaRequirement->company_address,
+        ]);
+
+        // Transfer skills
+        $skills = $instaRequirement->experty()->pluck('id')->toArray();
+        $job->keySkills()->attach($skills);
+
+
+        // Return a response indicating success
+        return redirect()->back()->with('message', ' Job hasbeen Posted!');
+    }
+
+    public function my_job_activity(Request $request)
+    {
+        $myjob = InstaHirinRequirement::where('user_id',Auth::id())->get();
+        // return $myjob;
+        return view('dashboard.Activity_employer.my_job',['myjob'=>$myjob]);
+    }
+    //
+    public function my_job_Applicants(Request $request)
+    {   
+        // $myjob_applicant = InstaHirinOnboard::where('user_id',Auth::id())->get();
+        $myjob_applicant = InstaHirinOnboard::all();
+        // return $myjob_applicant;
+        return view('dashboard.Activity_employer.my_job_application',['myjob_applicant' => $myjob_applicant]);
+    }
+    public function job_talents(Request $request)
+    {
+        return view('dashboard.Activity_employer.job_talents');
+    }
+    public function Instahirin_activity(Request $request)
+    {
+        return view('dashboard.Activity_employer.instahirin');
+    }
+    public function Interviewschedule(Request $request)
+    {
+        return view('dashboard.Activity_employer.interview_schedule');
+    }
+
+    public function job_status(Request $request)
+    {
+        return view('dashboard.Activity_employer.job_status');
+    }
+
+    public function job_history(Request $request)
+    {
+        return view('dashboard.Activity_employer.History');
+    }
+    public function Hire(Request $request)
+    {
+        return view('dashboard.Activity_employer.Hire');
+    }
+
 }
