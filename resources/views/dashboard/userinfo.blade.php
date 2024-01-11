@@ -196,7 +196,7 @@
                                                         @foreach ($countryCodes as $country)
                                                             <option value="+{{ $country->phone }}"
                                                                 @if ($user->country_code == $country->phone) selected @endif>
-                                                                +{{ $country->name . ' ' . $country->phone }}
+                                                                {{ $country->name . '+' . $country->phone }}
                                                             </option>
                                                         @endforeach
                                                     </select>

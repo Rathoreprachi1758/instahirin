@@ -496,7 +496,7 @@ class ContentController extends Controller
     {
 
         // Validate the request data, including the uploaded file
-        // return 'Hii';
+        // return $request->all();
         $validatedData = $request->validate([
             'position_title' => 'required',
             'work_mode' => 'required',
