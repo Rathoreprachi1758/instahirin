@@ -653,6 +653,56 @@
     .revolution_infoDetail {
         padding: 40px 25px;
     }
+
+
+.benefitsSection {
+    padding: 80px 10px 60px; 
+}
+
+.benefitslist_infoText { 
+    padding: 15px 20px;
+}
+
+.benefitslist_text { 
+    min-height: 460px;
+}
+
+.servicesOffer .topClouds_col { 
+    padding: 50px 30px;
+}
+
+.cyberSecurity_col { 
+    padding: 60px 35px; 
+}
+.needHelp_section_detail { 
+    padding: 100px 0px 40px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 }
 
 @media only screen and (min-width: 768px) and (max-width: 1023px) {
@@ -1911,6 +1961,68 @@
     .portfolioPage .at_bizionic_section_detail {
         padding: 60px 30px;
     }
+
+
+
+
+
+
+    .cloudBannerBg { background-position: top center; background-size: cover;}
+
+    .benefitsSection {
+        padding: 70px 20px 60px;}
+
+ 
+
+.benefits_list ul { flex-wrap: wrap;}
+.benefits_list ul li { width: 50%;}
+
+
+.benefitslist_text ul li { width: 100%;}
+
+.benefitslist_text { 
+    min-height: 370px;
+}
+.servicesOffer .topClouds_col { 
+    padding: 50px 10px;
+}
+
+.servicesOffer .topClouds_col strong a { font-size: 15px;}
+
+.remoteInfra_info { 
+    padding: 50px 20px; 
+}
+
+.network_flow_list { padding-top: 30px;}
+
+.network_flow_list ul  > li { margin: 0px !important; padding: 10px 0px !important;}
+
+.networkFlText > li { padding: 0px 8px !important;}
+
+.networkFlText li a { font-size: 15px !important; padding: 0px 5px !important;}
+
+.cyberSecurity_col { 
+    padding: 40px 30px; 
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 }
 
 @media only screen and (max-width: 767px) {
@@ -7117,6 +7229,131 @@ h6 { font-size: 18px; }
     width: 100%;
     padding: 60px 0px 40px;
 }
+
+
+.cloudBannerBg { background-position: top center; background-size: cover;}
+
+.cloudBannerBg .mainBanner_detail {
+    padding-top: 60px;
+    padding-bottom: 90px;
+}
+
+.topClouds_section_detail { 
+    padding: 50px 0px;
+}
+
+.benefitsSection {
+    padding: 60px 0px 60px;}
+
+.benefits_list ul {
+    display: block;
+}
+.benefits_list ul li { margin: 15px 0px ;
+    width: 100%;}
+
+.benefitslist_text ul li {
+    margin: 0px !important;
+}
+.benefitsSection::after { 
+    height: 400px;}
+
+.benefits_list_info h6 { 
+    padding: 20px 20px; 
+    line-height: 1.4;
+}
+
+.connectCloud { 
+    padding: 30px 20px; 
+}
+
+.connectCloud::after { display: none;}
+
+.connectCloud p strong { display: block; padding-top: 10px;}
+
+.servicesOffer .topClouds_col { 
+    padding: 50px 20px;
+}
+
+.devServices_sec_detail { 
+    padding: 60px 0px;
+}
+.devopLinks .servicesProvided_info ul { 
+    justify-content: center;
+}
+
+
+
+.devAsServices .devServices_secFlow { 
+    padding: 30px 0px 30px;
+}
+
+.remoteInfrastructure_sec_detail { 
+    padding: 60px 0px;
+}
+
+.networkSection_flow { 
+    padding: 50px 20px;
+}
+
+.network_flow_list { padding-top: 30px;}
+
+.network_flow_list ul  > li { margin: 0px !important; padding: 10px 0px !important;}
+
+.networkFlText > li { padding: 0px 8px !important;}
+
+.networkFlText li a { font-size: 15px !important; padding: 0px 5px !important;}
+
+.networkManagement_info { 
+    padding: 0px 20px 40px; 
+}
+
+.networkManagement_info::after { 
+    height: 85px;}
+
+
+.networkSection_info .custom_tittle { 
+    padding: 25px 20px; 
+}
+.cyberSecurity_sec ul {
+    display: block; 
+}
+
+.cyberSecurity_sec ul li {
+    width: 100%;
+}
+.cyberSecurity_col { 
+    padding: 40px 20px; 
+}
+
+.cyberSecurity_col h4 { 
+    min-height: auto; 
+}
+
+.needHelp_section_detail { 
+    padding: 130px 0px 30px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 

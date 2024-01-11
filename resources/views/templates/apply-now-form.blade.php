@@ -3,8 +3,8 @@
         <div class="policy_pages_detail">
             <div class="policy_pages_content">
                 @php
-                    $jobId = request('jobId');
-                    $job = Job::find($jobId);
+                $jobId = request('jobId');
+                $job = Job::find($jobId);
                 @endphp
                 <h1>About the Job:</h1>
                 <h4 class="pb-2 pt-2">Job Title: <strong>{{ $job->title }}</strong></h4>

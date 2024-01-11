@@ -91,6 +91,8 @@ Route::post('/hire', [ContentController::class, 'hire'])->name('hire');
 Route::post('/insta-hirin-requirements', [ContentController::class, 'instaHirinRequirements'])->name('instaHirinRequirements');
 //Route::post('/insta-hirin-onboard', [ContentController::class, 'instaHirinOnboard'])->name('instaHirinOnboard');
 Route::post('/submitForm', [ContentController::class, 'submitForm'])->name('submitForm');
+Route::post('/submitHireApplication', [ContentController::class, 'HireApplication'])->name('HireApplication');
+
 //Route::get('/helloworld', [ContentController::class,'helloWorld'])->name('helloWorld');
 // Team Form Submission
 Route::post('/submit-team-form', [ContentController::class, 'teamForm'])->name('team');
