@@ -711,7 +711,7 @@
           </div>
         </div>
 
-        <!-- Availability -->
+        <!-- Employment Type-->
         <div class="col-lg-12 col-md-12">
           <div class="onForm_col">
             <strong>Employment Type</strong>
@@ -745,6 +745,21 @@
             <div class="error-message" ref="employment_typeError">
               {{ validationErrors.employment_type }}
             </div>
+          </div>
+        </div>
+
+        <!-- Virtual Meeting -->
+        <div class="col-lg-12 col-md-12">
+          <div class="scheduleCheckbox onFormCheck">
+            <label class="checkbox-label">
+              <input
+                type="checkbox"
+                name="virtual_assistance_call"
+                v-model="virtual_assistance_call"
+              />
+              <span class="checkbox-custom rectangular"></span>
+              Schedule a Virtual Interview
+            </label>
           </div>
         </div>
 
@@ -1012,6 +1027,7 @@ export default {
       // Notice period selection
       selectedNoticePeriod: null,
       location: "",
+      virtual_assistance_call: "No",
       searchResults: [],
       service: null,
 
@@ -1373,6 +1389,7 @@ export default {
       );
       formData.append("last_company", this.last_company);
       formData.append("company_location", this.company_location);
+      formData.append("virtual_assistance_call", this.virtual_assistance_call);
       // Currently Working  Checkbox
       formData.append("currently_working_here", this.currentlyWorking ? "Yes" : "No");
       formData.append("working_since_date", this.working_since_date);
@@ -1416,6 +1433,7 @@ export default {
           this.selectedExpertise = [];
           this.selectedWorkWith = [];
           this.last_company = "";
+          this.virtual_assistance_call = "";
           this.company_location = "";
           this.currentlyWorking = "";
           this.working_since_date = "";

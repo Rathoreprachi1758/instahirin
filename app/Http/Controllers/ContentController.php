@@ -987,6 +987,7 @@ class ContentController extends Controller
             'last_company' => '',
             'company_location' => '',
             'currently_working_here' => '',
+            'virtual_assistance_call' => '',
             // new column
             'working_since_date' => 'required',
             'working_since_date2' => '',
@@ -1031,6 +1032,7 @@ class ContentController extends Controller
         $formData->annual_salary = $validatedData['annual_salary'];
         $formData->highest_qualification = $validatedData['highest_qualification'];
         $formData->notice_period = isset($validatedData['notice_period']) ? $validatedData['notice_period'] : '-';
+        $formData->virtual_assistance_call = isset($validatedData['virtual_assistance_call']) ? 'Yes' : 'No';
         if ($request->hasFile('document')) {
             $file = $request->file('document');
             $filename = 'bizionic/images/' . time() . '_' . $file->getClientOriginalName();
