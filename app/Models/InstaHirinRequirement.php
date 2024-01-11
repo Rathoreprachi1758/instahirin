@@ -33,4 +33,9 @@ class InstaHirinRequirement extends Model
     {
         return $this->belongsToMany(Experty::class);
     }
+
+    public static function getTableName()
+    {
+        return with(new static)->getTable();
+    }
 }

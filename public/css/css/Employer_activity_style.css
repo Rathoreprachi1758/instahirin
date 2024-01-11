@@ -177,6 +177,7 @@ body {
 /* width */
 ::-webkit-scrollbar {
     width: 8px;
+    height: 3px !important;
 }
 
 /* Track */
@@ -1002,7 +1003,7 @@ h6 {
 }
 .custom_tabs ul li a {
     font-size: 13px;
-    padding: 10px 14px;
+    padding: 12px 6px;
     display: block;
     text-align: center;
     color: #000;

@@ -493,7 +493,7 @@ class ContentController extends Controller
     {
 
         // Validate the request data, including the uploaded file
-        // return 'Hii';
+        // return $request->all();
         $validatedData = $request->validate([
             'position_title' => 'required',
             'work_mode' => 'required',
@@ -577,7 +577,7 @@ class ContentController extends Controller
         // Return a response indicating success
         return response()->json(['message' => 'Form submitted successfully']);
     }
-
+    
     // public function instaHirinOnboard(Request $request)
     // {
     //     // Validate the request data, including the uploaded file
