@@ -196,7 +196,7 @@
                                                         @foreach ($countryCodes as $country)
                                                             <option value="+{{ $country->phone }}"
                                                                 @if ($user->country_code == $country->phone) selected @endif>
-                                                                +{{ $country->name . ' ' . $country->phone }}
+                                                                {{ $country->name . '+' . $country->phone }}
                                                             </option>
                                                         @endforeach
                                                     </select>
@@ -275,7 +275,7 @@
                         </div>
                     </div>
                 </div>
-
+                {{-- verification is pending --}}
                 <div class="p_userInfo_list">
                     <ul>
                         <li>
@@ -394,6 +394,7 @@
                         </li>
                     </ul>
                 </div>
+                {{-- verification is pending --}}
             </div>
             @endforeach
             <!-- chamge password sec -->

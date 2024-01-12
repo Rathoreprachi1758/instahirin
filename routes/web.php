@@ -27,7 +27,7 @@ Route::Post('signin', [Logincontroller::class, 'store'])->name('submit.signup');
 Route::get('/loginpage', [LoginController::class, 'login'])->name('loginpage');
 // Route::middleware(['middleware' =>'auth.check'])->group(function () {
 Route::post('dashboard', [LoginController::class, 'authenticate'])->name('login');
-Route::get('dashboard-return',function(){
+Route::get('dashboard-return', function () {
     return view('dashboard.dashboard');
 });
 Route::get('logout', [LoginController::class, 'logout']);
@@ -39,8 +39,29 @@ Route::patch('edit-nationality/{id}', [ProfileController::class, 'editnation'])-
 Route::post('change-password', [Logincontroller::class, 'changePasswordSave']);
 
 Route::get('kyc-info', [profileController::class, 'user_info']);
+Route::Post('kyc-submit', [profileController::class, 'kyc_submit'])->name('kyc.submit');
 Route::get('credit-request', [profileController::class, 'creditrequest']);
 Route::post('credit-request-submit', [profileController::class, 'creditrequest_submit'])->name('creadit.request');
+//Activity
+Route::get('Employer-activity', [profileController::class, 'Employer_activity']);
+// Route::post('/insta-hirin-requirements', [ContentController::class, 'instaHirinRequirements'])->name('instaHirinRequirements');
+Route::post('/job-posting-activity', [profileController::class, 'post_job'])->name('post_a_job');
+Route::get('My-job-activity', [profileController::class, 'my_job_activity']);
+Route::get('My-job-Applicants-activity', [profileController::class, 'my_job_Applicants']);
+Route::get('job-talents-activity', [profileController::class, 'job_talents']);
+Route::get('Instahirin-activity', [profileController::class, 'Instahirin_activity']);
+Route::get('History', [profileController::class, 'job_history']);
+Route::get('Job-Hire', [profileController::class, 'Hire']);
+Route::get('Job-status', [profileController::class, 'job_status']);
+Route::get('employment-contract-form', function () {
+    return view('dashboard.activity_employer.Employment_contract_form');
+});
+Route::get('Interview-schedule', [profileController::class, 'Interviewschedule']);
+//emp
+// Route::get('activity-employee-talent' [profileController::class, 'Employer_activity']);
+// {
+//    return view('dashboard.activity_employer');
+// });
 // });
 
 Route::get('reset-password', [LoginController::class, 'resetpswd']);
@@ -70,6 +91,8 @@ Route::post('/hire', [ContentController::class, 'hire'])->name('hire');
 Route::post('/insta-hirin-requirements', [ContentController::class, 'instaHirinRequirements'])->name('instaHirinRequirements');
 //Route::post('/insta-hirin-onboard', [ContentController::class, 'instaHirinOnboard'])->name('instaHirinOnboard');
 Route::post('/submitForm', [ContentController::class, 'submitForm'])->name('submitForm');
+Route::post('/submitHireApplication', [ContentController::class, 'HireApplication'])->name('HireApplication');
+
 //Route::get('/helloworld', [ContentController::class,'helloWorld'])->name('helloWorld');
 // Team Form Submission
 Route::post('/submit-team-form', [ContentController::class, 'teamForm'])->name('team');

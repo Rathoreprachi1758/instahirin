@@ -80,10 +80,11 @@ $job = \App\Models\Job::find($jobId);
 
                 <br>
                 <h4 class="pb-3"><strong>Bizionic Technologies T/C applies.</strong></h4>
-                <h5 class="texte_787878"><strong>Posted on Sep 26, 2023.</strong></h5>
+                <h5 class="texte_787878"><strong>Posted on Sep 26, 20233.</strong></h5>
             </div>
 
-            <jobs-component></jobs-component>
+            {{-- <jobs-component></jobs-component> --}}
+            <hire-me-application></hire-me-application>
 
             {{-- <div class="applyNow_text">
                 <div class="applyNow_textInfo">

@@ -34,11 +34,12 @@
     </div>
 </div> --}}
 
-<div class="advaceCareer_hire pb-5" id="goto_form">
+<div class="advaceCareer_hire hire_application" id="goto_form">
     <div class="auto_container">
         <div class="jobs_on_view">
-            <jobs-component></jobs-component>
+            {{-- <jobs-component></jobs-component> --}}
 
+            <hire-me-application></hire-me-application>
         </div>
     </div>
 
