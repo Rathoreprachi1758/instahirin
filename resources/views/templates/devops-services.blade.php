@@ -10,26 +10,25 @@
                 <div class="mainBanner_detail">
 
                     <div class="row align-items-center">
-                        <div class="col-lg-8 col-md-7 aos-init " data-aos="fade-right" data-aos-duration="1000" data-aos-easing="ease">
+                        <div class="col-lg-7 col-md-7 aos-init " data-aos="fade-right" data-aos-duration="1000" data-aos-easing="ease">
                             <div class="custom_tittle text-left ">
                                 <h1 class="text-white">
-                                    <b>AWS</b>  Cloud <br>
-                                    Consulting Services
+                                    <b>DevOps</b>  As A Service
                                 </h1>
 
-                                <h3 class="text-white pr-5"><strong>We offer</strong> Customised, Low-Cost Cloud Consulting Services <strong>that enable</strong> Higher Computing, Performance, <strong>and</strong> Ultimate Scalability.</h3>
+                                <h3 class="text-white pr-2"><strong>We offer</strong> Customised, Low-Cost Cloud Consulting Services <strong>that enable</strong> Higher Computing, Performance, <strong>and</strong> Ultimate Scalability.</h3>
 
 
-                                <a href="/get-a-free-consultation" class="btn_default_white mt-4">Connect With Bizionic Technologies, Your Trusted AWS Cloud Consulting Partner</a>
+                                <a href="/get-a-free-consultation" class="btn_default_white mt-4">Connect With Bizionic Technologies, Your Trusted DevOps (DaaS) Partner</a>
 
                             </div>
 
 
                         </div>
 
-                        <div class="col-lg-4 col-md-5 aos-init " data-aos="fade-left" data-aos-duration="1000" data-aos-easing="ease">
+                        <div class="col-lg-5 col-md-5 aos-init " data-aos="fade-left" data-aos-duration="1000" data-aos-easing="ease">
                             <div class="marketing_banner_fr">
-                                <span><img src="/bizionic/images/awsBanner_avatar.png" alt="#" /></span> 
+                                <span><img src="/bizionic/images/devopps_banner_avtar.png" alt="#" /></span> 
                             </div>
                         </div>
                     </div> 
@@ -45,47 +44,65 @@
                 <div class="industryNew_section2_cols">
                     <div class="industryNew_section2_info aos-init " data-aos="fade-up" data-aos-duration="1500" data-aos-easing="ease">
                         <div class="custom_tittle">
-                            <h2><strong>Overview of</strong> AWS Cloud Consulting Services, <strong>We offers</strong></h2> 
-                            <p class="p_color">With expert cloud migration and strategy, we help enterprises plan and execute seamless migrations to the AWS cloud. Our comprehensive migration framework covers the following:</p>
+                            <h2><strong>Overview of</strong> Custom DevOps Solutions, <strong>We offers</strong></h2> 
+                            <p class="p_color">Bizionic Technologies offers DevOps as a Services to help accelerate Software or Product Delivery and improve Operational Efficiency. Here are some of the major benefits:</p>
                         </div>
                     </div>
 
                 
                     <div class="row justify-content-center">
-                        <div class="col-lg-3 col-md-6 provide_col">
+                        <div class="col-lg-4 col-md-6 provide_col">
                             <div class="industryNew_section2_colsInfo">
-                                <span><img src="/bizionic/images/awsCloud_icon1.png" alt="#" /></span>
-                                <h6>DISCOVERY & PLANNING</h6>
-                                <p>We assess your infrastructure, data, security needs, and dependencies to map applications and data to the optimal AWS architecture.</p>
+                                <span><img src="/bizionic/images/devopCloud_icon1.png" alt="#" /></span>
+                                <h6>INFRASTRUCTURE AUTOMATION</h6>
+                                <p>We build and manage infrastructure as code to simplify IT resource supply, scaling, and management.</p>
                             </div>
                         </div>
-                        <div class="col-lg-3 col-md-6 provide_col">
+                        <div class="col-lg-4 col-md-6 provide_col">
                             <div class="industryNew_section2_colsInfo">
-                                <span><img src="/bizionic/images/awsCloud_icon2.png" alt="#" /></span>
-                                <h6>CLOUD ECONOMICS ANALYSIS</h6>
-                                <p>We conduct TCO analysis factors in your future capacity needs, utilization levels, etc., to arrive at the most cost-effective AWS deployment model.</p>
+                                <span><img src="/bizionic/images/devopCloud_icon2.png" alt="#" /></span>
+                                <h6>CONTINUOUS CI / CD</h6>
+                                <p>Our continuous integration and deployment (CI/CD) services manage software development, testing, and deployment with tools such as Jenkins, Travis CI, and CircleCI.</p>
                             </div>
                         </div>
-                        <div class="col-lg-3 col-md-6 provide_col">
+                        <div class="col-lg-4 col-md-6 provide_col">
                             <div class="industryNew_section2_colsInfo">
-                                <span><img src="/bizionic/images/awsCloud_icon3.png" alt="#" /></span>
-                                <h6>PROOF OF CONCEPTS</h6>
-                                <p>We test critical workloads via PoCs, addressing security, availability, and other viability questions upfront, derisking full-scale migration.</p>
+                                <span><img src="/bizionic/images/devopCloud_icon3.png" alt="#" /></span>
+                                <h6>CONTAINERIZATION & ORCHESTRATION</h6>
+                                <p>We package software or app into containers and manage them with orchestration tools like Docker and Kubernetes.</p>
                             </div>
                         </div>
-                        <div class="col-lg-3 col-md-6 provide_col">
+                        <div class="col-lg-4 col-md-6 provide_col">
                             <div class="industryNew_section2_colsInfo">
-                                <span><img src="/bizionic/images/awsCloud_icon4.png" alt="#" /></span>
-                                <h6>MIGRATION EXECUTION</h6>
-                                <p>Our automated tools and certified engineers ensure secure, low-risk migration via appropriate techniques rehosting, refactoring, re-platforming, rebuilding, etc.</p>
+                                <span><img src="/bizionic/images/devopCloud_icon4.png" alt="#" /></span>
+                                <h6>CLOUD INFRASTRUCTURE MANAGEMENT</h6>
+                                <p>We manage and optimise cloud infrastructure such as Amazon Web Services (AWS), Microsoft Azure, and Google Cloud Platform (GCP).</p>
                             </div>
                         </div>
+                        <div class="col-lg-4 col-md-6 provide_col">
+                            <div class="industryNew_section2_colsInfo">
+                                <span><img src="/bizionic/images/devopCloud_icon5.png" alt="#" /></span>
+                                <h6>MONITORING AND LOGGING</h6>
+                                <p>We monitor the performance and health of your apps and infrastructure, in addition to gather and analyse log data to resolve issues.</p>
+                            </div>
+                        </div>
+                        <div class="col-lg-4 col-md-6 provide_col">
+                            <div class="industryNew_section2_colsInfo">
+                                <span><img src="/bizionic/images/devopCloud_icon6.png" alt="#" /></span>
+                                <h6>SECURITY AND COMPLIANCE</h6>
+                                <p>We ensure that the development and deployment processes for your software or app meet security and regulatory requirements.</p>
+                            </div>
+                        </div> 
                         
+                    </div>
+
+                    <div class="custom_tittle p-0 pt-4">
+                        <p class="text-white text-justify p-0">With continuous innovation across infrastructure, platform, productivity and application services, Bizionic’s team provides a feature-rich environment to build, deploy and manage scalable DevOps services.</p>
                     </div>
                 </div>
             </div>
         </div>
-
+ 
         
 
 
@@ -103,21 +120,20 @@
                     <div class="row">
                         <div class="col-lg-4 col-md-4">
                             <div class="ongoing_col">
-                                <span>COST<br> OPTIMIZATION</span>
-                                <p>Rightsizing, purchasing model optimization, spot instance leveraging, and automation to lower TCO.</p>
+                                <span>DevOps<br> ASSESSMENT</span>
+                                <p>Our DevOps engineers analyse the critical aspects of your deployment operations and offer tools and techniques to assist you improve efficiency.</p>
                             </div>
                         </div>
                         <div class="col-lg-4 col-md-4">
                             <div class="ongoing_col">
-                                <span>PERFORMANCE <br> TUNING</span>
-                                <p>High-performance architecture design, database optimization, load testing, and latency reduction.</p>
+                                <span>DevOps <br> AUTOMATION</span>
+                                <p>We automate the entire delivery cycle, reducing deployment and rollback times, minimising risk, and increasing productivity.</p>
                             </div>
                         </div>
                         <div class="col-lg-4 col-md-4">
                             <div class="ongoing_col">
-                                <span>CLOUD-NATIVE INNOVATION</span>
-                                <p>Migration of legacy
-                                    apps to microservices, building new cloud-native apps, and leveraging serverless/containers to boost agility.</p>
+                                <span>DevOps <br> MANAGEMENT</span>
+                                <p>We'll assist you in integrating your delivery pipeline automation cycle with the rest of your development workflow.</p>
                             </div>
                         </div>
                     </div>
@@ -131,7 +147,7 @@
                 <div class="well_reviewsSec_detail">
                     <div class="custom_tittle text-ccenter">
                         <h2>Well-Architected Framework <strong>Reviews</strong></h2>
-                        <p class="text-justify p_color p-0">We conduct periodic well-architected reviews assessing your workloads on the five pillars of operational excellence, security, reliability, performance efficiency, and cost optimization - providing actionable recommendations. Let us customize a strategy and roadmap to maximize ROI from your AWS cloud investments.</p>
+                        <p class="text-justify p_color p-0">We conduct periodic well-architected reviews assessing your workloads on the five pillars of operational excellence, security, reliability, performance efficiency, and cost optimization - providing actionable recommendations. Let us customize a strategy and roadmap to maximize ROI from your Software or App investments.</p>
                     </div>
                 </div>
             </div>
@@ -139,192 +155,12 @@
 
     </div>
 
- </div>
-
+ </div> 
 
 
 
  <div class="consulting_innerPages_main bg_fff aws2">
     <div class="auto_container">
-
-        <!-- main banner  --> 
-
-        <div class="provider_section">
-
-            <div class="">
-                <div class="industryNew_section2_cols">
-                    <div class="industryNew_section2_info aos-init " data-aos="fade-up" data-aos-duration="1500" data-aos-easing="ease">
-                        <div class="custom_tittle">
-                            <h2><strong>Bizionic’s</strong>  AWS Cloud Services</h2> 
-                        </div>
-                    </div>
-
-                
-                    <div class="row justify-content-center">
-                        <div class="col-lg-4 col-md-6 provide_col">
-                            <div class="industryNew_section2_colsInfo">
-                                <span><img src="/bizionic/images/awsC_icon1.png" alt="#" /></span>
-                                <h6>AMAZON EC2</h6>
-                                <p>Our speciality is building virtual servers, which we can scale up or down to meet the needs of your business operations.</p>
-                            </div>
-                        </div> 
-                        <div class="col-lg-4 col-md-6 provide_col">
-                            <div class="industryNew_section2_colsInfo">
-                                <span><img src="/bizionic/images/awsC_icon2.png" alt="#" /></span>
-                                <h6>AMAZON VPC</h6>
-                                <p>AWS's Virtual Private Cloud allows you to launch all AWS resources in a virtual network that you define based on your needs.</p>
-                            </div>
-                        </div> 
-                        <div class="col-lg-4 col-md-6 provide_col">
-                            <div class="industryNew_section2_colsInfo">
-                                <span><img src="/bizionic/images/awsC_icon3.png" alt="#" /></span>
-                                <h6>AMAZON S3</h6>
-                                <p>Amazon's Simple Storage Service (S3) provides cloud storage capacity for numerous types of web development applications.</p>
-                            </div>
-                        </div> 
-                        <div class="col-lg-4 col-md-6 provide_col">
-                            <div class="industryNew_section2_colsInfo">
-                                <span><img src="/bizionic/images/awsC_icon4.png" alt="#" /></span>
-                                <h6>AMAZON GLACIER</h6>
-                                <p>Bizionic’s SRO is an expert in connecting Amazon Glacier so that you can save data that is not commonly accessible to archive storage. This lowers storage expenses.</p>
-                            </div>
-                        </div> 
-                        <div class="col-lg-4 col-md-6 provide_col">
-                            <div class="industryNew_section2_colsInfo">
-                                <span><img src="/bizionic/images/awsC_icon5.png" alt="#" /></span>
-                                <h6>AMAZON RDS</h6>
-                                <p>Amazon provides a dependable, cost-effective, and scalable Relational Database System (RDS) to successfully manage business transactions.</p>
-                            </div>
-                        </div> 
-                        <div class="col-lg-4 col-md-6 provide_col">
-                            <div class="industryNew_section2_colsInfo">
-                                <span><img src="/bizionic/images/awsC_icon6.png" alt="#" /></span>
-                                <h6>AMAZON ELASTICACHE</h6>
-                                <p>Our cloud experts are aware of how important it is to cache applications in order to give the cloud optimal performance.</p>
-                            </div>
-                        </div> 
-                        <div class="col-lg-4 col-md-6 provide_col">
-                            <div class="industryNew_section2_colsInfo">
-                                <span><img src="/bizionic/images/awsC_icon7.png" alt="#" /></span>
-                                <h6>AMAZON CLOUDFRONT</h6>
-                                <p>Bizionic’s SRO's expertise with Amazon CloudFront CDN accelerates the distribution of various types of web content such as photos, videos, and APIs to your users globally in a short period of time.</p>
-                            </div>
-                        </div> 
-                        <div class="col-lg-4 col-md-6 provide_col">
-                            <div class="industryNew_section2_colsInfo">
-                                <span><img src="/bizionic/images/awsC_icon8.png" alt="#" /></span>
-                                <h6>AMAZON ROUTE 53</h6>
-                                <p>Easily manage your hosted zones, DNS records, and queries using Amazon Route 53.</p>
-                            </div>
-                        </div> 
-                        <div class="col-lg-4 col-md-6 provide_col">
-                            <div class="industryNew_section2_colsInfo">
-                                <span><img src="/bizionic/images/awsC_icon9.png" alt="#" /></span>
-                                <h6>AMAZON SES</h6>
-                                <p>We oversee your business's marketing and promotional email campaigns, which have a reduced unsubscribe rate. Get emails from people who have Amazon SES now.</p>
-                            </div>
-                        </div> 
-                        <div class="col-lg-4 col-md-6 provide_col">
-                            <div class="industryNew_section2_colsInfo">
-                                <span><img src="/bizionic/images/awsC_icon10.png" alt="#" /></span>
-                                <h6>AMAZON OpsWorks</h6>
-                                <p>Amazon OpsWorks manages infrastructure deployment enabling cloud admins to quickly install new servers.</p>
-                            </div>
-                        </div> 
-                        <div class="col-lg-4 col-md-6 provide_col">
-                            <div class="industryNew_section2_colsInfo">
-                                <span><img src="/bizionic/images/awsC_icon11.png" alt="#" /></span>
-                                <h6>AMAZON SQS</h6>
-                                <p>Effectively handle massive data volumes with Amazon SQS by using our AWS Cloud Consulting Services.</p>
-                            </div>
-                        </div> 
-                        <div class="col-lg-4 col-md-6 provide_col">
-                            <div class="industryNew_section2_colsInfo">
-                                <span><img src="/bizionic/images/awsC_icon12.png" alt="#" /></span>
-                                <h6>AMAZON SNS</h6>
-                                <p>Notifications can be sent to a large number of users at a very low cost using Amazon SNS.</p>
-                            </div>
-                        </div> 
-                        
-                    </div>
-                </div>
-            </div>
-        </div>
-
-
-        <div class="provider_section">
-
-            <div class="">
-                <div class="industryNew_section2_cols">
-                    <div class="industryNew_section2_info aos-init " data-aos="fade-up" data-aos-duration="1500" data-aos-easing="ease">
-                        <div class="custom_tittle">
-                            <h2><strong>Bizionic’s</strong>  AWS Cloud Solutions</h2> 
-                        </div>
-                    </div>
-
-                
-                    <div class="row justify-content-center">
-                        <div class="col-lg-4 col-md-6 provide_col">
-                            <div class="industryNew_section2_colsInfo">
-                                <span><img src="/bizionic/images/awsC2_icon1.png" alt="#" /></span>
-                                <h6>MANAGED AWS OPERATIONS</h6>
-                                <p>OBizionic's experts handle your databases and cloud workloads around-the-clock to keep your company operating.</p>
-                            </div>
-                        </div> 
-                        <div class="col-lg-4 col-md-6 provide_col">
-                            <div class="industryNew_section2_colsInfo">
-                                <span><img src="/bizionic/images/awsC2_icon2.png" alt="#" /></span>
-                                <h6>ENTERPRISE DATA PLATFORM</h6>
-                                <p>AWS Enterprise Data Platform is a fully customis- able end-to-end solution that enables you get faster outcomes while preserving control over your corporate data assets.</p>
-                            </div>
-                        </div> 
-                        <div class="col-lg-4 col-md-6 provide_col">
-                            <div class="industryNew_section2_colsInfo">
-                                <span><img src="/bizionic/images/awsC2_icon3.png" alt="#" /></span>
-                                <h6>MIGRATING TO AWS</h6>
-                                <p>Migrate to AWS Cloud to discover a world of limitless possibilities for your organisation. Our Cloud professionals will examine your present infrastructure and guide you through the AWS migration process.</p>
-                            </div>
-                        </div> 
-                        <div class="col-lg-4 col-md-6 provide_col">
-                            <div class="industryNew_section2_colsInfo">
-                                <span><img src="/bizionic/images/awsC2_icon4.png" alt="#" /></span>
-                                <h6>AWS STRATEGY & CONSULTING</h6>
-                                <p>With our AWS consulting services, our cloud professionals evaluate your organisation and then create a solid plan based on tried-and-true techniques. We develop a strategy for leverag- ing the power of the Cloud.</p>
-                            </div>
-                        </div> 
-                        <div class="col-lg-4 col-md-6 provide_col">
-                            <div class="industryNew_section2_colsInfo">
-                                <span><img src="/bizionic/images/awsC2_icon5.png" alt="#" /></span>
-                                <h6>AUTOMATION & OPTIMIZATION</h6>
-                                <p>Accelerate your adoption of new technologies by employing AWS products to automate business processes. It could elevate your company to a higher level.</p>
-                            </div>
-                        </div> 
-                        <div class="col-lg-4 col-md-6 provide_col">
-                            <div class="industryNew_section2_colsInfo">
-                                <span><img src="/bizionic/images/awsC2_icon6.png" alt="#" /></span>
-                                <h6>BIG DATA</h6>
-                                <p>Integrating Big Data with AWS Cloud can yield unparalleled advantages for your business strategy and operations. We combine this with your existing cloud infrastructure.</p>
-                            </div>
-                        </div> 
-                        
-                        
-                    </div>
-                </div>
-            </div>
-        </div>
-
-        
- 
-
-    </div>
-
- </div>
-
-
-
-
- <div class="consulting_innerPages_main bg_f5f5f5 aws3">
-    <div class="auto_container">
  
 
         <div class="provider_section">
@@ -333,8 +169,8 @@
                 <div class="industryNew_section2_cols">
                     <div class="industryNew_section2_info aos-init " data-aos="fade-up" data-aos-duration="1500" data-aos-easing="ease">
                         <div class="custom_tittle">
-                            <h2><strong>Why Bizionic Technologies as Your</strong> AWS Consultant Partner</h2> 
-                            <p class="p_color">Here are the key reasons to choose Bizionic Technologies as your trusted<br> AWS Consulting and Implementation Partner:</p>
+                            <h2><strong>Why Bizionic Technologies as Your</strong> DevOps Solution’s Partner</h2> 
+                            <p class="p_color">Here are the top reasons to choose Bizionic Technologies as your DevOps Consultant:</p>
                         </div>
                     </div>
 
@@ -342,65 +178,44 @@
                     <div class="row justify-content-center">
                         <div class="col-lg-4 col-md-6 provide_col">
                             <div class="industryNew_section2_colsInfo">
-                                <span><img src="/bizionic/images/awsC3_icon1.png" alt="#" /></span>
-                                <h6>EXTENSIVE AWS EXPERTISE</h6>
-                                <p>With over 200 AWS certifications and proven success delivering complex cloud programs for enterprises, we have unmatched real-world AWS experience to smooth your cloud journey.</p>
+                                <span><img src="/bizionic/images/azure3Icon2.png" alt="#" /></span>
+                                <h6>DEDICATED EXPERTS</h6>
+                                <p>Our DaaS offers competent DevOps professionals to ensure that your project works smoothly from start to finish. Our skilled team guarantees that your IT staff stay up to date on the latest technologies and systems.</p>
                             </div>
                         </div> 
                         <div class="col-lg-4 col-md-6 provide_col">
                             <div class="industryNew_section2_colsInfo">
-                                <span><img src="/bizionic/images/awsC3_icon2.png" alt="#" /></span>
-                                <h6>HOLISTIC APPROACH</h6>
-                                <p>We go beyond infrastructure migration to drive tangible business outcomes - enhanced customer experiences, revenue growth, and product innovation through our integrated strategy covering processes, apps, data, and security perspectives.</p>
+                                <span><img src="/bizionic/images/devopCloud2_icon2.png" alt="#" /></span>
+                                <h6>AUTOMATED DEPLOYMENT</h6>
+                                <p>Engaging with Bizionic Technologies provides advantages such as rapid testing and implementation. We employ DevOps tools to automate testing and releases, so you no longer need to schedule releases. This makes your feedback cycle faster and more efficient.</p>
                             </div>
                         </div> 
                         <div class="col-lg-4 col-md-6 provide_col">
                             <div class="industryNew_section2_colsInfo">
-                                <span><img src="/bizionic/images/awsC3_icon3.png" alt="#" /></span>
-                                <h6>SOLUTION-DRIVEN MINDSET</h6>
-                                <p>We don't just provide standard AWS building blocks. Our consultants are obsessed with profoundly understanding your challenges to architect customized cloud solutions leveraging the full breadth of the AWS portfolio.</p>
+                                <span><img src="/bizionic/images/devopCloud2_icon3.png" alt="#" /></span>
+                                <h6>ON-GOING OPTIMIZATION</h6>
+                                <p>Our continuous improvement method (based on established CI/CD procedures) reduces development time and cost while increasing your return on investment.</p>
                             </div>
                         </div> 
                         <div class="col-lg-4 col-md-6 provide_col">
                             <div class="industryNew_section2_colsInfo">
-                                <span><img src="/bizionic/images/awsC3_icon4.png" alt="#" /></span>
-                                <h6>CLOUD ECONOMICS FOCUS</h6>
-                                <p>Our assessments bake in Total Cost of Ownership models, ensuring the optimal cloud deployment mix aligned to your workload needs and maximizing ROI through continuous cost optimization.</p>
+                                <span><img src="/bizionic/images/devopCloud2_icon4.png" alt="#" /></span>
+                                <h6>360 DEGREE SERVICES</h6>
+                                <p>Bizionic's DevOps expertise covers everything from continuous monitoring to automated setup to infrastructure security.</p>
                             </div>
                         </div> 
                         <div class="col-lg-4 col-md-6 provide_col">
                             <div class="industryNew_section2_colsInfo">
-                                <span><img src="/bizionic/images/awsC3_icon5.png" alt="#" /></span>
-                                <h6>DevOps DNA</h6>
-                                <p>Our engineering DNA allows us to drastically enhance application performance, leveraging DevSecOps practices through organization-wide enablement of skills and culture change.</p>
+                                <span><img src="/bizionic/images/cloudM1_icon3.png" alt="#" /></span>
+                                <h6>SEAMLESS MIGRATION</h6>
+                                <p>Our DaaS specialist migrates DevOps to the cloud, helping developers, testers, and operations staff to communicate, develop, and deploy apps more quickly and effectively.</p>
                             </div>
                         </div> 
                         <div class="col-lg-4 col-md-6 provide_col">
                             <div class="industryNew_section2_colsInfo">
-                                <span><img src="/bizionic/images/awsC3_icon6.png" alt="#" /></span>
-                                <h6>SPECIALIZED EXPERTISE</h6>
-                                <p>We have deep cloud skills and experience across key workloads - SAP, big data, IoT, machine learning, and blockchain along with strong vertical capabilities in financial services, healthcare, retail, media etc.</p>
-                            </div>
-                        </div> 
-                        <div class="col-lg-4 col-md-6 provide_col">
-                            <div class="industryNew_section2_colsInfo">
-                                <span><img src="/bizionic/images/awsC3_icon7.png" alt="#" /></span>
-                                <h6>AGILE AND ACCOUNTABLE</h6>
-                                <p>We work in an agile methodology with complete ownership, clear milestones, and success metrics aligned to your business priorities. Quick pivots accelerate outcomes for you.</p>
-                            </div>
-                        </div> 
-                        <div class="col-lg-4 col-md-6 provide_col">
-                            <div class="industryNew_section2_colsInfo">
-                                <span><img src="/bizionic/images/awsC3_icon8.png" alt="#" /></span>
-                                <h6>PAY AS YOU GROW MODEL</h6>
-                                <p>Leverage our flexible managed services and only pay for the capacity you actually consume aligned to your growth and seasonal fluctuations, bringing peace of mind.</p>
-                            </div>
-                        </div> 
-                        <div class="col-lg-4 col-md-6 provide_col">
-                            <div class="industryNew_section2_colsInfo">
-                                <span><img src="/bizionic/images/awsC3_icon9.png" alt="#" /></span>
-                                <h6>SECURITY-CENTRIC DESIGN</h6>
-                                <p>Our ISO-certified practices and Zero Trust approach are infused throughout, covering network, infrastructure, applications, data, and identity perspectives to enable robust cloud security postures for our clients.</p>
+                                <span><img src="/bizionic/images/azure3Icon6.png" alt="#" /></span>
+                                <h6>VENDOR-AGNOSTIC GUIDANCE</h6>
+                                <p>Before initiating any engagement, our DevOps experts will evaluate your IT environment and create a step-by-step roadmap for the best DevOps adoption for you.</p>
                             </div>
                         </div> 
                         
@@ -408,7 +223,7 @@
 
 
                     <div class="custom_tittle p-0 pt-4">
-                        <p class="text-white text-justify p-0">Simply but - we have the right mix of real-world cloud expertise across technologies and verticals and business transformation skills - technical, operating model, and culture change to accelerate your journey.</p>
+                        <p class="text-white text-justify p-0">With Bizionic's end-to-end services, best practices and independence from DaaS providers, you get simplified DevOps management, continuous cost optimization, and secure architectures for your workloads.</p>
                     </div>
                 </div>
             </div>
@@ -430,7 +245,7 @@
                     <div class="needHelp_section_info">
                         <div class="custom_tittle text-left">
                             <h2> Need Help With<br> Your Cloud?</h2>
-                            <p class="p_color"><b>"No Worries!</b> Our experts are here to help you. Just fill the<br> form and we'll get back to you shortly!"</p>
+                            <p class="p_color">There are many DevOps’s partners, but only some combine strategic advisory with deep technical expertise to deliver end-to-end transformation as a true force multiplier. Let's discuss how we can accelerate outcomes for your organization.</p>
                         </div>
 
                         <div class="row">
@@ -501,50 +316,55 @@
                     <ul>
                         <li>
                             <div class="faq_new_list_info">
-                                <h6>1. Can I use my amazon.com account to use AWS?</h6>
-                                <p>You can create an AWS account using your current Amazon.com account. The AWS account is required to view your AWS activities, read reports, and manage your credentials, among other things.</p>
+                                <h6>1. What is DevOps, and what services does Bizionic Technologies offers as a DaaS Partner?</h6>
+                                <p class="pb-3">Organisations are rapidly turning to the cloud for flexibility, availability, affordability, infrastructure and software management, and other benefits. As more organisations migrate to the cloud, DevOps Consulting Services has followed suit. Migrating DevOps to the cloud allows developers, testers, and operations personnel to collaborate, develop, and deploy apps more quickly and efficiently. DevOps as a Service is the logical next step in this evolutionary process.</p>
+                                <p>Bizionic Technologies provides a variety of DevOps services to help businesses automate and streamline their software or app develop- ment and delivery processes. Services include continuous integration and delivery, infrastructure-as-code, cloud migration, and more.</p>
                             </div>
                         </li>
                         <li>
                             <div class="faq_new_list_info">
-                                <h6>2. What can I do using my AWS account?</h6>
-                                <p>The AWS platform may be utilised for increasing processing power, storing databases, delivering content, and a host of other tasks that companies require to run efficiently and expand. This includes the following: Utilising cloud-based web and application services storing data safely so that it can be accessed instantly from anywhere making use of databases such as Oracle, MySQL, etc. Bulk E-mailing using a Content Delivery Network (CDN) to quickly distribute files anywhere in the world.</p>
+                                <h6>2. How does Bizionic Technologies approach DevOps?</h6>
+                                <p class="">Bizionic Technologies' approach to DevOps focuses on enhancing collaboration and communication between development and operations teams. The company uses a variety of technologies and methodologies to automate and optimise the software or app development and delivery processes, resulting in shorter time to market and higher software quality.</p>
+                               
                             </div>
                         </li>
                         <li>
                             <div class="faq_new_list_info">
-                                <h6>3. Which services does AWS provide?</h6>
-                                <p>Among AWS's most well-liked and often utilised services are:</p>
+                                <h6>3. What are the biggest challenges in implementing DevOps?</h6>
+                                <p class="pb-3">The most significant challenge is cultural. Lack of cultural balance and silos between Development and Operations impede DevOps implementation. Other issues include DBAs' non-participation in release cycles and a lack of awareness of the software delivery process.</p>
 
-                                <ul class="faq_innerList">
-                                    <li><p><b>1. Amazon Elastic Cloud Compute (Amazon EC2).</b> This tool assists users in computing tasks.</p></li>
-                                    <li><p><b>2. Amazon Simple Storage Service (S3):</b> S3 safely saves data in the cloud as objects.</p></li>
-                                    <li><p><b>3. Amazon Virtual Private Cloud (VPC):</b> This networking service isolates the network infrastructure of the user. preventing unauth rised individuals from accessing information.</p></li>
-                                    <li><p><b>4. Amazon CloudFront:</b> Also known as the Global Content Delivery Service, this technology enables rapid and smooth content delivery.</p></li>
-                                    <li><p><b>5. Relational Database Services (RDS) on Amazon:</b> This is utilised for workloads involving databases. It is compatible with Microsoft SQL, Maria DB, Oracle, MySQL, and more.</p></li>
-                                </ul>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="faq_new_list_info">
+                                <h6>4. What industries does Bizionic Technologies DevOps services cater to?</h6>
+                                <p>Bizionic Technologies' provides DevOps services to a variety of industries, including software development, e-commerce, finance, healthcare, and others. The company specialises in adopting DevOps methods across a wide range of industries, ensuring that clients may reap the benefits of DevOps for their specific industry.</p>
+                            </div>
+                        </li>   
 
-                                <p>Just five of Amazon's services are included here. Use the information below to get in touch with Bizionic Technologies if you'd like to try any of the AWS services but aren't sure which is best for you or how to use it.</p>
-                            </div>
-                        </li>
                         <li>
                             <div class="faq_new_list_info">
-                                <h6>4. What are the advantages for users of AWS having the highest Availability Regions (AR)?</h6>
-                                <p>AWS is unquestionably the market leader in terms of Availability Zones, with 77 Availability Regions distributed over 24 geographic regions. As a user, this gives you the capacity to supply and operate applications and databases with far higher levels of availability, fault tolerance, and scalability than a data centre. Having your pick of AR also implies low latency. Because not all ARs are made equal (there are always disparities in hardware and talent), you can select the ones that best suit your budget and company objectives.</p>
+                                <h6>5.  Can Bizionic Technologies help with cloud migration for DevOps?</h6>
+                                <p class="">Yes, Bizionic Technologies' can assist clients in cloud migration for DevOps. The company has extensive experience transferring apps and infrastructure to multiple cloud platforms and can assist clients with cloud environment planning, migration, and maintenance.</p>
                             </div>
                         </li>
+
                         <li>
                             <div class="faq_new_list_info">
-                                <h6>5. What are benefits of utilising an AWS managed service provider?</h6>
-                                <p>Using an external Managed Service provider allows you to maximise the value of your AWS investment. The right provider can help you save expenses while increasing your ROI. You will save a significant amount of money that would otherwise be spent on engaging the resources you require and upskilling them to stay up with the periodic advances provided by AWS. An experienced managed services consultant can assist you in navigating the AWS landscape, selecting the services you require, and tailoring them to your needs while optimising costs.</p>
+                                <h6>6.  What is the typical ROI from DevOps?</h6>
+                                <p class="">DevOps ROI may be measured using quality, performance, and metrics. According to The State of DevOps 2019 report, compared to non-DevOps, DevOps has 208x deployment frequency, 106x faster lead time, and 22% less time spent on unplanned work/rework. Overall, there was a 60% increase in both the top and bottom lines.</p>
                             </div>
                         </li>
+
                         <li>
                             <div class="faq_new_list_info">
-                                <h6>6. Why does AWS rank as the top provider of Cloud Services?</h6>
-                                <p>Well, for one thing, they had a significant head start because they virtually founded the industry from scratch in 2006. Second, AWS provides a large menu of services—over 175 at last count—ranging from the most basic, such as compute, storage, and database, to cutting-edge technologies such as IoT and AI/ML. On the other hand, the startling complexity of the AWS environment necessitated guided navigation, or consumers risked spending far more than necessary. A certified AWS expert is the ideal approach to optimise your cloud for both productivity and cost-effectiveness.</p>
+                                <h6>7.  How does Bizionic Technologies collaborate with clients during the DevOps process?</h6>
+                                <p class="">Bizionic Technologies' believes in collaboration and open communication with clients during the DevOps process. Clients are encouraged to participate and provide input throughout the process to ensure that the final product fulfils their expectations. Bizionic Technologies' employs a project management application to keep clients informed about progress and achievements. The organisation also provides ongoing training and assistance to guarantee that clients can properly embrace and use the DevOps methods developed.</p>
                             </div>
                         </li>
+
+                        
+
                         <li>
                             <div class="faq_new_list_info">
                                 <h6>Can't find an answer to your question?</h6>

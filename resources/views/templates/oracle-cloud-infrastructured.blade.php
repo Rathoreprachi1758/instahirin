@@ -10,26 +10,26 @@
                 <div class="mainBanner_detail">
 
                     <div class="row align-items-center">
-                        <div class="col-lg-8 col-md-7 aos-init " data-aos="fade-right" data-aos-duration="1000" data-aos-easing="ease">
+                        <div class="col-lg-7 col-md-7 aos-init " data-aos="fade-right" data-aos-duration="1000" data-aos-easing="ease">
                             <div class="custom_tittle text-left ">
                                 <h1 class="text-white">
-                                    <b>AWS</b>  Cloud <br>
-                                    Consulting Services
+                                    <b>Oracle</b>  Cloud <br>
+                                    Infrastructure (OCI) Services
                                 </h1>
 
-                                <h3 class="text-white pr-5"><strong>We offer</strong> Customised, Low-Cost Cloud Consulting Services <strong>that enable</strong> Higher Computing, Performance, <strong>and</strong> Ultimate Scalability.</h3>
+                                <h3 class="text-white pr-2"><strong>We offer</strong> Customised, Low-Cost Cloud Consulting Services <strong>that enable</strong> Higher Computing, Performance, <strong>and</strong> Ultimate Scalability.</h3>
 
 
-                                <a href="/get-a-free-consultation" class="btn_default_white mt-4">Connect With Bizionic Technologies, Your Trusted AWS Cloud Consulting Partner</a>
+                                <a href="/get-a-free-consultation" class="btn_default_white mt-4">Connect With Bizionic Technologies, Your Trusted OCI Consulting Partner</a>
 
                             </div>
 
 
                         </div>
 
-                        <div class="col-lg-4 col-md-5 aos-init " data-aos="fade-left" data-aos-duration="1000" data-aos-easing="ease">
+                        <div class="col-lg-5 col-md-5 aos-init " data-aos="fade-left" data-aos-duration="1000" data-aos-easing="ease">
                             <div class="marketing_banner_fr">
-                                <span><img src="/bizionic/images/awsBanner_avatar.png" alt="#" /></span> 
+                                <span><img src="/bizionic/images/oracle_banner_avatar.png" alt="#" /></span> 
                             </div>
                         </div>
                     </div> 
@@ -45,8 +45,8 @@
                 <div class="industryNew_section2_cols">
                     <div class="industryNew_section2_info aos-init " data-aos="fade-up" data-aos-duration="1500" data-aos-easing="ease">
                         <div class="custom_tittle">
-                            <h2><strong>Overview of</strong> AWS Cloud Consulting Services, <strong>We offers</strong></h2> 
-                            <p class="p_color">With expert cloud migration and strategy, we help enterprises plan and execute seamless migrations to the AWS cloud. Our comprehensive migration framework covers the following:</p>
+                            <h2><strong>Overview of</strong> Oracle Cloud Infrastructure (OCI) Services, <strong>We offers</strong></h2> 
+                            <p class="p_color">With expert cloud migration and strategy, we help enterprises plan and execute seamless migrations to the Oracle cloud. Our comprehensive migration framework covers the following:</p>
                         </div>
                     </div>
 
@@ -54,34 +54,116 @@
                     <div class="row justify-content-center">
                         <div class="col-lg-3 col-md-6 provide_col">
                             <div class="industryNew_section2_colsInfo">
-                                <span><img src="/bizionic/images/awsCloud_icon1.png" alt="#" /></span>
-                                <h6>DISCOVERY & PLANNING</h6>
-                                <p>We assess your infrastructure, data, security needs, and dependencies to map applications and data to the optimal AWS architecture.</p>
+                                <span><img src="/bizionic/images/ociCloud_icon1.png" alt="#" /></span>
+                                <h6>COMPUTE</h6>
+                                <p>Provides flexible options for bare metal and virtual machine compute with choices of different CPU, memory and storage configurations to optimize price and performance.</p>
                             </div>
                         </div>
                         <div class="col-lg-3 col-md-6 provide_col">
                             <div class="industryNew_section2_colsInfo">
-                                <span><img src="/bizionic/images/awsCloud_icon2.png" alt="#" /></span>
-                                <h6>CLOUD ECONOMICS ANALYSIS</h6>
-                                <p>We conduct TCO analysis factors in your future capacity needs, utilization levels, etc., to arrive at the most cost-effective AWS deployment model.</p>
+                                <span><img src="/bizionic/images/ociCloud_icon2.png" alt="#" /></span>
+                                <h6>STORAGE</h6>
+                                <p>Offers low-latency block storage volumes and durable object storage with high availability and data redundancy mechanisms. Supports both traditional and modern apps.</p>
                             </div>
                         </div>
                         <div class="col-lg-3 col-md-6 provide_col">
                             <div class="industryNew_section2_colsInfo">
-                                <span><img src="/bizionic/images/awsCloud_icon3.png" alt="#" /></span>
-                                <h6>PROOF OF CONCEPTS</h6>
-                                <p>We test critical workloads via PoCs, addressing security, availability, and other viability questions upfront, derisking full-scale migration.</p>
+                                <span><img src="/bizionic/images/ociCloud_icon3.png" alt="#" /></span>
+                                <h6>DEVELOPER SERVICES</h6>
+                                <p>Offers cloud-native development tools, API gateways, event services and workflows to build, deploy and scale cloud-native applications rapidly. Integrates CI/CD as well.</p>
                             </div>
                         </div>
                         <div class="col-lg-3 col-md-6 provide_col">
                             <div class="industryNew_section2_colsInfo">
-                                <span><img src="/bizionic/images/awsCloud_icon4.png" alt="#" /></span>
-                                <h6>MIGRATION EXECUTION</h6>
-                                <p>Our automated tools and certified engineers ensure secure, low-risk migration via appropriate techniques rehosting, refactoring, re-platforming, rebuilding, etc.</p>
+                                <span><img src="/bizionic/images/ociCloud_icon4.png" alt="#" /></span>
+                                <h6>DATABASES</h6>
+                                <p>Fully-managed, high performance and auto-scaling database deployment options are available including flagship Oracle database, MySQL, PostgreSQL and others.</p>
+                            </div>
+                        </div>
+                        <div class="col-lg-3 col-md-6 provide_col">
+                            <div class="industryNew_section2_colsInfo">
+                                <span><img src="/bizionic/images/ociCloud_icon5.png" alt="#" /></span>
+                                <h6>NETWORKING</h6>
+                                <p>Delivers high bandwidths and lower latencies globally through Oracle's dense private SDN and FastConnect solutions for connecting from colocation and on-premise data centers.</p>
+                            </div>
+                        </div>
+                        <div class="col-lg-3 col-md-6 provide_col">
+                            <div class="industryNew_section2_colsInfo">
+                                <span><img src="/bizionic/images/ociCloud_icon6.png" alt="#" /></span>
+                                <h6>MONITORING</h6>
+                                <p>Provides unified console for monitoring usage metrics, logs, events across deployed resources for performance tuning, uptime tracking and cost optimization.</p>
+                            </div>
+                        </div>
+                        <div class="col-lg-3 col-md-6 provide_col">
+                            <div class="industryNew_section2_colsInfo">
+                                <span><img src="/bizionic/images/ociCloud_icon7.png" alt="#" /></span>
+                                <h6>SECURITY</h6>
+                                <p>Multi-layered security framework spans DDoS protection, WAF, data encryption, Identity Access Management, OS security updates and more. Allows addressing complex compliance and privacy regulations.</p>
                             </div>
                         </div>
                         
                     </div>
+
+                    <div class="custom_tittle p-0 pt-4">
+                        <p class="text-white text-justify p-0">With these robust capabilities for both infrastructure and platform services, OCI is a highly versatile cloud for running modern enterprise workloads.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+
+
+        <!-- distribute cloud section  -->
+
+        <div class="distributeCloud_sec ">
+            <div class="distributeCloud_sec_detail">
+                <div class="custom_tittle text-center">
+                    <h2><strong>OCI,</strong> a Distributed Cloud <strong>That Can Be</strong> Wherever You Need It</h2>
+                    <p class="p_color">The only cloud that provides comprehensive cloud services worldwide, across clouds, or in your data centre.</p>
+                </div>
+
+                <div class="distributeCloud_list d-none">
+                    <ul>
+                        <li class="list1">
+                            <div class="distributeCloud_list_info">
+                                <span>OCI <br>MULTICLOUD</span>
+                                <p>Make multiple clouds operate together. Oracle provides direct database connectivity with Microsoft Azure, as well
+                                as high performance interconnection.</p>
+                            </div>
+                        </li> 
+                        
+                        <li class="list2">
+                            <div class="distributeCloud_list_info">
+                                <span>OCI <br>PUBLIC CLOUD</span>
+                                <p>The only cloud that
+                                offers a consistent set of services and reasonable rates in both commercial and government public clouds.</p>
+                            </div>
+                        </li> 
+                    </ul>
+
+
+                    <ul> 
+                        <li class="list3">
+                            <div class="distributeCloud_list_info">
+                                <span>OCI <br>HYBRID CLOUD</span>
+                                <p>Trusted cloud solutions for almost any location, including Oracle Exadata Cloud@Customer, a highly optimised database as a service that is already available in
+                                over 60 countries.</p>
+                            </div>
+                        </li> 
+                        <li class="list4">
+                            <div class="distributeCloud_list_info">
+                                <span>OCI <br>DEDICATED CLOUD</span>
+                                <p>OCI Dedicated
+                                    Region and Oracle Alloy are the only products that offer over 100 cloud services at public cloud pricing within your data centres.</p>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+
+                
+                <div class="ociFlow">
+                    <span><img src="/bizionic/images/ociFlow.png" alt="#" /></span>
                 </div>
             </div>
         </div>
@@ -131,7 +213,7 @@
                 <div class="well_reviewsSec_detail">
                     <div class="custom_tittle text-ccenter">
                         <h2>Well-Architected Framework <strong>Reviews</strong></h2>
-                        <p class="text-justify p_color p-0">We conduct periodic well-architected reviews assessing your workloads on the five pillars of operational excellence, security, reliability, performance efficiency, and cost optimization - providing actionable recommendations. Let us customize a strategy and roadmap to maximize ROI from your AWS cloud investments.</p>
+                        <p class="text-justify p_color p-0">We conduct periodic well-architected reviews assessing your workloads on the five pillars of operational excellence, security, reliability, performance efficiency, and cost optimization - providing actionable recommendations. Let us customize a strategy and roadmap to maximize ROI from your Oracle Cloud Infrastructure (OCI) investments.</p>
                     </div>
                 </div>
             </div>
@@ -154,8 +236,9 @@
             <div class="">
                 <div class="industryNew_section2_cols">
                     <div class="industryNew_section2_info aos-init " data-aos="fade-up" data-aos-duration="1500" data-aos-easing="ease">
-                        <div class="custom_tittle">
-                            <h2><strong>Bizionic’s</strong>  AWS Cloud Services</h2> 
+                        <div class="custom_tittle text-center">
+                            <h2><strong>Why Choose</strong>  Oracle Cloud Infrastructure (OCI) Services?</h2> 
+                            <p class="p_color">Here are a few key reasons why Oracle Cloud Infrastructure (OCI) is an effective and cost-efficient cloud platform:</p>
                         </div>
                     </div>
 
@@ -163,158 +246,57 @@
                     <div class="row justify-content-center">
                         <div class="col-lg-4 col-md-6 provide_col">
                             <div class="industryNew_section2_colsInfo">
-                                <span><img src="/bizionic/images/awsC_icon1.png" alt="#" /></span>
-                                <h6>AMAZON EC2</h6>
-                                <p>Our speciality is building virtual servers, which we can scale up or down to meet the needs of your business operations.</p>
+                                <span><img src="/bizionic/images/azure2Icon1.png" alt="#" /></span>
+                                <h6>FLEXIBILITY AND SCALABILITY</h6>
+                                <p>OCI offers computing, storage, and services that scale to match application demands on an as-needed basis. As a result, expensive hardware infrastructure is no longer required.</p>
                             </div>
                         </div> 
                         <div class="col-lg-4 col-md-6 provide_col">
                             <div class="industryNew_section2_colsInfo">
-                                <span><img src="/bizionic/images/awsC_icon2.png" alt="#" /></span>
-                                <h6>AMAZON VPC</h6>
-                                <p>AWS's Virtual Private Cloud allows you to launch all AWS resources in a virtual network that you define based on your needs.</p>
+                                <span><img src="/bizionic/images/azure2Icon2.png" alt="#" /></span>
+                                <h6>COST-EFFECTIVENESS</h6>
+                                <p>You just pay for what you use with pay-per-use billing and no up-front infrastructure expenditures. Right-sized deployments lead to cost savings.</p>
                             </div>
                         </div> 
                         <div class="col-lg-4 col-md-6 provide_col">
                             <div class="industryNew_section2_colsInfo">
-                                <span><img src="/bizionic/images/awsC_icon3.png" alt="#" /></span>
-                                <h6>AMAZON S3</h6>
-                                <p>Amazon's Simple Storage Service (S3) provides cloud storage capacity for numerous types of web development applications.</p>
+                                <span><img src="/bizionic/images/azure2Icon3.png" alt="#" /></span>
+                                <h6>GLOBAL REACH</h6>
+                                <p>OCI ensures that your global clients can access your apps with minimal latency, even with data centres located all over the world.</p>
                             </div>
                         </div> 
                         <div class="col-lg-4 col-md-6 provide_col">
                             <div class="industryNew_section2_colsInfo">
-                                <span><img src="/bizionic/images/awsC_icon4.png" alt="#" /></span>
-                                <h6>AMAZON GLACIER</h6>
-                                <p>Bizionic’s SRO is an expert in connecting Amazon Glacier so that you can save data that is not commonly accessible to archive storage. This lowers storage expenses.</p>
+                                <span><img src="/bizionic/images/azure2Icon4.png" alt="#" /></span>
+                                <h6>SECURITY</h6>
+                                <p>OCI uses encryption and industry-best security procedures for all of its services. Data and applications are kept safe as a result.</p>
                             </div>
                         </div> 
                         <div class="col-lg-4 col-md-6 provide_col">
                             <div class="industryNew_section2_colsInfo">
-                                <span><img src="/bizionic/images/awsC_icon5.png" alt="#" /></span>
-                                <h6>AMAZON RDS</h6>
-                                <p>Amazon provides a dependable, cost-effective, and scalable Relational Database System (RDS) to successfully manage business transactions.</p>
+                                <span><img src="/bizionic/images/azure2Icon5.png" alt="#" /></span>
+                                <h6>INNOVATION</h6>
+                                <p>In order to accommodate the newest technological developments, OCI is constantly growing its service offering, from virtual machines to serverless computing.</p>
                             </div>
                         </div> 
                         <div class="col-lg-4 col-md-6 provide_col">
                             <div class="industryNew_section2_colsInfo">
-                                <span><img src="/bizionic/images/awsC_icon6.png" alt="#" /></span>
-                                <h6>AMAZON ELASTICACHE</h6>
-                                <p>Our cloud experts are aware of how important it is to cache applications in order to give the cloud optimal performance.</p>
-                            </div>
-                        </div> 
-                        <div class="col-lg-4 col-md-6 provide_col">
-                            <div class="industryNew_section2_colsInfo">
-                                <span><img src="/bizionic/images/awsC_icon7.png" alt="#" /></span>
-                                <h6>AMAZON CLOUDFRONT</h6>
-                                <p>Bizionic’s SRO's expertise with Amazon CloudFront CDN accelerates the distribution of various types of web content such as photos, videos, and APIs to your users globally in a short period of time.</p>
-                            </div>
-                        </div> 
-                        <div class="col-lg-4 col-md-6 provide_col">
-                            <div class="industryNew_section2_colsInfo">
-                                <span><img src="/bizionic/images/awsC_icon8.png" alt="#" /></span>
-                                <h6>AMAZON ROUTE 53</h6>
-                                <p>Easily manage your hosted zones, DNS records, and queries using Amazon Route 53.</p>
-                            </div>
-                        </div> 
-                        <div class="col-lg-4 col-md-6 provide_col">
-                            <div class="industryNew_section2_colsInfo">
-                                <span><img src="/bizionic/images/awsC_icon9.png" alt="#" /></span>
-                                <h6>AMAZON SES</h6>
-                                <p>We oversee your business's marketing and promotional email campaigns, which have a reduced unsubscribe rate. Get emails from people who have Amazon SES now.</p>
-                            </div>
-                        </div> 
-                        <div class="col-lg-4 col-md-6 provide_col">
-                            <div class="industryNew_section2_colsInfo">
-                                <span><img src="/bizionic/images/awsC_icon10.png" alt="#" /></span>
-                                <h6>AMAZON OpsWorks</h6>
-                                <p>Amazon OpsWorks manages infrastructure deployment enabling cloud admins to quickly install new servers.</p>
-                            </div>
-                        </div> 
-                        <div class="col-lg-4 col-md-6 provide_col">
-                            <div class="industryNew_section2_colsInfo">
-                                <span><img src="/bizionic/images/awsC_icon11.png" alt="#" /></span>
-                                <h6>AMAZON SQS</h6>
-                                <p>Effectively handle massive data volumes with Amazon SQS by using our AWS Cloud Consulting Services.</p>
-                            </div>
-                        </div> 
-                        <div class="col-lg-4 col-md-6 provide_col">
-                            <div class="industryNew_section2_colsInfo">
-                                <span><img src="/bizionic/images/awsC_icon12.png" alt="#" /></span>
-                                <h6>AMAZON SNS</h6>
-                                <p>Notifications can be sent to a large number of users at a very low cost using Amazon SNS.</p>
+                                <span><img src="/bizionic/images/azure2Icon6.png" alt="#" /></span>
+                                <h6>PRODUCTIVITY</h6>
+                                <p>On OCI, developers can produce solutions more quickly because to managed services, pre-built templates, and integrated development tools.</p>
                             </div>
                         </div> 
                         
+                        
+                    </div>
+
+
+                    <div class="custom_tittle p-0 pt-4">
+                        <p class="text-white text-justify p-0">In summary, OCI provides the flexibility, security, innovation, and cost-effectiveness to rapidly build, deploy, and manage scalable cloud applications globally. This makes it an appealing choice for many organizations.</p>
                     </div>
                 </div>
             </div>
-        </div>
-
-
-        <div class="provider_section">
-
-            <div class="">
-                <div class="industryNew_section2_cols">
-                    <div class="industryNew_section2_info aos-init " data-aos="fade-up" data-aos-duration="1500" data-aos-easing="ease">
-                        <div class="custom_tittle">
-                            <h2><strong>Bizionic’s</strong>  AWS Cloud Solutions</h2> 
-                        </div>
-                    </div>
-
-                
-                    <div class="row justify-content-center">
-                        <div class="col-lg-4 col-md-6 provide_col">
-                            <div class="industryNew_section2_colsInfo">
-                                <span><img src="/bizionic/images/awsC2_icon1.png" alt="#" /></span>
-                                <h6>MANAGED AWS OPERATIONS</h6>
-                                <p>OBizionic's experts handle your databases and cloud workloads around-the-clock to keep your company operating.</p>
-                            </div>
-                        </div> 
-                        <div class="col-lg-4 col-md-6 provide_col">
-                            <div class="industryNew_section2_colsInfo">
-                                <span><img src="/bizionic/images/awsC2_icon2.png" alt="#" /></span>
-                                <h6>ENTERPRISE DATA PLATFORM</h6>
-                                <p>AWS Enterprise Data Platform is a fully customis- able end-to-end solution that enables you get faster outcomes while preserving control over your corporate data assets.</p>
-                            </div>
-                        </div> 
-                        <div class="col-lg-4 col-md-6 provide_col">
-                            <div class="industryNew_section2_colsInfo">
-                                <span><img src="/bizionic/images/awsC2_icon3.png" alt="#" /></span>
-                                <h6>MIGRATING TO AWS</h6>
-                                <p>Migrate to AWS Cloud to discover a world of limitless possibilities for your organisation. Our Cloud professionals will examine your present infrastructure and guide you through the AWS migration process.</p>
-                            </div>
-                        </div> 
-                        <div class="col-lg-4 col-md-6 provide_col">
-                            <div class="industryNew_section2_colsInfo">
-                                <span><img src="/bizionic/images/awsC2_icon4.png" alt="#" /></span>
-                                <h6>AWS STRATEGY & CONSULTING</h6>
-                                <p>With our AWS consulting services, our cloud professionals evaluate your organisation and then create a solid plan based on tried-and-true techniques. We develop a strategy for leverag- ing the power of the Cloud.</p>
-                            </div>
-                        </div> 
-                        <div class="col-lg-4 col-md-6 provide_col">
-                            <div class="industryNew_section2_colsInfo">
-                                <span><img src="/bizionic/images/awsC2_icon5.png" alt="#" /></span>
-                                <h6>AUTOMATION & OPTIMIZATION</h6>
-                                <p>Accelerate your adoption of new technologies by employing AWS products to automate business processes. It could elevate your company to a higher level.</p>
-                            </div>
-                        </div> 
-                        <div class="col-lg-4 col-md-6 provide_col">
-                            <div class="industryNew_section2_colsInfo">
-                                <span><img src="/bizionic/images/awsC2_icon6.png" alt="#" /></span>
-                                <h6>BIG DATA</h6>
-                                <p>Integrating Big Data with AWS Cloud can yield unparalleled advantages for your business strategy and operations. We combine this with your existing cloud infrastructure.</p>
-                            </div>
-                        </div> 
-                        
-                        
-                    </div>
-                </div>
-            </div>
-        </div>
-
-        
- 
+        </div>  
 
     </div>
 
@@ -333,8 +315,8 @@
                 <div class="industryNew_section2_cols">
                     <div class="industryNew_section2_info aos-init " data-aos="fade-up" data-aos-duration="1500" data-aos-easing="ease">
                         <div class="custom_tittle">
-                            <h2><strong>Why Bizionic Technologies as Your</strong> AWS Consultant Partner</h2> 
-                            <p class="p_color">Here are the key reasons to choose Bizionic Technologies as your trusted<br> AWS Consulting and Implementation Partner:</p>
+                            <h2><strong>Why Bizionic Technologies as Your</strong> OCI Consultant Partner</h2> 
+                            <p class="p_color">Here are some of the key reasons why Bizionic Technologies makes an excellent Oracle Cloud Infrastructure (OCI) consultant:</p>
                         </div>
                     </div>
 
@@ -342,65 +324,44 @@
                     <div class="row justify-content-center">
                         <div class="col-lg-4 col-md-6 provide_col">
                             <div class="industryNew_section2_colsInfo">
-                                <span><img src="/bizionic/images/awsC3_icon1.png" alt="#" /></span>
-                                <h6>EXTENSIVE AWS EXPERTISE</h6>
-                                <p>With over 200 AWS certifications and proven success delivering complex cloud programs for enterprises, we have unmatched real-world AWS experience to smooth your cloud journey.</p>
+                                <span><img src="/bizionic/images/azure3Icon1.png" alt="#" /></span>
+                                <h6>PROVEN EXPERTISE AND EXPERIENCE</h6>
+                                <p>With years of extensive hands-on expertise in architecting, migrating and managing complex workloads on OCI, Bizionic brings in practical experience.</p>
                             </div>
                         </div> 
                         <div class="col-lg-4 col-md-6 provide_col">
                             <div class="industryNew_section2_colsInfo">
-                                <span><img src="/bizionic/images/awsC3_icon2.png" alt="#" /></span>
+                                <span><img src="/bizionic/images/azure3Icon2.png" alt="#" /></span>
+                                <h6>CERTIFIED OCI PROFESSIONALS</h6>
+                                <p>Our OCI certified architects, developers and admins ensure solutions follow Oracle best practices and deliver the highest performance.</p>
+                            </div>
+                        </div> 
+                        <div class="col-lg-4 col-md-6 provide_col">
+                            <div class="industryNew_section2_colsInfo">
+                                <span><img src="/bizionic/images/azure3Icon3.png" alt="#" /></span>
                                 <h6>HOLISTIC APPROACH</h6>
-                                <p>We go beyond infrastructure migration to drive tangible business outcomes - enhanced customer experiences, revenue growth, and product innovation through our integrated strategy covering processes, apps, data, and security perspectives.</p>
+                                <p>We provide end-to-end support - right from assessments, migration planning to execution, optimization and managed services - ensuring smooth cloud adoption.</p>
                             </div>
                         </div> 
                         <div class="col-lg-4 col-md-6 provide_col">
                             <div class="industryNew_section2_colsInfo">
-                                <span><img src="/bizionic/images/awsC3_icon3.png" alt="#" /></span>
-                                <h6>SOLUTION-DRIVEN MINDSET</h6>
-                                <p>We don't just provide standard AWS building blocks. Our consultants are obsessed with profoundly understanding your challenges to architect customized cloud solutions leveraging the full breadth of the AWS portfolio.</p>
+                                <span><img src="/bizionic/images/azure3Icon4.png" alt="#" /></span>
+                                <h6>CUSTOMIZED SOLUTIONS</h6>
+                                <p>Rather than one-size-fits-all, we tailor OCI deployment, architecture and configurations to your unique requirements.</p>
                             </div>
                         </div> 
                         <div class="col-lg-4 col-md-6 provide_col">
                             <div class="industryNew_section2_colsInfo">
-                                <span><img src="/bizionic/images/awsC3_icon4.png" alt="#" /></span>
-                                <h6>CLOUD ECONOMICS FOCUS</h6>
-                                <p>Our assessments bake in Total Cost of Ownership models, ensuring the optimal cloud deployment mix aligned to your workload needs and maximizing ROI through continuous cost optimization.</p>
+                                <span><img src="/bizionic/images/azure3Icon5.png" alt="#" /></span>
+                                <h6>TECHNOLOGY FOCUS</h6>
+                                <p>Keeping up-to-date with latest in OCI and cloud-native technologies ensures we architect optimized and innovative solutions.</p>
                             </div>
                         </div> 
                         <div class="col-lg-4 col-md-6 provide_col">
                             <div class="industryNew_section2_colsInfo">
-                                <span><img src="/bizionic/images/awsC3_icon5.png" alt="#" /></span>
-                                <h6>DevOps DNA</h6>
-                                <p>Our engineering DNA allows us to drastically enhance application performance, leveraging DevSecOps practices through organization-wide enablement of skills and culture change.</p>
-                            </div>
-                        </div> 
-                        <div class="col-lg-4 col-md-6 provide_col">
-                            <div class="industryNew_section2_colsInfo">
-                                <span><img src="/bizionic/images/awsC3_icon6.png" alt="#" /></span>
-                                <h6>SPECIALIZED EXPERTISE</h6>
-                                <p>We have deep cloud skills and experience across key workloads - SAP, big data, IoT, machine learning, and blockchain along with strong vertical capabilities in financial services, healthcare, retail, media etc.</p>
-                            </div>
-                        </div> 
-                        <div class="col-lg-4 col-md-6 provide_col">
-                            <div class="industryNew_section2_colsInfo">
-                                <span><img src="/bizionic/images/awsC3_icon7.png" alt="#" /></span>
-                                <h6>AGILE AND ACCOUNTABLE</h6>
-                                <p>We work in an agile methodology with complete ownership, clear milestones, and success metrics aligned to your business priorities. Quick pivots accelerate outcomes for you.</p>
-                            </div>
-                        </div> 
-                        <div class="col-lg-4 col-md-6 provide_col">
-                            <div class="industryNew_section2_colsInfo">
-                                <span><img src="/bizionic/images/awsC3_icon8.png" alt="#" /></span>
-                                <h6>PAY AS YOU GROW MODEL</h6>
-                                <p>Leverage our flexible managed services and only pay for the capacity you actually consume aligned to your growth and seasonal fluctuations, bringing peace of mind.</p>
-                            </div>
-                        </div> 
-                        <div class="col-lg-4 col-md-6 provide_col">
-                            <div class="industryNew_section2_colsInfo">
-                                <span><img src="/bizionic/images/awsC3_icon9.png" alt="#" /></span>
-                                <h6>SECURITY-CENTRIC DESIGN</h6>
-                                <p>Our ISO-certified practices and Zero Trust approach are infused throughout, covering network, infrastructure, applications, data, and identity perspectives to enable robust cloud security postures for our clients.</p>
+                                <span><img src="/bizionic/images/azure3Icon6.png" alt="#" /></span>
+                                <h6>STRATEGIC ADVISORY</h6>
+                                <p>We advise taking a cloud-smart approach balancing performance, scalability, security and cost considerations specific to each workload.</p>
                             </div>
                         </div> 
                         
@@ -408,7 +369,7 @@
 
 
                     <div class="custom_tittle p-0 pt-4">
-                        <p class="text-white text-justify p-0">Simply but - we have the right mix of real-world cloud expertise across technologies and verticals and business transformation skills - technical, operating model, and culture change to accelerate your journey.</p>
+                        <p class="text-white text-justify p-0">With Bizionic as your OCI specialist, you get the expertise to navigate OCI effectively, maximize ROI and keep innovating on the cloud. Our combination of skills, expertise and hands-on experience makes cloud adoption successful for complex workloads.</p>
                     </div>
                 </div>
             </div>
@@ -430,7 +391,7 @@
                     <div class="needHelp_section_info">
                         <div class="custom_tittle text-left">
                             <h2> Need Help With<br> Your Cloud?</h2>
-                            <p class="p_color"><b>"No Worries!</b> Our experts are here to help you. Just fill the<br> form and we'll get back to you shortly!"</p>
+                            <p class="p_color">There are many OCI partners, but only some combine strategic advisory with deep technical expertise to deliver end-to-end transformation as a true force multiplier. Let's discuss how we can accelerate outcomes for your organization.</p>
                         </div>
 
                         <div class="row">
@@ -501,48 +462,62 @@
                     <ul>
                         <li>
                             <div class="faq_new_list_info">
-                                <h6>1. Can I use my amazon.com account to use AWS?</h6>
-                                <p>You can create an AWS account using your current Amazon.com account. The AWS account is required to view your AWS activities, read reports, and manage your credentials, among other things.</p>
+                                <h6>1. What is the key benefit of using Oracle cloud infrastructure?</h6>
+                                <p>Oracle Cloud provides extensive security features such as encryption, multi-factor authentication, and network security controls. These features help safeguard your data from unauthorised access and cyber threats.</p>
                             </div>
                         </li>
                         <li>
                             <div class="faq_new_list_info">
-                                <h6>2. What can I do using my AWS account?</h6>
-                                <p>The AWS platform may be utilised for increasing processing power, storing databases, delivering content, and a host of other tasks that companies require to run efficiently and expand. This includes the following: Utilising cloud-based web and application services storing data safely so that it can be accessed instantly from anywhere making use of databases such as Oracle, MySQL, etc. Bulk E-mailing using a Content Delivery Network (CDN) to quickly distribute files anywhere in the world.</p>
+                                <h6>2. How does Oracle cloud infrastructure work?</h6>
+                                <p>Oracle Cloud Infrastructure integration services enable the automation and centralization of end-to-end operations by connecting any application and data source. The wide range of connectors, including prebuilt adapters and low-code customisation, make cloud migration easier while also easing hybrid and multicloud operations.</p>
                             </div>
                         </li>
                         <li>
                             <div class="faq_new_list_info">
-                                <h6>3. Which services does AWS provide?</h6>
-                                <p>Among AWS's most well-liked and often utilised services are:</p>
+                                <h6>3. What are the main benefits of using Oracle cloud infrastructure?</h6>
+                                <p>Oracle cloud infrastructure offers numerous advantages to businesses. The advantages are so great, in fact, that it is nearly hard to decide against switching company operations to an OCI platform. The following are some compelling arguments in favour of switching to the OCI platform:</p>
 
-                                <ul class="faq_innerList">
-                                    <li><p><b>1. Amazon Elastic Cloud Compute (Amazon EC2).</b> This tool assists users in computing tasks.</p></li>
-                                    <li><p><b>2. Amazon Simple Storage Service (S3):</b> S3 safely saves data in the cloud as objects.</p></li>
-                                    <li><p><b>3. Amazon Virtual Private Cloud (VPC):</b> This networking service isolates the network infrastructure of the user. preventing unauth rised individuals from accessing information.</p></li>
-                                    <li><p><b>4. Amazon CloudFront:</b> Also known as the Global Content Delivery Service, this technology enables rapid and smooth content delivery.</p></li>
-                                    <li><p><b>5. Relational Database Services (RDS) on Amazon:</b> This is utilised for workloads involving databases. It is compatible with Microsoft SQL, Maria DB, Oracle, MySQL, and more.</p></li>
+                                <ul class="abt_list pt-2 pb-0">
+                                    <li><p>Accessibility Anywhere, with Any Device</p></li>
+                                    <li><p>Ability to Get Rid of Most or All Hardware and Software</p></li>
+                                    <li><p>Centralized Data Security</p></li>
+                                    <li><p>Higher Performance andAvailability</p></li>
+                                    <li><p>Quick Application Deployment</p></li>
+                                    <li><p>Instant Business Insights and Continuity</p></li>
+                                    <li><p>Price-Performance and Cost Savings</p></li>
                                 </ul>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="faq_new_list_info">
+                                <h6>4. Which primary security features does Oracle Cloud Infrastructure provide?</h6>
+                                <p>Oracle created the Oracle Cloud Infrastructure architecture to ensure platform security through segregated network virtualization, highly secure firmware installation, a managed physical network, and network segmentation.</p>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="faq_new_list_info">
+                                <h6>5. Isn't Oracle Cloud just for large businesses? Can I start small and then expand?</h6>
+                                <p>Oracle Cloud Infrastructure is made so that businesses of all sizes can use the services that best suit their requirements. Customers can transfer the entire suite or a portion of it, depending on their needs and later, scale up as per their organisation needs.</p>
+                            </div>
+                        </li> 
+                        <li>
+                            <div class="faq_new_list_info">
+                                <h6>6. Is our Company Data Safe in Oracle Cloud? How Secure is OCI?</h6>
+                                <p>OCI places a high value on security. Oracle provides core-to-edge security, which includes enhanced customer isolation, customer data protection, protection against internet threats, and highly automated threat resolution. To improve security, Oracle provides Cloud@Cus- tomer, which grants access to all OCI features within the client's firewall.</p>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="faq_new_list_info">
+                                <h6>7. How Does Oracle Cloud Differentiate from the Market Leaders?</h6>
+                                <p>Oracle Cloud Infrastructure provides functionalities that are not comparable to AWS or Azure. These include the Gen2 Platform, a set of Bare Metal solutions, Autonomous Database Services, and RDMA Clustered networking for HPC. Oracle's excellent networking design provides clients with consistent performance and isolation, distinguishing it from competitors' virtualized, oversubscribed platforms. Oracle Cloud also provides other cost benefits:</p>
 
-                                <p>Just five of Amazon's services are included here. Use the information below to get in touch with Bizionic Technologies if you'd like to try any of the AWS services but aren't sure which is best for you or how to use it.</p>
-                            </div>
-                        </li>
-                        <li>
-                            <div class="faq_new_list_info">
-                                <h6>4. What are the advantages for users of AWS having the highest Availability Regions (AR)?</h6>
-                                <p>AWS is unquestionably the market leader in terms of Availability Zones, with 77 Availability Regions distributed over 24 geographic regions. As a user, this gives you the capacity to supply and operate applications and databases with far higher levels of availability, fault tolerance, and scalability than a data centre. Having your pick of AR also implies low latency. Because not all ARs are made equal (there are always disparities in hardware and talent), you can select the ones that best suit your budget and company objectives.</p>
-                            </div>
-                        </li>
-                        <li>
-                            <div class="faq_new_list_info">
-                                <h6>5. What are benefits of utilising an AWS managed service provider?</h6>
-                                <p>Using an external Managed Service provider allows you to maximise the value of your AWS investment. The right provider can help you save expenses while increasing your ROI. You will save a significant amount of money that would otherwise be spent on engaging the resources you require and upskilling them to stay up with the periodic advances provided by AWS. An experienced managed services consultant can assist you in navigating the AWS landscape, selecting the services you require, and tailoring them to your needs while optimising costs.</p>
-                            </div>
-                        </li>
-                        <li>
-                            <div class="faq_new_list_info">
-                                <h6>6. Why does AWS rank as the top provider of Cloud Services?</h6>
-                                <p>Well, for one thing, they had a significant head start because they virtually founded the industry from scratch in 2006. Second, AWS provides a large menu of services—over 175 at last count—ranging from the most basic, such as compute, storage, and database, to cutting-edge technologies such as IoT and AI/ML. On the other hand, the startling complexity of the AWS environment necessitated guided navigation, or consumers risked spending far more than necessary. A certified AWS expert is the ideal approach to optimise your cloud for both productivity and cost-effectiveness.</p>
+                                <ul class="abt_list pt-2 pb-0">
+                                    <li><p>Autonomous function helps reduce maintenance costs.</p></li>
+                                    <li><p>Low-cost Block Storage</p></li>
+                                    <li><p>Low cost Egress (Network Outbound Cost)</p></li>
+                                    <li><p>Built specifically for enterprise applications such as EBS, Peoplesoft, JD Edwards, and other key ERP systems.</p></li>
+                                    <li><p>Oracle's primary goal with its Security First Architecture has been to make it as secure as possible.</p></li> 
+                                </ul>
                             </div>
                         </li>
                         <li>

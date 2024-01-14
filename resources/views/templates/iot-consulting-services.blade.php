@@ -10,26 +10,25 @@
                 <div class="mainBanner_detail">
 
                     <div class="row align-items-center">
-                        <div class="col-lg-8 col-md-7 aos-init " data-aos="fade-right" data-aos-duration="1000" data-aos-easing="ease">
+                        <div class="col-lg-7 col-md-7 aos-init " data-aos="fade-right" data-aos-duration="1000" data-aos-easing="ease">
                             <div class="custom_tittle text-left ">
                                 <h1 class="text-white">
-                                    <b>AWS</b>  Cloud <br>
-                                    Consulting Services
+                                    <b>IoT</b>  Consulting <br> Services
                                 </h1>
 
-                                <h3 class="text-white pr-5"><strong>We offer</strong> Customised, Low-Cost Cloud Consulting Services <strong>that enable</strong> Higher Computing, Performance, <strong>and</strong> Ultimate Scalability.</h3>
+                                <h3 class="text-white pr-2"><strong>We offer</strong> Customised, Low-Cost Cloud Consulting Services <strong>that enable</strong> Higher Computing, Performance, <strong>and</strong> Ultimate Scalability.</h3>
 
 
-                                <a href="/get-a-free-consultation" class="btn_default_white mt-4">Connect With Bizionic Technologies, Your Trusted AWS Cloud Consulting Partner</a>
+                                <a href="/get-a-free-consultation" class="btn_default_white mt-4">Connect With Bizionic Technologies, Your Trusted IoT Partner</a>
 
                             </div>
 
 
                         </div>
 
-                        <div class="col-lg-4 col-md-5 aos-init " data-aos="fade-left" data-aos-duration="1000" data-aos-easing="ease">
+                        <div class="col-lg-5 col-md-5 aos-init " data-aos="fade-left" data-aos-duration="1000" data-aos-easing="ease">
                             <div class="marketing_banner_fr">
-                                <span><img src="/bizionic/images/awsBanner_avatar.png" alt="#" /></span> 
+                                <span><img src="/bizionic/images/iot_banner_avatar.png" alt="#" /></span> 
                             </div>
                         </div>
                     </div> 
@@ -39,53 +38,67 @@
         </div> 
 
 
-        <div class="provider_section">
+        <div class="provider_section iotMain_sec">
 
             <div class="">
                 <div class="industryNew_section2_cols">
                     <div class="industryNew_section2_info aos-init " data-aos="fade-up" data-aos-duration="1500" data-aos-easing="ease">
                         <div class="custom_tittle">
-                            <h2><strong>Overview of</strong> AWS Cloud Consulting Services, <strong>We offers</strong></h2> 
-                            <p class="p_color">With expert cloud migration and strategy, we help enterprises plan and execute seamless migrations to the AWS cloud. Our comprehensive migration framework covers the following:</p>
+                            <h2><strong>Overview of</strong> IoTs Solutions, <strong>We offers</strong></h2> 
+                            <p class="p_color">Bizionic Technologies offers efficient and cost-effective IoT solutions for industries of all sizes, as well as a comprehensive range of related services, including strategy and consulting, design and execution, operations management and analytics, support, and evolution.</p>
                         </div>
                     </div>
 
                 
                     <div class="row justify-content-center">
-                        <div class="col-lg-3 col-md-6 provide_col">
+                        <div class="col-lg-4 col-md-6 provide_col">
                             <div class="industryNew_section2_colsInfo">
-                                <span><img src="/bizionic/images/awsCloud_icon1.png" alt="#" /></span>
-                                <h6>DISCOVERY & PLANNING</h6>
-                                <p>We assess your infrastructure, data, security needs, and dependencies to map applications and data to the optimal AWS architecture.</p>
+                                <span><img src="/bizionic/images/iot_icon1.png" alt="#" /></span>
+                                <h6>PLANNING</h6>
+                                <p><b>Requirements Elicitation & Analysis</b></p>
+                                <p><b>Technology Planning</b></p>
+                                <p><b>(LoRa, 6LoWPAN, LTE CAT,BLE)</b></p>
+                                <p><b>Business Process & Technology Modeling</b></p>
+                                <p><b>Platform Consulting</b></p>
+                                <p><b>Device Planning & Testing</b></p>
                             </div>
                         </div>
-                        <div class="col-lg-3 col-md-6 provide_col">
+                        <div class="col-lg-4 col-md-6 provide_col">
                             <div class="industryNew_section2_colsInfo">
-                                <span><img src="/bizionic/images/awsCloud_icon2.png" alt="#" /></span>
-                                <h6>CLOUD ECONOMICS ANALYSIS</h6>
-                                <p>We conduct TCO analysis factors in your future capacity needs, utilization levels, etc., to arrive at the most cost-effective AWS deployment model.</p>
+                                <span><img src="/bizionic/images/iot_icon2.png" alt="#" /></span>
+                                <h6>SOLUTION DEVELOPMENT</h6>
+                                <p><b>Proof of Concep</b></p>    
+                                <p><b>Rapid Prototyping</b></p>    
+                                <p><b>Platform Testing</b></p>    
+                                <p><b>Device Field Testing</b></p>    
+                                <p><b>Mobile Application Testing</b></p>    
+                                <p><b>End-to-End Solution Testing</b></p>    
+                                <p><b>Program Management</b></p>    
+                                <p><b>System Integration</b></p>    
                             </div>
                         </div>
-                        <div class="col-lg-3 col-md-6 provide_col">
+                        <div class="col-lg-4 col-md-6 provide_col">
                             <div class="industryNew_section2_colsInfo">
-                                <span><img src="/bizionic/images/awsCloud_icon3.png" alt="#" /></span>
-                                <h6>PROOF OF CONCEPTS</h6>
-                                <p>We test critical workloads via PoCs, addressing security, availability, and other viability questions upfront, derisking full-scale migration.</p>
+                                <span><img src="/bizionic/images/iot_icon3.png" alt="#" /></span>
+                                <h6>CONTAINERIZATION & ORCHESTRATION</h6>
+                                <p><b>Software or Application Management</b></p>    
+                                <p><b>Device Virtualization & Management</b></p>    
+                                <p><b>Cloud Hosting & Integration</b></p>    
+                                <p><b>Data Visualization, Analytics & Dashboards</b></p>    
+                                <p><b>Remote Infrastructure Management</b></p>    
+                                <p><b>L1/L2/L3 Support</b></p>    
                             </div>
-                        </div>
-                        <div class="col-lg-3 col-md-6 provide_col">
-                            <div class="industryNew_section2_colsInfo">
-                                <span><img src="/bizionic/images/awsCloud_icon4.png" alt="#" /></span>
-                                <h6>MIGRATION EXECUTION</h6>
-                                <p>Our automated tools and certified engineers ensure secure, low-risk migration via appropriate techniques rehosting, refactoring, re-platforming, rebuilding, etc.</p>
-                            </div>
-                        </div>
+                        </div> 
                         
+                    </div>
+
+                    <div class="custom_tittle p-0 pt-4">
+                        <p class="text-white text-justify p-0">With continuous innovation across infrastructure, platform, productivity and application services, Bizionic’s team provides a feature-rich environment to build, deploy and manage scalable IoT services.</p>
                     </div>
                 </div>
             </div>
         </div>
-
+ 
         
 
 
@@ -103,21 +116,20 @@
                     <div class="row">
                         <div class="col-lg-4 col-md-4">
                             <div class="ongoing_col">
-                                <span>COST<br> OPTIMIZATION</span>
-                                <p>Rightsizing, purchasing model optimization, spot instance leveraging, and automation to lower TCO.</p>
+                                <span>IoT<br> CONSULTING</span>
+                                <p>Our IoT Specialists will help you capitalise on new opportunities and align them with your business plan.</p>
                             </div>
                         </div>
                         <div class="col-lg-4 col-md-4">
                             <div class="ongoing_col">
-                                <span>PERFORMANCE <br> TUNING</span>
-                                <p>High-performance architecture design, database optimization, load testing, and latency reduction.</p>
+                                <span>IoT <br> DEVELOPMENT</span>
+                                <p>Our full-cycle IoT services encompass research, design, development, integration, and testing.</p>
                             </div>
                         </div>
                         <div class="col-lg-4 col-md-4">
                             <div class="ongoing_col">
-                                <span>CLOUD-NATIVE INNOVATION</span>
-                                <p>Migration of legacy
-                                    apps to microservices, building new cloud-native apps, and leveraging serverless/containers to boost agility.</p>
+                                <span>IoT <br> ANALYTICS</span>
+                                <p>We offer IoT Analytics solutions such as business analysis, dashboard design, architectural design / development, and quality assurance.</p>
                             </div>
                         </div>
                     </div>
@@ -131,7 +143,7 @@
                 <div class="well_reviewsSec_detail">
                     <div class="custom_tittle text-ccenter">
                         <h2>Well-Architected Framework <strong>Reviews</strong></h2>
-                        <p class="text-justify p_color p-0">We conduct periodic well-architected reviews assessing your workloads on the five pillars of operational excellence, security, reliability, performance efficiency, and cost optimization - providing actionable recommendations. Let us customize a strategy and roadmap to maximize ROI from your AWS cloud investments.</p>
+                        <p class="text-justify p_color p-0">We conduct periodic well-architected reviews assessing your workloads on the five pillars of operational excellence, security, reliability, performance efficiency, and cost optimization - providing actionable recommendations. Let us customize a strategy and roadmap to maximize ROI from your IoT investments.</p>
                     </div>
                 </div>
             </div>
@@ -139,192 +151,12 @@
 
     </div>
 
- </div>
-
+ </div> 
 
 
 
  <div class="consulting_innerPages_main bg_fff aws2">
     <div class="auto_container">
-
-        <!-- main banner  --> 
-
-        <div class="provider_section">
-
-            <div class="">
-                <div class="industryNew_section2_cols">
-                    <div class="industryNew_section2_info aos-init " data-aos="fade-up" data-aos-duration="1500" data-aos-easing="ease">
-                        <div class="custom_tittle">
-                            <h2><strong>Bizionic’s</strong>  AWS Cloud Services</h2> 
-                        </div>
-                    </div>
-
-                
-                    <div class="row justify-content-center">
-                        <div class="col-lg-4 col-md-6 provide_col">
-                            <div class="industryNew_section2_colsInfo">
-                                <span><img src="/bizionic/images/awsC_icon1.png" alt="#" /></span>
-                                <h6>AMAZON EC2</h6>
-                                <p>Our speciality is building virtual servers, which we can scale up or down to meet the needs of your business operations.</p>
-                            </div>
-                        </div> 
-                        <div class="col-lg-4 col-md-6 provide_col">
-                            <div class="industryNew_section2_colsInfo">
-                                <span><img src="/bizionic/images/awsC_icon2.png" alt="#" /></span>
-                                <h6>AMAZON VPC</h6>
-                                <p>AWS's Virtual Private Cloud allows you to launch all AWS resources in a virtual network that you define based on your needs.</p>
-                            </div>
-                        </div> 
-                        <div class="col-lg-4 col-md-6 provide_col">
-                            <div class="industryNew_section2_colsInfo">
-                                <span><img src="/bizionic/images/awsC_icon3.png" alt="#" /></span>
-                                <h6>AMAZON S3</h6>
-                                <p>Amazon's Simple Storage Service (S3) provides cloud storage capacity for numerous types of web development applications.</p>
-                            </div>
-                        </div> 
-                        <div class="col-lg-4 col-md-6 provide_col">
-                            <div class="industryNew_section2_colsInfo">
-                                <span><img src="/bizionic/images/awsC_icon4.png" alt="#" /></span>
-                                <h6>AMAZON GLACIER</h6>
-                                <p>Bizionic’s SRO is an expert in connecting Amazon Glacier so that you can save data that is not commonly accessible to archive storage. This lowers storage expenses.</p>
-                            </div>
-                        </div> 
-                        <div class="col-lg-4 col-md-6 provide_col">
-                            <div class="industryNew_section2_colsInfo">
-                                <span><img src="/bizionic/images/awsC_icon5.png" alt="#" /></span>
-                                <h6>AMAZON RDS</h6>
-                                <p>Amazon provides a dependable, cost-effective, and scalable Relational Database System (RDS) to successfully manage business transactions.</p>
-                            </div>
-                        </div> 
-                        <div class="col-lg-4 col-md-6 provide_col">
-                            <div class="industryNew_section2_colsInfo">
-                                <span><img src="/bizionic/images/awsC_icon6.png" alt="#" /></span>
-                                <h6>AMAZON ELASTICACHE</h6>
-                                <p>Our cloud experts are aware of how important it is to cache applications in order to give the cloud optimal performance.</p>
-                            </div>
-                        </div> 
-                        <div class="col-lg-4 col-md-6 provide_col">
-                            <div class="industryNew_section2_colsInfo">
-                                <span><img src="/bizionic/images/awsC_icon7.png" alt="#" /></span>
-                                <h6>AMAZON CLOUDFRONT</h6>
-                                <p>Bizionic’s SRO's expertise with Amazon CloudFront CDN accelerates the distribution of various types of web content such as photos, videos, and APIs to your users globally in a short period of time.</p>
-                            </div>
-                        </div> 
-                        <div class="col-lg-4 col-md-6 provide_col">
-                            <div class="industryNew_section2_colsInfo">
-                                <span><img src="/bizionic/images/awsC_icon8.png" alt="#" /></span>
-                                <h6>AMAZON ROUTE 53</h6>
-                                <p>Easily manage your hosted zones, DNS records, and queries using Amazon Route 53.</p>
-                            </div>
-                        </div> 
-                        <div class="col-lg-4 col-md-6 provide_col">
-                            <div class="industryNew_section2_colsInfo">
-                                <span><img src="/bizionic/images/awsC_icon9.png" alt="#" /></span>
-                                <h6>AMAZON SES</h6>
-                                <p>We oversee your business's marketing and promotional email campaigns, which have a reduced unsubscribe rate. Get emails from people who have Amazon SES now.</p>
-                            </div>
-                        </div> 
-                        <div class="col-lg-4 col-md-6 provide_col">
-                            <div class="industryNew_section2_colsInfo">
-                                <span><img src="/bizionic/images/awsC_icon10.png" alt="#" /></span>
-                                <h6>AMAZON OpsWorks</h6>
-                                <p>Amazon OpsWorks manages infrastructure deployment enabling cloud admins to quickly install new servers.</p>
-                            </div>
-                        </div> 
-                        <div class="col-lg-4 col-md-6 provide_col">
-                            <div class="industryNew_section2_colsInfo">
-                                <span><img src="/bizionic/images/awsC_icon11.png" alt="#" /></span>
-                                <h6>AMAZON SQS</h6>
-                                <p>Effectively handle massive data volumes with Amazon SQS by using our AWS Cloud Consulting Services.</p>
-                            </div>
-                        </div> 
-                        <div class="col-lg-4 col-md-6 provide_col">
-                            <div class="industryNew_section2_colsInfo">
-                                <span><img src="/bizionic/images/awsC_icon12.png" alt="#" /></span>
-                                <h6>AMAZON SNS</h6>
-                                <p>Notifications can be sent to a large number of users at a very low cost using Amazon SNS.</p>
-                            </div>
-                        </div> 
-                        
-                    </div>
-                </div>
-            </div>
-        </div>
-
-
-        <div class="provider_section">
-
-            <div class="">
-                <div class="industryNew_section2_cols">
-                    <div class="industryNew_section2_info aos-init " data-aos="fade-up" data-aos-duration="1500" data-aos-easing="ease">
-                        <div class="custom_tittle">
-                            <h2><strong>Bizionic’s</strong>  AWS Cloud Solutions</h2> 
-                        </div>
-                    </div>
-
-                
-                    <div class="row justify-content-center">
-                        <div class="col-lg-4 col-md-6 provide_col">
-                            <div class="industryNew_section2_colsInfo">
-                                <span><img src="/bizionic/images/awsC2_icon1.png" alt="#" /></span>
-                                <h6>MANAGED AWS OPERATIONS</h6>
-                                <p>OBizionic's experts handle your databases and cloud workloads around-the-clock to keep your company operating.</p>
-                            </div>
-                        </div> 
-                        <div class="col-lg-4 col-md-6 provide_col">
-                            <div class="industryNew_section2_colsInfo">
-                                <span><img src="/bizionic/images/awsC2_icon2.png" alt="#" /></span>
-                                <h6>ENTERPRISE DATA PLATFORM</h6>
-                                <p>AWS Enterprise Data Platform is a fully customis- able end-to-end solution that enables you get faster outcomes while preserving control over your corporate data assets.</p>
-                            </div>
-                        </div> 
-                        <div class="col-lg-4 col-md-6 provide_col">
-                            <div class="industryNew_section2_colsInfo">
-                                <span><img src="/bizionic/images/awsC2_icon3.png" alt="#" /></span>
-                                <h6>MIGRATING TO AWS</h6>
-                                <p>Migrate to AWS Cloud to discover a world of limitless possibilities for your organisation. Our Cloud professionals will examine your present infrastructure and guide you through the AWS migration process.</p>
-                            </div>
-                        </div> 
-                        <div class="col-lg-4 col-md-6 provide_col">
-                            <div class="industryNew_section2_colsInfo">
-                                <span><img src="/bizionic/images/awsC2_icon4.png" alt="#" /></span>
-                                <h6>AWS STRATEGY & CONSULTING</h6>
-                                <p>With our AWS consulting services, our cloud professionals evaluate your organisation and then create a solid plan based on tried-and-true techniques. We develop a strategy for leverag- ing the power of the Cloud.</p>
-                            </div>
-                        </div> 
-                        <div class="col-lg-4 col-md-6 provide_col">
-                            <div class="industryNew_section2_colsInfo">
-                                <span><img src="/bizionic/images/awsC2_icon5.png" alt="#" /></span>
-                                <h6>AUTOMATION & OPTIMIZATION</h6>
-                                <p>Accelerate your adoption of new technologies by employing AWS products to automate business processes. It could elevate your company to a higher level.</p>
-                            </div>
-                        </div> 
-                        <div class="col-lg-4 col-md-6 provide_col">
-                            <div class="industryNew_section2_colsInfo">
-                                <span><img src="/bizionic/images/awsC2_icon6.png" alt="#" /></span>
-                                <h6>BIG DATA</h6>
-                                <p>Integrating Big Data with AWS Cloud can yield unparalleled advantages for your business strategy and operations. We combine this with your existing cloud infrastructure.</p>
-                            </div>
-                        </div> 
-                        
-                        
-                    </div>
-                </div>
-            </div>
-        </div>
-
-        
- 
-
-    </div>
-
- </div>
-
-
-
-
- <div class="consulting_innerPages_main bg_f5f5f5 aws3">
-    <div class="auto_container">
  
 
         <div class="provider_section">
@@ -333,8 +165,8 @@
                 <div class="industryNew_section2_cols">
                     <div class="industryNew_section2_info aos-init " data-aos="fade-up" data-aos-duration="1500" data-aos-easing="ease">
                         <div class="custom_tittle">
-                            <h2><strong>Why Bizionic Technologies as Your</strong> AWS Consultant Partner</h2> 
-                            <p class="p_color">Here are the key reasons to choose Bizionic Technologies as your trusted<br> AWS Consulting and Implementation Partner:</p>
+                            <h2><strong>Why Bizionic Technologies as Your</strong> IoT Service’s Partner</h2> 
+                            <p class="p_color">Here are the top reasons to choose Bizionic Technologies as your IoT Consultant:</p>
                         </div>
                     </div>
 
@@ -342,65 +174,44 @@
                     <div class="row justify-content-center">
                         <div class="col-lg-4 col-md-6 provide_col">
                             <div class="industryNew_section2_colsInfo">
-                                <span><img src="/bizionic/images/awsC3_icon1.png" alt="#" /></span>
-                                <h6>EXTENSIVE AWS EXPERTISE</h6>
-                                <p>With over 200 AWS certifications and proven success delivering complex cloud programs for enterprises, we have unmatched real-world AWS experience to smooth your cloud journey.</p>
+                                <span><img src="/bizionic/images/iot2_icon1.png" alt="#" /></span>
+                                <h6>STRATEGY AND SOLUTION DESIGN</h6>
+                                <p>IoT initiatives are highly complicated and are most likely to succeed when well-defined business outcomes are combined with a comprehensive yet adaptive approach. Our digital-first approach promotes transformation via IoT solutions and a practical, end-to-end IoT solution strategy.</p>
                             </div>
                         </div> 
                         <div class="col-lg-4 col-md-6 provide_col">
                             <div class="industryNew_section2_colsInfo">
-                                <span><img src="/bizionic/images/awsC3_icon2.png" alt="#" /></span>
-                                <h6>HOLISTIC APPROACH</h6>
-                                <p>We go beyond infrastructure migration to drive tangible business outcomes - enhanced customer experiences, revenue growth, and product innovation through our integrated strategy covering processes, apps, data, and security perspectives.</p>
+                                <span><img src="/bizionic/images/iot2_icon2.png" alt="#" /></span>
+                                <h6>ARCHITECTURE AND DEPLOYMENT</h6>
+                                <p>Integrated solution architecture and design are critical to IoT initiative success. We provide end-to-end IoT services that address all parts of an IoT solution, simplifying the deployment process and ensuring optimal cost structures.</p>
                             </div>
                         </div> 
                         <div class="col-lg-4 col-md-6 provide_col">
                             <div class="industryNew_section2_colsInfo">
-                                <span><img src="/bizionic/images/awsC3_icon3.png" alt="#" /></span>
-                                <h6>SOLUTION-DRIVEN MINDSET</h6>
-                                <p>We don't just provide standard AWS building blocks. Our consultants are obsessed with profoundly understanding your challenges to architect customized cloud solutions leveraging the full breadth of the AWS portfolio.</p>
+                                <span><img src="/bizionic/images/iot2_icon3.png" alt="#" /></span>
+                                <h6>PROACTIVE MANAGEMENT</h6>
+                                <p>We offer proactive device management solutions, such as policy/procedure management, device upgrades, and identity/access management. Our IoT connectivity management system provides visibility into device and connectivity monitoring and optimisation.</p>
                             </div>
                         </div> 
                         <div class="col-lg-4 col-md-6 provide_col">
                             <div class="industryNew_section2_colsInfo">
-                                <span><img src="/bizionic/images/awsC3_icon4.png" alt="#" /></span>
-                                <h6>CLOUD ECONOMICS FOCUS</h6>
-                                <p>Our assessments bake in Total Cost of Ownership models, ensuring the optimal cloud deployment mix aligned to your workload needs and maximizing ROI through continuous cost optimization.</p>
+                                <span><img src="/bizionic/images/iot2_icon4.png" alt="#" /></span>
+                                <h6>ANALYTICS AND INSIGHTS</h6>
+                                <p>IoT value is built by gathering new data streams and revealing hidden insights. We enable advanced capabilities like edge computing and artificial intelligence with our data-driven solution framework by including data architecture early and often.</p>
                             </div>
                         </div> 
                         <div class="col-lg-4 col-md-6 provide_col">
                             <div class="industryNew_section2_colsInfo">
-                                <span><img src="/bizionic/images/awsC3_icon5.png" alt="#" /></span>
-                                <h6>DevOps DNA</h6>
-                                <p>Our engineering DNA allows us to drastically enhance application performance, leveraging DevSecOps practices through organization-wide enablement of skills and culture change.</p>
+                                <span><img src="/bizionic/images/iot2_icon5.png" alt="#" /></span>
+                                <h6>TESTING AND SECURITY</h6>
+                                <p>We provides offensive security testing to detect device vulnerabilities, threat modelling to mitigate risks, and extra services like firmware analysis, device tear-down, and reverse engineering.</p>
                             </div>
                         </div> 
                         <div class="col-lg-4 col-md-6 provide_col">
                             <div class="industryNew_section2_colsInfo">
-                                <span><img src="/bizionic/images/awsC3_icon6.png" alt="#" /></span>
-                                <h6>SPECIALIZED EXPERTISE</h6>
-                                <p>We have deep cloud skills and experience across key workloads - SAP, big data, IoT, machine learning, and blockchain along with strong vertical capabilities in financial services, healthcare, retail, media etc.</p>
-                            </div>
-                        </div> 
-                        <div class="col-lg-4 col-md-6 provide_col">
-                            <div class="industryNew_section2_colsInfo">
-                                <span><img src="/bizionic/images/awsC3_icon7.png" alt="#" /></span>
-                                <h6>AGILE AND ACCOUNTABLE</h6>
-                                <p>We work in an agile methodology with complete ownership, clear milestones, and success metrics aligned to your business priorities. Quick pivots accelerate outcomes for you.</p>
-                            </div>
-                        </div> 
-                        <div class="col-lg-4 col-md-6 provide_col">
-                            <div class="industryNew_section2_colsInfo">
-                                <span><img src="/bizionic/images/awsC3_icon8.png" alt="#" /></span>
-                                <h6>PAY AS YOU GROW MODEL</h6>
-                                <p>Leverage our flexible managed services and only pay for the capacity you actually consume aligned to your growth and seasonal fluctuations, bringing peace of mind.</p>
-                            </div>
-                        </div> 
-                        <div class="col-lg-4 col-md-6 provide_col">
-                            <div class="industryNew_section2_colsInfo">
-                                <span><img src="/bizionic/images/awsC3_icon9.png" alt="#" /></span>
-                                <h6>SECURITY-CENTRIC DESIGN</h6>
-                                <p>Our ISO-certified practices and Zero Trust approach are infused throughout, covering network, infrastructure, applications, data, and identity perspectives to enable robust cloud security postures for our clients.</p>
+                                <span><img src="/bizionic/images/iot2_icon6.png" alt="#" /></span>
+                                <h6>SUPPORT AND MAINTENENCE</h6>
+                                <p>By initiating your project with Bizionic Technologies, you get links to a devoted and skilled team that will support you around the clock. We begin with a thorough assessment of your needs and continue with post-launch support and updates.</p>
                             </div>
                         </div> 
                         
@@ -408,7 +219,7 @@
 
 
                     <div class="custom_tittle p-0 pt-4">
-                        <p class="text-white text-justify p-0">Simply but - we have the right mix of real-world cloud expertise across technologies and verticals and business transformation skills - technical, operating model, and culture change to accelerate your journey.</p>
+                        <p class="text-white text-justify p-0">There are many IoT’s partners, but only some combine strategic advisory with deep technical expertise to deliver end-to-end transformation as a true force multiplier. Let's discuss how we can accelerate outcomes for your organization.</p>
                     </div>
                 </div>
             </div>
@@ -430,7 +241,7 @@
                     <div class="needHelp_section_info">
                         <div class="custom_tittle text-left">
                             <h2> Need Help With<br> Your Cloud?</h2>
-                            <p class="p_color"><b>"No Worries!</b> Our experts are here to help you. Just fill the<br> form and we'll get back to you shortly!"</p>
+                            <p class="p_color">There are many DevOps’s partners, but only some combine strategic advisory with deep technical expertise to deliver end-to-end transformation as a true force multiplier. Let's discuss how we can accelerate outcomes for your organization.</p>
                         </div>
 
                         <div class="row">
@@ -501,50 +312,54 @@
                     <ul>
                         <li>
                             <div class="faq_new_list_info">
-                                <h6>1. Can I use my amazon.com account to use AWS?</h6>
-                                <p>You can create an AWS account using your current Amazon.com account. The AWS account is required to view your AWS activities, read reports, and manage your credentials, among other things.</p>
+                                <h6>1. What is the Internet of Things (IoT)? What is an example?</h6>
+                                <p class="">The Internet of Things (IoT) refers to a network of devices equipped with electronics and software that may share data via the Internet. Examples include remote sensors and network-based control. In 2017, there were 8.4 billion IoT-class devices.</p>
                             </div>
                         </li>
                         <li>
                             <div class="faq_new_list_info">
-                                <h6>2. What can I do using my AWS account?</h6>
-                                <p>The AWS platform may be utilised for increasing processing power, storing databases, delivering content, and a host of other tasks that companies require to run efficiently and expand. This includes the following: Utilising cloud-based web and application services storing data safely so that it can be accessed instantly from anywhere making use of databases such as Oracle, MySQL, etc. Bulk E-mailing using a Content Delivery Network (CDN) to quickly distribute files anywhere in the world.</p>
+                                <h6>2. What are the things in IoT?</h6>
+                                <p class="">IoT components include sensors, controllers, actuators, edge computing, networking, device management, connectivity management, data management, applications, and cloud computing.</p>
+                               
                             </div>
                         </li>
                         <li>
                             <div class="faq_new_list_info">
-                                <h6>3. Which services does AWS provide?</h6>
-                                <p>Among AWS's most well-liked and often utilised services are:</p>
+                                <h6>3. What are the advantages and future of Internet of Things (IoT)?</h6>
+                                <p class="pb-3">IoT advantages include home automation, smart cities, smart power grids, smarter transportation, smarter workplaces, performance tracking, and smarter supply chains. IoT gives more information to help businesses make better decisions across multiple industries. This can include improving product quality in manufacturing, device predictive maintenance, environmental management, tracking human health, lowering energy use, and increasing supply chain tracking.</p>
+                                <p>Security and surveillance, supply chain management, inventory and warehouse management, facility management, industrial asset manage- ment, smart products, energy management, and fleet management are among the fastest growing future of IoT applications. IoT can give clients with more product features, it can be utilised for managed device services, IoT data can aid in product development, product consumable replenishment, and predictive maintenance as needed based on usage and data. IoT can increase efficiency through smoother machine control, which can improve over time.</p>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="faq_new_list_info">
+                                <h6>4. What is the difference between Machine Learning (ML) and IoT?</h6>
+                                <p>IoT is used to collect real-world data and act on it according to predefined criteria. For example, track your heart rate and upload it every day. Machine learning creates its own rules from large amounts of data to enhance its performance over time. For example, predictive study of patient health before an emergency occurs. This can save lives and lower health-care expenditures.</p>
+                            </div>
+                        </li>   
 
-                                <ul class="faq_innerList">
-                                    <li><p><b>1. Amazon Elastic Cloud Compute (Amazon EC2).</b> This tool assists users in computing tasks.</p></li>
-                                    <li><p><b>2. Amazon Simple Storage Service (S3):</b> S3 safely saves data in the cloud as objects.</p></li>
-                                    <li><p><b>3. Amazon Virtual Private Cloud (VPC):</b> This networking service isolates the network infrastructure of the user. preventing unauth rised individuals from accessing information.</p></li>
-                                    <li><p><b>4. Amazon CloudFront:</b> Also known as the Global Content Delivery Service, this technology enables rapid and smooth content delivery.</p></li>
-                                    <li><p><b>5. Relational Database Services (RDS) on Amazon:</b> This is utilised for workloads involving databases. It is compatible with Microsoft SQL, Maria DB, Oracle, MySQL, and more.</p></li>
-                                </ul>
+                        <li>
+                            <div class="faq_new_list_info">
+                                <h6>5.  What is the link between IoT and cloud computing?</h6>
+                                <p class="">Cloud computing can perform the following IoT functions: IoT device authentication, Internet network validation, data validation, informa- tion queues for processing, information storage, information databases, information-based control responses, machine learning, website reporting, SMS reporting, email reporting, and enterprise system integration. Cloud computing can also be configured to detect predefined alarm conditions and keep audit trails.</p>
+                            </div>
+                        </li>
 
-                                <p>Just five of Amazon's services are included here. Use the information below to get in touch with Bizionic Technologies if you'd like to try any of the AWS services but aren't sure which is best for you or how to use it.</p>
-                            </div>
-                        </li>
                         <li>
                             <div class="faq_new_list_info">
-                                <h6>4. What are the advantages for users of AWS having the highest Availability Regions (AR)?</h6>
-                                <p>AWS is unquestionably the market leader in terms of Availability Zones, with 77 Availability Regions distributed over 24 geographic regions. As a user, this gives you the capacity to supply and operate applications and databases with far higher levels of availability, fault tolerance, and scalability than a data centre. Having your pick of AR also implies low latency. Because not all ARs are made equal (there are always disparities in hardware and talent), you can select the ones that best suit your budget and company objectives.</p>
+                                <h6>6.  Why do we need IoT?</h6>
+                                <p class="">IoT delivers data that allows us to make better decisions. This includes our personal health information, eliminating manufacturing flaws, saving us time on transportation with the best routes, conserving energy, keeping supply chains running smoothly, and offering customers with better products and services.</p>
                             </div>
                         </li>
+
                         <li>
                             <div class="faq_new_list_info">
-                                <h6>5. What are benefits of utilising an AWS managed service provider?</h6>
-                                <p>Using an external Managed Service provider allows you to maximise the value of your AWS investment. The right provider can help you save expenses while increasing your ROI. You will save a significant amount of money that would otherwise be spent on engaging the resources you require and upskilling them to stay up with the periodic advances provided by AWS. An experienced managed services consultant can assist you in navigating the AWS landscape, selecting the services you require, and tailoring them to your needs while optimising costs.</p>
+                                <h6>7.  What kind of IoT Services does Bizionic Technologies provide</h6>
+                                <p class="">Bizionic Technologies offers a wide range of robust and secure Internet of Things solutions to businesses and startups. We use IoT technol- ogy to assist organisations solve business difficulties and generate new revenue sources. We collaborate and coordinate to improve IoT project management, facilitate stakeholder communication, fill the gap in IoT-specific technical knowledge of the client's team, and take on any other portion of implementation needed by our clients. In addition, we offer IoT Analytics solutions such as business analysis, dash- board design, architectural design and development, and quality assurance.</p>
                             </div>
                         </li>
-                        <li>
-                            <div class="faq_new_list_info">
-                                <h6>6. Why does AWS rank as the top provider of Cloud Services?</h6>
-                                <p>Well, for one thing, they had a significant head start because they virtually founded the industry from scratch in 2006. Second, AWS provides a large menu of services—over 175 at last count—ranging from the most basic, such as compute, storage, and database, to cutting-edge technologies such as IoT and AI/ML. On the other hand, the startling complexity of the AWS environment necessitated guided navigation, or consumers risked spending far more than necessary. A certified AWS expert is the ideal approach to optimise your cloud for both productivity and cost-effectiveness.</p>
-                            </div>
-                        </li>
+
+                        
+
                         <li>
                             <div class="faq_new_list_info">
                                 <h6>Can't find an answer to your question?</h6>
