@@ -11502,6 +11502,11 @@ html {
     left: auto !important;
     right: 0px;
 }
+.cloud-consultingFloating_menu .columnSett {
+    width: 100% !important;
+    flex: 0 0 55% !important;
+    max-width: 55% !important;
+}
 
 .cloud-consultingFloating_menu .innerColum_menu strong {
     display: none;
