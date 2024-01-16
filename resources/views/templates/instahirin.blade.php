@@ -20,7 +20,9 @@
                             <div class="custom_tittle text-left p-0">
                                 <h2 class="text-white"><strong>Still,</strong> Searching... <br>
                                     <strong>for the Right Talent and Skills?</strong>
-                                    We've Got You Covered.
+                                    We've Got You Covered.<br>
+
+                                    
                                 </h2>
                                 <p class="text-white">Our specialized Talent Scouting and Acquisition Team at<br>
                                     <b>Bizionic InstaHirin</b> with scout the Globe to provide you <br>

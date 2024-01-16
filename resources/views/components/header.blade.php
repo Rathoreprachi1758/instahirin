@@ -71,6 +71,7 @@
                 <div class="logo" style="margin-left: -58px;">
                     <a href="{{ url('/about-us') }}"><img src="{{ asset('css/images/logo.png') }}" alt="Logo"></a>
                 </div>
+                
 
                 <div class="header_menu">
                     <div class="authBttns">
@@ -106,9 +107,10 @@
                         <h3>Hi, User</h3>
                         <p>Welcome to your Bizionic Dashboard</p>
                         <strong>{{ auth()->user()->name }}</strong>
+                        {{-- <strong><a href="{{ url('/InstaHirin') }}"></a></strong> --}}
                     </div>
 
-
+                    {{-- <p this is instahire ><a href="{{ url('/InstaHirin') }}"></a></p> --}}
                     <div class="nav-list">
                         <div class="db_nav">
                             <ul>
@@ -116,6 +118,11 @@
                                     <a href="/dashboard-return" class="active"><span><i class="fa fa-user-circle-o"
                                                 aria-hidden="true"></i></span> Home <em class="menu_icon"><i
                                                 class="fa fa-angle-down" aria-hidden="true"></i></em></a>
+                                </li>
+                                <li>
+                                    <a href="/InstaHirin" ><span><i class="fa fa-user-circle-o"
+                                        aria-hidden="true"></i></span> Instahirin <em class="menu_icon"><i
+                                        class="fa fa-angle-down" aria-hidden="true"></i></em></a>
                                 </li>
                                 <li><a href="/profile"><span><i class="fa fa-id-card" aria-hidden="true"></i></span>
                                         Profile

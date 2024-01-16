@@ -1,6 +1,14 @@
 <x-header data="instahirin component" />
 <link rel="stylesheet " href="{{ asset('css/css/Employer_activity_responsive.css') }} ">
 <link rel="stylesheet " href="{{ asset('css/css/Employer_activity_style.css') }} ">
+<link rel="stylesheet" href="https://cdn.datatables.net/1.11.5/css/jquery.dataTables.min.css">
+<script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
+<script src="https://cdn.datatables.net/1.11.5/js/jquery.dataTables.min.js"></script>
+<script>
+    $(document).ready(function() {
+        $('#instahire').DataTable();
+    });
+</script>
 <div class="fr-section" style="margin-top: -72px">
     <div class="fr-section_detail">
         <div class="dashboard_innerPages">
@@ -21,8 +29,8 @@
                         <li><a href="/Employer-activity">Post a Job</a></li>
                         <li><a href="/My-job-activity">My Job</a></li>
                         <li><a href="/My-job-Applicants-activity">My Job Applicants</a></li>
-                        <li><a href="/job-talents-activity">Job Talents</a></li>
-                        <li><a href="/Instahirin-activity" class="active">InstaHirin Shortlist</a></li>
+                        {{-- <li><a href="/job-talents-activity">Job Talents</a></li> --}}
+                        <li><a href="/Instahirin-activity" class="active">InstaHirin Talents</a></li>
                         <li><a href="/Interview-schedule">Interview Scheduled</a></li>
                         <li><a href="/Job-status">Job Status</a></li>
                         <li><a href="/employment-contract-form">Employment Contract</a></li>
@@ -35,7 +43,7 @@
                 <!-- tab5 data  -->
                 <div class="custom_tabs_data" style="display: block" id="tab5">
                     <div class="activityTable_data">
-                        <table class="table table-striped">
+                        <table class="table table-striped" id="instahire">
                             <thead>
                                 <tr>
                                     <th>
@@ -45,31 +53,31 @@
                                         <h6>Name</h6>
                                     </th>
                                     <th>
-                                        <h6>Contact Details</h6>
+                                        <h6>Position Title</h6>
                                     </th>
                                     <th>
-                                        <h6>Email Address</h6>
+                                        <h6>Experience</h6>
                                     </th>
                                     <th>
-                                        <h6>Current Location</h6>
+                                        <h6>Expert in</h6>
                                     </th>
                                     <th>
                                         <h6>Work Mode</h6>
                                     </th>
                                     <th>
-                                        <h6>Position Title</h6>
+                                        <h6>Also Work With</h6>
                                     </th>
                                     <th>
                                         <h6>Work Exp</h6>
                                     </th>
                                     <th>
-                                        <h6>Annual Salary</h6>
+                                        <h6>Avalilability</h6>
                                     </th>
                                     <th>
-                                        <h6>Qualification</h6>
+                                        <h6>LinkedIn profile</h6>
                                     </th>
                                     <th>
-                                        <h6>Notice Period</h6>
+                                        <h6>Attachment</h6>
                                     </th>
                                     <th>
                                         <h6>Availability</h6>
@@ -89,6 +97,9 @@
                                                 </th>
                                             </thead>
                                         </table>
+                                    </th>
+                                    <th>
+                                        <h6>Action</h6>
                                     </th>
                                 </tr>
                             </thead>
@@ -178,8 +189,13 @@
                                             </tbody>
                                         </table>
                                     </td>
+                                    <td>
+                                        <div class="tabletext">
+                                            <p>⋮</p>
+                                        </div>
+                                    </td>
                                 </tr>
-                                <tr>
+                                {{-- <tr>
                                     <td>
                                         <div class="tabletext">
                                             <p>1</p>
@@ -350,7 +366,7 @@
                                             </tbody>
                                         </table>
                                     </td>
-                                </tr>
+                                </tr> --}}
                             </tbody>
                         </table>
                     </div>

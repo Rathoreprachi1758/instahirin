@@ -287,6 +287,7 @@
             <a href="/hire/developer/developers-other/hirin-view-all" class="btn_default">Show All</a>
         </div>
         <div class="meetTeam_sliderSection pt-0">
+            
             <!-- <carousel :items="2" :margin="20"> -->
             <carousel :items-to-show="3" >
                 <slide v-for="(expert) in experts" :key="expert">
@@ -313,6 +314,7 @@
 
                                 <div class="ourExperties_list">
                                     <ul>
+                                        <!-- <strong style="color:black">{{ auth()->user()->name }}</strong> -->
                                         <li
                                             v-for="(experty, index) in expert.experties"
                                             :key="index"

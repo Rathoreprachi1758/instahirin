@@ -21,7 +21,7 @@
                         <li><a href="/Employer-activity">Post a Job</a></li>
                         <li><a href="/My-job-activity">My Job</a></li>
                         <li><a href="/My-job-Applicants-activity">My Job Applicants</a></li>
-                        <li><a href="/job-talents-activity">Job Talents</a></li>
+                        {{-- <li><a href="/job-talents-activity">Job Talents</a></li> --}}
                         <li><a href="/Instahirin-activity">InstaHirin Shortlist</a></li>
                         <li><a href="/Interview-schedule" class="active" >Interview Scheduled</a></li>
                         <li><a href="/Job-status">Job Status</a></li>

@@ -1,6 +1,7 @@
 <template>
   <form enctype="multipart/form-data" @submit.prevent="submitForm" id="hire_developer">
     <input type="hidden" :value="expertId" name="expert" />
+    <!-- <input type="text" :value="userId" name="userid" /> -->
     <!-- <input type="hidden" v-model="localExpertId" name="name" /> -->
 
     <input type="hidden" :value="csrfToken" name="_token" />
@@ -433,6 +434,7 @@ export default {
 
     $(".page-dev").html(pageText);
     console.log("Hire Talent Component mounted.");
+    console.log('this is user id',userId);
     document.getElementById("source").value = pageText;
     console.log($("#source").val());
   },
@@ -443,10 +445,15 @@ export default {
       type: Number,
       default: null,
     },
+    userId:{
+      type: Number,
+      default: null,
+    }
   },
   data() {
     return {
       //   expertId: "{{$expert->id}}",
+      userId : this.userId,
       localExpertId: this.expertId,
       csrfToken: "{{ csrf_token() }}",
       subscribe: {
@@ -772,6 +779,7 @@ export default {
 
       const formData = new FormData();
       formData.append("expert", this.localExpertId);
+      formData.append("userid",this.userId);
       formData.append("name", this.name);
       formData.append("country_code", this.country_code);
       formData.append("phone", this.phone);

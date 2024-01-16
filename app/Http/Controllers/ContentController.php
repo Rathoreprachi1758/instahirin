@@ -971,6 +971,7 @@ class ContentController extends Controller
         // Validate the request data, including the uploaded file
         // Log::info('Request data:', $request->all());
         // dd('Hii9');
+        // dd($request->jobid);
         $validatedData = $request->validate([
             'name' => 'required',
             'contact_details' => 'required',
@@ -1011,6 +1012,7 @@ class ContentController extends Controller
         $formData->name = $validatedData['name'];
         $formData->contact_details = $validatedData['contact_details'];
         $formData->email = $validatedData['email'];
+        $formData->job_id = $request->jobid;
         $formData->current_location = $validatedData['current_location'];
         //$formData->current_location   = isset($validatedData['current_location']) ? $validatedData['current_location'] : '-';
         $formData->skills_description = $validatedData['skills_description'];

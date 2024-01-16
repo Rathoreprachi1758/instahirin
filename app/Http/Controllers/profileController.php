@@ -11,6 +11,7 @@ use App\Models\Creditrequest;
 use App\Models\CompanyKycInformation;
 use App\Models\InstaHirinRequirement;
 use App\Models\InstaHirinOnboard;
+use App\Models\HireMeApplication;
 use Illuminate\Support\Facades\File;
 use Illuminate\Support\Facades\Schema;
 
@@ -280,18 +281,42 @@ class profileController extends Controller
 
     public function my_job_activity(Request $request)
     {
-        $myjob = InstaHirinRequirement::where('user_id',Auth::id())->get();
+        $myjob = InstaHirinRequirement::where('user_id', Auth::id())->get();
         // return $myjob;
-        return view('dashboard.Activity_employer.my_job',['myjob'=>$myjob]);
+        return view('dashboard.Activity_employer.my_job', ['myjob' => $myjob]);
     }
     //
+    // public function my_job_Applicants(Request $request)
+    // {   
+    //     // $myjob_applicant = InstaHirinRequirement::where('user_id',Auth::id())->get();
+    //     // $myjob_applicant = HireMeApplication::where('user_id',Auth::id())->get();
+    //     $job_ids = job::where('user_id',Auth::id())->pluck('id');
+    //     // return $job_ids;
+    //     $myjob_applicant = HireMeApplication::where('job_id',41)->get();
+    //     return  count($myjob_applicant);
+    //     foreach ($job_ids as $job_id) {
+    //         $myjob_applicant = HireMeApplication::where('job_id', $job_id)->get();
+    //         if (count($myjob_applicant) > 0) {
+    //             $results[$job_id] = $myjob_applicant;
+    //         }
+    //     } 
+    //     return view('dashboard.Activity_employer.my_job_application',['results' => $results]);
+    // }
     public function my_job_Applicants(Request $request)
-    {   
-        // $myjob_applicant = InstaHirinOnboard::where('user_id',Auth::id())->get();
-        $myjob_applicant = InstaHirinOnboard::all();
-        // return $myjob_applicant;
-        return view('dashboard.Activity_employer.my_job_application',['myjob_applicant' => $myjob_applicant]);
+    {
+        $job_ids = job::where('user_id', Auth::id())->pluck('id');
+        $results = [];
+        foreach ($job_ids as $job_id) {
+            $myjob_applicants = HireMeApplication::where('job_id', $job_id)->get();
+            foreach ($myjob_applicants as $myjob_applicant) {
+                // print_r($myjob_applicant);
+                $results[] = $myjob_applicant;
+            }
+        }
+        return view('dashboard.Activity_employer.my_job_application', ['results' => $results]);
+
     }
+
     public function job_talents(Request $request)
     {
         return view('dashboard.Activity_employer.job_talents');
