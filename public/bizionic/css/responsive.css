@@ -678,8 +678,20 @@
     padding: 100px 0px 40px;
 }
 
+ 
 
+.ongoing_col {
+    padding: 30px 18px; 
+    width: 100%;
+    height: 100%;
+    border-radius: 10px; 
+    border: 5px solid #d7d7d7; 
+}
 
+.ongoing_col p { 
+    line-height: 1.5;
+    font-size: 14px;
+}
 
 
 
@@ -2004,6 +2016,57 @@
 .cyberSecurity_col { 
     padding: 40px 30px; 
 }
+
+.consulting_innerPages_main .mainBanner_detail {
+    padding: 70px 40px 70px;
+}
+
+.consulting_innerPages_main .industryNew_section2_cols {
+    padding: 80px 40px 50px;}
+
+.ongoing_section_detail { 
+    padding: 70px 0px 50px;
+}
+
+.ongoing_col {
+    padding: 30px 18px; 
+    width: 100%;
+    height: 100%;
+    border-radius: 10px; 
+    border: 5px solid #d7d7d7; 
+}
+
+.ongoing_col p { 
+    line-height: 1.5;
+    font-size: 14px;
+}
+.well_reviewsSec { 
+    padding: 60px 20px 40px;
+}
+
+.well_reviewsSec .custom_tittle p {
+    font-size: 18px;  padding: 0px;
+}
+.faq_new_secDetail { 
+    padding: 60px 40px; 
+}
+
+.devServices_secFlow span { 
+    max-width: 100%; 
+}
+
+.remoteInfrastructure_sec_detail { 
+    padding: 80px 20px;
+}
+
+.distributeCloud_sec_detail { 
+    padding: 60px 20px;
+}
+
+
+
+
+
 
 
 
@@ -7332,6 +7395,82 @@ h6 { font-size: 18px; }
 .needHelp_section_detail { 
     padding: 130px 0px 30px;
 }
+
+
+
+
+.awsCloudBannerBg { background-position: top center; background-size: cover;}
+
+.awsCloudBannerBg .mainBanner_detail {
+    padding: 60px 20px 80px; 
+}
+
+.awsCloudBannerBg h3 { padding-right: 0px !important;}
+
+
+.consulting_innerPages_main .industryNew_section2_cols { padding: 50px 20px 50px;}
+
+.consulting_innerPages_main .industryNew_section2_cols { transform: translate(0) !important;}
+
+.ongoing_section_detail { 
+    padding: 60px 0px 50px;
+}
+
+.ongoing_col {
+    padding: 30px 15px; 
+    width: 100%;
+    height: auto;
+    border-radius: 10px; 
+    border: 5px solid #d7d7d7; 
+    margin: 10px 0px;
+}
+
+.well_reviewsSec { 
+    padding: 60px 0px 40px;
+}
+
+.needHelp_form ul li .row .col-lg-4 .needHelp_formField { margin-bottom: 35px;}
+
+.faq_new_secDetail { 
+    padding: 60px 20px; 
+}
+
+.faq_new_list > ul > li {
+    padding: 35px 0px 20px; 
+}
+.distributeCloud_sec_detail {
+    width: 100%;
+    padding: 50px 20px 40px;
+}
+.consulting_innerPages_main .provider_section::after { 
+    height: 450px;}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 

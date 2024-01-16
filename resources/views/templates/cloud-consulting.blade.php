@@ -836,13 +836,25 @@
                                             </div>
                                         </li>
                                         <li>
-                                            <div class="needHelp_formField">
-                                                <input type="text" placeholder="Enter your contact #" />
-                                            </div>
+                                            <div class="row">
+                                                <div class="col-lg-4 col-md-5">
+                                                    <div class="needHelp_formField"> 
+                                                        <select>
+                                                            <option>Country Code</option>
+                                                            <option>Country Code</option>
+                                                        </select>
+                                                    </div>
+                                                </div>
+                                                <div class="col-lg-8 col-md-7">
+                                                    <div class="needHelp_formField">
+                                                        <input type="text" placeholder="Contact No." />
+                                                    </div>
+                                                </div>
+                                            </div> 
                                         </li>
                                         <li>
                                             <div class="needHelp_formField">
-                                                <textarea placeholder="Enter your contact #"></textarea>
+                                                <textarea placeholder="Enter your message"></textarea>
                                             </div>
                                         </li>
 
