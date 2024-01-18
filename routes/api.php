@@ -31,6 +31,7 @@ Route::prefix('v1')->group(function () {
     Route::post('/experts/skills', [ApiController::class, 'experts_by_skills']);
     // fetch all the jobs route
     Route::get('/jobs', [ApiController::class, 'jobs']);
+    Route::get('/blogs', [ApiController::class, 'getBlogs']);
     Route::post('/jobs/skills', [ApiController::class, 'jobs_by_skills']);
     //Route::get('/job-skills', [ApiController::class, 'getExperienceOptions']);
     Route::get('/job-locations', [ApiController::class, 'getJobLocations']);
