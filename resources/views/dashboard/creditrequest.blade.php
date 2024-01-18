@@ -103,7 +103,7 @@
                                     <strong>Cheque Amount *</strong>
                                     <div class="kycForm_field_info">
                                         <input type="text" placeholder="" name="Cheque_amount"
-                                            value="{{ old('Cheque_amount') }}" id="datepicker" />
+                                            value="{{ old('Cheque_amount') }}" id="datepicker">
                                     </div>
                                     @error('Cheque_amount')
                                         <div class="text-danger">{{ $message }}</div>
@@ -115,7 +115,7 @@
                                     <strong>Cheque No *</strong>
                                     <div class="kycForm_field_info">
                                         <input type="text" name="cheque_no" placeholder=""
-                                            value="{{ old('cheque_no') }}" />
+                                            value="{{ old('cheque_no') }}">
                                     </div>
                                     @error('cheque_no')
                                         <div class="text-danger">{{ $message }}</div>
@@ -131,7 +131,7 @@
                                     <strong>Cheque Issuing Bank *</strong>
                                     <div class="kycForm_field_info">
                                         <input type="text" name="issued_bank" placeholder=""
-                                            value="{{ old('issued_bank') }}" />
+                                            value="{{ old('issued_bank') }}">
                                     </div>
                                     @error('issued_bank')
                                         <div class="text-danger">{{ $message }}</div>
@@ -150,7 +150,7 @@
                                             <span class="filename"></span>
                                             <input type="file" class="inputfile form-control" name="file"
                                                 id="fileInput" value="{{ old('file') }}"
-                                                onchange="previewImage(this)" />
+                                                onchange="previewImage(this)">
                                             <i class="fa fa-upload" aria-hidden="true"></i>
                                         </label>
                                     </div>
@@ -176,7 +176,7 @@
                                         <div class="auth_text">
                                             <p>
                                                 <label class="checkbox-label">
-                                                    <input type="checkbox" name="checkbox" />
+                                                    <input type="checkbox" name="checkbox">
                                                     <span class="checkbox-custom rectangular"></span>
                                                 </label>
                                                 I/We hereby apply for the Participation Guarantee and other credit
@@ -191,7 +191,7 @@
                                     </div>
 
                                     <div class="customSubmitBtn kycSubmit">
-                                        <input type="submit" value="Submit" class="btndefault" />
+                                        <input type="submit" value="Submit" class="btndefault">
                                     </div>
                                 </div>
                             </div>

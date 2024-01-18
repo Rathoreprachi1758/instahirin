@@ -66,7 +66,7 @@
                                                     <strong>Position Title</strong>
                                                     <div class="auth_field_info">
                                                         <input type="text" placeholder="IOS App Developer"
-                                                            value="{{ old('position_title') }}" name="position_title" />
+                                                            value="{{ old('position_title') }}" name="position_title">
                                                     </div>
                                                     @error('position_title')
                                                         <div class="text-danger">{{ $message }}</div>
@@ -118,7 +118,7 @@
                                                     <strong>Key Skills</strong>
                                                     <div class="auth_field_info">
                                                         <input type="text" placeholder=""
-                                                            value="{{ old('key_skills') }}" name="key_skills" />
+                                                            value="{{ old('key_skills') }}" name="key_skills">
                                                     </div>
                                                     @error('key_skills')
                                                         <div class="text-danger">{{ $message }}</div>
@@ -272,7 +272,7 @@
                                                     <div class="auth_field_info">
                                                         <input type="text" placeholder="Min"
                                                             value="{{ old('min_salary_monthly_project') }}"
-                                                            name="min_salary_monthly_project" pattern="[0-9]+" />
+                                                            name="min_salary_monthly_project" pattern="[0-9]+">
                                                     </div>
                                                     {{-- @error('min_salary_monthly_project')
                                                         <div class="text-danger">{{ $message }}</div>
@@ -284,7 +284,7 @@
                                                     <div class="auth_field_info">
                                                         <input type="text" placeholder="Max"
                                                             value="{{ old('max_salary_monthly_project') }}"
-                                                            name="max_salary_monthly_project" pattern="[0-9]+" />
+                                                            name="max_salary_monthly_project" pattern="[0-9]+">
                                                     </div>
                                                     {{-- @error('max_salary_monthly_project')
                                                         <div class="text-danger">{{ $message }}</div>
@@ -320,7 +320,7 @@
                                                     <div class="auth_field_info">
                                                         <input type="text" placeholder="Min"
                                                             value="{{ old('min_salary_yearly') }}"
-                                                            name="min_salary_yearly" pattern="[0-9]+" />
+                                                            name="min_salary_yearly" pattern="[0-9]+">
                                                     </div>
                                                     {{-- @error('min_salary_yearly')
                                                         <div class="text-danger">{{ $message }}</div>
@@ -332,7 +332,7 @@
                                                     <div class="auth_field_info">
                                                         <input type="text" placeholder="Max"
                                                             value="{{ old('max_salary_yearly') }}"
-                                                            name="max_salary_yearly" pattern="[0-9]+" />
+                                                            name="max_salary_yearly" pattern="[0-9]+">
                                                     </div>
                                                     {{-- @error('max_salary_yearly')
                                                         <div class="text-danger">{{ $message }}</div>
@@ -367,7 +367,7 @@
                                                     <div class="auth_field_info">
                                                         <input type="text" placeholder="Min"
                                                             value="{{ old('min_salary_hourly') }}"
-                                                            name="min_salary_hourly" pattern="[0-9]+" />
+                                                            name="min_salary_hourly" pattern="[0-9]+">
                                                     </div>
                                                     {{-- @error('min_salary_hourly')
                                                             <div class="text-danger">{{ $message }}</div>
@@ -379,7 +379,7 @@
                                                     <div class="auth_field_info">
                                                         <input type="text" placeholder="Max"
                                                             value="{{ old('max_salary_hourly') }}"
-                                                            name="max_salary_hourly" pattern="[0-9]+" />
+                                                            name="max_salary_hourly" pattern="[0-9]+">
                                                     </div>
                                                     {{-- @error('max_salary_hourly')
                                                             <div class="text-danger">{{ $message }}</div>
@@ -407,7 +407,7 @@
                                                     <div class="auth_field_info">
                                                         <input type="text" placeholder="Add Location"
                                                             id="locationInput" value="{{ old('location') }}"
-                                                            name="location" />
+                                                            name="location">
                                                     </div>
                                                     @error('location')
                                                         <div class="text-danger">{{ $message }}</div>
@@ -440,7 +440,7 @@
                                                     <strong>Company Name</strong>
                                                     <div class="auth_field_info">
                                                         <input type="text" placeholder=""
-                                                            value="{{ old('company_name') }}" name="company_name" />
+                                                            value="{{ old('company_name') }}" name="company_name">
                                                     </div>
                                                     @error('company_name')
                                                         <div class="text-danger">{{ $message }}</div>
@@ -454,7 +454,7 @@
                                                     <div class="auth_field_info">
                                                         <input type="text" placeholder="www.example.com"
                                                             value="{{ old('company_website') }}"
-                                                            name="company_website" />
+                                                            name="company_website">
                                                     </div>
                                                     @error('company_website')
                                                         <div class="text-danger">{{ $message }}</div>
@@ -470,7 +470,7 @@
                                                     <div class="auth_field_info">
                                                         <input type="text" placeholder=""
                                                             value="{{ old('contact_person') }}"
-                                                            name="contact_person" />
+                                                            name="contact_person">
                                                     </div>
                                                     @error('contact_person')
                                                         <div class="text-danger">{{ $message }}</div>
@@ -483,7 +483,7 @@
                                                     <strong>E-mail Address</strong>
                                                     <div class="auth_field_info">
                                                         <input type="text" placeholder=""
-                                                            value="{{ old('email') }}" name="email" />
+                                                            value="{{ old('email') }}" name="email">
                                                     </div>
                                                     @error('email')
                                                         <div class="text-danger">{{ $message }}</div>
@@ -513,7 +513,7 @@
                                                     <div class="auth_field_info">
                                                         <input type="text" placeholder="Mobile/Whatsapp"
                                                             value="{{ old('contact_no') }}" name="contact_no"
-                                                            pattern="[0-9]+" />
+                                                            pattern="[0-9]+">
                                                     </div>
                                                     @error('contact_no')
                                                         <div class="text-danger">{{ $message }}</div>
@@ -581,7 +581,7 @@
                                                         have</strong>
                                                     <div class="">
                                                         <input type="file" placeholder=""
-                                                            value="{{ old('document') }}" name="document" />
+                                                            value="{{ old('document') }}" name="document">
                                                     </div>
                                                     @error('document')
                                                         <div class="text-danger">{{ $message }}</div>
@@ -594,7 +594,7 @@
                                                     <p class="pb-0">
                                                         <label class="checkbox-label">
                                                             <input type="checkbox" name="notify_ai_applicants"
-                                                                value="{{ old('notify_ai_applicants') }}" />
+                                                                value="{{ old('notify_ai_applicants') }}">
                                                             <span class="checkbox-custom rectangular"></span>
                                                         </label>
                                                         Notify me about Al-recommended applicants.

@@ -49,7 +49,7 @@
                                                 <strong>Position Title</strong>
                                                 <div class="auth_field_info">
                                                     <input type="text" placeholder="IOS App Developer"
-                                                        value="" />
+                                                        value="">
                                                 </div>
                                             </div>
                                         </div>
@@ -84,7 +84,7 @@
                                             <div class="auth_field">
                                                 <strong>Key Skills</strong>
                                                 <div class="auth_field_info">
-                                                    <input type="text" placeholder="" value="" />
+                                                    <input type="text" placeholder="" value="">
                                                 </div>
                                             </div>
                                         </div>
@@ -163,14 +163,14 @@
                                         <div class="col-xxl-5 col-xl-5 col-lg-5 col-md-4">
                                             <div class="auth_field">
                                                 <div class="auth_field_info">
-                                                    <input type="text" placeholder="Min" value="" />
+                                                    <input type="text" placeholder="Min" value="">
                                                 </div>
                                             </div>
                                         </div>
                                         <div class="col-xxl-5 col-xl-5 col-lg-5 col-md-4">
                                             <div class="auth_field">
                                                 <div class="auth_field_info">
-                                                    <input type="text" placeholder="Max" value="" />
+                                                    <input type="text" placeholder="Max" value="">
                                                 </div>
                                             </div>
                                         </div>
@@ -193,14 +193,14 @@
                                         <div class="col-xxl-5 col-xl-5 col-lg-5 col-md-4">
                                             <div class="auth_field">
                                                 <div class="auth_field_info">
-                                                    <input type="text" placeholder="Min" value="" />
+                                                    <input type="text" placeholder="Min" value="">
                                                 </div>
                                             </div>
                                         </div>
                                         <div class="col-xxl-5 col-xl-5 col-lg-5 col-md-4">
                                             <div class="auth_field">
                                                 <div class="auth_field_info">
-                                                    <input type="text" placeholder="Max" value="" />
+                                                    <input type="text" placeholder="Max" value="">
                                                 </div>
                                             </div>
                                         </div>
@@ -223,14 +223,14 @@
                                         <div class="col-xxl-5 col-xl-5 col-lg-5 col-md-4">
                                             <div class="auth_field">
                                                 <div class="auth_field_info">
-                                                    <input type="text" placeholder="Min" value="" />
+                                                    <input type="text" placeholder="Min" value="">
                                                 </div>
                                             </div>
                                         </div>
                                         <div class="col-xxl-5 col-xl-5 col-lg-5 col-md-4">
                                             <div class="auth_field">
                                                 <div class="auth_field_info">
-                                                    <input type="text" placeholder="Max" value="" />
+                                                    <input type="text" placeholder="Max" value="">
                                                 </div>
                                             </div>
                                         </div>
@@ -242,7 +242,7 @@
                                                 <strong>Location</strong>
                                                 <div class="auth_field_info">
                                                     <input type="text" placeholder="Add Location"
-                                                        value="" />
+                                                        value="">
                                                 </div>
                                             </div>
                                         </div>
@@ -266,7 +266,7 @@
                                             <div class="auth_field">
                                                 <strong>Company Name</strong>
                                                 <div class="auth_field_info">
-                                                    <input type="text" placeholder="" value="" />
+                                                    <input type="text" placeholder="" value="">
                                                 </div>
                                             </div>
                                         </div>
@@ -275,7 +275,7 @@
                                             <div class="auth_field">
                                                 <strong>Company Website</strong>
                                                 <div class="auth_field_info">
-                                                    <input type="text" placeholder="" value="" />
+                                                    <input type="text" placeholder="" value="">
                                                 </div>
                                             </div>
                                         </div>
@@ -286,7 +286,7 @@
                                             <div class="auth_field">
                                                 <strong>Contact Person</strong>
                                                 <div class="auth_field_info">
-                                                    <input type="text" placeholder="" value="" />
+                                                    <input type="text" placeholder="" value="">
                                                 </div>
                                             </div>
                                         </div>
@@ -295,7 +295,7 @@
                                             <div class="auth_field">
                                                 <strong>E-mail Address</strong>
                                                 <div class="auth_field_info">
-                                                    <input type="text" placeholder="" value="" />
+                                                    <input type="text" placeholder="" value="">
                                                 </div>
                                             </div>
                                         </div>
@@ -317,7 +317,7 @@
                                         <div class="col-xxl-6 col-xl-6 col-lg-6 col-md-6">
                                             <div class="auth_field">
                                                 <div class="auth_field_info">
-                                                    <input type="text" placeholder="" value="" />
+                                                    <input type="text" placeholder="" value="">
                                                 </div>
                                             </div>
                                         </div>
@@ -351,7 +351,7 @@
                                                 <strong>Upload supportive documents, If
                                                     have</strong>
                                                 <div class="">
-                                                    <input type="file" placeholder="" value="" />
+                                                    <input type="file" placeholder="" value="">
                                                 </div>
                                             </div>
                                         </div>
@@ -360,7 +360,7 @@
                                             <div class="auth_text">
                                                 <p class="pb-0">
                                                     <label class="checkbox-label">
-                                                        <input type="checkbox" />
+                                                        <input type="checkbox">
                                                         <span class="checkbox-custom rectangular"></span>
                                                     </label>
                                                     Notify me about Al-recommended applicants.

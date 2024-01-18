@@ -698,7 +698,8 @@ class ContentController extends Controller
             // 'document' => 'required|array',
             // 'document.*' => 'file|mimes:pdf,doc,docx|max:5120'
         ]);
-
+        
+        // dd(json_decode($validatedData['key_skills']));
         DB::beginTransaction();
 
         // Create a new instance of the Hire Request model

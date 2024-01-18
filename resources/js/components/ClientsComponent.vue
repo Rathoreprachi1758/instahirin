@@ -13,7 +13,7 @@
                                 <ul>
                                     <li v-for="(client, index) in clients" :key="client.id">
                                         <a @click="displayReviewAction(client)" :class="{ active:  (this.selectedClient && client.id === this.selectedClient.id) }" >
-                                            <img :src="`/storage/${client.logo}`" alt="#" />
+                                            <img :src="`/storage/${client.logo}`" alt="#" >
                                         </a>
                                     </li>
                                 </ul>

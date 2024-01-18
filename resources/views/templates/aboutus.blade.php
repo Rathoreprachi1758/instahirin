@@ -1,7 +1,4 @@
 <!-- main banner  -->
-{{-- <head>
-    <link rel="canonical" href="https://www.bizionictech.com/about-us">
-</head> --}}
 <div class="mainBanner_section aboutUs_bgSection">
 
     <div class="auto_container">
@@ -104,7 +101,7 @@
                                     <div class="col-lg-6 col-md-6 numberStepsSpace">
                                         <div class="byNumber_steps_info">
                                             <span class="byNumber_bg"><img src="/bizionic/images/byNumber1_bg.png"
-                                                    alt="#" /></span>
+                                                    alt="#" ></span>
 
                                             <div class="byNumber_infoText">
                                                 <strong><b class="counter-value" data-count="10">0</b>+</strong>
@@ -119,7 +116,7 @@
                                     <div class="col-lg-6 col-md-6 numberStepsSpace">
                                         <div class="byNumber_steps_info">
                                             <span class="byNumber_bg"><img src="/bizionic/images/byNumber2_bg.png"
-                                                    alt="#" /></span>
+                                                    alt="#" ></span>
 
                                             <div class="byNumber_infoText">
                                                 <strong><b class="counter-value" data-count="150">0</b>+</strong>
@@ -134,7 +131,7 @@
                                     <div class="col-lg-6 col-md-6 numberStepsSpace">
                                         <div class="byNumber_steps_info">
                                             <span class="byNumber_bg"><img src="/bizionic/images/byNumber3_bg.png"
-                                                    alt="#" /></span>
+                                                    alt="#" ></span>
 
                                             <div class="byNumber_infoText">
                                                 <strong><b class="counter-value" data-count="25">0</b>+</strong>
@@ -149,7 +146,7 @@
                                     <div class="col-lg-6 col-md-6 numberStepsSpace">
                                         <div class="byNumber_steps_info">
                                             <span class="byNumber_bg"><img src="/bizionic/images/byNumber5_bg.png"
-                                                    alt="#" /></span>
+                                                    alt="#" ></span>
 
                                             <div class="byNumber_infoText">
                                                 <strong><b class="counter-value" data-count="50">0</b>M+</strong>
@@ -165,7 +162,7 @@
                                     <div class="col-lg-6 col-md-6 numberStepsSpace">
                                         <div class="byNumber_steps_info">
                                             <span class="byNumber_bg"><img src="/bizionic/images/byNumber4_bg.png"
-                                                    alt="#" /></span>
+                                                    alt="#" ></span>
 
                                             <div class="byNumber_infoText">
                                                 <strong><b class="counter-value" data-count="250">0</b>+</strong>
@@ -180,7 +177,7 @@
                                     <div class="col-lg-6 col-md-6 numberStepsSpace">
                                         <div class="byNumber_steps_info">
                                             <span class="byNumber_bg"><img src="/bizionic/images/byNumber6_bg.png"
-                                                    alt="#" /></span>
+                                                    alt="#"></span>
 
                                             <div class="byNumber_infoText">
                                                 <strong><b class="counter-value" data-count="1000">0</b>K+</strong>
@@ -217,19 +214,19 @@
                     <div class="col-lg-4 col-md-4 p-0  aos-init aos-animate" data-aos="flip-left"
                         data-aos-duration="2000" data-aos-easing="ease-out-cubic">
                         <div class="at_bizionicSteps_col">
-                            <span><img src="/bizionic/images/at_bizioni_img1.png" alt="#" /></span>
+                            <span><img src="/bizionic/images/at_bizioni_img1.png" alt="#" ></span>
                         </div>
                     </div>
                     <div class="col-lg-4 col-md-4 p-0 aos-init aos-animate" data-aos="flip-left"
                         data-aos-duration="2000" data-aos-easing="ease-out-cubic">
                         <div class="at_bizionicSteps_col">
-                            <span><img src="/bizionic/images/at_bizioni_img2.png" alt="#" /></span>
+                            <span><img src="/bizionic/images/at_bizioni_img2.png" alt="#"></span>
                         </div>
                     </div>
                     <div class="col-lg-4 col-md-4 p-0 aos-init aos-animate" data-aos="flip-left"
                         data-aos-duration="2000" data-aos-easing="ease-out-cubic">
                         <div class="at_bizionicSteps_col">
-                            <span><img src="/bizionic/images/at_bizioni_img3.png" alt="#" /></span>
+                            <span><img src="/bizionic/images/at_bizioni_img3.png" alt="#"></span>
                         </div>
                     </div>
                 </div>
@@ -271,7 +268,7 @@
                         data-aos-easing="">
                         <div class="aboutBizionic_col_info">
                             <h4>One-Stop Shop:</h4>
-                            <p><span><img src="/bizionic/images/about_icon1.png" alt="#" /></span>
+                            <p><span><img src="/bizionic/images/about_icon1.png" alt="#" ></span>
                                 For a product's success, it is prudent that the technology development
                                 incorporates the content, marketing, and delivery channels of the
                                 products and services during the development phase. Preliminary planning during the
@@ -285,7 +282,7 @@
                         data-aos-easing="">
                         <div class="aboutBizionic_col_info">
                             <h4>Startups and Enterprises:</h4>
-                            <p><span><img src="/bizionic/images/about_icon2.png" alt="#" /></span> We continue
+                            <p><span><img src="/bizionic/images/about_icon2.png" alt="#"></span> We continue
                                 our customer journey as a startup and with established
                                 businesses. Our products and services solution provides brands with cost-effective and
                                 client-centric solutions incorporating the size and scale of the project requirements.
@@ -305,7 +302,7 @@
                         data-aos-easing="">
                         <div class="aboutBizionic_col_info">
                             <h4>In-House Talent:</h4>
-                            <p><span><img src="/bizionic/images/about_icon3.png" alt="#" /></span> Most of our
+                            <p><span><img src="/bizionic/images/about_icon3.png" alt="#"></span> Most of our
                                 150+ project managers, software developers, engineers,
                                 analysts, designers, marketers and delivery teams are based in Bizionic
                                 offices across India and overseas technology-sourced partners, full-time
@@ -319,7 +316,7 @@
                         data-aos-easing="">
                         <div class="aboutBizionic_col_info">
                             <h4>Integrity and Transparency:</h4>
-                            <p><span><img src="/bizionic/images/about_icon4.png" alt="#" /></span> The project
+                            <p><span><img src="/bizionic/images/about_icon4.png" alt="#"></span> The project
                                 development team and assignments are conducted in-house and not outsourced to third
                                 parties or the usage of freelancers,
                                 maintaining the client's project confidentiality and respecting the brand's IP rights
@@ -338,7 +335,7 @@
                         data-aos-duration="1200" data-aos-easing="">
                         <div class="aboutBizionic_col_info">
                             <h4>Thinking Out of the Box:</h4>
-                            <p><span><img src="/bizionic/images/about_icon5.png" alt="#" /></span> Bizionic's
+                            <p><span><img src="/bizionic/images/about_icon5.png" alt="#"></span> Bizionic's
                                 team comprises industry veterans, experienced past employees from top software houses
                                 and marketing agencies, and freshly minted
                                 university graduates. Bizionic promotes entrepreneurship and explorative culture that
@@ -352,7 +349,7 @@
                         data-aos-easing="">
                         <div class="aboutBizionic_col_info">
                             <h4>Flexible Cooperation Models:</h4>
-                            <p><span><img src="/bizionic/images/about_icon6.png" alt="#" /></span> Bizionic
+                            <p><span><img src="/bizionic/images/about_icon6.png" alt="#"></span> Bizionic
                                 offers flexible cooperation models to suit client's budgets and project requirements.
                                 With the hybrid software development model
                                 gaining pave, the global software development landscape is evolving fast with changing
@@ -386,7 +383,7 @@
             </div>
 
             <div class="endProcess_img">
-                <span><img src="/bizionic/images/endProcess_flowImg.png" alt="#" /></span>
+                <span><img src="/bizionic/images/endProcess_flowImg.png" alt="#" ></span>
             </div>
         </div>
 
@@ -451,7 +448,7 @@
 
                             <div class="col-lg-4 col-md-5">
                                 <div class="coreTabs_data_avatar">
-                                    <span><img src="/bizionic/images/core_img1.png" alt="#" /></span>
+                                    <span><img src="/bizionic/images/core_img1.png" alt="#"></span>
                                 </div>
                             </div>
                         </div>
@@ -497,7 +494,7 @@
 
                             <div class="col-lg-4 col-md-5">
                                 <div class="coreTabs_data_avatar">
-                                    <span><img src="/bizionic/images/core_img2.png" alt="#" /></span>
+                                    <span><img src="/bizionic/images/core_img2.png" alt="#"></span>
                                 </div>
                             </div>
                         </div>
@@ -544,7 +541,7 @@
 
                             <div class="col-lg-4 col-md-5">
                                 <div class="coreTabs_data_avatar">
-                                    <span><img src="/bizionic/images/core_img3.png" alt="#" /></span>
+                                    <span><img src="/bizionic/images/core_img3.png" alt="#" ></span>
                                 </div>
                             </div>
                         </div>
@@ -592,7 +589,7 @@
 
                             <div class="col-lg-4 col-md-5">
                                 <div class="coreTabs_data_avatar">
-                                    <span><img src="/bizionic/images/core_img4.png" alt="#" /></span>
+                                    <span><img src="/bizionic/images/core_img4.png" alt="#" ></span>
                                 </div>
                             </div>
                         </div>
@@ -636,7 +633,7 @@
 
                             <div class="col-lg-4 col-md-5">
                                 <div class="coreTabs_data_avatar">
-                                    <span><img src="/bizionic/images/core_img5.png" alt="#" /></span>
+                                    <span><img src="/bizionic/images/core_img5.png" alt="#" ></span>
                                 </div>
                             </div>
                         </div>
@@ -726,7 +723,7 @@
 
                         <div class="col-lg-4 col-md-4">
                             <div class="tabsAvatar pr-3">
-                                <span><img src="/bizionic/images/marketingAvatar_stairs.png" alt="#" /></span>
+                                <span><img src="/bizionic/images/marketingAvatar_stairs.png" alt="#" ></span>
                             </div>
                         </div>
 
@@ -805,7 +802,7 @@
 
                         <div class="col-lg-4 col-md-4">
                             <div class="tabsAvatar">
-                                <span><img src="/bizionic/images/uxAvatar.png" alt="#" /></span>
+                                <span><img src="/bizionic/images/uxAvatar.png" alt="#" ></span>
                             </div>
                         </div>
 
@@ -886,7 +883,7 @@
 
                         <div class="col-lg-4 col-md-4">
                             <div class="tabsAvatar ">
-                                <span><img src="/bizionic/images/ecommerceAvatar.png" alt="#" /></span>
+                                <span><img src="/bizionic/images/ecommerceAvatar.png" alt="#" ></span>
                             </div>
                         </div>
 
@@ -967,7 +964,7 @@
 
                             <div class="sourceModel_inner">
                                 <div class="sourceModel_avatar">
-                                    <span><img src="/bizionic/images/model_avatar1.png" alt="#" /></span>
+                                    <span><img src="/bizionic/images/model_avatar1.png" alt="#" ></span>
                                 </div>
 
                                 <div class="sourceModel_list">
@@ -1002,7 +999,7 @@
 
                             <div class="sourceModel_inner">
                                 <div class="sourceModel_avatar">
-                                    <span><img src="/bizionic/images/model_avatar2.png" alt="#" /></span>
+                                    <span><img src="/bizionic/images/model_avatar2.png" alt="#" ></span>
                                 </div>
 
                                 <div class="sourceModel_list">
@@ -1040,7 +1037,7 @@
 
                             <div class="sourceModel_inner">
                                 <div class="sourceModel_avatar">
-                                    <span><img src="/bizionic/images/model_avatar3.png" alt="#" /></span>
+                                    <span><img src="/bizionic/images/model_avatar3.png" alt="#" ></span>
                                 </div>
 
                                 <div class="sourceModel_list">
@@ -1074,7 +1071,7 @@
 
                             <div class="sourceModel_inner">
                                 <div class="sourceModel_avatar">
-                                    <span><img src="/bizionic/images/model_avatar4.png" alt="#" /></span>
+                                    <span><img src="/bizionic/images/model_avatar4.png" alt="#" ></span>
                                 </div>
 
                                 <div class="sourceModel_list">
@@ -1114,7 +1111,7 @@
 
 
                                     <span class="connectRoc"><img src="/bizionic/images/rocket_avatar.png"
-                                            alt="#" /></span>
+                                            alt="#"></span>
                                 </div>
                             </div>
 
@@ -1144,7 +1141,7 @@
                     <div class="col-lg-3 col-md-4 indCol">
                         <div class="indust_work_col">
                             <a href="/industries/industries-we-serve/industries/startups">
-                                <span><img src="/bizionic/images/industriesIcon_1.png" alt="#" /></span>
+                                <span><img src="/bizionic/images/industriesIcon_1.png" alt="#" ></span>
                                 <strong>Startups</strong>
                             </a>
                         </div>
@@ -1153,7 +1150,7 @@
                     <div class="col-lg-3 col-md-4 indCol">
                         <div class="indust_work_col">
                             <a href="/industries/industries-we-serve/industries/real-estate">
-                                <span><img src="/bizionic/images/industriesIcon_2.png" alt="#" /></span>
+                                <span><img src="/bizionic/images/industriesIcon_2.png" alt="#" ></span>
                                 <strong>REAL ESTATE</strong>
                             </a>
                         </div>
@@ -1162,7 +1159,7 @@
                     <div class="col-lg-3 col-md-4 indCol">
                         <div class="indust_work_col">
                             <a href="/industries/industries-we-serve/industries/b2b-solutions">
-                                <span><img src="/bizionic/images/industriesIcon_3.png" alt="#" /></span>
+                                <span><img src="/bizionic/images/industriesIcon_3.png" alt="#" ></span>
                                 <strong>B2B SOLUTIONS</strong>
                             </a>
                         </div>
@@ -1171,7 +1168,7 @@
                     <div class="col-lg-3 col-md-4 indCol">
                         <div class="indust_work_col">
                             <a href="/industries/industries-we-serve/industries/b2c-solutions">
-                                <span><img src="/bizionic/images/industriesIcon_4.png" alt="#" /></span>
+                                <span><img src="/bizionic/images/industriesIcon_4.png" alt="#" ></span>
                                 <strong>B2C SOLUTIONS</strong>
                             </a>
                         </div>
@@ -1183,7 +1180,7 @@
                     <div class="col-lg-3 col-md-4 indCol">
                         <div class="indust_work_col">
                             <a href="/industries/industries-we-serve/industries/healthcare">
-                                <span><img src="/bizionic/images/industriesIcon_5.png" alt="#" /></span>
+                                <span><img src="/bizionic/images/industriesIcon_5.png" alt="#" ></span>
                                 <strong>HEALTHCARE</strong>
                             </a>
                         </div>
@@ -1192,7 +1189,7 @@
                     <div class="col-lg-3 col-md-4 indCol">
                         <div class="indust_work_col">
                             <a href="/industries/industries-we-serve/industries/travel-and-hospitality">
-                                <span><img src="/bizionic/images/industriesIcon_6.png" alt="#" /></span>
+                                <span><img src="/bizionic/images/industriesIcon_6.png" alt="#"></span>
                                 <strong>TRAVEL & HOSPITALITY</strong>
                             </a>
                         </div>
@@ -1201,7 +1198,7 @@
                     <div class="col-lg-3 col-md-4 indCol">
                         <div class="indust_work_col">
                             <a href="/industries/industries-we-serve/industries/banking-and-finance">
-                                <span><img src="/bizionic/images/industriesIcon_7.png" alt="#" /></span>
+                                <span><img src="/bizionic/images/industriesIcon_7.png" alt="#"></span>
                                 <strong>BANKING & FINANCE</strong>
                             </a>
                         </div>
@@ -1210,7 +1207,7 @@
                     <div class="col-lg-3 col-md-4 indCol">
                         <div class="indust_work_col">
                             <a href="/industries/industries-we-serve/industries/media-and-publishing">
-                                <span><img src="/bizionic/images/industriesIcon_8.png" alt="#" /></span>
+                                <span><img src="/bizionic/images/industriesIcon_8.png" alt="#"></span>
                                 <strong>MEDIA & PUBLISHING</strong>
                             </a>
                         </div>
@@ -1221,7 +1218,7 @@
                     <div class="col-lg-3 col-md-4 indCol">
                         <div class="indust_work_col">
                             <a href="/industries/industries-we-serve/industries/education-and-e-Learning">
-                                <span><img src="/bizionic/images/industriesIcon_9.png" alt="#" /></span>
+                                <span><img src="/bizionic/images/industriesIcon_9.png" alt="#"></span>
                                 <strong>EDUCATION AND E-LEARNING</strong>
                             </a>
                         </div>
@@ -1230,7 +1227,7 @@
                     <div class="col-lg-3 col-md-4 indCol">
                         <div class="indust_work_col">
                             <a href="/industries/industries-we-serve/industries/food-and-fmcg">
-                                <span><img src="/bizionic/images/industriesIcon_10.png" alt="#" /></span>
+                                <span><img src="/bizionic/images/industriesIcon_10.png" alt="#"></span>
                                 <strong>FOOD & FMCG</strong>
                             </a>
                         </div>
@@ -1239,7 +1236,7 @@
                     <div class="col-lg-3 col-md-4 indCol">
                         <div class="indust_work_col">
                             <a href="/industries/industries-we-serve/industries/automotive">
-                                <span><img src="/bizionic/images/industriesIcon_11.png" alt="#" /></span>
+                                <span><img src="/bizionic/images/industriesIcon_11.png" alt="#"></span>
                                 <strong>AUTOMOTIVE</strong>
                             </a>
                         </div>
@@ -1249,7 +1246,7 @@
                     <div class="col-lg-3 col-md-4 indCol">
                         <div class="indust_work_col">
                             <a href="/industries/industries-we-serve/industries/e-commerce">
-                                <span><img src="/bizionic/images/industriesIcon_12.png" alt="#" /></span>
+                                <span><img src="/bizionic/images/industriesIcon_12.png" alt="#"></span>
                                 <strong>E-COMMERCE</strong>
                             </a>
                         </div>
@@ -1443,7 +1440,7 @@
                                             <strong>Full Name<sup class="text-danger">*</sup></strong>
                                             <div class="contactUs_info_fieldInput">
                                                 <input type="text" name="full_name" placeholder=""
-                                                    value="" />
+                                                    value="">
                                             </div>
                                         </div>
                                     </div>
@@ -1453,7 +1450,7 @@
                                             <strong>Company Name</strong>
                                             <div class="contactUs_info_fieldInput">
                                                 <input type="text" name="company_name" placeholder=""
-                                                    value="" />
+                                                    value="">
                                             </div>
                                         </div>
                                     </div>
@@ -1464,7 +1461,7 @@
                                             <strong>Email<sup class="text-danger">*</sup></strong>
                                             <div class="contactUs_info_fieldInput">
                                                 <input type="text" name="email" placeholder=""
-                                                    value="" />
+                                                    value="">
                                             </div>
                                         </div>
                                     </div>
@@ -1473,8 +1470,7 @@
                                         <div class="contactUs_info_field">
                                             <strong>Country Name<sup class="text-danger">*</sup></strong>
                                             <div class="contactUs_info_fieldSelect">
-                                                <select class="form-control" name="country_name" id="countrySelect"
-                                                    placeholder="Search or select a country">
+                                                <select class="form-control" name="country_name" id="countrySelect">
                                                     <!-- Options will be dynamically populated using JavaScript -->
                                                 </select>
                                             </div>
@@ -1487,8 +1483,7 @@
                                             <strong>Country code<sup class="text-danger">*</sup></strong>
                                             <div class="contactUs_info_fieldSelect">
                                                 <select class="form-control" name="country_code"
-                                                    id="countryCodeSelect"
-                                                    placeholder="Search or select a mobile code">
+                                                    id="countryCodeSelect">
                                                     <!-- Options will be dynamically populated using JavaScript -->
                                                 </select>
                                             </div>
@@ -1500,8 +1495,7 @@
                                         <div class="contactUs_info_field">
                                             <strong>Mobile code<sup class="text-danger">*</sup></strong>
                                             <div class="contactUs_info_fieldSelect">
-                                                <select class="form-control" name="mobile_code" id="mobileCodeSelect"
-                                                    placeholder="Search or select a mobile code">
+                                                <select class="form-control" name="mobile_code" id="mobileCodeSelect">
                                                     <!-- Options will be dynamically populated using JavaScript -->
                                                 </select>
                                             </div>
@@ -1514,18 +1508,18 @@
                                             <strong>Contact Number<sup class="text-danger">*</sup></strong>
                                             <div class="contactUs_info_fieldInput">
                                                 <input type="text" name="contact_number" placeholder=""
-                                                    value="" />
+                                                    value="" >
                                             </div>
                                         </div>
                                     </div>
 
 
                                 </div>
-                                <input type="time" id="time" name="time" value="" hidden />
-                                <input type="date" name="date" value="" hidden />
-                                <input type="text" name="type" placeholder="" value="call" hidden />
+                                <input type="time" id="time" name="time" value="" hidden>
+                                <input type="date" name="date" value="" hidden>
+                                <input type="text" name="type" placeholder="" value="call" hidden>
                                 <div class="contactBtn pt-3  mt-3">
-                                    <input type="submit" value="Submit" class="btn_default d-block w-100" />
+                                    <input type="submit" value="Submit" class="btn_default d-block w-100">
                                 </div>
                             </div>
                         </form>
@@ -1557,7 +1551,7 @@
                                             <strong>Full Name<sup class="text-danger">*</sup></strong>
                                             <div class="contactUs_info_fieldInput">
                                                 <input type="text" name="full_name" placeholder=""
-                                                    value="" />
+                                                    value="">
                                             </div>
                                         </div>
                                     </div>
@@ -1568,7 +1562,7 @@
                                             <strong>Company Name</strong>
                                             <div class="contactUs_info_fieldInput">
                                                 <input type="text" name="company_name" placeholder=""
-                                                    value="" />
+                                                    value="">
                                             </div>
                                         </div>
                                     </div>
@@ -1579,7 +1573,7 @@
                                             <strong>Country Name<sup class="text-danger">*</sup></strong>
                                             <div class="contactUs_info_fieldSelect">
                                                 <select class="form-control" name="country_name"
-                                                    id="videoCountrySelect" placeholder="Search or select a country">
+                                                    id="videoCountrySelect">
                                                     <!-- Options will be dynamically populated using JavaScript -->
                                                 </select>
                                             </div>
@@ -1592,8 +1586,7 @@
                                             <strong>Country code<sup class="text-danger">*</sup></strong>
                                             <div class="contactUs_info_fieldSelect">
                                                 <select class="form-control" name="country_code"
-                                                    id="videoCountryCodeSelect"
-                                                    placeholder="Search or select a mobile code">
+                                                    id="videoCountryCodeSelect">
                                                     <!-- Options will be dynamically populated using JavaScript -->
                                                 </select>
                                             </div>
@@ -1606,8 +1599,7 @@
                                             <strong>Mobile code<sup class="text-danger">*</sup></strong>
                                             <div class="contactUs_info_fieldSelect">
                                                 <select class="form-control" name="mobile_code"
-                                                    id="videoMobileCodeSelect"
-                                                    placeholder="Search or select a mobile code">
+                                                    id="videoMobileCodeSelect">
                                                     <!-- Options will be dynamically populated using JavaScript -->
                                                 </select>
                                             </div>
@@ -1620,7 +1612,7 @@
                                             <strong>Contact Number<sup class="text-danger">*</sup></strong>
                                             <div class="contactUs_info_fieldInput">
                                                 <input type="text" name="contact_number" placeholder=""
-                                                    value="" />
+                                                    value="" >
                                             </div>
                                         </div>
                                     </div>
@@ -1631,7 +1623,7 @@
                                             <strong>Email<sup class="text-danger">*</sup></strong>
                                             <div class="contactUs_info_fieldInput">
                                                 <input type="text" name="email" placeholder=""
-                                                    value="" />
+                                                    value="">
                                             </div>
                                         </div>
                                     </div>
@@ -1639,7 +1631,7 @@
                                     <div class="col-lg-6">
                                         <div class="contactUs_info_field">
                                             <strong>Date<sup class="text-danger">*</sup></strong>
-                                            <input type="date" name="date" />
+                                            <input type="date" name="date">
                                         </div>
                                     </div>
 
@@ -1647,7 +1639,7 @@
                                     <div class="col-lg-6">
                                         <div class="contactUs_info_field">
                                             <strong>Time<sup class="text-danger">*</sup></strong>
-                                            <input type="time" id="time" name="time" />
+                                            <input type="time" id="time" name="time">
                                         </div>
                                     </div>
 
@@ -1660,9 +1652,9 @@
                                 </div>
 
 
-                                <input type="text" name="type" placeholder="" value="video" hidden />
+                                <input type="text" name="type" placeholder="" value="video" hidden>
                                 <div class="contactBtn pt-3 mt-3">
-                                    <input type="submit" value="Submit" class="btn_default   d-block w-100" />
+                                    <input type="submit" value="Submit" class="btn_default   d-block w-100">
                                 </div>
                             </div>
                         </form>

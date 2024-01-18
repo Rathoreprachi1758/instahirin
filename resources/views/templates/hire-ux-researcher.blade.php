@@ -8,7 +8,7 @@
        <!-- main banner img -->
 
        <div class="mainBanner_layout">
-           <span><img src="/bizionic/images/hire_main_banner.png" alt="#" /></span>
+           <span><img src="/bizionic/images/hire_main_banner.png" alt="#"></span>
        </div>
 
 
@@ -51,7 +51,7 @@
                                    data-aos-easing="ease">
                                    <div class="industryNew_section1_avatar">
                                        <span><img src="/bizionic/images/m_uxResearch_avatar.png"
-                                               alt="#" /></span>
+                                               alt="#"></span>
                                    </div>
                                </div>
                            </div>
@@ -89,7 +89,7 @@
                        <div class="row justify-content-center">
                            <div class="col-lg-3 col-md-6 provide_col">
                                <div class="industryNew_section2_colsInfo">
-                                   <span><img src="/bizionic/images/m_uxResearch_icon1.png" alt="#" /></span>
+                                   <span><img src="/bizionic/images/m_uxResearch_icon1.png" alt="#"></span>
                                    <h6>USER RESEARCH PLANNING</h6>
                                    <p>UX researchers plan and design research studies to gather insights about users.
                                        They determine the research objectives, identify the target audience, and select
@@ -99,7 +99,7 @@
                            </div>
                            <div class="col-lg-3 col-md-6 provide_col">
                                <div class="industryNew_section2_colsInfo">
-                                   <span><img src="/bizionic/images/m_uxResearch_icon2.png" alt="#" /></span>
+                                   <span><img src="/bizionic/images/m_uxResearch_icon2.png" alt="#"></span>
                                    <h6>USER INTERVIEWS</h6>
                                    <p>UX researchers conduct in-depth interviews with users to gain a deep understanding
                                        of their experiences, needs, and challenges. They use open-ended questions and
@@ -108,7 +108,7 @@
                            </div>
                            <div class="col-lg-3 col-md-6 provide_col">
                                <div class="industryNew_section2_colsInfo">
-                                   <span><img src="/bizionic/images/m_uxResearch_icon3.png" alt="#" /></span>
+                                   <span><img src="/bizionic/images/m_uxResearch_icon3.png" alt="#"></span>
                                    <h6>CONTEXTUAL INQUIRY AND FIELD STUDIES</h6>
                                    <p>UX researchers observe users in their natural environments to understand how they
                                        interact with products or services in real-life situations. They collect
@@ -118,7 +118,7 @@
                            </div>
                            <div class="col-lg-3 col-md-6 provide_col">
                                <div class="industryNew_section2_colsInfo">
-                                   <span><img src="/bizionic/images/m_uxResearch_icon4.png" alt="#" /></span>
+                                   <span><img src="/bizionic/images/m_uxResearch_icon4.png" alt="#"></span>
                                    <h6>SURVEYS AND QUESTIONNAIRES</h6>
                                    <p>UX researchers design and distribute surveys to collect quantitative data on a
                                        larger scale. Surveys help researchers gather insights about user demographics,
@@ -132,7 +132,7 @@
 
                            <div class="col-lg-3 col-md-6 provide_col">
                                <div class="industryNew_section2_colsInfo">
-                                   <span><img src="/bizionic/images/m_uxResearch_icon5.png" alt="#" /></span>
+                                   <span><img src="/bizionic/images/m_uxResearch_icon5.png" alt="#"></span>
                                    <h6>USABILITY TESTING</h6>
                                    <p>UX researchers conduct usability testing sessions to evaluate the usability and
                                        effectiveness of a product or prototype. They observe users as they interact with
@@ -142,7 +142,7 @@
 
                            <div class="col-lg-3 col-md-6 provide_col">
                                <div class="industryNew_section2_colsInfo">
-                                   <span><img src="/bizionic/images/m_uxResearch_icon6.png" alt="#" /></span>
+                                   <span><img src="/bizionic/images/m_uxResearch_icon6.png" alt="#"></span>
                                    <h6>CARD SORTING AND TREE TESTING</h6>
                                    <p>UX researchers employ card sorting techniques to understand how users categorize
                                        and organize information. They use tree testing methods to assess the
@@ -152,7 +152,7 @@
 
                            <div class="col-lg-3 col-md-6 provide_col">
                                <div class="industryNew_section2_colsInfo">
-                                   <span><img src="/bizionic/images/m_uxResearch_icon7.png" alt="#" /></span>
+                                   <span><img src="/bizionic/images/m_uxResearch_icon7.png" alt="#"></span>
                                    <h6>DATA ANALYSIS AND SYNTHESIS</h6>
                                    <p>UX researchers analyze qualitative and quantitative data collected from various
                                        research methods. They identify patterns, themes, and insights that inform design
@@ -161,7 +161,7 @@
                            </div>
                            <div class="col-lg-3 col-md-6 provide_col">
                                <div class="industryNew_section2_colsInfo">
-                                   <span><img src="/bizionic/images/m_uxResearch_icon8.png" alt="#" /></span>
+                                   <span><img src="/bizionic/images/m_uxResearch_icon8.png" alt="#"></span>
                                    <h6>PERSONA DEVELOPMENT</h6>
                                    <p>UX researchers create user personas, which are fictional representations of target
                                        users based on research data. Personas help designers and stakeholders empathize
@@ -173,7 +173,7 @@
 
                            <div class="col-lg-3 col-md-6 provide_col">
                                <div class="industryNew_section2_colsInfo">
-                                   <span><img src="/bizionic/images/m_uxResearch_icon9.png" alt="#" /></span>
+                                   <span><img src="/bizionic/images/m_uxResearch_icon9.png" alt="#"></span>
                                    <h6>JOURNEY MAPPING</h6>
                                    <p>UX researchers develop user journey maps to visualize the user's end-to-end
                                        experience with a product or service. Journey maps help identify pain points,
@@ -182,7 +182,7 @@
                            </div>
                            <div class="col-lg-3 col-md-6 provide_col">
                                <div class="industryNew_section2_colsInfo">
-                                   <span><img src="/bizionic/images/m_uxResearch_icon10.png" alt="#" /></span>
+                                   <span><img src="/bizionic/images/m_uxResearch_icon10.png" alt="#"></span>
                                    <h6>COLLABORATION WITH TEAMS</h6>
                                    <p>UX researchers work closely with designers, developers, and other stakeholders to
                                        ensure that research insights are effectively incorporat- ed into the design

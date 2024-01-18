@@ -43,7 +43,7 @@
                                         Company)</strong>
                                     <div class="kycForm_field_info">
                                         <input type="text" placeholder="Enter your Company Name" name="Company_Name"
-                                            value="{{ old('Company_Name') }}" />
+                                            value="{{ old('Company_Name') }}">
                                     </div>
                                     @error('Company_Name')
                                         <div class="text-danger">{{ $message }}</div>
@@ -55,7 +55,7 @@
                                     <strong>Trade license number *</strong>
                                     <div class="kycForm_field_info">
                                         <input type="text" placeholder="Enter Trade Licence" name="Licence_number"
-                                            value="{{ old('Licence_number') }}" />
+                                            value="{{ old('Licence_number') }}">
                                     </div>
                                     @error('Licence_number')
                                         <div class="text-danger">{{ $message }}</div>
@@ -71,7 +71,7 @@
                                     <strong>Date of incorporation</strong>
                                     <div class="kycForm_field_info">
                                         <input name="Date_incorporation" id="datepicker" autocomplete="off"
-                                            value="{{ old('Date_incorporation') }}" />
+                                            value="{{ old('Date_incorporation') }}">
                                     </div>
                                     @error('Date_incorporation')
                                         <div class="text-danger">{{ $message }}</div>
@@ -99,7 +99,7 @@
                                     <strong>Company Address (line 1)</strong>
                                     <div class="kycForm_field_info">
                                         <input type="text" placeholder="Address 1" name="Company_address_line1"
-                                            value="{{ old('Company_address_line1') }}" />
+                                            value="{{ old('Company_address_line1') }}">
                                     </div>
                                     @error('Company_address_line1')
                                         <div class="text-danger">{{ $message }}</div>
@@ -111,7 +111,7 @@
                                     <strong>Company Address (line 2)</strong>
                                     <div class="kycForm_field_info">
                                         <input type="text" placeholder="Address 2" name="Company_address_line2"
-                                            value="{{ old('Company_address_line2') }}" />
+                                            value="{{ old('Company_address_line2') }}">
                                     </div>
                                     @error('Company_address_line2')
                                         <div class="text-danger">{{ $message }}</div>
@@ -127,7 +127,7 @@
                                     <strong>Beneficiary owner</strong>
                                     <div class="kycForm_field_info">
                                         <input type="text" name="beneficiary_owner"
-                                            value="{{ old('beneficiary_owner') }}" />
+                                            value="{{ old('beneficiary_owner') }}">
                                     </div>
                                     @error('beneficiary_owner')
                                         <div class="text-danger">{{ $message }}</div>
@@ -138,7 +138,7 @@
                                 <div class="kycForm_field">
                                     <strong>Nationality</strong>
                                     <div class="kycForm_field_info">
-                                        <input type="text" name="nationality" value="{{ old('nationality') }}" />
+                                        <input type="text" name="nationality" value="{{ old('nationality') }}">
                                     </div>
                                     @error('nationality')
                                         <div class="text-danger">{{ $message }}</div>
@@ -154,7 +154,7 @@
                                     <strong>Get/tax Identification Number</strong>
                                     <div class="kycForm_field_info">
                                         <input type="text" placeholder="" name="tax_identification_number"
-                                            value="{{ old('tax_identification_number') }}" />
+                                            value="{{ old('tax_identification_number') }}">
                                     </div>
                                     @error('tax_identification_number')
                                         <div class="text-danger">{{ $message }}</div>
@@ -184,7 +184,7 @@
                                             <span class="filename">Scanned passport / id copy *</span>
                                             <input type="file" class="inputfile form-control"
                                                 name="Scanned_passport" value="{{ old('Scanned_passport') }}"
-                                                onchange="previewImage(this, 'imagePreview1')" />
+                                                onchange="previewImage(this, 'imagePreview1')">
                                             <i class="fa fa-upload" aria-hidden="true"></i>
                                         </label>
                                         @error('Scanned_passport')
@@ -217,7 +217,7 @@
                                             <span class="filename">Scanned ID copy *</span>
                                             <input type="file" class="inputfile form-control"
                                                 name="back_side_copy" value="{{ old('back_side_copy') }}"
-                                                onchange="previewImage(this, 'imagePreview2')" />
+                                                onchange="previewImage(this, 'imagePreview2')">
                                             <i class="fa fa-upload" aria-hidden="true"></i>
                                         </label>
                                         <p class="p-0">
@@ -257,7 +257,7 @@
                                             <span class="filename">Scanned Address Proof Copy</span>
                                             <input type="file" class="inputfile form-control"
                                                 name="address_proof_copy" value="{{ old('address_proof_copy') }}"
-                                                onchange="previewImage(this, 'imagePreview3')" />
+                                                onchange="previewImage(this, 'imagePreview3')">
                                             <i class="fa fa-upload" aria-hidden="true"></i>
                                         </label>
                                         <p>(Electricity or any Utility Bill)</p>
@@ -292,7 +292,7 @@
                                             <span class="filename">Click to upload</span>
                                             <input type="file" class="inputfile form-control" name="Trade_licence"
                                                 value="{{ old('Trade_licence') }}"
-                                                onchange="previewImage(this, 'imagePreview4')" />
+                                                onchange="previewImage(this, 'imagePreview4')">
                                             <i class="fa fa-upload" aria-hidden="true"></i>
                                         </label>
                                         @error('Trade_licence')
@@ -317,7 +317,7 @@
                                             <span class="filename">Other</span>
                                             <input type="file" class="inputfile form-control" name="other_doc"
                                                 value="{{ old('other_doc') }}"
-                                                onchange="previewImage(this, 'imagePreview5')" />
+                                                onchange="previewImage(this, 'imagePreview5')">
                                             <i class="fa fa-upload" aria-hidden="true"></i>
                                         </label>
                                         <p>
@@ -374,7 +374,7 @@
                                             <span class="filename">Upload YOUR FATCA form</span>
                                             <input type="file" class="inputfile form-control" name="FATCA"
                                                 value="{{ old('FATCA') }}"
-                                                onchange="previewImage(this, 'imagePreview6')" />
+                                                onchange="previewImage(this, 'imagePreview6')">
                                             <i class="fa fa-upload" aria-hidden="true"></i>
                                         </label>
                                         @error('FATCA')
@@ -497,7 +497,7 @@
                                                 form</span>
                                             <input type="file" class="inputfile form-control"
                                                 name="customer_compliance"
-                                                onchange="previewImage(this, 'imagePreview9')" />
+                                                onchange="previewImage(this, 'imagePreview9')">
                                             <i class="fa fa-upload" aria-hidden="true"></i>
                                         </label>
                                     </div>
@@ -520,7 +520,7 @@
                                 <div class="auth_text">
                                     <p>
                                         <label class="checkbox-label">
-                                            <input type="checkbox" name="agrement_checkbox" />
+                                            <input type="checkbox" name="agrement_checkbox">
                                             <span class="checkbox-custom rectangular"></span>
                                         </label>
                                         I agree, <a href="#">read more</a>
@@ -532,7 +532,7 @@
                             </div>
 
                             <div class="customSubmitBtn kycSubmit">
-                                <input type="submit" value="Submit" class="btndefault" />
+                                <input type="submit" value="Submit" class="btndefault">
                             </div>
                         </div>
                 </form>
