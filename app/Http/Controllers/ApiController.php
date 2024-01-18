@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Blogs;
 use App\Models\Job;
 use App\Models\Skill;
 use App\Models\Client;
@@ -81,7 +82,7 @@ class ApiController extends Controller
 
     // fetch all the jobs
     public function jobs(Request $request)
-    {   
+    {
         // return $request->page;
         if (empty($request->page))
             return response()->json(Job::with('skills')->orderBy('created_at', 'desc')->get(), 200)->header('Content-Type', 'text/json');
@@ -172,5 +173,13 @@ class ApiController extends Controller
         $jobs = $query->orderBy('created_at', 'desc')->get();
 
         return response()->json($jobs, 200)->header('Content-Type', 'text/json');
+    }
+
+    // method for fetching blogs
+    public function getBlogs(Request $request)
+    {
+        $blogs = Blogs::orderBy('created_at', 'desc')->get();
+
+        return response()->json($blogs, 200)->header('Content-Type', 'text/json');
     }
 }
