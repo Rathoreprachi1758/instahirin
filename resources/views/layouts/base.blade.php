@@ -22,41 +22,40 @@
             f.parentNode.insertBefore(j, f);
         })(window, document, 'script', 'dataLayer', 'GTM-THZV9RC4');
     </script>
-    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="format-detection" content="telephone=no">
     <title>@yield('meta_title', 'https://www.bizionictech.com/')</title>
     <meta name="description" content="@yield('meta_description', 'We build e-commerce site, management site, Android, iOS apps, and teach software development courses online.Laravel, Java, NodeJs, PHP technology.')">
-    {{-- // --}}
     @yield('html_content')
 
     <meta name="keywords" content="@yield('meta_keywords', 'We build e-commerce site, management site, Android, iOS apps, and teach software development courses online.Laravel, Java, NodeJs, PHP technology.')">
     <!-- bootstrap -->
     <link rel="stylesheet" href="/bizionic/css/bootstrap.min.css">
     <!-- custom css -->
-    <link rel="stylesheet " href="/bizionic/css/style.css ">
-    <link rel="stylesheet " href="/bizionic/css/responsive.css ">
-    <link rel="stylesheet" href="/bizionic/css/aos.css" />
+    <link rel="stylesheet" href="/bizionic/css/style.css">
+    <link rel="stylesheet" href="/bizionic/css/responsive.css">
+    <link rel="stylesheet" href="/bizionic/css/aos.css">
 
     <!-- font awesome-->
-    <link rel="stylesheet " href="/bizionic/css/font-awesome.min.css ">
+    <link rel="stylesheet" href="/bizionic/css/font-awesome.min.css">
     <script src="/bizionic/js/jquery-3.4.1.min.js"></script>
     {{-- Schema Js file --}}
     <script src="/bizionic/js/schema.js"></script>
     <!-- slick slider -->
-    <link rel=" stylesheet " type="text/css " href="/bizionic/css/slick.css ">
-    <link rel="stylesheet " type="text/css " href="/bizionic/css/slick-theme.css ">
-    <script type="text/javascript" src="/bizionic/js/slick.js"></script>
-    <script type="text/javascript" src="/bizionic/js/owl.carousel.js"></script>
-    <script type="text/javascript" src="/bizionic/js/countries.js"></script>
+    <link rel="stylesheet" href="/bizionic/css/slick.css">
+    <link rel="stylesheet" href="/bizionic/css/slick-theme.css">
+    <script src="/bizionic/js/slick.js"></script>
+    <script src="/bizionic/js/owl.carousel.js"></script>
+    <script src="/bizionic/js/countries.js"></script>
     {{-- <script type="text/javascript"
             src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAI4caNs9dzbHxSeT0gDuZFFRu1xAsA7N0&libraries=places&callback=Function.prototype">
         </script> --}}
-    <script type="text/javascript"
+    <script
         src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCWCwDO2UDvwai9BBUyvxGS6t436Eot7Wc&libraries=places&callback=Function.prototype">
     </script>
-    <link rel="stylesheet" href="/bizionic/css/owl.carousel.min.css" />
+    <link rel="stylesheet" href="/bizionic/css/owl.carousel.min.css">
     <link rel="icon" sizes="96x96" href="/bizionic/images/favicon-96x96.png">
     @vite(['resources/css/app.css', 'resources/js/app.js'])
     <!-- Hotjar Tracking Code for https://www.bizionictech.com/ -->
@@ -99,11 +98,9 @@
         fbq('init', '990314288786309');
         fbq('track', 'PageView');
     </script>
-    <noscript><img height="1" width="1" style="display:none"
-            src="https://www.facebook.com/tr?id=990314288786309&ev=PageView&noscript=1" /></noscript>
-    <!-- End Meta Pixel Code -->
-
-
+    <noscript>
+        <img height="1" width="1" style="display:none" src="https://www.facebook.com/tr?id=990314288786309&ev=PageView&noscript=1" alt="Facebook Pixel Tracking">
+    </noscript>
 
     <!-- Google tag (gtag.js) -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-603H2KERC7"></script>
@@ -117,9 +114,6 @@
 
         gtag('config', 'G-603H2KERC7');
     </script>
-
-
-
 </head>
 
 <body>
@@ -157,12 +151,12 @@
 
                                 <div class="eshareWhite_logo">
                                     <a href="https://www.eshare.ai/" target="_blank"><img
-                                            src="/bizionic/images/eshareWhite_logo.png" alt="#" /></a>
+                                            src="/bizionic/images/eshareWhite_logo.png" alt="#" ></a>
                                 </div>
                                 {{-- // --}}
                                 <div class="eshareWhite_logo">
                                     <a href="https://leadnest.ai/admin/signin" target="_blank"><img
-                                            src="\bizionic\images\leadnest.png" alt="#" /></a>
+                                            src="\bizionic\images\leadnest.png" alt="#" ></a>
                                 </div>
                             </div>
                             <div class="trendingNav">
@@ -176,7 +170,7 @@
                                         {{-- @include('partials.nav', ['menus' => $menus]) --}}
                                         <li><a href="/industries/industries-we-serve/industries/startups">Startup
                                                 Funding</a></li>
-                                        <div class="sub_nav"></div>
+                                        {{-- <div class="sub_nav"></div> --}}
                                         <a href="javascript:void(0)" class="closeNav">&nbsp;</a>
                                         @foreach ($menus as $key => $menu)
                                             @php
@@ -288,14 +282,14 @@
                                     <div id="google_translate_element"></div>
                                 </div>
                                 {{-- <div class="authBtns"> --}}
-                                {{-- <div class="authBtns">
+                                <div class="authBtns">
                                     <ul>
                                         <li><a href="{{ url('/loginpage') }}">Sign In</a></li>
                                         <li><a href="{{ route('signin') }}">Sign Up</a>
                                         </li>
 
                                     </ul>
-                                </div> --}}
+                                </div>
                             </div>
                         </div>
                     </div>
@@ -304,7 +298,7 @@
                 <div class="auto_container">
                     <div class="header_detail">
                         <div class="main_logo">
-                            <a href="/about-us"><img src="/bizionic/images/logo.png" alt="#" /></a>
+                            <a href="/about-us"><img src="/bizionic/images/logo.png" alt="#" ></a>
                         </div>
                         <div class="menuIcon"></div>
                         @include('partials.nav')
@@ -452,7 +446,7 @@
                     <div class="auto_container">
                         <div class="footerBottom_detail">
                             <div class="main_logo">
-                                <a href="/about-us"><img src="/bizionic/images/footerLogo.png" alt="#" /></a>
+                                <a href="/about-us"><img src="/bizionic/images/footerLogo.png" alt="#" ></a>
                             </div>
                             <div class="copyRight">
                                 <p>Copyright © 2022 Bizionic Technologies and Marketing Solutions Pvt. Ltd. All Rights
