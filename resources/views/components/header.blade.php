@@ -117,6 +117,11 @@
                                                 aria-hidden="true"></i></span> Home <em class="menu_icon"><i
                                                 class="fa fa-angle-down" aria-hidden="true"></i></em></a>
                                 </li>
+                                <li>
+                                    <a href="/InstaHirin" ><span><i class="fa fa-user-circle-o"
+                                        aria-hidden="true"></i></span> Instahirin <em class="menu_icon"><i
+                                        class="fa fa-angle-down" aria-hidden="true"></i></em></a>
+                                </li>
                                 <li><a href="/profile"><span><i class="fa fa-id-card" aria-hidden="true"></i></span>
                                         Profile
                                         <em class="menu_icon"><i class="fa fa-angle-down"
