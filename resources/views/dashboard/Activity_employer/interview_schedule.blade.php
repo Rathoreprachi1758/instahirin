@@ -21,9 +21,9 @@
                         <li><a href="/Employer-activity">Post a Job</a></li>
                         <li><a href="/My-job-activity">My Job</a></li>
                         <li><a href="/My-job-Applicants-activity">My Job Applicants</a></li>
-                        <li><a href="/job-talents-activity">Job Talents</a></li>
+                        {{-- <li><a href="/job-talents-activity">Job Talents</a></li> --}}
                         <li><a href="/Instahirin-activity">InstaHirin Shortlist</a></li>
-                        <li><a href="/Interview-schedule" class="active" >Interview Scheduled</a></li>
+                        <li><a href="/Interview-schedule" class="active">Interview Scheduled</a></li>
                         <li><a href="/Job-status">Job Status</a></li>
                         <li><a href="/employment-contract-form">Employment Contract</a></li>
                         <li><a href="/Job-Hire">Hired</a></li>
@@ -48,16 +48,6 @@
                                             <th>
                                                 <h6>Position Title</h6>
                                             </th>
-                                            <th>
-                                                <h6>Company Name</h6>
-                                            </th>
-                                            <th>
-                                                <h6>Business Email</h6>
-                                            </th>
-                                            <th>
-                                                <h6>Hire Period</h6>
-                                            </th>
-
                                             <th width="240">
                                                 <h6>
                                                     Scheduled on Virtual call Assistance
@@ -77,15 +67,27 @@
                                                 </table>
                                             </th>
                                             <th>
+                                                <h6>Company Name</h6>
+                                            </th>
+                                            <th>
+                                                <h6>Business Email</h6>
+                                            </th>
+                                            <th>
+                                                <h6>Hire Period</h6>
+                                            </th>
+                                            <th>
                                                 <h6>Meeting Link</h6>
                                             </th>
                                             <th>
                                                 <h6>Interviewer</h6>
                                             </th>
+                                            <th>
+                                                <h6>Interviewe co-ordinator</h6>
+                                            </th>
                                         </tr>
                                     </thead>
                                     <tbody>
-                                        <tr>
+                                        {{-- <tr>
                                             <td>
                                                 <div class="tabletext">
                                                     <p>1</p>
@@ -153,7 +155,80 @@
                                                     <p>Lavanya</p>
                                                 </div>
                                             </td>
-                                        </tr>
+                                        </tr> --}}
+                                        @foreach ($insta_onboard as $on_board)
+                                            <tr>
+                                                <td>
+                                                    <div class="tabletext">
+                                                        <p>{{ $on_board->id }}</p>
+                                                    </div>
+                                                </td>
+                                                <td>
+                                                    <div class="tabletext">
+                                                        <p>{{ $on_board->name }}</p>
+                                                    </div>
+                                                </td>
+                                                <td>
+                                                    <div class="tabletext">
+                                                        <p>{{ $on_board->current_title }}</p>
+                                                    </div>
+                                                </td>
+                                                <td width="240">
+                                                    <table>
+                                                        <tbody>
+                                                            <tr>
+                                                                <td width="110">
+                                                                    <div class="tabletext">
+                                                                        <p>{{ $on_board->availability_date }}</p>
+                                                                    </div>
+                                                                </td>
+                                                                <td width="60">
+                                                                    <div class="tabletext">
+                                                                        <p>{{ $on_board->availability_time_from }}</p>
+                                                                    </div>
+                                                                </td>
+                                                                <td width="60">
+                                                                    <div class="tabletext">
+                                                                        <p>{{ $on_board->availability_time_to }}</p>
+                                                                    </div>
+                                                                </td>
+                                                            </tr>
+                                                        </tbody>
+                                                    </table>
+                                                </td>
+                                                {{-- @endforeach --}}
+                                                <td>
+                                                    <div class="tabletext">
+                                                        <p>-</p>
+                                                    </div>
+                                                </td>
+                                                <td>
+                                                    <div class="tabletext">
+                                                        <p>hr@bizionictech.com</p>
+                                                    </div>
+                                                </td>
+                                                <td>
+                                                    <div class="tabletext">
+                                                        <p>Full Time</p>
+                                                    </div>
+                                                </td>
+
+
+
+                                                <td>
+                                                    <div class="tabletext">
+                                                        <p>
+                                                            <a href="#">Ex:https://us04web.zoom.us/j/739425646</a>
+                                                        </p>
+                                                    </div>
+                                                </td>
+                                                <td>
+                                                    <div class="tabletext">
+                                                        <p>Ex:Lavanya</p>
+                                                    </div>
+                                                </td>
+                                            </tr>
+                                        @endforeach
                                     </tbody>
                                 </table>
                             </div>

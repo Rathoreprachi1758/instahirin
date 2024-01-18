@@ -11,6 +11,7 @@ use App\Models\Creditrequest;
 use App\Models\CompanyKycInformation;
 use App\Models\InstaHirinRequirement;
 use App\Models\InstaHirinOnboard;
+use App\Models\HireMeApplication;
 use Illuminate\Support\Facades\File;
 use Illuminate\Support\Facades\Schema;
 
@@ -19,12 +20,13 @@ class profileController extends Controller
 
     private $userdata;
     private $countrycodes;
+    private $job_activity;
     public function __construct()
     {
         $this->middleware(function ($request, $next) {
             $this->userdata = User::where('id', auth()->user()->id)->get();
             $this->countrycodes = Country::all(['name', 'phone']);
-
+            $this->job_activity = Job::where('user_id', auth()->id())->pluck('id')->toArray();
             return $next($request);
         });
     }
@@ -273,36 +275,53 @@ class profileController extends Controller
         $skills = $instaRequirement->experty()->pluck('id')->toArray();
         $job->keySkills()->attach($skills);
 
-
-        // Return a response indicating success
         return redirect()->back()->with('message', ' Job hasbeen Posted!');
     }
 
     public function my_job_activity(Request $request)
     {
-        $myjob = InstaHirinRequirement::where('user_id',Auth::id())->get();
+        $myjob = InstaHirinRequirement::where('user_id', Auth::id())->get();
         // return $myjob;
-        return view('dashboard.Activity_employer.my_job',['myjob'=>$myjob]);
+        return view('dashboard.Activity_employer.my_job', ['myjob' => $myjob]);
     }
-    //
     public function my_job_Applicants(Request $request)
-    {   
-        // $myjob_applicant = InstaHirinOnboard::where('user_id',Auth::id())->get();
-        $myjob_applicant = InstaHirinOnboard::all();
-        // return $myjob_applicant;
-        return view('dashboard.Activity_employer.my_job_application',['myjob_applicant' => $myjob_applicant]);
+    {
+        // $job_ids = job::where('user_id', Auth::id())->pluck('id');
+        // $results = [];
+        // foreach ($job_ids as $job_id) {
+        //     $myjob_applicants = HireMeApplication::where('job_id', $job_id)->get();
+        //     foreach ($myjob_applicants as $myjob_applicant) {
+        //         // print_r($myjob_applicant);
+        //         $results[] = $myjob_applicant;
+        //     }
+        // }
+        $results = HireMeApplication::whereIn('job_id', $this->job_activity)->get();
+        return view('dashboard.Activity_employer.my_job_application', ['results' => $results]);
+
     }
+
     public function job_talents(Request $request)
     {
         return view('dashboard.Activity_employer.job_talents');
     }
     public function Instahirin_activity(Request $request)
-    {
-        return view('dashboard.Activity_employer.instahirin');
+    {    
+        $insta_onboard = InstaHirinOnboard::where('user_id', Auth::id())->get();
+        // $insta_onboard = InstaHirinOnboard::where('user_id', auth()->id())
+        // ->where('email', 'pavan152@gmail.com')
+        // ->first();
+        // return $insta_onboard->key_skills;
+        return view('dashboard.Activity_employer.instahirin',['insta_onboard'=>$insta_onboard]);
     }
     public function Interviewschedule(Request $request)
-    {
-        return view('dashboard.Activity_employer.interview_schedule');
+    {   
+        // $company_details = InstaHirinRequirement::where('user_id', Auth::id())->whereIn('position_title',)->pluck('email','company_name');
+        // return $company_details;
+        $insta_onboard = InstaHirinOnboard::where('user_id', Auth::id())->get();
+        // return 
+        // $results = HireMeApplication::whereIn('job_id', $this->job_activity)->pluck('');
+        // return $results;
+        return view('dashboard.Activity_employer.interview_schedule',['insta_onboard'=>$insta_onboard]);
     }
 
     public function job_status(Request $request)
