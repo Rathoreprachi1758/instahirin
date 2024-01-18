@@ -580,7 +580,7 @@ class ContentController extends Controller
         // Return a response indicating success
         return response()->json(['message' => 'Form submitted successfully']);
     }
-
+    
     // public function instaHirinOnboard(Request $request)
     // {
     //     // Validate the request data, including the uploaded file
@@ -698,7 +698,8 @@ class ContentController extends Controller
             // 'document' => 'required|array',
             // 'document.*' => 'file|mimes:pdf,doc,docx|max:5120'
         ]);
-
+        
+        // dd(json_decode($validatedData['key_skills']));
         DB::beginTransaction();
 
         // Create a new instance of the Hire Request model
@@ -971,6 +972,7 @@ class ContentController extends Controller
         // Validate the request data, including the uploaded file
         // Log::info('Request data:', $request->all());
         // dd('Hii9');
+        // dd($request->jobid);
         $validatedData = $request->validate([
             'name' => 'required',
             'contact_details' => 'required',
@@ -987,7 +989,6 @@ class ContentController extends Controller
             'last_company' => '',
             'company_location' => '',
             'currently_working_here' => '',
-            'virtual_assistance_call' => '',
             // new column
             'working_since_date' => 'required',
             'working_since_date2' => '',
@@ -1012,6 +1013,7 @@ class ContentController extends Controller
         $formData->name = $validatedData['name'];
         $formData->contact_details = $validatedData['contact_details'];
         $formData->email = $validatedData['email'];
+        $formData->job_id = $request->jobid;
         $formData->current_location = $validatedData['current_location'];
         //$formData->current_location   = isset($validatedData['current_location']) ? $validatedData['current_location'] : '-';
         $formData->skills_description = $validatedData['skills_description'];
@@ -1032,7 +1034,6 @@ class ContentController extends Controller
         $formData->annual_salary = $validatedData['annual_salary'];
         $formData->highest_qualification = $validatedData['highest_qualification'];
         $formData->notice_period = isset($validatedData['notice_period']) ? $validatedData['notice_period'] : '-';
-        $formData->virtual_assistance_call = isset($validatedData['virtual_assistance_call']) ? 'Yes' : 'No';
         if ($request->hasFile('document')) {
             $file = $request->file('document');
             $filename = 'bizionic/images/' . time() . '_' . $file->getClientOriginalName();

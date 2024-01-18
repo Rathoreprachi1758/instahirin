@@ -10,9 +10,9 @@
     <!-- End Google Tag Manager (noscript) -->
     <div class="labs_location_info">
         <h5>or call us at</h5>
-        <p><i class="fa fa-whatsapp mr-2" aria-hidden="true"></i><a href="tel:+91 90593 60184">+91 90593 60184</a> (Enquiries)</p>
-        <p><i class="fa fa-whatsapp mr-2" aria-hidden="true"></i><a href="tel:+91 95159 22272">+91 95159 22272</a> (Hire Talent)</p> 
-        <p><i class="fa fa-whatsapp mr-2" aria-hidden="true"></i><a href="tel:+1 3155436677 ">+1 3155436677 </a> (US Enquiries)</p> 
+        <p><i class="fa fa-whatsapp mr-2" aria-hidden="true"></i>+91 90593 60184 (Enquiries)</p>
+        <p><i class="fa fa-whatsapp mr-2" aria-hidden="true"></i>+91 95159 22272 (Hire Talent)</p> 
+        <p><i class="fa fa-whatsapp mr-2" aria-hidden="true"></i>+1 3155436677 (US Enquiries)</p> 
     </div>
 
     <div class="labs_location_info">

@@ -34,7 +34,7 @@
           <div class="project_form_field">
             <div class="protectPrivacy">
               <span>
-                <img src="/bizionic/images/protect_icon.png" alt="#" />
+                <img src="/bizionic/images/protect_icon.png" alt="#">
                 Your privacy is protected
               </span>
             </div>

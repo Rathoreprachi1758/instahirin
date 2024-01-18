@@ -47,6 +47,7 @@ import Pricing from "./components/PlansPricingComponent.vue";
 import JobExpertsComponent from "./components/JobExpertsComponent.vue";
 import JobsListComponent from "./components/JobsListComponent.vue";
 import HireMeApplication from "./components/HireMeApplication.vue";
+import Blogs from "./components/BlogsComponent.vue";
 
 app.component("experts-component", ExpertsComponent);
 app.component("experts-list-component", ExpertsListComponent);
@@ -74,6 +75,7 @@ app.component("pricing-component", Pricing);
 app.component("job-experts-component", JobExpertsComponent);
 app.component("jobs-list-component", JobsListComponent);
 app.component("hire-me-application", HireMeApplication);
+app.component("blogs-component", Blogs);
 
 // import ExampleComponent from './components/ExampleComponent.vue';
 // app.component('example-component', ExampleComponent);
@@ -96,6 +98,12 @@ app.component("hire-me-application", HireMeApplication);
  * scaffolding. Otherwise, you will need to add an element yourself.
  */
 
-app.mount("#app");
-app2.mount("#footer-app");
+// import the package
+import VueAwesomePaginate from "vue-awesome-paginate";
+
+// import the necessary css file
+import "vue-awesome-paginate/dist/style.css";
+
+app.use(VueAwesomePaginate).mount("#app");
+app2.use(VueAwesomePaginate).mount("#footer-app");
 // app3.mount("#app3");
