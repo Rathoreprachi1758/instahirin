@@ -8,6 +8,7 @@ use App\Models\User;
 use App\Models\Job;
 use App\Models\Country;
 use App\Models\Creditrequest;
+use App\Models\Expert;
 use App\Models\CompanyKycInformation;
 use App\Models\InstaHirinRequirement;
 use App\Models\InstaHirinOnboard;
@@ -307,6 +308,7 @@ class profileController extends Controller
     public function Instahirin_activity(Request $request)
     {    
         $insta_onboard = InstaHirinOnboard::where('user_id', Auth::id())->get();
+        // $insta_onboard = Expert::where('user_id',Auth::id())->get();
         // $insta_onboard = InstaHirinOnboard::where('user_id', auth()->id())
         // ->where('email', 'pavan152@gmail.com')
         // ->first();
@@ -318,6 +320,7 @@ class profileController extends Controller
         // $company_details = InstaHirinRequirement::where('user_id', Auth::id())->whereIn('position_title',)->pluck('email','company_name');
         // return $company_details;
         $insta_onboard = InstaHirinOnboard::where('user_id', Auth::id())->get();
+        // $insta_onboard = Expert::where('user_id',Auth::id())->get();
         // return 
         // $results = HireMeApplication::whereIn('job_id', $this->job_activity)->pluck('');
         // return $results;

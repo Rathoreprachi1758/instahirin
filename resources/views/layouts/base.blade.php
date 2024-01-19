@@ -286,7 +286,6 @@
                                         <li><a href="{{ url('/loginpage') }}">Sign In</a></li>
                                         <li><a href="{{ route('signin') }}">Sign Up</a>
                                         </li>
-
                                     </ul>
                                 </div> --}}
                             </div>
