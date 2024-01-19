@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use Log;
+use Auth;
 use ZipArchive;
 use App\Models\Job;
 use App\Models\Hire;
@@ -258,9 +259,6 @@ class ContentController extends Controller
             // dd($validatedData);
             // Create a new instance of the Hire Request model
             $formData = new HireRequest();
-
-
-
             // Set the form data from the validated request
             // $formData->expert_id = $validatedData['expert_id'];
             $formData->name = $validatedData['name'];
@@ -738,7 +736,7 @@ class ContentController extends Controller
         $formData->hourly_rate = isset($validatedData['hourly_rate']) ? $validatedData['hourly_rate'] : null;
         $formData->project_rate = isset($validatedData['project_rate']) ? $validatedData['project_rate'] : null;
         $formData->resume_headline = $validatedData['resume_headline'];
-        // dd($request->all());
+        $formData->user_id= Auth::id();
         $formData->save();
 
         // if ($request->hasFile('document')) {
