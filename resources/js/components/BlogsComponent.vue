@@ -6,7 +6,7 @@
           <span><img :src="`/storage/${blog.image}`" :alt="blog.title" /></span>
 
           <h5>
-            <a href="#">{{ blog.title }}</a>
+            <a @click="goToJobForm(blog.id)" class="clickable-link"> {{ blog.title }}</a>
           </h5>
 
           <div class="blogSponsor">
@@ -81,6 +81,10 @@
 .active-page:hover {
   background-color: #2988c8;
 }
+
+.clickable-link {
+  cursor: pointer;
+}
 </style>
 
 <script>
@@ -138,6 +142,15 @@ export default {
     formatPublishedDate(dateString) {
       // Use moment to format the date
       return moment(dateString).fromNow();
+    },
+
+    goToJobForm(blogId) {
+      //   const url = `/hire/developer/front-end-developement/blogId?blogId=${blogId}`;
+      //   window.location.href = url;
+      const url = `/hire/developer/front-end-developement/blogId?blogId=${blogId}`;
+      const newTab = window.open(url, "_blank");
+      newTab.focus();
+      console.log("Navigating to:", url);
     },
   },
 };

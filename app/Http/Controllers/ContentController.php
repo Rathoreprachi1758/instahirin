@@ -8,24 +8,25 @@ use App\Models\Job;
 use App\Models\Hire;
 use App\Models\Lead;
 use App\Models\Page;
+use App\Models\Blogs;
 use App\Models\Career;
 use App\Models\Expert;
-use App\Models\Country;
 // use App\Models\Expert;
+use App\Models\Country;
 use App\Models\Experty;
-use App\Models\Countrie;
 // use App\Models\HireRequest;
 // use App\Models\Subscription;
+use App\Models\Countrie;
 use App\Models\TimeZones;
 use App\Models\HireRequest;
 use App\Models\Subscription;
-use Illuminate\Http\Request;
 //use Laravel\Nova\Fields\Timezone;
+use Illuminate\Http\Request;
 use App\Models\TeamContactUs;
 use App\Models\MarketingPlans;
 use App\Models\FundingApplyNow;
-use App\Models\HireMeApplication;
 use App\Models\AvailabilityData;
+use App\Models\HireMeApplication;
 use App\Models\InstaHirinOnboard;
 use App\Models\MarketingPlanLeads;
 use Illuminate\Support\Facades\DB;
@@ -894,6 +895,19 @@ class ContentController extends Controller
     {
         $job = Job::find($jobId);
         return view('templates.jobid', ['job' => $job]);
+    }
+
+    // public function blogDetail($blogId)
+    // {
+    //     $blog = Blogs::find($blogId);
+    //     return view('templates.blogId', ['blog' => $blog]);
+    // }
+
+    public function blogDetail(Request $request)
+    {
+        $blogId = $request->query('blogId');
+        $blog = Blogs::find($blogId);
+        return view('templates.blogId', ['blog' => $blog]);
     }
 
 

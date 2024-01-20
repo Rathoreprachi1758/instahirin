@@ -112,6 +112,7 @@ Route::get('/hire/developer/developers-other/HireForm/{id}', [ContentController:
 
 // Apply Form
 Route::get('/industries/industries-we-serve/industries/apply-now-form/{jobId}', [ContentController::class, 'applyShow'])->name('apply-now-form');
+Route::get('/hire/developer/front-end-developement/blogId/{blogId}', [ContentController::class, 'blogDetail'])->name('blogs-detail');
 //
 //Thankyou page
 // Route::get('/thankyou',[App\Http\Controllers\ContentController::class, 'thanksMessage'])->name('Thankyou');

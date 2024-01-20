@@ -6,6 +6,7 @@ use Laravel\Nova\Fields\ID;
 use Illuminate\Http\Request;
 use Laravel\Nova\Fields\Date;
 use Laravel\Nova\Fields\Text;
+use Laravel\Nova\Fields\Trix;
 use Laravel\Nova\Fields\Image;
 use Laravel\Nova\Fields\Avatar;
 use Laravel\Nova\Fields\DateTime;
@@ -53,9 +54,18 @@ class Blogs extends Resource
             Avatar::make('Author Avatar', 'author_avatar')->disableDownload()->nullable(),
             // Gravatar::make('Author Avatar', 'author_avatar')->maxWidth(30),
             Text::make('Author Name', 'author_name')->rules('required'),
+            Trix::make('Blog Content', 'content')
+                ->rules('required')
+                ->withFiles('public'),
 
-            // Date::make('Published Date', 'published_date'),
-            DateTime::make('Published Date')->displayUsing(fn ($value) => $value->diffForHumans()),
+
+            // DateTime::make('Published Date')->displayUsing(fn ($value) => $value->diffForHumans()),
+            DateTime::make('Published Date')
+                ->rules('required')
+                ->displayUsing(function ($value) {
+                    return optional($value)->diffForHumans();
+                }),
+
             // Date::make('Published Date', 'published_date')->resolveUsing(function ($value) {
             //     return $value ? \Carbon\Carbon::parse($value)->format('F d, Y') : now()->format('F d, Y');
             // })->nullable(),
