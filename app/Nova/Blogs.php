@@ -66,6 +66,9 @@ class Blogs extends Resource
                     return optional($value)->diffForHumans();
                 }),
 
+
+            // Date::make('Published Date', 'published_date'),
+            DateTime::make('Published Date')->displayUsing(fn ($value) => $value->diffForHumans()),
             // Date::make('Published Date', 'published_date')->resolveUsing(function ($value) {
             //     return $value ? \Carbon\Carbon::parse($value)->format('F d, Y') : now()->format('F d, Y');
             // })->nullable(),
