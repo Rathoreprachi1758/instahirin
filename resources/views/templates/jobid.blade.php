@@ -14,6 +14,7 @@ $job = \App\Models\Job::find($jobId);
         <div class="policy_pages_detail">
             <div class="policy_pages_content">
                 <h1>About the Job:</h1>
+                {{-- <p>{{$job->id}}</p> --}}
                 <h5 class="pb-2 pt-2">Job Title: <strong>{{ $job->title }}</strong></h5>
                 <h5>Location: <strong>{{ $job->location }}</strong></h5>
                 <h5>Experience: <strong>{{ $job->experience }}</strong></h5>
@@ -84,7 +85,7 @@ $job = \App\Models\Job::find($jobId);
             </div>
 
             {{-- <jobs-component></jobs-component> --}}
-            <hire-me-application></hire-me-application>
+            <hire-me-application jobid="{{$job->id}}"></hire-me-application>
 
             {{-- <div class="applyNow_text">
                 <div class="applyNow_textInfo">

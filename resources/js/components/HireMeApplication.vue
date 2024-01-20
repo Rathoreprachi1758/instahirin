@@ -471,7 +471,14 @@
             </div>
           </div>
         </div>
-
+        <input
+                type="hidden"
+                placeholder=""
+                name="jobid"
+                id="jobid"
+                v-model="this.jobid"
+                s
+              />
         <!-- Salary Currency -->
         <div class="col-lg-3 col-md-12">
           <div class="onForm_col">
@@ -986,6 +993,10 @@ export default {
       type: String,
       required: true,
     },
+    jobid:{
+      type: String,
+      required: true,
+    }
   },
   components: {
     Multiselect,
@@ -1086,7 +1097,7 @@ export default {
     this.selectedSalaryRange = this.salaryOptions[0];
 
     this.$el.addEventListener("keydown", this.handleFormKeyDown);
-
+     console.log('this is the job_id',this.jobid);
     // this.$refs.current_location.focus();
   },
 
@@ -1369,6 +1380,7 @@ export default {
       formData.append("current_title", this.current_title);
       formData.append("experience_year", this.experience_year);
       formData.append("experience_month", this.experience_month);
+      formData.append("jobid",this.jobid);
       //   formData.append("key_skills", JSON.stringify(this.selectedSkills));
       //   formData.append("expert_in", JSON.stringify(this.selectedExpertise));
       //   formData.append("also_work_with", JSON.stringify(this.selectedWorkWith));

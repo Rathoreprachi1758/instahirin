@@ -45,7 +45,12 @@ class PostToJobs extends Action
 
             // Transfer skills
             $skills = $instaRequirement->experty()->pluck('id')->toArray();
+            // $skills = $instaRequirement->all();
+            \Log::info('Skills:');
+            \Log::info($skills);            
             $job->keySkills()->attach($skills);
+            // dd($skills);
+            \Log::channel('single')->info('Skills:', $skills);
 
             // Delete the entry from InstaHirinRequirement
             $instaRequirement->delete();

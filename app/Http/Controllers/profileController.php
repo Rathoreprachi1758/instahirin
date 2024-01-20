@@ -65,9 +65,9 @@ class profileController extends Controller
     {
         $request->validate([
             'Account_holder_name' => 'required',
-            'Account_no' => 'required',
-            'Cheque_amount' => 'required',
-            'cheque_no' => 'required',
+            'Account_no' => 'required|regex:/^[0-9]+$/',
+            'Cheque_amount' => 'required|regex:/^[0-9]+$/',
+            'cheque_no' => 'required|regex:/^[0-9]+$/',
             'issued_bank' => 'required',
             'file' => 'required|image|mimes:jpeg,png,jpg,gif',
             'checkbox' => 'required',
@@ -213,7 +213,7 @@ class profileController extends Controller
         $formData->position_title = $request->position_title;
         $formData->work_mode = $request->work_mode;
         $formData->project_description = $request->project_description;
-        $formData->key_skills = $request->key_skills;
+        $formData->key_skills = json_decode($request->key_skills);
         $formData->user_id = Auth::id();
         // $formData->key_skills = json_decode($request->'key_skills']);
         $formData->min_experience = $request->min_experience;
@@ -258,12 +258,12 @@ class profileController extends Controller
             'title' => $instaRequirement->position_title,
             'work_mode' => $instaRequirement->work_mode,
             'description' => $instaRequirement->project_description,
-            // 'key_skills' => $instaRequirement->key_skills,
+            'key_skills' => json_decode($request->key_skills),
             'availability' => $instaRequirement->employment_type,
             'ctc_currency' => $instaRequirement->salary_currency_yearly,
             'min_price' => $instaRequirement->min_salary_yearly,
             'max_price' => $instaRequirement->max_salary_yearly,
-            // 'salary_period',
+            'salary_period'=>$instaRequirement->salary_period,
             // 'experience',
             'location' => $instaRequirement->location,
             'qualification' => $instaRequirement->education_qualification,
@@ -273,9 +273,11 @@ class profileController extends Controller
         ]);
 
         // Transfer skills
-        $skills = $instaRequirement->experty()->pluck('id')->toArray();
-        $job->keySkills()->attach($skills);
-
+        // $skills = $instaRequirement->experty()->pluck('id')->toArray();
+        // $job->keySkills()->attach($skills);
+        // $skills = $instaRequirement->experty()->get();
+        // $job->keySkills()->attach($skills);
+        return json_decode($request->key_skills);
         return redirect()->back()->with('message', ' Job hasbeen Posted!');
     }
 
@@ -306,17 +308,17 @@ class profileController extends Controller
         return view('dashboard.Activity_employer.job_talents');
     }
     public function Instahirin_activity(Request $request)
-    {    
+    {
         $insta_onboard = InstaHirinOnboard::where('user_id', Auth::id())->get();
         // $insta_onboard = Expert::where('user_id',Auth::id())->get();
         // $insta_onboard = InstaHirinOnboard::where('user_id', auth()->id())
         // ->where('email', 'pavan152@gmail.com')
         // ->first();
         // return $insta_onboard->key_skills;
-        return view('dashboard.Activity_employer.instahirin',['insta_onboard'=>$insta_onboard]);
+        return view('dashboard.Activity_employer.instahirin', ['insta_onboard' => $insta_onboard]);
     }
     public function Interviewschedule(Request $request)
-    {   
+    {
         // $company_details = InstaHirinRequirement::where('user_id', Auth::id())->whereIn('position_title',)->pluck('email','company_name');
         // return $company_details;
         $insta_onboard = InstaHirinOnboard::where('user_id', Auth::id())->get();
@@ -324,7 +326,7 @@ class profileController extends Controller
         // return 
         // $results = HireMeApplication::whereIn('job_id', $this->job_activity)->pluck('');
         // return $results;
-        return view('dashboard.Activity_employer.interview_schedule',['insta_onboard'=>$insta_onboard]);
+        return view('dashboard.Activity_employer.interview_schedule', ['insta_onboard' => $insta_onboard]);
     }
 
     public function job_status(Request $request)

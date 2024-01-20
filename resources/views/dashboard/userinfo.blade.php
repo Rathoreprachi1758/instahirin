@@ -176,7 +176,7 @@
                                             <div class="col-xxl-9 col-xl-9 col-lg-8 col-md-7">
                                                 <div class="p_userInfo_editInput">
                                                     <input type="text" name="email" class="w-100" placeholder="Enter Your Email"
-                                                        value="{{ $user->email }}" />
+                                                        value="{{ $user->email }}">
                                                 </div>
                                             </div>
                                         </div>
@@ -214,7 +214,7 @@
                                                 <div class="p_userInfo_editInput">
                                                     <input type="text" class="w-100" name="mobilenumber"
                                                         pattern="[0-9]+" title="Numericals  only allowed" placeholder="Enter Your Mobile Number"
-                                                        maxlength="10" value="{{ $user->mobilenumber }}" />
+                                                        maxlength="10" value="{{ $user->mobilenumber }}">
 
                                                 </div>
                                             </div>
@@ -288,7 +288,7 @@
                                 <div class="col-xxl-9 col-xl-9 col-lg-8 col-md-7">
                                     <div class="p_userInfo_editInput">
                                         <input type="text" value="" class="w-100"
-                                            placeholder="www.bizionictech.com" />
+                                            placeholder="www.bizionictech.com">
                                     </div>
                                 </div>
                             </div>
@@ -305,7 +305,7 @@
                                     <div class="verify_section">
                                         <div class="p_userInfo_editInput">
                                             <input type="text" value=""
-                                                placeholder="info@bizionictech.com" />
+                                                placeholder="info@bizionictech.com">
                                         </div>
                                         <a href="#" class="verifyText">Verify</a>
 
@@ -313,14 +313,14 @@
                                             <label>Enter OTP</label>
 
                                             <div class="enterOtpFields">
-                                                <input type="text" value="" placeholder="" />
-                                                <input type="text" value="" placeholder="" />
-                                                <input type="text" value="" placeholder="" />
-                                                <input type="text" value="" placeholder="" />
+                                                <input type="text" value="" placeholder="">
+                                                <input type="text" value="" placeholder="">
+                                                <input type="text" value="" placeholder="">
+                                                <input type="text" value="" placeholder="">
                                             </div>
 
                                             <div class="otpSubmit">
-                                                <input type="submit" value="Submit" class="btndefault" />
+                                                <input type="submit" value="Submit" class="btndefault">
                                             </div>
                                         </div>
                                     </div>
@@ -338,7 +338,7 @@
                                 <div class="col-xxl-9 col-xl-9 col-lg-8 col-md-12">
                                     <div class="verify_section">
                                         <div class="p_userInfo_editInput">
-                                            <input type="text" value="" placeholder="+91 9XXXXXXX40" />
+                                            <input type="text" value="" placeholder="+91 9XXXXXXX40">
                                         </div>
                                         <a href="#" class="verifyText">Verify</a>
 
@@ -346,14 +346,14 @@
                                             <label>Enter OTP</label>
 
                                             <div class="enterOtpFields">
-                                                <input type="text" value="" placeholder="" />
-                                                <input type="text" value="" placeholder="" />
-                                                <input type="text" value="" placeholder="" />
-                                                <input type="text" value="" placeholder="" />
+                                                <input type="text" value="" placeholder="">
+                                                <input type="text" value="" placeholder="">
+                                                <input type="text" value="" placeholder="">
+                                                <input type="text" value="" placeholder="">
                                             </div>
 
                                             <div class="otpSubmit">
-                                                <input type="submit" value="Submit" class="btndefault" />
+                                                <input type="submit" value="Submit" class="btndefault">
                                             </div>
                                         </div>
                                     </div>
@@ -371,7 +371,7 @@
                                 <div class="col-xxl-9 col-xl-9 col-lg-8 col-md-7">
                                     <div class="p_userInfo_editInput">
                                         <input type="text" class="w-100" value=""
-                                            placeholder="Road No-1, Madhapur, Hyderabad." />
+                                            placeholder="Road No-1, Madhapur, Hyderabad.">
                                     </div>
                                 </div>
                             </div>
@@ -387,7 +387,7 @@
                                 <div class="col-xxl-9 col-xl-9 col-lg-8 col-md-7">
                                     <div class="p_userInfo_editInput">
                                         <input type="text" class="w-100" value=""
-                                            placeholder="37DDCPK5481D5632" />
+                                            placeholder="37DDCPK5481D5632">
                                     </div>
                                 </div>
                             </div>
@@ -428,7 +428,7 @@
                                     <div class="col-xxl-9 col-xl-9 col-lg-8 col-md-6">
                                         <div class="p_userInfo_editInput">
                                             <input type="password" value="" class="w-100"
-                                                name='current_password' placeholder="Current Password" />
+                                                name='current_password' placeholder="Current Password">
                                             <span class="passwEye togglePassword" style="margin-right: 409px"
                                                 onclick="togglePasswordVisibility(this)">
                                                 <i class="fa fa-eye" style="color:#080816" aria-hidden="true"></i>
@@ -476,7 +476,7 @@
                                     <div class="col-xxl-9 col-xl-9 col-lg-8 col-md-6">
                                         <div class="p_userInfo_editInput">
                                             <input type="password" value="" class="w-100"
-                                                name='confirm_password' placeholder="Confirm new password" />
+                                                name='confirm_password' placeholder="Confirm new password">
                                             <span class="passwEye togglePassword" style="margin-right: 409px"
                                                 onclick="togglePasswordVisibility(this)">
                                                 <i class="fa fa-eye" style="color:#080816" aria-hidden="true"></i>
@@ -492,7 +492,7 @@
 
                             <li>
                                 <div class="customSubmitBtn">
-                                    <input type="submit" value="Change Password" class="btndefault" />
+                                    <input type="submit" value="Change Password" class="btndefault">
                                 </div>
                             </li>
                         </ul>

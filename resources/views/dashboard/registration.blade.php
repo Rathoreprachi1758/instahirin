@@ -1,22 +1,22 @@
 {{-- <x-header data="user page component" /> --}}
 
 <head>
-    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="format-detection" content="telephone=no">
     <title>Bizionic</title>
     <!-- bootstrap -->
     <link rel="stylesheet" href="css/bootstrap.min.css">
     <!-- custom css -->
-    <link rel="stylesheet " href="css/style.css ">
-    <link rel="stylesheet " href="css/responsive.css ">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/responsive.css">
 
 
     <!-- aos animation  -->
-    <link rel="stylesheet " href="css/aos.css">
+    <link rel="stylesheet" href="css/aos.css">
     <!-- font awesome-->
-    <link rel="stylesheet " href="css/font-awesome.min.css">
+    <link rel="stylesheet" href="css/font-awesome.min.css">
 
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 
@@ -24,8 +24,8 @@
     <link rel="canonical" href="https://www.bizionictech.com/get-sign-Up">
     <!-- aos animation js  -->
     <script src="js/aos.js"></script>
-    <link rel="stylesheet " href="css/owl.carousel.min.css ">
-    <script src="js/owl.carousel.js "></script>
+    <link rel="stylesheet " href="css/owl.carousel.min.css">
+    <script src="js/owl.carousel.js"></script>
 
     <link rel="icon" sizes="96x96" href="{{ asset('css/images/favicon-96x96.png') }}">
 
@@ -44,9 +44,7 @@
                         <div class="logo">
                             <a href="{{ url('/about-us') }}"><img src="{{ asset('css/images/logo.png') }}"
                                     alt="Logo"></a>
-
                         </div>
-
                         <div class="header_menu">
                             <div class="authBttns">
                                 <a href="{{ url('/loginpage') }}" class="signin_btn">Sign in</a>
@@ -232,7 +230,7 @@
                                                     <div class="col-12">
                                                         <div class="auth_sbmit">
                                                             <input type="submit" value="Submit"
-                                                                class="btndefault" />
+                                                                class="btndefault">
                                                         </div>
                                                     </div>
                                         </form>

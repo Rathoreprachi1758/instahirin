@@ -1,20 +1,18 @@
 <head>
-    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="format-detection" content="telephone=no">
     <title>Bizionic</title>
     <!-- bootstrap -->
     <link rel="stylesheet" href="css/bootstrap.min.css">
     <!-- custom css -->
-    <link rel="stylesheet " href="{{ asset('css/css/style.css') }} ">
-    <link rel="stylesheet " href="{{ asset('css/css/responsive.css') }} ">
-
-
+    <link rel="stylesheet" href="{{ asset('css/css/style.css') }}">
+    <link rel="stylesheet" href="{{ asset('css/css/responsive.css') }}">
     <!-- aos animation  -->
-    <link rel="stylesheet " href="{{ asset('css/css/aos.css') }}">
+    <link rel="stylesheet" href="{{ asset('css/css/aos.css') }}">
     <!-- font awesome-->
-    <link rel="stylesheet " href="{{ asset('css/css/font-awesome.min.css') }}">
+    <link rel="stylesheet" href="{{ asset('css/css/font-awesome.min.css') }}">
 
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 
@@ -22,7 +20,7 @@
 
     <!-- aos animation js  -->
     <script src="js/aos.js"></script>
-    <link rel="stylesheet " href="css/owl.carousel.min.css ">
+    <link rel="stylesheet" href="css/owl.carousel.min.css">
     <script src="js/owl.carousel.js "></script>
 
     <link rel="icon" sizes="96x96" href="{{ asset('css/images/favicon-96x96.png') }}">
@@ -71,6 +69,7 @@
                 <div class="logo" style="margin-left: -58px;">
                     <a href="{{ url('/about-us') }}"><img src="{{ asset('css/images/logo.png') }}" alt="Logo"></a>
                 </div>
+                
 
                 <div class="header_menu">
                     <div class="authBttns">
@@ -106,9 +105,10 @@
                         <h3>Hi, User</h3>
                         <p>Welcome to your Bizionic Dashboard</p>
                         <strong>{{ auth()->user()->name }}</strong>
+                        {{-- <strong><a href="{{ url('/InstaHirin') }}"></a></strong> --}}
                     </div>
 
-
+                    {{-- <p this is instahire ><a href="{{ url('/InstaHirin') }}"></a></p> --}}
                     <div class="nav-list">
                         <div class="db_nav">
                             <ul>

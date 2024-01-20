@@ -1,6 +1,6 @@
 <x-header data="employer component" />
-<link rel="stylesheet " href="{{ asset('css/css/Employer_activity_responsive.css') }} ">
-<link rel="stylesheet " href="{{ asset('css/css/Employer_activity_style.css') }} ">
+<link rel="stylesheet" href="{{ asset('css/css/Employer_activity_responsive.css') }} ">
+<link rel="stylesheet" href="{{ asset('css/css/Employer_activity_style.css') }} ">
 <div class="fr-section" style="margin-top: -72px">
     <div class="fr-section_detail">
         <div class="dashboard_innerPages">
@@ -66,7 +66,7 @@
                                                     <strong>Position Title</strong>
                                                     <div class="auth_field_info">
                                                         <input type="text" placeholder="IOS App Developer"
-                                                            value="{{ old('position_title') }}" name="position_title" >
+                                                            value="{{ old('position_title') }}" name="position_title">
                                                     </div>
                                                     @error('position_title')
                                                         <div class="text-danger">{{ $message }}</div>
@@ -272,7 +272,7 @@
                                                     <div class="auth_field_info">
                                                         <input type="text" placeholder="Min"
                                                             value="{{ old('min_salary_monthly_project') }}"
-                                                            name="min_salary_monthly_project" pattern="[0-9]+">
+                                                            name="min_salary_monthly_project">
                                                     </div>
                                                     {{-- @error('min_salary_monthly_project')
                                                         <div class="text-danger">{{ $message }}</div>
@@ -284,7 +284,7 @@
                                                     <div class="auth_field_info">
                                                         <input type="text" placeholder="Max"
                                                             value="{{ old('max_salary_monthly_project') }}"
-                                                            name="max_salary_monthly_project" pattern="[0-9]+">
+                                                            name="max_salary_monthly_project" >
                                                     </div>
                                                     {{-- @error('max_salary_monthly_project')
                                                         <div class="text-danger">{{ $message }}</div>
@@ -320,7 +320,7 @@
                                                     <div class="auth_field_info">
                                                         <input type="text" placeholder="Min"
                                                             value="{{ old('min_salary_yearly') }}"
-                                                            name="min_salary_yearly" pattern="[0-9]+">
+                                                            name="min_salary_yearly">
                                                     </div>
                                                     {{-- @error('min_salary_yearly')
                                                         <div class="text-danger">{{ $message }}</div>
@@ -332,7 +332,7 @@
                                                     <div class="auth_field_info">
                                                         <input type="text" placeholder="Max"
                                                             value="{{ old('max_salary_yearly') }}"
-                                                            name="max_salary_yearly" pattern="[0-9]+">
+                                                            name="max_salary_yearly">
                                                     </div>
                                                     {{-- @error('max_salary_yearly')
                                                         <div class="text-danger">{{ $message }}</div>
@@ -367,7 +367,7 @@
                                                     <div class="auth_field_info">
                                                         <input type="text" placeholder="Min"
                                                             value="{{ old('min_salary_hourly') }}"
-                                                            name="min_salary_hourly" pattern="[0-9]+">
+                                                            name="min_salary_hourly">
                                                     </div>
                                                     {{-- @error('min_salary_hourly')
                                                             <div class="text-danger">{{ $message }}</div>
@@ -379,7 +379,7 @@
                                                     <div class="auth_field_info">
                                                         <input type="text" placeholder="Max"
                                                             value="{{ old('max_salary_hourly') }}"
-                                                            name="max_salary_hourly" pattern="[0-9]+">
+                                                            name="max_salary_hourly">
                                                     </div>
                                                     {{-- @error('max_salary_hourly')
                                                             <div class="text-danger">{{ $message }}</div>
@@ -406,7 +406,7 @@
                                                     <strong>Location</strong>
                                                     <div class="auth_field_info">
                                                         <input type="text" placeholder="Add Location"
-                                                            id="locationInput" value="{{ old('location') }}"
+                                                            id="location" value="{{ old('location') }}"
                                                             name="location">
                                                     </div>
                                                     @error('location')
@@ -483,7 +483,7 @@
                                                     <strong>E-mail Address</strong>
                                                     <div class="auth_field_info">
                                                         <input type="text" placeholder=""
-                                                            value="{{ old('email') }}" name="email" />
+                                                            value="{{ old('email') }}" name="email">
                                                     </div>
                                                     @error('email')
                                                         <div class="text-danger">{{ $message }}</div>
@@ -618,3 +618,15 @@
         </div>
     </div>
 </div>
+<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCWCwDO2UDvwai9BBUyvxGS6t436Eot7Wc&libraries=places&callback=initAutocomplete" async defer></script>
+<script>
+    function initAutocomplete() {
+        var locationInput = document.getElementById('location');
+        var autocomplete = new google.maps.places.Autocomplete(locationInput);
+
+        autocomplete.addListener('place_changed', function() {
+            var place = autocomplete.getPlace();
+            console.log(place);
+        });
+    }
+</script>
