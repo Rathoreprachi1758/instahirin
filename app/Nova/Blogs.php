@@ -49,7 +49,9 @@ class Blogs extends Resource
     {
         return [
             ID::make()->sortable(),
-            Text::make('Blog Title', 'title')->rules('required', 'min:6,max:255'),
+            // Text::make('Blog Title', 'title')->rules('required', 'min:6,max:255'),
+            Text::make('Blog Title', 'title')->rules('required', 'min:6', 'max:70'),
+
             Image::make('Blog Image', 'image')->disableDownload()->nullable(),
             Avatar::make('Author Avatar', 'author_avatar')->disableDownload()->nullable(),
             // Gravatar::make('Author Avatar', 'author_avatar')->maxWidth(30),
