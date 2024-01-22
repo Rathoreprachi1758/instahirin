@@ -2063,7 +2063,8 @@
     padding: 60px 20px;
 }
 
-
+.backup_recoveryCol_info { 
+    padding: 50px 20px;}
 
 
 
@@ -7447,11 +7448,11 @@ h6 { font-size: 18px; }
 
 
 
+.backup_recoveryCol { padding: 0px 15px !important;}
 
+.backup_recoveryCol_info { padding: 30px 20px;}
 
-
-
-
+.backup_recoveryCol_info { border: 0px !important;}
 
 
 

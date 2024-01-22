@@ -11502,6 +11502,11 @@ html {
     left: auto !important;
     right: 0px;
 }
+.cloud-consultingFloating_menu .columnSett {
+    width: 100% !important;
+    flex: 0 0 55% !important;
+    max-width: 55% !important;
+}
 
 .cloud-consultingFloating_menu .innerColum_menu strong {
     display: none;
@@ -11548,20 +11553,47 @@ html {
 
 
 
+.backup_recovery_section { width: 100%; position: relative;}
+
+.backup_recovery_sectionDetail { width: 100%; padding-bottom: 50px;}
+
+.backup_recovery_detail { width: 100%; position: relative; background-color: #f3f4f4; border: 2px solid #d7d7d7;}
+
+.backup_recoveryTittle { background-color: #165099; padding:60px 50px !important;}
+
+
+.backup_recovery_info { width: 100%;}
+
+.backup_recoveryCol_info { width: 100%; position: relative; padding: 50px; height: 100%;border-right: 2px solid #d7d7d7;}
+
+.flBg_col { background-color: #ecedee;}
+.frBg_col { background-color: #e7e8e9;}
+
+
+.col_one_info { width: 100%;}
+
+.col_one_info h3 { color: #063a6b; font-style: italic; }
+.col_one_info p { color: #000; font-size: 18px; text-align: justify;}
+
+.col_one_info span { display: block; margin-bottom: 20px; max-width: 140px;}
+
+
+.col_one_info h6 { padding: 10px 0px 0px; }
+
+/* .backup_recoveryCol { padding: 0px !important;} */
+
+ /* .backup_recoveryCol_info:last-child { border: 0px !important;} */
+
+.col_one_info ul li { padding: 10px 0px;}
 
 
 
+.connect_text { width: 100%; position: relative; padding: 60px; background: url(../images/connect_pattern_bg.png) top center no-repeat; background-size: cover;}
 
+.connect_text p { padding:0px; display:  flex; justify-content: center; align-items: center; color: #fff; flex-wrap: wrap;}
 
-
-
-
-
-
-
-
-
-
+.connect_text p a { font-size: 22px; color: #000; margin: 0px 10px; min-width: 190px;    font-family: 'avenirblack';
+}
 
 
 

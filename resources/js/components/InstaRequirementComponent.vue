@@ -894,7 +894,7 @@ export default {
             axios
                 .get(`/api/v1/skills?query=${query.toLowerCase()}`)
                 .then((response) => {
-                    //   console.log("Response data:", response.data);
+                    //console.log("Response data:", response.data);
                     this.skills = response.data;
                     this.isLoading = false;
                 })

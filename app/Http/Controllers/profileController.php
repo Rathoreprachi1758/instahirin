@@ -273,11 +273,11 @@ class profileController extends Controller
         ]);
 
         // Transfer skills
-        // $skills = $instaRequirement->experty()->pluck('id')->toArray();
-        // $job->keySkills()->attach($skills);
-        // $skills = $instaRequirement->experty()->get();
-        // $job->keySkills()->attach($skills);
-        return json_decode($request->key_skills);
+        $skills = $instaRequirement->experty()->pluck('id')->toArray();
+        $job->keySkills()->attach($skills);
+        $skills = $instaRequirement->experty()->get();
+        $job->keySkills()->attach($skills);
+        // return json_decode($request->key_skills);
         return redirect()->back()->with('message', ' Job hasbeen Posted!');
     }
 
@@ -299,6 +299,7 @@ class profileController extends Controller
         //     }
         // }
         $results = HireMeApplication::whereIn('job_id', $this->job_activity)->get();
+        // return $results;
         return view('dashboard.Activity_employer.my_job_application', ['results' => $results]);
 
     }
