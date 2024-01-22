@@ -60,7 +60,7 @@ class Blogs extends Resource
 
 
             // DateTime::make('Published Date')->displayUsing(fn ($value) => $value->diffForHumans()),
-            DateTime::make('Published Date')
+            DateTime::make('Published Date', 'published_date')
                 ->rules('required')
                 ->displayUsing(function ($value) {
                     return optional($value)->diffForHumans();
@@ -68,7 +68,7 @@ class Blogs extends Resource
 
 
             // Date::make('Published Date', 'published_date'),
-            DateTime::make('Published Date')->displayUsing(fn ($value) => $value->diffForHumans()),
+            // DateTime::make('Published Date')->displayUsing(fn ($value) => $value->diffForHumans()),
             // Date::make('Published Date', 'published_date')->resolveUsing(function ($value) {
             //     return $value ? \Carbon\Carbon::parse($value)->format('F d, Y') : now()->format('F d, Y');
             // })->nullable(),
