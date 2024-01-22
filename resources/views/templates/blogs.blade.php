@@ -17,11 +17,11 @@
 
             <blogs-component></blogs-component>
 
-            {{-- <div class="blog_column aos-init aos-animate">
-                <div class="row">
-                    <div class="col-lg-4 col-md-4 blgCol">
-                        <div class="blog_column_info">
-                            <span><img src="/bizionic/images/blog_img1.png" alt="#" /></span>
+                    <div class="blog_column aos-init aos-animate" >
+                        <div class="row">
+                            <div class="col-lg-4 col-md-4 blgCol">
+                                <div class="blog_column_info">
+                                    <span><img src="/bizionic/images/blog_img1.png" alt="#" /></span>
 
                             <h5><a href="#"> 5 ways to stir up your lead generation
                                     through social media.</a></h5>
@@ -106,38 +106,38 @@
                             <div class="blogSponsor">
                                 <span><img src="/bizionic/images/blogSponsor_img.png" alt="#" /></span>
 
-                                <strong>
-                                    Bizionic Technologies and Marketing Solutions
-                                    <small>October 26, 2023</small>
-                                </strong>
+                                            <strong>
+                                                Bizionic Technologies and Marketing Solutions
+                                                <small>October 26, 2023</small>
+                                            </strong>
+                                        </div>
+                                </div>
                             </div>
+                            
                         </div>
                     </div>
 
+
+                    <div class="paginationBlog">
+                        <ul class="pagination">
+                            <li class="page-item disabled">
+                            <span class="page-link">Previous</span>
+                            </li>
+                            <li class="page-item"><a class="page-link" href="#">1</a></li>
+                            <li class="page-item active">
+                            <span class="page-link">
+                                2 
+                            </span>
+                            </li>
+                            <li class="page-item"><a class="page-link" href="#">3</a></li>
+                            <li class="page-item">
+                            <a class="page-link" href="#">Next</a>
+                            </li>
+                        </ul>
+                    </div>
                 </div>
-            </div> --}}
-
-
-            {{-- <div class="paginationBlog">
-                <ul class="pagination">
-                    <li class="page-item disabled">
-                        <span class="page-link">Previous</span>
-                    </li>
-                    <li class="page-item"><a class="page-link" href="#">1</a></li>
-                    <li class="page-item active">
-                        <span class="page-link">
-                            2
-                        </span>
-                    </li>
-                    <li class="page-item"><a class="page-link" href="#">3</a></li>
-                    <li class="page-item">
-                        <a class="page-link" href="#">Next</a>
-                    </li>
-                </ul>
-            </div> --}}
-        </div>
-    </div>
-</div>
+            </div> 
+        </div> 
 
 
 
@@ -343,98 +343,99 @@
                                 <div class="row">
 
 
-                                    <div class="col-lg-6">
-                                        <div class="contactUs_info_field">
-                                            <strong>Full Name<sup class="text-danger">*</sup></strong>
-                                            <div class="contactUs_info_fieldInput">
-                                                <input type="text" name="full_name" placeholder="" value="" />
+                                            <div class="col-lg-6">
+                                                <div class="contactUs_info_field">
+                                                    <strong>Full Name<sup class="text-danger">*</sup></strong>
+                                                    <div class="contactUs_info_fieldInput">
+                                                        <input type="text" name="full_name" placeholder="" value="" />
+                                                    </div>
+                                                </div>
                                             </div>
+
+                                            <div class="col-lg-6">
+                                                <div class="contactUs_info_field">
+                                                    <strong>Company Name</strong>
+                                                    <div class="contactUs_info_fieldInput">
+                                                        <input type="text" name="company_name" placeholder="" value="" />
+                                                    </div>
+                                                </div>
+                                            </div>
+
+
+                                            <div class="col-lg-6">
+                                                <div class="contactUs_info_field">
+                                                    <strong>Email<sup class="text-danger">*</sup></strong>
+                                                    <div class="contactUs_info_fieldInput">
+                                                        <input type="text" name="email" placeholder="" value="" />
+                                                    </div>
+                                                </div>
+                                            </div>
+
+                                            <div class="col-lg-6">
+                                                <div class="contactUs_info_field">
+                                                    <strong>Country Name<sup class="text-danger">*</sup></strong>
+                                                    <div class="contactUs_info_fieldSelect">
+                                                        <select class="form-control" name="country_name" id="countrySelect"
+                                                            placeholder="Search or select a country">
+                                                            <!-- Options will be dynamically populated using JavaScript -->
+                                                        </select>
+                                                    </div>
+
                                         </div>
                                     </div>
 
-                                    <div class="col-lg-6">
-                                        <div class="contactUs_info_field">
-                                            <strong>Company Name</strong>
-                                            <div class="contactUs_info_fieldInput">
-                                                <input type="text" name="company_name" placeholder="" value="" />
-                                            </div>
-                                        </div>
-                                    </div>
-
-
-                                    <div class="col-lg-6">
-                                        <div class="contactUs_info_field">
-                                            <strong>Email<sup class="text-danger">*</sup></strong>
-                                            <div class="contactUs_info_fieldInput">
-                                                <input type="text" name="email" placeholder="" value="" />
-                                            </div>
-                                        </div>
-                                    </div>
-
-                                    <div class="col-lg-6">
-                                        <div class="contactUs_info_field">
-                                            <strong>Country Name<sup class="text-danger">*</sup></strong>
-                                            <div class="contactUs_info_fieldSelect">
-                                                <select class="form-control" name="country_name" id="countrySelect"
-                                                    placeholder="Search or select a country">
-                                                    <!-- Options will be dynamically populated using JavaScript -->
-                                                </select>
+                                            <div class="col-lg-6" hidden>
+                                                <div class="contactUs_info_field">
+                                                    <strong>Country code<sup class="text-danger">*</sup></strong>
+                                                    <div class="contactUs_info_fieldSelect">
+                                                        <select class="form-control" name="country_code" id="countryCodeSelect"
+                                                            placeholder="Search or select a mobile code">
+                                                            <!-- Options will be dynamically populated using JavaScript -->
+                                                        </select>
+                                                    </div>
+                                                </div>
                                             </div>
 
-                                        </div>
-                                    </div>
 
-                                    <div class="col-lg-6" hidden>
-                                        <div class="contactUs_info_field">
-                                            <strong>Country code<sup class="text-danger">*</sup></strong>
-                                            <div class="contactUs_info_fieldSelect">
-                                                <select class="form-control" name="country_code" id="countryCodeSelect"
-                                                    placeholder="Search or select a mobile code">
-                                                    <!-- Options will be dynamically populated using JavaScript -->
-                                                </select>
+                                            <div class="col-lg-6">
+                                                <div class="contactUs_info_field">
+                                                    <strong>Mobile code<sup class="text-danger">*</sup></strong>
+                                                    <div class="contactUs_info_fieldSelect">
+                                                        <select class="form-control" name="mobile_code" id="mobileCodeSelect"
+                                                            placeholder="Search or select a mobile code">
+                                                            <!-- Options will be dynamically populated using JavaScript -->
+                                                        </select>
+                                                    </div>
+                                                </div>
                                             </div>
-                                        </div>
-                                    </div>
 
 
-                                    <div class="col-lg-6">
-                                        <div class="contactUs_info_field">
-                                            <strong>Mobile code<sup class="text-danger">*</sup></strong>
-                                            <div class="contactUs_info_fieldSelect">
-                                                <select class="form-control" name="mobile_code" id="mobileCodeSelect"
-                                                    placeholder="Search or select a mobile code">
-                                                    <!-- Options will be dynamically populated using JavaScript -->
-                                                </select>
+                                            <div class="col-lg-6">
+                                                <div class="contactUs_info_field">
+                                                    <strong>Contact Number<sup class="text-danger">*</sup></strong>
+                                                    <div class="contactUs_info_fieldInput">
+                                                        <input type="text" name="contact_number" placeholder="" value="" />
+                                                    </div>
+                                                </div>
                                             </div>
+
+
+                                        </div>
+                                        <input type="time" id="time" name="time" value="" hidden/>
+                                        <input type="date" name="date" value="" hidden/>
+                                        <input type="text" name="type" placeholder="" value="call" hidden/>
+                                        <div class="contactBtn pt-3  mt-3">
+                                            <input type="submit" value="Submit"
+                                                class="btn_default d-block w-100" />
                                         </div>
                                     </div>
-
-
-                                    <div class="col-lg-6">
-                                        <div class="contactUs_info_field">
-                                            <strong>Contact Number<sup class="text-danger">*</sup></strong>
-                                            <div class="contactUs_info_fieldInput">
-                                                <input type="text" name="contact_number" placeholder="" value="" />
-                                            </div>
-                                        </div>
-                                    </div>
-
-
-                                </div>
-                                <input type="time" id="time" name="time" value="" hidden />
-                                <input type="date" name="date" value="" hidden />
-                                <input type="text" name="type" placeholder="" value="call" hidden />
-                                <div class="contactBtn pt-3  mt-3">
-                                    <input type="submit" value="Submit" class="btn_default d-block w-100" />
+                                    </form>
+                                    
                                 </div>
                             </div>
-                        </form>
-
+                        </div>
                     </div>
                 </div>
-            </div>
-        </div>
-    </div>
 
 
     <!-- Video Call Modal -->
@@ -443,131 +444,130 @@
         <div class="modal-dialog" role="document">
             <div class="modal-content">
 
-                <div class="modal-body">
-                    <div class=" p-2">
-                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                            <span aria-hidden="true">&times;</span>
-                        </button>
-                        <h3 class="modal-title " id="callModalLabel">Book a Video Call</h3>
-                        <form id="contactForm" action="contact-form" method="post">
-                            <div class="contactUs_info_form p-0">
-                                <div class="row">
-                                    <div class="col-lg-6">
-                                        <div class="contactUs_info_field">
-                                            <strong>Full Name<sup class="text-danger">*</sup></strong>
-                                            <div class="contactUs_info_fieldInput">
-                                                <input type="text" name="full_name" placeholder="" value="" />
-                                            </div>
-                                        </div>
-                                    </div>
-
-
-                                    <div class="col-lg-6">
-                                        <div class="contactUs_info_field">
-                                            <strong>Company Name</strong>
-                                            <div class="contactUs_info_fieldInput">
-                                                <input type="text" name="company_name" placeholder="" value="" />
-                                            </div>
-                                        </div>
-                                    </div>
-
-
-                                    <div class="col-lg-6">
-                                        <div class="contactUs_info_field">
-                                            <strong>Country Name<sup class="text-danger">*</sup></strong>
-                                            <div class="contactUs_info_fieldSelect">
-                                                <select class="form-control" name="country_name" id="videoCountrySelect"
-                                                    placeholder="Search or select a country">
-                                                    <!-- Options will be dynamically populated using JavaScript -->
-                                                </select>
+                            <div class="modal-body">
+                                <div class=" p-2">
+                                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                        <span aria-hidden="true">&times;</span>
+                                    </button>
+                                    <h3 class="modal-title " id="callModalLabel">Book a Video Call</h3>
+                                    <form id="contactForm" action="contact-form" method="post">
+                                    <div class="contactUs_info_form p-0">
+                                        <div class="row">
+                                            <div class="col-lg-6">
+                                                <div class="contactUs_info_field">
+                                                    <strong>Full Name<sup class="text-danger">*</sup></strong>
+                                                    <div class="contactUs_info_fieldInput">
+                                                        <input type="text" name="full_name" placeholder="" value="" />
+                                                    </div>
+                                                </div>
                                             </div>
 
-                                        </div>
-                                    </div>
 
-                                    <div class="col-lg-6" hidden>
-                                        <div class="contactUs_info_field">
-                                            <strong>Country code<sup class="text-danger">*</sup></strong>
-                                            <div class="contactUs_info_fieldSelect">
-                                                <select class="form-control" name="country_code"
-                                                    id="videoCountryCodeSelect"
-                                                    placeholder="Search or select a mobile code">
-                                                    <!-- Options will be dynamically populated using JavaScript -->
-                                                </select>
+                                            <div class="col-lg-6">
+                                                <div class="contactUs_info_field">
+                                                    <strong>Company Name</strong>
+                                                    <div class="contactUs_info_fieldInput">
+                                                        <input type="text" name="company_name" placeholder="" value="" />
+                                                    </div>
+                                                </div>
                                             </div>
+
+
+                                            <div class="col-lg-6">
+                                                <div class="contactUs_info_field">
+                                                    <strong>Country Name<sup class="text-danger">*</sup></strong>
+                                                    <div class="contactUs_info_fieldSelect">
+                                                        <select class="form-control" name="country_name" id="videoCountrySelect"
+                                                            placeholder="Search or select a country">
+                                                            <!-- Options will be dynamically populated using JavaScript -->
+                                                        </select>
+                                                    </div>
+
                                         </div>
                                     </div>
 
-
-                                    <div class="col-lg-6">
-                                        <div class="contactUs_info_field">
-                                            <strong>Mobile code<sup class="text-danger">*</sup></strong>
-                                            <div class="contactUs_info_fieldSelect">
-                                                <select class="form-control" name="mobile_code"
-                                                    id="videoMobileCodeSelect"
-                                                    placeholder="Search or select a mobile code">
-                                                    <!-- Options will be dynamically populated using JavaScript -->
-                                                </select>
+                                            <div class="col-lg-6" hidden>
+                                                <div class="contactUs_info_field">
+                                                    <strong>Country code<sup class="text-danger">*</sup></strong>
+                                                    <div class="contactUs_info_fieldSelect">
+                                                        <select class="form-control" name="country_code" id="videoCountryCodeSelect"
+                                                            placeholder="Search or select a mobile code">
+                                                            <!-- Options will be dynamically populated using JavaScript -->
+                                                        </select>
+                                                    </div>
+                                                </div>
                                             </div>
-                                        </div>
-                                    </div>
 
 
-                                    <div class="col-lg-6">
-                                        <div class="contactUs_info_field">
-                                            <strong>Contact Number<sup class="text-danger">*</sup></strong>
-                                            <div class="contactUs_info_fieldInput">
-                                                <input type="text" name="contact_number" placeholder="" value="" />
+                                            <div class="col-lg-6">
+                                                <div class="contactUs_info_field">
+                                                    <strong>Mobile code<sup class="text-danger">*</sup></strong>
+                                                    <div class="contactUs_info_fieldSelect">
+                                                        <select class="form-control" name="mobile_code" id="videoMobileCodeSelect"
+                                                            placeholder="Search or select a mobile code">
+                                                            <!-- Options will be dynamically populated using JavaScript -->
+                                                        </select>
+                                                    </div>
+                                                </div>
                                             </div>
-                                        </div>
-                                    </div>
 
 
-                                    <div class="col-lg-6">
-                                        <div class="contactUs_info_field">
-                                            <strong>Email<sup class="text-danger">*</sup></strong>
-                                            <div class="contactUs_info_fieldInput">
-                                                <input type="text" name="email" placeholder="" value="" />
+                                            <div class="col-lg-6">
+                                                <div class="contactUs_info_field">
+                                                    <strong>Contact Number<sup class="text-danger">*</sup></strong>
+                                                    <div class="contactUs_info_fieldInput">
+                                                        <input type="text" name="contact_number" placeholder="" value="" />
+                                                    </div>
+                                                </div>
                                             </div>
+
+
+                                            <div class="col-lg-6">
+                                                <div class="contactUs_info_field">
+                                                    <strong>Email<sup class="text-danger">*</sup></strong>
+                                                    <div class="contactUs_info_fieldInput">
+                                                        <input type="text" name="email" placeholder="" value="" />
+                                                    </div>
+                                                </div>
+                                            </div>
+
+                                            <div class="col-lg-6">
+                                                <div class="contactUs_info_field">
+                                                    <strong>Date<sup class="text-danger">*</sup></strong>
+                                                    <input type="date" name="date" />
+                                                </div>
+                                            </div>
+
+
+                                            <div class="col-lg-6">
+                                                <div class="contactUs_info_field">
+                                                    <strong>Time<sup class="text-danger">*</sup></strong>
+                                                    <input type="time" id="time" name="time" />
+                                                </div>
+                                            </div>
+
+
+
+
+
+
+
+                                        </div>
+
+
+                                        <input type="text" name="type" placeholder="" value="video" hidden/>
+                                        <div class="contactBtn pt-3 mt-3">
+                                            <input type="submit" value="Submit"
+                                                class="btn_default   d-block w-100" />
                                         </div>
                                     </div>
-
-                                    <div class="col-lg-6">
-                                        <div class="contactUs_info_field">
-                                            <strong>Date<sup class="text-danger">*</sup></strong>
-                                            <input type="date" name="date" />
-                                        </div>
-                                    </div>
-
-
-                                    <div class="col-lg-6">
-                                        <div class="contactUs_info_field">
-                                            <strong>Time<sup class="text-danger">*</sup></strong>
-                                            <input type="time" id="time" name="time" />
-                                        </div>
-                                    </div>
-
-
-
-
-
-
-
-                                </div>
-
-
-                                <input type="text" name="type" placeholder="" value="video" hidden />
-                                <div class="contactBtn pt-3 mt-3">
-                                    <input type="submit" value="Submit" class="btn_default   d-block w-100" />
+                                    </form>
+                                    
                                 </div>
                             </div>
-                        </form>
 
+                        </div>
                     </div>
                 </div>
-
-            </div>
-        </div>
+ 
     </div>
-
-</div>

@@ -122,14 +122,14 @@
                                     </td>
                                     <td>
                                         <div class="tabletext">
-                                            <p>{{ $on_board->expert_in }}</p>
+                                            {{-- <p>{{ $on_board->expert_in }}</p> --}}
                                             <p>-</p>
                                         </div>
                                     </td>
                                     <td>
                                         <div class="tabletext">
-                                            <p>{{ $on_board->also_work_with }}</p>
-                                            {{-- <p>-</p> --}}
+                                            {{-- <p>{{ $on_board->also_work_with }}</p> --}}
+                                            <p>-</p>
                                         </div>
                                     </td>
                                     <td>

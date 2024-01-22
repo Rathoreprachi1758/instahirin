@@ -1,16 +1,13 @@
 <head>
-    <link rel="canonical" href="https://www.bizionictech.com/hire/marketers/marketing-team-augmentation/social-media-manager">
+    <link rel="canonical"
+        href="https://www.bizionictech.com/hire/marketers/marketing-team-augmentation/social-media-manager">
 </head>
 <div class="bg_cfd1d2">
     <!-- main banner img -->
 
     <div class="mainBanner_layout">
-        <span><img src="/bizionic/images/hire_main_banner.png" alt="#" /></span>
+        <span><img src="/bizionic/images/hire_main_banner.png" alt="#"></span>
     </div>
-
-
-
-
     <div class="onHire_immerPage">
         <div class="industryNew_section  bg_f2f2f2">
             <div class="auto_container">
@@ -44,7 +41,7 @@
                             <div class="col-lg-6 col-md-6 aos-init " data-aos="fade-left" data-aos-duration="1000"
                                 data-aos-easing="ease">
                                 <div class="industryNew_section1_avatar">
-                                    <span><img src="/bizionic/images/m_socialMedia_avatar.png" alt="#" /></span>
+                                    <span><img src="/bizionic/images/m_socialMedia_avatar.png" alt="#"></span>
                                 </div>
                             </div>
                         </div>
@@ -58,7 +55,8 @@
                         data-aos-easing="ease">
                         <div class="custom_tittle">
                             <h3><strong>Here are some key responsibilities of a </strong> social media
-                                <strong>manager:</strong></h3>
+                                <strong>manager:</strong>
+                            </h3>
 
 
 
@@ -93,7 +91,7 @@
                         </div>
                         <div class="col-lg-3 col-md-6 provide_col">
                             <div class="industryNew_section2_colsInfo">
-                                <span><img src="/bizionic/images/m_socialMedia_icon2.png" alt="#" /></span>
+                                <span><img src="/bizionic/images/m_socialMedia_icon2.png" alt="#"></span>
                                 <h6>CONTENT CREATION AND CURATION</h6>
                                 <p>Social media managers are responsible for creating engaging and relevant content for
                                     social media platforms. This includes writing social media posts, creating graphics
@@ -114,7 +112,7 @@
                         </div>
                         <div class="col-lg-3 col-md-6 provide_col">
                             <div class="industryNew_section2_colsInfo">
-                                <span><img src="/bizionic/images/m_socialMedia_icon4.png" alt="#" /></span>
+                                <span><img src="/bizionic/images/m_socialMedia_icon4.png" alt="#"></span>
                                 <h6>COMMUNITY MANAGEMENT</h6>
                                 <p>Social media managers engage with the audience by responding to comments, messages,
                                     and inquiries on social media platforms. They actively monitor social media channels
@@ -128,7 +126,7 @@
 
                         <div class="col-lg-3 col-md-6 provide_col">
                             <div class="industryNew_section2_colsInfo">
-                                <span><img src="/bizionic/images/m_socialMedia_icon5.png" alt="#" /></span>
+                                <span><img src="/bizionic/images/m_socialMedia_icon5.png" alt="#"></span>
                                 <h6>SOCIAL MEDIA ADVERTISING</h6>
                                 <p>Social media managers plan and execute social media advertising campaigns to reach a
                                     broader audience, promote products or services, and achieve specific marketing
@@ -140,7 +138,7 @@
 
                         <div class="col-lg-3 col-md-6 provide_col">
                             <div class="industryNew_section2_colsInfo">
-                                <span><img src="/bizionic/images/m_socialMedia_icon6.png" alt="#" /></span>
+                                <span><img src="/bizionic/images/m_socialMedia_icon6.png" alt="#"></span>
                                 <h6>SOCIAL LISTENING AND MONITORING</h6>
                                 <p>Social media managers use social listening tools to monitor brand mentions, industry
                                     trends, and conversations related to the business. This helps them gather insights,
@@ -162,7 +160,7 @@
                         </div>
                         <div class="col-lg-3 col-md-6 provide_col">
                             <div class="industryNew_section2_colsInfo">
-                                <span><img src="/bizionic/images/m_socialMedia_icon8.png" alt="#" /></span>
+                                <span><img src="/bizionic/images/m_socialMedia_icon8.png" alt="#"></span>
                                 <h6>INFLUENCER AND COLLABORATION</h6>
                                 <p>Social media managers identify and collaborate with influencers or industry partners
                                     to amplify brand reach and engage with target audiences.
@@ -177,7 +175,7 @@
 
                         <div class="col-lg-3 col-md-6 provide_col">
                             <div class="industryNew_section2_colsInfo">
-                                <span><img src="/bizionic/images/m_socialMedia_icon9.png" alt="#" /></span>
+                                <span><img src="/bizionic/images/m_socialMedia_icon9.png" alt="#"></span>
                                 <h6>STAY UPDATED ON SOCIAL MEDIA TRENDS</h6>
                                 <p>social media is a dynamic and evolving landscape. Social media managers stay updated
                                     on the latest trends, features, and best practices across social media platforms.
@@ -187,7 +185,7 @@
                         </div>
                         <div class="col-lg-3 col-md-6 provide_col">
                             <div class="industryNew_section2_colsInfo">
-                                <span><img src="/bizionic/images/m_socialMedia_icon10.png" alt="#" /></span>
+                                <span><img src="/bizionic/images/m_socialMedia_icon10.png" alt="#"></span>
                                 <h6>CRISIS MANAGEMENT</h6>
                                 <p>In the event of a social media crisis or negative publicity, social media managers
                                     play a vital role in managing and mitigating the situation. They respond promptly,

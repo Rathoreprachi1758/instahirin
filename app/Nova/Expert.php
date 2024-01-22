@@ -13,6 +13,8 @@ use Laravel\Nova\Fields\Tag;
 use Laravel\Nova\Fields\Text;
 use Laravel\Nova\Fields\Trix;
 use Laravel\Nova\Http\Requests\NovaRequest;
+use Laravel\Nova\Fields\Gravatar;
+use Laravel\Nova\Fields\Avatar as NovaAvatar;
 use Laravel\Nova\Fields\File;
 use Silvanite\NovaFieldCheckboxes\Checkboxes;
 use Laravel\Nova\Fields\BooleanGroup;
@@ -52,6 +54,7 @@ class Expert extends Resource
     {
         return [
             ID::make()->sortable(),
+            Gravatar::make()->maxWidth(30),
             BelongsTo::make('Expert Category', 'expertCategory')->noPeeking()->filterable(),
             Text::make('Title', 'title')->rules('required', 'min:6,max:255'),
             Text::make('Sub Title', 'sub_title')->rules('required', 'min:6,max:255')->help(

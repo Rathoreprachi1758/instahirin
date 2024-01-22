@@ -650,7 +650,7 @@
                                                 <div class="contactUs_info_field">
                                                     <strong>Contact Number<sup class="text-danger">*</sup></strong>
                                                     <div class="contactUs_info_fieldInput">
-                                                        <input type="text" name="contact_number" placeholder="" value="" />
+                                                        <input type="text" name="contact_number" placeholder="" value="" >
                                                     </div>
                                                 </div>
                                             </div>
@@ -752,7 +752,7 @@
                                                 <div class="contactUs_info_field">
                                                     <strong>Contact Number<sup class="text-danger">*</sup></strong>
                                                     <div class="contactUs_info_fieldInput">
-                                                        <input type="text" name="contact_number" placeholder="" value="" />
+                                                        <input type="text" name="contact_number" placeholder="" value="" >
                                                     </div>
                                                 </div>
                                             </div>
@@ -762,7 +762,7 @@
                                                 <div class="contactUs_info_field">
                                                     <strong>Email<sup class="text-danger">*</sup></strong>
                                                     <div class="contactUs_info_fieldInput">
-                                                        <input type="text" name="email" placeholder="" value="" />
+                                                        <input type="text" name="email" placeholder="" value="" >
                                                     </div>
                                                 </div>
                                             </div>
@@ -770,7 +770,7 @@
                                             <div class="col-lg-6">
                                                 <div class="contactUs_info_field">
                                                     <strong>Date<sup class="text-danger">*</sup></strong>
-                                                    <input type="date" name="date" />
+                                                    <input type="date" name="date" >
                                                 </div>
                                             </div>
 
@@ -778,7 +778,7 @@
                                             <div class="col-lg-6">
                                                 <div class="contactUs_info_field">
                                                     <strong>Time<sup class="text-danger">*</sup></strong>
-                                                    <input type="time" id="time" name="time" />
+                                                    <input type="time" id="time" name="time">
                                                 </div>
                                             </div>
 
@@ -794,7 +794,7 @@
                                         <input type="text" name="type" placeholder="" value="video" hidden/>
                                         <div class="contactBtn pt-3 mt-3">
                                             <input type="submit" value="Submit"
-                                                class="btn_default   d-block w-100" />
+                                                class="btn_default   d-block w-100">
                                         </div>
                                     </div>
                                     </form>

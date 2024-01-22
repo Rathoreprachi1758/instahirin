@@ -5,7 +5,7 @@
        <!-- main banner img -->
 
        <div class="mainBanner_layout">
-           <span><img src="/bizionic/images/hire_main_banner.png" alt="#" /></span>
+           <span><img src="/bizionic/images/hire_main_banner.png" alt="#"></span>
        </div>
        <div class="onHire_immerPage">
            <div class="industryNew_section  bg_f2f2f2">
@@ -42,7 +42,7 @@
                                    data-aos-easing="ease">
                                    <div class="industryNew_section1_avatar">
                                        <span><img src="/bizionic/images/m_uiUxDesigner_avatar.png"
-                                               alt="#" /></span>
+                                               alt="#"></span>
                                    </div>
                                </div>
                            </div>
@@ -80,7 +80,7 @@
                        <div class="row justify-content-center">
                            <div class="col-lg-3 col-md-6 provide_col">
                                <div class="industryNew_section2_colsInfo">
-                                   <span><img src="/bizionic/images/m_uiUxDesigner_icon1.png" alt="#" /></span>
+                                   <span><img src="/bizionic/images/m_uiUxDesigner_icon1.png" alt="#"></span>
                                    <h6>USER RESEARCH</h6>
                                    <p>UI/UX designers conduct user research to understand the needs, behaviors, and
                                        preferences of the target audience. They employ techniques such as interviews,
@@ -100,7 +100,7 @@
                            </div>
                            <div class="col-lg-3 col-md-6 provide_col">
                                <div class="industryNew_section2_colsInfo">
-                                   <span><img src="/bizionic/images/m_uiUxDesigner_icon3.png" alt="#" /></span>
+                                   <span><img src="/bizionic/images/m_uiUxDesigner_icon3.png" alt="#"></span>
                                    <h6>USER INTERFACE DESIGN</h6>
                                    <p>UI/UX designers focus on designing visually appealing interfaces that are
                                        intuitive and easy to navigate. They select color schemes, typography,
@@ -124,7 +124,7 @@
 
                            <div class="col-lg-3 col-md-6 provide_col">
                                <div class="industryNew_section2_colsInfo">
-                                   <span><img src="/bizionic/images/m_uiUxDesigner_icon5.png" alt="#" /></span>
+                                   <span><img src="/bizionic/images/m_uiUxDesigner_icon5.png" alt="#"></span>
                                    <h6>INTERACTION DESIGN</h6>
                                    <p>UI/UX designers define how users interact with the digital product by designing
                                        interactive elements, such as buttons, menus, forms, and animations. They
@@ -135,7 +135,7 @@
 
                            <div class="col-lg-3 col-md-6 provide_col">
                                <div class="industryNew_section2_colsInfo">
-                                   <span><img src="/bizionic/images/m_uiUxDesigner_icon6.png" alt="#" /></span>
+                                   <span><img src="/bizionic/images/m_uiUxDesigner_icon6.png" alt="#"></span>
                                    <h6>USABILITY TESTING</h6>
                                    <p>UI/UX designers conduct usability testing sessions to evaluate the effectiveness
                                        and efficiency of the product's interface and user experience. They observe users
@@ -146,7 +146,7 @@
 
                            <div class="col-lg-3 col-md-6 provide_col">
                                <div class="industryNew_section2_colsInfo">
-                                   <span><img src="/bizionic/images/m_uiUxDesigner_icon7.png" alt="#" /></span>
+                                   <span><img src="/bizionic/images/m_uiUxDesigner_icon7.png" alt="#"></span>
                                    <h6>RESPONSIVE DESIGN</h6>
                                    <p>UI/UX designers ensure that the digital product is optimized for different devices
                                        and screen sizes. They create responsive designs that adapt and provide a
@@ -155,7 +155,7 @@
                            </div>
                            <div class="col-lg-3 col-md-6 provide_col">
                                <div class="industryNew_section2_colsInfo">
-                                   <span><img src="/bizionic/images/m_uiUxDesigner_icon8.png" alt="#" /></span>
+                                   <span><img src="/bizionic/images/m_uiUxDesigner_icon8.png" alt="#"></span>
                                    <h6>COLLABORATION WITH DEVELOPMENT TEAMS</h6>
                                    <p>UI/UX designers work closely with development teams, such as front-end developers,
                                        to ensure the designs are implemented accurately and meet the intended user
@@ -168,7 +168,7 @@
 
                            <div class="col-lg-3 col-md-6 provide_col">
                                <div class="industryNew_section2_colsInfo">
-                                   <span><img src="/bizionic/images/m_uiUxDesigner_icon9.png" alt="#" /></span>
+                                   <span><img src="/bizionic/images/m_uiUxDesigner_icon9.png" alt="#"></span>
                                    <h6>ACCESSIBILITY</h6>
                                    <p>UI/UX designers consider accessibility guidelines and standards to ensure that the
                                        digital product is inclusive and usable by a wide range of users, including those
@@ -178,7 +178,7 @@
                            </div>
                            <div class="col-lg-3 col-md-6 provide_col">
                                <div class="industryNew_section2_colsInfo">
-                                   <span><img src="/bizionic/images/m_uiUxDesigner_icon10.png" alt="#" /></span>
+                                   <span><img src="/bizionic/images/m_uiUxDesigner_icon10.png" alt="#" ></span>
                                    <h6>ITERATIVE DESIGN AND IMPROVEMENT</h6>
                                    <p>UI/UX designers engage in an iterative design process, continually refining and
                                        improving the user interface and experience based on user feedback, data

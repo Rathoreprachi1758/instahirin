@@ -6,6 +6,7 @@
                 <p>Qualified, Trustworthy Talent, Authenticated Excellence, <strong>HIRE WITH CONFIDENCE</strong> <br>
                     Zero Cost to Meet Talent, Hire Top Talent In Minutes, and Unlock Cost Savings through Smart Hiring.
                 </p>
+                {{-- <strong style="color:black">{{ auth()->user()->id }}</strong> --}}
             </div>
         </div>
     </div>
@@ -96,7 +97,7 @@
 
                         </form> --}}
                         <hire-talent-component :countries='{{$countries}}' :timezones='{{ $timezones }}'
-                            :expert-id='{{ $expert->id }}'>
+                            :expert-id='{{ $expert->id }}' :userId='{{auth()->user()->id}}'>
                         </hire-talent-component>
                     </div>
                 </div>

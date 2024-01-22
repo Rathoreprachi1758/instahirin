@@ -1,8 +1,9 @@
+No lines are selected.
 <x-header data="profile component" />
 <!-- main content sections -->
 <!-- custom css -->
-<link rel="stylesheet " href="{{ asset('css/css/profilestyle.css') }} ">
-<link rel="stylesheet " href="{{ asset('css/css/profileresponsive.css') }} ">
+<link rel="stylesheet" href="{{ asset('css/css/profilestyle.css') }} ">
+<link rel="stylesheet" href="{{ asset('css/css/profileresponsive.css') }} ">
 
 <div class="fr-section">
     <div class="fr-section_detail" style="margin-top: -88px;">

@@ -7,6 +7,8 @@ use Laravel\Nova\Nova;
 use Laravel\Nova\NovaApplicationServiceProvider;
 use App\Policies\brandpolicy;
 use App\Models\Post2;
+use App\Models\Job;
+use App\Models\InstaHirinRequirement;
 use \App\Models\User;
 use Illuminate\Support\Facades\File;
 // use NovaComponents\Permissioncard\Permissioncard;
@@ -42,11 +44,11 @@ class NovaServiceProvider extends NovaApplicationServiceProvider
             })
             ->filter()
             ->toArray();
-        \Log::info('$resources=====================');
-        \Log::info($resources);
-        $allowedEmails = User::pluck('email')->toArray();
-        \Log::info(' $allowedEmails==========');
-        \Log::info($allowedEmails);
+        // \Log::info('$resources=====================');
+        // \Log::info($resources);
+        // $allowedEmails = User::pluck('email')->toArray();
+        // \Log::info(' $allowedEmails==========');
+        // \Log::info($allowedEmails);
         // Nova::resources($resources);
     }
 
