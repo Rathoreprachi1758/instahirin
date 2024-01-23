@@ -35,8 +35,18 @@ $blog = \App\Models\Blogs::find($blogId);
                                         {{ $blog->author_name }}
                                         {{-- <small>{{ $blog->published_date }}</small>
                                         --}}
-                                        <small>{{ \Carbon\Carbon::parse($blog->published_date)->diffForHumans()
-                                            }}</small>
+                                        <small class="d-block"><i class="fa fa-clock-o mr-2" aria-hidden="true"></i> {{
+                                            \Carbon\Carbon::parse($blog->published_date)->diffForHumans()
+                                            }}
+                                            <b class="d-block"><i class="fa fa-calendar mr-2" aria-hidden="true"></i> {{
+                                                $blog->published_date->format('Y-m-d') }} </b>
+                                        </small>
+                                    </strong>
+
+                                </div>
+                                <div class="">
+                                    <strong>
+
                                     </strong>
                                 </div>
                             </div>

@@ -1,5 +1,5 @@
 <template>
-  <div class="blog_column aos-init aos-animate">
+  <div class="blog_column aos-init pb-0 aos-animate">
     <div class="row">
       <div v-for="blog in displayedData" :key="blog.id" class="col-lg-4 col-md-4 blgCol">
         <div class="blog_column_info">
@@ -23,7 +23,7 @@
         </div>
       </div>
     </div>
-    <div class="pagination">
+    <div class="pagination justify-content-center pt-5">
       <!-- :on-click="filterTeamMembers" -->
       <vue-awesome-paginate
         :total-items="totalItems"
@@ -31,8 +31,6 @@
         :max-pages-shown="pagesShown"
         v-model="currentPage"
         @page-clicked="handlePageChange"
-        prev-button-content="previous"
-        next-button-content="next"
         :container-class="'pagination-container'"
       ></vue-awesome-paginate>
     </div>

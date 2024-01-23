@@ -52,7 +52,10 @@ class Blogs extends Resource
             // Text::make('Blog Title', 'title')->rules('required', 'min:6,max:255'),
             Text::make('Blog Title', 'title')->rules('required', 'min:6', 'max:70'),
 
-            Image::make('Blog Image', 'image')->disableDownload()->nullable(),
+            Image::make('Blog Image', 'image')
+                ->disableDownload()
+                ->nullable()
+                ->rules('dimensions:width=1920,height=1164'),
             Avatar::make('Author Avatar', 'author_avatar')->disableDownload()->nullable(),
             // Gravatar::make('Author Avatar', 'author_avatar')->maxWidth(30),
             Text::make('Author Name', 'author_name')->rules('required'),
