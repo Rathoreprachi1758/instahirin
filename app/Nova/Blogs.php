@@ -54,8 +54,7 @@ class Blogs extends Resource
 
             Image::make('Blog Image', 'image')
                 ->disableDownload()
-                ->nullable()
-                ->rules('dimensions:width=1920,height=1164'),
+                ->nullable(),
             Avatar::make('Author Avatar', 'author_avatar')->disableDownload()->nullable(),
             // Gravatar::make('Author Avatar', 'author_avatar')->maxWidth(30),
             Text::make('Author Name', 'author_name')->rules('required'),
