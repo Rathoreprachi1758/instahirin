@@ -76,6 +76,10 @@ class Expert extends Resource
             Text::make('Experience', 'experience')->help(
                 'Put value like this 15 Years, 2 Years'
             ),
+            Text::make('Current Location', 'location')->rules('required', 'min:6,max:255')
+                ->help(
+                    'Put current location like this Hyderabad, India'
+                ),
             Avatar::make('Avatar', 'avatar')->disableDownload()->nullable(),
             Tag::make('Experties', 'experties')->showCreateRelationButton()->preload()->displayAsList(),
             Tag::make('Skills', 'skills')->showCreateRelationButton()->preload()->displayAsList(),

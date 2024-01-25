@@ -3,7 +3,11 @@
     <div class="row">
       <div v-for="blog in displayedData" :key="blog.id" class="col-lg-4 col-md-4 blgCol">
         <div class="blog_column_info">
-          <span><img :src="`/storage/${blog.image}`" :alt="blog.title" /></span>
+          <span>
+            <a @click="goToJobForm(blog.id)" class="clickable-link">
+              <img :src="`/storage/${blog.image}`" :alt="blog.title" />
+            </a>
+          </span>
 
           <h5>
             <a @click="goToJobForm(blog.id)" class="clickable-link"> {{ blog.title }}</a>

@@ -15,6 +15,7 @@ class Job extends Model
 
     protected $casts = [
         'key_skills' => 'json',
+        'posted_date' => 'date',
     ];
 
 

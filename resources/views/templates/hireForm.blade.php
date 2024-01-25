@@ -53,6 +53,11 @@
                             </div>
 
                             <div class="employee_data">
+                                <strong>CURRENT LOCATION:</strong>
+                                <p>{{$expert->location}}</p>
+                            </div>
+
+                            <div class="employee_data">
                                 <strong>ALSO WORK WITH:</strong>
                                 <p>
                                     @foreach($expert->skills as $skill)

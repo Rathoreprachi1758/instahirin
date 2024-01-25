@@ -2,19 +2,20 @@
 
 namespace App\Nova;
 
-use Illuminate\Http\Request;
-use Laravel\Nova\Fields\File;
+use GMP;
 use Laravel\Nova\Fields\ID;
-use Laravel\Nova\Fields\Select;
-use Laravel\Nova\Fields\Text;
+use Illuminate\Http\Request;
 use Laravel\Nova\Fields\Tag;
+use App\Policies\brandpolicy;
+use Laravel\Nova\Fields\Date;
+use Laravel\Nova\Fields\File;
+use Laravel\Nova\Fields\Text;
 use Laravel\Nova\Fields\Trix;
-use Laravel\Nova\Http\Requests\NovaRequest;
+use App\Policies\CareerPolicy;
+use Laravel\Nova\Fields\Select;
 use Laravel\Nova\Fields\DateTime;
 use Illuminate\Support\Facades\Gate;
-use App\Policies\brandpolicy;
-use App\Policies\CareerPolicy;
-use GMP;
+use Laravel\Nova\Http\Requests\NovaRequest;
 
 class Job extends Resource
 {
@@ -163,6 +164,8 @@ class Job extends Resource
                 ->filterable()
                 ->hideFromIndex(),
             Trix::make('What We Offer', 'we_offer'),
+            // posted date field
+            Date::make('Posted Date', 'posted_date')->hideFromIndex(),
             Select::make('Status', 'status')
                 ->options(['Open' => 'Open', 'Closed' => 'Closed'])
                 ->displayUsingLabels()
