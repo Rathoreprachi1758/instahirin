@@ -165,7 +165,7 @@ class Job extends Resource
                 ->hideFromIndex(),
             Trix::make('What We Offer', 'we_offer'),
             // posted date field
-            Date::make('Posted Date', 'posted_date')->hideFromIndex(),
+            Date::make('Posted Date', 'posted_date')->hideFromIndex()->rules('required'),
             Select::make('Status', 'status')
                 ->options(['Open' => 'Open', 'Closed' => 'Closed'])
                 ->displayUsingLabels()
