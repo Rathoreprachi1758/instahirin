@@ -34,4 +34,9 @@ class HireRequest extends Model
     {
         return $this->hasMany(AvailabilityData::class);
     }
+
+    public function expertise_talent(): BelongsTo
+    {
+        return $this->belongsTo(Expert::class, 'expert_id');
+    }
 }

@@ -37,6 +37,7 @@ class Job extends Model
         'qualification',
         'responsibilities',
         'availability',
+        'user_id',
     ];
 
     public function skills(): BelongsToMany

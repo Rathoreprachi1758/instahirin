@@ -9,27 +9,22 @@ use Illuminate\Support\Facades\Auth;
 use Illuminate\Auth\Middleware\Authenticate as Middleware;
 use Illuminate\Support\Facades\Log;
 
-class AuthCheck extends Middleware
+class AuthCheck 
 {
     /**
      * Handle an incoming request.
      *
      * @param  \Closure(\Illuminate\Http\Request): (\Symfony\Component\HttpFoundation\Response)  $next
     //  */
-    public function handle(Request $request, Closure $next): Response
+    public function handle(Request $request, Closure $next, ...$guards): Response
     {   
         if (!Auth::check()) {
             Log::info("User is not authenticated");
-            Log::info(Auth::user()->name);
             return redirect('/loginpage');
         }
+
+        Log::info(Auth::user()->name);
+
         return $next($request);
     }
-    // protected function redirectTo($request)
-    // {
-    //     if (! $request->expectsJson()) {
-    //         // return route('login');
-    //         return route('loginpage');
-    //     }
-    // }
 }

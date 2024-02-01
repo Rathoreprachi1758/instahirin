@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\HireRequest;
 use Auth;
 use Illuminate\Http\Request;
 use App\Models\User;
@@ -13,6 +14,7 @@ use App\Models\CompanyKycInformation;
 use App\Models\InstaHirinRequirement;
 use App\Models\InstaHirinOnboard;
 use App\Models\HireMeApplication;
+use App\Models\ScheduledInterview;
 use Illuminate\Support\Facades\File;
 use Illuminate\Support\Facades\Schema;
 
@@ -253,30 +255,31 @@ class profileController extends Controller
         $formData->notify_ai_applicants = isset($request->notify_ai_applicants) ? 'Yes' : 'No';
         $formData->save();
         //
-        $instaRequirement = InstaHirinRequirement::find($formData->id);
-        $job = Job::create([
-            'title' => $instaRequirement->position_title,
-            'work_mode' => $instaRequirement->work_mode,
-            'description' => $instaRequirement->project_description,
-            'key_skills' => json_decode($request->key_skills),
-            'availability' => $instaRequirement->employment_type,
-            'ctc_currency' => $instaRequirement->salary_currency_yearly,
-            'min_price' => $instaRequirement->min_salary_yearly,
-            'max_price' => $instaRequirement->max_salary_yearly,
-            'salary_period'=>$instaRequirement->salary_period,
-            // 'experience',
-            'location' => $instaRequirement->location,
-            'qualification' => $instaRequirement->education_qualification,
-            'company' => $instaRequirement->company_name,
-            // hiring timeline
-            'prefer_qualification' => $instaRequirement->company_address,
-        ]);
+        // $instaRequirement = InstaHirinRequirement::find($formData->id);
+        // $job = Job::create([
+        //     'title' => $instaRequirement->position_title,
+        //     'work_mode' => $instaRequirement->work_mode,
+        //     'description' => $instaRequirement->project_description,
+        //     'key_skills' => json_decode($request->key_skills),
+        //     'availability' => $instaRequirement->employment_type,
+        //     'ctc_currency' => $instaRequirement->salary_currency_yearly,
+        //     'min_price' => $instaRequirement->min_salary_yearly,
+        //     'max_price' => $instaRequirement->max_salary_yearly,
+        //     'salary_period' => $instaRequirement->salary_period,
+        //     // 'experience',
+        //     'location' => $instaRequirement->location,
+        //     'qualification' => $instaRequirement->education_qualification,
+        //     'company' => $instaRequirement->company_name,
+        //     // hiring timeline
+        //     'prefer_qualification' => $instaRequirement->company_address,
+        //     'user_id' => Auth::id(),
+        // ]);
 
-        // Transfer skills
-        $skills = $instaRequirement->experty()->pluck('id')->toArray();
-        $job->keySkills()->attach($skills);
-        $skills = $instaRequirement->experty()->get();
-        $job->keySkills()->attach($skills);
+        // // Transfer skills
+        // $skills = $instaRequirement->experty()->pluck('id')->toArray();
+        // $job->keySkills()->attach($skills);
+        // $skills = $instaRequirement->experty()->get();
+        // $job->keySkills()->attach($skills);
         // return json_decode($request->key_skills);
         return redirect()->back()->with('message', ' Job hasbeen Posted!');
     }
@@ -284,6 +287,7 @@ class profileController extends Controller
     public function my_job_activity(Request $request)
     {
         $myjob = InstaHirinRequirement::where('user_id', Auth::id())->get();
+        // $myjob = Job::where('user_id', Auth::id())->get();
         // return $myjob;
         return view('dashboard.Activity_employer.my_job', ['myjob' => $myjob]);
     }
@@ -299,7 +303,7 @@ class profileController extends Controller
         //     }
         // }
         $results = HireMeApplication::whereIn('job_id', $this->job_activity)->get();
-        // return $results;
+        // return $this->job_activity;
         return view('dashboard.Activity_employer.my_job_application', ['results' => $results]);
 
     }
@@ -310,29 +314,106 @@ class profileController extends Controller
     }
     public function Instahirin_activity(Request $request)
     {
-        $insta_onboard = InstaHirinOnboard::where('user_id', Auth::id())->get();
-        // $insta_onboard = Expert::where('user_id',Auth::id())->get();
-        // $insta_onboard = InstaHirinOnboard::where('user_id', auth()->id())
-        // ->where('email', 'pavan152@gmail.com')
-        // ->first();
-        // return $insta_onboard->key_skills;
-        return view('dashboard.Activity_employer.instahirin', ['insta_onboard' => $insta_onboard]);
+        // $insta_onboard = InstaHirinOnboard::where('user_id', Auth::id())->get();
+        // $insta_onboard = HireRequest::where('user_id', Auth::id())->get();
+        // dd($insta_onboard);
+        $insta_onboard = HireRequest::where('user_id', Auth::id())->with('expert')->get();
+        $expertDataArray = [];
+        foreach ($insta_onboard as $hireRequest) {
+            $expertData = $hireRequest->expertise_talent;
+            $expertDataArray[] = $expertData;
+        }
+        // return gettype($expertDataArray);
+        return view('dashboard.Activity_employer.instahirin', ['insta_onboard' => $expertDataArray]);
+        // return view('dashboard.Activity_employer.instahirin', ['insta_onboard' => $insta_onboard]);
     }
     public function Interviewschedule(Request $request)
     {
-        // $company_details = InstaHirinRequirement::where('user_id', Auth::id())->whereIn('position_title',)->pluck('email','company_name');
-        // return $company_details;
-        $insta_onboard = InstaHirinOnboard::where('user_id', Auth::id())->get();
-        // $insta_onboard = Expert::where('user_id',Auth::id())->get();
-        // return 
-        // $results = HireMeApplication::whereIn('job_id', $this->job_activity)->pluck('');
-        // return $results;
-        return view('dashboard.Activity_employer.interview_schedule', ['insta_onboard' => $insta_onboard]);
+        // $instaOnboard = InstaHirinOnboard::where('user_id', Auth::id())->get();
+        //  $instaOnboard = HireRequest::where('user_id', Auth::id())->get();
+        // $insta_talent= HireRequest::where('user_id', Auth::id())->with('expert')->get();
+        // $instaOnboard = [];
+        // foreach ($insta_talent as $hireRequest) {
+        //     $expertData = $hireRequest->expertise_talent;
+        //     $instaOnboard[] = $expertData;
+        // }
+        // // return gettype($instaOnboard);
+        // $hireMeApplications = HireMeApplication::whereIn('job_id', $this->job_activity)->get()->toArray();
+        // // return gettype($hireMeApplications);
+        // $insta_onboard = $instaOnboard->concat($hireMeApplications);
+        // // return $insta_onboard;
+
+
+
+
+
+
+        //////
+        $insta_talent = HireRequest::where('user_id', Auth::id())->with('expert')->get();
+
+        $instaOnboard = $insta_talent->map(function ($hireRequest) {
+            return $hireRequest->expertise_talent;
+        })->all();
+
+        $hireMeApplications = HireMeApplication::whereIn('job_id', $this->job_activity)->get()->toArray();
+
+        $combinedData = collect($instaOnboard)->concat($hireMeApplications)->all();
+        /////
+        //  return $combinedData;
+        ///
+        $savedData = ScheduledInterview::all();
+        // $scedule = $savedData->concat($combinedData);
+        $scedule = $savedData->concat($combinedData)->unique(function ($item) {
+            return $item['email'];
+        });
+        // return $scedule;
+        $array_data = [];
+        foreach ($scedule as $data) {
+            $array_data[] = $data;
+        }
+        // return $array_data; 
+        // $scedule = $savedData->concat($insta_onboard);
+        // return view('dashboard.Activity_employer.interview_schedule', ['insta_onboard' => $scedule]);
+        return view('dashboard.Activity_employer.interview_schedule', ['insta_onboard' => $array_data]);
+    }
+    public function schedule_interview(Request $request)
+    {
+        // return $request->all();
+        $schedulr_data = new ScheduledInterview();
+        $schedulr_data->name = $request->candidate_name;
+        $schedulr_data->email = $request->candidate_email;
+        $schedulr_data->current_location = $request->candidate_location;
+        $schedulr_data->current_title = $request->current_title;
+        $schedulr_data->experience_year = $request->experience_year;
+        $schedulr_data->availability_date = $request->availability_date;
+        $schedulr_data->availability_time_from = $request->availability_time_from;
+        $schedulr_data->availability_time_to = $request->availability_time_to;
+        $schedulr_data->Meeting_link = $request->Meeting_link;
+        $schedulr_data->interviewr = $request->interviewer;
+        $schedulr_data->interview_co_ordinator = $request->interview_co_ordinator;
+        $schedulr_data->annual_salary = $request->annual_salary;
+        $schedulr_data->availability = $request->availability;
+        $schedulr_data->notice_period = $request->notice_period;
+        $schedulr_data->contact_details = $request->contact_details;
+        $schedulr_data->highest_qualification = $request->highest_qualification;
+        $schedulr_data->save();
+        return redirect()->back()->with('message', ' Meeting link  hasbeen Updated !');
     }
 
     public function job_status(Request $request)
     {
-        return view('dashboard.Activity_employer.job_status');
+        $job_status = ScheduledInterview::all();
+        return view('dashboard.Activity_employer.job_status', ['job_statuses' => $job_status]);
+    }
+
+    public function status_update(Request $request)
+    {
+
+        // return $request->all();
+        $status_update = ScheduledInterview::find($request->applicant_id);
+        $status_update->status = $request->status;
+        $status_update->save();
+        return redirect()->back()->with('message', ' Status  hasbeen Updated!');
     }
 
     public function job_history(Request $request)
@@ -341,7 +422,40 @@ class profileController extends Controller
     }
     public function Hire(Request $request)
     {
-        return view('dashboard.Activity_employer.Hire');
+        $Hired_applicants = ScheduledInterview::where('status', 'hired')->get();
+        // return 
+        return view('dashboard.Activity_employer.Hire', ['Hired_applicants' => $Hired_applicants]);
+    }
+    //Talent
+    public function Employee_activity(Request $request)
+    {
+        return view('dashboard.Activity_employee.activity_employee');
+    }
+    public function Employee_Resume(Request $request)
+    {   
+        return $request->all();
+        //return view('dashboard.Activity_employee.activity_employee');
+    }
+    public function emp_favorates(Request $request)
+    {
+        return view('dashboard.Activity_employee.favourite');
+    }
+    public function Applied_jobs(Request $request)
+    {
+        return view('dashboard.Activity_employee.Appliedjobs');
     }
 
+    public function schedule_interview_calander(Request $request)
+    {
+        return view('dashboard.Activity_employee.intervieweschedule');
+    }
+
+    public function employee_offers(Request $request)
+    {
+        return view('dashboard.Activity_employee.offers');
+    }
+    public function employee_History(Request $request)
+    {
+        return view('dashboard.Activity_employee.History');
+    }
 }

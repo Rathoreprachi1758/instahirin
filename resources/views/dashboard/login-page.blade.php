@@ -68,7 +68,7 @@
                     <div class="container-xxl container-xl container-lg container-md">
                         <div class="auth_screens_detail">
                             {{-- @include('errors.errors') --}}
-                            <form action="{{ url('/dashboard') }}" method="POST" enctype="multipart/form-data">
+                            <form action="{{ route('logino') }}" method="POST" enctype="multipart/form-data">
                                 @csrf
                                 <div class="row" style="margin-top: -65px">
                                     <div class="col-xxl-6 col-xl-6 col-lg-6 col-md-7 m-auto">

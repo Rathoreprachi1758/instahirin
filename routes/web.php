@@ -25,49 +25,73 @@ Route::get('sitemap.xml', function () {
 Route::get('/get-sign-Up', [Logincontroller::class, 'index'])->name('signin');
 Route::Post('signin', [Logincontroller::class, 'store'])->name('submit.signup');
 Route::get('/loginpage', [LoginController::class, 'login'])->name('loginpage');
-// Route::middleware(['middleware' =>'auth.check'])->group(function () {
-Route::post('dashboard', [LoginController::class, 'authenticate'])->name('login');
-Route::get('dashboard-return', function () {
-    return view('dashboard.dashboard');
-});
-Route::get('logout', [LoginController::class, 'logout']);
-//profile
-Route::get('profile', [ProfileController::class, 'index']);
-// Route::get('edit-contact/{id}', [ProfileController::class, 'edituserinfo'])->name('edit.contact');
-Route::patch('edit-contact/{id}', [ProfileController::class, 'edituserinfo'])->name('edit.contact');
-Route::patch('edit-nationality/{id}', [ProfileController::class, 'editnation'])->name('edit.nation');
-Route::post('change-password', [Logincontroller::class, 'changePasswordSave']);
+// Route::post('login', [LoginController::class, 'authenticate'])->name('login');
+Route::post('dashboard', [LoginController::class, 'authenticate'])->name('logino');
+//Route::get('profile', [ProfileController::class, 'index']);
+Route::middleware(['middleware' => 'auth.check'])->group(function () {
+    // Route::group(['middleware' => ['auth']], function (){
 
-Route::get('kyc-info', [profileController::class, 'user_info']);
-Route::Post('kyc-submit', [profileController::class, 'kyc_submit'])->name('kyc.submit');
-Route::get('credit-request', [profileController::class, 'creditrequest']);
-Route::post('credit-request-submit', [profileController::class, 'creditrequest_submit'])->name('creadit.request');
-//Activity
-Route::get('Employer-activity', [profileController::class, 'Employer_activity']);
-// Route::post('/insta-hirin-requirements', [ContentController::class, 'instaHirinRequirements'])->name('instaHirinRequirements');
-Route::post('/job-posting-activity', [profileController::class, 'post_job'])->name('post_a_job');
-Route::get('My-job-activity', [profileController::class, 'my_job_activity']);
-Route::get('My-job-Applicants-activity', [profileController::class, 'my_job_Applicants']);
-Route::get('job-talents-activity', [profileController::class, 'job_talents']);
-Route::get('Instahirin-activity', [profileController::class, 'Instahirin_activity']);
-Route::get('History', [profileController::class, 'job_history']);
-Route::get('Job-Hire', [profileController::class, 'Hire']);
-Route::get('Job-status', [profileController::class, 'job_status']);
-Route::get('employment-contract-form', function () {
-    return view('dashboard.activity_employer.Employment_contract_form');
-});
-Route::get('Interview-schedule', [profileController::class, 'Interviewschedule']);
-//emp
-// Route::get('activity-employee-talent' [profileController::class, 'Employer_activity']);
-// {
-//    return view('dashboard.activity_employer');
+    // Route::group(['prefix' => 'admin'], function () {
+//     Route::get('Hii',function(){
+//         return 'Hii';
+//     });
 // });
-// });
+    Route::get('dashboard', function(){
+        return view('dashboard.dashboard');
+    });
+    Route::get('dashboard-return', function () {
+        return view('dashboard.dashboard');
+    });
+    Route::get('logout', [LoginController::class, 'logout']);
+    //profile
+    Route::get('profile', [ProfileController::class, 'index']);
+    // Route::get('edit-contact/{id}', [ProfileController::class, 'edituserinfo'])->name('edit.contact');
+    Route::patch('edit-contact/{id}', [ProfileController::class, 'edituserinfo'])->name('edit.contact');
+    Route::patch('edit-nationality/{id}', [ProfileController::class, 'editnation'])->name('edit.nation');
+    Route::post('change-password', [Logincontroller::class, 'changePasswordSave']);
+    //
+    Route::get('reset-password', [LoginController::class, 'resetpswd']);
+    Route::post('password-reset', [Logincontroller::class, 'resetpassword']);
+    Route::get('forgot-password', [LoginController::class, 'forgotpassword']);
 
-Route::get('reset-password', [LoginController::class, 'resetpswd']);
-Route::post('password-reset', [Logincontroller::class, 'resetpassword']);
-Route::get('forgot-password', [LoginController::class, 'forgotpassword']);
 
+    Route::get('kyc-info', [profileController::class, 'user_info']);
+    Route::Post('kyc-submit', [profileController::class, 'kyc_submit'])->name('kyc.submit');
+    Route::get('credit-request', [profileController::class, 'creditrequest']);
+    Route::post('credit-request-submit', [profileController::class, 'creditrequest_submit'])->name('creadit.request');
+    //Activity
+    Route::get('Employer-activity', [profileController::class, 'Employer_activity']);
+    // Route::post('/insta-hirin-requirements', [ContentController::class, 'instaHirinRequirements'])->name('instaHirinRequirements');
+    Route::post('/job-posting-activity', [profileController::class, 'post_job'])->name('post_a_job');
+    Route::get('My-job-activity', [profileController::class, 'my_job_activity']);
+    Route::get('My-job-Applicants-activity', [profileController::class, 'my_job_Applicants']);
+    Route::get('job-talents-activity', [profileController::class, 'job_talents']);
+    Route::get('Instahirin-activity', [profileController::class, 'Instahirin_activity']);
+    Route::get('History', [profileController::class, 'job_history']);
+    Route::get('Job-Hire', [profileController::class, 'Hire']);
+    Route::get('Job-status', [profileController::class, 'job_status']);
+    Route::Post('status-update', [profileController::class, 'status_update']);
+    Route::get('employment-contract-form', function () {
+        return view('dashboard.activity_employer.Employment_contract_form');
+    });
+    Route::get('Interview-schedule', [profileController::class, 'Interviewschedule']);
+    Route::post('Meeting-link', [ProfileController::class, 'schedule_interview'])->name('interview_schedule');
+    //emp
+    // Route::get('activity-employee-talent' [profileController::class, 'Employer_activity']);
+    // {
+    //    return view('dashboard.activity_employer');
+    // });
+    //activity of employees
+    Route::get('Employee-activity', [profileController::class, 'Employee_activity']);
+    Route::post('upload-resume', [ContentController::class, 'Employee_Resume'])->name('Employee.Resume.submit');
+    Route::get('/Favorites', [profileController::class, 'emp_favorates'])->name('favorites');
+    Route::get('Applied-jobs', [profileController::class, 'Applied_jobs'])->name('Applied.jobs');
+    Route::get('Interview-schedule-calander', [profileController::class, 'schedule_interview_calander'])->name('Interview.schedule.calander');
+    Route::get('offers', [profileController::class, 'employee_offers'])->name('Applied.offers');
+    Route::get('Talent-History', [profileController::class, 'employee_History'])->name('Applied.History');
+    //
+
+});
 
 Route::get('/{levelOneSlug?}/{levelTwoSlug?}/{levelThreeSlug?}/{levelFourSlug?}', 'App\Http\Controllers\ContentController@index')->name('index');
 

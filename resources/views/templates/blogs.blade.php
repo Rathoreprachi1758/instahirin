@@ -138,15 +138,6 @@
                 </div>
             </div> 
         </div> 
-
-
-
-
-
-
-
-
-
 <!-- Services provided section -->
 
 

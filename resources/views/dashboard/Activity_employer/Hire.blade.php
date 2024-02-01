@@ -1,6 +1,14 @@
 <x-header data="Hired component" />
 <link rel="stylesheet " href="{{ asset('css/css/Employer_activity_responsive.css') }} ">
 <link rel="stylesheet " href="{{ asset('css/css/Employer_activity_style.css') }} ">
+<link rel="stylesheet" href="https://cdn.datatables.net/1.11.5/css/jquery.dataTables.min.css">
+<script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
+<script src="https://cdn.datatables.net/1.11.5/js/jquery.dataTables.min.js"></script>
+<script>
+    $(document).ready(function() {
+        $('#Hired').DataTable();
+    });
+</script>
 <div class="fr-section" style="margin-top: -72px">
     <div class="fr-section_detail">
         <div class="dashboard_innerPages">
@@ -36,7 +44,7 @@
                     <div class="row">
                         <div class="col-xxl-10 col-xl-11s col-lg-12 col-md-12">
                             <div class="activityTable_data">
-                                <table class="table table-striped">
+                                <table class="table table-striped" id="Hired">
                                     <thead>
                                         <tr>
                                             <th>
@@ -66,49 +74,51 @@
                                         </tr>
                                     </thead>
                                     <tbody>
+                                        @foreach($Hired_applicants as $applicants)
                                         <tr>
                                             <td>
                                                 <div class="tabletext">
-                                                    <p>1</p>
+                                                    <p>{{$applicants->id}}</p>
                                                 </div>
                                             </td>
                                             <td>
                                                 <div class="tabletext">
-                                                    <p>Rajesh Kumar</p>
+                                                    <p>{{$applicants->name}}</p>
                                                 </div>
                                             </td>
                                             <td>
                                                 <div class="tabletext">
-                                                    <p>Python Developer</p>
+                                                    <p>{{$applicants->current_title}}</p>
                                                 </div>
                                             </td>
                                             <td>
                                                 <div class="tabletext">
-                                                    <p>+91 9612937401</p>
+                                                    <p>{{$applicants->contact_details}}</p>
                                                 </div>
                                             </td>
                                             <td>
                                                 <div class="tabletext">
-                                                    <p>Letwizard Technologies</p>
+                                                    <p>-</p>
                                                 </div>
                                             </td>
                                             <td>
                                                 <div class="tabletext">
-                                                    <p>hr@letwizard.com</p>
+                                                    <p>-</p>
                                                 </div>
                                             </td>
 
                                             <td>
                                                 <div class="tabletext">
-                                                    <p>Dd/mm/yyyy</p>
+                                                    <p>-</p>
                                                 </div>
                                             </td>
                                             <td>
                                                 <div class="tabletext">
-                                                    <p>Not Started</p>
+                                                    <p>-</p>
                                                 </div>
                                             </td>
                                         </tr>
+                                        @endforeach
                                     </tbody>
                                 </table>
                             </div>

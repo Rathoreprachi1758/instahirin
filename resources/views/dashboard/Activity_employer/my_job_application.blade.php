@@ -5,8 +5,8 @@
 <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
 <script src="https://cdn.datatables.net/1.11.5/js/jquery.dataTables.min.js"></script>
 <script>
-   $(document).ready(function() {
-        $('#my-job-activity').DataTable();
+    $(document).ready(function() {
+        $('#myjob_activity').DataTable();
     });
 </script>
 <div class="fr-section" style="margin-top: -72px">
@@ -42,7 +42,7 @@
                 <div class="custom_tabs_detail activityTabs actTabSetting">
                     <div class="custom_tabs_data" style="display: block" id="tab3">
                         <div class="activityTable_data">
-                            <table class="table table-striped" id="my-job-activity">
+                            {{-- <table class="table table-striped" id="myjob_activity">
                                 <thead>
                                     <tr>
                                         <th>Id</th>
@@ -76,204 +76,161 @@
                                             <td>{{ $my_applicants->availability }}</td>
                                             <td>{{ $my_applicants->availability_date }}</td>
                                             <td colspan="2">{{ $my_applicants->availability_time_from }} to {{ $my_applicants->availability_time_to }}</td>
-                                            <td colspan="3">{{ $my_applicants->interview_schedule_date }} from {{ $my_applicants->interview_schedule_time_from }} to {{ $my_applicants->interview_schedule_time_to }}</td>
+                                            <td colspan="3">-</td>
                                             <td>⋮</td>
                                         </tr>
                                     @endforeach
                                 </tbody>
-                            </table>
-                            {{-- <table class="table table-striped" id="job_activity">
+                            </table> --}}
+                            <table class="table table-striped" id="myjob_activity">
                                 <thead>
                                     <tr>
-                                        <th><h6>Id</h6></th>
-                                        <th><h6>Name</h6></th>
-                                        <th><h6>Email Address</h6></th>
-                                        <th style="width: 100px;"><h6>Contact Details</h6></th>
-                                        <th><h6>Location</h6></th>
-                                        <th><h6>Current Title</h6></th>
-                                        <th colspan="2"><h6>Work Since</h6></th>
-                                        <th><h6>Qualification</h6></th>
-                                        <th><h6>Notice Period</h6></th>
-                                        <th><h6>Availability</h6></th>
-                                        <th><h6>Date</h6></th>
-                                        <th colspan="2"><h6>Time</h6></th>
-                                        <th colspan="3"><h6>Schedule Interview</h6></th>
-                                        <th><h6>Action</h6></th>
-                                    </tr>
-                                    <tr>
-                                        <th></th>
-                                        <th></th>
-                                        <th></th>
-                                        <th></th>
-                                        <th></th>
-                                        <th></th>
-                                        <th><h6>From</h6></th>
-                                        <th><h6>To</h6></th>
-                                        <th></th>
-                                        <th></th>
-                                        <th></th>
-                                        <th></th>
-                                        <th><h6>From</h6></th>
-                                        <th><h6>To</h6></th>
-                                        <th><h6>Date</h6></th>
-                                        <th><h6>From</h6></th>
-                                        <th><h6>To</h6></th>
-                                        <th></th>
+                                        <th>
+                                            <h6>Id</h6>
+                                        </th>
+                                        <th>
+                                            <h6>Name</h6>
+                                        </th>
+                                        <th>
+                                            <h6>Email Address</h6>
+                                        </th>
+                                        <th style="width: 100px !important;">
+                                            <h6>Contact Details</h6>
+                                        </th>
+                                        <th>
+                                            <h6>Current Title</h6>
+                                        </th>
+                                        <th>
+                                            <h6>Work Since</h6>
+                                        </th>
+                                        <th>
+                                            <h6>Qualification</h6>
+                                        </th>
+                                        <th>
+                                            <h6>Notice Period</h6>
+                                        </th>
+                                        <th>
+                                            <h6>Annual Salary Range</h6>
+                                        </th>
+                                        <th>
+                                            <h6>Date</h6>
+                                        </th>
+                                        <th>
+                                            <h6>Time</h6>
+                                        </th>
+                                        <th>
+                                            <h6>Schedule Interview</h6>
+                                        </th>
+                                        <th>
+                                            <h6>Action</h6>
+                                        </th>
                                     </tr>
                                 </thead>
-                                
                                 @foreach ($results as $my_applicants)
-                                    <tbody>
-                                            <tr>
-                                                <td>
-                                                    <div class="tabletext">
-                                                        <p>{{ $my_applicants->id }}</p>
-                                                    </div>
-                                                </td>
-                                                <td>
-                                                    <div class="tabletext">
-                                                        <p>{{ $my_applicants->name }}</p>
-                                                    </div>
-                                                </td>
-                                                <td>
-                                                    <div class="tabletext">
-                                                        <p>{{ $my_applicants->email }}</p>
-                                                    </div>
-                                                </td>
-                                                <td>
-                                                    <div class="tabletext">
-                                                        <p>{{ $my_applicants->contact_details }}</p>
-                                                    </div>
-                                                </td>
-                                                <td>
-                                                    <div class="tabletext">
-                                                        <p>{{ $my_applicants->current_location }}</p>
-                                                    </div>
-                                                </td>
-                                                <td>
-                                                    <div class="tabletext">
-                                                        <p>{{ $my_applicants->current_title }}</p>
-                                                    </div>
-                                                </td>
-                                                <td width="120">
-                                                    <div class="tabletext">
-                                                        <p>{{ $my_applicants->working_since_date }}</p>
-                                                    </div>
-                                                </td>
-                                                <td width="60">
-                                                    <div class="tabletext">
-                                                        <p>{{ $my_applicants->working_since_date2 }}</p>
-                                                    </div>
-                                                </td>
-                                                <td>
-                                                    <div class="tabletext">
-                                                        <p>{{ $my_applicants->highest_qualification }}</p>
-                                                    </div>
-                                                </td>
-                                                <td>
-                                                    <div class="tabletext">
-                                                        <p>{{ $my_applicants->notice_period }}</p>
-                                                    </div>
-                                                </td>
-                                                <td>
-                                                    <div class="tabletext">
-                                                        <p>{{ $my_applicants->availability }}</p>
-                                                    </div>
-                                                </td>
-                                                <td>
-                                                    <div class="tabletext">
-                                                        <p>{{ $my_applicants->availability_date }}</p>
-                                                    </div>
-                                                </td>
-                                                <td width="60">
-                                                    <div class="tabletext">
-                                                        <p>{{ $my_applicants->availability_time_from }}</p>
-                                                    </div>
-                                                </td>
-                                                <td width="60">
-                                                    <div class="tabletext">
-                                                        <p>{{ $my_applicants->availability_time_to }}</p>
-                                                    </div>
-                                                </td>
-                                                <td width="60">
-                                                    <div class="tabletext">
-                                                        <p>{{ $my_applicants->availability_time_from }}</p>
-                                                    </div>
-                                                </td>
-                                                <td width="60">
-                                                    <div class="tabletext">
-                                                        <p>{{ $my_applicants->availability_time_to }}</p>
-                                                    </div>
-                                                </td>
-                                                <td width="60">
-                                                    <div class="tabletext">
-                                                        <p>{{ $my_applicants->interview_schedule_date }}</p>
-                                                    </div>
-                                                </td>
-                                                <td width="60">
-                                                    <div class="tabletext">
-                                                        <p>{{ $my_applicants->interview_schedule_time_from }}</p>
-                                                    </div>
-                                                </td>
-                                                <td width="60">
-                                                    <div class="tabletext">
-                                                        <p>{{ $my_applicants->interview_schedule_time_to }}</p>
-                                                    </div>
-                                                </td>
-                                                <td>
-                                                    <div class="tabletext">
-                                                        <p>⋮</p>
-                                                    </div>
-                                                </td>
-                                            </tr>
-                                    </tbody>
-                                    
-                                @endforeach
-                            </table> --}}
-                            {{-- <table class="table table-striped table-bordered" id="job_activity">
-                                <thead>
-                                    <tr style="width:200px !important">
-                                        <th>ID</th>
-                                        <th>Name</th>
-                                        <th>Email Address</th>
-                                        <th >Contact Details</th>
-                                        <th>Location</th>
-                                        <th>Current Title</th>
-                                        <th>Work Since</th>
-                                        <th>Qualification</th>
-                                        <th>Notice Period</th>
-                                        <th>Availability</th>
-                                        <th>Date</th>
-                                        <th>Time</th>
-                                        <th>Schedule Interview</th>
-                                        <th>Action</th>
+                                    <tr>
+                                        <td>
+                                            <div class="tabletext">
+                                                <p>{{ $my_applicants->id }}</p>
+                                            </div>
+                                        </td>
+                                        <td>
+                                            <div class="tabletext">
+                                                <p>{{ $my_applicants->name }}</p>
+                                            </div>
+                                        </td>
+                                        <td>
+                                            <div class="tabletext">
+                                                <p>{{ $my_applicants->email }}</p>
+                                            </div>
+                                        </td>
+                                        <td>
+                                            <div class="tabletext">
+                                                {{-- <p>{{ $job->key_skills }}</p> --}}
+                                                <p>{{ $my_applicants->contact_details }}</p>
+                                            </div>
+                                        </td>
+                                        <td>
+                                            <div class="tabletext">
+                                                <p>{{ $my_applicants->current_title }}</p>
+                                            </div>
+                                        </td>
+                                        {{-- <td>
+                                            <div class="tabletext">
+                                                <p>{{ $my_applicants->current_location }}</p>
+                                            </div>
+                                        </td> --}}
+                                        <td>
+                                            <div class="tabletext">
+                                                <p>{{ $my_applicants->working_since_date }} to
+                                                    {{ $my_applicants->working_since_date2 }}</p>
+                                            </div>
+                                        </td>
+                                        <td>
+                                            <div class="tabletext">
+                                                <p>{{ $my_applicants->highest_qualification }}</p>
+                                            </div>
+                                        </td>
+                                        <td>
+                                            <div class="tabletext">
+                                                <p>{{ $my_applicants->notice_period }}</p>
+                                            </div>
+                                        </td>
+                                        <td>
+                                            <div class="tabletext">
+                                                <p>{{ $my_applicants->annual_salary }} {{ $my_applicants->annual_salary_currency }}</p>
+                                            </div>
+                                        </td>
+                                        <td>
+                                            <div class="tabletext">
+                                                <p>-</p>
+                                            </div>
+                                        </td>
+                                        <td>
+                                            <div class="tabletext">
+                                                <p>-</p>
+                                            </div>
+                                        </td>
+                                        <td width="180">
+                                            <table>
+                                                <tbody>
+                                                    <tr>
+                                                        <td width="80">
+                                                            <div class="tabletext">
+                                                                <p>{{ $my_applicants->availability_date }}</p>
+                                                            </div>
+                                                        </td>
+                                                        <td width="50">
+                                                            <div class="tabletext">
+                                                                <p>{{ $my_applicants->availability_time_from }}to</p>
+                                                            </div>
+                                                        </td>
+                                                        <td width="50">
+                                                            <div class="tabletext">
+                                                                <p>{{ $my_applicants->availability_time_to }}</p>
+                                                            </div>
+                                                        </td>
+                                                    </tr>
+                                                </tbody>
+                                            </table>
+                                        </td>
+                                        <td>
+                                            <div class="tabletext">
+                                                <p>⋮</p>
+                                            </div>
+                                        </td>
+                                        {{-- <td>
+                                            <div class="tabletext_btn">
+                                                <a href="{{ asset('storage/' . $job->document) }}"
+                                                    class="documentBtn">Document</a>
+                                                <a href="javascript:void(0);" class="previewBtn"
+                                                    onclick="showPDFPreview('{{ asset('storage/' . $job->document) }}')"
+                                                    class="viewBtn"><i class="fa fa-eye" style="color:black"
+                                                        aria-hidden="true"></i></a>
+                                            </div>
+                                        </td> --}}
                                     </tr>
-                                </thead>
-                                <tbody>
-                                    @foreach ($myjob_applicant as $my_applicants)
-                                        <tr>
-                                            <td>{{ $my_applicants->id }}</td>
-                                            <td>{{ $my_applicants->name }}</td>
-                                            <td>{{ $my_applicants->email }}</td>
-                                            <td>{{ $my_applicants->contact_details }}</td>
-                                            <td>{{ $my_applicants->current_location }}</td>
-                                            <td>{{ $my_applicants->current_title }}</td>
-                                            <td>{{ $my_applicants->working_since_date }} to
-                                                {{ $my_applicants->working_since_date2 }}</td>
-                                            <td>{{ $my_applicants->highest_qualification }}</td>
-                                            <td>{{ $my_applicants->notice_period }}</td>
-                                            <td>{{ $my_applicants->availability }}</td>
-                                            <td>{{ $my_applicants->availability_date }}</td>
-                                            <td>{{ $my_applicants->availability_time_from }} to
-                                                {{ $my_applicants->availability_time_to }}</td>
-                                            <td>{{ $my_applicants->interview_date }}
-                                                {{ $my_applicants->interview_time_from }} to
-                                                {{ $my_applicants->interview_time_to }}</td>
-                                            <td>⋮</td>
-                                        </tr>
-                                    @endforeach
-                                </tbody>
-                            </table> --}}
+                                @endforeach
+                            </table>
                         </div>
                     </div>
                 </div>

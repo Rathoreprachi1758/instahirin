@@ -34,7 +34,6 @@
                                                 alt="#" ></span>
                                     </div>
                                 </div>
-
                                 <div class="db-blocksFooter">
                                     <a href="/profile" class="gotoPage">
                                         <span><i class="fa fa-angle-right" aria-hidden="true"></i></span>

@@ -112,7 +112,9 @@ class InstaHirinRequirement extends Resource
             Select::make('Salary Currency Hourly', 'salary_currency_hourly')->options(['USD' => 'USD', 'INR' => 'INR'])->displayUsingLabels()->filterable()->hideFromIndex(),
             Text::make('Minimum Salary Hourly', 'min_salary_hourly')->hideFromIndex(),
             Text::make('Maximum Salary Hourly', 'max_salary_hourly')->hideFromIndex(),
-
+            //  //to test
+            // Text::make('user_id', 'user_id')->hideFromIndex(),
+             //
             Select::make('Salary Period', 'salary_period')
                 ->options([
                     'Daily' => 'Daily',

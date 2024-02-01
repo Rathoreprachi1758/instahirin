@@ -43,7 +43,7 @@ use App\Models\InstaHirinOnboardDocument;
 
 class ContentController extends Controller
 {
-    public function index($levelOne = null, $levelTwo = null, $levelThree = null, $levelFour = null,)
+    public function index($levelOne = null, $levelTwo = null, $levelThree = null, $levelFour = null, )
     {
 
         $slugs = array_filter(func_get_args());
@@ -256,6 +256,7 @@ class ContentController extends Controller
                 'source' => '',
                 'template' => '',
                 'expert' => '',
+                // 'user_id'=>'required',
             ]);
             // dd($validatedData);
             // Create a new instance of the Hire Request model
@@ -270,6 +271,7 @@ class ContentController extends Controller
             $formData->message = $validatedData['message'];
             $formData->address = $validatedData['address'];
             $formData->from_date = $validatedData['from_date'];
+            $formData->user_id = Auth::id();
             //$formData->to_date = $validatedData['to_date'];
             //$formData->from_time = $validatedData['from_time'];
             //$formData->to_time = $validatedData['to_time'];
@@ -501,8 +503,8 @@ class ContentController extends Controller
             'work_mode' => 'required',
             'project_description' => 'required',
             'key_skills' => 'required|json',
-            'min_experience' => '',
-            'max_experience' => '',
+            'min_experience' => 'required|integer',
+            'max_experience' => 'required|integer|gt:min_experience',
             'employment_type' => '',
             // changes
             'salary_currency_monthly_project' => '',
@@ -563,6 +565,7 @@ class ContentController extends Controller
         $formData->contact_no = $validatedData['contact_no'];
         $formData->company_details = $validatedData['company_details'];
         $formData->company_address = $validatedData['company_address'];
+        $formData->user_id = Auth::id();
 
         // Process and store the uploaded file
         if ($request->hasFile('document')) {
@@ -579,7 +582,7 @@ class ContentController extends Controller
         // Return a response indicating success
         return response()->json(['message' => 'Form submitted successfully']);
     }
-    
+
     // public function instaHirinOnboard(Request $request)
     // {
     //     // Validate the request data, including the uploaded file
@@ -661,7 +664,7 @@ class ContentController extends Controller
     {
         // Validate the request data, including the uploaded file
         // Log::info('Request data:', $request->all());
-        // dd('Hii9');
+        // dd($request->all());
         $validatedData = $request->validate([
             'name' => 'required',
             'contact_details' => 'required',
@@ -697,7 +700,7 @@ class ContentController extends Controller
             // 'document' => 'required|array',
             // 'document.*' => 'file|mimes:pdf,doc,docx|max:5120'
         ]);
-        
+
         // dd(json_decode($validatedData['key_skills']));
         DB::beginTransaction();
 
@@ -737,7 +740,7 @@ class ContentController extends Controller
         $formData->hourly_rate = isset($validatedData['hourly_rate']) ? $validatedData['hourly_rate'] : null;
         $formData->project_rate = isset($validatedData['project_rate']) ? $validatedData['project_rate'] : null;
         $formData->resume_headline = $validatedData['resume_headline'];
-        $formData->user_id= Auth::id();
+        $formData->user_id = Auth::id();
         $formData->save();
 
         // if ($request->hasFile('document')) {
@@ -983,7 +986,7 @@ class ContentController extends Controller
     {
         // Validate the request data, including the uploaded file
         // Log::info('Request data:', $request->all());
-        // dd('Hii9');
+        // dd($request->all());
         // dd($request->jobid);
         $validatedData = $request->validate([
             'name' => 'required',
@@ -1052,9 +1055,19 @@ class ContentController extends Controller
             $file->storeAs('', $filename, 'public');
             $formData->document = $filename;
         }
-        // dd($request->all());
-        $formData->save();
+        $availabilityDate = implode(', ', $request->availability_date);
+        $availabilityTimeFrom = implode(', ', $request->availability_time_from);
+        $availabilityTimeTo = implode(', ', $request->availability_time_to);
+        $availabilityTimeZone = implode(', ', $request->availability_time_zone);
 
+        // Fill the model with the converted values
+        $formData->fill([
+            'availability_date' => $availabilityDate,
+            'availability_time_from' => $availabilityTimeFrom,
+            'availability_time_to' => $availabilityTimeTo,
+            'availability_time_zone' => $availabilityTimeZone,
+        ]);
+        $formData->save();
         // $formData->keySkills()->sync($request->input('key_skills'));
         $formData->keySkills()->sync(json_decode($request->input('key_skills')));
         $formData->expertIn()->sync(json_decode($request->input('expert_in')));

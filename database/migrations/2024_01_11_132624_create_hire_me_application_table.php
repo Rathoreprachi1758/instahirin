@@ -38,6 +38,10 @@ return new class extends Migration
             $table->string('document')->nullable();
             $table->string('notice_period')->nullable();
             $table->string('status')->nullable();
+            $table->string('availability_date')->nullable();
+            $table->string('availability_time_from')->nullable();
+            $table->string('availability_time_to')->nullable();
+            $table->string('availability_time_zone')->nullable();
             $table->timestamps();
         });
     }

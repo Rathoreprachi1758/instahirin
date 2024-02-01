@@ -1,60 +1,50 @@
 <x-header data="History component" />
-<link rel="stylesheet " href="{{ asset('css/css/Employer_activity_responsive.css') }} ">
-<link rel="stylesheet " href="{{ asset('css/css/Employer_activity_style.css') }} ">
-<link rel="stylesheet" href="https://cdn.datatables.net/1.11.5/css/jquery.dataTables.min.css">
-<script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
-<script src="https://cdn.datatables.net/1.11.5/js/jquery.dataTables.min.js"></script>
-<script>
-    $(document).ready(function() {
-        $('#History').DataTable();
-    });
-</script>
+<link rel="stylesheet" href="{{ asset('css/css/Employer_activity_style.css') }}">
+<link rel="stylesheet" href="{{ asset('css/css/Employer_activity_style.css') }}">
 <div class="fr-section" style="margin-top: -72px">
     <div class="fr-section_detail">
         <div class="dashboard_innerPages">
             <div class="custom_tabs_section">
                 <div class="custom_tittle descriptionTxt">
-                    <h4>Employer / Company</h4>
+                    <h4>Employee / Talent</h4>
+
                     <p>
-                        <strong>Description:</strong> Keep track of all your
-                        activities including job postings and job talents.
-                        Details of shortlisted candidates will be scheduled
-                        <br />
-                        for interview. As well as track the status of Hired
-                        details.
+                        <strong>Description:</strong> Monitor talent profile
+                        details including jobs applied, Offers, and favourites.
+                        Eyeball on details of the interview scheduled under
+                        <br />the Interview Scheduled Calander, attributes of
+                        all the job activities performed will be viewed under
+                        the History tab..
                     </p>
                 </div>
                 <div class="custom_tabs">
                     <ul>
-                        <li><a href="/Employer-activity">Post a Job</a></li>
-                        <li><a href="/My-job-activity">My Job</a></li>
-                        <li><a href="/My-job-Applicants-activity">My Job Applicants</a></li>
-                        {{-- <li><a href="/job-talents-activity">Job Talents</a></li> --}}
-                        <li><a href="/Instahirin-activity">InstaHirin Talents</a></li>
-                        <li><a href="/Interview-schedule">Interview Scheduled</a></li>
-                        <li><a href="/Job-status">Job Status</a></li>
-                        <li><a href="/employment-contract-form">Employment Contract</a></li>
-                        <li><a href="/Job-Hire">Hired</a></li>
-                        <li><a href="/History " class="active">History</a></li>
+                        <li><a href="{{ url('Employee-activity') }}">My Resume</a></li>
+                        <li><a href="{{ route('favorites') }}">Favourites</a></li>
+                        <li><a href="{{ route('Applied.jobs') }}">Applied</a></li>
+                        <li>
+                            <a href="{{ route('Interview.schedule.calander') }}">Interview Scheduled Calendar</a>
+                        </li>
+                        <li><a href="{{ route('Applied.offers') }}">Offers</a></li>
+                        <li><a href="{{ route('Applied.History') }}" class="active">History</a></li>
                     </ul>
                 </div>
                 <br>
-                <!-- tab8 data  -->
-                <div class="custom_tabs_data" style="display: block" id="tab9">
+                <div class="custom_tabs_data" style="display: block" id="tab6">
                     <div class="row">
-                        <div class="col-xxl-8 col-xl-10 col-lg-11 col-md-12">
+                        <div class="col-xxl-7 col-xl-10 col-lg-11 col-md-12">
                             <div class="activityTable_data">
-                                <table class="table table-striped" id="History">
+                                <table class="table table-striped">
                                     <thead>
                                         <tr>
                                             <th>
                                                 <h6>Id</h6>
                                             </th>
                                             <th>
-                                                <h6>Name</h6>
+                                                <h6>Position Title</h6>
                                             </th>
                                             <th>
-                                                <h6>Position Title</h6>
+                                                <h6>Company Name</h6>
                                             </th>
                                             <th>
                                                 <h6>Work Experience</h6>
@@ -71,7 +61,7 @@
                                         </tr>
                                     </thead>
                                     <tbody>
-                                        {{-- <tr>
+                                        <tr>
                                             <td>
                                                 <div class="tabletext">
                                                     <p>1</p>
@@ -79,12 +69,12 @@
                                             </td>
                                             <td>
                                                 <div class="tabletext">
-                                                    <p>Rajesh Kumar</p>
+                                                    <p>Video Editor</p>
                                                 </div>
                                             </td>
                                             <td>
                                                 <div class="tabletext">
-                                                    <p>Python Developer</p>
+                                                    <p>Bizionic Tech</p>
                                                 </div>
                                             </td>
                                             <td>
@@ -102,13 +92,12 @@
                                                     <p>Mumbai</p>
                                                 </div>
                                             </td>
-
                                             <td>
                                                 <div class="tabletext">
                                                     <p>Full Time</p>
                                                 </div>
                                             </td>
-                                        </tr> --}}
+                                        </tr>
                                     </tbody>
                                 </table>
                             </div>
@@ -118,5 +107,4 @@
             </div>
         </div>
     </div>
-</div>
 </div>

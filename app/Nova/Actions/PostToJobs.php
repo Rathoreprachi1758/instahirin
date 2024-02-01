@@ -1,7 +1,7 @@
 <?php
 
 namespace App\Nova\Actions;
-
+use Auth;
 use App\Models\Job;
 use App\Models\InstaHirinRequirement;
 use Illuminate\Bus\Queueable;
@@ -36,18 +36,20 @@ class PostToJobs extends Action
                 'min_price' => $instaRequirement->min_salary_yearly,
                 'max_price' => $instaRequirement->max_salary_yearly,
                 'salary_period' => $instaRequirement->salary_period,
-                'experience' => $instaRequirement->min_experience,
+                // 'experience' => $instaRequirement->min_experience,
+                'experience' => $instaRequirement->min_experience . ' - ' . $instaRequirement->max_experience . ' YEARS',
                 'location' => $instaRequirement->location,
                 'qualification' => $instaRequirement->education_qualification,
                 'company' => $instaRequirement->company_name,
                 'prefer_qualification' => $instaRequirement->company_address,
+                'user_id' => $instaRequirement->user_id,
             ]);
-
             // Transfer skills
             $skills = $instaRequirement->experty()->pluck('id')->toArray();
             // $skills = $instaRequirement->all();
             \Log::info('Skills:');
-            \Log::info($skills);            
+            \Log::info( $instaRequirement->user_id);  
+            \Log::info('Skills:');          
             $job->keySkills()->attach($skills);
             // dd($skills);
             \Log::channel('single')->info('Skills:', $skills);
