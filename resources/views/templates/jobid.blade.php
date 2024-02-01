@@ -81,7 +81,12 @@
 
                 <br>
                 <h4 class="pb-3"><strong>Bizionic Technologies T/C applies.</strong></h4>
-                <h5 class="texte_787878"><strong>Posted on Sep 26, 20233.</strong></h5>
+                <h5 class="texte_787878"><strong>
+                        @if ($job->posted_date)
+                        Posted on {{ $job->posted_date->format('M d, Y') }}.
+                        @endif
+                        {{-- {{ $job->posted_date->format('M d, Y') }}. --}}
+                    </strong></h5>
             </div>
 
             {{-- <jobs-component></jobs-component> --}}
