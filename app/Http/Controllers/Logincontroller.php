@@ -7,6 +7,7 @@ use GuzzleHttp\Client;
 use App\Models\User;
 use App\Models\Country;
 use Illuminate\Http\Request;
+use App\Models\Job;
 use Illuminate\Support\Facades\Http;
 use Illuminate\Validation\Rule;
 use Illuminate\Support\Facades\Mail;
@@ -73,6 +74,8 @@ class Logincontroller extends Controller
     }
     public function authenticate(Request $request)
     {
+
+        \Log::info('-------------------------attempting ogin');
         $this->validate($request, [
             'email' => [
                 'required',
@@ -93,10 +96,14 @@ class Logincontroller extends Controller
             ],
         ]);
         $credentials = $request->only('email', 'password');
-        //dd($credentials);
+        \Log::info('attempting ogin');
         if (Auth::attempt($credentials)) {
-            return view('dashboard.dashboard');
+            \Log::info('vamshi============');       
+            $request->session()->regenerate();
+            return redirect()->intended('dashboard');
+            // return view('dashboard.dashboard');
         } else {
+            \Log::info('furqan ji========');
             return redirect()->back()->with('message', 'Invalid email or password. Please try again.');
         }
     }
@@ -168,5 +175,12 @@ class Logincontroller extends Controller
     {
         return view('dashboard.reset-password');
     }
+
+    // public function open_positions(Request $request)
+    // {  
+    // //     $job_component = Job::all();
+    // //    return view('dashboard.openpositions',['job_component'=>$job_component]);
+    //    return $request->all();
+    // }
 
 }

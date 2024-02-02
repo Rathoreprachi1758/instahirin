@@ -176,7 +176,7 @@
                                             <div class="col-xxl-9 col-xl-9 col-lg-8 col-md-7">
                                                 <div class="p_userInfo_editInput">
                                                     <input type="text" name="email" class="w-100" placeholder="Enter Your Email"
-                                                        value="{{ $user->email }}">
+                                                        value="{{ $user->email }}" disabled>
                                                 </div>
                                             </div>
                                         </div>

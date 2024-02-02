@@ -101,9 +101,12 @@
                             </hire-talent-component>
 
                         </form> --}}
+                        {{-- <hire-talent-component :countries='{{$countries}}' :timezones='{{ $timezones }}'
+                            :expert-id='{{ $expert->id }}' :userId='{{auth()->user()->id}}'>
+                        </hire-talent-component> --}}
                         <hire-talent-component :countries='{{$countries}}' :timezones='{{ $timezones }}'
-                            :expert-id='{{ $expert->id }}'>
-                        </hire-talent-component>
+                        :expert-id='{{ $expert->id }}'>
+                    </hire-talent-component>
                     </div>
                 </div>
             </div>

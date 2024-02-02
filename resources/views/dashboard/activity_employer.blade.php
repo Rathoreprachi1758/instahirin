@@ -37,7 +37,7 @@
                             // Automatically hide the success message after 20 seconds
                             setTimeout(function() {
                                 document.getElementById('success-message').style.display = 'none';
-                            }, 10000);
+                            }, 3000);
                         </script>
                     </div>
                 @endif

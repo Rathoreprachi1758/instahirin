@@ -107,7 +107,9 @@
                                     </td>
                                     <td>
                                         <div class="tabletext">
-                                            <p>{{ $on_board->name }}</p>
+                                            {{-- <p>{{ $on_board->name }}</p> --}}
+                                            <p>{{ $on_board->title }}</p>
+
                                         </div>
                                     </td>
                                     <td>

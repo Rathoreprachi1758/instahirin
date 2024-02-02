@@ -1,6 +1,6 @@
 @php
-$jobId = request('jobId');
-$job = \App\Models\Job::find($jobId);
+    $jobId = request('jobId');
+    $job = \App\Models\Job::find($jobId);
 @endphp
 
 {{-- <p>Job ID: {{ $jobId }}</p> --}}
@@ -20,8 +20,8 @@ $job = \App\Models\Job::find($jobId);
                 <h5>Experience: <strong>{{ $job->experience }}</strong></h5>
                 <h5>Company: <strong>{{ $job->company }}</strong></h5>
                 <h5>Work Mode: <strong>{{ $job->work_mode }}</strong></h5>
-                <h5>CTC Range: <strong>{{ $job->ctc_currency }} {{ $job->min_price }} - {{ $job->max_price }} {{
-                        $job->salary_period }}</strong>
+                <h5>CTC Range: <strong>{{ $job->ctc_currency }} {{ $job->min_price }} - {{ $job->max_price }}
+                        {{ $job->salary_period }}</strong>
                 </h5>
                 <h5>Employment Type: <strong>{{ $job->availability }}</strong></h5>
 
@@ -44,7 +44,7 @@ $job = \App\Models\Job::find($jobId);
                 <div class="discList ml-4 pt-0 pb-3">
                     <ul>
                         @foreach ($job->skills as $skill)
-                        <li>{{ $skill->title }}</li>
+                            <li>{{ $skill->title }}</li>
                         @endforeach
                     </ul>
                 </div>

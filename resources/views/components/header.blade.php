@@ -117,11 +117,16 @@
                                                 aria-hidden="true"></i></span> Home <em class="menu_icon"><i
                                                 class="fa fa-angle-down" aria-hidden="true"></i></em></a>
                                 </li>
-                                <li>
+                                {{-- <li>
                                     <a href="/InstaHirin" ><span><i class="fa fa-user-circle-o"
                                         aria-hidden="true"></i></span> Instahirin <em class="menu_icon"><i
                                         class="fa fa-angle-down" aria-hidden="true"></i></em></a>
-                                </li>
+                                </li> --}}
+                                {{-- <li>
+                                    <a href="{{route('open-positions')}}" ><span><i class="fa fa-user-circle-o"
+                                        aria-hidden="true"></i></span>current-open-positions<em class="menu_icon"><i
+                                        class="fa fa-angle-down" aria-hidden="true"></i></em></a>
+                                </li> --}}
                                 <li><a href="/profile"><span><i class="fa fa-id-card" aria-hidden="true"></i></span>
                                         Profile
                                         <em class="menu_icon"><i class="fa fa-angle-down"
@@ -135,7 +140,7 @@
                                     </a>
                                     <ul>
                                         <li><a href="{{url('Employer-activity')}}">► Employer / Company</a></li>
-                                        <li><a href="javascript:void(0)">► Employee / Talent</a></li>
+                                        <li><a href="{{url('Employee-activity')}}">► Employee / Talent</a></li>
                                     </ul>
                                 </li>
                                 <li><a href="javascript:void(0)"><span><i class="fa fa-male"
