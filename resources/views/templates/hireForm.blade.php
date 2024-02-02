@@ -6,6 +6,7 @@
                 <p>Qualified, Trustworthy Talent, Authenticated Excellence, <strong>HIRE WITH CONFIDENCE</strong> <br>
                     Zero Cost to Meet Talent, Hire Top Talent In Minutes, and Unlock Cost Savings through Smart Hiring.
                 </p>
+                {{-- <strong style="color:black">{{ auth()->user()->id }}</strong> --}}
             </div>
         </div>
     </div>
@@ -49,6 +50,11 @@
                                     {{$experty->title}},
                                     @endforeach
                                 </p>
+                            </div>
+
+                            <div class="employee_data">
+                                <strong>CURRENT LOCATION:</strong>
+                                <p>{{$expert->location}}</p>
                             </div>
 
                             <div class="employee_data">

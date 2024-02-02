@@ -163,9 +163,9 @@ em {
 
 body {
     background: #fff;
-    color: #000;
+    color: linear-gradient(315deg, #2D3436 0%, #000000 74%);;
     font-family: "avenir_regularregular";
-    font-size: 16px;
+    font-size: 10px !important;
     transition: all 0.2s ease;
     -moz-transition: all 0.2s ease;
     -ms-transition: all 0.2s ease;
@@ -839,7 +839,7 @@ h6 {
 }
 
 .db_nav ul li a.active {
-    background-color: #000;
+    background-color: #333;
     color: #fff;
 }
 
@@ -1416,7 +1416,7 @@ h6 {
 }
 
 .descriptionTxt p {
-    font-size: 12px;
+    font-size: 14px;
 }
 
 .descriptionTxt p strong {

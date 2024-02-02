@@ -1,12 +1,16 @@
 <template>
-  <div class="blog_column aos-init aos-animate">
+  <div class="blog_column aos-init pb-0 aos-animate">
     <div class="row">
       <div v-for="blog in displayedData" :key="blog.id" class="col-lg-4 col-md-4 blgCol">
         <div class="blog_column_info">
-          <span><img :src="`/storage/${blog.image}`" :alt="blog.title" /></span>
+          <span>
+            <a @click="goToJobForm(blog.id)" class="clickable-link">
+              <img :src="`/storage/${blog.image}`" :alt="blog.title" />
+            </a>
+          </span>
 
           <h5>
-            <a href="#">{{ blog.title }}</a>
+            <a @click="goToJobForm(blog.id)" class="clickable-link"> {{ blog.title }}</a>
           </h5>
 
           <div class="blogSponsor">
@@ -23,7 +27,7 @@
         </div>
       </div>
     </div>
-    <div class="pagination">
+    <div class="pagination justify-content-center pt-5">
       <!-- :on-click="filterTeamMembers" -->
       <vue-awesome-paginate
         :total-items="totalItems"
@@ -31,8 +35,6 @@
         :max-pages-shown="pagesShown"
         v-model="currentPage"
         @page-clicked="handlePageChange"
-        prev-button-content="previous"
-        next-button-content="next"
         :container-class="'pagination-container'"
       ></vue-awesome-paginate>
     </div>
@@ -80,6 +82,10 @@
 }
 .active-page:hover {
   background-color: #2988c8;
+}
+
+.clickable-link {
+  cursor: pointer;
 }
 </style>
 
@@ -138,6 +144,15 @@ export default {
     formatPublishedDate(dateString) {
       // Use moment to format the date
       return moment(dateString).fromNow();
+    },
+
+    goToJobForm(blogId) {
+      //   const url = `/hire/developer/front-end-developement/blogId?blogId=${blogId}`;
+      //   window.location.href = url;
+      const url = `/hire/developer/front-end-developement/blogId?blogId=${blogId}`;
+      const newTab = window.open(url, "_blank");
+      newTab.focus();
+      console.log("Navigating to:", url);
     },
   },
 };

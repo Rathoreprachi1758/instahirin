@@ -31,7 +31,7 @@
 
                                     <div class="db-blocksHeadAvatar">
                                         <span><img src="{{ asset('css/images/profile_avatar.png') }}"
-                                                alt="#" /></span>
+                                                alt="#" ></span>
                                     </div>
                                 </div>
 
@@ -56,7 +56,7 @@
 
                                     <div class="db-blocksHeadAvatar">
                                         <span><img src="{{ asset('css/images/activity_avatar.png') }}"
-                                                alt="#" /></span>
+                                                alt="#"></span>
                                     </div>
                                 </div>
 
@@ -86,7 +86,7 @@
 
                                     <div class="db-blocksHeadAvatar">
                                         <span><img src="{{ asset('css/images/master_avatar.png') }}"
-                                                alt="#" /></span>
+                                                alt="#" ></span>
                                     </div>
                                 </div>
 
@@ -109,7 +109,7 @@
 
                                     <div class="db-blocksHeadAvatar">
                                         <span><img src="{{ asset('css/images/salary_avatar.png') }}"
-                                                alt="#" /></span>
+                                                alt="#" ></span>
                                     </div>
                                 </div>
 
@@ -136,7 +136,7 @@
 
                                     <div class="db-blocksHeadAvatar">
                                         <span><img src="{{ asset('css/images/timetrack_avatar.png') }}"
-                                                alt="#" /></span>
+                                                alt="#" ></span>
                                     </div>
                                 </div>
 
@@ -159,7 +159,7 @@
 
                                     <div class="db-blocksHeadAvatar">
                                         <span><img src="{{ asset('css/images/payroll_avatar.png') }}"
-                                                alt="#" /></span>
+                                                alt="#" ></span>
                                     </div>
                                 </div>
 
@@ -186,7 +186,7 @@
 
                                     <div class="db-blocksHeadAvatar">
                                         <span><img src="{{ asset('css/images/projrct_avatar.png') }}"
-                                                alt="#" /></span>
+                                                alt="#" ></span>
                                     </div>
                                 </div>
 
@@ -208,7 +208,7 @@
 
                                     <div class="db-blocksHeadAvatar">
                                         <span><img src="{{ asset('css/images/payment_avatar.png') }}"
-                                                alt="#" /></span>
+                                                alt="#" ></span>
                                     </div>
                                 </div>
 
@@ -233,7 +233,7 @@
 
                                     <div class="db-blocksHeadAvatar">
                                         <span><img src="{{ asset('css/images/document_avatar.png') }}"
-                                                alt="#" /></span>
+                                                alt="#" ></span>
                                     </div>
                                 </div>
 
@@ -255,7 +255,7 @@
 
                                     <div class="db-blocksHeadAvatar">
                                         <span><img src="{{ asset('css/images/benefit_avatar.png') }}"
-                                                alt="#" /></span>
+                                                alt="#" ></span>
                                     </div>
                                 </div>
 
@@ -280,7 +280,7 @@
 
                                     <div class="db-blocksHeadAvatar">
                                         <span><img src="{{ asset('css/images/expences_avatar.png') }}"
-                                                alt="#" /></span>
+                                                alt="#" ></span>
                                     </div>
                                 </div>
 
@@ -303,7 +303,7 @@
 
                                     <div class="db-blocksHeadAvatar">
                                         <span><img src="{{ asset('css/images/request_avatar.png') }}"
-                                                alt="#" /></span>
+                                                alt="#"></span>
                                     </div>
                                 </div>
 
@@ -329,7 +329,7 @@
 
                                     <div class="db-blocksHeadAvatar">
                                         <span><img src="{{ asset('css/images/inbox_avatar.png') }}"
-                                                alt="#" /></span>
+                                                alt="#" ></span>
                                     </div>
                                 </div>
 
@@ -352,7 +352,7 @@
 
                                     <div class="db-blocksHeadAvatar">
                                         <span><img src="{{ asset('css/images/db_avatar.png') }}"
-                                                alt="#" /></span>
+                                                alt="#" ></span>
                                     </div>
                                 </div>
 

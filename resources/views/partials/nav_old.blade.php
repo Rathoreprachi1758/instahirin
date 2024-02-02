@@ -23,7 +23,7 @@
 
                                         <h6>
                                             <span><img src="/bizionic/images/{{ $cmenu->data->menu_icon }}"
-                                                    alt="{{ $cmenu->data->menu_icon }}" /></span>
+                                                    alt="{{ $cmenu->data->menu_icon }}" ></span>
                                             {{ $cmenu->name }}
                                             <em class="chevRowDown"><i class="fa fa-angle-down"
                                                     aria-hidden="true"></i></em>

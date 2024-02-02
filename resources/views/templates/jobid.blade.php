@@ -14,6 +14,7 @@ $job = \App\Models\Job::find($jobId);
         <div class="policy_pages_detail">
             <div class="policy_pages_content">
                 <h1>About the Job:</h1>
+                {{-- <p>{{$job->id}}</p> --}}
                 <h5 class="pb-2 pt-2">Job Title: <strong>{{ $job->title }}</strong></h5>
                 <h5>Location: <strong>{{ $job->location }}</strong></h5>
                 <h5>Experience: <strong>{{ $job->experience }}</strong></h5>
@@ -80,11 +81,16 @@ $job = \App\Models\Job::find($jobId);
 
                 <br>
                 <h4 class="pb-3"><strong>Bizionic Technologies T/C applies.</strong></h4>
-                <h5 class="texte_787878"><strong>Posted on Sep 26, 20233.</strong></h5>
+                <h5 class="texte_787878"><strong>
+                        @if ($job->posted_date)
+                        Posted on {{ $job->posted_date->format('M d, Y') }}.
+                        @endif
+                        {{-- {{ $job->posted_date->format('M d, Y') }}. --}}
+                    </strong></h5>
             </div>
 
             {{-- <jobs-component></jobs-component> --}}
-            <hire-me-application></hire-me-application>
+            <hire-me-application jobid="{{$job->id}}"></hire-me-application>
 
             {{-- <div class="applyNow_text">
                 <div class="applyNow_textInfo">

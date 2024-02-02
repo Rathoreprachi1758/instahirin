@@ -1,32 +1,28 @@
 {{-- <x-header data="forgot page component" /> --}}
+
 <head>
-    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="format-detection" content="telephone=no">
     <title>Bizionic</title>
     <!-- bootstrap -->
     <link rel="stylesheet" href="css/bootstrap.min.css">
     <!-- custom css -->
-    <link rel="stylesheet " href="css/style.css ">
-    <link rel="stylesheet " href="css/responsive.css ">
-
-
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/responsive.css">
     <!-- aos animation  -->
-    <link rel="stylesheet " href="css/aos.css">
+    <link rel="stylesheet" href="css/aos.css">
     <!-- font awesome-->
-    <link rel="stylesheet " href="css/font-awesome.min.css">
-
+    <link rel="stylesheet" href="css/font-awesome.min.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-
     <script src="js/jquery-3.4.1.min.js"></script>
 
     <!-- aos animation js  -->
     <script src="js/aos.js"></script>
-    <link rel="stylesheet " href="css/owl.carousel.min.css ">
-    <script src="js/owl.carousel.js "></script>
-
-    <link rel="icon" sizes="96x96" href="{{asset('css/images/favicon-96x96.png')}}">
+    <link rel="stylesheet" href="css/owl.carousel.min.css">
+    <script src="js/owl.carousel.js"></script>
+    <link rel="icon" sizes="96x96" href="{{ asset('css/images/favicon-96x96.png') }}">
 
 
 
@@ -34,11 +30,8 @@
 </head>
 
 <body>
-
     <div class="wrapper">
-
         <!-- dashboard header  -->
-
         <header>
             <div class="header">
                 <div class="container-xxl container-xl container-lg container-md">
@@ -91,10 +84,12 @@
                                             <div class="row">
                                                 <div class="col-12 ">
                                                     <div class="auth_field">
-                                                        <form action="{{ url('/password-reset') }}" method="POST" enctype="multipart/form-data">
+                                                        <form action="{{ url('/password-reset') }}" method="POST"
+                                                            enctype="multipart/form-data">
                                                             @csrf
                                                             <div class="auth_field_info">
-                                                                <input type="text" placeholder="Enter Your Email" name='restoring password' />
+                                                                <input type="text" placeholder="Enter Your Email"
+                                                                    name='restoring password' />
                                                             </div>
                                                             <div class="col-12 pt-3">
                                                                 <div class="auth_sbmit">

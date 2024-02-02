@@ -1005,7 +1005,7 @@
     background-color: #dddddd;
   }
   .custom_tabs ul li a.active {
-    background-color: #dddddd;
+    background-color: linear-gradient(315deg, #2D3436 0%, #000000 74%);;
   }
   
   .custom_tabs_detail {
@@ -1408,7 +1408,7 @@
   }
   
   .descriptionTxt p {
-    font-size: 12px;
+    font-size: 14px ;
   }
   
   .descriptionTxt p strong {
