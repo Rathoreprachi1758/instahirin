@@ -360,6 +360,9 @@
         font-size: 11px;
         padding: 8px 16px;
     }
+    /* .custom_tabs ul li a:hover{
+        background-color: red !important;
+    } */
 
     .verify_section {
         flex-wrap: wrap;
