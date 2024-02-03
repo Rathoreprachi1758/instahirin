@@ -26,7 +26,7 @@
                 </div>
                 <div class="custom_tabs">
                     <ul>
-                        <li><a href="{{ url('Employee-activity') }}" class="active">My Resume</a></li>
+                        <li><a href="{{ url('Employee-activity') }}" class="active" style="background-color:#516d8b">My Resume</a></li>
                         <li><a href="{{ route('favorites') }}">Favourites</a></li>
                         <li><a href="{{ route('Applied.jobs') }}">Applied</a></li>
                         <li>
@@ -39,11 +39,9 @@
 
                 <div class="custom_tabs_detail activityTabs actTabSetting">
                     <!-- tab1 data  -->
-                    <form action="{{ route('Employee.Resume.submit') }}" method="post" enctype="multipart/form-data">
-                        @csrf
-                    </form>
                     <div class="custom_tabs_data" style="display: block" id="tab1">
                         <div class="row">
+                        @foreach($InstaHirin_Onboard as $instahirin)
                             <div class="col-xxl-9 col-xl-11 col-lg-11 col-md-12">
                                 <div class="myResumeSection">
                                     <div class="resumeDoc">
@@ -58,30 +56,38 @@
                                         </div>
                                     </div>
                                 </div>
-
-                                <div class="updateResume">
-                                    <div class="file-drop-area">
-                                        <span class="fake-btn">Update resume</span>
-                                        <span class="file-msg">or drag and drop files here</span>
-                                        <input class="file-input" type="file" multiple />
-
-                                        <p>
-                                            Supported Formats: doc, docx, rtf, pdf, upto 2
-                                            MB
-                                        </p>
+                                <form id="resumeForm" action="{{ route('Employee.Resume.submit') }}" method="post" enctype="multipart/form-data">
+                                    @csrf
+                                    <div class="updateResume">
+                                        <div class="file-drop-area">
+                                            <span class="fake-btn">Update resume</span>
+                                            <span class="file-msg">or drag and drop files here</span>
+                                            <input type="file" class="file-input" id="fileInput" name="file" multiple>
+                                            <p>
+                                                Supported Formats: doc, docx, rtf, pdf, upto 2
+                                                MB
+                                            </p>
+                                        </div>
                                     </div>
-                                </div>
+                                    {{-- <button type="submit" class="btn btn-primary">Save</button> --}}
+                                </form>
 
                                 <p><label class="pb-2" style="margin-left:323px">OR Instahirin Resume</p>
                                 <div class="resumeBoxes">
                                     <div class="resumHeadline">
-                                        <label class="pb-2">Resume headline
+                                        <label class="pb-2">Resume Headline
                                             <b><i class="fa fa-pencil" aria-hidden="true"
                                                     id="resume_headline"></i></b></label>
+                                    
                                         <input type="text" class="form-control" name="Resume_headline"
+                                                style="border-radius:1.25rem;font-size: 0.8rem;" id="resume_headline"
+                                                placeholder=" Ex:Full Stack Developer with expertise in JavaScript and React" value="{{$instahirin->resume_headline}}"
+                                                disabled>
+                                    {{-- @endforeach --}}
+                                        {{-- <input type="text" class="form-control" name="Resume_headline"
                                             style="border-radius:1.25rem;font-size: 0.8rem;" id="resume_headline"
-                                            placeholder=" Ex:Full Stack Developer with expertise in JavaScript and React"
-                                            disabled>
+                                            placeholder=" Ex:Full Stack Developer with expertise in JavaScript and React" value="{{}}"
+                                            disabled> --}}
                                         <div class="modal fade" id="headlineModal" tabindex="-1" role="dialog"
                                             aria-labelledby="draftModalLabel" aria-hidden="true">
                                             <div class="modal-dialog" role="document">
@@ -106,7 +112,7 @@
                                                     <div class="modal-body">
                                                         <form method="post" action="">
                                                             @csrf
-                                                            <label for="draftMessaName">Key Skills</label><br>
+                                                            <label for="draftMessaName">Resume Headline</label><br>
                                                             {{-- <input type="text" id="templatename" name="templatename"
                                                                 placeholder="Enter your name" style="width: 414px;" required><br><br> --}}
                                                             <input type="text" class="form-control"
@@ -166,7 +172,7 @@
                                                             {{-- <input type="text" id="templatename" name="templatename"
                                                                 placeholder="Enter your name" style="width: 414px;" required><br><br> --}}
                                                             <select class="form-control" type="text"
-                                                                id="templatename" name="key_skills"
+                                                                id="key_skills" name="key_skills"
                                                                 style="width: 414px;border-radius:1.25rem;">
                                                                 <option>Choose skills</option>
                                                                 <option>Skill 1</option>
@@ -209,12 +215,13 @@
                                         </div>
 
                                         <div class="positionSection">
-                                            <strong>Position</strong>
+                                            <strong>{{$instahirin->current_title}}</strong>
                                             <div class="modal fade" id="Add_employement" tabindex="-1"
                                                 role="dialog" aria-labelledby="draftModalLabel" aria-hidden="true">
                                                 <div class="modal-dialog" role="document">
                                                     <div class="modal-content">
                                                         <div class="modal-header">
+                                                            {{-- <strong>Employment</strong> --}}
                                                             @if ($errors->any())
                                                                 <div class="alert alert-danger">
                                                                     <ul>
@@ -233,27 +240,28 @@
                                                             <form method="post" action="">
                                                                 @csrf
                                                                 <label for="draftMessaName">Positions</label>
-                                                                <input type="text" id="templatename"
+                                                                <input type="text" id="Position_title"
                                                                     class="form-control" name="Position_title"
-                                                                    placeholder="Enter your name"
+                                                                    placeholder="Enter your name" value="{{$instahirin->current_title}}"
                                                                     style="width: 414px;" required><br>
                                                                 <label for="draftMessaName">Company Name</label>
-                                                                <input type="text" id="templatename"
+                                                                <input type="text" id="company_name"
                                                                     name="company_name"
-                                                                    placeholder="Enter your Comapny Name"
+                                                                    placeholder="Enter your Comapny Name" value="{{$instahirin->last_company}}"
                                                                     class="form-control" style="width: 414px;"
                                                                     required><br>
                                                                 <label for="draftMessaName">Work Mode</label>
                                                                 <select class="form-control" type="text"
-                                                                    id="templatename" name="work_mode"
+                                                                    id="work_mode" name="work_mode"
                                                                     style="width: 414px;border-radius:1.25rem;">
-                                                                    <option>Choose Work Mode</option>
-                                                                    <option>Full Time</option>
-                                                                    <option>Part Time</option>
-                                                                    <option>Free Lancing</option>
-                                                                    <option>Contractual</option>
+                                                                    <option disabled>Choose Work Mode</option>
+                                                                    <option value="Full Time"  @if($instahirin->availability == 'Full Time') selected @endif>Full Time</option>
+                                                                    <option value="Part Time"  @if($instahirin->availability == 'Part Time') selected @endif>Part Time</option>
+                                                                    <option value="Free Lancing" @if($instahirin->availability == 'Free Lancing') selected @endif>Free Lancing</option>
+                                                                    <option value="Contractual"  @if($instahirin->availability == 'Contractual') selected @endif>Contractual</option>
                                                                 </select>
-                                                                <label for="draftMessaName">Time Period</label><br>
+                                                                <br>
+                                                                {{-- <label for="draftMessaName">Time Period</label> --}}
                                                                 <div class="row">
                                                                     <div class="col-md-5">
                                                                         <!-- FROM Date -->
@@ -276,44 +284,36 @@
                                                                 </div>
                                                                 <label for="draftMessaName">Discription</label>
                                                                 <textarea id="Discription" class="form-control" name="Discription" placeholder="Compose your message"
-                                                                    style="width: 414px; height: 99px;" value=""></textarea><br>
-                                                                <button type="submit"
-                                                                    class="btn btn-primary">Save</button>
+                                                                    style="width: 414px; height: 99px;" >{{$instahirin->skills_description}}</textarea><br>
+                                                                <label for="toDate">Notice Period</label>
+                                                                <select class="form-control" type="text"
+                                                                    id="Notice_Period" name="Notice_Period"
+                                                                    style="width: 414px;border-radius:1.25rem;">
+                                                                    <option disabled>Choose Notice Period</option>
+                                                                    <option value="15 Days or less"  @if($instahirin->notice_period == '15 Days or less') selected @endif>15 Days or less</option>
+                                                                    <option value="1 Month"  @if($instahirin->notice_period == '1 Month') selected @endif>1 Month</option>
+                                                                    <option value="2 Month" @if($instahirin->notice_period == '2 Month') selected @endif>2 Month</option>
+                                                                    <option value="3 Month"  @if($instahirin->notice_period == '3 Month') selected @endif>3 Month</option>
+                                                                    <option value="More than 3 Month"  @if($instahirin->notice_period == 'More than 3 Month') selected @endif>More than 3 Month</option>
+                                                                </select>
+                                                                <br>
+                                                                <button type="submit" class="btn btn-primary">Save</button>
                                                             </form>
                                                         </div>
                                                     </div>
                                                 </div>
                                             </div>
-                                            <p>Company Name</p>
-                                            <p>
-                                                Full-time I Jan 2022 to Present (1 Year 09
-                                                months)
-                                            </p>
-                                            <p>15 Days or less Notice Period</p>
-                                            <p>
-                                                Lorem Ipsum is simply dummy text of the
-                                                printing and typesetting industry. Lorem
-                                                Ipsum has been the industry’s standard dummy
-                                                text ever since the 1500s, when an unknown
-                                                printer took a galley of type and scrambled
-                                                it to make a type specimen book. It has
-                                                survived not only five centuries, but also
-                                                the leap into electronic typesetting,
-                                                remaining essentially unchanged. It was
-                                                popularised in the 1960s with the release of
-                                                Letraset sheets containing Lorem Ipsum
-                                                passages, and more recently with desktop
-                                                publishing software like Aldus PageMaker
-                                                including versions of Lorem Ipsum.
-                                            </p>
+                                            <p>{{$instahirin->last_company}}</p>
+                                            <p>{{$instahirin->availability}}| {{$instahirin->working_since_date}} to {{$instahirin->working_since_date2}}</p>
+                                            <p>{{$instahirin->notice_period}}</p>
+                                            <p>{{$instahirin->skills_description}}</p>
                                         </div>
                                     </div>
                                 </div>
                                 <div class="resumeBoxes">
                                     <div class="employeementSec">
                                         <div class="positionSection">
-                                            <strong>Education<b><i class="fa fa-pencil" aria-hidden="true"
-                                                        id="education_edit"></i></b> </strong>
+                                            <strong>Education</strong>
                                             <div class="modal fade" id="education_model" tabindex="-1"
                                                 role="dialog" aria-labelledby="draftModalLabel" aria-hidden="true">
                                                 <div class="modal-dialog" role="document">
@@ -336,24 +336,30 @@
                                                             </button>
                                                         </div>
                                                         <div class="modal-body">
-                                                            <form method="post" action="">
-                                                                @csrf
                                                                <br>
                                                                 <form method="post" action="">
                                                                     @csrf
                                                                     <label for="draftMessaName">Qualification</label>
-                                                                    <input type="text" id="templatename"
-                                                                        class="form-control" name="highest_qualification"
-                                                                        placeholder="Enter your Highest_qualification" required><br>
+                                                                    <select class="form-control" type="text"
+                                                                        id="highest_qualification" name="highest_qualification"
+                                                                        style="width: 414px;border-radius:1.25rem;">
+                                                                        <option disabled>choose qualification</option>
+                                                                        <option value="Any"  @if($instahirin->notice_period == 'Any') selected @endif>Any</option>
+                                                                        <option value="Doctorate"  @if($instahirin->notice_period == 'Doctorate') selected @endif>Doctorate</option>
+                                                                        <option value="Post Graduation" @if($instahirin->notice_period == 'Post Graduation') selected @endif>Post Graduation</option>
+                                                                        <option value="Graduation"  @if($instahirin->notice_period == 'Graduation') selected @endif>Graduation</option>
+                                                                        <option value="XII"  @if($instahirin->notice_period == 'XII') selected @endif>XII Class</option>
+                                                                        <option value="X"  @if($instahirin->notice_period == 'X') selected @endif>X Class</option>
+                                                                    </select><br>
                                                                     <label for="draftMessaName">College/University</label>
-                                                                    <input type="text" id="templatename"
+                                                                    <input type="text" id="company_name"
                                                                         name="company_name"
                                                                         placeholder="Enter your College Name"
                                                                         class="form-control"
                                                                         required><br>
                                                                     <label for="draftMessaName">Mode of Education</label>
                                                                     <select class="form-control" type="text"
-                                                                        id="templatename" name="work_mode"
+                                                                        id="work_mode" name="work_mode"
                                                                         style="width: 414px;border-radius:1.25rem;">
                                                                         <option>Choose Work Mode</option>
                                                                         <option>Full Time</option>
@@ -388,18 +394,99 @@
                                                     </div>
                                                 </div>
                                             </div>
-                                            <strong class="pt-1">B.Tech</strong>
+                                            <strong class="pt-1">B.Tech<b><i class="fa fa-pencil" aria-hidden="true"
+                                                id="education_edit"></i></b></strong>
                                             <p>S.V. College of Engineering, Hyderabad.</p>
                                             <p>2008 - 2012 I Full Time</p>
                                             <br />
-
-                                            <strong>X Class</strong>
+                                            <strong>X Class<b><i class="fa fa-pencil" aria-hidden="true"
+                                                id="secondary_education_edit"></i></b></strong>
                                             <p>Golkonda High School, Hyderabad.</p>
+                                            <div class="modal fade" id="secondory_education_model" tabindex="-1"
+                                                role="dialog" aria-labelledby="draftModalLabel" aria-hidden="true">
+                                                <div class="modal-dialog" role="document">
+                                                    <div class="modal-content">
+                                                        <div class="modal-header">
+                                                            {{-- <h5 class="modal-title" id="draftModalLabel">Save Draft</h5> --}}
+                                                            @if ($errors->any())
+                                                                <div class="alert alert-danger">
+                                                                    <ul>
+                                                                        @foreach ($errors->all() as $error)
+                                                                            <li>{{ $error }}</li>
+                                                                        @endforeach
+                                                                    </ul>
+                                                                </div>
+                                                            @endif
+                                                            {{-- CSS style: color: #ab1b1b --}}
+                                                            <button type="button" class="close"
+                                                                data-dismiss="modal" aria-label="Close">
+                                                                <span aria-hidden="true">&times;</span>
+                                                            </button>
+                                                        </div>
+                                                        <div class="modal-body">
+                                                               <br>
+                                                                <form method="post" action="">
+                                                                    @csrf
+                                                                    <label for="draftMessaName">Qualification</label>
+                                                                    <select class="form-control" type="text"
+                                                                        id="highest_qualification" name="highest_qualification"
+                                                                        style="width: 414px;border-radius:1.25rem;">
+                                                                        <option disabled>choose qualification</option>
+                                                                        <option value="Any"  @if($instahirin->notice_period == 'Any') selected @endif>Any</option>
+                                                                        <option value="Doctorate"  @if($instahirin->notice_period == 'Doctorate') selected @endif>Doctorate</option>
+                                                                        <option value="Post Graduation" @if($instahirin->notice_period == 'Post Graduation') selected @endif>Post Graduation</option>
+                                                                        <option value="Graduation"  @if($instahirin->notice_period == 'Graduation') selected @endif>Graduation</option>
+                                                                        <option value="XII"  @if($instahirin->notice_period == 'XII') selected @endif>XII Class</option>
+                                                                        <option value="X"  @if($instahirin->notice_period == 'X') selected @endif>X Class</option>
+                                                                    </select><br>
+                                                                    <label for="draftMessaName">College/University</label>
+                                                                    <input type="text" id="company_name"
+                                                                        name="company_name"
+                                                                        placeholder="Enter your College Name"
+                                                                        class="form-control"
+                                                                        required><br>
+                                                                    <label for="draftMessaName">Mode of Education</label>
+                                                                    <select class="form-control" type="text"
+                                                                        id="work_mode" name="work_mode"
+                                                                        style="width: 414px;border-radius:1.25rem;">
+                                                                        <option>Choose Work Mode</option>
+                                                                        <option>Full Time</option>
+                                                                        <option>Distance</option>
+                                                                    </select>
+                                                                    <label for="draftMessaName">Time Period</label><br>
+                                                                    <div class="row">
+                                                                        <div class="col-md-5">
+                                                                            <!-- FROM Date -->
+                                                                            <label for="fromDate">Start</label>
+                                                                            <input class="form-control" type="text"
+                                                                                name="from_date" id="fromDate"
+                                                                                autocomplete="off"
+                                                                                placeholder="Enter Date"
+                                                                                style="width:200px;" required>
+                                                                        </div>
+                                                                        <div class="col-md-5">
+                                                                            <!-- TO Date -->
+                                                                            <label for="toDate">Finish</label>
+                                                                            <input class="form-control" type="text"
+                                                                                name="to_date" id="toDate"
+                                                                                autocomplete="off"
+                                                                                placeholder="Enter Date"
+                                                                                style="width: 200px;" required>
+                                                                        </div>
+                                                                    </div>
+                                                                    <br>
+                                                                    <button type="submit"
+                                                                        class="btn btn-primary">Save</button>
+                                                                </form>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
                                         </div>
                                     </div>
                                 </div>
 
-                                <div class="resumeBoxes">
+                                <div class="resumeBoxes"> 
                                     <div class="employeementSec">
                                         <div class="positionSection">
                                             <strong class="pt-1">Personal Details
@@ -430,32 +517,11 @@
                                                             <form method="post" action="">
                                                                 @csrf
                                                                 <label for="draftMessaName">Full Name</label><br />
-                                                                <input class="form-control"
-                                                                  type="text"
-                                                                  id="templatename"
-                                                                  name="full_name"
-                                                                  placeholder="Enter your name"
-                                                                  style="width: 414px"
-                                                                  required
-                                                                ><br />
-                                                              
+                                                                <input class="form-control" type="text" id="full_name" name="full_name" placeholder="Enter your name"  style="width: 414px" required><br />
                                                                 <label for="draftMessaName">Email Address</label><br />
-                                                                <input class="form-control"
-                                                                  type="text"
-                                                                  id="templatename"
-                                                                  name="email"
-                                                                  placeholder="Enter your name"
-                                                                  style="width: 414px"
-                                                                  required
-                                                                ><br/>
+                                                                <input class="form-control" type="text" id="email" name="email"  placeholder="Enter your name" style="width: 414px" required><br/>
                                                                 <label for="draftMessaName">Total Work Experience</label>
-                                                                <select
-                                                                  class="form-control"
-                                                                  type="text"
-                                                                  id="templatename"
-                                                                  name="Total_work_experience"
-                                                                  style="width: 414px; border-radius: 1.25rem"
-                                                                >
+                                                                <select class="form-control" type="text" id="Total_work_experience" name="Total_work_experience" style="width: 414px; border-radius: 1.25rem">
                                                                   <option>Choose skills</option>
                                                                   <option>1+ years</option>
                                                                   <option>2+ years</option>
@@ -466,47 +532,27 @@
                                                                   <option>7+ years</option>
                                                                   <option>8+ years</option>
                                                                   <option>9+ years</option>
-                                                                  <option>10+ years</option></select
-                                                                ><br />
+                                                                  <option>10+ years</option>
+                                                                </select><br/>
                                                               
                                                                 <!-- <label for="draftMessaName">Full Name</label><br> -->
                                                                 <div class="row">
                                                                   <div class="col-md-5">
                                                                     <!-- FROM Date -->
                                                                     <label for="fromDate">Country code</label>
-                                                                    <select
-                                                                      name="country_code"
-                                                                      class="form-control"
-                                                                      required
-                                                                      style="width: 100%"
-                                                                    >
+                                                                    <select name="country_code" class="form-control" required style="width: 100%">
                                                                       <option value="">Select a country code</option>
                                                                     </select>
                                                                   </div>
                                                                   <div class="col-md-5">
                                                                     <!-- TO Date -->
                                                                     <label for="Mobile_number">Mobile number</label>
-                                                                    <input
-                                                                      class="form-control"
-                                                                      type="text"
-                                                                      name="Mobile_number"
-                                                                      id="Mobile_number"
-                                                                      autocomplete="off"
-                                                                      placeholder="Enter Mobile Number"
-                                                                      style="width: 200px"
-                                                                      required
-                                                                    >
+                                                                    <input class="form-control" type="text" name="Mobile_number" id="Mobile_number" autocomplete="off" placeholder="Enter Mobile Number" style="width: 200px" required>
                                                                   </div>
                                                                 </div>
                                                                 <br/>
                                                                 <label for="Availability">Availability</label>
-                                                                <select
-                                                                  class="form-control"
-                                                                  type="text"
-                                                                  id="Availability"
-                                                                  name="Availability"
-                                                                  style="border-radius: 1.25rem"
-                                                                >
+                                                                <select class="form-control" type="text" id="Availability" name="Availability" style="border-radius: 1.25rem">
                                                                   <option>Choose skills</option>
                                                                   <option>Full Time</option>
                                                                   <option>Part Time</option>
@@ -525,36 +571,22 @@
                                                                 </div>
                                                                 <br>
                                                                 <label for="Home_town">Permanent Location</label>
-                                                                    <input
-                                                                      class="form-control"
-                                                                      type="text"
-                                                                      name="Home_town"
-                                                                      id="Home_town"
-                                                                      autocomplete="off"
-                                                                      placeholder="Enter Perminenet location"
-                                                                      style="width: 200px"
-                                                                      required
-                                                                    >
+                                                                    <input class="form-control" type="text" name="Home_town" id="Home_town" autocomplete="off" placeholder="Enter Perminenet location" style="width: 200px" required>
                                                                <br>
                                                                 <label for="Home_town">Work Permit</label>
-                                                                <select
-                                                                class="form-control"
-                                                                type="text"
-                                                                id="work_permit"
-                                                                name="work_permit"
-                                                                style="border-radius: 1.25rem"
-                                                              >
-                                                                <option>Choose skills</option>
-                                                                <option>H1B</option>
-                                                                <option>H1</option>
-                                                                <option>Daily</option>
-                                                                <option>Weekly</option>
-                                                                <option>Monthly</option>
-                                                                <option>Hours</option>
-                                                                <option>Project ba
+                                                                <select class="form-control" type="text" id="work_permit" name="work_permit" style="border-radius: 1.25rem">
+                                                                    <option>Choose skills</option>
+                                                                    <option>H1B</option>
+                                                                    <option>H1</option>
+                                                                    <option>Daily</option>
+                                                                    <option>Weekly</option>
+                                                                    <option>Monthly</option>
+                                                                    <option>Hours</option>
+                                                                    <option>Project base</option>
+                                                                </select>
                                                                 <br>
                                                                 <button type="submit" class="btn btn-primary">Save</button>
-                                                              </form>
+                                                            </form>
                                                         </div>
                                                     </div>
                                                 </div>
@@ -566,30 +598,27 @@
                                                             <ul>
                                                                 <li>
                                                                     <strong>Full Name</strong>
-                                                                    <p>K.Ravi Kumar</p>
+                                                                    <p>{{$instahirin->name}}</p>
                                                                 </li>
                                                                 <li>
                                                                     <strong>Date of birth</strong>
-                                                                    <p>01 Jan 1999</p>
+                                                                    <p>-</p>
                                                                 </li>
                                                                 <li>
                                                                     <strong>E-mail</strong>
-                                                                    <p>ravikumark@gmail.com</p>
+                                                                    <p>{{$instahirin->email}}</p>
                                                                 </li>
                                                                 <li>
                                                                     <strong>Mobile Number</strong>
-                                                                    <p>+91 8761230987</p>
+                                                                    <p>{{$instahirin->contact_details}}</p>
                                                                 </li>
                                                                 <li>
                                                                     <strong>Experience</strong>
-                                                                    <p>8+ Years</p>
+                                                                    <p>{{$instahirin->experience_year}}.{{$instahirin->experience_month}} years</p>
                                                                 </li>
                                                                 <li>
                                                                     <strong>Availability</strong>
-                                                                    <p>
-                                                                        Full time, Part time, Contract,
-                                                                        Freelance
-                                                                    </p>
+                                                                    <p>{{$instahirin->availability}}</p>
                                                                 </li>
                                                             </ul>
                                                         </div>
@@ -600,7 +629,7 @@
                                                             <ul>
                                                                 <li>
                                                                     <strong>Location</strong>
-                                                                    <p>Hyderabad, Telangana, India</p>
+                                                                    <p>{{$instahirin->current_location}}</p>
                                                                 </li>
                                                                 <li>
                                                                     <strong>Home town</strong>
@@ -623,6 +652,7 @@
                                     </div>
                                 </div>
                             </div>
+                        @endforeach
                         </div>
                     </div>
                 </div>
@@ -661,6 +691,12 @@
             $("#headlineModal").modal("show");
         });
     });
+    //
+    $(document).ready(function() {
+        $("#secondary_education_edit").click(function(){
+            $("#secondory_education_model").modal("show");
+        });
+    });
 </script>
 {{-- <script defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCWCwDO2UDvwai9BBUyvxGS6t436Eot7Wc&libraries=places&callback=initAutocomplete" async></script> --}}
 <script>
@@ -693,4 +729,14 @@
     });
 </script> --}}
 
-
+<script>
+    $(document).ready(function () {
+        $('#fileInput').change(function () {
+            // Check if a file is selected
+            if ($(this).val() !== "") {
+                // Submit the form
+                $('#resumeForm').submit();
+            }
+        });
+    });
+</script>

@@ -83,7 +83,7 @@ Route::middleware(['middleware' => 'auth.check'])->group(function () {
     // });
     //activity of employees
     Route::get('Employee-activity', [profileController::class, 'Employee_activity']);
-    Route::post('upload-resume', [ContentController::class, 'Employee_Resume'])->name('Employee.Resume.submit');
+    Route::post('upload-resume', [profileController::class, 'Employee_Resume'])->name('Employee.Resume.submit');
     Route::get('/Favorites', [profileController::class, 'emp_favorates'])->name('favorites');
     Route::get('Applied-jobs', [profileController::class, 'Applied_jobs'])->name('Applied.jobs');
     Route::get('Interview-schedule-calander', [profileController::class, 'schedule_interview_calander'])->name('Interview.schedule.calander');

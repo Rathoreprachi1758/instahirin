@@ -1011,9 +1011,11 @@ h6 {
 
 .custom_tabs ul li a:hover {
     background-color: #dddddd;
+    /* background-color: #425056; */
 }
 .custom_tabs ul li a.active {
     background-color: #dddddd;
+    /* background-color: #55d0ff; */
 }
 
 .custom_tabs_detail {
