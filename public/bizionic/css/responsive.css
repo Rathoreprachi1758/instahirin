@@ -694,14 +694,18 @@
 }
 
 
+.stretgy_listing_colFr strong { 
+    font-size: 48px;
+}
 
 
+.bg_ebebeb .continental_avatar { padding-left: 0px;}
 
+.efficiency_list_icon span { 
+    width: 50px; 
+}
 
-
-
-
-
+.efficiency_list_info .custom_tittle p { font-size: 18px;}
 
 
 
@@ -2065,9 +2069,81 @@
 
 .backup_recoveryCol_info { 
     padding: 50px 20px;}
+.backup_recoveryCol_info { 
+    padding: 50px 20px;}
+
+.product_banner {padding: 50px 35px;}
+
+.driving_inovation_info {padding: 50px 35px;}
+ 
+.theChallenge_section_info  {padding: 50px 35px;}
+
+.efficiency_section_info  {padding: 50px 35px;}
+
+.director_eshare  {padding: 50px 35px;}
+
+.e_logo { 
+    max-width: 190px;
+    margin-bottom: 20px;
+}
+
+.app_product { padding-bottom: 0px;}
+
+.letwizard_app_section_detail  {padding: 60px 35px 50px;}
+
+.let_dev_solution_detail  {padding: 50px 35px;}
 
 
+.nestle_product { min-height: auto; padding-bottom: 25px;}
 
+.stretgy_listing_sectionDetail  {padding: 50px 35px;}
+
+.stretgy_listing_colFl {
+    width: 65%; 
+    padding: 40px 20px; 
+}
+.stretgy_listing_colFr {
+    width: 35%; 
+    padding: 40px 20px; 
+}
+.stretgy_listing_colFr strong { 
+    font-size: 48px;
+}
+
+
+.bg_ebebeb .continental_avatar {
+    padding-left: 0px;
+}
+
+.tyre_middleEast_detail   {padding: 50px 35px;}
+
+.efficiency_list_icon strong { margin-bottom: 25px;}
+
+.primeVideo_banner .custom_tittle { padding-bottom: 0px;}
+
+.audiance_excecution_detail { 
+    padding: 0px 20px 40px;
+}
+.audiance_excecution_col {
+    padding: 40px 20px; 
+}
+
+.littileAmigos_bannnerBg .custom_tittle h1 br { display: none;}
+
+.maineRest_banner_bg .custom_tittle h1 {
+    font-size: 48px;
+}
+
+.e_product { height: auto;}
+
+.shanFood_banner_bg .custom_tittle {
+    padding: 20px 30px; 
+}
+
+
+.let_dev_list { 
+    padding: 50px 30px;
+}
 
 
 
@@ -7452,32 +7528,152 @@ h6 { font-size: 18px; }
 
 .backup_recoveryCol_info { padding: 30px 20px;}
 
-.backup_recoveryCol_info { border: 0px !important;}
 
 
 
 
 
 
+.portfolioPage .at_bizionic_section_detail { 
+    padding: 60px 20px;
+}
+
+.product_banner { padding: 60px 20px;}
+
+.driving_inovation_info { padding: 60px 20px;}
+
+.servicesProvided { 
+    display: block;
+}
+
+.servicesProvided ul li p { 
+    font-size: 15px; 
+}
+
+.servicesProvided ul {
+    width: 100%;
+    padding-right: 0px;
+    font-size: 16px; padding-bottom: 0px;
+}
+
+.servicesProvided_avatar { padding-top: 25px;}
+
+.theChallenge_section_info { padding: 60px 20px;}
+
+.efficiency_section_info { padding: 60px 20px 30px;}
 
 
+.efficiency_list_icon { padding-bottom: 15px;}
+
+.efficiency_list_icon span { margin: 0px;}
+
+.director_eshare   { padding: 50px 20px;}
+
+.letwizardBanner .custom_tittle h1 {
+    font-size: 22px;
+}
+
+.letwizard_app_section_detail { padding: 60px 20px;}
+
+.app_product { padding-bottom: 0px;}
+
+.let_dev_solution_detail  { padding: 60px 20px;}
+
+.let_dev_list { 
+    padding: 50px 20px;
+}
+.let_dev_list_fl { padding-bottom: 25px;}
+
+.let_dev_list_fl strong { 
+    font-size: 18px; 
+}
+
+.nestle_product .custom_tittle h1 { padding-top: 100px;     font-size: 28px;}
+
+.nestle_product {
+    min-height: auto;  
+}
+
+.youtube_section_info { 
+    padding: 30px 10px;
+}
+
+.stretgy_listing_sectionDetail { padding: 60px 20px;}
+
+.stretgy_listing_info { 
+    display: block;
+}
+.stretgy_listing_colFr {  width: 100%;
+    padding: 30px 20px; 
+}
+
+.stretgy_listing_colFl { padding: 30px 20px; width: 100%;}
+
+.stretgy_listing ul li { padding: 10px 0px;}
+
+.stretgy_listing_colFr strong { 
+    font-size: 50px;
+}
+
+.p_product_slider_info { padding: 60px 20px 40px;}
+
+.p_product_slider { padding-top: 25px;}
+
+.p_products .slick-prev { 
+    left: -32px; 
+    width: 26px;
+    height: 26px; 
+}
+
+.p_products .slick-next { 
+    right: -32px; 
+    width: 26px;
+    height: 26px; 
+}
 
 
+.tyre_middleEast_detail { padding: 60px 20px 20px;}
+
+.tyre_middleEast_avatar { padding-bottom: 25px; padding-right: 0px;}
 
 
+.e_product { min-height: auto;}
+
+.primeVideo_banner .custom_tittle {
+    padding-right: 0px;
+}
+.primeVideo_banner .custom_tittle h1 {
+    font-size: 24px; 
+}
+.efficiency_list_icon strong { margin: 0px;}
+
+.dubaiLand_banner_bg .custom_tittle h1 {
+    font-size: 30px;
+}
+.e_logo { 
+    max-width: 190px;
+    margin-bottom: 25px;
+}
+
+.bg_ebebeb .continental_avatar { padding-left: 0px; padding-top: 25px;}
+
+.alchmeySolution_detail { padding: 60px 20px;}
+
+.audiance_excecution_detail { padding: 0px 0px ;}
+
+.product_banner_info .custom_tittle { padding-right: 0px !important;}
 
 
+.blackSmith_banner_bg .custom_tittle h1 {
+    font-size: 30px;
+}
+
+.digitalExp_section_detail { padding: 50px 20px;}
+
+.maineRest_banner_bg .custom_tittle h1 {font-size: 30px;}
 
 
-
-
-
-
-
-
-
-
-
+.shanFood_banner_bg .custom_tittle { padding: 20px !important;}
 
 
 
