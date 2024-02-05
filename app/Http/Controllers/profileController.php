@@ -430,14 +430,113 @@ class profileController extends Controller
     }
     //Talent
     public function Employee_activity(Request $request)
-    {
+    {   
+        $InstaHirin_Onboard = InstaHirinOnboard::where('user_id', Auth::id())->get();
+        if(count($InstaHirin_Onboard) != '0')
+        { 
+            return view('dashboard.Activity_employee.activity_employee',['InstaHirin_Onboard' => $InstaHirin_Onboard]);
+        }
         return view('dashboard.Activity_employee.activity_employee');
     }
     public function Employee_Resume(Request $request)
-    {   
-        return $request->all();
+    {
+        $formData = InstaHirinOnboard::where("user_id", Auth::id())->first();
+        if ($request->hasFile('document')) {
+            $file = $request->file('document');
+            $filename = 'bizionic/images/' . time() . '_' . $file->getClientOriginalName();
+            $file->storeAs('', $filename, 'public');
+            $formData->document = $filename;
+            $formData->save();
+            // $formData->update(['document' => $filename]);
+        }
+        // return $formData;
+        // // Set the form data from the validated request
+        // $formData->name = 'name';
+        // $formData->contact_details = 'contact_details';
+        // $formData->email = 'email';
+        // $formData->current_location = 'current_location';
+        // //$formData->current_location   = isset('current_location']) ? 'current_location'] : '-';
+        // $formData->skills_description = 'skills_description';
+        // $formData->current_title = 'current_title';
+        // $formData->experience_year = 'experience_year';
+        // $formData->experience_month = 'experience_month';
+        // $formData->key_skills = json_decode('key_skills');
+        // $formData->expert_in = json_decode('expert_in');
+        // $formData->also_work_with = json_decode('also_work_with');
+        // // $formData->last_company = isset('last_company') ? 'last_company': '-';
+        // // $formData->company_location = isset('company_location']) ? 'company_location'] : '-';
+        // $formData->company_location = 'company_location';
+        // // $formData->currently_working_here = isset('currently_working_here') ? 'currently_working_here' : '-';
+        // // $formData->working_since_date = 'working_since_date';
+        // // $formData->working_since_date2 = isset('working_since_date2') ? 'working_since_date2' : '-';
+        // // $formData->annual_salary_currency = 'annual_salary_currency'];
+        // $formData->annual_salary = 'annual_salary';
+        // $formData->highest_qualification = 'highest_qualification';
+        // // $formData->notice_period = isset('notice_period') ? 'notice_period' : '-';
+        // $formData->availability = 'availability';
+        // $formData->availability_date = 'availability_date';
+        // $formData->availability_time_from = 'availability_time_from';
+        // $formData->availability_time_to = 'availability_time_to';
+        // $formData->payment_option = 'payment_option';
+        // // $formData->sub_payment_option = isset('sub_payment_option') ? 'sub_payment_option': null;
+        // // $formData->monthly_rate = isset('monthly_rate') ? 'monthly_rate' : null;
+        // // $formData->hourly_rate = isset('hourly_rate') ? 'hourly_rate' : null;
+        // // $formData->project_rate = isset('project_rate') ? 'project_rate' : null;
+        // $formData->resume_headline = 'resume_headline';
+        // $formData->user_id = Auth::id();
+        // $formData->save();
+
         //return view('dashboard.Activity_employee.activity_employee');
+        // if ($request->hasFile('file')) {
+        //     // Create a temporary zip file
+        //     $zipFileName = 'bizionic/images/' . time() . '_documents.zip';
+        //     $zip = new ZipArchive();
+        //     if ($zip->open(storage_path('app/public/' . $zipFileName), ZipArchive::CREATE) === true) {
+        //         foreach ($request->file('file') as $document) {
+        //             $originalFilename = $document->getClientOriginalName();
+        //             $filename = 'bizionic/images/' . time() . '_' . $originalFilename;
+        //             $document->storeAs('', $filename, 'public');
+        //             // Add the file to the zip archive
+        //             $zip->addFile(storage_path('app/public/' . $filename), $originalFilename);
+        //         }
+        //         $zip->close();
+        //         // Save the zip file information in the database
+        //         $formData->document = $zipFileName;
+        //         $formData->save();
+
+        //     }
+        
+             return redirect()->back()->with('message', ' Resume hasbeen Uploaded!');
     }
+    public function Employee_skills_update(Request $request)
+    {
+       return $request->all();
+    }
+
+    public function Employee_headline_update(Request $request)
+    {
+        return $request->all();
+    }
+
+    public function Employee_Resume_employement(Request $request)
+    {
+        return $request->all();
+    }
+
+    public function Employee_Resume_graduation(Request $request)
+    {
+        return $request->all();
+    }
+
+    public function Employee_Resume_secondary(Request $request)
+    {
+        return $request->all();
+    }
+    public function Employee_Resume_personal_info(Request $request)
+    {
+        return $request->all();
+    }
+
     public function emp_favorates(Request $request)
     {
         return view('dashboard.Activity_employee.favourite');
