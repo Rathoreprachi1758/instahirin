@@ -168,7 +168,7 @@
                                                 Funding</a></li>
                                         <li><a href="#">Trending News</a></li> --}}
                                         {{-- @include('partials.nav', ['menus' => $menus]) --}}
-                                        <li><a href="/industries/industries-we-serve/industries/startups">Startup
+                                        <li><a href="/startups">Startup
                                                 Funding</a></li>
                                         {{-- <div class="sub_nav"></div> --}}
                                         <a href="javascript:void(0)" class="closeNav">&nbsp;</a>
@@ -267,10 +267,9 @@
                                                     @endif
                                                 </li>
                                             @endif
-
                                         @endforeach
                                         {{-- // --}}
-                                        {{-- <li><a href="/industries/industries-we-serve/industries/startups">Startup
+                                        {{-- <li><a href="/startups">Startup
                                                 Funding</a></li> --}}
                                         <li><a href="/hire/developer/front-end-developement/portfolio">Portfolio</a>
                                         </li>

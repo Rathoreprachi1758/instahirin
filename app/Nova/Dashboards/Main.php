@@ -13,9 +13,10 @@ class Main extends Dashboard
      * @return array
      */
     public function cards()
-    {
+    {   
+        \Log::info('Nova dashboard menu');
         return [
-            new Help,
+            new Help, 
         ];
     }
 }

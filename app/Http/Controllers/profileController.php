@@ -431,9 +431,10 @@ class profileController extends Controller
     public function Employee_activity(Request $request)
     {   
         $InstaHirin_Onboard = InstaHirinOnboard::where('user_id', Auth::id())->get();
-        if($InstaHirin_Onboard)
+        // return $InstaHirin_Onboard;
+        if(count($InstaHirin_Onboard) != '0')
         {
-            return view('dashboard.Activity_employee.activity_employee',['InstaHirin_Onboard' => $InstaHirin_Onboard]);
+            return view('dashboard.Activity_employee.activity_employee',['InstaHirin_Onboard' => $InstaHirin_Onboard,'user'=>$this->userdata]);
         }
         return view('dashboard.Activity_employee.activity_employee');
     }
@@ -501,6 +502,34 @@ class profileController extends Controller
             }
              return redirect()->back()->with('message', ' Resume hasbeen Uploaded!');
         }
+    }
+    public function Employee_skills_update(Request $request)
+    {
+       return $request->all();
+    }
+
+    public function Employee_headline_update(Request $request)
+    {
+        return $request->all();
+    }
+
+    public function Employee_Resume_employement(Request $request)
+    {
+        return $request->all();
+    }
+
+    public function Employee_Resume_graduation(Request $request)
+    {
+        return $request->all();
+    }
+
+    public function Employee_Resume_secondary(Request $request)
+    {
+        return $request->all();
+    }
+    public function Employee_Resume_personal_info(Request $request)
+    {
+        return $request->all();
     }
     public function emp_favorates(Request $request)
     {

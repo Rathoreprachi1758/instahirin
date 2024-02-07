@@ -84,6 +84,12 @@ Route::middleware(['middleware' => 'auth.check'])->group(function () {
     //activity of employees
     Route::get('Employee-activity', [profileController::class, 'Employee_activity']);
     Route::post('upload-resume', [profileController::class, 'Employee_Resume'])->name('Employee.Resume.submit');
+    Route::post('upload/resume/skills', [profileController::class, 'Employee_skills_update'])->name('Employee.keyskills.submit');
+    Route::post('upload/Resume/headline', [profileController::class, 'Employee_headline_update'])->name('Employee.Resume.headline');
+    Route::post('upload/Resume/employement', [profileController::class, 'Employee_Resume_employement'])->name('Employee.Resume.employement');
+    Route::post('upload/Resume/graduation', [profileController::class, 'Employee_Resume_graduation'])->name('Employee.Resume.graduation');
+    Route::post('upload/Resume/secondary', [profileController::class, 'Employee_Resume_secondary'])->name('Employee.Resume.secondary');
+    Route::post('upload/Resume/personal_info', [profileController::class, 'Employee_Resume_personal_info'])->name('Employee.Resume.personal_info');
     Route::get('/Favorites', [profileController::class, 'emp_favorates'])->name('favorites');
     Route::get('Applied-jobs', [profileController::class, 'Applied_jobs'])->name('Applied.jobs');
     Route::get('Interview-schedule-calander', [profileController::class, 'schedule_interview_calander'])->name('Interview.schedule.calander');
