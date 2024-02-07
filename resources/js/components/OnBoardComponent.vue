@@ -550,19 +550,27 @@
             <strong>Upload Your Documents:</strong>
             <div class="addFile_section">
               <div class="addFile">
-                <file-upload
+                <!-- <file-upload
                   v-model="uploadedFiles"
                   ref="fileUpload"
                   :extensions="extensions"
                   :maxSize="maxSize"
                   :multiple="true"
-                  @input-filter="inputFilter"
-                  name="document[]"
-                >
+                  name="document[]">
                   <button class="btn btn-info">Upload</button>
-                </file-upload>
-
+                </file-upload> -->
+                <input
+                  type="file"
+                  name="document[]"
+                  id="document"
+                  @input-filter="inputFilter"
+                  @change="handleFileChange"
+                  ref="documentField"
+                 multiple/>
                 <!-- hidden document field -->
+                <div class="error-message" ref="documentError">
+                  {{ validationErrors.document }}
+                </div>
                 <!-- <input type="hidden" name="document[]" :value="uploadedFiles" /> -->
                 <div class="" v-if="errorMessage">
                   {{ errorMessage }}
@@ -1201,6 +1209,7 @@ export default {
       selectedSalaryRange: "",
       highest_qualification: "",
       uploadedFiles: [],
+      document: "",
       selectedNoticePeriod: "",
       availability: "",
       availability_date: "",
@@ -1252,7 +1261,17 @@ export default {
     //     this.limitReached = false;
     //   }
     // },
+    handleFileChange(event) {
+      const file = event.target.files[0];
+      this.document = file;
+      // Reset the error message for the document field
+      this.validationErrors.document = "";
 
+      //trigger validation for the document field
+      if (file) {
+        this.validateField("document");
+      }
+    },
     // prevent default form change
     handleFormKeyDown(event) {
       if (event.keyCode === 13) {
@@ -1548,9 +1567,10 @@ export default {
       //   for (const file of this.uploadedFiles) {
       //     formData.append("document[]", file);
       //   }
-      for (let i = 0; i < this.uploadedFiles.length; i++) {
-        formData.append("document[]", this.uploadedFiles[i]);
-      }
+      // for (let i = 0; i < this.uploadedFiles.length; i++) {
+      //   formData.append("document[]", this.uploadedFiles[i]);
+      // }
+      formData.append("document", this.document);
       formData.append("notice_period", this.selectedNoticePeriod);
       formData.append("availability", this.availability);
       formData.append("availability_date", this.availability_date);
@@ -1603,7 +1623,8 @@ export default {
           this.selectedCurrency = "USD";
           this.selectedSalaryRange = "";
           this.highest_qualification = "";
-          this.uploadedFiles = [];
+          // this.uploadedFiles = [];
+          this.document = "";
           this.selectedNoticePeriod = "";
           this.availability = "";
           this.availability_date = "";

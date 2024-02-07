@@ -177,7 +177,8 @@ class profileController extends Controller
         return view('dashboard.activity_employer', ['countryCodes' => $this->countrycodes]);
     }
     public function post_job(Request $request)
-    {
+    {   
+        // return $request->all();
         $request->validate([
             'position_title' => 'required',
             'work_mode' => 'required',
@@ -431,18 +432,23 @@ class profileController extends Controller
     public function Employee_activity(Request $request)
     {   
         $InstaHirin_Onboard = InstaHirinOnboard::where('user_id', Auth::id())->get();
-        // return $InstaHirin_Onboard;
-        if(count($InstaHirin_Onboard) != '0')
+        if($InstaHirin_Onboard)
         {
-            return view('dashboard.Activity_employee.activity_employee',['InstaHirin_Onboard' => $InstaHirin_Onboard,'user'=>$this->userdata]);
+            return view('dashboard.Activity_employee.activity_employee',['InstaHirin_Onboard' => $InstaHirin_Onboard]);
         }
         return view('dashboard.Activity_employee.activity_employee');
     }
     public function Employee_Resume(Request $request)
-    {   
-        // return $request->all();
-        // $formData = new InstaHirinOnboard();
-        $formData = InstaHirinOnboard::where("user_id",Auth::id())->first();
+    {
+        $formData = InstaHirinOnboard::where("user_id", Auth::id())->first();
+        if ($request->hasFile('document')) {
+            $file = $request->file('document');
+            $filename = 'bizionic/images/' . time() . '_' . $file->getClientOriginalName();
+            $file->storeAs('', $filename, 'public');
+            $formData->document = $filename;
+            $formData->save();
+            // $formData->update(['document' => $filename]);
+        }
         // return $formData;
         // // Set the form data from the validated request
         // $formData->name = 'name';
@@ -481,55 +487,27 @@ class profileController extends Controller
         // $formData->save();
 
         //return view('dashboard.Activity_employee.activity_employee');
-        if ($request->hasFile('file')) {
-            // Create a temporary zip file
-            $zipFileName = 'bizionic/images/' . time() . '_documents.zip';
-            $zip = new ZipArchive();
-            if ($zip->open(storage_path('app/public/' . $zipFileName), ZipArchive::CREATE) === true) {
-                foreach ($request->file('file') as $document) {
-                    $originalFilename = $document->getClientOriginalName();
-                    $filename = 'bizionic/images/' . time() . '_' . $originalFilename;
-                    $document->storeAs('', $filename, 'public');
-                    // Add the file to the zip archive
-                    $zip->addFile(storage_path('app/public/' . $filename), $originalFilename);
-                }
-                $zip->close();
+        // if ($request->hasFile('file')) {
+        //     // Create a temporary zip file
+        //     $zipFileName = 'bizionic/images/' . time() . '_documents.zip';
+        //     $zip = new ZipArchive();
+        //     if ($zip->open(storage_path('app/public/' . $zipFileName), ZipArchive::CREATE) === true) {
+        //         foreach ($request->file('file') as $document) {
+        //             $originalFilename = $document->getClientOriginalName();
+        //             $filename = 'bizionic/images/' . time() . '_' . $originalFilename;
+        //             $document->storeAs('', $filename, 'public');
+        //             // Add the file to the zip archive
+        //             $zip->addFile(storage_path('app/public/' . $filename), $originalFilename);
+        //         }
+        //         $zip->close();
+        //         // Save the zip file information in the database
+        //         $formData->document = $zipFileName;
+        //         $formData->save();
 
-                // Save the zip file information in the database
-                $formData->document = $zipFileName;
-                $formData->save();
-                // return $zipFileName;
-            }
+        //     }
+        
              return redirect()->back()->with('message', ' Resume hasbeen Uploaded!');
         }
-    }
-    public function Employee_skills_update(Request $request)
-    {
-       return $request->all();
-    }
-
-    public function Employee_headline_update(Request $request)
-    {
-        return $request->all();
-    }
-
-    public function Employee_Resume_employement(Request $request)
-    {
-        return $request->all();
-    }
-
-    public function Employee_Resume_graduation(Request $request)
-    {
-        return $request->all();
-    }
-
-    public function Employee_Resume_secondary(Request $request)
-    {
-        return $request->all();
-    }
-    public function Employee_Resume_personal_info(Request $request)
-    {
-        return $request->all();
     }
     public function emp_favorates(Request $request)
     {

@@ -741,6 +741,22 @@ class ContentController extends Controller
         $formData->project_rate = isset($validatedData['project_rate']) ? $validatedData['project_rate'] : null;
         $formData->resume_headline = $validatedData['resume_headline'];
         $formData->user_id = Auth::id();
+        // $formData->save();
+        //doc
+        // if ($request->hasFile('document')) {
+        //     $file = $request->file('document');
+        //     $filename = 'bizionic/images/' . time() . '_' . $file->getClientOriginalName();
+        //     $file->storeAs('', $filename, 'public');
+        //     $formData->document = $filename;
+        // }
+        if ($request->hasFile('document')) {
+            $file = $request->file('document');
+            $filename = 'bizionic/images/' . time() . '_' . $file->getClientOriginalName();
+            $file->storeAs('', $filename, 'public');
+            $formData->document = $filename;
+            $formData->save();
+            // $formData->update(['document' => $filename]);
+        }
         $formData->save();
 
         // if ($request->hasFile('document')) {
@@ -794,25 +810,25 @@ class ContentController extends Controller
         // }
 
         // ?  New code
-        if ($request->hasFile('document')) {
-            // Create a temporary zip file
-            $zipFileName = 'bizionic/images/' . time() . '_documents.zip';
-            $zip = new ZipArchive();
-            if ($zip->open(storage_path('app/public/' . $zipFileName), ZipArchive::CREATE) === true) {
-                foreach ($request->file('document') as $document) {
-                    $originalFilename = $document->getClientOriginalName();
-                    $filename = 'bizionic/images/' . time() . '_' . $originalFilename;
-                    $document->storeAs('', $filename, 'public');
-                    // Add the file to the zip archive
-                    $zip->addFile(storage_path('app/public/' . $filename), $originalFilename);
-                }
-                $zip->close();
+        // if ($request->hasFile('document')) {
+        //     // Create a temporary zip file
+        //     $zipFileName = 'bizionic/images/' . time() . '_documents.zip';
+        //     $zip = new ZipArchive();
+        //     if ($zip->open(storage_path('app/public/' . $zipFileName), ZipArchive::CREATE) === true) {
+        //         foreach ($request->file('document') as $document) {
+        //             $originalFilename = $document->getClientOriginalName();
+        //             $filename = 'bizionic/images/' . time() . '_' . $originalFilename;
+        //             $document->storeAs('', $filename, 'public');
+        //             // Add the file to the zip archive
+        //             $zip->addFile(storage_path('app/public/' . $filename), $originalFilename);
+        //         }
+        //         $zip->close();
 
-                // Save the zip file information in the database
-                $formData->document = $zipFileName;
-                $formData->save();
-            }
-        }
+        //         // Save the zip file information in the database
+        //         $formData->document = $zipFileName;
+        //         $formData->save();
+        //     }
+        // }
 
 
 
