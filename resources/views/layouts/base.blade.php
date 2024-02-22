@@ -173,7 +173,7 @@
                                                 Funding</a></li>
                                         <li><a href="#">Trending News</a></li> --}}
                                         {{-- @include('partials.nav', ['menus' => $menus]) --}}
-                                        <li><a href="/startups">Startup
+                                        <li><a href="/startups">Startups
                                                 Funding</a></li>
                                         {{-- <div class="sub_nav"></div> --}}
                                         <a href="javascript:void(0)" class="closeNav">&nbsp;</a>
