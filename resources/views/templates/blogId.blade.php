@@ -1,7 +1,7 @@
 <!-- blogs section  -->
 @php
-$blogId = request('blogId');
-$blog = \App\Models\Blogs::find($blogId);
+    $blogId = request('blogId');
+    $blog = \App\Models\Blogs::where('url_slug',$blogId)->first();
 @endphp
 
 <div class="blogsSection" style="background-color:#e6e6e6">

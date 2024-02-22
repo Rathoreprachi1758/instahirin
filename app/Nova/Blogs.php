@@ -55,6 +55,9 @@ class Blogs extends Resource
             Image::make('Blog Image', 'image')
                 ->disableDownload()
                 ->nullable(),
+
+            Text::make('Url slug', 'url_slug')->rules('required', 'min:6', 'max:70') ->placeholder('Enter URL slug...'),
+
             Avatar::make('Author Avatar', 'author_avatar')->disableDownload()->nullable(),
             // Gravatar::make('Author Avatar', 'author_avatar')->maxWidth(30),
             Text::make('Author Name', 'author_name')->rules('required'),

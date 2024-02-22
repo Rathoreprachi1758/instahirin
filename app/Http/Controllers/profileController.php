@@ -5,9 +5,12 @@ namespace App\Http\Controllers;
 use App\Models\HireRequest;
 use Auth;
 use ZipArchive;
+use Carbon\Carbon;
+use DateTime;
 use Illuminate\Http\Request;
 use App\Models\User;
 use App\Models\Job;
+use App\Models\EmploymentHistory;
 use App\Models\Country;
 use App\Models\Creditrequest;
 use App\Models\Expert;
@@ -344,13 +347,6 @@ class profileController extends Controller
         // // return gettype($hireMeApplications);
         // $insta_onboard = $instaOnboard->concat($hireMeApplications);
         // // return $insta_onboard;
-
-
-
-
-
-
-        //////
         $insta_talent = HireRequest::where('user_id', Auth::id())->with('expert')->get();
 
         $instaOnboard = $insta_talent->map(function ($hireRequest) {
@@ -431,116 +427,192 @@ class profileController extends Controller
     //Talent
     public function Employee_activity(Request $request)
     {   
-        $InstaHirin_Onboard = InstaHirinOnboard::where('user_id', Auth::id())->get();
+        $InstaHirin_Onboard = InstaHirinOnboard::where('user_id',Auth::id())->get();
         if(count($InstaHirin_Onboard) != '0')
         { 
-            return view('dashboard.Activity_employee.activity_employee',['InstaHirin_Onboard' => $InstaHirin_Onboard,'userdata' => $this->userdata]);
+            return view('dashboard.Activity_employee.activity_employee',['InstaHirin_Onboard' => $InstaHirin_Onboard,'userdata' => $this->userdata,'countryCodes' => $this->countrycodes]);
 
         }
-        return view('dashboard.Activity_employee.activity_employee');
+        return view('dashboard.Activity_employee.activity_employee',['userdata' => $this->userdata,'countryCodes' => $this->countrycodes]);
     }
     public function Employee_Resume(Request $request)
-    {
-        $formData = InstaHirinOnboard::where("user_id", Auth::id())->first();
+    {   
+        $request->validate([
+            'document' => 'required|mimes:doc,pdf,rtf,docx|max:2048',
+        ]);
+        
+        $filename = null;
+
         if ($request->hasFile('document')) {
             $file = $request->file('document');
             $filename = 'bizionic/images/' . time() . '_' . $file->getClientOriginalName();
             $file->storeAs('', $filename, 'public');
-            $formData->document = $filename;
-            $formData->save();
-            // $formData->update(['document' => $filename]);
+            $formattedDate = now()->format('d-m-Y');
         }
-        // return $formData;
-        // // Set the form data from the validated request
-        // $formData->name = 'name';
-        // $formData->contact_details = 'contact_details';
-        // $formData->email = 'email';
-        // $formData->current_location = 'current_location';
-        // //$formData->current_location   = isset('current_location']) ? 'current_location'] : '-';
-        // $formData->skills_description = 'skills_description';
-        // $formData->current_title = 'current_title';
-        // $formData->experience_year = 'experience_year';
-        // $formData->experience_month = 'experience_month';
-        // $formData->key_skills = json_decode('key_skills');
-        // $formData->expert_in = json_decode('expert_in');
-        // $formData->also_work_with = json_decode('also_work_with');
-        // // $formData->last_company = isset('last_company') ? 'last_company': '-';
-        // // $formData->company_location = isset('company_location']) ? 'company_location'] : '-';
-        // $formData->company_location = 'company_location';
-        // // $formData->currently_working_here = isset('currently_working_here') ? 'currently_working_here' : '-';
-        // // $formData->working_since_date = 'working_since_date';
-        // // $formData->working_since_date2 = isset('working_since_date2') ? 'working_since_date2' : '-';
-        // // $formData->annual_salary_currency = 'annual_salary_currency'];
-        // $formData->annual_salary = 'annual_salary';
-        // $formData->highest_qualification = 'highest_qualification';
-        // // $formData->notice_period = isset('notice_period') ? 'notice_period' : '-';
-        // $formData->availability = 'availability';
-        // $formData->availability_date = 'availability_date';
-        // $formData->availability_time_from = 'availability_time_from';
-        // $formData->availability_time_to = 'availability_time_to';
-        // $formData->payment_option = 'payment_option';
-        // // $formData->sub_payment_option = isset('sub_payment_option') ? 'sub_payment_option': null;
-        // // $formData->monthly_rate = isset('monthly_rate') ? 'monthly_rate' : null;
-        // // $formData->hourly_rate = isset('hourly_rate') ? 'hourly_rate' : null;
-        // // $formData->project_rate = isset('project_rate') ? 'project_rate' : null;
-        // $formData->resume_headline = 'resume_headline';
-        // $formData->user_id = Auth::id();
-        // $formData->save();
-
-        //return view('dashboard.Activity_employee.activity_employee');
-        // if ($request->hasFile('file')) {
-        //     // Create a temporary zip file
-        //     $zipFileName = 'bizionic/images/' . time() . '_documents.zip';
-        //     $zip = new ZipArchive();
-        //     if ($zip->open(storage_path('app/public/' . $zipFileName), ZipArchive::CREATE) === true) {
-        //         foreach ($request->file('file') as $document) {
-        //             $originalFilename = $document->getClientOriginalName();
-        //             $filename = 'bizionic/images/' . time() . '_' . $originalFilename;
-        //             $document->storeAs('', $filename, 'public');
-        //             // Add the file to the zip archive
-        //             $zip->addFile(storage_path('app/public/' . $filename), $originalFilename);
-        //         }
-        //         $zip->close();
-        //         // Save the zip file information in the database
-        //         $formData->document = $zipFileName;
-        //         $formData->save();
-
-        //     }
-        
+       
+        $user = User::find(Auth::id());
+        $formData = InstaHirinOnboard::updateOrCreate(
+            ['user_id' => Auth::id()],
+            ['document' => $filename,
+            'name' => $user->name,
+            'contact_details' => $user->country_code .''.$user->mobilenumber,
+            'email' => $user->email,
+            'Resume_update_date'=>$formattedDate],
+        );
              return redirect()->back()->with('message', ' Resume hasbeen Uploaded!');
     }
+
+    public function Employee_headline_update(Request $request)
+    {
+        $request->validate([
+            'Resume_headline' => 'required|min:6',
+        ]);
+        $userId = Auth::id();
+        $headline = $request->input('Resume_headline');
+        $formData = InstaHirinOnboard::updateOrCreate(
+            ['user_id' => $userId],
+            ['resume_headline' => $headline],
+        );
+        return redirect()->back()->with('message', 'Resume Headline Uploaded!');
+    
+    }
+
     public function Employee_skills_update(Request $request)
     {
        return $request->all();
     }
 
-    public function Employee_headline_update(Request $request)
-    {
-        return $request->all();
-    }
-
     public function Employee_Resume_employement(Request $request)
-    {
+    {   
+
+    
         return $request->all();
+          /////EmploymentHistory/////pending
+        // $request->validate([
+        //     'Position_title' => 'required|min:6',
+        //     'company_name' => 'required|min:6',
+        //     'work_mode' => 'required',
+        //     'from_date' => 'required|min:6',
+        //     'to_date' => 'required|min:6',
+        //     'discription' => 'required|max:160',
+        //     'Notice_Period' => 'required',
+        // ]);
+        // $userId = Auth::id();
+        // $formData = InstaHirinOnboard::updateOrCreate(
+        //     ['user_id' => $userId],
+        //     ['current_title' => $request->Position_title,
+        //     'working_since_date'=> $request->from_date,
+        //     'working_since_date2'=> $request->from_date,
+        //     'last_company' =>  $request->company_name,
+        //     'availability' =>  $request->work_mode,
+        //     'skills_description' =>  $request->discription,
+        //     'notice_period' =>  $request->Notice_Period],
+        // );
+        // return redirect()->back()->with('message', 'Employement details Uploaded!');
     }
 
     public function Employee_Resume_graduation(Request $request)
     {
-        return $request->all();
+        // return $request->all();
+        $request->validate([
+            'highest_qualification' => 'required',
+            'collage_name' => 'required|min:4',
+            'course_name' => 'required',
+            'education_mode' => 'required',
+            'from_date' => 'required',
+            'to_date' => 'required',
+        ]);
+        $userId = Auth::id();
+        $from_date1 =  date_format(new DateTime($request->from_date), 'd-m-Y');
+        $todat2e =  date_format(new DateTime($request->to_date), 'd-m-Y');
+        $formData = InstaHirinOnboard::updateOrCreate(
+            ['user_id' => $userId],
+            ['highest_qualification' => $request->highest_qualification,
+            'collage_name'=> $request->collage_name,
+            'discription' => $request->course_name,
+            'education_mode'=> $request->education_mode,
+            'from_date' =>  $request->from_date,
+            'to_date' =>  $request->to_date],
+        );
+        return redirect()->back()->with('message', 'Education details Uploaded!');
     }
 
     public function Employee_Resume_secondary(Request $request)
     {
-        return $request->all();
+        // return $request->all();
+        $request->validate([
+            'highest_qualification2' => 'required',
+            'course_name2' => 'required',
+            'college_name2' => 'required',
+            'work_mode2' => 'required',
+            'from_date2' => 'required',
+            'to_date2' => 'required',
+        ]);
+        $userId = Auth::id();
+        $from_date =  date_format(new DateTime($request->from_date2), 'd-m-Y');
+        $todate =  date_format(new DateTime($request->to_date2), 'd-m-Y');
+        $formdata = InstaHirinOnboard::updateOrCreate(
+            ['user_id' => $userId],
+            [
+             'secondary_qualification'=>$request->highest_qualification2,
+             'course_name2'=>$request->course_name2,
+             'college_name2'=>$request->college_name2,
+             'work_mode2'=>$request->work_mode2,
+             'from_date2'=>$from_date,
+             'to_date2'=>$todate,
+
+            ],
+        );
+        return redirect()->back()->with('message', 'Education details Uploaded!');
     }
+    
     public function Employee_Resume_personal_info(Request $request)
     {
-        return $request->all();
+        // return $request->all();
+        $request->validate([
+            'full_name' => 'required',
+            'email' => 'required|email',
+            'Total_work_experience' => 'required',
+            'country_code' => 'required',
+            'Mobile_number' => 'required',
+            'Availability' => 'required',
+            'location' => 'required',
+            'Home_town' => 'required',
+            'work_permit' => 'required',
+            'dob' => 'required',
+            'nationality' => 'required',
+        ]);
+        $userId = Auth::id();
+        $formattedDate = date_format(new DateTime($request->dob), 'd-m-Y');
+        // return $formattedDate;
+        $formdata = InstaHirinOnboard::updateOrCreate(
+            ['user_id' => $userId],
+            [
+                'name' => $request->full_name,
+                'email' => $request->email,
+                'dob'   => $formattedDate,
+                'contact_details' => $request->country_code.$request->Mobile_number,
+                'experience_year' => $request->Total_work_experience,
+                'availability' => $request->Availability,
+                'current_location' => $request->location,
+                'Home_town' => $request->Home_town,
+                'work_permit' => $request->work_permit,
+                'nationality' => $request->nationality
+            ],
+        );
+        return redirect()->back()->with('message', 'Personal details Updated!');
+        
     }
-<<<<<<< HEAD
-=======
-
->>>>>>> 97c36e28f09e95e076fac52878578bec2716627a
+    public function Employee_Resume_delete($id)
+    {    
+        $instaHirin = InstaHirinOnboard::findOrFail($id);
+        if ($instaHirin->document) {
+            \Storage::disk('public')->delete($instaHirin->document);
+            $instaHirin->document = null;
+        }
+        $instaHirin->save();
+        return redirect()->back()->with('message', ' Resume hasbeen Deleted!');
+    }
     public function emp_favorates(Request $request)
     {
         return view('dashboard.Activity_employee.favourite');
@@ -562,5 +634,42 @@ class profileController extends Controller
     public function employee_History(Request $request)
     {
         return view('dashboard.Activity_employee.History');
+    }
+    public function master_company(Request $request)
+    {
+        return view('dashboard.master.master');
+    }
+    public function master_department(Request $request)
+    {
+        return view('dashboard.master.department');
+    }
+
+    public function master_designation(Request $request)
+    {
+        return view('dashboard.master.designation');
+    }
+    public function master_shift(Request $request)
+    {
+        return view('dashboard.master.shift_master_daily');
+    }
+    public function master_category(Request $request)
+    {
+        return view('dashboard.master.category');
+    }
+    public function master_data(Request $request)
+    {
+        return view('dashboard.master.Import');
+    }
+    public function master_config(Request $request)
+    {
+        return view('dashboard.master.employee_configuration');
+    }
+    public function master_leave(Request $request)
+    {
+        return view('dashboard.master.leave');
+    }
+    public function master_holiday(Request $request)
+    {
+        return view('dashboard.master.Holiday');
     }
 }

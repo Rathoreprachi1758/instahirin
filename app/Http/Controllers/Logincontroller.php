@@ -96,14 +96,11 @@ class Logincontroller extends Controller
             ],
         ]);
         $credentials = $request->only('email', 'password');
-        \Log::info('attempting ogin');
-        if (Auth::attempt($credentials)) {
-            \Log::info('vamshi============');       
+        if (Auth::attempt($credentials)) {     
             $request->session()->regenerate();
             return redirect()->intended('dashboard');
             // return view('dashboard.dashboard');
         } else {
-            \Log::info('furqan ji========');
             return redirect()->back()->with('message', 'Invalid email or password. Please try again.');
         }
     }

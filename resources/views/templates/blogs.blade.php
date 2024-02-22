@@ -9,7 +9,6 @@
             <div class="custom_tittle ">
                 <h2 class="text-white"><strong>Our</strong> Latest Blogs</h2>
             </div>
-
             <div class="blog_avatar aos-init aos-animate">
                 <span><img src="/bizionic/images/blogAvatar.png" alt="#" /></span>
             </div>

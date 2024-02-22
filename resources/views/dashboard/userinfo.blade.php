@@ -12,13 +12,11 @@
         width: 100%;
     }
 </style>
-{{-- <h1 style="margin-left:675px">This is user info</h1> --}}
 <link rel="stylesheet " href="{{ asset('css/css/profilestyle.css') }} ">
 <link rel="stylesheet " href="{{ asset('css/css/profileresponsive.css') }} ">
 <div class="fr-section">
     <div class="fr-section_detail" style="margin-top: -88px;">
         <div class="dashboard_innerPages">
-            {{-- @include('errors.errors') --}}
             @if (Session::has('message'))
                 <div class="alert alert-success">
                     <span style="margin-left:330px">{{ Session::get('message') }}</span>
@@ -101,8 +99,6 @@
                                             </div>
                                             <div class="col-xxl-9 col-xl-9 col-lg-8 col-md-7">
                                                 <div class="p_userInfo_editInput">
-                                                    {{-- <input type="text" value="{{$user->nationality}}"
-                                                        name="nationality" /> --}}
                                                     <div class="auth_select_info" style="width: 52%; margin-top:-6px">
                                                         <select name="nationality" required style="width: 100%;">
                                                             <option value="">Select a country code

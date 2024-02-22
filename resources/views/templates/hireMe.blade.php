@@ -301,7 +301,9 @@
                                         </div>
 
                                         <div class="col-lg-4 col-md-5">
-                                            <a href="/hire/developer/developers-other/instaHirin-Onboard-Form"
+                                            {{-- <a href="/hire/developer/developers-other/instaHirin-Onboard-Form"
+                                                class="btn_default_white">Let’s Get You Onboarded</a> --}}
+                                            <a href="hire-me/instaHirin-Onboard-Form"
                                                 class="btn_default_white">Let’s Get You Onboarded</a>
                                         </div>
                                     </div>
@@ -315,7 +317,7 @@
                                         </div>
 
                                         <div class="col-lg-4 col-md-5">
-                                            <a href="/bizionic-team#goto_form" class="btn_default_white">Join Team
+                                            <a href="/about-us/bizionic-team#goto_form" class="btn_default_white">Join Team
                                                 Bizionic</a>
                                         </div>
                                     </div>
@@ -373,7 +375,9 @@
 
                                         <p class="text-left p_color">Get employed at your terms, desired companies,
                                             time, hours and working conditions.</p>
-                                        <a href="/hire/developer/front-end-developement/revolution-journey"
+                                        {{-- <a href="/hire/developer/front-end-developement/revolution-journey"
+                                            class="btn_default revoBtn">Revolutionize Your Employment Journey!</a> --}}
+                                            <a href="/hire-me/revolution-journey"
                                             class="btn_default revoBtn">Revolutionize Your Employment Journey!</a>
                                     </div>
                                 </div>
@@ -389,7 +393,9 @@
                                 <h2 class="text-white"><strong>Be Your</strong> Own BOSS</h2>
                                 <p class="text-white">Get <b>employed</b> at your terms, desired companies, time, hours
                                     and working conditions.</p>
-                                <a href="/hire/developer/front-end-developement/own-boss-learn-more"
+                                {{-- <a href="/hire/developer/front-end-developement/own-boss-learn-more"
+                                    class="btn_default_white mt-4">Learn More</a> --}}
+                                <a href="/hire-me/own-boss-learn-more"
                                     class="btn_default_white mt-4">Learn More</a>
                             </div>
                         </div>
@@ -413,7 +419,7 @@
                                 </h2>
                                 <p class="p_color">Join Forces with Our Proficient Software Developers,<br> Creative
                                     Designers, and Sharp Marketers.</p>
-                                <a href="/bizionic-team#goto_form" class="btn_default mt-4">Join Team Bizionic</a>
+                                <a href="/about-us/bizionic-team#goto_form" class="btn_default mt-4">Join Team Bizionic</a>
                             </div>
                         </div>
                     </div>

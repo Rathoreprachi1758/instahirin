@@ -740,7 +740,7 @@ class ContentController extends Controller
         $formData->hourly_rate = isset($validatedData['hourly_rate']) ? $validatedData['hourly_rate'] : null;
         $formData->project_rate = isset($validatedData['project_rate']) ? $validatedData['project_rate'] : null;
         $formData->resume_headline = $validatedData['resume_headline'];
-        $formData->user_id = Auth::id();
+        // $formData->user_id = Auth::id();
         // $formData->save();
         //doc
         // if ($request->hasFile('document')) {
@@ -922,7 +922,9 @@ class ContentController extends Controller
     // }
 
     public function blogDetail(Request $request)
-    {
+    {   
+
+        // return $request->all();
         $blogId = $request->query('blogId');
         $blog = Blogs::find($blogId);
         return view('templates.blogId', ['blog' => $blog]);

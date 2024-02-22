@@ -69,7 +69,10 @@
 
     <div class="">
       <div class="showAll_btn">
-        <a href="/hire/developer/developers-other/hirin-view-all-job" class="btn_default"
+        <!-- <a href="/hire/developer/developers-other/hirin-view-all-job" class="btn_default"
+          >View All</a
+        > -->
+        <a href="/hire-me/view-all-job" class="btn_default"
           >View All</a
         >
       </div>

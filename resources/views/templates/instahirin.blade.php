@@ -1,10 +1,5 @@
 <div class="insta_hirin_page ">
 
-
-
-
-
-
     <experts-component></experts-component>
 
 
@@ -28,7 +23,9 @@
                                     <b>Bizionic InstaHirin</b> with scout the Globe to provide you <br>
                                     with the required "TALENT" within 24/Hours.
                                 </p>
-                                <a href="/hire/developer/developers-other/instaRequirement"
+                                {{-- <a href="/hire/developer/developers-other/instaRequirement"
+                                    class="btn_default_white mt-2">Post Your Requirement</a> --}}
+                                <a href="/instahirin/instaRequirement"
                                     class="btn_default_white mt-2">Post Your Requirement</a>
                             </div>
                         </div>
@@ -194,7 +191,9 @@
                                         </ul>
 
 
-                                        <a href="/hire/developer/developers-other/talent-onboard-process"
+                                        {{-- <a href="/hire/developer/developers-other/talent-onboard-process"
+                                            class="btn_default_white  m-auto">Talent Onboarding Assessment Process</a> --}}
+                                            <a href="instaHirin/talent-onboard-process"
                                             class="btn_default_white  m-auto">Talent Onboarding Assessment Process</a>
                                     </div>
                                 </div>
@@ -249,7 +248,8 @@
                                 </ul>
 
 
-                                <a href="/industries/industries-we-serve/industries/global-talent"
+                                {{-- <a href="/industries/industries-we-serve/industries/global-talent" --}}
+                                <a href="instahirin/global-talent"
                                     class="btn_default_white">Revolutionize Your Talent Acquisition Journey!</a>
                             </div>
                         </div>

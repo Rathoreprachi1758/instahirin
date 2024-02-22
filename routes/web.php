@@ -77,10 +77,20 @@ Route::middleware(['middleware' => 'auth.check'])->group(function () {
     Route::get('Interview-schedule', [profileController::class, 'Interviewschedule']);
     Route::post('Meeting-link', [ProfileController::class, 'schedule_interview'])->name('interview_schedule');
     //emp
-    // Route::get('activity-employee-talent' [profileController::class, 'Employer_activity']);
+    // Route::get('master',function()
     // {
-    //    return view('dashboard.activity_employer');
+    //    return view('dashboard.master.master');
     // });
+    Route::get('/master',[profileController::class,'master_company'])->name('master.company');
+    Route::get('/Department',[profileController::class,'master_department'])->name('master.department');
+    Route::get('/Designation',[profileController::class,'master_designation'])->name('master.designation');
+    Route::get('/Shift-master-data',[profileController::class,'master_shift'])->name('master.shift_master');
+    Route::get('/Category',[profileController::class,'master_category'])->name('master.category');
+    Route::get('/Employee-master',[profileController::class,'master_company'])->name('master.emp_master');
+    Route::get('/Employee-configuration',[profileController::class,'master_config'])->name('master.shift_config');
+    Route::get('/Mastery-data',[profileController::class,'master_data'])->name('master.master_data');
+    Route::get('/Leave-table',[profileController::class,'master_leave'])->name('master.master_leave');
+    Route::get('/Holiday-table',[profileController::class,'master_holiday'])->name('master.master_holiday');
     //activity of employees
     Route::get('Employee-activity', [profileController::class, 'Employee_activity']);
     Route::post('upload-resume', [profileController::class, 'Employee_Resume'])->name('Employee.Resume.submit');
@@ -90,6 +100,7 @@ Route::middleware(['middleware' => 'auth.check'])->group(function () {
     Route::post('upload/Resume/graduation', [profileController::class, 'Employee_Resume_graduation'])->name('Employee.Resume.graduation');
     Route::post('upload/Resume/secondary', [profileController::class, 'Employee_Resume_secondary'])->name('Employee.Resume.secondary');
     Route::post('upload/Resume/personal_info', [profileController::class, 'Employee_Resume_personal_info'])->name('Employee.Resume.personal_info');
+    Route::get('upload/Resume/delete/{id}', [profileController::class, 'Employee_Resume_delete'])->name('Employee.Resume.delete');
     //
     Route::get('/Favorites', [profileController::class, 'emp_favorates'])->name('favorites');
     Route::get('Applied-jobs', [profileController::class, 'Applied_jobs'])->name('Applied.jobs');
@@ -97,7 +108,6 @@ Route::middleware(['middleware' => 'auth.check'])->group(function () {
     Route::get('offers', [profileController::class, 'employee_offers'])->name('Applied.offers');
     Route::get('Talent-History', [profileController::class, 'employee_History'])->name('Applied.History');
     //
-
 });
 
 Route::get('/{levelOneSlug?}/{levelTwoSlug?}/{levelThreeSlug?}/{levelFourSlug?}', 'App\Http\Controllers\ContentController@index')->name('index');
@@ -143,8 +153,8 @@ Route::get('/hire/developer/developers-other/HireForm/{id}', [ContentController:
 
 // Apply Form
 Route::get('/industries/industries-we-serve/industries/apply-now-form/{jobId}', [ContentController::class, 'applyShow'])->name('apply-now-form');
-Route::get('/hire/developer/front-end-developement/blogId/{blogId}', [ContentController::class, 'blogDetail'])->name('blogs-detail');
-//
+// Route::get('/hire/developer/front-end-developement/blogId/{blogId}', [ContentController::class, 'blogDetail'])->name('blogs-detail');
+// Route::get('/blogs/{blogId}', [ContentController::class, 'blogDetail'])->name('blogs-detail');
 //Thankyou page
 // Route::get('/thankyou',[App\Http\Controllers\ContentController::class, 'thanksMessage'])->name('Thankyou');
 Route::get('/industries/industries-we-serve/industries/thankyou', [App\Http\Controllers\ContentController::class, 'thanksMessage'])->name('Thankyou');

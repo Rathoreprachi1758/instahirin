@@ -1402,7 +1402,7 @@
 
                 <div class="vr"></div>
                 <div class="col-lg-3 col-md-6  pt-4 pb-4  colSet">
-                    <a href="mailto:services@eshare.ai">
+                    <a href="mailto:info@bizionictech.com">
                         <i class="pt-3 fa fa-envelope-o fa-3x" aria-hidden="true"></i>
                         <p class="mt-4 h5">Email</p>
                     </a>

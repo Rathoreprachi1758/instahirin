@@ -499,7 +499,7 @@
                         <p>For further details or to begin your application process, please contact</p>
 
                         <div class="applyBtn">
-                            <a href="/industries/industries-we-serve/industries/funding-apply-now-form"
+                            <a href="startups/funding-apply-now-form"
                                 class="btn_default" target="_blank">Apply Now</a>
                         </div>
 

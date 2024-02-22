@@ -35,10 +35,11 @@
                             </a>
                         </div>
                     </div>
+                    <p>-------</p>
                     <div class="col-lg-3 col-md-4 portfolioCol  aos-init aos-animate" data-aos="flip-left"
                         data-aos-duration="2000" data-aos-easing="ease-out-cubic">
                         <div class="at_bizionicSteps_col">
-                            <a href="/hire/developer/front-end-developement/product-letwizard">
+                            <a href="/portfolio/product-letwizard">
                                 <img src="/bizionic/images/portfolio_pic5.png" alt="#" />
                                 <b><i class="fa fa-long-arrow-right" aria-hidden="true"></i></b>
                             </a>

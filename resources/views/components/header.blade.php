@@ -143,7 +143,7 @@
                                         <li><a href="{{url('Employee-activity')}}">► Employee / Talent</a></li>
                                     </ul>
                                 </li>
-                                <li><a href="javascript:void(0)"><span><i class="fa fa-male"
+                                <li><a href="{{url('/master')}}"><span><i class="fa fa-male"
                                                 aria-hidden="true"></i></span>
                                         Master
                                         <em class="menu_icon"><i class="fa fa-angle-down"

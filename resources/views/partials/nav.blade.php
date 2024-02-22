@@ -7,8 +7,14 @@
                 $btnDefault = $menu->data->is_action_item ? true : false;
                 $customClass = $menu->data->is_action_item ? $menu->data->is_action_item : '';
                 $floatingMenuClass = 'floatingMenu ' . $menu->data->slug . 'Floating_menu';
+                $excludeMenuNames = ['Services','Industries',
+                'startups', 'portfolio', 'product-eShare', 'product-letwizard', 'product-nestle',
+                'product-continental', 'product-prime-video', 'product-dubai-land', 'product-alchemy',
+                'product-hubun', 'product-work-vital', 'product-black-smokeHouse', 'product-time-house',
+                'product-bhuth', 'product-little-amigos', 'product-maine-rest', 'product-shan-food',
+                'blogs', 'funding-apply-now-form', 'blogId','Insta Hirin View All','global-talent','Talent Onboard Process','Insta Requirement Form','own-boss-learn-more','revolution-journey','insta Hirin Onboard Form','hireme-view-all-job'];
             @endphp
-            @if ($menu->name !== 'Services' && $menu->name !== 'Industries')
+            @if (!in_array($menu->name, $excludeMenuNames))
                 <li @class(['has_nav' => $hasNav])>
                     {{-- <a href="{{route('index',$menu->data->slug)}}" @class([$customClass=>$btnDefault])>{{$menu->name}}<small><i class="fa fa-angle-down" aria-hidden="true"></i></small></a> --}}
                     <a href="{{ route('index', $menu->data->slug) }}"

@@ -138,8 +138,13 @@
                                         class="s_fb"><i class="fa fa-facebook-official" aria-hidden="true"></i></a>
                                     <a href="https://www.instagram.com/bizionic_technologies/" target="_blank"
                                         class="s_inst"><i class="fa fa-instagram" aria-hidden="true"></i></a>
-                                    <a href="https://twitter.com/bizionictech" target="_blank" class="s_tw"><i
-                                            class="fa fa-twitter-square" aria-hidden="true"></i></a>
+                                    <a href="https://twitter.com/bizionictech" target="_blank" class="s_tw">
+                                            <i>
+                                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" style="width:14px; height:15px;">
+                                                    <path d="M389.2 48h70.6L305.6 224.2 487 464H345L233.7 318.6 106.5 464H35.8L200.7 275.5 26.8 48H172.4L272.9 180.9 389.2 48zM364.4 421.8h39.1L151.1 88h-42L364.4 421.8z" fill="white"/>
+                                                </svg>
+                                            </i>
+                                    </a>
                                     <a href="https://www.linkedin.com/company/bizionic-technologies-and-marketing-solutions/"
                                         target="_blank" class="s_link"><i class="fa fa-linkedin-square"
                                             aria-hidden="true"></i></a>
@@ -271,9 +276,9 @@
                                         {{-- // --}}
                                         {{-- <li><a href="/startups">Startup
                                                 Funding</a></li> --}}
-                                        <li><a href="/hire/developer/front-end-developement/portfolio">Portfolio</a>
+                                        <li><a href="/portfolio">Portfolio</a>
                                         </li>
-                                        <li><a href="/hire/developer/front-end-developement/blogs">Blogs</a></li>
+                                        <li><a href="/blogs">Blogs</a></li>
                                     </ul>
                                 </div>
 
@@ -299,9 +304,6 @@
                         </div>
                         <div class="menuIcon"></div>
                         @include('partials.nav')
-
-
-
                     </div>
                 </div>
             </div>
