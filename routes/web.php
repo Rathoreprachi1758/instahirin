@@ -86,7 +86,7 @@ Route::middleware(['middleware' => 'auth.check'])->group(function () {
     Route::get('/Designation',[profileController::class,'master_designation'])->name('master.designation');
     Route::get('/Shift-master-data',[profileController::class,'master_shift'])->name('master.shift_master');
     Route::get('/Category',[profileController::class,'master_category'])->name('master.category');
-    Route::get('/Employee-master',[profileController::class,'master_company'])->name('master.emp_master');
+    Route::get('/Employee-master',[profileController::class,'emp_master'])->name('master.emp_master');
     Route::get('/Employee-configuration',[profileController::class,'master_config'])->name('master.shift_config');
     Route::get('/Mastery-data',[profileController::class,'master_data'])->name('master.master_data');
     Route::get('/Leave-table',[profileController::class,'master_leave'])->name('master.master_leave');

@@ -643,7 +643,11 @@ class profileController extends Controller
     {
         return view('dashboard.master.department');
     }
-
+    
+    public function emp_master(Request $request)
+    {
+        return view('dashboard.master.employee_master');
+    }
     public function master_designation(Request $request)
     {
         return view('dashboard.master.designation');
