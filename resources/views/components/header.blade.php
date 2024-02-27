@@ -42,8 +42,9 @@
             icon.querySelector('i').classList.toggle('fa-eye');
             icon.querySelector('i').classList.toggle('fa-eye-slash');
         }
+
         //
-        function toggleSublist(element) {           
+        function toggleSublist(element) {
             element.classList.toggle('open_sublist');
         }
     </script>
@@ -69,13 +70,13 @@
                 <div class="logo" style="margin-left: -58px;">
                     <a href="{{ url('/about-us') }}"><img src="{{ asset('css/images/logo.png') }}" alt="Logo"></a>
                 </div>
-                
+
 
                 <div class="header_menu">
                     <div class="authBttns">
                         <div class="dropdown">
                             <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton"
-                                data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                    data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                                 User profile
                             </button>
                             <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
@@ -89,7 +90,6 @@
         </div>
     </div>
 </header>
-
 
 
 <main>
@@ -114,7 +114,8 @@
                             <ul>
                                 <li>
                                     <a href="/dashboard-return" class="active"><span><i class="fa fa-user-circle-o"
-                                                aria-hidden="true"></i></span> Home <em class="menu_icon"><i
+                                                                                        aria-hidden="true"></i></span>
+                                        Home <em class="menu_icon"><i
                                                 class="fa fa-angle-down" aria-hidden="true"></i></em></a>
                                 </li>
                                 {{-- <li>
@@ -130,7 +131,7 @@
                                 <li><a href="/profile"><span><i class="fa fa-id-card" aria-hidden="true"></i></span>
                                         Profile
                                         <em class="menu_icon"><i class="fa fa-angle-down"
-                                                aria-hidden="true"></i></em></a>
+                                                                 aria-hidden="true"></i></em></a>
                                 </li>
                                 <li class="has_list open_sublist" onclick="toggleSublist(this)">
                                     <a href="javascript:void(0)">
@@ -144,15 +145,16 @@
                                     </ul>
                                 </li>
                                 <li><a href="{{url('/master')}}"><span><i class="fa fa-male"
-                                                aria-hidden="true"></i></span>
+                                                                          aria-hidden="true"></i></span>
                                         Master
                                         <em class="menu_icon"><i class="fa fa-angle-down"
-                                                aria-hidden="true"></i></em></a>
+                                                                 aria-hidden="true"></i></em></a>
                                 </li>
                                 <li class="has_list"><a href="javascript:void(0)"><span><i class="fa fa-usd"
-                                                aria-hidden="true"></i></span> Salary Details
+                                                                                           aria-hidden="true"></i></span>
+                                        Salary Details
                                         <em class="menu_icon"><i class="fa fa-angle-down"
-                                                aria-hidden="true"></i></em></a>
+                                                                 aria-hidden="true"></i></em></a>
 
                                     <ul>
                                         <li><a href="javascript:void(0)">Employee Salary Details</a></li>
@@ -160,21 +162,23 @@
                                         <li><a href="javascript:void(0)">Normal Salary</a></li>
                                     </ul>
                                 </li>
-                                <li class="has_list"><a href="javascript:void(0)"><span><i class="fa fa-clock-o"
-                                                aria-hidden="true"></i></span> Time Tracking
-                                        <em class="menu_icon"><i class="fa fa-angle-down"
-                                                aria-hidden="true"></i></em></a>
-
+                                <li class="has_list open_sublist" onclick="toggleSublist(this)">
+                                    <a href="javascript:void(0)">
+                                        <span><i class="fa fa-clock-o" aria-hidden="true"></i></span>
+                                        Time Tracking
+                                        <em class="menu_icon"><i class="fa fa-angle-down" aria-hidden="true"></i></em>
+                                    </a>
                                     <ul>
-                                        <li><a href="javascript:void(0)">Work logs</a></li>
-                                        <li><a href="javascript:void(0)">Time logs</a></li>
-                                        <li><a href="javascript:void(0)">Time off</a></li>
+                                        <li><a href="{{route('logInOff')}}">► Log In / Off</a></li>
+                                        <li><a href="{{route('employeeWorkLog')}}">► Work Logs</a></li>
+                                        <li><a href="{{route('leaveRequest')}}">► Leave Request</a></li>
                                     </ul>
                                 </li>
                                 <li class="has_list"><a href="javascript:void(0)"><span><i class="fa fa-money"
-                                                aria-hidden="true"></i></span> Payroll
+                                                                                           aria-hidden="true"></i></span>
+                                        Payroll
                                         <em class="menu_icon"><i class="fa fa-angle-down"
-                                                aria-hidden="true"></i></em></a>
+                                                                 aria-hidden="true"></i></em></a>
 
                                     <ul>
                                         <li><a href="javascript:void(0)">Payrolls</a></li>
@@ -183,9 +187,10 @@
                                     </ul>
                                 </li>
                                 <li class="has_list"><a href="javascript:void(0)"><span><i class="fa fa-database"
-                                                aria-hidden="true"></i></span> Project
+                                                                                           aria-hidden="true"></i></span>
+                                        Project
                                         <em class="menu_icon"><i class="fa fa-angle-down"
-                                                aria-hidden="true"></i></em></a>
+                                                                 aria-hidden="true"></i></em></a>
 
                                     <ul>
                                         <li><a href="javascript:void(0)">Create Project</a></li>
@@ -193,40 +198,40 @@
                                     </ul>
                                 </li>
                                 <li><a href="javascript:void(0)"><span><i class="fa fa-credit-card"
-                                                aria-hidden="true"></i></span> Payments
+                                                                          aria-hidden="true"></i></span> Payments
                                         <em class="menu_icon"><i class="fa fa-angle-down"
-                                                aria-hidden="true"></i></em></a>
+                                                                 aria-hidden="true"></i></em></a>
                                 </li>
                                 <li><a href="javascript:void(0)"><span><i class="fa fa-file-text"
-                                                aria-hidden="true"></i></span> Documents
+                                                                          aria-hidden="true"></i></span> Documents
                                         <em class="menu_icon"><i class="fa fa-angle-down"
-                                                aria-hidden="true"></i></em></a>
+                                                                 aria-hidden="true"></i></em></a>
                                 </li>
                                 <li><a href="javascript:void(0)"><span><i class="fa fa-line-chart"
-                                                aria-hidden="true"></i></span> Benefits
+                                                                          aria-hidden="true"></i></span> Benefits
                                         <em class="menu_icon"><i class="fa fa-angle-down"
-                                                aria-hidden="true"></i></em></a>
+                                                                 aria-hidden="true"></i></em></a>
                                 </li>
                                 <li><a href="javascript:void(0)"><span><i class="fa fa-file"
-                                                aria-hidden="true"></i></span>
+                                                                          aria-hidden="true"></i></span>
                                         Expenses
                                         <em class="menu_icon"><i class="fa fa-angle-down"
-                                                aria-hidden="true"></i></em></a>
+                                                                 aria-hidden="true"></i></em></a>
                                 </li>
                                 <li><a href="javascript:void(0)"><span><i class="fa fa-file-o"
-                                                aria-hidden="true"></i></span> Requests
+                                                                          aria-hidden="true"></i></span> Requests
                                         <em class="menu_icon"><i class="fa fa-angle-down"
-                                                aria-hidden="true"></i></em></a>
+                                                                 aria-hidden="true"></i></em></a>
                                 </li>
                                 <li><a href="javascript:void(0)"><span><i class="fa fa-inbox"
-                                                aria-hidden="true"></i></span> Inbox
+                                                                          aria-hidden="true"></i></span> Inbox
                                         <em class="menu_icon"><i class="fa fa-angle-down"
-                                                aria-hidden="true"></i></em></a>
+                                                                 aria-hidden="true"></i></em></a>
                                 </li>
                                 <li><a href="javascript:void(0)"><span><i class="fa fa-clipboard"
-                                                aria-hidden="true"></i></span> My eDashboard
+                                                                          aria-hidden="true"></i></span> My eDashboard
                                         <em class="menu_icon"><i class="fa fa-angle-down"
-                                                aria-hidden="true"></i></em></a>
+                                                                 aria-hidden="true"></i></em></a>
                                 </li>
 
 
