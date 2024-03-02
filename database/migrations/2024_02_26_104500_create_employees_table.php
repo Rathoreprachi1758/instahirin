@@ -17,6 +17,7 @@ return new class extends Migration {
             $table->string('email');
             $table->string('reporting_manager');
             $table->foreignId('department_id')->constrained('departments');
+            $table->foreignId('user_id')->constrained('users')->onDelete('cascade');;
             $table->timestamps();
         });
     }
