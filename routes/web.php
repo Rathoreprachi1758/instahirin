@@ -113,10 +113,12 @@ Route::middleware(['middleware' => 'auth.check'])->group(function () {
     Route::post('company', [TimeTracking::class, 'company'])->name('company');
     Route::post('department', [TimeTracking::class, 'department'])->name('department');
     Route::post('employee', [TimeTracking::class, 'employee'])->name('employee');
-    Route::get('Employee-work-log', [TimeTracking::class, 'EmployeeWorkLog'])->name('employeeWorkLog');
+    Route::get('Employee-work-log', [TimeTracking::class, 'employeeWorkLog'])->name('employeeWorkLog');
     Route::post('work-log-company', [TimeTracking::class, 'workLogCompany'])->name('workLogCompany');
     Route::post('work-log-department', [TimeTracking::class, 'workLogDepartment'])->name('workLogDepartment');
     Route::get('leave-request', [TimeTracking::class, 'leaveRequest'])->name('leaveRequest');
+    Route::post('punch', [TimeTracking::class, 'punch'])->name('punch');
+    Route::post('status', [TimeTracking::class, 'status'])->name('status');
 
 
 });
