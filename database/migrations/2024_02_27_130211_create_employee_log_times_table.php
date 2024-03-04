@@ -12,11 +12,13 @@ return new class extends Migration {
     {
         Schema::create('employee_log_times', function (Blueprint $table) {
             $table->id();
-            $table->timestamp('punch_in')->nullable();
-            $table->timestamp('punch_out')->nullable();
+            $table->json('punch')->nullable();
             $table->foreignId('employee_id')->constrained('employees');
             $table->foreignId('user_id')->constrained('users');
-            $table->boolean('status')->nullable();
+            $table->foreignId('company_id')->constrained('companies');
+            $table->string('ip_address')->nullable();
+            $table->boolean('work_log_status')->nullable();
+            $table->boolean('time_log_status')->nullable();
             $table->date('date')->nullable();
             $table->timestamps();
         });

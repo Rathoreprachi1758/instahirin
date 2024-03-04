@@ -6,6 +6,7 @@ use App\Models\Company;
 use App\Models\Department;
 use App\Models\Employee;
 use App\Models\EmployeeLogTime;
+use Auth;
 use Carbon\Carbon;
 use Illuminate\Contracts\Foundation\Application;
 use Illuminate\Contracts\View\Factory;
@@ -14,7 +15,6 @@ use Illuminate\Http\RedirectResponse;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Http;
 use Illuminate\Support\Facades\Session;
-use Auth;
 
 /**
  * Controller class for managing time tracking functionality.
@@ -49,6 +49,52 @@ class TimeTracking extends Controller
             'punchDetails' => $punchDetails,
             'companyName' => $company?->company_name
         ]);
+    }
+
+    /**
+     * @param $employeeInfo
+     * @return mixed
+     */
+    public function punchHistory($employeeInfo): mixed
+    {
+        $employeeLogTime = EmployeeLogTime::where('user_id', $employeeInfo->user_id)->where('employee_id', $employeeInfo->id)->where('date', Carbon::now()->toDateString())->first() ?? null;
+        return json_decode($employeeLogTime?->punch, true);
+    }
+
+    /**
+     * @param $employeeInfo
+     * @return array
+     */
+    public function punchDetails($employeeInfo): array
+    {
+        $employeePunchLogs = EmployeeLogTime::where('user_id', $employeeInfo->user_id)
+            ->where('employee_id', $employeeInfo->id)
+            ->where('date', Carbon::now()->toDateString())
+            ->first();
+        if ($employeePunchLogs) {
+            $punch = json_decode($employeePunchLogs['punch'], true);
+            $punchInLog = [];
+            $punchOutLog = [];
+
+            if ($punch != null) {
+
+                foreach ($punch as $log) {
+                    if (isset($log['punch_in'])) {
+                        $punchInLog[] = $log['punch_in'];
+                    }
+
+                    if (isset($log['punch_out'])) {
+                        $punchOutLog[] = $log['punch_out'];
+                    }
+                }
+                asort($punchInLog);
+                asort($punchOutLog);
+            }
+        }
+        $firstLogIn = !empty($punchInLog) ? Carbon::parse(reset($punchInLog))->format('H:i:s') : null;
+        $lastPunchOut = !empty($punchOutLog) ? Carbon::parse(end($punchOutLog))->format('H:i:s') : null;
+
+        return ['firstLogIn' => $firstLogIn, 'lastPunchOut' => $lastPunchOut];
     }
 
     /**
@@ -109,6 +155,7 @@ class TimeTracking extends Controller
         $ip = $response->body();
 
         if ($request->has('department_id')) {
+            $department = Department::find($request->department_id);
             $employeeInfo = Employee::where('user_id', Auth::id())->where('department_id', $request->department_id)->first();
             $employeeId = $employeeInfo->id;
             $employeeField = [];
@@ -134,65 +181,11 @@ class TimeTracking extends Controller
                 $employeeLogTime->user_id = $employeeInfo->user_id;
                 $employeeLogTime->date = $dateOnly;
                 $employeeLogTime->ip_address = $ip;
+                $employeeLogTime->company_id = $department->company_id;
                 $employeeLogTime->save();
             }
         }
         return redirect()->route('logInOff')->with('department_id', $request->department_id);
-    }
-
-    /**
-     * @param $employeeInfo
-     * @return array
-     */
-    public function punchDetails($employeeInfo): array
-    {
-        $employeePunchLogs = EmployeeLogTime::where('user_id', $employeeInfo->user_id)
-            ->where('employee_id', $employeeInfo->id)
-            ->where('date', Carbon::now()->toDateString())
-            ->first();
-        if ($employeePunchLogs) {
-            $punch = json_decode($employeePunchLogs['punch'], true);
-            $punchInLog = [];
-            $punchOutLog = [];
-
-            if ($punch != null) {
-
-                foreach ($punch as $log) {
-                    if (isset($log['punch_in'])) {
-                        $punchInLog[] = $log['punch_in'];
-                    }
-
-                    if (isset($log['punch_out'])) {
-                        $punchOutLog[] = $log['punch_out'];
-                    }
-                }
-                asort($punchInLog);
-                asort($punchOutLog);
-            }
-        }
-        $firstLogIn = !empty($punchInLog) ? Carbon::parse(reset($punchInLog))->format('H:i:s') : null;
-        $lastPunchOut = !empty($punchOutLog) ? Carbon::parse(end($punchOutLog))->format('H:i:s') : null;
-
-        return ['firstLogIn' => $firstLogIn, 'lastPunchOut' => $lastPunchOut];
-    }
-
-
-    /**
-     * @param $employeeInfo
-     * @return mixed
-     */
-    public function punchHistory($employeeInfo): mixed
-    {
-        $employeeLogTime = EmployeeLogTime::where('user_id', $employeeInfo->user_id)->where('employee_id', $employeeInfo->id)->where('date', Carbon::now()->toDateString())->first() ?? null;
-        return json_decode($employeeLogTime?->punch, true);
-    }
-
-    /**
-     * @return Application|Factory|View|\Illuminate\Foundation\Application
-     */
-    public function leaveRequest(): \Illuminate\Foundation\Application|View|Factory|Application
-    {
-        return view('timeTracking.leave_request');
     }
 
     /**
@@ -234,7 +227,6 @@ class TimeTracking extends Controller
      */
     public function workLogDepartment(Request $request): Application|Factory|View|\Illuminate\Foundation\Application
     {
-        $punchLogs = [];
         $punchInOutInfo = [];
 
         $employeeInfo = Employee::where('user_id', Auth::id())->where('department_id', $request->department)->first();
@@ -246,11 +238,76 @@ class TimeTracking extends Controller
         } else {
             $employeePunchLogs = EmployeeLogTime::where('user_id', $employeeInfo?->user_id)->where('employee_id', $employeeInfo?->id)->get();
         }
+
+        $punchInOutInfo[] = $this->employeePunchLogs($employeePunchLogs);
+
+        return view('timeTracking.work_log', compact('punchInOutInfo', 'employeeInfo', 'companies', 'departments'));
+    }
+
+    /**
+     * update the status of employee log
+     *
+     * @param Request $request
+     * @return RedirectResponse
+     */
+    public function Status(Request $request): RedirectResponse
+    {
+        $employeeTimeLog = EmployeeLogTime::where('date', $request->date)->first();
+        $employeeTimeLog->work_log_status = $request->status;
+        $employeeTimeLog->save();
+
+        return redirect()->route('employeeWorkLog');
+    }
+
+    /**
+     * @return Application|Factory|View|\Illuminate\Foundation\Application
+     */
+    public function timeLogs(): \Illuminate\Foundation\Application|View|Factory|Application
+    {
+        $companies = Company::all();
+        return view('timeTracking.time_log', compact('companies'));
+    }
+
+    /**
+     * @param Request $request
+     * @return Application|Factory|View|\Illuminate\Foundation\Application
+     */
+    public function timeLogCompany(Request $request): \Illuminate\Foundation\Application|View|Factory|Application
+    {
+        if ($request->from && $request->to) {
+            $employeePunchLogs = EmployeeLogTime::where('company_id', $request->timeLogCompany)->whereBetween('date', [$request->from, $request->to])->get();
+        } else {
+            $employeePunchLogs = EmployeeLogTime::where('company_id', $request->timeLogCompany)->get();
+        }
+
+        $companies = Company::all();
+        $punchInOutInfo = [];
+
+
+        $punchInOutInfo[] = $this->employeePunchLogs($employeePunchLogs);
+
+        return view('timeTracking.time_log', compact('companies', 'punchInOutInfo'));
+
+    }
+
+
+    /**
+     * @param $employeePunchLogs
+     * @return array|void
+     */
+    private function employeePunchLogs($employeePunchLogs)
+    {
+        $punchLogs = [];
         foreach ($employeePunchLogs as $employeePunchLog) {
+            $employeeId = $employeePunchLog->employee_id;
+
+            $employee = Employee::find($employeeId);
+            $employeeCode = $employee->employee_code;
+
             $date = $employeePunchLog->date;
             $punchInfo = json_decode($employeePunchLog->punch, true);
             $ipAddress = $employeePunchLog->ip_address;
-            $status = $employeePunchLog->status ?? null;
+            $status = $employeePunchLog->work_log_status ?? null;
 
             if (!isset($punchLogs[$date])) {
                 $punchLogs[$date] = [
@@ -267,7 +324,8 @@ class TimeTracking extends Controller
                 }
             }
             $punchLogs[$date]['ip_address'] = $ipAddress;
-            $punchLogs[$date]['status'] = $status;
+            $punchLogs[$date]['work_log_status'] = $status;
+            $punchLogs[$date]['emp_code'] = $employeeCode;
 
         }
         foreach ($punchLogs as $date => $punchTime) {
@@ -275,35 +333,29 @@ class TimeTracking extends Controller
             sort($punchTime['punch_out']);
 
             $ipAddressByDate = $punchTime['ip_address'];
-            $statusByDate = $punchTime['status'];
+            $statusByDate = $punchTime['work_log_status'];
+            $employeeCode = $punchTime['emp_code'];
             $firstLogIn = !empty($punchTime['punch_in']) ? Carbon::parse(reset($punchTime['punch_in']))->format('H:i:s') : null;
             $lastPunchOut = !empty($punchTime['punch_out']) ? Carbon::parse(end($punchTime['punch_out']))->format('H:i:s') : null;
 
-            $punchInOutInfo[] = [
+            return [
                 'date' => $date,
                 'punchIn' => $firstLogIn,
                 'punchOut' => $lastPunchOut,
                 'ip_address' => $ipAddressByDate,
-                'status' => $statusByDate
+                'work_log_status' => $statusByDate,
+                'emp_code' => $employeeCode
             ];
         }
-
-        return view('timeTracking.work_log', compact('punchInOutInfo', 'employeeInfo', 'companies', 'departments'));
     }
 
     /**
-     * update the status of employee log
-     *
-     * @param Request $request
-     * @return RedirectResponse
+     * @return Application|Factory|View|\Illuminate\Foundation\Application
      */
-    public function Status(Request $request): RedirectResponse
+    public function leaveRequest(): \Illuminate\Foundation\Application|View|Factory|Application
     {
-        $employeeTimeLog = EmployeeLogTime::where('date', $request->date)->first();
-        $employeeTimeLog->status = $request->status;
-        $employeeTimeLog->save();
-
-        return redirect()->route('employeeWorkLog');
+        $companies = Company::all();
+        return view('timeTracking.leave_request')->with(compact('companies'));
     }
 }
 

@@ -9,10 +9,10 @@
                 </div>
                 <br>
                 <div class="tabletext">
-                    <form action="{{ route('workLogCompany') }}" method="POST">
+                    <form action="{{ route('timeLogCompany') }}" method="POST">
                         @csrf
                         <label for="from">Select Company:</label>
-                        <select name="workLogCompany" onchange="this.form.submit()">
+                        <select name="timeLogCompany" onchange="this.form.submit()">
                             <option selected disabled>Select Company</option>
                             @isset($companies)
                                 @foreach($companies as $company)
@@ -23,16 +23,8 @@
                     </form>
                 </div>
 
-                <form action="{{ route('workLogDepartment') }}" method="POST">
+                <form action="{{ route('timeLogCompany') }}" method="POST">
                     @csrf
-                    <label for="departmentSelect">Select Department:</label>
-                    <select id="departmentSelect" name="department">
-                        @isset($departments)
-                            @foreach($departments as $department)
-                                <option value="{{ $department->id }}">{{ $department->name }}</option>
-                            @endforeach
-                        @endisset
-                    </select>
                     <label for="from">From:</label>
                     <input type="date" id="from" name="from">
                     <label for="to">To:</label>
@@ -50,6 +42,9 @@
                                         <h6>#</h6>
                                     </th>
                                     <th>
+                                        <h6>Emp Code</h6>
+                                    </th>
+                                    <th>
                                         <h6>Calendar</h6>
                                     </th>
                                     <th>
@@ -57,9 +52,6 @@
                                     </th>
                                     <th>
                                         <h6>Total Hours</h6>
-                                    </th>
-                                    <th>
-                                        <h6>Ip Address</h6>
                                     </th>
                                     <th>
                                         <h6>Actions</h6>
@@ -91,6 +83,11 @@
                                             {{--                                        </div>--}}
                                             <td>
                                                 <div class="tabletext">
+                                                    <p>{{ $punchInOutData['emp_code'] }}</p>
+                                                </div>
+                                            </td>
+                                            <td>
+                                                <div class="tabletext">
                                                     <p>{{ $punchInOutData['date'] }}</p>
                                                 </div>
                                             </td>
@@ -103,11 +100,6 @@
                                             <td>
                                                 <div class="tabletext">
                                                     <p>Hyderabad</p>
-                                                </div>
-                                            </td>
-                                            <td>
-                                                <div class="tabletext">
-                                                    <p>{{ $punchInOutData['ip_address'] }}</p>
                                                 </div>
                                             </td>
                                             <td width="90">
