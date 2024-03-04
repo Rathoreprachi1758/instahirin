@@ -1,4 +1,4 @@
-<x-header data="user-profile component" />
+<x-header data="user-profile component"/>
 <style>
     .auth_select_info select {
         width: 100%;
@@ -88,7 +88,7 @@
 
                                 <li>
                                     <form action="{{ route('edit.nation', $user->id) }}" method='Post'
-                                        id="nation_info">
+                                          id="nation_info">
                                         @csrf
                                         @method('PATCH')
                                         <div class="row">
@@ -105,14 +105,14 @@
                                                             </option>
                                                             @foreach ($countryCodes as $country)
                                                                 <option value="{{ $country->name }}"
-                                                                    @if ($user->nationality == $country->name) selected @endif>
-                                                                       {{ $country->name }}
+                                                                        @if ($user->nationality == $country->name) selected @endif>
+                                                                    {{ $country->name }}
                                                                 </option>
                                                             @endforeach
                                                         </select>
                                                     </div>
                                                     <div class="p_userInfo_editInput" id="editButton"
-                                                        onclick="toggleSaveButton2()">
+                                                         onclick="toggleSaveButton2()">
                                                         <strong>
                                                             <i class="fa fa-pencil-square-o" aria-hidden="true"></i>
                                                             Edit
@@ -123,8 +123,9 @@
                                         </div>
                                         <div class="p_userInfo_editInput" id="saveButton" style="display: none;">
                                             <button type="submit" id="submitBtn_plan2" class="btn btn-primary"
-                                                onclick="submitForm('nation_info')"
-                                                style="margin-left: 800px;margin-top: -62px">Save</button>
+                                                    onclick="submitForm('nation_info')"
+                                                    style="margin-left: 800px;margin-top: -62px">Save
+                                            </button>
                                         </div>
                                     </form>
 
@@ -147,7 +148,7 @@
                                 </div>
                                 <div class="col-xxl-9 col-xl-9 col-lg-8 col-md-7">
                                     <div class="p_userInfo_editInput" id="editButtonContainer"
-                                        onclick="toggleSaveButton()">
+                                         onclick="toggleSaveButton()">
                                         <strong>
                                             <i class="fa fa-pencil-square-o" aria-hidden="true"></i> Edit
                                         </strong>
@@ -171,8 +172,9 @@
                                             </div>
                                             <div class="col-xxl-9 col-xl-9 col-lg-8 col-md-7">
                                                 <div class="p_userInfo_editInput">
-                                                    <input type="text" name="email" class="w-100" placeholder="Enter Your Email"
-                                                        value="{{ $user->email }}" disabled>
+                                                    <input type="text" name="email" class="w-100"
+                                                           placeholder="Enter Your Email"
+                                                           value="{{ $user->email }}" disabled>
                                                 </div>
                                             </div>
                                         </div>
@@ -188,10 +190,10 @@
                                             <div class="col-xxl-9 col-xl-9 col-lg-8 col-md-7">
                                                 <div class="auth_select_info" style="width: 42%; margin-top:5px">
                                                     <select name="country_code" required style="width: 100%;">
-                                                        <option value="" >Select a country code</option>
+                                                        <option value="">Select a country code</option>
                                                         @foreach ($countryCodes as $country)
                                                             <option value="+{{ $country->phone }}"
-                                                                @if ($user->country_code == $country->phone) selected @endif>
+                                                                    @if ($user->country_code == $country->phone) selected @endif>
                                                                 {{ $country->name . '+' . $country->phone }}
                                                             </option>
                                                         @endforeach
@@ -209,8 +211,9 @@
                                             <div class="col-xxl-9 col-xl-9 col-lg-8 col-md-7">
                                                 <div class="p_userInfo_editInput">
                                                     <input type="text" class="w-100" name="mobilenumber"
-                                                        pattern="[0-9]+" title="Numericals  only allowed" placeholder="Enter Your Mobile Number"
-                                                        maxlength="10" value="{{ $user->mobilenumber }}">
+                                                           pattern="[0-9]+" title="Numericals  only allowed"
+                                                           placeholder="Enter Your Mobile Number"
+                                                           maxlength="10" value="{{ $user->mobilenumber }}">
 
                                                 </div>
                                             </div>
@@ -227,12 +230,12 @@
                                             <div class="col-xxl-9 col-xl-9 col-lg-8 col-md-7">
                                                 <div class="auth_select_info" style="width: 42%; margin-top:5px">
                                                     <select name="country" required style="width: 100%;">
-                                                        <option value="" >Select a country code
+                                                        <option value="">Select a country code
                                                         </option>
                                                         @foreach ($countryCodes as $country)
                                                             <option value="{{ $country->name }}"
-                                                                @if ($user->country == $country->name) selected @endif>
-                                                                   {{ $country->name }}
+                                                                    @if ($user->country == $country->name) selected @endif>
+                                                                {{ $country->name }}
                                                             </option>
                                                         @endforeach
                                                     </select>
@@ -245,7 +248,8 @@
 
                             <div class="p_userInfo_editInput" id="saveButtonContainer" style="display: none;">
                                 <button type="submit" id="submitBtn_plan1" class="btn btn-primary"
-                                    onclick="submitForm('contat_info')" style="margin-left: 800px">Save</button>
+                                        onclick="submitForm('contat_info')" style="margin-left: 800px">Save
+                                </button>
                             </div>
                         </form>
                     </div>
@@ -284,8 +288,9 @@
                                 <div class="col-xxl-9 col-xl-9 col-lg-8 col-md-7">
                                     <div class="p_userInfo_editInput">
                                         <input type="text" value="" class="w-100"
-                                            placeholder="www.bizionictech.com">
+                                               placeholder="www.bizionictech.com">
                                     </div>
+
                                 </div>
                             </div>
                         </li>
@@ -297,28 +302,42 @@
                                         <label>Company mail id*</label>
                                     </div>
                                 </div>
+
                                 <div class="col-xxl-9 col-xl-9 col-lg-8 col-md-12">
                                     <div class="verify_section">
-                                        <div class="p_userInfo_editInput">
-                                            <input type="text" value=""
-                                                placeholder="info@bizionictech.com">
-                                        </div>
-                                        <a href="#" class="verifyText">Verify</a>
-
-                                        <div class="enterOtp">
-                                            <label>Enter OTP</label>
-
-                                            <div class="enterOtpFields">
-                                                <input type="text" value="" placeholder="">
-                                                <input type="text" value="" placeholder="">
-                                                <input type="text" value="" placeholder="">
-                                                <input type="text" value="" placeholder="">
+                                        <form method="post" action="{{ route('emailVerify') }}">
+                                            @csrf
+                                            <div class="p_userInfo_editInput">
+                                                <input type="text" name="email" value="{{ $user->company_email ?? '' }}"
+                                                       placeholder="info@bizionictech.com" {{ !empty($user->company_email) ? 'readonly' : '' }}>
+                                                @if(empty($user->company_email))
+                                                    <button type="submit" class="verifyText">Verify</button>
+                                                @endif
+                                                @error('email')
+                                                <span class="valid"
+                                                      style="font-size: 12px;color:#c62424">{{ $message }}</span>
+                                                @enderror
                                             </div>
-
-                                            <div class="otpSubmit">
-                                                <input type="submit" value="Submit" class="btndefault">
+                                        </form>
+                                        @if(empty($user->company_email))
+                                            <div class="enterOtp">
+                                                <label>Enter OTP</label>
+                                                <form method="post" action="{{ route('verifyOtp') }}">
+                                                    @csrf
+                                                    <div class="enterOtpFields">
+                                                        <input type="text" name="firstNumber" value="" placeholder="">
+                                                        <input type="text" name="secondNumber" value="" placeholder="">
+                                                        <input type="text" name="thirdNumber" value="" placeholder="">
+                                                        <input type="text" name="fourthNumber" value="" placeholder="">
+                                                    </div>
+                                                    <input type="hidden" name="verificationType" value="emailToken">
+                                                    <input type="hidden" name="userId" value="{{$user->id}}">
+                                                    <div class="otpSubmit">
+                                                        <button type="submit" class="btndefault">Submit</button>
+                                                    </div>
+                                                </form>
                                             </div>
-                                        </div>
+                                        @endif
                                     </div>
                                 </div>
                             </div>
@@ -333,25 +352,38 @@
                                 </div>
                                 <div class="col-xxl-9 col-xl-9 col-lg-8 col-md-12">
                                     <div class="verify_section">
-                                        <div class="p_userInfo_editInput">
-                                            <input type="text" value="" placeholder="+91 9XXXXXXX40">
-                                        </div>
-                                        <a href="#" class="verifyText">Verify</a>
-
-                                        <div class="enterOtp">
-                                            <label>Enter OTP</label>
-
-                                            <div class="enterOtpFields">
-                                                <input type="text" value="" placeholder="">
-                                                <input type="text" value="" placeholder="">
-                                                <input type="text" value="" placeholder="">
-                                                <input type="text" value="" placeholder="">
+                                        <form method="post" action="{{ route('phoneVerify') }}">
+                                            @csrf
+                                            <div class="p_userInfo_editInput">
+                                                <input type="text" name="phone"  value="{{ $user->company_phone_number ?? '' }}" placeholder="+91 9XXXXXXX40" {{ !empty($user->company_phone_number) ? 'readonly' : '' }}>
                                             </div>
-
-                                            <div class="otpSubmit">
-                                                <input type="submit" value="Submit" class="btndefault">
+                                            @if(empty($user->company_phone_number))
+                                                <button type="submit" class="verifyText">Verify</button>
+                                            @endif
+                                            @error('phone')
+                                            <span class="valid"
+                                                  style="font-size: 12px;color:#c62424">{{ $message }}</span>
+                                            @enderror
+                                        </form>
+                                        @if(empty($user->company_phone_number))
+                                            <div class="enterOtp">
+                                                <label>Enter OTP</label>
+                                                <form method="post" action="{{ route('verifyOtp') }}">
+                                                    @csrf
+                                                    <div class="enterOtpFields">
+                                                        <input type="text" name="firstNumber" value="" placeholder="">
+                                                        <input type="text" name="secondNumber" value="" placeholder="">
+                                                        <input type="text" name="thirdNumber" value="" placeholder="">
+                                                        <input type="text" name="fourthNumber" value="" placeholder="">
+                                                    </div>
+                                                    <input type="hidden" name="verificationType" value="phoneToken">
+                                                    <input type="hidden" name="userId" value="{{$user->id}}">
+                                                    <div class="otpSubmit">
+                                                        <button type="submit" class="btndefault">Submit</button>
+                                                    </div>
+                                                </form>
                                             </div>
-                                        </div>
+                                        @endif
                                     </div>
                                 </div>
                             </div>
@@ -367,7 +399,7 @@
                                 <div class="col-xxl-9 col-xl-9 col-lg-8 col-md-7">
                                     <div class="p_userInfo_editInput">
                                         <input type="text" class="w-100" value=""
-                                            placeholder="Road No-1, Madhapur, Hyderabad.">
+                                               placeholder="Road No-1, Madhapur, Hyderabad.">
                                     </div>
                                 </div>
                             </div>
@@ -383,7 +415,7 @@
                                 <div class="col-xxl-9 col-xl-9 col-lg-8 col-md-7">
                                     <div class="p_userInfo_editInput">
                                         <input type="text" class="w-100" value=""
-                                            placeholder="37DDCPK5481D5632">
+                                               placeholder="37DDCPK5481D5632">
                                     </div>
                                 </div>
                             </div>
@@ -424,15 +456,15 @@
                                     <div class="col-xxl-9 col-xl-9 col-lg-8 col-md-6">
                                         <div class="p_userInfo_editInput">
                                             <input type="password" value="" class="w-100"
-                                                name='current_password' placeholder="Current Password">
+                                                   name='current_password' placeholder="Current Password">
                                             <span class="passwEye togglePassword" style="margin-right: 409px"
-                                                onclick="togglePasswordVisibility(this)">
+                                                  onclick="togglePasswordVisibility(this)">
                                                 <i class="fa fa-eye" style="color:#080816" aria-hidden="true"></i>
                                             </span>
                                         </div>
                                         @error('current_password')
-                                            <span class="valid"
-                                                style="font-size: 12px;color:#c62424">{{ $message }}</span>
+                                        <span class="valid"
+                                              style="font-size: 12px;color:#c62424">{{ $message }}</span>
                                         @enderror
                                     </div>
                                 </div>
@@ -448,15 +480,15 @@
                                     <div class="col-xxl-9 col-xl-9 col-lg-8 col-md-6">
                                         <div class="p_userInfo_editInput">
                                             <input type="password" value="" class="w-100" name='new_password'
-                                                placeholder="New Password" />
+                                                   placeholder="New Password"/>
                                             <span class="passwEye togglePassword" style="margin-right: 409px"
-                                                onclick="togglePasswordVisibility(this)">
+                                                  onclick="togglePasswordVisibility(this)">
                                                 <i class="fa fa-eye" style="color:#080816" aria-hidden="true"></i>
                                             </span>
                                         </div>
                                         @error('new_password')
-                                            <span class="valid"
-                                                style="font-size: 12px;color:#c62424">{{ $message }}</span>
+                                        <span class="valid"
+                                              style="font-size: 12px;color:#c62424">{{ $message }}</span>
                                         @enderror
                                     </div>
                                 </div>
@@ -472,15 +504,15 @@
                                     <div class="col-xxl-9 col-xl-9 col-lg-8 col-md-6">
                                         <div class="p_userInfo_editInput">
                                             <input type="password" value="" class="w-100"
-                                                name='confirm_password' placeholder="Confirm new password">
+                                                   name='confirm_password' placeholder="Confirm new password">
                                             <span class="passwEye togglePassword" style="margin-right: 409px"
-                                                onclick="togglePasswordVisibility(this)">
+                                                  onclick="togglePasswordVisibility(this)">
                                                 <i class="fa fa-eye" style="color:#080816" aria-hidden="true"></i>
                                             </span>
                                         </div>
                                         @error('confirm_password')
-                                            <span class="valid"
-                                                style="font-size: 12px;color:#c62424">{{ $message }}</span>
+                                        <span class="valid"
+                                              style="font-size: 12px;color:#c62424">{{ $message }}</span>
                                         @enderror
                                     </div>
                                 </div>
@@ -502,6 +534,7 @@
                 form.submit();
                 location.reload(true);
             }
+
             //
             function toggleSaveButton() {
                 var editButtonContainer = document.getElementById('editButtonContainer');
@@ -516,6 +549,7 @@
                     saveButtonContainer.style.display = 'none';
                 }
             }
+
             //
             function toggleSaveButton2() {
                 var editButtonContainer = document.getElementById('editButton');

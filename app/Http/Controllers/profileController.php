@@ -4,6 +4,10 @@ namespace App\Http\Controllers;
 
 use App\Models\HireRequest;
 use Auth;
+use Illuminate\Contracts\Foundation\Application;
+use Illuminate\Contracts\View\Factory;
+use Illuminate\Contracts\View\View;
+use Illuminate\Http\RedirectResponse;
 use ZipArchive;
 use Carbon\Carbon;
 use DateTime;
@@ -21,13 +25,52 @@ use App\Models\HireMeApplication;
 use App\Models\ScheduledInterview;
 use Illuminate\Support\Facades\File;
 use Illuminate\Support\Facades\Schema;
+use GuzzleHttp\Client;
+use Illuminate\Support\Facades\Http;
+use Illuminate\Support\Facades\Session;
 
 class profileController extends Controller
 {
 
+    /**
+     * @var string
+     */
+    static $X_Tenant = 'ok2@gmail.com';
+    /**
+     * @var string
+     */
+    static $HEADER_PASSWORD = 'pwd1';
+
+    /**
+     * @var string
+     */
+    static $EMAIL_API_URL = 'http://ec2-52-66-178-195.ap-south-1.compute.amazonaws.com:8080/NotificationApplication-0.0.1-SNAPSHOT/email/sendfromGmail';
+
+    /**
+     * @var string
+     */
+    static $PHONE_API_URL = 'http://ec2-52-66-178-195.ap-south-1.compute.amazonaws.com:8080/NotificationApplication-0.0.1-SNAPSHOT/sms/multipleMessage';
+
+    /**
+     * @var string
+     */
+    static $CONTENT_TYPE = 'application/json';
+
+    /**
+     * @var string
+     */
+    static $EMAIL_FROM = "letwizard.hyderabad@gmail.com";
+
+    /**
+     * @var string
+     */
+    static $SMTP_API_PASSWORD = "lvfjlnhjniesuncr";
+
+
     private $userdata;
     private $countrycodes;
     private $job_activity;
+
     public function __construct()
     {
         $this->middleware(function ($request, $next) {
@@ -37,6 +80,7 @@ class profileController extends Controller
             return $next($request);
         });
     }
+
     public function index()
     {
         return view('dashboard.userinfo', ['userdata' => $this->userdata, 'countryCodes' => $this->countrycodes]);
@@ -54,6 +98,7 @@ class profileController extends Controller
         return redirect()->back()->with('message', 'Contact details updated successfully!');
 
     }
+
     public function editnation(Request $request)
     {
         $user = User::find($request->id);
@@ -97,10 +142,12 @@ class profileController extends Controller
 
         return redirect()->back()->with('message', ' credit request updated!');
     }
+
     public function user_info(Request $request)
     {
         return view('dashboard.kycinfo');
     }
+
     public function kyc_submit(Request $request)
     {
         $request->validate([
@@ -179,6 +226,7 @@ class profileController extends Controller
     {
         return view('dashboard.activity_employer', ['countryCodes' => $this->countrycodes]);
     }
+
     public function post_job(Request $request)
     {   
         // return $request->all();
@@ -296,6 +344,7 @@ class profileController extends Controller
         // return $myjob;
         return view('dashboard.Activity_employer.my_job', ['myjob' => $myjob]);
     }
+
     public function my_job_Applicants(Request $request)
     {
         // $job_ids = job::where('user_id', Auth::id())->pluck('id');
@@ -317,6 +366,7 @@ class profileController extends Controller
     {
         return view('dashboard.Activity_employer.job_talents');
     }
+
     public function Instahirin_activity(Request $request)
     {
         // $insta_onboard = InstaHirinOnboard::where('user_id', Auth::id())->get();
@@ -332,6 +382,7 @@ class profileController extends Controller
         return view('dashboard.Activity_employer.instahirin', ['insta_onboard' => $expertDataArray]);
         // return view('dashboard.Activity_employer.instahirin', ['insta_onboard' => $insta_onboard]);
     }
+
     public function Interviewschedule(Request $request)
     {
         // $instaOnboard = InstaHirinOnboard::where('user_id', Auth::id())->get();
@@ -374,6 +425,7 @@ class profileController extends Controller
         // return view('dashboard.Activity_employer.interview_schedule', ['insta_onboard' => $scedule]);
         return view('dashboard.Activity_employer.interview_schedule', ['insta_onboard' => $array_data]);
     }
+
     public function schedule_interview(Request $request)
     {
         // return $request->all();
@@ -418,23 +470,25 @@ class profileController extends Controller
     {
         return view('dashboard.Activity_employer.History');
     }
+
     public function Hire(Request $request)
     {
         $Hired_applicants = ScheduledInterview::where('status', 'hired')->get();
         // return 
         return view('dashboard.Activity_employer.Hire', ['Hired_applicants' => $Hired_applicants]);
     }
+
     //Talent
     public function Employee_activity(Request $request)
     {   
-        $InstaHirin_Onboard = InstaHirinOnboard::where('user_id',Auth::id())->get();
-        if(count($InstaHirin_Onboard) != '0')
-        { 
-            return view('dashboard.Activity_employee.activity_employee',['InstaHirin_Onboard' => $InstaHirin_Onboard,'userdata' => $this->userdata,'countryCodes' => $this->countrycodes]);
+        $InstaHirin_Onboard = InstaHirinOnboard::where('user_id', Auth::id())->get();
+        if (count($InstaHirin_Onboard) != '0') {
+            return view('dashboard.Activity_employee.activity_employee', ['InstaHirin_Onboard' => $InstaHirin_Onboard, 'userdata' => $this->userdata, 'countryCodes' => $this->countrycodes]);
 
         }
-        return view('dashboard.Activity_employee.activity_employee',['userdata' => $this->userdata,'countryCodes' => $this->countrycodes]);
+        return view('dashboard.Activity_employee.activity_employee', ['userdata' => $this->userdata, 'countryCodes' => $this->countrycodes]);
     }
+
     public function Employee_Resume(Request $request)
     {   
         $request->validate([
@@ -450,16 +504,64 @@ class profileController extends Controller
             $formattedDate = now()->format('d-m-Y');
         }
        
-        $user = User::find(Auth::id());
-        $formData = InstaHirinOnboard::updateOrCreate(
-            ['user_id' => Auth::id()],
-            ['document' => $filename,
-            'name' => $user->name,
-            'contact_details' => $user->country_code .''.$user->mobilenumber,
-            'email' => $user->email,
-            'Resume_update_date'=>$formattedDate],
-        );
-             return redirect()->back()->with('message', ' Resume hasbeen Uploaded!');
+        // return $formData;
+        // // Set the form data from the validated request
+        // $formData->name = 'name';
+        // $formData->contact_details = 'contact_details';
+        // $formData->email = 'email';
+        // $formData->current_location = 'current_location';
+        // //$formData->current_location   = isset('current_location']) ? 'current_location'] : '-';
+        // $formData->skills_description = 'skills_description';
+        // $formData->current_title = 'current_title';
+        // $formData->experience_year = 'experience_year';
+        // $formData->experience_month = 'experience_month';
+        // $formData->key_skills = json_decode('key_skills');
+        // $formData->expert_in = json_decode('expert_in');
+        // $formData->also_work_with = json_decode('also_work_with');
+        // // $formData->last_company = isset('last_company') ? 'last_company': '-';
+        // // $formData->company_location = isset('company_location']) ? 'company_location'] : '-';
+        // $formData->company_location = 'company_location';
+        // // $formData->currently_working_here = isset('currently_working_here') ? 'currently_working_here' : '-';
+        // // $formData->working_since_date = 'working_since_date';
+        // // $formData->working_since_date2 = isset('working_since_date2') ? 'working_since_date2' : '-';
+        // // $formData->annual_salary_currency = 'annual_salary_currency'];
+        // $formData->annual_salary = 'annual_salary';
+        // $formData->highest_qualification = 'highest_qualification';
+        // // $formData->notice_period = isset('notice_period') ? 'notice_period' : '-';
+        // $formData->availability = 'availability';
+        // $formData->availability_date = 'availability_date';
+        // $formData->availability_time_from = 'availability_time_from';
+        // $formData->availability_time_to = 'availability_time_to';
+        // $formData->payment_option = 'payment_option';
+        // // $formData->sub_payment_option = isset('sub_payment_option') ? 'sub_payment_option': null;
+        // // $formData->monthly_rate = isset('monthly_rate') ? 'monthly_rate' : null;
+        // // $formData->hourly_rate = isset('hourly_rate') ? 'hourly_rate' : null;
+        // // $formData->project_rate = isset('project_rate') ? 'project_rate' : null;
+        // $formData->resume_headline = 'resume_headline';
+        // $formData->user_id = Auth::id();
+        // $formData->save();
+
+        //return view('dashboard.Activity_employee.activity_employee');
+        // if ($request->hasFile('file')) {
+        //     // Create a temporary zip file
+        //     $zipFileName = 'bizionic/images/' . time() . '_documents.zip';
+        //     $zip = new ZipArchive();
+        //     if ($zip->open(storage_path('app/public/' . $zipFileName), ZipArchive::CREATE) === true) {
+        //         foreach ($request->file('file') as $document) {
+        //             $originalFilename = $document->getClientOriginalName();
+        //             $filename = 'bizionic/images/' . time() . '_' . $originalFilename;
+        //             $document->storeAs('', $filename, 'public');
+        //             // Add the file to the zip archive
+        //             $zip->addFile(storage_path('app/public/' . $filename), $originalFilename);
+        //         }
+        //         $zip->close();
+        //         // Save the zip file information in the database
+        //         $formData->document = $zipFileName;
+        //         $formData->save();
+
+        //     }
+
+        return redirect()->back()->with('message', ' Resume hasbeen Uploaded!');
     }
 
     public function Employee_headline_update(Request $request)
@@ -479,7 +581,7 @@ class profileController extends Controller
 
     public function Employee_skills_update(Request $request)
     {
-       return $request->all();
+        return $request->all();
     }
 
     public function Employee_Resume_employement(Request $request)
@@ -487,7 +589,7 @@ class profileController extends Controller
 
     
         return $request->all();
-          /////EmploymentHistory/////pending
+        /////EmploymentHistory/////pending
         // $request->validate([
         //     'Position_title' => 'required|min:6',
         //     'company_name' => 'required|min:6',
@@ -523,16 +625,16 @@ class profileController extends Controller
             'to_date' => 'required',
         ]);
         $userId = Auth::id();
-        $from_date1 =  date_format(new DateTime($request->from_date), 'd-m-Y');
-        $todat2e =  date_format(new DateTime($request->to_date), 'd-m-Y');
+        $from_date1 = date_format(new DateTime($request->from_date), 'd-m-Y');
+        $todat2e = date_format(new DateTime($request->to_date), 'd-m-Y');
         $formData = InstaHirinOnboard::updateOrCreate(
             ['user_id' => $userId],
             ['highest_qualification' => $request->highest_qualification,
-            'collage_name'=> $request->collage_name,
-            'discription' => $request->course_name,
-            'education_mode'=> $request->education_mode,
-            'from_date' =>  $request->from_date,
-            'to_date' =>  $request->to_date],
+                'collage_name' => $request->collage_name,
+                'discription' => $request->course_name,
+                'education_mode' => $request->education_mode,
+                'from_date' => $request->from_date,
+                'to_date' => $request->to_date],
         );
         return redirect()->back()->with('message', 'Education details Uploaded!');
     }
@@ -549,17 +651,17 @@ class profileController extends Controller
             'to_date2' => 'required',
         ]);
         $userId = Auth::id();
-        $from_date =  date_format(new DateTime($request->from_date2), 'd-m-Y');
-        $todate =  date_format(new DateTime($request->to_date2), 'd-m-Y');
+        $from_date = date_format(new DateTime($request->from_date2), 'd-m-Y');
+        $todate = date_format(new DateTime($request->to_date2), 'd-m-Y');
         $formdata = InstaHirinOnboard::updateOrCreate(
             ['user_id' => $userId],
             [
-             'secondary_qualification'=>$request->highest_qualification2,
-             'course_name2'=>$request->course_name2,
-             'college_name2'=>$request->college_name2,
-             'work_mode2'=>$request->work_mode2,
-             'from_date2'=>$from_date,
-             'to_date2'=>$todate,
+                'secondary_qualification' => $request->highest_qualification2,
+                'course_name2' => $request->course_name2,
+                'college_name2' => $request->college_name2,
+                'work_mode2' => $request->work_mode2,
+                'from_date2' => $from_date,
+                'to_date2' => $todate,
 
             ],
         );
@@ -590,8 +692,8 @@ class profileController extends Controller
             [
                 'name' => $request->full_name,
                 'email' => $request->email,
-                'dob'   => $formattedDate,
-                'contact_details' => $request->country_code.$request->Mobile_number,
+                'dob' => $formattedDate,
+                'contact_details' => $request->country_code . $request->Mobile_number,
                 'experience_year' => $request->Total_work_experience,
                 'availability' => $request->Availability,
                 'current_location' => $request->location,
@@ -603,6 +705,7 @@ class profileController extends Controller
         return redirect()->back()->with('message', 'Personal details Updated!');
         
     }
+
     public function Employee_Resume_delete($id)
     {    
         $instaHirin = InstaHirinOnboard::findOrFail($id);
@@ -613,10 +716,12 @@ class profileController extends Controller
         $instaHirin->save();
         return redirect()->back()->with('message', ' Resume hasbeen Deleted!');
     }
+
     public function emp_favorates(Request $request)
     {
         return view('dashboard.Activity_employee.favourite');
     }
+
     public function Applied_jobs(Request $request)
     {
         return view('dashboard.Activity_employee.Appliedjobs');
@@ -631,19 +736,126 @@ class profileController extends Controller
     {
         return view('dashboard.Activity_employee.offers');
     }
+
     public function employee_History(Request $request)
     {
         return view('dashboard.Activity_employee.History');
     }
+
+    /**
+     * @param Request $request
+     * @return RedirectResponse
+     */
+    public function emailVerify(Request $request): RedirectResponse
+    {
+        $request->validate([
+            'email' => 'required|email'
+        ]);
+        $userEmail = $request->email;
+        $token = rand(1000, 9999);
+        $hashedToken = md5($token);
+
+        Session::put('emailToken', ['value' => $hashedToken, 'expires_at' => now()->addMinutes(10)]);
+        Session::put('email', $userEmail);
+
+        $response = Http::withHeaders([
+            'X-Tenant' => self::$X_Tenant,
+            'Password' => self::$HEADER_PASSWORD,
+            'Content-Type' => self::$CONTENT_TYPE,
+        ])->post(self::$EMAIL_API_URL, [
+            "multipleRecepients" => [$userEmail],
+            "msgBody" => "Your OTP for email verification is " . $token . ". The OTP will expire in 10 minutes.",
+            "subject" => "Verify Email",
+            "from" => self::$EMAIL_FROM,
+            "smtpAPIpassord" => self::$SMTP_API_PASSWORD
+        ]);
+        if ($response->status() == 200) {
+            return redirect()->back()->with('message', ' OTP has been sent!');
+        } else {
+            return redirect()->back()->with('danger', ' OTP Not sent!');
+        }
+    }
+
+    /**
+     * @param Request $request
+     * @return RedirectResponse
+     */
+    public function phoneVerify(Request $request): RedirectResponse
+    {
+        $request->validate([
+            'phone' => 'required|min:10'
+        ]);
+        $phoneNumber = $request->phone;
+        $token = rand(1000, 9999);
+        $hashedToken = md5($token);
+        Session::put('phoneToken', ['value' => $hashedToken, 'expires_at' => now()->addMinutes(10)]);
+        Session::put('phoneNumber', $phoneNumber);
+
+        $response = Http::withHeaders([
+            'Content-Type' => self::$CONTENT_TYPE,
+            'X-Tenant' => self::$X_Tenant,
+            'Password' => self::$HEADER_PASSWORD,
+        ])->post(self::$PHONE_API_URL, [
+            "multiplePhones" => [$phoneNumber],
+            "messagebody" => "Your OTP for phone verification is " . $token . ". The OTP will expire in 10 minutes."
+        ]);
+
+        if ($response->status() == 200) {
+            return redirect()->back()->with('message', ' OTP has been sent!');
+        } else {
+            return redirect()->back()->with('danger', ' OTP Not sent!');
+        }
+    }
+
+    /**
+     * @param Request $request
+     * @return RedirectResponse
+     */
+    public function verifyOtp(Request $request): RedirectResponse
+    {
+        $otp = $request->firstNumber . $request->secondNumber . $request->thirdNumber . $request->fourthNumber;
+        $verificationType = $request->verificationType;
+        $userId = $request->userId;
+
+        if (empty($otp)) {
+            return redirect()->back()->with('danger', 'Please Enter OTP');
+        }
+
+        $user = User::find($userId);
+        $correctOtp = Session::get($verificationType);
+
+        if (empty($correctOtp) || now()->gt($correctOtp['expires_at']) || md5($otp) !== $correctOtp['value']) {
+            return redirect()->back()->with('danger', now()->gt($correctOtp['expires_at']) ? 'Otp Expire' : 'Incorrect OTP!');
+        }
+
+        if ($user) {
+            $email = Session::get('email');
+            $phoneNumber = Session::get('phoneNumber');
+
+            if ($email != null) {
+                $user->company_email = $email;
+            }
+            if ($phoneNumber != null) {
+                $user->company_phone_number = $phoneNumber;
+            }
+            $user->save();
+        }
+        Session::forget('phoneNumber');
+        Session::forget('email');
+
+        return redirect()->back()->with('message', 'OTP Verify Successfully!');
+    }
+
     public function master_company(Request $request)
     {
         return view('dashboard.master.master');
     }
+
     public function master_department(Request $request)
     {
         return view('dashboard.master.department');
     }
-    
+
     public function emp_master(Request $request)
     {
         return view('dashboard.master.employee_master');
@@ -652,26 +864,32 @@ class profileController extends Controller
     {
         return view('dashboard.master.designation');
     }
+
     public function master_shift(Request $request)
     {
         return view('dashboard.master.shift_master_daily');
     }
+
     public function master_category(Request $request)
     {
         return view('dashboard.master.category');
     }
+
     public function master_data(Request $request)
     {
         return view('dashboard.master.Import');
     }
+
     public function master_config(Request $request)
     {
         return view('dashboard.master.employee_configuration');
     }
+
     public function master_leave(Request $request)
     {
         return view('dashboard.master.leave');
     }
+
     public function master_holiday(Request $request)
     {
         return view('dashboard.master.Holiday');

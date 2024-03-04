@@ -50,6 +50,11 @@ Route::middleware(['middleware' => 'auth.check'])->group(function () {
     Route::patch('edit-contact/{id}', [ProfileController::class, 'edituserinfo'])->name('edit.contact');
     Route::patch('edit-nationality/{id}', [ProfileController::class, 'editnation'])->name('edit.nation');
     Route::post('change-password', [Logincontroller::class, 'changePasswordSave']);
+    Route::post('verify-email', [ProfileController::class, 'emailVerify'])->name('emailVerify');
+    Route::post('verify-email-otp', [ProfileController::class, 'verifyOtp'])->name('verifyOtp');
+    Route::post('verify-phone', [ProfileController::class, 'phoneVerify'])->name('phoneVerify');
+
+
     //
     Route::get('reset-password', [LoginController::class, 'resetpswd']);
     Route::post('password-reset', [Logincontroller::class, 'resetpassword']);
