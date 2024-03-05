@@ -227,8 +227,6 @@ class TimeTracking extends Controller
      */
     public function workLogDepartment(Request $request): Application|Factory|View|\Illuminate\Foundation\Application
     {
-        $punchInOutInfo = [];
-
         $employeeInfo = Employee::where('user_id', Auth::id())->where('department_id', $request->department)->first();
 
         $companies = Company::where('user_id', Auth::id())->get();
@@ -239,7 +237,7 @@ class TimeTracking extends Controller
             $employeePunchLogs = EmployeeLogTime::where('user_id', $employeeInfo?->user_id)->where('employee_id', $employeeInfo?->id)->get();
         }
 
-        $punchInOutInfo[] = $this->employeePunchLogs($employeePunchLogs);
+        $punchInOutInfo = $this->employeePunchLogs($employeePunchLogs);
 
         return view('timeTracking.work_log', compact('punchInOutInfo', 'employeeInfo', 'companies', 'departments'));
     }
@@ -255,8 +253,8 @@ class TimeTracking extends Controller
         $employeeTimeLog = EmployeeLogTime::where('date', $request->date)->first();
         $employeeTimeLog->work_log_status = $request->status;
         $employeeTimeLog->save();
-
-        return redirect()->route('employeeWorkLog');
+//        return redirect(URL::current());
+        return redirect()->back()->with('success', 'your message,here');
     }
 
     /**
@@ -281,10 +279,8 @@ class TimeTracking extends Controller
         }
 
         $companies = Company::all();
-        $punchInOutInfo = [];
 
-
-        $punchInOutInfo[] = $this->employeePunchLogs($employeePunchLogs);
+        $punchInOutInfo = $this->employeePunchLogs($employeePunchLogs);
 
         return view('timeTracking.time_log', compact('companies', 'punchInOutInfo'));
 
@@ -298,6 +294,7 @@ class TimeTracking extends Controller
     private function employeePunchLogs($employeePunchLogs)
     {
         $punchLogs = [];
+        $punchInOutInfo = [];
         foreach ($employeePunchLogs as $employeePunchLog) {
             $employeeId = $employeePunchLog->employee_id;
 
@@ -338,7 +335,7 @@ class TimeTracking extends Controller
             $firstLogIn = !empty($punchTime['punch_in']) ? Carbon::parse(reset($punchTime['punch_in']))->format('H:i:s') : null;
             $lastPunchOut = !empty($punchTime['punch_out']) ? Carbon::parse(end($punchTime['punch_out']))->format('H:i:s') : null;
 
-            return [
+            $punchInOutInfo[] = [
                 'date' => $date,
                 'punchIn' => $firstLogIn,
                 'punchOut' => $lastPunchOut,
@@ -347,6 +344,7 @@ class TimeTracking extends Controller
                 'emp_code' => $employeeCode
             ];
         }
+        return $punchInOutInfo;
     }
 
     /**
@@ -358,5 +356,3 @@ class TimeTracking extends Controller
         return view('timeTracking.leave_request')->with(compact('companies'));
     }
 }
-
-

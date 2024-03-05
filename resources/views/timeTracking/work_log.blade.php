@@ -22,7 +22,13 @@
                         </select>
                     </form>
                 </div>
-
+                @if (\Session::has('success'))
+                    <div class="alert alert-success">
+                        <ul>
+                            <li>{!! \Session::get('success') !!}</li>
+                        </ul>
+                    </div>
+                @endif
                 <form action="{{ route('workLogDepartment') }}" method="POST">
                     @csrf
                     <label for="departmentSelect">Select Department:</label>
