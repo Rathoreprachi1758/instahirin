@@ -52,6 +52,11 @@ Route::middleware(['middleware' => 'auth.check'])->group(function () {
     Route::patch('edit-contact/{id}', [ProfileController::class, 'edituserinfo'])->name('edit.contact');
     Route::patch('edit-nationality/{id}', [ProfileController::class, 'editnation'])->name('edit.nation');
     Route::post('change-password', [Logincontroller::class, 'changePasswordSave']);
+    Route::post('verify-email', [ProfileController::class, 'emailVerify'])->name('emailVerify');
+    Route::post('verify-email-otp', [ProfileController::class, 'verifyOtp'])->name('verifyOtp');
+    Route::post('verify-phone', [ProfileController::class, 'phoneVerify'])->name('phoneVerify');
+
+
     //
     Route::get('reset-password', [LoginController::class, 'resetpswd']);
     Route::post('password-reset', [Logincontroller::class, 'resetpassword']);
@@ -111,10 +116,15 @@ Route::middleware(['middleware' => 'auth.check'])->group(function () {
     Route::get('offers', [profileController::class, 'employee_offers'])->name('Applied.offers');
     Route::get('Talent-History', [profileController::class, 'employee_History'])->name('Applied.History');
     //
-    Route::resource('master',MasterController::class);
-    Route::resource('department',DepartmentController::class);
-    // Route::resource('master',MasterController::class);
-    // Route::resource('master',MasterController::class);
+    Route::get('log-in-off', [TimeTracking::class, 'logInOff'])->name('logInOff');
+    Route::post('company', [TimeTracking::class, 'company'])->name('company');
+    Route::post('department', [TimeTracking::class, 'department'])->name('department');
+    Route::post('employee', [TimeTracking::class, 'employee'])->name('employee');
+    Route::get('Employee-work-log', [TimeTracking::class, 'EmployeeWorkLog'])->name('employeeWorkLog');
+    Route::post('work-log-company', [TimeTracking::class, 'workLogCompany'])->name('workLogCompany');
+    Route::post('work-log-department', [TimeTracking::class, 'workLogDepartment'])->name('workLogDepartment');
+    Route::get('leave-request', [TimeTracking::class, 'leaveRequest'])->name('leaveRequest');
+
 
 });
 

@@ -1,12 +1,12 @@
-<x-header data="Holiday component" />
+<x-header data="Holiday component"/>
 <link rel="stylesheet" href="{{ asset('css/css/master_tab.css') }}">
 <link rel="stylesheet" href="https://cdn.datatables.net/1.11.5/css/jquery.dataTables.min.css">
 <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
 <script src="https://cdn.datatables.net/1.11.5/js/jquery.dataTables.min.js"></script>
 <script>
-    $(document).ready(function() {
-        $('#holiday_master').DataTable();
-    });
+   $(document).ready(function(){
+      $('#holiday_master').DataTable();
+   });
 </script>
 <div class="fr-section" style="margin-top: -72px">
     <div class="fr-section_detail ">
@@ -20,8 +20,8 @@
                 </div>
                 <div class="custom_tabs">
                     <ul>
-                        <li><a href="{{ route('master.index') }}">Company</a></li>
-                        <li><a href="{{ route('department.index') }}">Department</a></li>
+                        <li><a href="{{ route('master.company') }}">Company</a></li>
+                        <li><a href="{{ route('master.department') }}">Department</a></li>
                         <li><a href="{{ route('master.designation') }}">Designation</a></li>
                         <li><a href="{{ route('master.shift_master') }}">Shift Master Daily</a></li>
                         <li><a href="{{ route('master.category') }}">Category</a></li>
@@ -183,7 +183,7 @@
                     </div>
                 </div>
             </div>
-        </div>
-    </div>
-</div>
+         </div>
+      </div> 
+   </div> 
 </div>
