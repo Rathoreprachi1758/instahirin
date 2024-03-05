@@ -1,5 +1,3 @@
-@php use Carbon\Carbon; @endphp
-<x-header data="worklog"/>
 <link rel="stylesheet" href="css/bootstrap.min.css">
 <!-- custom css -->
 <link rel="stylesheet" href="{{ asset('css/css/style.css') }}">
@@ -8,180 +6,80 @@
 <link rel="stylesheet" href="{{ asset('css/css/aos.css') }}">
 <!-- font awesome-->
 <link rel="stylesheet" href="{{ asset('css/css/font-awesome.min.css') }}">
-<div class="fr-section" style="margin-top: -72px">
-    <div class="fr-section_detail">
-        <div class="dashboard_innerPages">
-            <div class="container-fluid">
-                <div class="row">
-                    <div class="col-12">
-                        <div class="d-flex">
-                            <form id="companyForm" action="{{ route('company') }}" method="POST">
-                                @csrf
-                                <select class="form-select me-3" name="company" aria-label="First select example">
-                                    <option selected disabled>Select Company</option>
-                                    @isset($companies)
-                                        @foreach($companies as $company)
-                                            <option value="{{ $company->id }}">{{ $company->company_name }}</option>
-                                        @endforeach
-                                    @endisset
-                                </select>
-                                <button type="submit" class="btn btn-primary">Submit</button>
-                            </form>
-                            <form id="departmentForm" action="{{ route('department') }}" method="POST">
-                                @csrf
-                                <select class="form-select me-3" name="department" aria-label="Second select example"
-                                        @if(!isset($companies)) disabled @endif>
-                                    <option selected disabled>Select Department</option>
-                                    @isset($departments)
-                                        @foreach($departments as $department)
-                                            <option value="{{ $department->id }}">{{ $department->name }}</option>
-                                        @endforeach
-                                    @endisset
-                                </select>
-                                <button type="submit" class="btn btn-primary" @if(!isset($companies)) disabled @endif>
-                                    Submit
-                                </button>
-                            </form>
-                        </div>
-                    </div>
-                </div>
-                <div class="container-fluid">
-                    <div class="row col-12">
-                        <div class="col-4">
-                            <div class="row">
-                                <div class="card" style="width: 18rem;">
-                                    <div class="card-header">
-                                        Time Sheet
-                                    </div>
-                                    <form action="{{ route('punch') }}" method="post">
-                                        @csrf
-                                        <input type="hidden" name="current_datetime"
-                                               value="{{ now()->toDateTimeString() }}">
-                                        <input type="hidden" name="department_id"
-                                               value=" @isset($employeeInfo)
-                                               {{$employeeInfo->department?->id}}
-                                               @endisset">
-                                        <ul class=" list-group list-group-flush">
-                                            <button type="submit" name="punch" value="1" class="btn btn-dark"
-                                                    @if(!isset($employeeInfo)) disabled @endif>
-                                                Punch In
-                                            </button>
-                                        </ul>
-                                        <ul class="list-group list-group-flush">
-                                            <button type="submit" name="punch" value="0" class="btn btn-dark"
-                                                    @if(!isset($employeeInfo)) disabled @endif>
-                                                Punch Out
-                                            </button>
-                                        </ul>
-                                    </form>
-                                </div>
-                            </div>
-                        </div>
-
-                        <div class="col-4">
-                            <div class="card mt-5" style="width: 18rem;">
-                                <div class="card-header">
-                                    Employee Details
-                                </div>
-                                <ul class="list-group list-group-flush">
-                                    <li class="list-group-item">Name: @isset($employeeInfo)
-                                            {{ $employeeInfo->name }}
-                                        @endisset</li>
-                                    <li class=" list-group-item">Company: @isset($employeeInfo)
-                                            {{ $companyName }}
-                                        @endisset</li>
-                                    <li class="list-group-item">Department: @isset($employeeInfo)
-                                            {{ $employeeInfo->department?->name }}
-                                        @endisset</li>
-                                    <li class="list-group-item">Designation: @isset($employeeInfo)
-                                            {{ $employeeInfo->designation }}
-                                        @endisset</li>
-                                    <li class="list-group-item">Employee ID: @isset($employeeInfo)
-                                            {{ $employeeInfo->id }}
-                                        @endisset</li>
-                                    <li class="list-group-item">Email: @isset($employeeInfo)
-                                            {{ $employeeInfo->email }}
-                                        @endisset</li>
-                                    <li class="list-group-item">Reporting Manager: @isset($employeeInfo)
-                                            {{ $employeeInfo->reporting_manager }}
-                                        @endisset</li>
-                                </ul>
-                            </div>
-                        </div>
-                        <div class="col-4">
-                            <div class="row">
-                                <div class="card mt-5" style="width: 18rem;">
-                                    <div class="card-header">
-                                        Today Activity
-                                    </div>
-                                    <ul class="list-group list-group-flush">
-                                        @isset($punchHistories)
-                                            @foreach($punchHistories as $punchHistory)
-                                                @isset($punchHistory['punch_in'])
-                                                    @if($punchHistory['punch_in'] != null)
-                                                        <li class="list-group-item">Punch In
-                                                            At: {{ Carbon::parse($punchHistory['punch_in'])->format('h:i A') }}</li>
-                                                    @endif
-                                                @endisset
-                                                @isset($punchHistory['punch_out'])
-                                                    @if($punchHistory['punch_out'] != null)
-                                                        <li class="list-group-item">Punch Out
-                                                            At: {{ Carbon::parse($punchHistory['punch_out'])->format('h:i A') }}</li>
-                                                    @endif
-                                                @endisset
-                                            @endforeach
-                                        @endisset
-                                    </ul>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="container-fluid">
-                    <div class="row col-12">
-                        <div class="col-4">
-                            <div class="row">
-                                <div class="card mt-5" style="width: 18rem;">
-                                    <div class="card-header">
-                                        Time Sheet
-                                    </div>
-                                    <ul class="list-group list-group-flush">
-                                        <!-- Additional content for time sheet can be added here -->
-                                    </ul>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-4">
-                            <div class="row">
-                                <div class="card mt-5" style="width: 18rem;">
-                                    <div class="card-header">
-                                        Punch Details
-                                    </div>
-                                    <ul class="list-group list-group-flush">
-                                        <li class="list-group-item">
-                                            Date: <?php echo Carbon::now()->format('jS F Y'); ?></li>
-                                        <li class="list-group-item">Punch In At:
-                                            @isset($punchDetails['firstLogIn'])
-                                                {{ Carbon::createFromFormat('H:i:s', $punchDetails['firstLogIn'])->format('h:i A') }}
-                                            @else
-                                                N/A
-                                            @endisset
-                                        </li>
-                                        <li class="list-group-item">Punch Out At:
-                                            @isset($punchDetails['lastPunchOut'])
-                                                {{ Carbon::createFromFormat('H:i:s', $punchDetails['lastPunchOut'])->format('h:i A') }}
-                                            @else
-                                                N/A
-                                            @endisset
-                                        </li>
-                                        <li class="list-group-item">Work Hours:</li>
-                                    </ul>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
+<div class="container">
+    <div class="row mt-5">
+        <div class="col-12">
+            <div class="d-flex">
+                <form id="companyForm" action="{{route('company')}}" method="POST">
+                    @csrf
+                    <select class="form-select me-3" name="company" aria-label="First select example">
+                        <option selected>Select Company</option>
+                        @isset($companies)
+                            @foreach($companies as $company)
+                                <option
+                                    value="{{ $company->id }}">
+                                    {{ $company->company_name }}
+                                </option>
+                            @endforeach
+                        @endisset
+                    </select>
+                    <button value="submit">submit</button>
+                </form>
+                <form id="departmentForm" action="{{route('department')}}" method="POST">
+                    @csrf
+                    <select class="form-select me-3" name="department" aria-label="Second select example">
+                        <option selected>Select Department</option>
+                        @isset($departments)
+                            @foreach($departments as $department)
+                                <option value="{{ $department->id }}">{{$department->name}}</option>
+                            @endforeach
+                        @endisset
+                    </select>
+                    <button value="submit">submit</button>
+                </form>
+                <form id="departmentForm" action="{{route('employee')}}" method="POST">
+                    @csrf
+                    <select class="form-select" name="employee" aria-label="Third select example">
+                        <option selected>Select Employee</option>
+                        @isset($employees)
+                            @foreach($employees as $employee)
+                                <option value="{{ $employee->id }}">{{$employee->name}}</option>
+                            @endforeach
+                        @endisset
+                    </select>
+                    <button value="submit">submit</button>
+                </form>
             </div>
         </div>
     </div>
+    <div class="row">
+        <div class="card mt-5" style="width: 18rem;">
+            <div class="card-header">
+                Employee Details
+            </div>
+            <ul class="list-group list-group-flush">
+                <li class="list-group-item">Name: @isset($employeeInfo)
+                        {{$employeeInfo->name}}
+                    @endisset</li>
+                <li class="list-group-item">Company:@isset($employeeInfo)
+                        {{$company->company_name}}
+                    @endisset</li>
+                <li class="list-group-item">Department:@isset($employeeInfo)
+                        {{$employeeInfo->department->name}}
+                    @endisset</li>
+                <li class="list-group-item">Designation:@isset($employeeInfo)
+                        {{$employeeInfo->designation}}
+                    @endisset</li>
+                <li class="list-group-item">Employ Id:@isset($employeeInfo)
+                        {{$employeeInfo->id}}
+                    @endisset</li>
+                <li class="list-group-item">Mail Id:@isset($employeeInfo)
+                        {{$employeeInfo->email}}
+                    @endisset</li>
+                <li class="list-group-item">Reporting Manager:@isset($employeeInfo)
+                        {{$employeeInfo->reporting_manager}}@endisset</li>
+            </ul>
+        </div>
+    </div>
 </div>
+

@@ -32,6 +32,102 @@
                        <li><a href="{{route('master.master_holiday')}}">Holiday</a></li>
                    </ul>
                </div>
+               <div class="custom_tabs_data" id="tab4" style="display: block;">
+                  <div class="masterTab_bg">
+                      <div class="masterTab_data">
+                          <div class="custom_tittle">
+                              <h5>Shift Master</h5>
+                          </div>
+                          <div class="sorting_nav" style="margin-left: 165px;margin-bottom: -46px">
+                           <div class="showSort">
+                               <div class="allSelect">
+                                   <strong class="entitiesSelect">Select Company</strong>
+                                   <div class="showSort_select seleComp">
+                                       <select class="fav_show">
+                                           <option value="Yes">Yes</option>
+                                           <option value="No">No</option> 
+                                       </select>
+                                   </div>
+                               </div>
+
+                               <div class="allSelect">
+                                   <strong class="entitiesSelect">Select Department</strong>
+                                   <div class="showSort_select seleComp">
+                                       <select class="fav_show">
+                                           <option value="Yes">Yes</option>
+                                           <option value="No">No</option> 
+                                       </select>
+                                   </div>
+                               </div>
+                           </div>
+                        </div>
+                          <div class="masterTable">
+                              <div class="row">
+                                  <div class="col-xxl-12 ">
+                                      <div class="masterTable_data">
+                                          <table class="table" id="shift_master">
+                                              <thead>
+                                              <tr>
+                                                  <th><h6 class="text-left">Shift Code</h6></th>
+                                                  <th><h6 class="text-left">Shift Name</h6></th>
+                                                  <th><h6 class="text-left">In Time</h6></th>
+                                                  <th><h6 class="text-left">Out Time</h6></th>
+                                                  <th><h6 class="text-left">Shift Hours</h6></th>
+                                                  <th width=""><h6>Time Zone</h6></th>
+                                                  <th><h6>Action</h6></th> 
+                                              </tr>
+                                              </thead>
+                                              <tbody>
+                                              <tr>
+                                                  <td><div class="tabletext"><p class="pl-3">G</p></div></td>
+                                                  <td><div class="tabletext"><p>General</p></div></td>
+                                                  <td><div class="tabletext"><p>10:00</p></div></td>
+                                                  <td><div class="tabletext"><p>19:00</p></div></td>
+                                                  <td><div class="tabletext"><p>09:00</p></div></td>
+                                                  <td><div class="tabletext"><p>GMT +05:30</p></div></td> 
+                                                  <td>
+                                                      <div class="actionBtns">
+                                                          <button class="actBtn"><i class="fa fa-pencil-square-o" aria-hidden="true"></i></button>
+                                                          <button class="actBtn"><i class="fa fa-trash" aria-hidden="true"></i></button>
+                                                      </div>
+                                                  </td>  
+                                              </tr>  
+
+                                              <tr>
+                                                  <td><div class="tabletext"><p class="pl-3">G</p></div></td>
+                                                  <td><div class="tabletext"><p>General</p></div></td>
+                                                  <td><div class="tabletext"><p>10:00</p></div></td>
+                                                  <td><div class="tabletext"><p>19:00</p></div></td>
+                                                  <td><div class="tabletext"><p>09:00</p></div></td>
+                                                  <td><div class="tabletext"><p>GMT +05:30</p></div></td> 
+                                                  <td>
+                                                      <div class="actionBtns">
+                                                          <button class="actBtn"><i class="fa fa-pencil-square-o" aria-hidden="true"></i></button>
+                                                          <button class="actBtn"><i class="fa fa-trash" aria-hidden="true"></i></button>
+                                                      </div>
+                                                  </td>  
+                                              </tr>  
+                                              </tbody>
+                                          </table>
+                                      </div>
+                                  </div>
+                              </div>
+                          </div>
+
+
+                          <div class="table_actions">
+                              <div class="row align-items-center">
+                                  <div class="col-xxl-6 col-xl-6 col-lg-6 col-md-6 "> 
+                                      <div class="table_actionsBtns">
+                                          <button class="tb_actionBtn">Add</button>
+                                          <button class="tb_actionBtn">Exit</button>
+                                      </div>
+                                  </div>
+                              </div>
+                          </div>
+                      </div>
+                  </div>
+              </div>
             </div>
          </div>
       </div> 
