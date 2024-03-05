@@ -15,23 +15,25 @@
                 <div class="row">
                     <div class="col-12">
                         <div class="d-flex">
-                            <form id="companyForm" action="{{ route('company') }}" method="POST">
-                                @csrf
-                                <select class="form-select me-3" name="company" aria-label="First select example">
+                            <div class="col-6">
+                                <select id="companyName" class="form-select me-3" name="company"
+                                        aria-label="First select example" onchange="fetchDepartments()">
                                     <option selected disabled>Select Company</option>
                                     @isset($companies)
                                         @foreach($companies as $company)
-                                            <option value="{{ $company->id }}">{{ $company->company_name }}</option>
+                                            <option value="{{ $company->id }}">{{$company->company_name }}</option>
                                         @endforeach
                                     @endisset
                                 </select>
-                                <button type="submit" class="btn btn-primary">Submit</button>
-                            </form>
-                            <form id="departmentForm" action="{{ route('department') }}" method="POST">
+                            </div>
+                            <div class="col-6">
+
+                                <form id="departmentForm" action="{{ route('department') }}" method="POST">
                                 @csrf
-                                <select class="form-select me-3" name="department" aria-label="Second select example"
+                                    <select id="departmentName" class="form-select me-3" name="department"
+                                            aria-label="Second select example">
                                         @if(!isset($companies)) disabled @endif>
-                                    <option selected disabled>Select Department</option>
+                                            <option disabled>Select Department</option>
                                     @isset($departments)
                                         @foreach($departments as $department)
                                             <option value="{{ $department->id }}">{{ $department->name }}</option>
@@ -42,6 +44,8 @@
                                     Submit
                                 </button>
                             </form>
+                            </div>
+
                         </div>
                     </div>
                 </div>
@@ -185,3 +189,30 @@
         </div>
     </div>
 </div>
+<script>
+    function fetchDepartments() {
+        var companyId = document.getElementById('companyName').value;
+        var departmentSelect = document.getElementById('departmentName');
+
+        // Clear previous options
+        departmentSelect.innerHTML = ' <option disabled>Select Department</option>';
+
+        // Fetch departments based on selected company
+        fetch('/departments/' + companyId, {
+            method: 'GET',
+            headers: {
+                'Content-Type': 'application/json'
+            }
+        })
+            .then(response => response.json())
+            .then(data => {
+                data.forEach(function (department) {
+                    var option = document.createElement('option');
+                    option.value = department.id;
+                    option.textContent = department.name;
+                    departmentSelect.appendChild(option);
+                });
+            })
+            .catch(error => console.error('Error fetching departments:', error));
+    }
+</script>

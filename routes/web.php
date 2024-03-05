@@ -1,12 +1,11 @@
 <?php
 
+use App\Http\Controllers\ContentController;
+use App\Http\Controllers\Logincontroller;
+use App\Http\Controllers\profileController;
 use App\Http\Controllers\TimeTracking;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Route;
-use App\Http\Controllers\ContentController;
-use App\Http\Controllers\OnboardController;
-use App\Http\Controllers\Logincontroller;
-use App\Http\Controllers\profileController;
 
 /*
 |--------------------------------------------------------------------------
@@ -115,7 +114,7 @@ Route::middleware(['middleware' => 'auth.check'])->group(function () {
     Route::get('Talent-History', [profileController::class, 'employee_History'])->name('Applied.History');
     //
     Route::get('log-in-off', [TimeTracking::class, 'logInOff'])->name('logInOff');
-    Route::post('company', [TimeTracking::class, 'company'])->name('company');
+    Route::get('/company/{companyId}', [TimeTracking::class, 'company'])->name('company');
     Route::post('department', [TimeTracking::class, 'department'])->name('department');
     Route::post('employee', [TimeTracking::class, 'employee'])->name('employee');
     Route::get('Employee-work-log', [TimeTracking::class, 'employeeWorkLog'])->name('employeeWorkLog');
@@ -128,7 +127,9 @@ Route::middleware(['middleware' => 'auth.check'])->group(function () {
     Route::get('leave-request', [TimeTracking::class, 'leaveRequest'])->name('leaveRequest');
     Route::post('punch', [TimeTracking::class, 'punch'])->name('punch');
     Route::post('status', [TimeTracking::class, 'status'])->name('status');
-
+    Route::post('leave-request-submit', [TimeTracking::class, 'leaveRequestSubmit'])->name('leaveRequestSubmit');
+    Route::get('/leaveRequestDepartments/{companyId}', [TimeTracking::class, 'leaveRequestCompany']);
+    Route::post('leave-status', [TimeTracking::class, 'leaveStatus'])->name('leaveStatus');
 
 });
 

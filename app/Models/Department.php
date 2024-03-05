@@ -30,4 +30,10 @@ class Department extends Model
     {
         return $this->hasMany(Employee::class);
     }
+
+    public function leaveRequest(): HasMany
+    {
+        return $this->hasMany(LeaveRequest::class);
+    }
 }
+

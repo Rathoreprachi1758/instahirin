@@ -6,6 +6,8 @@ use App\Models\Company;
 use App\Models\Department;
 use App\Models\Employee;
 use App\Models\EmployeeLogTime;
+use App\Models\leave;
+use App\Models\LeaveRequest;
 use Auth;
 use Carbon\Carbon;
 use Illuminate\Contracts\Foundation\Application;
@@ -103,9 +105,9 @@ class TimeTracking extends Controller
      * @param Request $request
      * @return Application|Factory|View|\Illuminate\Foundation\Application
      */
-    public function company(Request $request): \Illuminate\Foundation\Application|View|Factory|Application
+    public function company($companyId): \Illuminate\Foundation\Application|View|Factory|Application
     {
-        $company = Company::find($request->company);
+        $company = Company::find($companyId);
         $departments = $company->departments;
 
         $companies = Company::where('user_id', Auth::id())->get();
@@ -353,6 +355,45 @@ class TimeTracking extends Controller
     public function leaveRequest(): \Illuminate\Foundation\Application|View|Factory|Application
     {
         $companies = Company::all();
-        return view('timeTracking.leave_request')->with(compact('companies'));
+        $leaveTypes = leave::all();
+        $leaveRequests = LeaveRequest::all();
+        return view('timeTracking.leave_request')->with(compact('companies', 'leaveTypes', 'leaveRequests'));
+    }
+
+    public function leaveRequestCompany($companyId)
+    {
+        $departments = Department::where('company_id', $companyId)->get();
+        return response()->json($departments);
+    }
+
+    public function leaveRequestSubmit(Request $request)
+    {
+        $companyId = $request->company;
+        $leave = leave::find($request->leaveId);
+
+        $leaveRequest = new LeaveRequest;
+        $leaveRequest->company_id = $request->company;
+        $leaveRequest->department_id = $request->department;
+        $leaveRequest->leave_id = $request->leaveId;
+        $leaveRequest->leave_type = $leave->leave_name;
+        $leaveRequest->employee_code = $request->emp_code;
+        $leaveRequest->start_date = $request->From;
+        $leaveRequest->end_date = $request->To;
+        $leaveRequest->leave_reason = $request->reason;
+        $leaveRequest->leave_days = $request->leaveDays;
+        $leaveRequest->leave_balance = $request->leaveBalance;
+        $leaveRequest->email = $request->email;
+        $leaveRequest->phone = $request->phone;
+        $leaveRequest->save();
+
+        dd($request, $companyId, $request->leaveType, $request->From, $request->To, $request->reason, $request->leaveDays, $request->email, $request->phone);
+    }
+
+    public function leaveStatus(Request $request)
+    {
+        $LeaveRequest = LeaveRequest::find($request->requestId);
+        $LeaveRequest->leave_status = $request->status;
+        $LeaveRequest->save();
+        dd($request);
     }
 }

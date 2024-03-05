@@ -28,11 +28,12 @@
                             <div class="tab-pane fade show active" id="nav-home" role="tabpanel"
                                  aria-labelledby="nav-home-tab"
                                  tabindex="0">
-                                <form class="row g-3">
+                                <form class="row g-3" action="{{route('leaveRequestSubmit')}}" method="post">
+                                    @csrf
                                     <div class="col-md-6">
                                         <label for="inputName" class="form-label">Company Name</label>
-                                        <select id="inputName" name="name" class="form-select"
-                                                onchange="this.form.submit()">
+                                        <select id="companyName" name="company" class="form-select"
+                                                onchange="fetchDepartments()">
                                             <option selected>Choose...</option>
                                             @foreach($companies as $company)
                                                 <option value="{{$company->id}}">{{$company->company_name}}</option>
@@ -41,21 +42,30 @@
                                     </div>
                                     <div class="col-md-6">
                                         <label for="inputDepartment" class="form-label">Department</label>
-                                        <select id="inputDepartment" class="form-select">
+                                        <select id="inputDepartment" name="department" class="form-select">
                                             <option selected>Choose...</option>
-                                            <option>...</option>
+                                            @isset($departments)
+                                                @foreach($departments as $department)
+                                                    <option
+                                                        value="{{ $department->id }}">{{ $department->name }}</option>
+                                                @endforeach
+                                            @endisset
                                         </select>
                                     </div>
                                     <div class="col-6">
                                         <label for="inputCode" class="form-label">Employee Code</label>
-                                        <input type="text" class="form-control" id="inputCode" placeholder="000">
+                                        <input type="text" name="emp_code" class="form-control" id="inputCode"
+                                               placeholder="000">
                                     </div>
                                     <div class="col-12">
                                         <div class="col-md-6">
                                             <label for="inputType" class="form-label">Leave Type</label>
-                                            <select id="inputType" class="form-select">
+                                            <select id="inputType" name="leaveId" class="form-select">
                                                 <option selected>Choose...</option>
-                                                <option>...</option>
+                                                @foreach($leaveTypes as $leaveType)
+                                                    <option
+                                                        value="{{$leaveType->id}}">{{$leaveType->leave_name}}</option>
+                                                @endforeach
                                             </select>
                                         </div>
                                     </div>
@@ -74,31 +84,34 @@
                                     <div class="col-md-12">
                                         <label for="inputEmail" class="form-label">Reason For Leave</label>
                                         <div class="form-floating">
-                                            <textarea class="form-control" placeholder="Type" id="floatingTextarea"></textarea>
+                                            <textarea class="form-control" placeholder="Type" name="reason"
+                                                      id="floatingTextarea"></textarea>
                                         </div>
                                     </div>
                                     <div class="col-md-6">
                                         <label for="inputDays" class="form-label">Total Number Of days</label>
-                                        <input type="text" class="form-control" id="inputDays">
+                                        <input type="text" name="leaveDays" class="form-control" id="inputDays">
                                     </div>
                                     <div class="col-md-6">
                                         <label for="inputBalance" class="form-label">Balance Leave</label>
-                                        <input type="text" class="form-control" id="inputBalance" disabled>
+                                        <input type="text" name="leaveBalance" class="form-control" id="inputBalance"
+                                               disabled>
                                     </div>
                                     <div class="col-md-6">
                                         <label for="inputEmail" class="form-label">Contact Email During Leave</label>
-                                        <input type="email" class="form-control" id="inputEmail">
+                                        <input type="email" name="email" class="form-control" id="inputEmail">
                                     </div>
                                     <div class="col-md-6">
                                         <label for="inputNumber" class="form-label">Contact Number During Leave</label>
-                                        <input type="number" class="form-control" id="inputNumber">
+                                        <input type="number" name="phone" class="form-control" id="inputNumber">
                                     </div>
                                     <div class="col-12">
-                                        <button type="submit" class="btn btn-primary">Sign in</button>
+                                        <button type="submit" class="btn btn-primary">Submit</button>
                                     </div>
                                 </form>
                             </div>
-                            <div class="tab-pane fade" id="nav-profile" role="tabpanel" aria-labelledby="nav-profile-tab" tabindex="0">
+                            <div class="tab-pane fade" id="nav-profile" role="tabpanel"
+                                 aria-labelledby="nav-profile-tab" tabindex="0">
                                 <div class="custom_tabs_data" style="display: block" id="tab5">
                                     <div class="col-xxl-9 col-xl-11 col-lg-11 col-md-12">
                                         <div class="activityTable_data">
@@ -109,16 +122,31 @@
                                                         <h6>#</h6>
                                                     </th>
                                                     <th>
+                                                        <h6>Company</h6>
+                                                    </th>
+                                                    <th>
+                                                        <h6>Department</h6>
+                                                    </th>
+                                                    <th>
                                                         <h6>Emp Code</h6>
                                                     </th>
                                                     <th>
-                                                        <h6>Calendar</h6>
+                                                        <h6>Leave Type</h6>
                                                     </th>
                                                     <th>
-                                                        <h6>Time Recorder</h6>
+                                                        <h6>Leave Periods</h6>
                                                     </th>
                                                     <th>
-                                                        <h6>Total Hours</h6>
+                                                        <h6>No of Days</h6>
+                                                    </th>
+                                                    <th>
+                                                        <h6>Leave Balance</h6>
+                                                    </th>
+                                                    <th>
+                                                        <h6>Alternate Details</h6>
+                                                    </th>
+                                                    <th>
+                                                        <h6>Reason for leave</h6>
                                                     </th>
                                                     <th>
                                                         <h6>Actions</h6>
@@ -127,56 +155,73 @@
                                                 </thead>
                                                 <tbody>
                                                 @php($increamentId = 1)
-                                                @isset($punchInOutInfo)
-                                                    @foreach($punchInOutInfo as $punchInOutData)
+                                                @isset($leaveRequests)
+                                                    @foreach($leaveRequests as $leaveRequest)
+                                                        {{--                                                        @php(dd($leaveRequest))--}}
                                                         <tr>
                                                             <td>
                                                                 <div class="tabletext">
                                                                     <p>{{$increamentId}}</p>
                                                                 </div>
-                                                            {{--                                        <div class="tabletext">--}}
-                                                            {{--                                            <form action="{{ route('workLogDepartment') }}" method="POST">--}}
-                                                            {{--                                                @csrf--}}
-                                                            {{--                                                <select name="department">--}}
-                                                            {{--                                                    @isset($departments)--}}
-                                                            {{--                                                        @foreach($departments as $department)--}}
-                                                            {{--                                                            <option--}}
-                                                            {{--                                                                value="{{ $department->id }}">{{ $department->name }}</option>--}}
-                                                            {{--                                                        @endforeach--}}
-                                                            {{--                                                    @endisset--}}
-                                                            {{--                                                </select>--}}
-                                                            {{--                                                <button type="submit">Submit</button>--}}
-                                                            {{--                                            </form>--}}
-                                                            {{--                                        </div>--}}
                                                             <td>
                                                                 <div class="tabletext">
-                                                                    <p>{{ $punchInOutData['emp_code'] }}</p>
+                                                                    <p>{{ $leaveRequest->company->company_name }}</p>
                                                                 </div>
                                                             </td>
                                                             <td>
                                                                 <div class="tabletext">
-                                                                    <p>{{ $punchInOutData['date'] }}</p>
+                                                                    <p>{{ $leaveRequest->department->name }}</p>
                                                                 </div>
                                                             </td>
                                                             <td>
                                                                 <div class="tabletext">
-                                                                    <p>punchin - {{ $punchInOutData['punchIn'] }}</p>
-                                                                    <p>punchin - {{ $punchInOutData['punchOut'] }}</p>
+                                                                    <p>{{ $leaveRequest->employee_code }}</p>
                                                                 </div>
                                                             </td>
                                                             <td>
                                                                 <div class="tabletext">
-                                                                    <p>Hyderabad</p>
+                                                                    <p>{{ $leaveRequest->leave_type }}</p>
+                                                                </div>
+                                                            </td>
+                                                            <td>
+                                                                <div class="tabletext">
+                                                                    <p>start date:-{{ $leaveRequest->start_date }}</p>
+                                                                </div>
+                                                                <div class="tabletext">
+                                                                    <p>End date:-{{ $leaveRequest->end_date }}</p>
+                                                                </div>
+                                                            </td>
+                                                            <td>
+                                                                <div class="tabletext">
+                                                                    <p>{{ $leaveRequest->leave_days }}</p>
+                                                                </div>
+                                                            </td>
+                                                            <td>
+                                                                <div class="tabletext">
+                                                                    <p>{{ $leaveRequest->leave_balance }}</p>
+                                                                </div>
+                                                            </td>
+                                                            <td>
+                                                                <div class="tabletext">
+                                                                    <p>Email:- {{ $leaveRequest->email }}</p>
+                                                                </div>
+                                                                <div class="tabletext">
+                                                                    <p>Phone:- {{ $leaveRequest->phone }}</p>
+                                                                </div>
+                                                            </td>
+                                                            <td>
+                                                                <div class="tabletext">
+                                                                    <p>{{ $leaveRequest->leave_reason }}</p>
                                                                 </div>
                                                             </td>
                                                             <td width="90">
                                                                 <div class="tabletext">
                                                                     <div class="statusFiled">
-                                                                        @if($punchInOutData['work_log_status'] === null)
+                                                                        @if($leaveRequest['leave_status'] === null)
                                                                             <strong class="">Pending</strong>
-                                                                        @elseif($punchInOutData['work_log_status'] == true)
+                                                                        @elseif($leaveRequest['leave_status'] == true)
                                                                             <strong class="">Accepted</strong>
-                                                                        @elseif($punchInOutData['work_log_status'] == false)
+                                                                        @elseif($leaveRequest['leave_status'] == false)
                                                                             <strong class="">Rejected</strong>
                                                                         @endif
                                                                         <div class="statusFieldInfo">
@@ -186,28 +231,34 @@
                                                                                 <div class="statusDropdown">
                                                                                     <ul>
                                                                                         <li>
-                                                                                            <form action="{{ route('status') }}"
-                                                                                                  method="post">
+                                                                                            <form
+                                                                                                action="{{ route('leaveStatus') }}"
+                                                                                                method="post">
                                                                                                 @csrf
-                                                                                                <input type="hidden" value="1"
+                                                                                                <input type="hidden"
+                                                                                                       value="1"
                                                                                                        name="status">
                                                                                                 <input type="hidden"
-                                                                                                       value="{{ $punchInOutData['date'] }}"
-                                                                                                       name="date">
-                                                                                                <input type="submit" value="Accept"
+                                                                                                       value="{{ $leaveRequest->id }}"
+                                                                                                       name="requestId">
+                                                                                                <input type="submit"
+                                                                                                       value="Accept"
                                                                                                        name="button">
                                                                                             </form>
                                                                                         </li>
                                                                                         <li>
-                                                                                            <form action="{{ route('status') }}"
-                                                                                                  method="post">
+                                                                                            <form
+                                                                                                action="{{ route('leaveStatus') }}"
+                                                                                                method="post">
                                                                                                 @csrf
-                                                                                                <input type="hidden" value="0"
+                                                                                                <input type="hidden"
+                                                                                                       value="0"
                                                                                                        name="status">
                                                                                                 <input type="hidden"
-                                                                                                       value="{{ $punchInOutData['date'] }}"
-                                                                                                       name="date">
-                                                                                                <input type="submit" value="Reject"
+                                                                                                       value="{{ $leaveRequest->id }}"
+                                                                                                       name="requestId">
+                                                                                                <input type="submit"
+                                                                                                       value="Reject"
                                                                                                        name="button">
                                                                                             </form>
                                                                                         </li>
@@ -234,6 +285,33 @@
                 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"
                         integrity="sha384-kenU1KFdBIe4zVF0s0G1M5b4hcpxyD9F7jL+jjXkk+Q2h455rYXK/7HAuoJl+0I4"
                         crossorigin="anonymous">
+                </script>
+                <script>
+                    function fetchDepartments() {
+                        var companyId = document.getElementById('companyName').value;
+                        var departmentSelect = document.getElementById('inputDepartment');
+
+                        // Clear previous options
+                        departmentSelect.innerHTML = '<option selected>Choose...</option>';
+
+                        // Fetch departments based on selected company
+                        fetch('/leaveRequestDepartments/' + companyId, {
+                            method: 'GET',
+                            headers: {
+                                'Content-Type': 'application/json'
+                            }
+                        })
+                            .then(response => response.json())
+                            .then(data => {
+                                data.forEach(function (department) {
+                                    var option = document.createElement('option');
+                                    option.value = department.id;
+                                    option.textContent = department.name;
+                                    departmentSelect.appendChild(option);
+                                });
+                            })
+                            .catch(error => console.error('Error fetching departments:', error));
+                    }
                 </script>
             </div>
         </div>

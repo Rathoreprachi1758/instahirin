@@ -19,4 +19,10 @@ class Company extends Model
     {
         return $this->hasMany(Department::class);
     }
+
+    public function leaveRequest(): HasMany
+    {
+        return $this->hasMany(LeaveRequest::class);
+
+    }
 }
