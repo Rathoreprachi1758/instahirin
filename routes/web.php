@@ -7,6 +7,8 @@ use App\Http\Controllers\ContentController;
 use App\Http\Controllers\OnboardController;
 use App\Http\Controllers\Logincontroller;
 use App\Http\Controllers\profileController;
+use App\Http\Controllers\MasterController;
+use App\Http\Controllers\DepartmentController;
 
 /*
 |--------------------------------------------------------------------------
@@ -109,15 +111,10 @@ Route::middleware(['middleware' => 'auth.check'])->group(function () {
     Route::get('offers', [profileController::class, 'employee_offers'])->name('Applied.offers');
     Route::get('Talent-History', [profileController::class, 'employee_History'])->name('Applied.History');
     //
-    Route::get('log-in-off', [TimeTracking::class, 'logInOff'])->name('logInOff');
-    Route::post('company', [TimeTracking::class, 'company'])->name('company');
-    Route::post('department', [TimeTracking::class, 'department'])->name('department');
-    Route::post('employee', [TimeTracking::class, 'employee'])->name('employee');
-    Route::get('Employee-work-log', [TimeTracking::class, 'EmployeeWorkLog'])->name('employeeWorkLog');
-    Route::post('work-log-company', [TimeTracking::class, 'workLogCompany'])->name('workLogCompany');
-    Route::post('work-log-department', [TimeTracking::class, 'workLogDepartment'])->name('workLogDepartment');
-    Route::get('leave-request', [TimeTracking::class, 'leaveRequest'])->name('leaveRequest');
-
+    Route::resource('master',MasterController::class);
+    Route::resource('department',DepartmentController::class);
+    // Route::resource('master',MasterController::class);
+    // Route::resource('master',MasterController::class);
 
 });
 

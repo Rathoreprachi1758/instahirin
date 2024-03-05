@@ -80,6 +80,8 @@
                                         </tr>
                                     </thead>
                                     <tbody>
+                                        @foreach($jobsWithApplicants as $job)
+                                        @endforeach
                                         <tr>
                                             <td>
                                                 <div class="tabletext">

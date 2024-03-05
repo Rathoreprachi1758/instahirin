@@ -20,8 +20,8 @@
                </div>
                <div class="custom_tabs">
                    <ul>
-                       <li><a href="{{route('master.company')}}">Company</a></li>
-                       <li><a href="{{route('master.department')}}">Department</a></li>
+                       <li><a href="{{ route('master.index') }}">Company</a></li>
+                       <li><a href="{{route('department.index')}}">Department</a></li>
                        <li><a href="{{route('master.designation')}}" class="active">Designation</a></li>
                        <li><a href="{{route('master.shift_master')}}">Shift Master Daily</a></li>
                        <li><a href="{{route('master.category')}}">Category</a></li>

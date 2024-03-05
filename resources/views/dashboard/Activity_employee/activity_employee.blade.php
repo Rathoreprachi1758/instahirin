@@ -856,8 +856,8 @@
                                                                     id="key_skills" name="key_skills"
                                                                     style="width: 414px;border-radius:1.25rem;">
                                                                     <option>Choose skills</option>
-                                                                    <option>Skill 1</option>
-                                                                    <option>Skill 2</option>
+                                                                    <option>React Js</option>
+                                                                    <option>React Js</option>
                                                                 </select>
                                                                 <br>
                                                                 <button type="submit"
@@ -1487,33 +1487,23 @@
         $("#openSaveDraftModal").click(function() {
             $("#draftModal").modal("show");
         });
-    });
-    //Add employement
-    $(document).ready(function() {
+    // //Add employement
         $("#openAdd_employement").click(function() {
             $("#Add_employement").modal("show");
         });
-    });
-    //education model
-    $(document).ready(function() {
+    // //education model
         $("#education_edit").click(function() {
             $("#education_model").modal("show");
         });
-    });
-    //persional_info
-    $(document).ready(function() {
+    // //persional_info
         $("#personal_info").click(function() {
             $("#personal_info_model").modal("show");
         });
-    });
-    //headline
-    $(document).ready(function() {
+    // //headline
         $("#resume_headline").click(function() {
             $("#headlineModal").modal("show");
         });
-    });
-    //
-    $(document).ready(function() {
+
         $("#secondary_education_edit").click(function() {
             $("#secondory_education_model").modal("show");
         });
@@ -1525,13 +1515,13 @@
 </script>
 {{-- <script defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCWCwDO2UDvwai9BBUyvxGS6t436Eot7Wc&libraries=places&callback=initAutocomplete" async></script> --}}
 <script>
-    function loadMapScript() {
-        var script = document.createElement('script');
-        script.defer.src =
-            'https://maps.googleapis.com/maps/api/js?key=AIzaSyCWCwDO2UDvwai9BBUyvxGS6t436Eot7Wc&libraries=places&callback=initMap';
-        script.async = true;
-        document.head.appendChild(script);
-    }
+    // function loadMapScript() {
+    //     var script = document.createElement('script');
+    //     script.defer.src =
+    //         'https://maps.googleapis.com/maps/api/js?key=AIzaSyCWCwDO2UDvwai9BBUyvxGS6t436Eot7Wc&libraries=places&callback=initMap';
+    //     script.async = true;
+    //     document.head.appendChild(script);
+    // }
 
     function initMap() {
         var locationInput = document.getElementById('location');
@@ -1583,7 +1573,7 @@
     window.onload = updateWordCount;
 
 function isPressed(){
-    alert('Hii');
+    // alert('Hii');
     var newResumeBox = document.createElement('div');
         newResumeBox.className = 'resumeBoxes';
 

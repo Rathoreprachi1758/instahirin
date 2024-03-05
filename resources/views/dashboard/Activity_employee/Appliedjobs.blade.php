@@ -33,6 +33,82 @@
                 <div class="custom_tabs_data" style="display: block" id="tab3">
                     <div class="col-xxl-9 col-xl-10 col-lg-11 col-md-12">
                         <div class="activityTable_data">
+                            {{-- <table class="table table-striped">
+                                <thead>
+                                    <tr>
+                                        <th>
+                                            <h6>Id</h6>
+                                        </th>
+                                        <th>
+                                            <h6>Company Name</h6>
+                                        </th>
+                                        <th>
+                                            <h6>Position Title</h6>
+                                        </th>
+                                        <th>
+                                            <h6>Experience</h6>
+                                        </th>
+                                        <th>
+                                            <h6>Key Skills</h6>
+                                        </th>
+                                        <th>
+                                            <h6>Location</h6>
+                                        </th>
+                                        <th>
+                                            <h6>Availability</h6>
+                                        </th>
+                                        <th>
+                                            <h6>Applied on</h6>
+                                        </th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    @foreach($applicant as $applay)
+                                        <tr>
+                                            <td>
+                                                <div class="tabletext">
+                                                    <p>{{$applay->id}}</p>
+                                                </div>
+                                            </td>
+                                            <td>
+                                                <div class="tabletext">
+                                                    <p>{{$applay->id}}</p>
+                                                </div>
+                                            </td>
+                                            <td>
+                                                <div class="tabletext">
+                                                    <p>{{$applay->current_title}}</p>
+                                                </div>
+                                            </td>
+                                            <td>
+                                                <div class="tabletext">
+                                                    <p>{{$applay->experience_year}}.{{$applay->experience_month}}</p>
+                                                </div>
+                                            </td>
+                                            <td>
+                                                <div class="tabletext">
+                                                    <p>{{$applay->key_skills}}</p>
+                                                </div>
+                                            </td>
+                                            <td>
+                                                <div class="tabletext">
+                                                    <p>{{$applay->company_location}}</p>
+                                                </div>
+                                            </td>
+                                            <td>
+                                                <div class="tabletext">
+                                                    <p>{{$applay->availability_date}}</p>
+                                                </div>
+                                            </td>
+                                            <td>
+                                                <div class="tabletext">
+                                                    <p>Bizionic Portal</p>
+                                                </div>
+                                            </td>
+                                        </tr>
+                                    @endforeach
+                                </tbody>
+                            </table> --}}
                             <table class="table table-striped">
                                 <thead>
                                     <tr>
@@ -63,50 +139,55 @@
                                     </tr>
                                 </thead>
                                 <tbody>
-                                    <tr>
-                                        <td>
-                                            <div class="tabletext">
-                                                <p>1</p>
-                                            </div>
-                                        </td>
-                                        <td>
-                                            <div class="tabletext">
-                                                <p>Bizionic Tech</p>
-                                            </div>
-                                        </td>
-                                        <td>
-                                            <div class="tabletext">
-                                                <p>Python Developer</p>
-                                            </div>
-                                        </td>
-                                        <td>
-                                            <div class="tabletext">
-                                                <p>5 Yrs</p>
-                                            </div>
-                                        </td>
-                                        <td>
-                                            <div class="tabletext">
-                                                <p>Java, C, C+</p>
-                                            </div>
-                                        </td>
-                                        <td>
-                                            <div class="tabletext">
-                                                <p>Hyderabad</p>
-                                            </div>
-                                        </td>
-                                        <td>
-                                            <div class="tabletext">
-                                                <p>Full Time</p>
-                                            </div>
-                                        </td>
-                                        <td>
-                                            <div class="tabletext">
-                                                <p>20 Sep 2023</p>
-                                            </div>
-                                        </td>
-                                    </tr>
+                                    @foreach($jobsWithApplicants as $job)
+                                        @foreach($job->applicants as $applicant)
+                                            <tr>
+                                                <td>
+                                                    <div class="tabletext">
+                                                        <p>{{$applicant->id}}</p>
+                                                    </div>
+                                                </td>
+                                                <td>
+                                                    <div class="tabletext">
+                                                        <p>{{$job->company}}</p>
+                                                    </div>
+                                                </td>
+                                                <td>
+                                                    <div class="tabletext">
+                                                        <p>{{$applicant->current_title}}</p>
+                                                    </div>
+                                                </td>
+                                                <td>
+                                                    <div class="tabletext">
+                                                        <p>{{$applicant->experience_year}}.{{$applicant->experience_month}}</p>
+                                                    </div>
+                                                </td>
+                                                <td>
+                                                    <div class="tabletext">
+                                                        <p>{{$applicant->key_skills}}</p>
+                                                    </div>
+                                                </td>
+                                                <td>
+                                                    <div class="tabletext">
+                                                        <p>{{$applicant->company_location}}</p>
+                                                    </div>
+                                                </td>
+                                                <td>
+                                                    <div class="tabletext">
+                                                        <p>{{$applicant->availability_date}}</p>
+                                                    </div>
+                                                </td>
+                                                <td>
+                                                    <div class="tabletext">
+                                                        <p>Bizionic Portal</p>
+                                                    </div>
+                                                </td>
+                                            </tr>
+                                        @endforeach
+                                    @endforeach
                                 </tbody>
                             </table>
+                            
                         </div>
                     </div>
                 </div>

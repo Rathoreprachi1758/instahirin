@@ -45,4 +45,9 @@ class HireMeApplication extends Model
     {
         return $this->belongsToMany(Experty::class, 'work_with_hire_application', 'hire_application_id', 'experty_id');
     }
+
+    public function job()
+    {
+        return $this->belongsTo(Job::class, 'job_id');
+    }
 }

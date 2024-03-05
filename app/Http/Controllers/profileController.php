@@ -478,8 +478,17 @@ class profileController extends Controller
     }
 
     public function Employee_skills_update(Request $request)
-    {
-       return $request->all();
+    { 
+        $request->validate([
+           'key_skills' => 'required',
+        ]);
+        $userId = Auth::id();
+        $keySkills = $request->key_skills;
+        $formData = InstaHirinOnboard::updateOrCreate(
+          ['user_id' => $userId],
+          ['key_skills' => $keySkills],
+    );
+    return redirect()->back()->with('message', 'Resume Skills Uploaded!');
     }
 
     public function Employee_Resume_employement(Request $request)
@@ -618,13 +627,18 @@ class profileController extends Controller
         return view('dashboard.Activity_employee.favourite');
     }
     public function Applied_jobs(Request $request)
-    {
-        return view('dashboard.Activity_employee.Appliedjobs');
+    {   
+        $jobIds = Job::where('user_id', Auth::id())->pluck('id');
+        $jobsWithApplicants = job::whereIn('id', $jobIds)->with('applicants')->get();
+        // return $jobsWithApplicants;
+       return view('dashboard.Activity_employee.Appliedjobs',['jobsWithApplicants'=>$jobsWithApplicants]);
     }
 
     public function schedule_interview_calander(Request $request)
-    {
-        return view('dashboard.Activity_employee.intervieweschedule');
+    {   
+        $jobIds = Job::where('user_id', Auth::id())->pluck('id');
+        $jobsWithApplicants = job::whereIn('id', $jobIds)->with('applicants')->get();
+        return view('dashboard.Activity_employee.intervieweschedule',['jobsWithApplicants'=> $jobsWithApplicants]);
     }
 
     public function employee_offers(Request $request)

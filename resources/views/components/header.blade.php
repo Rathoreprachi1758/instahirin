@@ -169,9 +169,9 @@
                                         <em class="menu_icon"><i class="fa fa-angle-down" aria-hidden="true"></i></em>
                                     </a>
                                     <ul>
-                                        <li><a href="{{route('logInOff')}}">► Log In / Off</a></li>
+                                        {{-- <li><a href="{{route('logInOff')}}">► Log In / Off</a></li>
                                         <li><a href="{{route('employeeWorkLog')}}">► Work Logs</a></li>
-                                        <li><a href="{{route('leaveRequest')}}">► Leave Request</a></li>
+                                        <li><a href="{{route('leaveRequest')}}">► Leave Request</a></li> --}}
                                     </ul>
                                 </li>
                                 <li class="has_list"><a href="javascript:void(0)"><span><i class="fa fa-money"
