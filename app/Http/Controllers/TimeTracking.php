@@ -348,7 +348,7 @@ class TimeTracking extends Controller
     }
 
     /**
-     * @return Application|Factory|View|\Illuminate\Foundation\Application
+     * @return \Illuminate\Foundation\Application|View|Factory|Application
      */
     public function leaveRequest(): \Illuminate\Foundation\Application|View|Factory|Application
     {
