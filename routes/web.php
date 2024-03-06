@@ -124,12 +124,17 @@ Route::middleware(['middleware' => 'auth.check'])->group(function () {
     Route::post('status', [TimeTracking::class, 'status'])->name('status');
     Route::get('timeLogs', [TimeTracking::class, 'timeLogs'])->name('timeLogs');
     Route::post('timeLogCompany', [TimeTracking::class, 'timeLogCompany'])->name('timeLogCompany');
-    Route::get('leave-request', [TimeTracking::class, 'leaveRequest'])->name('leaveRequest');
     Route::post('punch', [TimeTracking::class, 'punch'])->name('punch');
     Route::post('status', [TimeTracking::class, 'status'])->name('status');
+    Route::get('leave-request', [TimeTracking::class, 'leaveRequest'])->name('leaveRequest');
     Route::post('leave-request-submit', [TimeTracking::class, 'leaveRequestSubmit'])->name('leaveRequestSubmit');
-    Route::get('/leaveRequestDepartments/{companyId}', [TimeTracking::class, 'leaveRequestCompany']);
+    Route::get('/leaveRequestDepartments/{companyId}', [TimeTracking::class, 'leaveRequestDepartments']);
     Route::post('leave-status', [TimeTracking::class, 'leaveStatus'])->name('leaveStatus');
+    Route::get('late-request', [TimeTracking::class, 'lateRequest'])->name('lateRequest');
+    Route::post('late-request-submit', [TimeTracking::class, 'lateRequestSubmit'])->name('lateRequestSubmit');
+    Route::get('/lateRequestDepartments/{companyId}', [TimeTracking::class, 'lateRequestDepartments']);
+    Route::post('late-request-submit', [TimeTracking::class, 'lateRequestSubmit'])->name('lateRequestSubmit');
+    Route::post('late-status', [TimeTracking::class, 'lateStatus'])->name('lateStatus');
 
 });
 

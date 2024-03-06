@@ -6,6 +6,7 @@ use App\Models\Company;
 use App\Models\Department;
 use App\Models\Employee;
 use App\Models\EmployeeLogTime;
+use App\Models\LateRequest;
 use App\Models\leave;
 use App\Models\LeaveRequest;
 use Auth;
@@ -13,8 +14,10 @@ use Carbon\Carbon;
 use Illuminate\Contracts\Foundation\Application;
 use Illuminate\Contracts\View\Factory;
 use Illuminate\Contracts\View\View;
+use Illuminate\Http\JsonResponse;
 use Illuminate\Http\RedirectResponse;
 use Illuminate\Http\Request;
+use Illuminate\Routing\Redirector;
 use Illuminate\Support\Facades\Http;
 use Illuminate\Support\Facades\Session;
 
@@ -360,15 +363,22 @@ class TimeTracking extends Controller
         return view('timeTracking.leave_request')->with(compact('companies', 'leaveTypes', 'leaveRequests'));
     }
 
-    public function leaveRequestCompany($companyId)
+    /**
+     * @param $companyId
+     * @return JsonResponse
+     */
+    public function leaveRequestDepartments($companyId)
     {
         $departments = Department::where('company_id', $companyId)->get();
         return response()->json($departments);
     }
 
-    public function leaveRequestSubmit(Request $request)
+    /**
+     * @param Request $request
+     * @return RedirectResponse
+     */
+    public function leaveRequestSubmit(Request $request): RedirectResponse
     {
-        $companyId = $request->company;
         $leave = leave::find($request->leaveId);
 
         $leaveRequest = new LeaveRequest;
@@ -385,15 +395,70 @@ class TimeTracking extends Controller
         $leaveRequest->email = $request->email;
         $leaveRequest->phone = $request->phone;
         $leaveRequest->save();
+        return redirect()->route('leaveRequest');
 
-        dd($request, $companyId, $request->leaveType, $request->From, $request->To, $request->reason, $request->leaveDays, $request->email, $request->phone);
     }
 
-    public function leaveStatus(Request $request)
+    /**
+     * @param Request $request
+     * @return RedirectResponse
+     */
+    public function leaveStatus(Request $request): RedirectResponse
     {
         $LeaveRequest = LeaveRequest::find($request->requestId);
         $LeaveRequest->leave_status = $request->status;
         $LeaveRequest->save();
-        dd($request);
+        return redirect()->route('leaveRequest');
+
+    }
+
+    /**
+     * @return \Illuminate\Foundation\Application|View|Factory|Application
+     */
+    public function lateRequest(): \Illuminate\Foundation\Application|View|Factory|Application
+    {
+        $companies = Company::all();
+        $leaveTypes = leave::all();
+        $lateRequests = LateRequest::all();
+        return view('timeTracking.late_request')->with(compact('companies', 'leaveTypes', 'lateRequests'));
+    }
+
+    /**
+     * @param $companyId
+     * @return JsonResponse
+     */
+    public function lateRequestDepartments($companyId)
+    {
+        $departments = Department::where('company_id', $companyId)->get();
+        return response()->json($departments);
+    }
+
+    /**
+     * @param Request $request
+     * @return Application|\Illuminate\Foundation\Application|Redirector|RedirectResponse
+     */
+    public function lateRequestSubmit(Request $request): \Illuminate\Foundation\Application|Redirector|RedirectResponse|Application
+    {
+        $lateRequest = new LateRequest;
+        $lateRequest->company_id = $request->company;
+        $lateRequest->department_id = $request->department;
+        $lateRequest->employee_code = $request->emp_code;
+        $lateRequest->date = $request->date;
+        $lateRequest->expected_time = $request->time;
+        $lateRequest->late_reason = $request->reason;
+        $lateRequest->save();
+        return redirect()->route('lateRequest');
+    }
+
+    /**
+     * @param Request $request
+     * @return RedirectResponse
+     */
+    public function lateStatus(Request $request): RedirectResponse
+    {
+        $LeaveRequest = LateRequest::find($request->requestId);
+        $LeaveRequest->late_status = $request->status;
+        $LeaveRequest->save();
+        return redirect()->route('lateRequest');
     }
 }

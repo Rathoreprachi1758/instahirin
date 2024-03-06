@@ -174,6 +174,7 @@
                                         <li><a href="{{route('timeLogs')}}">► Time Logs</a></li>
                                         <li><a href="{{route('timeLogs')}}">► Time Off</a></li>
                                         <li><a href="{{route('leaveRequest')}}">► Leave Request</a></li>
+                                        <li><a href="{{route('lateRequest')}}">► Late Coming Request</a></li>
                                     </ul>
                                 </li>
                                 <li class="has_list"><a href="javascript:void(0)"><span><i class="fa fa-money"
