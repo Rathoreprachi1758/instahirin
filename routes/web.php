@@ -114,7 +114,8 @@ Route::middleware(['middleware' => 'auth.check'])->group(function () {
     Route::get('Talent-History', [profileController::class, 'employee_History'])->name('Applied.History');
     //
     Route::get('log-in-off', [TimeTracking::class, 'logInOff'])->name('logInOff');
-    Route::get('/company/{companyId}', [TimeTracking::class, 'company'])->name('company');
+//    Route::get('/company/{companyId}', [TimeTracking::class, 'company'])->name('company');
+    Route::get('/company/{companyId}', [TimeTracking::class, 'company']);
     Route::post('department', [TimeTracking::class, 'department'])->name('department');
     Route::post('employee', [TimeTracking::class, 'employee'])->name('employee');
     Route::get('Employee-work-log', [TimeTracking::class, 'employeeWorkLog'])->name('employeeWorkLog');
@@ -122,10 +123,12 @@ Route::middleware(['middleware' => 'auth.check'])->group(function () {
     Route::post('work-log-department', [TimeTracking::class, 'workLogDepartment'])->name('workLogDepartment');
     Route::post('punch', [TimeTracking::class, 'punch'])->name('punch');
     Route::post('status', [TimeTracking::class, 'status'])->name('status');
-    Route::get('timeLogs', [TimeTracking::class, 'timeLogs'])->name('timeLogs');
-    Route::post('timeLogCompany', [TimeTracking::class, 'timeLogCompany'])->name('timeLogCompany');
-    Route::post('punch', [TimeTracking::class, 'punch'])->name('punch');
-    Route::post('status', [TimeTracking::class, 'status'])->name('status');
+    Route::get('time-logs', [TimeTracking::class, 'timeLogs'])->name('timeLogs');
+    Route::post('time-log-company', [TimeTracking::class, 'timeLogCompany'])->name('timeLogCompany');
+    Route::get('time-off', [TimeTracking::class, 'timeOff'])->name('timeOff');
+    Route::post('time-off-company', [TimeTracking::class, 'timeOffCompany'])->name('timeOffCompany');
+    Route::post('time-off-status', [TimeTracking::class, 'timeOffStatus'])->name('timeOffStatus');
+
     Route::get('leave-request', [TimeTracking::class, 'leaveRequest'])->name('leaveRequest');
     Route::post('leave-request-submit', [TimeTracking::class, 'leaveRequestSubmit'])->name('leaveRequestSubmit');
     Route::get('/leaveRequestDepartments/{companyId}', [TimeTracking::class, 'leaveRequestDepartments']);

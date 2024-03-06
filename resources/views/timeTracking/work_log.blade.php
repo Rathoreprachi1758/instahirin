@@ -22,17 +22,11 @@
                         </select>
                     </form>
                 </div>
-                @if (\Session::has('success'))
-                    <div class="alert alert-success">
-                        <ul>
-                            <li>{!! \Session::get('success') !!}</li>
-                        </ul>
-                    </div>
-                @endif
                 <form action="{{ route('workLogDepartment') }}" method="POST">
                     @csrf
                     <label for="departmentSelect">Select Department:</label>
                     <select id="departmentSelect" name="department">
+                        <option selected disabled value="null">Select Department:</option>
                         @isset($departments)
                             @foreach($departments as $department)
                                 <option value="{{ $department->id }}">{{ $department->name }}</option>

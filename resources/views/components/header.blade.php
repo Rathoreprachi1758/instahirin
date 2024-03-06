@@ -172,7 +172,7 @@
                                         <li><a href="{{route('logInOff')}}">► Log In / Off</a></li>
                                         <li><a href="{{route('employeeWorkLog')}}">► Work Logs</a></li>
                                         <li><a href="{{route('timeLogs')}}">► Time Logs</a></li>
-                                        <li><a href="{{route('timeLogs')}}">► Time Off</a></li>
+                                        <li><a href="{{route('timeOff')}}">► Time Off</a></li>
                                         <li><a href="{{route('leaveRequest')}}">► Leave Request</a></li>
                                         <li><a href="{{route('lateRequest')}}">► Late Coming Request</a></li>
                                     </ul>

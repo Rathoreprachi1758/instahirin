@@ -193,12 +193,12 @@
     function fetchDepartments() {
         var companyId = document.getElementById('companyName').value;
         var departmentSelect = document.getElementById('departmentName');
-
+console.log(companyId);
         // Clear previous options
         departmentSelect.innerHTML = ' <option disabled>Select Department</option>';
 
         // Fetch departments based on selected company
-        fetch('/departments/' + companyId, {
+        fetch('/company/' + companyId, {
             method: 'GET',
             headers: {
                 'Content-Type': 'application/json'
