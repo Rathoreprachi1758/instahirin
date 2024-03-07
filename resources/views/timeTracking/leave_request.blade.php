@@ -90,11 +90,12 @@
                                     </div>
                                     <div class="col-md-6">
                                         <label for="inputDays" class="form-label">Total Number Of days</label>
-                                        <input type="text" name="leaveDays" class="form-control" id="inputDays">
+                                        <input type="number" name="leaveDays" class="form-control" id="inputDays" oninput="updateLeaveBalance()">
                                     </div>
                                     <div class="col-md-6">
                                         <label for="inputBalance" class="form-label">Balance Leave</label>
-                                        <input type="text" name="leaveBalance" class="form-control" id="inputBalance"
+                                        <input type="number" value="11" name="leaveBalance" class="form-control"
+                                               id="inputBalance"
                                                disabled>
                                     </div>
                                     <div class="col-md-6">
@@ -311,6 +312,32 @@
                                 });
                             })
                             .catch(error => console.error('Error fetching departments:', error));
+                    }
+                </script>
+                <script>
+                    var initialBalance;
+
+                    window.onload = function() {
+                        var balanceInput = document.getElementById('inputBalance');
+                        initialBalance = parseInt(balanceInput.value);
+                    };
+
+                    function updateLeaveBalance() {
+                        var totalDaysInput = document.getElementById('inputDays');
+                        var balanceInput = document.getElementById('inputBalance');
+                        var totalDays = parseInt(totalDaysInput.value);
+                        if (!isNaN(totalDays)) {
+                            var newBalance = initialBalance - totalDays;
+                            if (newBalance >= 0) {
+                                balanceInput.value = newBalance;
+                            } else {
+                                alert("Total days cannot exceed balance leave");
+                                totalDaysInput.value = "";
+                            }
+                        } else {
+                            // If input is cleared, reset balance to initial value
+                            balanceInput.value = initialBalance;
+                        }
                     }
                 </script>
             </div>

@@ -29,23 +29,21 @@
                             <div class="col-6">
 
                                 <form id="departmentForm" action="{{ route('department') }}" method="POST">
-                                @csrf
+                                    @csrf
                                     <select id="departmentName" class="form-select me-3" name="department"
-                                            aria-label="Second select example">
+                                            aria-label="Second select example" onchange="this.form.submit()">
                                         @if(!isset($companies)) disabled @endif>
-                                            <option disabled>Select Department</option>
-                                    @isset($departments)
-                                        @foreach($departments as $department)
-                                            <option value="{{ $department->id }}">{{ $department->name }}</option>
-                                        @endforeach
-                                    @endisset
-                                </select>
-                                <button type="submit" class="btn btn-primary" @if(!isset($companies)) disabled @endif>
-                                    Submit
-                                </button>
-                            </form>
+                                            <option selected disabled>Select Department</option>
+                                            @isset($departments)
+                                                @foreach($departments as $department)
+                                                    <option value="{{ $department->id }}">
+                                                        {{ $department->name }}
+                                                    </option>
+                                                @endforeach
+                                            @endisset
+                                    </select>
+                                </form>
                             </div>
-
                         </div>
                     </div>
                 </div>
@@ -193,9 +191,9 @@
     function fetchDepartments() {
         var companyId = document.getElementById('companyName').value;
         var departmentSelect = document.getElementById('departmentName');
-console.log(companyId);
+        console.log(companyId);
         // Clear previous options
-        departmentSelect.innerHTML = ' <option disabled>Select Department</option>';
+        departmentSelect.innerHTML = ' <option selected disabled>Select Department</option>';
 
         // Fetch departments based on selected company
         fetch('/company/' + companyId, {
@@ -215,4 +213,6 @@ console.log(companyId);
             })
             .catch(error => console.error('Error fetching departments:', error));
     }
+
 </script>
+

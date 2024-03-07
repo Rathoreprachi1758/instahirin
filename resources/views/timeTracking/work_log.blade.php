@@ -12,7 +12,7 @@
                     <form action="{{ route('workLogCompany') }}" method="POST">
                         @csrf
                         <label for="from">Select Company:</label>
-                        <select name="workLogCompany" onchange="this.form.submit()">
+                        <select name="workLogCompany">
                             <option selected disabled>Select Company</option>
                             @isset($companies)
                                 @foreach($companies as $company)
@@ -20,10 +20,6 @@
                                 @endforeach
                             @endisset
                         </select>
-                    </form>
-                </div>
-                <form action="{{ route('workLogDepartment') }}" method="POST">
-                    @csrf
                     <label for="departmentSelect">Select Department:</label>
                     <select id="departmentSelect" name="department">
                         <option selected disabled value="null">Select Department:</option>
