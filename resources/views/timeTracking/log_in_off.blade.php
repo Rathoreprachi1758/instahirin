@@ -1,4 +1,5 @@
-@php use Carbon\Carbon; @endphp
+@php use Carbon\Carbon;
+@endphp
 <x-header data="worklog"/>
 <link rel="stylesheet" href="css/bootstrap.min.css">
 <!-- custom css -->
@@ -32,15 +33,17 @@
                                     @csrf
                                     <select id="departmentName" class="form-select me-3" name="department"
                                             aria-label="Second select example" onchange="this.form.submit()">
-                                        @if(!isset($companies)) disabled @endif>
-                                            <option selected disabled>Select Department</option>
-                                            @isset($departments)
-                                                @foreach($departments as $department)
-                                                    <option value="{{ $department->id }}">
-                                                        {{ $department->name }}
-                                                    </option>
-                                                @endforeach
-                                            @endisset
+                                        @if(!isset($companies))
+                                            disabled
+                                        @endif>
+                                        <option selected disabled>Select Department</option>
+                                        @isset($departments)
+                                            @foreach($departments as $department)
+                                                <option value="{{ $department->id }}">
+                                                    {{ $department->name }}
+                                                </option>
+                                            @endforeach
+                                        @endisset
                                     </select>
                                 </form>
                             </div>
@@ -51,9 +54,9 @@
                     <div class="row col-12">
                         <div class="col-4">
                             <div class="row">
-                                <div class="card" style="width: 18rem;">
+                                <div class="card mt-5" style="width: 18rem;">
                                     <div class="card-header">
-                                        Time Sheet
+                                        Time Sheet {{ Carbon::now()->format('j M Y') }}
                                     </div>
                                     <form action="{{ route('punch') }}" method="post">
                                         @csrf
@@ -63,18 +66,22 @@
                                                value=" @isset($employeeInfo)
                                                {{$employeeInfo->department?->id}}
                                                @endisset">
-                                        <ul class=" list-group list-group-flush">
-                                            <button type="submit" name="punch" value="1" class="btn btn-dark"
-                                                    @if(!isset($employeeInfo)) disabled @endif>
-                                                Punch In
-                                            </button>
-                                        </ul>
-                                        <ul class="list-group list-group-flush">
-                                            <button type="submit" name="punch" value="0" class="btn btn-dark"
-                                                    @if(!isset($employeeInfo)) disabled @endif>
-                                                Punch Out
-                                            </button>
-                                        </ul>
+                                        @if(is_null($lastPunch) || isset($lastPunch['punch_out']))
+                                            <ul class=" mt-3 list-group list-group-flush">
+                                                <button type="submit" name="punch" value="1" class="btn btn-dark"
+                                                        @if(!isset($employeeInfo)) disabled @endif>
+                                                    Punch In
+                                                </button>
+                                            </ul>
+                                        @endisset
+                                        @isset($lastPunch['punch_in'])
+                                            <ul class=" mt-3 list-group list-group-flush">
+                                                <button type="submit" name="punch" value="0" class="btn btn-dark"
+                                                        @if(!isset($employeeInfo)) disabled @endif>
+                                                    Punch Out
+                                                </button>
+                                            </ul>
+                                        @endisset($lastPunch['punch_in'])
                                     </form>
                                 </div>
                             </div>
@@ -87,10 +94,10 @@
                                 </div>
                                 <ul class="list-group list-group-flush">
                                     <li class="list-group-item">Name: @isset($employeeInfo)
-                                            {{ $employeeInfo->name }}
+                                            {{ $employeeInfo->employee_name }}
                                         @endisset</li>
                                     <li class=" list-group-item">Company: @isset($employeeInfo)
-                                            {{ $companyName }}
+                                            {{ $employeeInfo->company->company_name }}
                                         @endisset</li>
                                     <li class="list-group-item">Department: @isset($employeeInfo)
                                             {{ $employeeInfo->department?->name }}
@@ -102,7 +109,7 @@
                                             {{ $employeeInfo->id }}
                                         @endisset</li>
                                     <li class="list-group-item">Email: @isset($employeeInfo)
-                                            {{ $employeeInfo->email }}
+                                            {{ $employeeInfo->Email }}
                                         @endisset</li>
                                     <li class="list-group-item">Reporting Manager: @isset($employeeInfo)
                                             {{ $employeeInfo->reporting_manager }}
@@ -145,7 +152,7 @@
                             <div class="row">
                                 <div class="card mt-5" style="width: 18rem;">
                                     <div class="card-header">
-                                        Time Sheet
+                                        Calendar
                                     </div>
                                     <ul class="list-group list-group-flush">
                                         <!-- Additional content for time sheet can be added here -->

@@ -46,5 +46,10 @@ class Department extends Model
     {
         return $this->hasMany(LateRequest::class);
     }
+
+    public function employeeTimeLogs(): HasMany
+    {
+        return $this->hasMany(EmployeeLogTime::class);
+    }
 }
 

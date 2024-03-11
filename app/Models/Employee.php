@@ -21,8 +21,19 @@ class Employee extends Model
         return $this->belongsTo(Department::class);
     }
 
+    /**
+     * @return HasMany
+     */
     public function employeeLogTimes(): HasMany
     {
         return $this->hasMany(EmployeeLogTime::class);
+    }
+
+    /**
+     * @return BelongsTo
+     */
+    public function company(): BelongsTo
+    {
+        return $this->belongsTo(Company::class);
     }
 }

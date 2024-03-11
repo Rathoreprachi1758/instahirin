@@ -10,6 +10,7 @@
                 <br>
                 <div class="container">
                     <div class="row mt-5">
+{{--                        @if(auth()->user()->roles != 'company')--}}
                         <nav>
                             <div class="nav nav-tabs" id="nav-tab" role="tablist">
                                 <button class="nav-link active" id="nav-home-tab" data-bs-toggle="tab"
@@ -24,7 +25,9 @@
                                 </button>
                             </div>
                         </nav>
+{{--                        @endif--}}
                         <div class="tab-content" id="nav-tabContent">
+{{--                            @if(auth()->user()->roles != 'company')--}}
                             <div class="tab-pane fade show active" id="nav-home" role="tabpanel"
                                  aria-labelledby="nav-home-tab"
                                  tabindex="0">
@@ -55,7 +58,7 @@
                                     <div class="col-6">
                                         <label for="inputCode" class="form-label">Employee Code</label>
                                         <input type="text" name="emp_code" class="form-control" id="inputCode"
-                                               placeholder="000">
+                                               placeholder="000" readonly>
                                     </div>
                                     <div class="col-12">
                                         <div class="col-md-6">
@@ -90,13 +93,13 @@
                                     </div>
                                     <div class="col-md-6">
                                         <label for="inputDays" class="form-label">Total Number Of days</label>
-                                        <input type="number" name="leaveDays" class="form-control" id="inputDays" oninput="updateLeaveBalance()">
+                                        <input type="number" name="leaveDays" class="form-control" id="inputDays"
+                                               oninput="updateLeaveBalance()">
                                     </div>
                                     <div class="col-md-6">
                                         <label for="inputBalance" class="form-label">Balance Leave</label>
                                         <input type="number" value="11" name="leaveBalance" class="form-control"
-                                               id="inputBalance"
-                                               disabled>
+                                               id="inputBalance" readonly>
                                     </div>
                                     <div class="col-md-6">
                                         <label for="inputEmail" class="form-label">Contact Email During Leave</label>
@@ -113,6 +116,7 @@
                             </div>
                             <div class="tab-pane fade" id="nav-profile" role="tabpanel"
                                  aria-labelledby="nav-profile-tab" tabindex="0">
+{{--                                @endif--}}
                                 <div class="custom_tabs_data" style="display: block" id="tab5">
                                     <div class="col-xxl-9 col-xl-11 col-lg-11 col-md-12">
                                         <div class="activityTable_data">
@@ -227,6 +231,7 @@
                                                                         @endif
                                                                         <div class="statusFieldInfo">
                                                                             <div class="statusDrop">
+                                                                                @if(auth()->user()->roles == 'company')
                                                                 <span><i class="fa fa-ellipsis-v"
                                                                          aria-hidden="true"></i></span>
                                                                                 <div class="statusDropdown">
@@ -265,6 +270,7 @@
                                                                                         </li>
                                                                                     </ul>
                                                                                 </div>
+                                                                                @endif
                                                                             </div>
                                                                         </div>
                                                                     </div>
@@ -317,7 +323,7 @@
                 <script>
                     var initialBalance;
 
-                    window.onload = function() {
+                    window.onload = function () {
                         var balanceInput = document.getElementById('inputBalance');
                         initialBalance = parseInt(balanceInput.value);
                     };
@@ -339,6 +345,34 @@
                             balanceInput.value = initialBalance;
                         }
                     }
+                </script>
+                <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+                <script>
+                    // Function to fetch employee code based on selected company and department
+                    function fetchEmployeeCode() {
+                        var companyId = document.getElementById('companyName').value;
+                        var departmentId = document.getElementById('inputDepartment').value;
+
+                        // Make AJAX request to fetch employee code
+                        $.ajax({
+                            url: '/fetch-employee-code',
+                            type: 'POST',
+                            data: {
+                                company_id: companyId,
+                                department_id: departmentId,
+                                _token: "{{ csrf_token() }}"
+                            },
+                            success: function (response) {
+                                // Update employee code input field with received value
+                                $('#inputCode').val(response.employee_code);
+                            },
+                            error: function (xhr, status, error) {
+                                console.error(xhr.responseText);
+                            }
+                        });
+                    }
+
+                    $('#inputDepartment').change(fetchEmployeeCode);
                 </script>
             </div>
         </div>

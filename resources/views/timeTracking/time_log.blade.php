@@ -74,23 +74,23 @@
                                                 </td>
                                                 <td>
                                                     <div class="tabletext">
-                                                        <p>punchin - {{ $punchInOutData['punchIn'] }}</p>
-                                                        <p>punchin - {{ $punchInOutData['punchOut'] }}</p>
+                                                        <p>punchIn - {{ $punchInOutData['punchIn'] }}</p>
+                                                        <p>punchOut - {{ $punchInOutData['punchOut'] }}</p>
                                                     </div>
                                                 </td>
                                                 <td>
                                                     <div class="tabletext">
-                                                        <p>Hyderabad</p>
+                                                        <p>8 hr</p>
                                                     </div>
                                                 </td>
                                                 <td width="90">
                                                     <div class="tabletext">
                                                         <div class="statusFiled">
-                                                            @if($punchInOutData['work_log_status'] === null)
+                                                            @if($punchInOutData['time_log_status'] === null)
                                                                 <strong class="">Pending</strong>
-                                                            @elseif($punchInOutData['work_log_status'] == true)
+                                                            @elseif($punchInOutData['time_log_status'] == true)
                                                                 <strong class="">Accepted</strong>
-                                                            @elseif($punchInOutData['work_log_status'] == false)
+                                                            @elseif($punchInOutData['time_log_status'] == false)
                                                                 <strong class="">Rejected</strong>
                                                             @endif
                                                             <div class="statusFieldInfo">
@@ -106,10 +106,16 @@
                                                                                     <input type="hidden" value="1"
                                                                                            name="status">
                                                                                     <input type="hidden"
+                                                                                           value="{{$punchInOutData['department']->id}}"
+                                                                                           name="department_id">
+                                                                                    <input type="hidden"
+                                                                                           value="{{$punchInOutData['company']->id}}"
+                                                                                           name="company_id">
+                                                                                    <input type="hidden"
                                                                                            value="{{ $punchInOutData['date'] }}"
                                                                                            name="date">
                                                                                     <input type="submit" value="Accept"
-                                                                                           name="button">
+                                                                                           name="timeLog">
                                                                                 </form>
                                                                             </li>
                                                                             <li>
@@ -119,10 +125,16 @@
                                                                                     <input type="hidden" value="0"
                                                                                            name="status">
                                                                                     <input type="hidden"
+                                                                                           value="{{$punchInOutData['department']->id}}"
+                                                                                           name="department_id">
+                                                                                    <input type="hidden"
+                                                                                           value="{{$punchInOutData['company']->id}}"
+                                                                                           name="company_id">
+                                                                                    <input type="hidden"
                                                                                            value="{{ $punchInOutData['date'] }}"
                                                                                            name="date">
                                                                                     <input type="submit" value="Reject"
-                                                                                           name="button">
+                                                                                           name="timeLog">
                                                                                 </form>
                                                                             </li>
                                                                         </ul>

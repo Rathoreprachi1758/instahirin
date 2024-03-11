@@ -16,7 +16,7 @@
                                 <button class="nav-link active" id="nav-home-tab" data-bs-toggle="tab"
                                         data-bs-target="#nav-home"
                                         type="button" role="tab" aria-controls="nav-home" aria-selected="true">Post
-                                    Leave Request
+                                    late Request
                                 </button>
                                 <button class="nav-link" id="nav-profile-tab" data-bs-toggle="tab"
                                         data-bs-target="#nav-profile"
@@ -56,7 +56,7 @@
                                     <div class="col-6">
                                         <label for="inputCode" class="form-label">Employee Code</label>
                                         <input type="text" name="emp_code" class="form-control" id="inputCode"
-                                               placeholder="000">
+                                               placeholder="000" readonly>
                                     </div>
                                     <div class="row col-12 mt-3">
                                         <div class="col-md-6">
@@ -256,6 +256,34 @@
                             })
                             .catch(error => console.error('Error fetching departments:', error));
                     }
+                </script>
+                <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+                <script>
+                    // Function to fetch employee code based on selected company and department
+                    function fetchEmployeeCode() {
+                        var companyId = document.getElementById('companyName').value;
+                        var departmentId = document.getElementById('inputDepartment').value;
+
+                        // Make AJAX request to fetch employee code
+                        $.ajax({
+                            url: '/fetch-employee-code',
+                            type: 'POST',
+                            data: {
+                                company_id: companyId,
+                                department_id: departmentId,
+                                _token: "{{ csrf_token() }}"
+                            },
+                            success: function (response) {
+                                // Update employee code input field with received value
+                                $('#inputCode').val(response.employee_code);
+                            },
+                            error: function (xhr, status, error) {
+                                console.error(xhr.responseText);
+                            }
+                        });
+                    }
+
+                    $('#inputDepartment').change(fetchEmployeeCode);
                 </script>
             </div>
         </div>
