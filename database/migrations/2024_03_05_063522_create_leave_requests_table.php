@@ -15,6 +15,7 @@ return new class extends Migration {
             $table->foreignId('company_id')->constrained('companies');
             $table->foreignId('department_id')->constrained('departments');
             $table->foreignId('leave_id')->constrained('leaves');
+            $table->foreignId('user_id')->constrained('users');
             $table->string('leave_type')->nullable();
             $table->text('leave_reason');
             $table->string('leave_days');

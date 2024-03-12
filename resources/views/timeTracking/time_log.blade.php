@@ -80,7 +80,7 @@
                                                 </td>
                                                 <td>
                                                     <div class="tabletext">
-                                                        <p>8 hr</p>
+                                                        <p>{{$punchInOutData['totalWorkHours']}}</p>
                                                     </div>
                                                 </td>
                                                 <td width="90">

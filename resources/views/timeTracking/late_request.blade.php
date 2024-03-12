@@ -29,7 +29,7 @@
                             <div class="tab-pane fade show active" id="nav-home" role="tabpanel"
                                  aria-labelledby="nav-home-tab"
                                  tabindex="0">
-                                <form class="row g-3" action="{{route('lateRequestSubmit')}}" method="post">
+                                <form class="row g-3" action="{{route('lateRequestFilter')}}" method="post">
                                     @csrf
                                     <div class="col-md-6">
                                         <label for="inputName" class="form-label">Company Name</label>
@@ -87,6 +87,25 @@
                             <div class="tab-pane fade" id="nav-profile" role="tabpanel"
                                  aria-labelledby="nav-profile-tab" tabindex="0">
                                 <div class="custom_tabs_data" style="display: block" id="tab5">
+                                    <form action="{{ route('lateRequestFilter') }}" method="post">
+                                        @csrf
+                                        <input type="hidden" value="lateRequest" name="lateRequest">
+                                        <label for="company">Select Company:</label>
+                                        <select id="company" name="company">
+                                            <option value="" selected disabled>Select Company</option>
+                                            @isset($companies)
+                                                @foreach($companies as $company)
+                                                    <option
+                                                        value="{{ $company->id }}">{{ $company->company_name }}</option>
+                                                @endforeach
+                                            @endisset
+                                        </select>
+                                        <label for="from">From:</label>
+                                        <input type="date" id="from" name="from">
+                                        <label for="to">To:</label>
+                                        <input type="date" id="to" name="to">
+                                        <button type="submit">Filter</button>
+                                    </form>
                                     <div class="col-xxl-9 col-xl-11 col-lg-11 col-md-12">
                                         <div class="activityTable_data">
                                             <table class="table table-striped">

@@ -60,8 +60,6 @@
                                     </div>
                                     <form action="{{ route('punch') }}" method="post">
                                         @csrf
-                                        <input type="hidden" name="current_datetime"
-                                               value="{{ now()->toDateTimeString() }}">
                                         <input type="hidden" name="department_id"
                                                value=" @isset($employeeInfo)
                                                {{$employeeInfo->department?->id}}
@@ -183,7 +181,9 @@
                                                 N/A
                                             @endisset
                                         </li>
-                                        <li class="list-group-item">Work Hours:</li>
+                                        <li class="list-group-item">Work Hours: @isset($totalWorkHours)
+                                                {{$totalWorkHours}}
+                                            @endisset</li>
                                     </ul>
                                 </div>
                             </div>

@@ -45,26 +45,8 @@ class TimeTracking extends Controller
             $punchHistories = $this->punchHistory($employeeInfo);
             $punchDetails = $this->punchDetails($employeeInfo) ?? null;
         }
+        $totalWorkHours = !empty($punchHistories) ? $this->totalHours($punchHistories) : 0;
 
-//        $total_working_hours = 0;
-//
-//        for ($i = 0; $i < count($punchHistories); $i += 2) {
-//            if (isset($punchHistories[$i]['punch_in']) && isset($punchHistories[$i + 1]['punch_out'])) {
-//                $punch_in_time = strtotime($punchHistories[$i]['punch_in']);
-//                $punch_out_time = strtotime($punchHistories[$i + 1]['punch_out']);
-//
-//                $working_hours = ($punch_out_time - $punch_in_time) / (60 * 60);
-//                $total_working_hours += $working_hours;
-//            }
-//        }
-//
-//        $hours = floor($total_working_hours);
-//        $minutes_decimal = ($total_working_hours - $hours) * 60;
-//        $minutes = round($minutes_decimal);
-//
-//        dd($hours, $minutes);
-////        gmdate("H:i", $total_working_hours);
-//        dd($total_working_hours);
         $lastPunch = end($punchHistories);
 
         $company = Session::get('selectedCompany');
@@ -82,7 +64,8 @@ class TimeTracking extends Controller
             'punchDetails' => $punchDetails,
             'companyName' => $company?->company_name,
             'departments' => $departments,
-            'lastPunch' => $lastPunch
+            'lastPunch' => $lastPunch,
+            'totalWorkHours' => $totalWorkHours
         ]);
     }
 
@@ -133,9 +116,24 @@ class TimeTracking extends Controller
         return ['firstLogIn' => $firstLogIn, 'lastPunchOut' => $lastPunchOut];
     }
 
-    public function totalHours()
+    public function totalHours($punchHistories)
     {
+        $total_working_hours = 0;
 
+        for ($i = 0; $i < count($punchHistories); $i += 2) {
+            if (isset($punchHistories[$i]['punch_in']) && isset($punchHistories[$i + 1]['punch_out'])) {
+                $punch_in_time = strtotime($punchHistories[$i]['punch_in']);
+                $punch_out_time = strtotime($punchHistories[$i + 1]['punch_out']);
+
+                $working_hours = ($punch_out_time - $punch_in_time) / (60 * 60);
+                $total_working_hours += $working_hours;
+            }
+        }
+
+        $hours = floor($total_working_hours);
+        $minutes_decimal = ($total_working_hours - $hours) * 60;
+        $minutes = round($minutes_decimal);
+        return $hours . ' Hr ' . $minutes . ' minutes ';
     }
 
     /**
@@ -173,13 +171,14 @@ class TimeTracking extends Controller
             $punchHistories = $this->punchHistory($employeeInfo);
             $punchDetails = $this->punchDetails($employeeInfo) ?? null;
         }
+        $totalWorkHours = !empty($punchHistories) ? $this->totalHours($punchHistories) : 0;
 
         $lastPunch = !empty($punchHistories) ? end($punchHistories) : null;
 
         Session::put('employeeInfo', $employeeInfo);
         Session::put('department_id', $request->department);
 
-        return view('timeTracking.log_in_off', compact('employeeInfo', 'companies', 'punchHistories', 'punchDetails', 'lastPunch'));
+        return view('timeTracking.log_in_off', compact('employeeInfo', 'companies', 'punchHistories', 'punchDetails', 'lastPunch', 'totalWorkHours'));
     }
 
     /**
@@ -191,41 +190,56 @@ class TimeTracking extends Controller
     public function punch(Request $request): RedirectResponse
     {
         $punchStatus = $request->punch;
-        $currentDateTime = $request->current_datetime;
+        $currentDateTime = now()->toDateTimeString();
         $dateOnly = Carbon::parse($currentDateTime)->toDateString();
 
         $response = Http::get('https://api.ipify.org');
         $ip = $response->body();
+
         if ($request->has('department_id')) {
             $department = Department::find($request->department_id);
-            $employeeInfo = Employee::where('user_id', Auth::id())->where('department_id', $request->department_id)->where('company_id', Session::get('logInOffCompanyId'))->where('user_id', Auth::id())->first();
-            $employeeId = $employeeInfo->id;
-            $employeeField = [];
-
-            if ($punchStatus) {
-                $employeeField['punch_in'] = $currentDateTime;
-            } else {
-                $employeeField['punch_out'] = $currentDateTime;
-            }
-            $employeeData = EmployeeLogTime::where('user_id', $employeeInfo->user_id)
-                ->where('employee_id', $employeeInfo->id)
-                ->where('date', Carbon::now()->toDateString())
+            $employeeInfo = Employee::where('user_id', Auth::id())
+                ->where('department_id', $request->department_id)
+                ->where('company_id', Session::get('logInOffCompanyId'))
+                ->where('user_id', Auth::id())
                 ->first();
-            if ($employeeData != null) {
-                $existingPunchIn = json_decode($employeeData->punch, true);
-                $existingPunchIn[] = $employeeField;
-                $employeeData->punch = json_encode($existingPunchIn);
+
+            if ($employeeInfo) {
+                $employeeId = $employeeInfo->id;
+                $employeeField = [];
+
+                if ($punchStatus) {
+                    $employeeField['punch_in'] = $currentDateTime;
+                } else {
+                    $employeeField['punch_out'] = $currentDateTime;
+                }
+
+                $employeeData = EmployeeLogTime::where('user_id', $employeeInfo->user_id)
+                    ->where('employee_id', $employeeInfo->id)
+                    ->where('date', Carbon::now()->toDateString())
+                    ->first();
+
+                if ($employeeData) {
+                    $existingPunches = json_decode($employeeData->punch, true);
+                    $existingPunches[] = $employeeField;
+                    $employeeData->punch = json_encode($existingPunches);
+                } else {
+                    $employeeData = new EmployeeLogTime;
+                    $employeeData->employee_id = $employeeId;
+                    $employeeData->user_id = $employeeInfo->user_id;
+                    $employeeData->date = $dateOnly;
+                    $employeeData->ip_address = $ip;
+                    $employeeData->company_id = $department->company_id;
+                    $employeeData->department_id = $department->id;
+                    $employeeData->punch = json_encode([$employeeField]);
+                }
+
                 $employeeData->save();
-            } else {
-                $employeeLogTime = new EmployeeLogTime;
-                $employeeLogTime->punch = (json_encode([$employeeField], true));
-                $employeeLogTime->employee_id = $employeeId;
-                $employeeLogTime->user_id = $employeeInfo->user_id;
-                $employeeLogTime->date = $dateOnly;
-                $employeeLogTime->ip_address = $ip;
-                $employeeLogTime->company_id = $department->company_id;
-                $employeeLogTime->department_id = $department->id;
-                $employeeLogTime->save();
+
+                $punchHistories = $this->punchHistory($employeeInfo);
+                $totalWorkHours = !empty($punchHistories) ? $this->totalHours($punchHistories) : 0;
+                $employeeData->total_work_hours = $totalWorkHours;
+                $employeeData->save();
             }
         }
         return redirect()->route('logInOff')->with('department_id', $request->department_id);
@@ -240,11 +254,9 @@ class TimeTracking extends Controller
     {
         $companies = Company::where('user_id', Auth::id())->get();
         $departments = [];
-
         if (Session::has('workLogDepartment')) {
             $departments = Session::get('workLogDepartment');
         }
-
         return view('timeTracking.work_log', compact('companies', 'departments'));
     }
 
@@ -263,6 +275,8 @@ class TimeTracking extends Controller
         }
 
         $employeeInfo = $employeeInfoQuery->first();
+
+
         if ($request->company != null) {
             $employeePunchLogsQuery->where('company_id', $request->company);
             Session::put('workLogCompany', $request->company);
@@ -295,20 +309,18 @@ class TimeTracking extends Controller
         $punchInOutInfo = [];
 
         foreach ($employeePunchLogs as $employeePunchLog) {
+            $firstPunchIn = null;
+            $lastPunchOut = null;
             $employeeId = $employeePunchLog->employee_id;
-
             $employee = Employee::find($employeeId);
             $employeeCode = $employee->employee_code;
-
             $date = Carbon::parse($employeePunchLog->date)->format('Y-m-d');
-
             $ipAddress = $employeePunchLog->ip_address;
             $workLogStatus = $employeePunchLog->work_log_status ?? null;
             $timeLogStatus = $employeePunchLog->time_log_status ?? null;
             $department = $employeePunchLog->department;
             $company = $employeePunchLog->company;
-
-
+            $totalWorkHours = $employeePunchLog->total_work_hours;
             $punches = json_decode($employeePunchLog->punch, true);
 
             usort($punches, function ($punchIn, $punchOut) {
@@ -316,9 +328,6 @@ class TimeTracking extends Controller
                 $punchOutTime = strtotime(current($punchOut));
                 return $punchInTime <=> $punchOutTime;
             });
-
-            $firstPunchIn = null;
-            $lastPunchOut = null;
 
             foreach ($punches as $punch) {
                 if (isset($punch['punch_in'])) {
@@ -340,10 +349,10 @@ class TimeTracking extends Controller
                 'time_log_status' => $timeLogStatus,
                 'emp_code' => $employeeCode,
                 'department' => $department,
-                'company' => $company
+                'company' => $company,
+                'totalWorkHours' => $totalWorkHours
             ];
         }
-
         return $punchInOutInfo;
     }
 
@@ -413,7 +422,6 @@ class TimeTracking extends Controller
         if (isset($request->timeOffCompany)) {
             $leaveRequests->where('company_id', $request->timeOffCompany);
         }
-
         if (isset($request->statusFilter) && ($request->statusFilter == 0 || $request->statusFilter == 1)) {
             $leaveRequests->where('leave_status', (int)$request->statusFilter);
         }
@@ -456,10 +464,40 @@ class TimeTracking extends Controller
      */
     public function leaveRequest(): \Illuminate\Foundation\Application|View|Factory|Application
     {
+        return $this->filterLeaveRequest(null, null);
+    }
+
+    /**
+     * @param $from
+     * @param $to
+     * @param $companyId
+     * @return Application|Factory|View|\Illuminate\Foundation\Application
+     */
+    private function filterLeaveRequest($from = null, $to = null, $companyId = null)
+    {
         $companies = Company::where('user_id', Auth::id())->get();
-        $leaveTypes = leave::all();
-        $leaveRequests = LeaveRequest::all();
+        $leaveTypes = Leave::all();
+        $leaveRequest = LeaveRequest::query();
+
+        if ($from && $to && $companyId == null) {
+            $leaveRequest->whereBetween('start_date', [$from, $to]);
+        } else if ($companyId != null && ($from == null || $to == null)) {
+            $leaveRequest->where('company_id', $companyId);
+        } else if ($from && $to && $companyId != null) {
+            $leaveRequest->where('company_id', $companyId)->whereBetween('start_date', [$from, $to]);
+        }
+
+        $leaveRequests = $leaveRequest->get();
         return view('timeTracking.leave_request')->with(compact('companies', 'leaveTypes', 'leaveRequests'));
+    }
+
+    /**
+     * @param Request $request
+     * @return Application|Factory|View|\Illuminate\Foundation\Application
+     */
+    public function leaveRequestFilter(Request $request)
+    {
+        return $this->filterLeaveRequest($request->from, $request->to, $request->company);
     }
 
     /**
@@ -489,6 +527,7 @@ class TimeTracking extends Controller
         $leaveRequest->company_id = $request->company;
         $leaveRequest->department_id = $request->department;
         $leaveRequest->leave_id = $request->leaveId;
+        $leaveRequest->user_id = Auth::id();
         $leaveRequest->leave_type = $leave->leave_name;
         $leaveRequest->employee_code = $request->emp_code;
         $leaveRequest->start_date = $request->From;
@@ -584,9 +623,84 @@ class TimeTracking extends Controller
     }
 
 
-    public function leaveLateApproval()
+    /**
+     * @return Application|Factory|\Illuminate\Foundation\Application|View
+     */
+    public function leaveLateApproval(): View|\Illuminate\Foundation\Application|Factory|Application
     {
         $lateRequests = LateRequest::all();
         $leaveRequests = LeaveRequest::all();
+        $companies = Company::where('user_id', Auth::id())->get();
+
+        return view('timeTracking.leave_late_approval')->with(compact('companies', 'lateRequests', 'leaveRequests'));
+    }
+
+    /**
+     * @param Request $request
+     * @return Application|Factory|View|\Illuminate\Foundation\Application
+     */
+    public function leaveRequestApprovalFilter(Request $request): \Illuminate\Foundation\Application|View|Factory|Application
+    {
+        $companies = Company::where('user_id', Auth::id())->get();
+        $leaveTypes = Leave::all();
+        $leaveRequest = LeaveRequest::query();
+
+        if ($request->from && $request->to && $request->company == null) {
+            $leaveRequest->whereBetween('start_date', [$request->from, $request->to]);
+        } else if ($request->company != null && ($request->from == null || $request->to == null)) {
+            $leaveRequest->where('company_id', $request->company);
+        } else if ($request->from && $request->to && $request->company != null) {
+            $leaveRequest->where('company_id', $request->company)->whereBetween('start_date', [$request->from, $request->to]);
+        }
+        $leaveRequests = $leaveRequest->get();
+        return view('timeTracking.leave_late_approval')->with(compact('companies', 'leaveTypes', 'leaveRequests'));
+    }
+
+
+    /**
+     * @param Request $request
+     * @return Application|Factory|View|\Illuminate\Foundation\Application|RedirectResponse
+     */
+    public function lateRequestFilter(Request $request)
+    {
+        $lateRequest = LateRequest::query();
+        $companies = Company::where('user_id', Auth::id())->get();
+
+        if ($request->from && $request->to && $request->company == null) {
+            $lateRequest->whereBetween('date', [$request->from, $request->to]);
+        } else if ($request->company != null && ($request->from == null || $request->to == null)) {
+            $lateRequest->where('company_id', $request->company);
+        } else if ($request->from && $request->to && $request->company != null) {
+            $lateRequest->where('company_id', $request->company)->whereBetween('date', [$request->from, $request->to]);
+        }
+        $lateRequests = $lateRequest->get();
+        if (isset($request->lateRequest)) {
+            return view('timeTracking.late_request')->with(compact('companies', 'lateRequests'));
+        } elseif ($request->lateapprovalRequest) {
+            return view('timeTracking.leave_late_approval')->with(compact('companies', 'lateRequests'));
+        }
+        return redirect()->back();
+
+    }
+
+    /**
+     * @param Request $request
+     * @return Application|Factory|\Illuminate\Foundation\Application|View
+     */
+    public function lateApprovalFilter(Request $request): View|\Illuminate\Foundation\Application|Factory|Application
+    {
+        $lateRequest = LateRequest::query();
+        $companies = Company::where('user_id', Auth::id())->get();
+
+        if ($request->from && $request->to && $request->company == null) {
+            $lateRequest->whereBetween('date', [$request->from, $request->to]);
+        } else if ($request->company != null && ($request->from == null || $request->to == null)) {
+            $lateRequest->where('company_id', $request->company);
+        } else if ($request->from && $request->to && $request->company != null) {
+            $lateRequest->where('company_id', $request->company)->whereBetween('date', [$request->from, $request->to]);
+        }
+        $lateRequests = $lateRequest->get();
+        return view('timeTracking.leave_late_approval')->with(compact('companies', 'lateRequests'));
+
     }
 }

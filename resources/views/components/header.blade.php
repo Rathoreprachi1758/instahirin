@@ -180,7 +180,7 @@
                                         <li><a href="{{route('timeOff')}}">► Time Off</a></li>
                                         <li><a href="{{route('leaveRequest')}}">► Leave Request</a></li>
                                         <li><a href="{{route('lateRequest')}}">► Late Coming Request</a></li>
-                                        <li><a href="{{route('leaveLateApproval')}}">► leave / Late Request Approval</a></li>
+                                        <li><a href="{{route('leaveLateApproval')}}">► Leave / Late Request Approval</a></li>
                                     </ul>
                                 </li>
                                 <li class="has_list"><a href="javascript:void(0)"><span><i class="fa fa-money"
