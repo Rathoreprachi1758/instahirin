@@ -10,7 +10,7 @@
                 <br>
                 <div class="container">
                     <div class="row mt-5">
-{{--                        @if(auth()->user()->roles != 'company')--}}
+                        {{--                        @if(auth()->user()->roles != 'company')--}}
                         <nav>
                             <div class="nav nav-tabs" id="nav-tab" role="tablist">
                                 <button class="nav-link active" id="nav-home-tab" data-bs-toggle="tab"
@@ -25,9 +25,9 @@
                                 </button>
                             </div>
                         </nav>
-{{--                        @endif--}}
+                        {{--                        @endif--}}
                         <div class="tab-content" id="nav-tabContent">
-{{--                            @if(auth()->user()->roles != 'company')--}}
+                            {{--                            @if(auth()->user()->roles != 'company')--}}
                             <div class="tab-pane fade show active" id="nav-home" role="tabpanel"
                                  aria-labelledby="nav-home-tab"
                                  tabindex="0">
@@ -76,13 +76,13 @@
                                         <div class="col-12">
                                             <label for="birthday">Start Date(from)</label>
                                         </div>
-                                        <input type="date" id="from" name="From">
+                                        <input type="date" id="from" name="From" onchange="calculateDays()">
                                     </div>
                                     <div class="col-md-6">
                                         <div class="col-12">
                                             <label for="birthday">End Date(to)</label>
                                         </div>
-                                        <input type="date" id="to" name="To">
+                                        <input type="date" id="to" name="To" onchange="calculateDays()">
                                     </div>
                                     <div class="col-md-12">
                                         <label for="inputEmail" class="form-label">Reason For Leave</label>
@@ -94,7 +94,7 @@
                                     <div class="col-md-6">
                                         <label for="inputDays" class="form-label">Total Number Of days</label>
                                         <input type="number" name="leaveDays" class="form-control" id="inputDays"
-                                               oninput="updateLeaveBalance()">
+                                               oninput="updateLeaveBalance()" readonly>
                                     </div>
                                     <div class="col-md-6">
                                         <label for="inputBalance" class="form-label">Balance Leave</label>
@@ -116,7 +116,7 @@
                             </div>
                             <div class="tab-pane fade" id="nav-profile" role="tabpanel"
                                  aria-labelledby="nav-profile-tab" tabindex="0">
-{{--                                @endif--}}
+                                {{--                                @endif--}}
                                 <div class="custom_tabs_data" style="display: block" id="tab5">
                                     <form action="{{ route('leaveRequestFilter') }}" method="post">
                                         @csrf
@@ -125,7 +125,8 @@
                                             <option value="" selected disabled>Select Company</option>
                                             @isset($companies)
                                                 @foreach($companies as $company)
-                                                    <option value="{{ $company->id }}">{{ $company->company_name }}</option>
+                                                    <option
+                                                        value="{{ $company->id }}">{{ $company->company_name }}</option>
                                                 @endforeach
                                             @endisset
                                         </select>
@@ -249,44 +250,44 @@
                                                                         <div class="statusFieldInfo">
                                                                             <div class="statusDrop">
                                                                                 @if(auth()->user()->roles == 'company')
-                                                                <span><i class="fa fa-ellipsis-v"
-                                                                         aria-hidden="true"></i></span>
-                                                                                <div class="statusDropdown">
-                                                                                    <ul>
-                                                                                        <li>
-                                                                                            <form
-                                                                                                action="{{ route('leaveStatus') }}"
-                                                                                                method="post">
-                                                                                                @csrf
-                                                                                                <input type="hidden"
-                                                                                                       value="1"
-                                                                                                       name="status">
-                                                                                                <input type="hidden"
-                                                                                                       value="{{ $leaveRequest->id }}"
-                                                                                                       name="requestId">
-                                                                                                <input type="submit"
-                                                                                                       value="Accept"
-                                                                                                       name="button">
-                                                                                            </form>
-                                                                                        </li>
-                                                                                        <li>
-                                                                                            <form
-                                                                                                action="{{ route('leaveStatus') }}"
-                                                                                                method="post">
-                                                                                                @csrf
-                                                                                                <input type="hidden"
-                                                                                                       value="0"
-                                                                                                       name="status">
-                                                                                                <input type="hidden"
-                                                                                                       value="{{ $leaveRequest->id }}"
-                                                                                                       name="requestId">
-                                                                                                <input type="submit"
-                                                                                                       value="Reject"
-                                                                                                       name="button">
-                                                                                            </form>
-                                                                                        </li>
-                                                                                    </ul>
-                                                                                </div>
+                                                                                    <span><i class="fa fa-ellipsis-v"
+                                                                                             aria-hidden="true"></i></span>
+                                                                                    <div class="statusDropdown">
+                                                                                        <ul>
+                                                                                            <li>
+                                                                                                <form
+                                                                                                    action="{{ route('leaveStatus') }}"
+                                                                                                    method="post">
+                                                                                                    @csrf
+                                                                                                    <input type="hidden"
+                                                                                                           value="1"
+                                                                                                           name="status">
+                                                                                                    <input type="hidden"
+                                                                                                           value="{{ $leaveRequest->id }}"
+                                                                                                           name="requestId">
+                                                                                                    <input type="submit"
+                                                                                                           value="Accept"
+                                                                                                           name="button">
+                                                                                                </form>
+                                                                                            </li>
+                                                                                            <li>
+                                                                                                <form
+                                                                                                    action="{{ route('leaveStatus') }}"
+                                                                                                    method="post">
+                                                                                                    @csrf
+                                                                                                    <input type="hidden"
+                                                                                                           value="0"
+                                                                                                           name="status">
+                                                                                                    <input type="hidden"
+                                                                                                           value="{{ $leaveRequest->id }}"
+                                                                                                           name="requestId">
+                                                                                                    <input type="submit"
+                                                                                                           value="Reject"
+                                                                                                           name="button">
+                                                                                                </form>
+                                                                                            </li>
+                                                                                        </ul>
+                                                                                    </div>
                                                                                 @endif
                                                                             </div>
                                                                         </div>
@@ -356,10 +357,30 @@
                             } else {
                                 alert("Total days cannot exceed balance leave");
                                 totalDaysInput.value = "";
+                                balanceInput.value = initialBalance;
                             }
                         } else {
-                            // If input is cleared, reset balance to initial value
                             balanceInput.value = initialBalance;
+                        }
+                    }
+
+                    function calculateDays() {
+                        var fromDate = document.getElementById('from').value;
+                        var toDate = document.getElementById('to').value;
+
+                        if (fromDate && toDate) {
+                            var from = new Date(fromDate);
+                            var to = new Date(toDate);
+                            var differenceInTime = to.getTime() - from.getTime();
+                            var differenceInDays = differenceInTime / (1000 * 3600 * 24);
+
+                            if (differenceInDays < 0) {
+                                alert("End date must be greater than or equal to Start date");
+                                document.getElementById('to').value = '';
+                            } else {
+                                document.getElementById('inputDays').value = differenceInDays + 1; // Add 1 to include both start and end dates
+                                updateLeaveBalance(); // Update leave balance after calculating days
+                            }
                         }
                     }
                 </script>
