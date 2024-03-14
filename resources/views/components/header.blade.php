@@ -172,15 +172,26 @@
                                         <em class="menu_icon"><i class="fa fa-angle-down" aria-hidden="true"></i></em>
                                     </a>
                                     <ul>
-                                        <li><a href="{{route('logInOff')}}">► Log In / Off</a></li>
-                                        <li><a href="{{route('employeeWorkLog')}}">► Work Logs</a></li>
+                                        @if(auth()->user()->roles == 'user')
+                                            <li><a href="{{route('logInOff')}}">► Log In / Off</a></li>
+                                        @endif
+                                        @if(auth()->user()->roles == 'user')
+                                            <li><a href="{{route('employeeWorkLog')}}">► Work Logs</a></li>
+                                        @endif
                                         @if(auth()->user()->roles == 'company')
-                                        <li><a href="{{route('timeLogs')}}">► Time Logs</a></li>
+                                            <li><a href="{{route('timeLogs')}}">► Time Logs</a></li>
                                         @endif
                                         <li><a href="{{route('timeOff')}}">► Time Off</a></li>
-                                        <li><a href="{{route('leaveRequest')}}">► Leave Request</a></li>
-                                        <li><a href="{{route('lateRequest')}}">► Late Coming Request</a></li>
-                                        <li><a href="{{route('leaveLateApproval')}}">► Leave / Late Request Approval</a></li>
+                                        @if(auth()->user()->roles == 'user')
+                                            <li><a href="{{route('leaveRequest')}}">► Leave Request</a></li>
+                                        @endif
+                                        @if(auth()->user()->roles == 'user')
+                                            <li><a href="{{route('lateRequest')}}">► Late Coming Request</a></li>
+                                        @endif
+                                        @if(auth()->user()->roles == 'company')
+                                            <li><a href="{{route('leaveLateApproval')}}">► Leave / Late Request
+                                                    Approval</a></li>
+                                        @endif
                                     </ul>
                                 </li>
                                 <li class="has_list"><a href="javascript:void(0)"><span><i class="fa fa-money"

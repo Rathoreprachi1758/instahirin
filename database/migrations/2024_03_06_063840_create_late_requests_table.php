@@ -14,6 +14,7 @@ return new class extends Migration {
             $table->id();
             $table->foreignId('company_id')->constrained('companies');
             $table->foreignId('department_id')->constrained('departments');
+            $table->foreignId('user_id')->constrained('users');
             $table->text('late_reason');
             $table->string('employee_code')->nullable();
             $table->boolean('late_status')->nullable();

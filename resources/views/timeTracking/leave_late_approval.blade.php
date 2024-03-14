@@ -20,7 +20,7 @@
                                 </button>
                                 <button class="nav-link" id="nav-profile-tab" data-bs-toggle="tab"
                                         data-bs-target="#nav-profile"
-                                        type="button" role="tab" aria-controls="nav-profile" aria-selected="false">My
+                                        type="button" role="tab" aria-controls="nav-profile" aria-selected="false">
                                     Late Request
                                 </button>
                             </div>
@@ -30,7 +30,7 @@
                                  aria-labelledby="nav-home-tab"
                                  tabindex="0">
                                 <div class="custom_tabs_data" style="display: block" id="tab5">
-                                    <form action="{{ route('leaveLateApproval') }}" method="get">
+                                    <form action="{{ route('leaveRequestApprovalFilter') }}" method="post">
                                         @csrf
                                         <label for="company">Select Company:</label>
                                         <select id="company" name="company">

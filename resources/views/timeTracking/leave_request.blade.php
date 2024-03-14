@@ -10,7 +10,7 @@
                 <br>
                 <div class="container">
                     <div class="row mt-5">
-                        {{--                        @if(auth()->user()->roles != 'company')--}}
+                                                @if(auth()->user()->roles != 'company')
                         <nav>
                             <div class="nav nav-tabs" id="nav-tab" role="tablist">
                                 <button class="nav-link active" id="nav-home-tab" data-bs-toggle="tab"
@@ -25,9 +25,9 @@
                                 </button>
                             </div>
                         </nav>
-                        {{--                        @endif--}}
+                                                @endif
                         <div class="tab-content" id="nav-tabContent">
-                            {{--                            @if(auth()->user()->roles != 'company')--}}
+                                                        @if(auth()->user()->roles != 'company')
                             <div class="tab-pane fade show active" id="nav-home" role="tabpanel"
                                  aria-labelledby="nav-home-tab"
                                  tabindex="0">
@@ -116,7 +116,7 @@
                             </div>
                             <div class="tab-pane fade" id="nav-profile" role="tabpanel"
                                  aria-labelledby="nav-profile-tab" tabindex="0">
-                                {{--                                @endif--}}
+                                                                @endif
                                 <div class="custom_tabs_data" style="display: block" id="tab5">
                                     <form action="{{ route('leaveRequestFilter') }}" method="post">
                                         @csrf

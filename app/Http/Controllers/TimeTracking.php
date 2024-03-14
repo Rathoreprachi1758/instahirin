@@ -475,9 +475,18 @@ class TimeTracking extends Controller
      */
     private function filterLeaveRequest($from = null, $to = null, $companyId = null)
     {
-        $companies = Company::where('user_id', Auth::id())->get();
         $leaveTypes = Leave::all();
-        $leaveRequest = LeaveRequest::query();
+        if (auth()->user()->roles == 'company') {
+            $companies = Company::where('user_id', auth()->user()->id)->get();
+            $companyIds = [];
+            foreach ($companies as $company) {
+                $companyIds[] = $company->id;
+            }
+            $leaveRequest = LeaveRequest::whereIn('company_id', $companyIds);
+        } elseif (auth()->user()->roles == 'user') {
+            $companies = Company::where('user_id', auth()->user()->id)->get();
+            $leaveRequest = LeaveRequest::where('user_id', Auth::id());
+        }
 
         if ($from && $to && $companyId == null) {
             $leaveRequest->whereBetween('start_date', [$from, $to]);
@@ -573,8 +582,18 @@ class TimeTracking extends Controller
      */
     public function lateRequest(): \Illuminate\Foundation\Application|View|Factory|Application
     {
-        $companies = Company::where('user_id', Auth::id())->get();
-        $lateRequests = LateRequest::all();
+        if (auth()->user()->roles == 'company') {
+            $companies = Company::where('user_id', auth()->user()->id)->get();
+            $companyIds = [];
+            foreach ($companies as $company) {
+                $companyIds[] = $company->id;
+            }
+            $lateRequest = LateRequest::whereIn('company_id', $companyIds);
+        } elseif (auth()->user()->roles == 'user') {
+            $companies = Company::where('user_id', auth()->user()->id)->get();
+            $lateRequest = LateRequest::where('user_id', Auth::id());
+        }
+        $lateRequests = $lateRequest->get();
         return view('timeTracking.late_request')->with(compact('companies', 'lateRequests'));
     }
 
@@ -606,6 +625,7 @@ class TimeTracking extends Controller
         $lateRequest->date = $request->date;
         $lateRequest->expected_time = $request->time;
         $lateRequest->late_reason = $request->reason;
+        $lateRequest->user_id = Auth::id();
         $lateRequest->save();
         return redirect()->route('lateRequest');
     }
@@ -628,10 +648,22 @@ class TimeTracking extends Controller
      */
     public function leaveLateApproval(): View|\Illuminate\Foundation\Application|Factory|Application
     {
-        $lateRequests = LateRequest::all();
-        $leaveRequests = LeaveRequest::all();
-        $companies = Company::where('user_id', Auth::id())->get();
+        $companies = Company::where('user_id', auth()->user()->id)->get();
 
+        if (auth()->user()->roles == 'company') {
+            $companyIds = [];
+            foreach ($companies as $company) {
+                $companyIds[] = $company->id;
+            }
+            $leaveRequest = LeaveRequest::whereIn('company_id', $companyIds);
+            $lateRequest = LateRequest::whereIn('company_id', $companyIds);
+        } elseif (auth()->user()->roles == 'user') {
+            $leaveRequest = LeaveRequest::where('user_id', Auth::id());
+            $lateRequest = LateRequest::where('user_id', Auth::id());
+        }
+
+        $lateRequests = $lateRequest->get();
+        $leaveRequests = $leaveRequest->get();
         return view('timeTracking.leave_late_approval')->with(compact('companies', 'lateRequests', 'leaveRequests'));
     }
 
@@ -643,19 +675,29 @@ class TimeTracking extends Controller
     {
         $companies = Company::where('user_id', Auth::id())->get();
         $leaveTypes = Leave::all();
-        $leaveRequest = LeaveRequest::query();
+
+        if (auth()->user()->roles == 'company') {
+            $companyIds = [];
+            foreach ($companies as $company) {
+                $companyIds[] = $company->id;
+            }
+            $leaveRequest = LeaveRequest::whereIn('company_id', $companyIds);
+        } elseif (auth()->user()->roles == 'user') {
+            $leaveRequest = LeaveRequest::where('user_id', Auth::id());
+        }
 
         if ($request->from && $request->to && $request->company == null) {
             $leaveRequest->whereBetween('start_date', [$request->from, $request->to]);
         } else if ($request->company != null && ($request->from == null || $request->to == null)) {
+
             $leaveRequest->where('company_id', $request->company);
         } else if ($request->from && $request->to && $request->company != null) {
             $leaveRequest->where('company_id', $request->company)->whereBetween('start_date', [$request->from, $request->to]);
         }
         $leaveRequests = $leaveRequest->get();
+
         return view('timeTracking.leave_late_approval')->with(compact('companies', 'leaveTypes', 'leaveRequests'));
     }
-
 
     /**
      * @param Request $request
@@ -663,8 +705,17 @@ class TimeTracking extends Controller
      */
     public function lateRequestFilter(Request $request)
     {
-        $lateRequest = LateRequest::query();
-        $companies = Company::where('user_id', Auth::id())->get();
+        if (auth()->user()->roles == 'company') {
+            $companies = Company::where('user_id', auth()->user()->id)->get();
+            $companyIds = [];
+            foreach ($companies as $company) {
+                $companyIds[] = $company->id;
+            }
+            $lateRequest = LateRequest::whereIn('company_id', $companyIds);
+        } elseif (auth()->user()->roles == 'user') {
+            $companies = Company::where('user_id', auth()->user()->id)->get();
+            $lateRequest = LateRequest::where('user_id', Auth::id());
+        }
 
         if ($request->from && $request->to && $request->company == null) {
             $lateRequest->whereBetween('date', [$request->from, $request->to]);
@@ -689,8 +740,17 @@ class TimeTracking extends Controller
      */
     public function lateApprovalFilter(Request $request): View|\Illuminate\Foundation\Application|Factory|Application
     {
-        $lateRequest = LateRequest::query();
-        $companies = Company::where('user_id', Auth::id())->get();
+        if (auth()->user()->roles == 'company') {
+            $companies = Company::where('user_id', auth()->user()->id)->get();
+            $companyIds = [];
+            foreach ($companies as $company) {
+                $companyIds[] = $company->id;
+            }
+            $lateRequest = LateRequest::whereIn('company_id', $companyIds);
+        } elseif (auth()->user()->roles == 'user') {
+            $companies = Company::where('user_id', auth()->user()->id)->get();
+            $lateRequest = LateRequest::where('user_id', Auth::id());
+        }
 
         if ($request->from && $request->to && $request->company == null) {
             $lateRequest->whereBetween('date', [$request->from, $request->to]);
