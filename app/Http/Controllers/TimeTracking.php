@@ -757,6 +757,7 @@ class TimeTracking extends Controller
         } elseif (auth()->user()->roles == 'user') {
             $leaveRequest = LeaveRequest::where('user_id', Auth::id());
             $lateRequest = LateRequest::where('user_id', Auth::id());
+            $employees = Employee::where('user_id', Auth::id())->get();
         }
 
         $lateRequests = $lateRequest->get();
