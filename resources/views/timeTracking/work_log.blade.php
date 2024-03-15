@@ -71,7 +71,7 @@
                                             <h6>Ip Address</h6>
                                         </th>
                                         <th>
-                                            <h6>Actions</h6>
+                                            <h6>Status</h6>
                                         </th>
                                     </tr>
                                     </thead>
@@ -120,58 +120,66 @@
                                                         <div class="statusFiled">
                                                             @if($punchInOutData['work_log_status'] === null)
                                                                 <strong class="">Pending</strong>
-                                                            @elseif($punchInOutData['work_log_status'] == true)
+                                                            @elseif($punchInOutData['work_log_status'] == 1)
+                                                                <strong class="">Accept</strong>
+                                                            @elseif($punchInOutData['work_log_status'] == 0)
+                                                                <strong class="">Reject</strong>
+                                                            @elseif($punchInOutData['work_log_status'] == 2)
                                                                 <strong class="">Accepted</strong>
-                                                            @elseif($punchInOutData['work_log_status'] == false)
+                                                            @elseif($punchInOutData['work_log_status'] == 3)
                                                                 <strong class="">Rejected</strong>
                                                             @endif
                                                             <div class="statusFieldInfo">
-                                                                <div class="statusDrop">
-                                                                <span><i class="fa fa-ellipsis-v"
-                                                                         aria-hidden="true"></i></span>
-                                                                    <div class="statusDropdown">
-                                                                        <ul>
-                                                                            <li>
-                                                                                <form action="{{ route('status') }}"
-                                                                                      method="post">
-                                                                                    @csrf
-                                                                                    <input type="hidden" value="1"
-                                                                                           name="status">
-                                                                                    <input type="hidden"
-                                                                                           value="{{$punchInOutData['department']->id}}"
-                                                                                           name="department_id">
-                                                                                    <input type="hidden"
-                                                                                           value="{{$punchInOutData['company']->id}}"
-                                                                                           name="company_id">
-                                                                                    <input type="hidden"
-                                                                                           value="{{ $punchInOutData['date'] }}"
-                                                                                           name="date">
-                                                                                    <input type="submit" value="Accept"
-                                                                                           name="workLog">
-                                                                                </form>
-                                                                            </li>
-                                                                            <li>
-                                                                                <form action="{{ route('status') }}"
-                                                                                      method="post">
-                                                                                    @csrf
-                                                                                    <input type="hidden" value="0"
-                                                                                           name="status">
-                                                                                    <input type="hidden"
-                                                                                           value="{{$punchInOutData['department']->id}}"
-                                                                                           name="department_id">
-                                                                                    <input type="hidden"
-                                                                                           value="{{$punchInOutData['company']->id}}"
-                                                                                           name="company_id">
-                                                                                    <input type="hidden"
-                                                                                           value="{{ $punchInOutData['date'] }}"
-                                                                                           name="date">
-                                                                                    <input type="submit" value="Reject"
-                                                                                           name="workLog">
-                                                                                </form>
-                                                                            </li>
-                                                                        </ul>
+                                                                @if($punchInOutData['work_log_status'] === null)
+                                                                    <div class="statusDrop">
+                                                                        <span><i class="fa fa-ellipsis-v"
+                                                                                 aria-hidden="true"></i></span>
+                                                                        <div class="statusDropdown">
+                                                                            <ul>
+                                                                                <li>
+                                                                                    <form action="{{ route('status') }}"
+                                                                                          method="post">
+                                                                                        @csrf
+                                                                                        <input type="hidden" value="1"
+                                                                                               name="status">
+                                                                                        <input type="hidden"
+                                                                                               value="{{$punchInOutData['department']->id}}"
+                                                                                               name="department_id">
+                                                                                        <input type="hidden"
+                                                                                               value="{{$punchInOutData['company']->id}}"
+                                                                                               name="company_id">
+                                                                                        <input type="hidden"
+                                                                                               value="{{ $punchInOutData['date'] }}"
+                                                                                               name="date">
+                                                                                        <input type="submit"
+                                                                                               value="Accept"
+                                                                                               name="workLog">
+                                                                                    </form>
+                                                                                </li>
+                                                                                <li>
+                                                                                    <form action="{{ route('status') }}"
+                                                                                          method="post">
+                                                                                        @csrf
+                                                                                        <input type="hidden" value="0"
+                                                                                               name="status">
+                                                                                        <input type="hidden"
+                                                                                               value="{{$punchInOutData['department']->id}}"
+                                                                                               name="department_id">
+                                                                                        <input type="hidden"
+                                                                                               value="{{$punchInOutData['company']->id}}"
+                                                                                               name="company_id">
+                                                                                        <input type="hidden"
+                                                                                               value="{{ $punchInOutData['date'] }}"
+                                                                                               name="date">
+                                                                                        <input type="submit"
+                                                                                               value="Reject"
+                                                                                               name="workLog">
+                                                                                    </form>
+                                                                                </li>
+                                                                            </ul>
+                                                                        </div>
                                                                     </div>
-                                                                </div>
+                                                                @endif
                                                             </div>
                                                         </div>
                                                     </div>

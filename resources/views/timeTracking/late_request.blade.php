@@ -109,6 +109,14 @@
                                             <input type="date" id="from" name="from">
                                             <label for="to">To:</label>
                                             <input type="date" id="to" name="to">
+                                            <select name="employee_code">
+                                                <option selected disabled>Choose Emp Code</option>
+                                                @isset($employees)
+                                                    @foreach($employees as $employee)
+                                                        <option value="{{ $employee->employee_code }}">{{ $employee->employee_code }}</option>
+                                                    @endforeach
+                                                @endisset
+                                            </select>
                                             <button type="submit">Filter</button>
                                         </form>
                                         <div class="col-xxl-9 col-xl-11 col-lg-11 col-md-12">
@@ -191,48 +199,48 @@
                                                                             @elseif($lateRequest['late_status'] == false)
                                                                                 <strong class="">Rejected</strong>
                                                                             @endif
-                                                                            <div class="statusFieldInfo">
-                                                                                <div class="statusDrop">
-                                                                <span><i class="fa fa-ellipsis-v"
-                                                                         aria-hidden="true"></i></span>
-                                                                                    <div class="statusDropdown">
-                                                                                        <ul>
-                                                                                            <li>
-                                                                                                <form
-                                                                                                    action="{{ route('lateStatus') }}"
-                                                                                                    method="post">
-                                                                                                    @csrf
-                                                                                                    <input type="hidden"
-                                                                                                           value="1"
-                                                                                                           name="status">
-                                                                                                    <input type="hidden"
-                                                                                                           value="{{ $lateRequest->id }}"
-                                                                                                           name="requestId">
-                                                                                                    <input type="submit"
-                                                                                                           value="Accept"
-                                                                                                           name="button">
-                                                                                                </form>
-                                                                                            </li>
-                                                                                            <li>
-                                                                                                <form
-                                                                                                    action="{{ route('lateStatus') }}"
-                                                                                                    method="post">
-                                                                                                    @csrf
-                                                                                                    <input type="hidden"
-                                                                                                           value="0"
-                                                                                                           name="status">
-                                                                                                    <input type="hidden"
-                                                                                                           value="{{ $lateRequest->id }}"
-                                                                                                           name="requestId">
-                                                                                                    <input type="submit"
-                                                                                                           value="Reject"
-                                                                                                           name="button">
-                                                                                                </form>
-                                                                                            </li>
-                                                                                        </ul>
-                                                                                    </div>
-                                                                                </div>
-                                                                            </div>
+{{--                                                                            <div class="statusFieldInfo">--}}
+{{--                                                                                <div class="statusDrop">--}}
+{{--                                                                <span><i class="fa fa-ellipsis-v"--}}
+{{--                                                                         aria-hidden="true"></i></span>--}}
+{{--                                                                                    <div class="statusDropdown">--}}
+{{--                                                                                        <ul>--}}
+{{--                                                                                            <li>--}}
+{{--                                                                                                <form--}}
+{{--                                                                                                    action="{{ route('lateStatus') }}"--}}
+{{--                                                                                                    method="post">--}}
+{{--                                                                                                    @csrf--}}
+{{--                                                                                                    <input type="hidden"--}}
+{{--                                                                                                           value="1"--}}
+{{--                                                                                                           name="status">--}}
+{{--                                                                                                    <input type="hidden"--}}
+{{--                                                                                                           value="{{ $lateRequest->id }}"--}}
+{{--                                                                                                           name="requestId">--}}
+{{--                                                                                                    <input type="submit"--}}
+{{--                                                                                                           value="Accept"--}}
+{{--                                                                                                           name="button">--}}
+{{--                                                                                                </form>--}}
+{{--                                                                                            </li>--}}
+{{--                                                                                            <li>--}}
+{{--                                                                                                <form--}}
+{{--                                                                                                    action="{{ route('lateStatus') }}"--}}
+{{--                                                                                                    method="post">--}}
+{{--                                                                                                    @csrf--}}
+{{--                                                                                                    <input type="hidden"--}}
+{{--                                                                                                           value="0"--}}
+{{--                                                                                                           name="status">--}}
+{{--                                                                                                    <input type="hidden"--}}
+{{--                                                                                                           value="{{ $lateRequest->id }}"--}}
+{{--                                                                                                           name="requestId">--}}
+{{--                                                                                                    <input type="submit"--}}
+{{--                                                                                                           value="Reject"--}}
+{{--                                                                                                           name="button">--}}
+{{--                                                                                                </form>--}}
+{{--                                                                                            </li>--}}
+{{--                                                                                        </ul>--}}
+{{--                                                                                    </div>--}}
+{{--                                                                                </div>--}}
+{{--                                                                            </div>--}}
                                                                         </div>
                                                                     </div>
                                                                 </td>

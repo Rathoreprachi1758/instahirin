@@ -20,12 +20,15 @@
                                 @endforeach
                             @endisset
                         </select>
-                        <label for="from">Select Status:</label>
+                        <label for="from">Select Emp Code:</label>
                         <input type="hidden" value="">
-                        <select name="statusFilter">
-                            <option selected disabled>Choose Status</option>
-                            <option value="1">Approved</option>
-                            <option value="0">Rejected</option>
+                        <select name="employee_code">
+                            <option selected disabled>Choose Emp Code</option>
+                            @isset($employees)
+                                @foreach($employees as $employee)
+                                    <option value="{{ $employee->employee_code }}">{{ $employee->employee_code }}</option>
+                                @endforeach
+                            @endisset
                         </select>
                         <button type="submit">Filter</button>
                     </form>
@@ -51,9 +54,9 @@
                                         <th>
                                             <h6>No of Days</h6>
                                         </th>
-                                        <th>
-                                            <h6>Publish</h6>
-                                        </th>
+{{--                                        <th>--}}
+{{--                                            <h6>Publish</h6>--}}
+{{--                                        </th>--}}
                                         <th>
                                             <h6>Status</h6>
                                         </th>
@@ -88,55 +91,55 @@
                                                         <p>{{ $employeeLeaveRequest['leave_days'] }}</p>
                                                     </div>
                                                 </td>
-                                                <td width="90">
-                                                    <div class="tabletext">
-                                                        <div class="statusFieldInfo">
-                                                            <div class="statusDrop">
-                                                                <div class="tabletext">
-                                                                    <div class="statusFiled">
-                                                                        <span><i
-                                                                                class="fa fa-ellipsis-v"
-                                                                                aria-hidden="true"></i></span>
-                                                                        <div class="statusDropdown">
-                                                                            <ul>
-                                                                                <li>
-                                                                                    <form
-                                                                                        action="{{ route('timeOffStatus') }}"
-                                                                                        method="post">
-                                                                                        @csrf
-                                                                                        <input type="hidden" value="1"
-                                                                                               name="employee_status">
-                                                                                        <input type="hidden"
-                                                                                               value="{{ $employeeLeaveRequest['id'] }}"
-                                                                                               name="id">
-                                                                                        <input type="submit"
-                                                                                               value="Accept"
-                                                                                               name="button">
-                                                                                    </form>
-                                                                                </li>
-                                                                                <li>
-                                                                                    <form
-                                                                                        action="{{ route('timeOffStatus') }}"
-                                                                                        method="post">
-                                                                                        @csrf
-                                                                                        <input type="hidden" value="0"
-                                                                                               name="employee_status">
-                                                                                        <input type="hidden"
-                                                                                               value="{{  $employeeLeaveRequest['id'] }}"
-                                                                                               name="id">
-                                                                                        <input type="submit"
-                                                                                               value="Reject"
-                                                                                               name="button">
-                                                                                    </form>
-                                                                                </li>
-                                                                            </ul>
-                                                                        </div>
-                                                                    </div>
-                                                                </div>
-                                                            </div>
-                                                        </div>
-                                                    </div>
-                                                </td>
+{{--                                                <td width="90">--}}
+{{--                                                    <div class="tabletext">--}}
+{{--                                                        <div class="statusFieldInfo">--}}
+{{--                                                            <div class="statusDrop">--}}
+{{--                                                                <div class="tabletext">--}}
+{{--                                                                    <div class="statusFiled">--}}
+{{--                                                                        <span><i--}}
+{{--                                                                                class="fa fa-ellipsis-v"--}}
+{{--                                                                                aria-hidden="true"></i></span>--}}
+{{--                                                                        <div class="statusDropdown">--}}
+{{--                                                                            <ul>--}}
+{{--                                                                                <li>--}}
+{{--                                                                                    <form--}}
+{{--                                                                                        action="{{ route('timeOffStatus') }}"--}}
+{{--                                                                                        method="post">--}}
+{{--                                                                                        @csrf--}}
+{{--                                                                                        <input type="hidden" value="1"--}}
+{{--                                                                                               name="employee_status">--}}
+{{--                                                                                        <input type="hidden"--}}
+{{--                                                                                               value="{{ $employeeLeaveRequest['id'] }}"--}}
+{{--                                                                                               name="id">--}}
+{{--                                                                                        <input type="submit"--}}
+{{--                                                                                               value="Accept"--}}
+{{--                                                                                               name="button">--}}
+{{--                                                                                    </form>--}}
+{{--                                                                                </li>--}}
+{{--                                                                                <li>--}}
+{{--                                                                                    <form--}}
+{{--                                                                                        action="{{ route('timeOffStatus') }}"--}}
+{{--                                                                                        method="post">--}}
+{{--                                                                                        @csrf--}}
+{{--                                                                                        <input type="hidden" value="0"--}}
+{{--                                                                                               name="employee_status">--}}
+{{--                                                                                        <input type="hidden"--}}
+{{--                                                                                               value="{{  $employeeLeaveRequest['id'] }}"--}}
+{{--                                                                                               name="id">--}}
+{{--                                                                                        <input type="submit"--}}
+{{--                                                                                               value="Reject"--}}
+{{--                                                                                               name="button">--}}
+{{--                                                                                    </form>--}}
+{{--                                                                                </li>--}}
+{{--                                                                            </ul>--}}
+{{--                                                                        </div>--}}
+{{--                                                                    </div>--}}
+{{--                                                                </div>--}}
+{{--                                                            </div>--}}
+{{--                                                        </div>--}}
+{{--                                                    </div>--}}
+{{--                                                </td>--}}
                                                 <td>
                                                     <div class="tabletext">
                                                         <div class="statusFiled">

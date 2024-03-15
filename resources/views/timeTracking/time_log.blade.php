@@ -24,6 +24,18 @@
                         <input type="date" id="from" name="from">
                         <label for="to">To:</label>
                         <input type="date" id="to" name="to">
+
+                        <label for="from">Select Emp Code:</label>
+                        <input type="hidden" value="">
+                        <select name="employee_code">
+                            <option selected disabled>Choose Emp Code</option>
+                            @isset($employees)
+                                @foreach($employees as $employee)
+                                    <option
+                                        value="{{ $employee->id }}">{{ $employee->employee_code }}</option>
+                                @endforeach
+                            @endisset
+                        </select>
                         <button type="submit">Filter</button>
                     </form>
                     <!-- End of 'from' and 'to' date inputs -->
@@ -86,11 +98,15 @@
                                                 <td width="90">
                                                     <div class="tabletext">
                                                         <div class="statusFiled">
-                                                            @if($punchInOutData['time_log_status'] === null)
+                                                            @if($punchInOutData['work_log_status'] === null)
                                                                 <strong class="">Pending</strong>
-                                                            @elseif($punchInOutData['time_log_status'] == true)
+                                                            @elseif($punchInOutData['work_log_status'] == 1)
+                                                                <strong class="">Accept</strong>
+                                                            @elseif($punchInOutData['work_log_status'] == 0)
+                                                                <strong class="">Reject</strong>
+                                                            @elseif($punchInOutData['work_log_status'] == 2)
                                                                 <strong class="">Accepted</strong>
-                                                            @elseif($punchInOutData['time_log_status'] == false)
+                                                            @elseif($punchInOutData['work_log_status'] == 3)
                                                                 <strong class="">Rejected</strong>
                                                             @endif
                                                             <div class="statusFieldInfo">
@@ -103,7 +119,7 @@
                                                                                 <form action="{{ route('status') }}"
                                                                                       method="post">
                                                                                     @csrf
-                                                                                    <input type="hidden" value="1"
+                                                                                    <input type="hidden" value="2"
                                                                                            name="status">
                                                                                     <input type="hidden"
                                                                                            value="{{$punchInOutData['department']->id}}"
@@ -122,7 +138,7 @@
                                                                                 <form action="{{ route('status') }}"
                                                                                       method="post">
                                                                                     @csrf
-                                                                                    <input type="hidden" value="0"
+                                                                                    <input type="hidden" value="3"
                                                                                            name="status">
                                                                                     <input type="hidden"
                                                                                            value="{{$punchInOutData['department']->id}}"
@@ -148,12 +164,12 @@
                                             @php($increamentId++)
                                         @endforeach
                                     @endisset
-                                </tbody>
-                            </table>
+                                    </tbody>
+                                </table>
+                            </div>
                         </div>
                     </div>
                 </div>
             </div>
         </div>
     </div>
-</div>

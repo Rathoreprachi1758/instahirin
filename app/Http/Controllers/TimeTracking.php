@@ -252,52 +252,26 @@ class TimeTracking extends Controller
      */
     public function employeeWorkLog(): View|Factory|Application
     {
-        $companies = Company::where('user_id', Auth::id())->get();
+        $employee = Employee::where('user_id', Auth::id())->get();
+        $companies = [];
+        $companiesId = [];
+        foreach ($employee as $employeeCompany) {
+            $companies[] = $employeeCompany->company;
+            $companiesId[] = $employeeCompany->company->id;
+
+        }
+        $companies = array_unique($companies);
         $departments = [];
         if (Session::has('workLogDepartment')) {
             $departments = Session::get('workLogDepartment');
         }
-        return view('timeTracking.work_log', compact('companies', 'departments'));
-    }
 
-    /**
-     * @param Request $request
-     * @return \Illuminate\Foundation\Application|View|Factory|Application
-     */
-    public function workLogCompany(Request $request): \Illuminate\Foundation\Application|View|Factory|Application
-    {
-        $companies = Company::where('user_id', Auth::id())->get();
-        $employeePunchLogsQuery = EmployeeLogTime::where('user_id', Auth::id());
-
-        $employeeInfoQuery = Employee::where('user_id', Auth::id());
-        if ($request->department != null) {
-            $employeeInfoQuery->where('department_id', $request->department);
-        }
-
-        $employeeInfo = $employeeInfoQuery->first();
-
-
-        if ($request->company != null) {
-            $employeePunchLogsQuery->where('company_id', $request->company);
-            Session::put('workLogCompany', $request->company);
-        }
-        if ($request->department != null && $employeeInfo) {
-            $employeePunchLogsQuery->where('employee_id', $employeeInfo->id);
-        }
-        if ($request->has('from') && $request->has('to') && $request->from != null && $request->to != null) {
-            $employeePunchLogsQuery->whereBetween('date', [$request->from, $request->to]);
-        }
-
-        if ($request->department != null && $employeeInfo && $request->company != null) {
-            $employeePunchLogsQuery->where('employee_id', $employeeInfo->id)->where('company_id', $request->company);
-        }
+        $employeePunchLogsQuery = EmployeeLogTime::where('user_id', Auth::id())->whereIn('company_id', $companiesId);
         $employeePunchLogs = $employeePunchLogsQuery->get();
 
         $punchInOutInfo = $this->employeePunchLogs($employeePunchLogs);
 
-        $employees = Employee::where('company_id', Session::get('workLogCompany'))->where('user_id', Auth::id())->get();
-        $departments = $employees->pluck('department')->unique()->values()->all();
-        return view('timeTracking.work_log', compact('departments', 'companies', 'punchInOutInfo'));
+        return view('timeTracking.work_log', compact('companies', 'departments', 'punchInOutInfo'));
     }
 
     /**
@@ -357,6 +331,51 @@ class TimeTracking extends Controller
     }
 
     /**
+     * @param Request $request
+     * @return \Illuminate\Foundation\Application|View|Factory|Application
+     */
+    public function workLogCompany(Request $request): \Illuminate\Foundation\Application|View|Factory|Application
+    {
+        $employee = Employee::where('user_id', Auth::id())->get();
+        $companies = [];
+        foreach ($employee as $employeeCompany) {
+            $companies[] = $employeeCompany->company;
+        }
+        $companies = array_unique($companies);
+
+        $employeePunchLogsQuery = EmployeeLogTime::where('user_id', Auth::id());
+
+        $employeeInfoQuery = Employee::where('user_id', Auth::id());
+        if ($request->department != null) {
+            $employeeInfoQuery->where('department_id', $request->department);
+        }
+
+        $employeeInfo = $employeeInfoQuery->first();
+
+        if ($request->company != null) {
+            $employeePunchLogsQuery->where('company_id', $request->company);
+            Session::put('workLogCompany', $request->company);
+        }
+        if ($request->department != null && $employeeInfo) {
+            $employeePunchLogsQuery->where('employee_id', $employeeInfo->id);
+        }
+        if ($request->has('from') && $request->has('to') && $request->from != null && $request->to != null) {
+            $employeePunchLogsQuery->whereBetween('date', [$request->from, $request->to]);
+        }
+
+        if ($request->department != null && $employeeInfo && $request->company != null) {
+            $employeePunchLogsQuery->where('employee_id', $employeeInfo->id)->where('company_id', $request->company);
+        }
+        $employeePunchLogs = $employeePunchLogsQuery->get();
+
+        $punchInOutInfo = $this->employeePunchLogs($employeePunchLogs);
+
+        $employees = Employee::where('company_id', Session::get('workLogCompany'))->where('user_id', Auth::id())->get();
+        $departments = $employees->pluck('department')->unique()->values()->all();
+        return view('timeTracking.work_log', compact('departments', 'companies', 'punchInOutInfo'));
+    }
+
+    /**
      * update the status of employee log
      *
      * @param Request $request
@@ -371,7 +390,7 @@ class TimeTracking extends Controller
             return redirect()->route('employeeWorkLog');
 
         } elseif ($request->timeLog) {
-            $employeeTimeLog->time_log_status = $request->status;
+            $employeeTimeLog->work_log_status = $request->status;
             $employeeTimeLog->save();
             return redirect()->route('timeLogs');
         }
@@ -382,8 +401,17 @@ class TimeTracking extends Controller
      */
     public function timeLogs(): \Illuminate\Foundation\Application|View|Factory|Application
     {
-        $companies = Company::all();
-        return view('timeTracking.time_log', compact('companies'));
+        $companies = Company::where('user_id', Auth::id())->get();
+        $companyIds = [];
+        foreach ($companies as $company) {
+            $companyIds[] = $company->id;
+        }
+        $employees = Employee::whereIn('company_id', $companyIds)->get();
+
+        $employeePunchLogs = EmployeeLogTime::whereNot('work_log_status', 0)->whereIn('company_id', $companyIds)->get();
+        $punchInOutInfo = $this->employeePunchLogs($employeePunchLogs);
+
+        return view('timeTracking.time_log', compact('companies', 'punchInOutInfo', 'employees'));
     }
 
     /**
@@ -394,42 +422,76 @@ class TimeTracking extends Controller
      */
     public function timeLogCompany(Request $request): \Illuminate\Foundation\Application|View|Factory|Application
     {
-        $employee = EmployeeLogTime::query();
+        $companies = Company::where('user_id', Auth::id())->get();
+        $companyIds = [];
+        foreach ($companies as $company) {
+            $companyIds[] = $company->id;
+        }
+        $employees = Employee::whereIn('company_id', $companyIds)->get();
+        $employeeTimeLog = EmployeeLogTime::whereNot('work_log_status', 0)->whereIn('company_id', $companyIds);
 
-        if ($request->from && $request->to && ($request->from != null || $request->to != null) && $request->company == null) {
-            $employee->whereBetween('date', [$request->from, $request->to]);
-        } else if ($request->company != null && ($request->from == null || $request->to == null)) {
-            $employee->where('company_id', $request->company);
-        } else if ($request->from && $request->to && ($request->from != null || $request->to != null) && $request->company != null) {
-            $employee->where('company_id', $request->company)->whereBetween('date', [$request->from, $request->to]);
+        if ($request->employee_code != null && $request->company != null && $request->from != null && $request->to != null) {
+            $employeeTimeLog->where('employee_id', $request->employee_code)
+                ->where('company_id', $request->company)
+                ->whereBetween('date', [$request->from, $request->to]);
+        } else if ($request->employee_code != null && $request->company != null) {
+            $employeeTimeLog->where('employee_id', $request->employee_code)
+                ->where('company_id', $request->company);
+        } else if ($request->employee_code != null && $request->from != null && $request->to != null) {
+            $employeeTimeLog->where('employee_id', $request->employee_code)
+                ->whereBetween('date', [$request->from, $request->to]);
+        } else if ($request->company != null && $request->from != null && $request->to != null) {
+            $employeeTimeLog->where('company_id', $request->company)
+                ->whereBetween('date', [$request->from, $request->to]);
+        } else if ($request->employee_code != null) {
+            $employeeTimeLog->where('employee_id', $request->employee_code);
+        } else if ($request->company != null) {
+            $employeeTimeLog->where('company_id', $request->company);
+        } else if ($request->from != null && $request->to != null) {
+            $employeeTimeLog->whereBetween('date', [$request->from, $request->to]);
         }
 
-        $companies = Company::all();
-        $employeePunchLogs = $employee->get();
+        $employeePunchLogs = $employeeTimeLog->get();
         $punchInOutInfo = $this->employeePunchLogs($employeePunchLogs);
-        return view('timeTracking.time_log', compact('companies', 'punchInOutInfo'));
+
+        return view('timeTracking.time_log', compact('companies', 'punchInOutInfo', 'employees'));
     }
 
     /**
      * @param Request $request
      * @return Application|Factory|View|\Illuminate\Foundation\Application
      */
-    public
-    function timeOffCompany(Request $request): \Illuminate\Foundation\Application|View|Factory|Application
+    public function timeOffCompany(Request $request): \Illuminate\Foundation\Application|View|Factory|Application
     {
-        $leaveRequests = LeaveRequest::query();
+        if (auth()->user()->roles == 'company') {
+            $companies = Company::where('user_id', auth()->user()->id)->get();
+            $companyIds = [];
+            foreach ($companies as $company) {
+                $companyIds[] = $company->id;
+            }
+            $employees = Employee::whereIn('company_id', $companyIds)->get();
+            $employeeLeaveRequest = LeaveRequest::where('leave_status', true)->whereIn('company_id', $companyIds);
+        } elseif (auth()->user()->roles == 'user') {
+            $employees = Employee::where('user_id', Auth::id())->get();
+            $companies = [];
+            foreach ($employees as $employee) {
+                $companies[] = $employee->company;
+            }
+            $companies = array_unique($companies);
+
+            $employeeLeaveRequest = LeaveRequest::where('user_id', Auth::id())->where('leave_status', true);
+        }
 
         if (isset($request->timeOffCompany)) {
-            $leaveRequests->where('company_id', $request->timeOffCompany);
+            $employeeLeaveRequest->where('company_id', $request->timeOffCompany);
         }
-        if (isset($request->statusFilter) && ($request->statusFilter == 0 || $request->statusFilter == 1)) {
-            $leaveRequests->where('leave_status', (int)$request->statusFilter);
+        if (isset($request->employee_code) && ($request->employee_code != null)) {
+            $employeeLeaveRequest->where('employee_code', $request->employee_code);
         }
 
-        $employeeLeaveRequests = $leaveRequests->get();
-        $companies = Company::all();
+        $employeeLeaveRequests = $employeeLeaveRequest->get();
 
-        return view('timeTracking.time_off', compact('companies', 'employeeLeaveRequests'));
+        return view('timeTracking.time_off', compact('companies', 'employeeLeaveRequests', 'employees'));
 
     }
 
@@ -451,12 +513,28 @@ class TimeTracking extends Controller
     /**
      * @return Application|Factory|View|\Illuminate\Foundation\Application
      */
-    public
-    function timeOff(): \Illuminate\Foundation\Application|View|Factory|Application
+    public function timeOff(): \Illuminate\Foundation\Application|View|Factory|Application
     {
-        $companies = Company::all();
+        if (auth()->user()->roles == 'company') {
+            $companies = Company::where('user_id', auth()->user()->id)->get();
+            $companyIds = [];
+            foreach ($companies as $company) {
+                $companyIds[] = $company->id;
+            }
+            $employees = Employee::whereIn('company_id', $companyIds)->get();
+            $employeeLeaveRequest = LeaveRequest::where('leave_status', true)->whereIn('company_id', $companyIds);
+        } elseif (auth()->user()->roles == 'user') {
+            $employees = Employee::where('user_id', Auth::id())->get();
+            $companies = [];
+            foreach ($employees as $employee) {
+                $companies[] = $employee->company;
+            }
+            $companies = array_unique($companies);
+            $employeeLeaveRequest = LeaveRequest::where('user_id', Auth::id())->where('leave_status', true);
+        }
+        $employeeLeaveRequests = $employeeLeaveRequest->get();
 
-        return view('timeTracking.time_off', compact('companies'));
+        return view('timeTracking.time_off', compact('companies', 'employeeLeaveRequests', 'employees'));
     }
 
     /**
@@ -473,7 +551,7 @@ class TimeTracking extends Controller
      * @param $companyId
      * @return Application|Factory|View|\Illuminate\Foundation\Application
      */
-    private function filterLeaveRequest($from = null, $to = null, $companyId = null)
+    private function filterLeaveRequest($from = null, $to = null, $companyId = null , $employee_code = null)
     {
         $leaveTypes = Leave::all();
         if (auth()->user()->roles == 'company') {
@@ -482,22 +560,38 @@ class TimeTracking extends Controller
             foreach ($companies as $company) {
                 $companyIds[] = $company->id;
             }
+            $employees = Employee::whereIn('company_id', $companyIds)->get();
             $leaveRequest = LeaveRequest::whereIn('company_id', $companyIds);
         } elseif (auth()->user()->roles == 'user') {
             $companies = Company::where('user_id', auth()->user()->id)->get();
             $leaveRequest = LeaveRequest::where('user_id', Auth::id());
+            $employees = Employee::where('user_id', Auth::id())->get();
         }
 
-        if ($from && $to && $companyId == null) {
-            $leaveRequest->whereBetween('start_date', [$from, $to]);
-        } else if ($companyId != null && ($from == null || $to == null)) {
+        if ($employee_code != null && $companyId != null && $from != null && $to != null) {
+            $leaveRequest->where('employee_code', $employee_code)
+                ->where('company_id', $companyId)
+                ->whereBetween('start_date', [$from, $to]);
+        } else if ($employee_code != null && $companyId != null) {
+            $leaveRequest->where('employee_code', $employee_code)
+                ->where('company_id', $companyId);
+        } else if ($employee_code != null && $from != null && $to != null) {
+            $leaveRequest->where('employee_code', $employee_code)
+                ->whereBetween('start_date', [$from, $to]);
+        } else if ($companyId != null && $from != null && $to != null) {
+            $leaveRequest->where('company_id', $companyId)
+                ->whereBetween('start_date', [$from, $to]);
+        } else if ($employee_code != null) {
+            $leaveRequest->where('employee_code', $employee_code);
+        } else if ($companyId != null) {
             $leaveRequest->where('company_id', $companyId);
-        } else if ($from && $to && $companyId != null) {
-            $leaveRequest->where('company_id', $companyId)->whereBetween('start_date', [$from, $to]);
+        } else if ($from != null && $to != null) {
+            $leaveRequest->whereBetween('start_date', [$from, $to]);
         }
+
 
         $leaveRequests = $leaveRequest->get();
-        return view('timeTracking.leave_request')->with(compact('companies', 'leaveTypes', 'leaveRequests'));
+        return view('timeTracking.leave_request')->with(compact('companies', 'leaveTypes', 'leaveRequests', 'employees'));
     }
 
     /**
@@ -506,7 +600,7 @@ class TimeTracking extends Controller
      */
     public function leaveRequestFilter(Request $request)
     {
-        return $this->filterLeaveRequest($request->from, $request->to, $request->company);
+        return $this->filterLeaveRequest($request->from, $request->to, $request->company , $request->employee_code);
     }
 
     /**
@@ -588,13 +682,15 @@ class TimeTracking extends Controller
             foreach ($companies as $company) {
                 $companyIds[] = $company->id;
             }
+            $employees = Employee::whereIn('company_id', $companyIds)->get();
             $lateRequest = LateRequest::whereIn('company_id', $companyIds);
         } elseif (auth()->user()->roles == 'user') {
             $companies = Company::where('user_id', auth()->user()->id)->get();
             $lateRequest = LateRequest::where('user_id', Auth::id());
+            $employees = Employee::where('user_id', Auth::id())->get();
         }
         $lateRequests = $lateRequest->get();
-        return view('timeTracking.late_request')->with(compact('companies', 'lateRequests'));
+        return view('timeTracking.late_request')->with(compact('companies', 'lateRequests', 'employees'));
     }
 
     /**
@@ -655,6 +751,7 @@ class TimeTracking extends Controller
             foreach ($companies as $company) {
                 $companyIds[] = $company->id;
             }
+            $employees = Employee::whereIn('company_id', $companyIds)->get();
             $leaveRequest = LeaveRequest::whereIn('company_id', $companyIds);
             $lateRequest = LateRequest::whereIn('company_id', $companyIds);
         } elseif (auth()->user()->roles == 'user') {
@@ -664,7 +761,7 @@ class TimeTracking extends Controller
 
         $lateRequests = $lateRequest->get();
         $leaveRequests = $leaveRequest->get();
-        return view('timeTracking.leave_late_approval')->with(compact('companies', 'lateRequests', 'leaveRequests'));
+        return view('timeTracking.leave_late_approval')->with(compact('companies', 'lateRequests', 'leaveRequests', 'employees'));
     }
 
     /**
@@ -681,22 +778,36 @@ class TimeTracking extends Controller
             foreach ($companies as $company) {
                 $companyIds[] = $company->id;
             }
+            $employees = Employee::whereIn('company_id', $companyIds)->get();
             $leaveRequest = LeaveRequest::whereIn('company_id', $companyIds);
         } elseif (auth()->user()->roles == 'user') {
             $leaveRequest = LeaveRequest::where('user_id', Auth::id());
         }
 
-        if ($request->from && $request->to && $request->company == null) {
-            $leaveRequest->whereBetween('start_date', [$request->from, $request->to]);
-        } else if ($request->company != null && ($request->from == null || $request->to == null)) {
-
+        if ($request->employee_code != null && $request->company != null && $request->from != null && $request->to != null) {
+            $leaveRequest->where('employee_code', $request->employee_code)
+                ->where('company_id', $request->company)
+                ->whereBetween('start_date', [$request->from, $request->to]);
+        } else if ($request->employee_code != null && $request->company != null) {
+            $leaveRequest->where('employee_code', $request->employee_code)
+                ->where('company_id', $request->company);
+        } else if ($request->employee_code != null && $request->from != null && $request->to != null) {
+            $leaveRequest->where('employee_code', $request->employee_code)
+                ->whereBetween('start_date', [$request->from, $request->to]);
+        } else if ($request->company != null && $request->from != null && $request->to != null) {
+            $leaveRequest->where('company_id', $request->company)
+                ->whereBetween('start_date', [$request->from, $request->to]);
+        } else if ($request->employee_code != null) {
+            $leaveRequest->where('employee_code', $request->employee_code);
+        } else if ($request->company != null) {
             $leaveRequest->where('company_id', $request->company);
-        } else if ($request->from && $request->to && $request->company != null) {
-            $leaveRequest->where('company_id', $request->company)->whereBetween('start_date', [$request->from, $request->to]);
+        } else if ($request->from != null && $request->to != null) {
+            $leaveRequest->whereBetween('start_date', [$request->from, $request->to]);
         }
+
         $leaveRequests = $leaveRequest->get();
 
-        return view('timeTracking.leave_late_approval')->with(compact('companies', 'leaveTypes', 'leaveRequests'));
+        return view('timeTracking.leave_late_approval')->with(compact('companies', 'leaveTypes', 'leaveRequests', 'employees'));
     }
 
     /**
@@ -717,13 +828,27 @@ class TimeTracking extends Controller
             $lateRequest = LateRequest::where('user_id', Auth::id());
         }
 
-        if ($request->from && $request->to && $request->company == null) {
-            $lateRequest->whereBetween('date', [$request->from, $request->to]);
-        } else if ($request->company != null && ($request->from == null || $request->to == null)) {
+        if ($request->employee_code && $request->company && $request->from && $request->to) {
+            $lateRequest->where('employee_code', $request->employee_code)
+                ->where('company_id', $request->company)
+                ->whereBetween('date', [$request->from, $request->to]);
+        } else if ($request->employee_code && $request->company) {
+            $lateRequest->where('employee_code', $request->employee_code)
+                ->where('company_id', $request->company);
+        } else if ($request->employee_code && $request->from && $request->to) {
+            $lateRequest->where('employee_code', $request->employee_code)
+                ->whereBetween('date', [$request->from, $request->to]);
+        } else if ($request->company && $request->from && $request->to) {
+            $lateRequest->where('company_id', $request->company)
+                ->whereBetween('date', [$request->from, $request->to]);
+        } else if ($request->employee_code) {
+            $lateRequest->where('employee_code', $request->employee_code);
+        } else if ($request->company) {
             $lateRequest->where('company_id', $request->company);
-        } else if ($request->from && $request->to && $request->company != null) {
-            $lateRequest->where('company_id', $request->company)->whereBetween('date', [$request->from, $request->to]);
+        } else if ($request->from && $request->to) {
+            $lateRequest->whereBetween('date', [$request->from, $request->to]);
         }
+
         $lateRequests = $lateRequest->get();
         if (isset($request->lateRequest)) {
             return view('timeTracking.late_request')->with(compact('companies', 'lateRequests'));
@@ -752,15 +877,28 @@ class TimeTracking extends Controller
             $lateRequest = LateRequest::where('user_id', Auth::id());
         }
 
-        if ($request->from && $request->to && $request->company == null) {
-            $lateRequest->whereBetween('date', [$request->from, $request->to]);
-        } else if ($request->company != null && ($request->from == null || $request->to == null)) {
+        if ($request->employee_code && $request->company && $request->from && $request->to) {
+            $lateRequest->where('employee_code', $request->employee_code)
+                ->where('company_id', $request->company)
+                ->whereBetween('date', [$request->from, $request->to]);
+        } else if ($request->employee_code && $request->company) {
+            $lateRequest->where('employee_code', $request->employee_code)
+                ->where('company_id', $request->company);
+        } else if ($request->employee_code && $request->from && $request->to) {
+            $lateRequest->where('employee_code', $request->employee_code)
+                ->whereBetween('date', [$request->from, $request->to]);
+        } else if ($request->company && $request->from && $request->to) {
+            $lateRequest->where('company_id', $request->company)
+                ->whereBetween('date', [$request->from, $request->to]);
+        } else if ($request->employee_code) {
+            $lateRequest->where('employee_code', $request->employee_code);
+        } else if ($request->company) {
             $lateRequest->where('company_id', $request->company);
-        } else if ($request->from && $request->to && $request->company != null) {
-            $lateRequest->where('company_id', $request->company)->whereBetween('date', [$request->from, $request->to]);
+        } else if ($request->from && $request->to) {
+            $lateRequest->whereBetween('date', [$request->from, $request->to]);
         }
+        $late = 'late';
         $lateRequests = $lateRequest->get();
-        return view('timeTracking.leave_late_approval')->with(compact('companies', 'lateRequests'));
-
+        return view('timeTracking.leave_late_approval')->with(compact('companies', 'lateRequests', 'late'));
     }
 }

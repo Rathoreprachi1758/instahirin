@@ -46,6 +46,14 @@
                                         <input type="date" id="from" name="from">
                                         <label for="to">To:</label>
                                         <input type="date" id="to" name="to">
+                                        <select name="employee_code">
+                                            <option selected disabled>Choose Emp Code</option>
+                                            @isset($employees)
+                                                @foreach($employees as $employee)
+                                                    <option value="{{ $employee->employee_code }}">{{ $employee->employee_code }}</option>
+                                                @endforeach
+                                            @endisset
+                                        </select>
                                         <button type="submit">Filter</button>
                                     </form>
                                     <div class="col-xxl-9 col-xl-11 col-lg-11 col-md-12">
@@ -237,6 +245,14 @@
                                             <input type="date" id="from" name="from">
                                             <label for="to">To:</label>
                                             <input type="date" id="to" name="to">
+                                            <select name="employee_code">
+                                                <option selected disabled>Choose Emp Code</option>
+                                                @isset($employees)
+                                                    @foreach($employees as $employee)
+                                                        <option value="{{ $employee->employee_code }}">{{ $employee->employee_code }}</option>
+                                                    @endforeach
+                                                @endisset
+                                            </select>
                                             <button type="submit">Filter</button>
                                         </form>
                                         <div class="activityTable_data">
@@ -435,6 +451,14 @@
                     }
 
                     $('#inputDepartment').change(fetchEmployeeCode);
+                </script>
+                <script>
+                    $(document).ready(function() {
+                        const tab = '{{ session("tab") }}';
+                        if (tab === 'late') {
+                            $('#nav-profile-tab').tab('show');
+                        }
+                    });
                 </script>
             </div>
         </div>
