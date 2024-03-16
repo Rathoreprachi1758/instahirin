@@ -14,7 +14,7 @@ return new class extends Migration
         Schema::create('departments', function (Blueprint $table) {
             $table->id();
             $table->string('name');
-            $table->foreignId('company_id')->constrained(); // No need to specify the table name here
+            $table->foreignId('company_id')->constrained('companies');
             $table->timestamps();
         });
     }

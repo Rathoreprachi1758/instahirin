@@ -38,7 +38,12 @@ class TimeTracking extends Controller
         $selectedCompany = null;
         $departments = [];
 
-        $companies = Company::where('user_id', Auth::id())->get();
+        $employee = Employee::where('user_id', Auth::id())->get();
+        $companies = [];
+        foreach ($employee as $employeeCompany) {
+            $companies[] = $employeeCompany->company;
+        }
+
         $employeeInfo = Employee::where('user_id', Auth::id())->where('department_id', Session::get('department_id'))->where('company_id', Session::get('logInOffCompanyId'))->where('user_id', Auth::id())->first();
 
         if ($employeeInfo) {
@@ -162,8 +167,12 @@ class TimeTracking extends Controller
      */
     public function department(Request $request): View|Factory|Application
     {
-        $companies = Company::where('user_id', Auth::id())->get();
 
+        $employee = Employee::where('user_id', Auth::id())->get();
+        $companies = [];
+        foreach ($employee as $employeeCompany) {
+            $companies[] = $employeeCompany->company;
+        }
         $employeeInfo = Employee::where('user_id', Auth::id())->where('department_id', $request->department)->where('company_id', Session::get('logInOffCompanyId'))->where('user_id', Auth::id())->first();
         $punchHistories = [];
         $punchDetails = null;
@@ -206,6 +215,7 @@ class TimeTracking extends Controller
 
             if ($employeeInfo) {
                 $employeeId = $employeeInfo->id;
+
                 $employeeField = [];
 
                 if ($punchStatus) {
@@ -546,12 +556,13 @@ class TimeTracking extends Controller
     }
 
     /**
-     * @param $from
-     * @param $to
-     * @param $companyId
+     * @param null $from
+     * @param null $to
+     * @param null $companyId
+     * @param null $employee_code
      * @return Application|Factory|View|\Illuminate\Foundation\Application
      */
-    private function filterLeaveRequest($from = null, $to = null, $companyId = null , $employee_code = null)
+    private function filterLeaveRequest($from = null, $to = null, $companyId = null, $employee_code = null)
     {
         $leaveTypes = Leave::all();
         if (auth()->user()->roles == 'company') {
@@ -563,7 +574,11 @@ class TimeTracking extends Controller
             $employees = Employee::whereIn('company_id', $companyIds)->get();
             $leaveRequest = LeaveRequest::whereIn('company_id', $companyIds);
         } elseif (auth()->user()->roles == 'user') {
-            $companies = Company::where('user_id', auth()->user()->id)->get();
+            $employee = Employee::where('user_id', Auth::id())->get();
+            $companies = [];
+            foreach ($employee as $employeeCompany) {
+                $companies[] = $employeeCompany->company;
+            }
             $leaveRequest = LeaveRequest::where('user_id', Auth::id());
             $employees = Employee::where('user_id', Auth::id())->get();
         }
@@ -600,7 +615,7 @@ class TimeTracking extends Controller
      */
     public function leaveRequestFilter(Request $request)
     {
-        return $this->filterLeaveRequest($request->from, $request->to, $request->company , $request->employee_code);
+        return $this->filterLeaveRequest($request->from, $request->to, $request->company, $request->employee_code);
     }
 
     /**
@@ -654,7 +669,7 @@ class TimeTracking extends Controller
         $LeaveRequest = LeaveRequest::find($request->requestId);
         $LeaveRequest->leave_status = $request->status;
         $LeaveRequest->save();
-        return redirect()->route('leaveRequest');
+        return redirect()->back();
 
     }
 
@@ -665,8 +680,9 @@ class TimeTracking extends Controller
      */
     public function fetchEmployeeCode(Request $request): JsonResponse
     {
-        $employeeTimeLog = EmployeeLogTime::where('company_id', $request->company_id)->where('department_id', $request->department_id)->where('user_id', Auth::id())->first();
-        $emmployeeId = $employeeTimeLog->employee_id;
+        $employee = Employee::where('company_id', $request->company_id)->where('department_id', $request->department_id)->where('user_id', Auth::id())->first();
+        $emmployeeId = $employee->id;
+
         $employee = Employee::find($emmployeeId);
         return response()->json(['employee_code' => $employee->employee_code]);
     }
@@ -685,7 +701,11 @@ class TimeTracking extends Controller
             $employees = Employee::whereIn('company_id', $companyIds)->get();
             $lateRequest = LateRequest::whereIn('company_id', $companyIds);
         } elseif (auth()->user()->roles == 'user') {
-            $companies = Company::where('user_id', auth()->user()->id)->get();
+            $employee = Employee::where('user_id', Auth::id())->get();
+            $companies = [];
+            foreach ($employee as $employeeCompany) {
+                $companies[] = $employeeCompany->company;
+            }
             $lateRequest = LateRequest::where('user_id', Auth::id());
             $employees = Employee::where('user_id', Auth::id())->get();
         }
@@ -735,7 +755,7 @@ class TimeTracking extends Controller
         $LeaveRequest = LateRequest::find($request->requestId);
         $LeaveRequest->late_status = $request->status;
         $LeaveRequest->save();
-        return redirect()->route('lateRequest');
+        return redirect()->back();
     }
 
 
