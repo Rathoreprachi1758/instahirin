@@ -87,6 +87,7 @@
                                             <button type="submit" class="btn btn-primary">Submit</button>
                                         </div>
                                     </form>
+
                                 </div>
                                 <div class="tab-pane fade" id="nav-profile" role="tabpanel"
                                      aria-labelledby="nav-profile-tab" tabindex="0">
@@ -146,7 +147,7 @@
                                                             <h6>Reason</h6>
                                                         </th>
                                                         <th>
-                                                            <h6>Actions</h6>
+                                                            <h6>Status</h6>
                                                         </th>
                                                     </tr>
                                                     </thead>
@@ -195,7 +196,7 @@
                                                                             @if($lateRequest['late_status'] === null)
                                                                                 <strong class="">Pending</strong>
                                                                             @elseif($lateRequest['late_status'] == true)
-                                                                                <strong class="">Accepted</strong>
+                                                                                <strong class="">Approved</strong>
                                                                             @elseif($lateRequest['late_status'] == false)
                                                                                 <strong class="">Rejected</strong>
                                                                             @endif

@@ -2,6 +2,7 @@
 <link rel="stylesheet" href="{{ asset('css/css/Employer_activity_style.css') }}">
 <link rel="stylesheet" href="{{ asset('css/css/Employer_activity_style.css') }}">
 <div class="fr-section" style="margin-top: -72px">
+
     <div class="fr-section_detail">
         <div class="dashboard_innerPages">
             <div class="custom_tabs_section">
@@ -73,6 +74,9 @@
                                         <th>
                                             <h6>Status</h6>
                                         </th>
+                                        <th>
+                                            <h6>Punch History</h6>
+                                        </th>
                                     </tr>
                                     </thead>
                                     <tbody>
@@ -125,7 +129,7 @@
                                                             @elseif($punchInOutData['work_log_status'] == 0)
                                                                 <strong class="">Reject</strong>
                                                             @elseif($punchInOutData['work_log_status'] == 2)
-                                                                <strong class="">Accepted</strong>
+                                                                <strong class="">Approved</strong>
                                                             @elseif($punchInOutData['work_log_status'] == 3)
                                                                 <strong class="">Rejected</strong>
                                                             @endif
@@ -183,13 +187,96 @@
                                                             </div>
                                                         </div>
                                                     </div>
+                                                <td>
+                                                    <button type="button" class="btn btn-primary" data-toggle="modal"
+                                                            data-target="#exampleModal-{{$increamentId}}"
+                                                            data-whatever="{{json_encode($punchInOutData['punchHistories'])}}">
+                                                        View
+                                                    </button>
                                                 </td>
+                                                <div class="modal fade" id="exampleModal-{{$increamentId}}"
+                                                     tabindex="-1" role="dialog"
+                                                     aria-labelledby="exampleModalLabel" aria-hidden="true">
+                                                    <div class="modal-dialog" role="document">
+                                                        <div class="modal-content">
+                                                            <div class="modal-header">
+                                                                <h5 class="modal-title" id="exampleModalLabel">Punch
+                                                                    History</h5>
+                                                                <button type="button" class="close" data-dismiss="modal"
+                                                                        aria-label="Close">
+                                                                    <span aria-hidden="true">&times;</span>
+                                                                </button>
+                                                            </div>
+                                                            <div class="modal-body">
+                                                                @isset($punchInOutData['punchHistories'])
+                                                                    <ul class="list-group">
+                                                                        @foreach($punchInOutData['punchHistories'] as $punchHistory)
+                                                                            @isset($punchHistory['punch_in'])
+                                                                                @if($punchHistory['punch_in'] !== null)
+                                                                                    <li class="list-group-item">Punch In
+                                                                                        At: {{ Carbon\Carbon::parse($punchHistory['punch_in'])->format('h:i A') }}</li>
+                                                                                @endif
+                                                                            @endisset
+                                                                            @isset($punchHistory['punch_out'])
+                                                                                @if($punchHistory['punch_out'] !== null)
+                                                                                    <li class="list-group-item">Punch
+                                                                                        Out
+                                                                                        At: {{ Carbon\Carbon::parse($punchHistory['punch_out'])->format('h:i A') }}</li>
+                                                                                @endif
+                                                                            @endisset
+                                                                        @endforeach
+                                                                    </ul>
+                                                                @endisset
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
                                             </tr>
                                             @php($increamentId++)
                                         @endforeach
                                     @endisset
                                     </tbody>
                                 </table>
+                                <!-- Button trigger modal -->
+                                {{--                                <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog"--}}
+                                {{--                                     aria-labelledby="exampleModalLabel" aria-hidden="true">--}}
+                                {{--                                    <div class="modal-dialog" role="document">--}}
+                                {{--                                        <div class="modal-content">--}}
+                                {{--                                            <div class="modal-header">--}}
+                                {{--                                                <h5 class="modal-title" id="exampleModalLabel">Modal title</h5>--}}
+                                {{--                                                <button type="button" class="close" data-dismiss="modal"--}}
+                                {{--                                                        aria-label="Close">--}}
+                                {{--                                                    <span aria-hidden="true">&times;</span>--}}
+                                {{--                                                </button>--}}
+                                {{--                                            </div>--}}
+                                {{--                                            <div class="modal-body">--}}
+                                {{--                                                @isset($punchInOutData['punchHistories'])--}}
+                                {{--                                                    <ul class="list-group">--}}
+                                {{--                                                        @foreach($punchInOutData['punchHistories'] as $punchHistory)--}}
+                                {{--                                                            @isset($punchHistory['punch_in'])--}}
+                                {{--                                                                @if($punchHistory['punch_in'] !== null)--}}
+                                {{--                                                                    <li class="list-group-item">Punch In At: {{ Carbon\Carbon::parse($punchHistory['punch_in'])->format('h:i A') }}</li>--}}
+                                {{--                                                                @endif--}}
+                                {{--                                                            @endisset--}}
+                                {{--                                                            @isset($punchHistory['punch_out'])--}}
+                                {{--                                                                @if($punchHistory['punch_out'] !== null)--}}
+                                {{--                                                                    <li class="list-group-item">Punch Out At: {{ Carbon\Carbon::parse($punchHistory['punch_out'])->format('h:i A') }}</li>--}}
+                                {{--                                                                @endif--}}
+                                {{--                                                            @endisset--}}
+                                {{--                                                        @endforeach--}}
+                                {{--                                                    </ul>--}}
+                                {{--                                                @endisset--}}
+                                {{--                                            </div>--}}
+                                {{--                                            <div class="modal-footer">--}}
+                                {{--                                                <button type="button" class="btn btn-secondary" data-dismiss="modal">--}}
+                                {{--                                                    Close--}}
+                                {{--                                                </button>--}}
+                                {{--                                            </div>--}}
+                                {{--                                        </div>--}}
+                                {{--                                    </div>--}}
+                                {{--                                </div>--}}
+
+
                             </div>
                         </div>
                     </div>
@@ -197,32 +284,77 @@
             </div>
         </div>
     </div>
-    <script>
-        function fetchDepartments() {
-            var companyId = document.getElementById('companyName').value;
-            var departmentSelect = document.getElementById('departmentName');
-            console.log(companyId);
-            // Clear previous options
-            departmentSelect.innerHTML = ' <option selected disabled>Select Department</option>';
-
-            // Fetch departments based on selected company
-            fetch('/company/' + companyId, {
-                method: 'GET',
-                headers: {
-                    'Content-Type': 'application/json'
-                }
+</div>
+<script>
+    function fetchDepartments() {
+        var companyId = document.getElementById('companyName').value;
+        var departmentSelect = document.getElementById('departmentName');
+        console.log(companyId);
+        departmentSelect.innerHTML = ' <option selected disabled>Select Department</option>';
+        fetch('/company/' + companyId, {
+            method: 'GET',
+            headers: {
+                'Content-Type': 'application/json'
+            }
+        })
+            .then(response => response.json())
+            .then(data => {
+                data.forEach(function (department) {
+                    var option = document.createElement('option');
+                    option.value = department.id;
+                    option.textContent = department.name;
+                    departmentSelect.appendChild(option);
+                });
             })
-                .then(response => response.json())
-                .then(data => {
-                    data.forEach(function (department) {
-                        var option = document.createElement('option');
-                        option.value = department.id;
-                        option.textContent = department.name;
-                        departmentSelect.appendChild(option);
-                    });
-                })
-                .catch(error => console.error('Error fetching departments:', error));
+            .catch(error => console.error('Error fetching departments:', error));
+    }
+</script>
+<script>
+    function populateModal() {
+        // Get the punch histories data from PHP
+        var punchHistories = <?php echo json_encode($punchInOutData['punchHistories']); ?>;
+
+        // Create HTML content for punch histories
+        var html = '';
+        if (punchHistories.length > 0) {
+            html += '<ul class="list-group">';
+            punchHistories.forEach(function (punchHistory) {
+                html += '<li class="list-group-item">';
+                if (punchHistory['punch_in'] != null) {
+                    html += 'Punch In At: ' + moment(punchHistory['punch_in']).format('h:mm A');
+                }
+                if (punchHistory['punch_out'] != null) {
+                    html += ' Punch Out At: ' + moment(punchHistory['punch_out']).format('h:mm A');
+                }
+                html += '</li>';
+            });
+            html += '</ul>';
+        } else {
+            html = '<p>No punch history available.</p>';
         }
 
-    </script>
+        // Populate the modal body with HTML content
+        document.getElementById('modalBody').innerHTML = html;
+    }
+</script>
+<!-- Include moment.js via CDN -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.29.1/moment.min.js"></script>
+
+<script>
+    $('#exampleModal').on('show.bs.modal', function (event) {
+        var button = $(event.relatedTarget); // Button that triggered the modal
+        var punchHistories = button.data('whatever'); // Extract info from data-* attributes
+        var modal = $(this);
+        var punchHistoryList = modal.find('#punchHistoryList');
+        punchHistoryList.empty(); // Clear previous data
+        $.each(punchHistories, function (index, punchHistory) {
+            if (punchHistory['punch_in'] !== null) {
+                punchHistoryList.append('<li class="list-group-item">Punch In At: ' + moment(punchHistory['punch_in']).format('h:i A') + '</li>');
+            }
+            if (punchHistory['punch_out'] !== null) {
+                punchHistoryList.append('<li class="list-group-item">Punch Out At: ' + moment(punchHistory['punch_out']).format('h:i A') + '</li>');
+            }
+        });
+    });
+</script>
 </div>

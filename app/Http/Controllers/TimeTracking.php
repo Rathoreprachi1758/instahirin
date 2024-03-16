@@ -38,16 +38,21 @@ class TimeTracking extends Controller
         $selectedCompany = null;
         $departments = [];
 
-        $companies = Company::where('user_id', Auth::id())->get();
-        $employeeInfo = Employee::where('user_id', Auth::id())->where('department_id', Session::get('department_id'))->where('company_id', Session::get('logInOffCompanyId'))->where('user_id', Auth::id())->first();
+        $employee = Employee::where('user_id', Auth::id())->get();
+        $companies = [];
+        foreach ($employee as $employeeCompany) {
+            $companies[] = $employeeCompany->company;
+        }
+
+        $employeeInfo = Employee::where('user_id', Auth::id())->where('department_id', Session::get('department_id'))->where('company_id', Session::get('logInOffCompanyId'))->first();
 
         if ($employeeInfo) {
-            $punchHistories = $this->punchHistory($employeeInfo);
+            $punchHistories = $this->punchHistory($employeeInfo, null);
             $punchDetails = $this->punchDetails($employeeInfo) ?? null;
         }
         $totalWorkHours = !empty($punchHistories) ? $this->totalHours($punchHistories) : 0;
 
-        $lastPunch = end($punchHistories);
+        $lastPunch = !empty($punchHistories) ? end($punchHistories) : null;
 
         $company = Session::get('selectedCompany');
         $employees = Employee::where('company_id', $company?->id)->where('user_id', Auth::id())->get();
@@ -73,10 +78,13 @@ class TimeTracking extends Controller
      * @param $employeeInfo
      * @return mixed
      */
-    public function punchHistory($employeeInfo): mixed
+    public function punchHistory($employeeInfo, $date = null): mixed
     {
-        $employeeLogTime = EmployeeLogTime::where('user_id', $employeeInfo->user_id)->where('employee_id', $employeeInfo->id)->where('date', Carbon::now()->toDateString())->first() ?? null;
-
+        if ($date == null) {
+            $employeeLogTime = EmployeeLogTime::where('user_id', $employeeInfo->user_id)->where('employee_id', $employeeInfo->id)->where('date', Carbon::now()->toDateString())->first() ?? null;
+        } elseif ($date != null) {
+            $employeeLogTime = EmployeeLogTime::where('user_id', $employeeInfo->user_id)->where('employee_id', $employeeInfo->id)->where('date', $date)->first() ?? null;
+        }
         return json_decode($employeeLogTime?->punch, true);
     }
 
@@ -84,7 +92,8 @@ class TimeTracking extends Controller
      * @param $employeeInfo
      * @return array
      */
-    public function punchDetails($employeeInfo): array
+    public
+    function punchDetails($employeeInfo): array
     {
         $employeePunchLogs = EmployeeLogTime::where('user_id', $employeeInfo->user_id)
             ->where('employee_id', $employeeInfo->id)
@@ -116,7 +125,8 @@ class TimeTracking extends Controller
         return ['firstLogIn' => $firstLogIn, 'lastPunchOut' => $lastPunchOut];
     }
 
-    public function totalHours($punchHistories)
+    public
+    function totalHours($punchHistories)
     {
         $total_working_hours = 0;
 
@@ -142,7 +152,8 @@ class TimeTracking extends Controller
      * @param $companyId
      * @return JsonResponse
      */
-    public function company($companyId): JsonResponse
+    public
+    function company($companyId): JsonResponse
     {
         Session::put('logInOffCompanyId', $companyId);
         $employees = Employee::where('company_id', $companyId)->where('user_id', Auth::id())->get();
@@ -160,10 +171,15 @@ class TimeTracking extends Controller
      * @param Request $request
      * @return View|Factory|\Illuminate\Foundation\Application
      */
-    public function department(Request $request): View|Factory|Application
+    public
+    function department(Request $request): View|Factory|Application
     {
-        $companies = Company::where('user_id', Auth::id())->get();
 
+        $employee = Employee::where('user_id', Auth::id())->get();
+        $companies = [];
+        foreach ($employee as $employeeCompany) {
+            $companies[] = $employeeCompany->company;
+        }
         $employeeInfo = Employee::where('user_id', Auth::id())->where('department_id', $request->department)->where('company_id', Session::get('logInOffCompanyId'))->where('user_id', Auth::id())->first();
         $punchHistories = [];
         $punchDetails = null;
@@ -187,7 +203,8 @@ class TimeTracking extends Controller
      * @param Request $request
      * @return RedirectResponse
      */
-    public function punch(Request $request): RedirectResponse
+    public
+    function punch(Request $request): RedirectResponse
     {
         $punchStatus = $request->punch;
         $currentDateTime = now()->toDateTimeString();
@@ -206,6 +223,7 @@ class TimeTracking extends Controller
 
             if ($employeeInfo) {
                 $employeeId = $employeeInfo->id;
+
                 $employeeField = [];
 
                 if ($punchStatus) {
@@ -250,7 +268,8 @@ class TimeTracking extends Controller
      *
      * @return Application|Factory|View
      */
-    public function employeeWorkLog(): View|Factory|Application
+    public
+    function employeeWorkLog(): View|Factory|Application
     {
         $employee = Employee::where('user_id', Auth::id())->get();
         $companies = [];
@@ -270,7 +289,6 @@ class TimeTracking extends Controller
         $employeePunchLogs = $employeePunchLogsQuery->get();
 
         $punchInOutInfo = $this->employeePunchLogs($employeePunchLogs);
-
         return view('timeTracking.work_log', compact('companies', 'departments', 'punchInOutInfo'));
     }
 
@@ -278,17 +296,22 @@ class TimeTracking extends Controller
      * @param $employeePunchLogs
      * @return array
      */
-    private function employeePunchLogs($employeePunchLogs): array
+    private
+    function employeePunchLogs($employeePunchLogs): array
     {
         $punchInOutInfo = [];
-
+        $punchHistories = [];
         foreach ($employeePunchLogs as $employeePunchLog) {
+            $date = Carbon::parse($employeePunchLog->date)->format('Y-m-d');
+            $employeeInfo = Employee::where('user_id', $employeePunchLog['user_id'])->where('department_id', $employeePunchLog['department_id'])->where('company_id', $employeePunchLog['company_id'])->first();
+            if ($employeeInfo) {
+                $punchHistories = $this->punchHistory($employeeInfo, $date);
+            }
             $firstPunchIn = null;
             $lastPunchOut = null;
             $employeeId = $employeePunchLog->employee_id;
             $employee = Employee::find($employeeId);
             $employeeCode = $employee->employee_code;
-            $date = Carbon::parse($employeePunchLog->date)->format('Y-m-d');
             $ipAddress = $employeePunchLog->ip_address;
             $workLogStatus = $employeePunchLog->work_log_status ?? null;
             $timeLogStatus = $employeePunchLog->time_log_status ?? null;
@@ -297,22 +320,21 @@ class TimeTracking extends Controller
             $totalWorkHours = $employeePunchLog->total_work_hours;
             $punches = json_decode($employeePunchLog->punch, true);
 
-            usort($punches, function ($punchIn, $punchOut) {
-                $punchInTime = strtotime(current($punchIn));
-                $punchOutTime = strtotime(current($punchOut));
-                return $punchInTime <=> $punchOutTime;
-            });
-
             foreach ($punches as $punch) {
-                if (isset($punch['punch_in'])) {
-                    $firstPunchIn = $punch['punch_in'];
-                } elseif (isset($punch['punch_out'])) {
-                    $lastPunchOut = $punch['punch_out'];
+                if (isset($punch["punch_in"])) {
+                    if ($firstPunchIn === null || $punch["punch_in"] < $firstPunchIn) {
+                        $firstPunchIn = $punch["punch_in"];
+                    }
+                }
+                if (isset($punch["punch_out"])) {
+                    if ($lastPunchOut === null || $punch["punch_out"] > $lastPunchOut) {
+                        $lastPunchOut = $punch["punch_out"];
+                    }
                 }
             }
 
-            $firstLogIn = Carbon::parse($firstPunchIn)->format('H:i:s') ?? null;
-            $lastPunchOut = Carbon::parse($lastPunchOut)->format('H:i:s') ?? null;
+            $firstLogIn = Carbon::parse($firstPunchIn)->format('h:i A') ?? null;
+            $lastPunchOut = Carbon::parse($lastPunchOut)->format('h:i A') ?? null;
 
             $punchInOutInfo[] = [
                 'date' => $date,
@@ -324,7 +346,8 @@ class TimeTracking extends Controller
                 'emp_code' => $employeeCode,
                 'department' => $department,
                 'company' => $company,
-                'totalWorkHours' => $totalWorkHours
+                'totalWorkHours' => $totalWorkHours,
+                'punchHistories' => $punchHistories
             ];
         }
         return $punchInOutInfo;
@@ -334,7 +357,8 @@ class TimeTracking extends Controller
      * @param Request $request
      * @return \Illuminate\Foundation\Application|View|Factory|Application
      */
-    public function workLogCompany(Request $request): \Illuminate\Foundation\Application|View|Factory|Application
+    public
+    function workLogCompany(Request $request): \Illuminate\Foundation\Application|View|Factory|Application
     {
         $employee = Employee::where('user_id', Auth::id())->get();
         $companies = [];
@@ -546,26 +570,35 @@ class TimeTracking extends Controller
     }
 
     /**
-     * @param $from
-     * @param $to
-     * @param $companyId
+     * @param null $from
+     * @param null $to
+     * @param null $companyId
+     * @param null $employee_code
      * @return Application|Factory|View|\Illuminate\Foundation\Application
      */
-    private function filterLeaveRequest($from = null, $to = null, $companyId = null , $employee_code = null)
+    private function filterLeaveRequest($from = null, $to = null, $companyId = null, $employee_code = null)
     {
-        $leaveTypes = Leave::all();
         if (auth()->user()->roles == 'company') {
             $companies = Company::where('user_id', auth()->user()->id)->get();
-            $companyIds = [];
+            $companiesId = [];
             foreach ($companies as $company) {
-                $companyIds[] = $company->id;
+                $companiesId[] = $company->id;
             }
-            $employees = Employee::whereIn('company_id', $companyIds)->get();
-            $leaveRequest = LeaveRequest::whereIn('company_id', $companyIds);
+            $employees = Employee::whereIn('company_id', $companiesId)->get();
+            $leaveRequest = LeaveRequest::whereIn('company_id', $companiesId);
+            $leaveTypes = Leave::whereIn('company_id', $companiesId)->get();
+
         } elseif (auth()->user()->roles == 'user') {
-            $companies = Company::where('user_id', auth()->user()->id)->get();
+            $employee = Employee::where('user_id', Auth::id())->get();
+            $companies = [];
+            $companiesId = [];
+            foreach ($employee as $employeeCompany) {
+                $companies[] = $employeeCompany->company;
+                $companiesId[] = $employeeCompany->company->id;
+            }
             $leaveRequest = LeaveRequest::where('user_id', Auth::id());
             $employees = Employee::where('user_id', Auth::id())->get();
+            $leaveTypes = Leave::whereIn('company_id', $companiesId)->get();
         }
 
         if ($employee_code != null && $companyId != null && $from != null && $to != null) {
@@ -600,7 +633,7 @@ class TimeTracking extends Controller
      */
     public function leaveRequestFilter(Request $request)
     {
-        return $this->filterLeaveRequest($request->from, $request->to, $request->company , $request->employee_code);
+        return $this->filterLeaveRequest($request->from, $request->to, $request->company, $request->employee_code);
     }
 
     /**
@@ -654,7 +687,7 @@ class TimeTracking extends Controller
         $LeaveRequest = LeaveRequest::find($request->requestId);
         $LeaveRequest->leave_status = $request->status;
         $LeaveRequest->save();
-        return redirect()->route('leaveRequest');
+        return redirect()->route('leaveLateApproval');
 
     }
 
@@ -665,8 +698,9 @@ class TimeTracking extends Controller
      */
     public function fetchEmployeeCode(Request $request): JsonResponse
     {
-        $employeeTimeLog = EmployeeLogTime::where('company_id', $request->company_id)->where('department_id', $request->department_id)->where('user_id', Auth::id())->first();
-        $emmployeeId = $employeeTimeLog->employee_id;
+        $employee = Employee::where('company_id', $request->company_id)->where('department_id', $request->department_id)->where('user_id', Auth::id())->first();
+        $emmployeeId = $employee->id;
+
         $employee = Employee::find($emmployeeId);
         return response()->json(['employee_code' => $employee->employee_code]);
     }
@@ -685,7 +719,11 @@ class TimeTracking extends Controller
             $employees = Employee::whereIn('company_id', $companyIds)->get();
             $lateRequest = LateRequest::whereIn('company_id', $companyIds);
         } elseif (auth()->user()->roles == 'user') {
-            $companies = Company::where('user_id', auth()->user()->id)->get();
+            $employee = Employee::where('user_id', Auth::id())->get();
+            $companies = [];
+            foreach ($employee as $employeeCompany) {
+                $companies[] = $employeeCompany->company;
+            }
             $lateRequest = LateRequest::where('user_id', Auth::id());
             $employees = Employee::where('user_id', Auth::id())->get();
         }
@@ -735,7 +773,7 @@ class TimeTracking extends Controller
         $LeaveRequest = LateRequest::find($request->requestId);
         $LeaveRequest->late_status = $request->status;
         $LeaveRequest->save();
-        return redirect()->route('lateRequest');
+        return redirect()->route('leaveLateApproval');
     }
 
 
