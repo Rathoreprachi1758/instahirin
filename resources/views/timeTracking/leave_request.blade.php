@@ -50,7 +50,7 @@
                                             @isset($departments)
                                                 @foreach($departments as $department)
                                                     <option
-                                                        value="{{ $department->id }}">{{ $department->name }}</option>
+                                                        value="{{ $department->id }}">{{ $department->department_name }}</option>
                                                 @endforeach
                                             @endisset
                                         </select>
@@ -201,7 +201,7 @@
                                                             </td>
                                                             <td>
                                                                 <div class="tabletext">
-                                                                    <p>{{ $leaveRequest->department->name }}</p>
+                                                                    <p>{{ $leaveRequest->department->department_name }}</p>
                                                                 </div>
                                                             </td>
                                                             <td>
@@ -339,7 +339,7 @@
                                 data.forEach(function (department) {
                                     var option = document.createElement('option');
                                     option.value = department.id;
-                                    option.textContent = department.name;
+                                    option.textContent = department.department_name;
                                     departmentSelect.appendChild(option);
                                 });
                             })

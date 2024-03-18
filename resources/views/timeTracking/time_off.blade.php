@@ -146,7 +146,7 @@
                                                             @if($employeeLeaveRequest['leave_status'] === null)
                                                                 <strong class="">Pending</strong>
                                                             @elseif($employeeLeaveRequest['leave_status'] == true)
-                                                                <strong class="">Accepted</strong>
+                                                                <strong class="">Approved</strong>
                                                             @elseif($employeeLeaveRequest['leave_status'] == false)
                                                                 <strong class="">Rejected</strong>
                                                             @endif

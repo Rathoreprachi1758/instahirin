@@ -163,7 +163,7 @@
                                                                         @if($leaveRequest['leave_status'] === null)
                                                                             <strong class="">Pending</strong>
                                                                         @elseif($leaveRequest['leave_status'] == true)
-                                                                            <strong class="">Accepted</strong>
+                                                                            <strong class="">Approved</strong>
                                                                         @elseif($leaveRequest['leave_status'] == false)
                                                                             <strong class="">Rejected</strong>
                                                                         @endif
@@ -186,7 +186,7 @@
                                                                                                            value="{{ $leaveRequest->id }}"
                                                                                                            name="requestId">
                                                                                                     <input type="submit"
-                                                                                                           value="Accept"
+                                                                                                           value="Approve"
                                                                                                            name="button">
                                                                                                 </form>
                                                                                             </li>
@@ -302,7 +302,7 @@
                                                             </td>
                                                             <td>
                                                                 <div class="tabletext">
-                                                                    <p>{{ $lateRequest->department->name }}</p>
+                                                                    <p>{{ $lateRequest->department->department_name }}</p>
                                                                 </div>
                                                             </td>
                                                             <td>
@@ -331,7 +331,7 @@
                                                                         @if($lateRequest['late_status'] === null)
                                                                             <strong class="">Pending</strong>
                                                                         @elseif($lateRequest['late_status'] == true)
-                                                                            <strong class="">Accepted</strong>
+                                                                            <strong class="">Approved</strong>
                                                                         @elseif($lateRequest['late_status'] == false)
                                                                             <strong class="">Rejected</strong>
                                                                         @endif
@@ -353,7 +353,7 @@
                                                                                                        value="{{ $lateRequest->id }}"
                                                                                                        name="requestId">
                                                                                                 <input type="submit"
-                                                                                                       value="Accept"
+                                                                                                       value="Approve"
                                                                                                        name="button">
                                                                                             </form>
                                                                                         </li>
