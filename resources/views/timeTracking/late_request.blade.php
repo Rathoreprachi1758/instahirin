@@ -52,7 +52,7 @@
                                                 @isset($departments)
                                                     @foreach($departments as $department)
                                                         <option
-                                                            value="{{ $department->id }}">{{ $department->name }}</option>
+                                                            value="{{ $department->id }}">{{ $department->department_name }}</option>
                                                     @endforeach
                                                 @endisset
                                             </select>
@@ -167,7 +167,7 @@
                                                                 </td>
                                                                 <td>
                                                                     <div class="tabletext">
-                                                                        <p>{{ $lateRequest->department->name }}</p>
+                                                                        <p>{{ $lateRequest->department->department_name }}</p>
                                                                     </div>
                                                                 </td>
                                                                 <td>

@@ -98,7 +98,7 @@
                                             {{ $employeeInfo->company->company_name }}
                                         @endisset</li>
                                     <li class="list-group-item">Department: @isset($employeeInfo)
-                                            {{ $employeeInfo->department?->name }}
+                                            {{ $employeeInfo->department?->department_name }}
                                         @endisset</li>
                                     <li class="list-group-item">Designation: @isset($employeeInfo)
                                             {{ $employeeInfo->designation }}

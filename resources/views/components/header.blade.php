@@ -145,6 +145,7 @@
                                     <ul>
                                         <li><a href="{{url('Employer-activity')}}">► Employer / Company</a></li>
                                         <li><a href="{{url('Employee-activity')}}">► Employee / Talent</a></li>
+                                        <li><a href="{{route('agencyContractor')}}">► Agency / Contractor</a></li>
                                     </ul>
                                 </li>
                                 <li><a href="{{url('/master')}}"><span><i class="fa fa-male"
