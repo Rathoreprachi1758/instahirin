@@ -40,6 +40,7 @@ class Job extends Model
         'responsibilities',
         'availability',
         'user_id',
+        'document',
     ];
 
     public function skills(): BelongsToMany
@@ -75,6 +76,6 @@ class Job extends Model
     //
     public function applicants()
     {
-        return $this->hasMany(HireMeApplication::class, 'job_id');
+        return $this->belongsTo(HireMeApplication::class, 'job_id');
     }
 }

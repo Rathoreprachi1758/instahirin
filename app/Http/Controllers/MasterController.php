@@ -16,6 +16,7 @@ class MasterController extends Controller
     public function index()
     {   
         $companyData = Company::where('user_id',Auth::id())->get();
+        // return $companyData;
         return view('dashboard.master.master',['companyData'=>$companyData]);
     }
 
@@ -88,6 +89,7 @@ class MasterController extends Controller
     public function destroy(string $id)
     {
         // Alert::error('Company Details', 'Deleted Successfully');
+        // return $id;
         $comPany = Company::findOrFail($id);
         $comPany->destroy($id);
         return redirect()->back()->with('message', 'Company details deleted successfully!'); 

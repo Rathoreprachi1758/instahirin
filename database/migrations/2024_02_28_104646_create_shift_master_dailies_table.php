@@ -14,7 +14,9 @@ return new class extends Migration
         Schema::create('shift_master_dailies', function (Blueprint $table) {
             $table->id();
             $table->string('week_day')->nullable();
+            $table->string('shift_code')->nullable();
             $table->string('shift_name')->nullable();
+            $table->string('shift_time')->nullable();
             $table->string('time_zone')->nullable();
             $table->string('Shift_in')->nullable();
             $table->string('Shift_out')->nullable();

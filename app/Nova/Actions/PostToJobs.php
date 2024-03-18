@@ -43,6 +43,7 @@ class PostToJobs extends Action
                 'company' => $instaRequirement->company_name,
                 'prefer_qualification' => $instaRequirement->company_address,
                 'user_id' => $instaRequirement->user_id,
+                'document' =>$instaRequirement->document,
             ]);
             // Transfer skills
             $skills = $instaRequirement->experty()->pluck('id')->toArray();

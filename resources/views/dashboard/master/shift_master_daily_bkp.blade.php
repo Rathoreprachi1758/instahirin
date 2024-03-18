@@ -1,4 +1,4 @@
-<x-header data="leave component" />
+<x-header data="shift_master component" />
 <link rel="stylesheet" href="{{ asset('css/css/master_tab.css') }}">
 <link rel="stylesheet" href="https://cdn.datatables.net/1.11.5/css/jquery.dataTables.min.css">
 <script src="https://cdn.datatables.net/1.11.5/js/jquery.dataTables.min.js"></script>
@@ -6,38 +6,8 @@
 <script src="https://cdn.jsdelivr.net/npm/sweetalert2@10.15.7/dist/sweetalert2.all.min.js"></script>
 <script>
     $(document).ready(function() {
-        $('#leave_master').DataTable();
-        $("#leave_model").click(function() {
-            $("#create_leave").modal("show");
-        });
-         //
-    $('.edit_company').click(function() {
-        var companyId = $(this).data('dept-id');
-        let id_companyId = "#" + companyId;
-        console.log('companyId==', id_companyId);
-        $(id_companyId).modal('show');
+        $('#shift_master').DataTable();
     });
-    });
-    function showCustomAlert(button) {
-        
-        var DesId = button.getAttribute('data-hldy-id');
-        // alert(DesId);
-        Swal.fire({
-            title: 'Delete Confirmation',
-            text: 'Are you sure you want to delete this data?',
-            icon: 'warning',
-            showCancelButton: true,
-            confirmButtonColor: '#3085d6',
-            cancelButtonColor: '#d33',
-            confirmButtonText: 'OK'
-        }).then((result) => {
-            if (result.isConfirmed) {
-                var formAction = "{{ route('Leave.destroy',':DesId') }}".replace(':DesId', DesId);
-                document.getElementById('deleteForm').action = formAction;
-                document.getElementById('deleteForm').submit();
-            }
-        });
-    }
 </script>
 <div class="fr-section" style="margin-top: -72px">
     <div class="fr-section_detail ">
@@ -54,16 +24,15 @@
                         <li><a href="{{ route('Master.index') }}">Company</a></li>
                         <li><a href="{{ route('Department.index') }}">Department</a></li>
                         <li><a href="{{ route('Designation.index') }}">Designation</a></li>
-                        <li><a href="{{ route('shift_master.index') }}">Shift Master Daily</a></li>
+                        <li><a href="{{ route('shift_master.index') }}" class="active">Shift Master Daily</a></li>
                         <li><a href="{{ route('Category.index') }}">Category</a></li>
                         <li><a href="{{ route('Employee-Master.index') }}">Employee Master</a></li>
                         <li><a href="{{ route('Employee-Configurations.index') }}">Employee Configuration</a></li>
-                        <li><a href="{{ url('/Employee/Mastery-data') }}">Import/Export - Excel</a></li>
-                        <li><a href="{{ route('Leave.index') }}" class="active">Leave</a></li>
+                        <li><a href="{{ route('Employee-Master.index') }}">Import/Export - Excel</a></li>
+                        <li><a href="{{ route('Leave.index') }}">Leave</a></li>
                         <li><a href="{{ route('Holiday.index') }}">Holiday</a></li>
                     </ul>
                 </div>
-                @include('sweetalert::alert')
                 @if (Session::has('message'))
                     <div class="alert alert-success" style="margin-top: 12px;" id="success-message">
                         <span style="margin-left:330px">{{ Session::get('message') }}</span>
@@ -74,17 +43,17 @@
                         </script>
                     </div>
                 @endif
-                <div class="custom_tabs_data" id="tab9" style="display: block;">
+                <div class="custom_tabs_data" id="tab4" style="display: block;">
                     <div class="masterTab_bg">
                         <div class="masterTab_data">
                             <div class="custom_tittle">
-                                <h5>Leave Master</h5>
+                                <h5>Shift Master</h5>
                             </div>
                             <div class="masterTable">
                                 <div class="row">
                                     <div class="col-xxl-12" style="margin-top:44px">
                                         <div class="masterTable_data">
-                                            <div class="sorting_nav" style="margin-left: 165px;margin-bottom: -46px">
+                                            <div class="sorting_nav" style="margin-left: 200px;margin-bottom: -46px">
                                                 <div class="showSort">
                                                     <div class="allSelect">
                                                         <strong class="entitiesSelect">Select Company</strong>
@@ -113,81 +82,101 @@
                                                 </div>
 
                                             </div>
-                                            <table class="table table-striped" id="leave_master">
+                                            <table class="table" id="shift_master">
                                                 <thead>
                                                     <tr>
                                                         <th>
-                                                            <h6 class="text-left">Leave Code</h6>
+                                                            <h6 class="text-left">Shift Code</h6>
                                                         </th>
                                                         <th>
-                                                            <h6 class="text-left">Leave Details</h6>
+                                                            <h6 class="text-left">Shift Name</h6>
                                                         </th>
                                                         <th>
-                                                            <h6 class="text-left">Encash</h6>
+                                                            <h6 class="text-left">In Time</h6>
                                                         </th>
                                                         <th>
-                                                            <h6>Annual Limit</h6>
+                                                            <h6 class="text-left">Out Time</h6>
                                                         </th>
-                                                        <th width="140">
+                                                        <th>
+                                                            <h6 class="text-left">Shift Hours</h6>
+                                                        </th>
+                                                        <th width="">
+                                                            <h6>Time Zone</h6>
+                                                        </th>
+                                                        <th>
                                                             <h6>Action</h6>
                                                         </th>
                                                     </tr>
                                                 </thead>
                                                 <tbody>
-                                                    @forelse ($leaves as $leave)
+                                                    @forelse ($shify as $shift)
                                                         <tr>
                                                             <td>
                                                                 <div class="tabletext">
-                                                                    <p>{{$leave->leave_code}}</p>
+                                                                    <p class="pl-3">{{ $shift->shift_code }}</p>
                                                                 </div>
                                                             </td>
                                                             <td>
                                                                 <div class="tabletext">
-                                                                    <p>{{$leave->leave_name}}</p>
+                                                                    <p>{{ $shift->shift_name }}</p>
                                                                 </div>
                                                             </td>
                                                             <td>
                                                                 <div class="tabletext">
-                                                                    <p>{{$leave->encash}}</p>
+                                                                    <p>{{ $shift->Shift_in }}</p>
                                                                 </div>
                                                             </td>
                                                             <td>
                                                                 <div class="tabletext">
-                                                                    <p>{{$leave->annual_limit}}</p>
+                                                                    <p>{{ $shift->Shift_out }}</p>
+                                                                </div>
+                                                            </td>
+                                                            <td>
+                                                                <div class="tabletext">
+                                                                    <p>{{ $shift->shift_time }}</p>
+                                                                </div>
+                                                            </td>
+                                                            <td>
+                                                                <div class="tabletext">
+                                                                    <p>{{ $shift->time_zone }}</p>
                                                                 </div>
                                                             </td>
                                                             <td>
                                                                 <div class="actionBtns">
-                                                                    <button class="actBtn edit_company"
-                                                                        data-toggle="modal" data-target="#edit_holiday"
-                                                                        data-dept-id="edit_leave_{{ $leave->id }}">
-                                                                        <i class="fa fa-pencil-square-o"
-                                                                            aria-hidden="true"></i>
-                                                                            <form id = "deleteForm"
-                                                                            action="{{ route('Leave.destroy',$leave->id) }}"
+                                                                    <div class="actionBtns">
+                                                                        <button class="actBtn edit_company"
+                                                                            id="shift_edit_button" data-toggle="modal"
+                                                                            data-target="#edit_shift"
+                                                                            data-dept-id="edit_shift_{{ $shift->id }}">
+                                                                            <i class="fa fa-pencil-square-o"
+                                                                                aria-hidden="true"></i>
+                                                                        </button>
+                                                                        <form id = "deleteForm"
+                                                                            action="{{ route('shift_master.destroy', $shift->id) }}"
                                                                             method="post">
                                                                             @csrf
                                                                             @method('delete')
-                                                                            <button type="button" class="actBtn" data-hldy-id="{{ $leave->id }}"
-                                                                                onclick="showCustomAlert(this)">
+                                                                            <button type="button" class="actBtn"
+                                                                                onclick="showCustomAlert()">
                                                                                 <i class="fa fa-trash"
                                                                                     aria-hidden="true"></i>
                                                                             </button>
                                                                         </form>
+                                                                    </div>
                                                                 </div>
                                                             </td>
                                                         </tr>
                                                         {{-- //edit --}}
-                                                        <div class="modal fade" id="edit_leave_{{ $leave->id }}"
+                                                        <div class="modal fade" id="edit_shift_{{ $shift->id }}"
                                                             tabindex="-1" role="dialog" aria-hidden="true"
-                                                            style="top: 45px;left: -186px ">
+                                                            style="top: 101px;left: -186px ">
                                                             <div class="modal-dialog" role="document">
                                                                 <div class="modal-content" style="width: 173%;">
                                                                     <div class="modal-header"
                                                                         style="background-color: #BCBCBC;">
                                                                         <h6
                                                                             style="padding-bottom: 0px;margin-left: 321px;">
-                                                                            Edit Holiday Details Here</h6>
+                                                                            Edit Selected Department</h6>
                                                                         <button type="button" class="close"
                                                                             data-dismiss="modal" aria-label="Close">
                                                                             <span aria-hidden="true">&times;</span>
@@ -205,7 +194,7 @@
                                                                     <div class="modal-body"
                                                                         style="background-color: #ededed">
                                                                         <form method="post" id="skills"
-                                                                            action="{{ route('Leave.update', $leave->id) }}">
+                                                                            action="{{ route('shift_master.update', $shift->id) }}">
                                                                             @csrf
                                                                             @method('patch')
                                                                             <div class="col-lg-8 col-md-10 m-auto">
@@ -213,87 +202,67 @@
                                                                                     {{-- // --}}
                                                                                     <div class="col-lg-12">
                                                                                         <div class="popupForm_col">
-                                                                                            <strong>Company Name*</strong>
-                                                                                            <div class="popupForm_field">
-                                                                                                <select name="company_id" class="selective">
+                                                                                            <strong>Company
+                                                                                                Name*</strong>
+                                                                                            <div
+                                                                                                class="popupForm_field">
+                                                                                                <select
+                                                                                                    name="company_id"
+                                                                                                    class="selective">
                                                                                                     @foreach ($comapnaies as $id)
-                                                                                                        <option value="{{ $id->id }}"@if($id->id == $leave->comapny_id) selected @endif>
-                                                                                                            {{ $id->company_name }}
+                                                                                                        <option
+                                                                                                            value="{{ $id->id }}">
                                                                                                         </option>
                                                                                                     @endforeach
                                                                                                 </select>
                                                                                             </div>
                                                                                         </div>
                                                                                     </div>
-                                                                                    {{-- <div class="col-lg-12">
+                                                                                    <div class="col-lg-12">
                                                                                         <div class="popupForm_col">
-                                                                                            <strong>Department Name*</strong>
-                                                                                            <div class="popupForm_field">
-                                                                                                <select name="dept_id" class="selective">
+                                                                                            <strong>Department
+                                                                                                Name*</strong>
+                                                                                            <div
+                                                                                                class="popupForm_field">
+                                                                                                <select name="dept_id"
+                                                                                                    class="selective">
                                                                                                     @foreach ($department as $id)
-                                                                                                        <option value="{{ $id->id }}" @if($id->id == $leave->comapny_id) selected @endif>
+                                                                                                        <option
+                                                                                                            value="{{ $id->id }}">
                                                                                                             {{ $id->department_name }}
                                                                                                         </option>
                                                                                                     @endforeach
                                                                                                 </select>
                                                                                             </div>
                                                                                         </div>
-                                                                                    </div> --}}
+                                                                                    </div>
+
+                                                                                    {{-- <div class="col-lg-12">
+                                                                                <div class="popupForm_col">
+                                                                                    <strong>Department Name*</strong>
+                                                                                    <div class="popupForm_field">
+                                                                                        <select name="dept_id" class="selective">
+                                                                                            @foreach ($department as $id)
+                                                                                                <option value="{{ $id->id }}">
+                                                                                                    {{ $id->department_name }}
+                                                                                                </option>
+                                                                                            @endforeach
+                                                                                        </select>
+                                                                                    </div>
+                                                                                </div>
+                                                                            </div> --}}
                                                                                     <div class="col-lg-12">
                                                                                         <div class="popupForm_col">
-                                                                                            <strong>Leave Code*</strong>
-                                                                                            <div class="popupForm_field">
-                                                                                                <select name="leave_code" class="selective">
-                                                                                                    <option value="CL" @if($leave->leave_code == 'CL') selected @endif>CL</option>
-                                                                                                    <option value="EL" @if($leave->leave_code == 'EL') selected @endif>EL</option>
-                                                                                                    <option value="SL" @if($leave->leave_code == 'SL') selected @endif>SL</option>
-                                                                                                </select>                                        
+                                                                                            <strong>Designation
+                                                                                                Name*</strong>
+                                                                                            <div
+                                                                                                class="popupForm_field">
+                                                                                                <input
+                                                                                                    type="text"name="designation_name">
+                                                                                                {{-- value="{{$dept->designation_name}}"> --}}
                                                                                             </div>
                                                                                         </div>
                                                                                     </div>
-                                                                                    {{-- // --}}
-                                                                                    <div class="col-lg-12">
-                                                                                        <div class="popupForm_col">
-                                                                                            <strong>Leave Name*</strong>
-                                                                                            <div class="popupForm_field">
-                                                                                                <input type="text" name="Leave_Name" value="{{$leave->leave_name}}" placeholder="ex:Casual Leave">
-                                                                                            </div>
-                                                                                        </div>
-                                                                                    </div>
-                                                                                    {{-- // --}}
-                                                                                    <div class="col-lg-12">
-                                                                                        <div class="popupForm_col">
-                                                                                            <strong>Encash</strong>
-                                                                                            <div class="popupForm_field">
-                                                                                                <select name="leave_encash" class="selective">
-                                                                                                    <option value="Yes" @if($leave->encash) selected @endif>Yes</option>
-                                                                                                    <option value="No" @if($leave->encash) selected @endif>No</option>
-                                                                                                </select>
-                                                                                            </div>
-                                                                                        </div>
-                                                                                    </div>
-                                                                                    {{-- // --}}
-                                                                                    <div class="col-lg-12">
-                                                                                        <div class="popupForm_col">
-                                                                                            <strong>Carry Forward</strong>
-                                                                                            <div class="popupForm_field">
-                                                                                                <select name="leave_carry_forward" class="selective">
-                                                                                                    <option value="Yes" @if($leave->carry_forward) selected @endif>Yes</option>
-                                                                                                    <option value="No" @if($leave->carry_forward) selected @endif>No</option>
-                                                                                                </select>
-                                                                                            </div>
-                                                                                        </div>
-                                                                                    </div>
-                                                                                    {{-- // --}}
-                                                                                    <div class="col-lg-12">
-                                                                                        <div class="popupForm_col">
-                                                                                            <strong>Annual Limit(days)*</strong>
-                                                                                            <div class="popupForm_field">
-                                                                                                <input type="text" name="annual_limit" pattern="\d{2}" value="{{$leave->annual_limit}}">
-                                                                                            </div>
-                                                                                        </div>
-                                                                                    </div>
-                                                                                    {{-- // --}}
                                                                                 </div>
                                                                             </div>
                                                                             <br>
@@ -320,7 +289,7 @@
                                                         </div>
                                                     @empty
                                                         <p style="color:red;margin-top: -120px">Oops ! No Records In
-                                                            Leave
+                                                            Shift Master
                                                             <?xml version="1.0" standalone="no"?>
                                                             <!DOCTYPE svg
                                                                 PUBLIC "-//W3C//DTD SVG 20010904//EN" "http://www.w3.org/TR/2001/REC-SVG-20010904/DTD/svg10.dtd">
@@ -374,6 +343,7 @@
                                                             </svg>
                                                         </p>
                                                     @endforelse
+                                                    {{-- // --}}
                                                 </tbody>
                                             </table>
                                         </div>
@@ -384,7 +354,7 @@
                                 <div class="row align-items-center">
                                     <div class="col-xxl-6 col-xl-6 col-lg-6 col-md-6 ">
                                         <div class="table_actionsBtns">
-                                            <button class="tb_actionBtn" id="leave_model">Add</button>
+                                            <button class="tb_actionBtn" id="shift_model">Add</button>
                                             <button class="tb_actionBtn">Exit</button>
                                         </div>
                                     </div>
@@ -398,12 +368,12 @@
     </div>
 </div>
 {{-- add_model --}}
-<div class="modal fade" id="create_leave" tabindex="-1" role="dialog" aria-hidden="true"
-    style="top: 38px;left: -186px ">
+<div class="modal fade" id="add_shift" tabindex="-1" role="dialog" aria-hidden="true"
+    style="top: 17px;left: -186px ">
     <div class="modal-dialog" role="document">
         <div class="modal-content" style="width: 173%;">
             <div class="modal-header" style="background-color: #BCBCBC;">
-                <h6 style="padding-bottom: 0px;margin-left: 357px;">Add New Leave Details Here</h6>
+                <h6 style="padding-bottom: 0px;margin-left: 321px;">Add New Shifts Details Here</h6>
                 <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                     <span aria-hidden="true">&times;</span>
                 </button>
@@ -418,14 +388,13 @@
                 @endif
             </div>
             <div class="modal-body" style="background-color: #ededed">
-                <form method="post" id="skills" action="{{ route('Leave.store') }}">
+                <form method="post" id="skills" action="{{ route('shift_master.store') }}">
                     @csrf
-                    <div class="col-lg-8 col-md-10 m-auto">
                         <div class="row">
-                            {{-- // --}}
-                            <div class="col-lg-12">
+                            <div class="col-6">
                                 <div class="popupForm_col">
-                                    <strong>Company Name*</strong>
+                                    <strong>Company
+                                        Name*</strong>
                                     <div class="popupForm_field">
                                         <select name="company_id" class="selective">
                                             @foreach ($comapnaies as $id)
@@ -437,9 +406,10 @@
                                     </div>
                                 </div>
                             </div>
-                            {{-- <div class="col-lg-12">
+                            <div class="col-6">
                                 <div class="popupForm_col">
-                                    <strong>Department Name*</strong>
+                                    <strong>Department
+                                        Name*</strong>
                                     <div class="popupForm_field">
                                         <select name="dept_id" class="selective">
                                             @foreach ($department as $id)
@@ -450,36 +420,63 @@
                                         </select>
                                     </div>
                                 </div>
-                            </div> --}}
-                            <div class="col-lg-12">
+                            </div>
+                            {{-- // --}}
+                            <div class="col-6">
                                 <div class="popupForm_col">
-                                    <strong>Leave Code*</strong>
+                                    <strong>Shift Code *</strong>
                                     <div class="popupForm_field">
-                                        <select name="leave_code" class="selective">
-                                            <option value="CL" @if(old('leave_code') == 'CL') selected @endif>CL</option>
-                                            <option value="EL" @if(old('leave_code') == 'EL') selected @endif>EL</option>
-                                            <option value="SL" @if(old('leave_code') == 'SL') selected @endif>SL</option>
-                                        </select>                                        
+                                        <select name="dept_id" class="selective">
+                                            @foreach ($department as $id)
+                                                <option value="{{ $id->id }}">
+                                                    {{ $id->department_name }}
+                                                </option>
+                                            @endforeach
+                                        </select>
                                     </div>
                                 </div>
                             </div>
                             {{-- // --}}
-                            <div class="col-lg-12">
+                            <div class="col-6">
                                 <div class="popupForm_col">
-                                    <strong>Leave Name*</strong>
+                                    <strong>Shift Name*</strong>
                                     <div class="popupForm_field">
-                                        <input type="text" name="Leave_Name" value="{{ old('Leave_Name') }}" placeholder="ex:Casual Leave">
+                                        <select name="dept_id" class="selective">
+                                            @foreach ($department as $id)
+                                                <option value="{{ $id->id }}">
+                                                    {{ $id->department_name }}
+                                                </option>
+                                            @endforeach
+                                        </select>
                                     </div>
                                 </div>
                             </div>
                             {{-- // --}}
-                            <div class="col-lg-12">
+                            <div class="col-6">
                                 <div class="popupForm_col">
-                                    <strong>Encash</strong>
+                                    <strong>Shift Day*</strong>
                                     <div class="popupForm_field">
-                                        <select name="leave_encash" class="selective">
-                                            <option value="Yes">Yes</option>
-                                            <option value="No">No</option>
+                                        <select name="week_day" class="selective">
+                                            <option value="Monday">Monday</option>
+                                            <option value="Tuesday">Tuesday</option>
+                                            <option value="wednesday">Wednesday</option>
+                                            <option value="Thursday">Thursday</option>
+                                            <option value="Friday">Friday</option>
+                                            <option value="Saturday">Saturday</option>
+                                            <option value="Sunday">Sunday</option>
+                                            {{-- @endforeach --}}
+                                        </select>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-6">
+                                <div class="popupForm_col">
+                                    <strong>Time Zone</strong>
+                                    <div class="popupForm_field">
+                                        <select name="time_zone" class="selective">
+                                            @foreach ($timezones as $timezone)
+                                                <option value="{{ $timezone }}">{{ $timezone }}</option>
+                                            @endforeach
                                         </select>
                                     </div>
                                 </div>
@@ -487,27 +484,70 @@
                             {{-- // --}}
                             <div class="col-lg-12">
                                 <div class="popupForm_col">
-                                    <strong>Carry Forward</strong>
+                                    <strong>Shift In</strong>
                                     <div class="popupForm_field">
-                                        <select name="leave_carry_forward" class="selective">
-                                            <option value="Yes">Yes</option>
-                                            <option value="No">No</option>
-                                        </select>
+                                        <input type="time" id="shift_in">
                                     </div>
                                 </div>
                             </div>
                             {{-- // --}}
                             <div class="col-lg-12">
                                 <div class="popupForm_col">
-                                    <strong>Annual Limit(days)*</strong>
+                                    <strong>Shift Out</strong>
                                     <div class="popupForm_field">
-                                        <input type="text" name="annual_limit" pattern="\d{2}" value="12">
+                                        <input type="time" id="shift_in">
+                                    </div>
+                                </div>
+                            </div>
+                            {{-- // --}}
+                            <div class="col-lg-12">
+                                <div class="popupForm_col">
+                                    <strong>Lunch In</strong>
+                                    <div class="popupForm_field">
+                                        <input type="time" id="shift_in">
+                                    </div>
+                                </div>
+                            </div>
+                            {{-- // --}}
+                            <div class="col-lg-12">
+                                <div class="popupForm_col">
+                                    <strong>Lunch Out</strong>
+                                    <div class="popupForm_field">
+                                        <input type="time" id="shift_in">
+                                    </div>
+                                </div>
+                            </div>
+                            {{-- // --}}
+                            <div class="col-lg-12">
+                                <div class="popupForm_col">
+                                    <strong>Ded.Full Lunch Hrs</strong>
+                                    <div class="popupForm_field" style="margin-right: 5px;">
+                                        <input type="checkbox" id="Dead_full_lunch">
+                                        <p style="margin-top:-17px">Deduct Hrs</p>
+                                    </div>
+                                </div>
+                            </div>
+                            {{-- // --}}
+                            <div class="col-lg-12">
+                                <div class="popupForm_col">
+                                    <strong>Extra day Hrs</strong>
+                                    <div class="popupForm_field">
+                                        <input type="checkbox" id="Dead_full_lunch">
+                                        <p style="margin-top:-17px">Extra Day Hrs</p>
+                                    </div>
+                                </div>
+                            </div>
+                            {{-- // --}}
+                            <div class="col-lg-12">
+                                <div class="popupForm_col">
+                                    <strong>Send SMS delay</strong>
+                                    <div class="popupForm_field">
+                                        <input type="text" id="Dead_full_lunch" placeholder="hh:mm" disabled>
                                     </div>
                                 </div>
                             </div>
                             {{-- // --}}
                         </div>
-                    </div>
                     <br>
                     <div class="table_actions">
                         <div class="row align-items-center ">
@@ -525,3 +565,50 @@
 
     </div>
 </div>
+<script>
+    $(document).ready(function() {
+        $('#shift_model').click(function() {
+            $('#add_shift').modal('show');
+        })
+        $('.edit_company').click(function() {
+            var Shiftid = $(this).data('dept-id');
+            console.log('kkk', Shiftid);
+            var $shift_Id = "#" + Shiftid;
+            $($shift_Id).modal('show');
+        })
+
+    });
+
+    function showCustomAlert() {
+        // Example of using SweetAlert with a confirmation
+        Swal.fire({
+            title: 'Delete Confirmation',
+            text: 'Are you sure you want to delete this data?',
+            icon: 'warning',
+            showCancelButton: true,
+            confirmButtonColor: '#3085d6',
+            cancelButtonColor: '#d33',
+            confirmButtonText: 'OK'
+        }).then((result) => {
+            if (result.isConfirmed) {
+                document.getElementById('deleteForm').submit();
+            }
+        });
+    }
+
+    $(document).ready(function() {
+        $('#submitBtn').click(function() {
+            $.ajax({
+                url: $('#filterForm').attr('action'),
+                type: 'GET',
+                data: $('#filterForm').serialize(),
+                success: function(response) {
+                    console.log(response);
+                },
+                error: function(error) {
+                    console.log(error);
+                }
+            });
+        });
+    });
+</script>

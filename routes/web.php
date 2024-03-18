@@ -9,6 +9,13 @@ use App\Http\Controllers\Logincontroller;
 use App\Http\Controllers\profileController;
 use App\Http\Controllers\MasterController;
 use App\Http\Controllers\DepartmentController;
+use App\Http\Controllers\DesignationController;
+use App\Http\Controllers\shift_masterController;
+use App\Http\Controllers\CategoryController;
+use App\Http\Controllers\EmployeeConfigController;
+use App\Http\Controllers\EmployeeMasterController;
+use App\Http\Controllers\LeaveController;
+use App\Http\Controllers\HolidayController;
 
 /*
 |--------------------------------------------------------------------------
@@ -79,21 +86,7 @@ Route::middleware(['middleware' => 'auth.check'])->group(function () {
     });
     Route::get('Interview-schedule', [profileController::class, 'Interviewschedule']);
     Route::post('Meeting-link', [ProfileController::class, 'schedule_interview'])->name('interview_schedule');
-    //emp
-    // Route::get('master',function()
-    // {
-    //    return view('dashboard.master.master');
-    // });
-    Route::get('/master',[profileController::class,'master_company'])->name('master.company');
-    Route::get('/Department',[profileController::class,'master_department'])->name('master.department');
-    Route::get('/Designation',[profileController::class,'master_designation'])->name('master.designation');
-    Route::get('/Shift-master-data',[profileController::class,'master_shift'])->name('master.shift_master');
-    Route::get('/Category',[profileController::class,'master_category'])->name('master.category');
-    Route::get('/Employee-master',[profileController::class,'emp_master'])->name('master.emp_master');
-    Route::get('/Employee-configuration',[profileController::class,'master_config'])->name('master.shift_config');
-    Route::get('/Mastery-data',[profileController::class,'master_data'])->name('master.master_data');
-    Route::get('/Leave-table',[profileController::class,'master_leave'])->name('master.master_leave');
-    Route::get('/Holiday-table',[profileController::class,'master_holiday'])->name('master.master_holiday');
+    Route::get('Employee/Mastery-data',[profileController::class,'master_data'])->name('master.master_data');
     //activity of employees
     Route::get('Employee-activity', [profileController::class, 'Employee_activity']);
     Route::post('upload-resume', [profileController::class, 'Employee_Resume'])->name('Employee.Resume.submit');
@@ -111,13 +104,18 @@ Route::middleware(['middleware' => 'auth.check'])->group(function () {
     Route::get('offers', [profileController::class, 'employee_offers'])->name('Applied.offers');
     Route::get('Talent-History', [profileController::class, 'employee_History'])->name('Applied.History');
     //
-    Route::resource('master',MasterController::class);
-    Route::resource('department',DepartmentController::class);
-    // Route::resource('master',MasterController::class);
-    // Route::resource('master',MasterController::class);
+    Route::resource('Master',MasterController::class);
+    Route::resource('Department',DepartmentController::class);
+    Route::resource('Designation',DesignationController::class);
+    Route::resource('shift_master', shift_masterController::class);
+    Route::resource('Category',CategoryController::class);
+    Route::resource('Employee-Configurations',EmployeeConfigController::class);
+    Route::resource('Employee-Master',EmployeeMasterController::class);
+    Route::resource('Leave',LeaveController::class);
+    Route::resource('Holiday',HolidayController::class);
 
 });
-
+Route::get('loading_shift_codes',[profileController::class,'Shift_codes']);
 Route::get('/{levelOneSlug?}/{levelTwoSlug?}/{levelThreeSlug?}/{levelFourSlug?}', 'App\Http\Controllers\ContentController@index')->name('index');
 
 // ContactUs Form Submission

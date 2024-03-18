@@ -5,6 +5,7 @@ use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\ApiController;
 use App\Http\Controllers\ContentController;
 use App\Http\Controllers\OnboardController;
+use App\Http\Controllers\profileController;
 
 /*
 |--------------------------------------------------------------------------
@@ -21,7 +22,7 @@ Route::middleware('auth:sanctum')->get('/user', function (Request $request) {
     return $request->user();
 });
 
-
+Route::post('loading_shift_codes',[ContentController::class,'Shift_codes']);
 Route::prefix('v1')->group(function () {
     Route::get('/expert_categories', [ApiController::class, 'expert_categories']);
     Route::get('/experts', [ApiController::class, 'experts']);

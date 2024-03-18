@@ -10,10 +10,12 @@ use DateTime;
 use Illuminate\Http\Request;
 use App\Models\User;
 use App\Models\Job;
+use App\Models\leave;
 use App\Models\EmploymentHistory;
 use App\Models\Country;
 use App\Models\Creditrequest;
 use App\Models\Expert;
+use App\Models\Shiftcode;
 use App\Models\CompanyKycInformation;
 use App\Models\InstaHirinRequirement;
 use App\Models\InstaHirinOnboard;
@@ -291,8 +293,8 @@ class profileController extends Controller
 
     public function my_job_activity(Request $request)
     {
-        $myjob = InstaHirinRequirement::where('user_id', Auth::id())->get();
-        // $myjob = Job::where('user_id', Auth::id())->get();
+        // $myjob = InstaHirinRequirement::where('user_id', Auth::id())->get();
+        $myjob = Job::where('user_id', Auth::id())->get();
         // return $myjob;
         return view('dashboard.Activity_employer.my_job', ['myjob' => $myjob]);
     }
@@ -334,19 +336,6 @@ class profileController extends Controller
     }
     public function Interviewschedule(Request $request)
     {
-        // $instaOnboard = InstaHirinOnboard::where('user_id', Auth::id())->get();
-        //  $instaOnboard = HireRequest::where('user_id', Auth::id())->get();
-        // $insta_talent= HireRequest::where('user_id', Auth::id())->with('expert')->get();
-        // $instaOnboard = [];
-        // foreach ($insta_talent as $hireRequest) {
-        //     $expertData = $hireRequest->expertise_talent;
-        //     $instaOnboard[] = $expertData;
-        // }
-        // // return gettype($instaOnboard);
-        // $hireMeApplications = HireMeApplication::whereIn('job_id', $this->job_activity)->get()->toArray();
-        // // return gettype($hireMeApplications);
-        // $insta_onboard = $instaOnboard->concat($hireMeApplications);
-        // // return $insta_onboard;
         $insta_talent = HireRequest::where('user_id', Auth::id())->with('expert')->get();
 
         $instaOnboard = $insta_talent->map(function ($hireRequest) {
@@ -356,9 +345,6 @@ class profileController extends Controller
         $hireMeApplications = HireMeApplication::whereIn('job_id', $this->job_activity)->get()->toArray();
 
         $combinedData = collect($instaOnboard)->concat($hireMeApplications)->all();
-        /////
-        //  return $combinedData;
-        ///
         $savedData = ScheduledInterview::all();
         // $scedule = $savedData->concat($combinedData);
         $scedule = $savedData->concat($combinedData)->unique(function ($item) {
@@ -415,8 +401,9 @@ class profileController extends Controller
     }
 
     public function job_history(Request $request)
-    {
-        return view('dashboard.Activity_employer.History');
+    {   
+        $histories = [];
+        return view('dashboard.Activity_employer.History',['histories'=>$histories]);
     }
     public function Hire(Request $request)
     {
@@ -484,40 +471,39 @@ class profileController extends Controller
         ]);
         $userId = Auth::id();
         $keySkills = $request->key_skills;
+        // return $keySkills;
         $formData = InstaHirinOnboard::updateOrCreate(
           ['user_id' => $userId],
           ['key_skills' => $keySkills],
     );
     return redirect()->back()->with('message', 'Resume Skills Uploaded!');
-    }
+    } 
 
+    /////EmploymentHistory/////pending
     public function Employee_Resume_employement(Request $request)
     {   
-
-    
-        return $request->all();
-          /////EmploymentHistory/////pending
-        // $request->validate([
-        //     'Position_title' => 'required|min:6',
-        //     'company_name' => 'required|min:6',
-        //     'work_mode' => 'required',
-        //     'from_date' => 'required|min:6',
-        //     'to_date' => 'required|min:6',
-        //     'discription' => 'required|max:160',
-        //     'Notice_Period' => 'required',
-        // ]);
-        // $userId = Auth::id();
-        // $formData = InstaHirinOnboard::updateOrCreate(
-        //     ['user_id' => $userId],
-        //     ['current_title' => $request->Position_title,
-        //     'working_since_date'=> $request->from_date,
-        //     'working_since_date2'=> $request->from_date,
-        //     'last_company' =>  $request->company_name,
-        //     'availability' =>  $request->work_mode,
-        //     'skills_description' =>  $request->discription,
-        //     'notice_period' =>  $request->Notice_Period],
-        // );
-        // return redirect()->back()->with('message', 'Employement details Uploaded!');
+        // return $request->all();
+        $request->validate([
+            'Position_title' => 'required|min:6',
+            'company_name' => 'required|min:6',
+            'work_mode' => 'required',
+            'from_date' => 'required|min:6',
+            'to_date' => 'required|min:6',
+            'discription' => 'required|max:160',
+            'Notice_Period' => 'required',
+        ]);
+        $userId = Auth::id();
+        $formData = InstaHirinOnboard::updateOrCreate(
+            ['user_id' => $userId],
+            ['current_title' => $request->Position_title,
+            'working_since_date'=> $request->from_date,
+            'working_since_date2'=> $request->from_date,
+            'last_company' =>  $request->company_name,
+            'availability' =>  $request->work_mode,
+            'skills_description' =>  $request->discription,
+            'notice_period' =>  $request->Notice_Period],
+        );
+        return redirect()->back()->with('message', 'Employement details Uploaded!');
     }
 
     public function Employee_Resume_graduation(Request $request)
@@ -623,71 +609,59 @@ class profileController extends Controller
         return redirect()->back()->with('message', ' Resume hasbeen Deleted!');
     }
     public function emp_favorates(Request $request)
-    {
-        return view('dashboard.Activity_employee.favourite');
+    {   
+        $favorites = [];
+        return view('dashboard.Activity_employee.favourite',['favorites'=>$favorites]);
     }
     public function Applied_jobs(Request $request)
     {   
-        $jobIds = Job::where('user_id', Auth::id())->pluck('id');
-        $jobsWithApplicants = job::whereIn('id', $jobIds)->with('applicants')->get();
-        // return $jobsWithApplicants;
-       return view('dashboard.Activity_employee.Appliedjobs',['jobsWithApplicants'=>$jobsWithApplicants]);
+    $userID = Auth::id();
+    
+    $jobsWithApplicants = HireMeApplication::select('hire_me_application.*', 'jobs.*')
+        ->join('jobs', 'hire_me_application.job_id', '=', 'jobs.id')
+        ->where('hire_me_application.User_id', '=', $userID)
+        ->get();
+      return view('dashboard.Activity_employee.Appliedjobs', ['jobsWithApplicants' => $jobsWithApplicants]);
     }
 
+
+    // vamshi
     public function schedule_interview_calander(Request $request)
     {   
-        $jobIds = Job::where('user_id', Auth::id())->pluck('id');
-        $jobsWithApplicants = job::whereIn('id', $jobIds)->with('applicants')->get();
+        $userID = Auth::id();
+        $jobsWithApplicants = HireMeApplication::select('hire_me_application.*', 'jobs.*')->join('jobs', 'hire_me_application.job_id', '=', 'jobs.id')
+        ->where('hire_me_application.User_id', '=', $userID)
+        ->get();
+
+        $expirationDate = now()->addDays(7);
+
+    //     employInterview::create([
+    //     'meeting_link' => $meetingLink,
+    //     'expiration_date' => $expirationDate,
+    // ]);
+        // $job_email = HireMeApplication::
         return view('dashboard.Activity_employee.intervieweschedule',['jobsWithApplicants'=> $jobsWithApplicants]);
     }
 
     public function employee_offers(Request $request)
-    {
-        return view('dashboard.Activity_employee.offers');
+    {   
+        $offers = [];
+        return view('dashboard.Activity_employee.offers',['offers'=>$offers ]);
     }
     public function employee_History(Request $request)
-    {
-        return view('dashboard.Activity_employee.History');
+    {   
+        $history = [];
+        return view('dashboard.Activity_employee.History',['history' => $history]);
     }
-    public function master_company(Request $request)
-    {
-        return view('dashboard.master.master');
-    }
-    public function master_department(Request $request)
-    {
-        return view('dashboard.master.department');
-    }
-    
-    public function emp_master(Request $request)
-    {
-        return view('dashboard.master.employee_master');
-    }
-    public function master_designation(Request $request)
-    {
-        return view('dashboard.master.designation');
-    }
-    public function master_shift(Request $request)
-    {
-        return view('dashboard.master.shift_master_daily');
-    }
-    public function master_category(Request $request)
-    {
-        return view('dashboard.master.category');
-    }
+
     public function master_data(Request $request)
     {
         return view('dashboard.master.Import');
     }
-    public function master_config(Request $request)
-    {
-        return view('dashboard.master.employee_configuration');
-    }
-    public function master_leave(Request $request)
-    {
-        return view('dashboard.master.leave');
-    }
-    public function master_holiday(Request $request)
-    {
-        return view('dashboard.master.Holiday');
+
+    public function Shift_codes(Request $request)
+    {  
+       
+       return "Data was updated";
     }
 }

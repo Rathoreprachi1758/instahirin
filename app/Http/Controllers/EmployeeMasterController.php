@@ -2,7 +2,9 @@
 
 namespace App\Http\Controllers;
 
+use Auth;
 use Illuminate\Http\Request;
+use App\Models\employee;
 
 class EmployeeMasterController extends Controller
 {
@@ -10,8 +12,9 @@ class EmployeeMasterController extends Controller
      * Display a listing of the resource.
      */
     public function index()
-    {
-        //
+    {   
+        $EmpMasters = employee::all();
+        return view('dashboard.master.employee_master',['EmpMaster'=>$EmpMasters]);
     }
 
     /**

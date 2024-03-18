@@ -15,19 +15,11 @@ class DepartmentController extends Controller
      */
     public function index(Request $request)
     {  
-
         $CompanyFilter = Company::query();
-
         if ($request->has('company_filter')) {
-            // $customers->whereDate('created_at', $request->filter_date);
             return $request->company_filter;
         }
-
         $CompanyFilter = $CompanyFilter->get();
-
-        // return view('customers.index', compact('customers'));
-        //
-
         $companyId = Company::where('user_id', Auth::id())->get();
         $companes = json_decode($companyId);
         $departMent = Department::where('user_id', Auth::id())->get();
@@ -98,6 +90,7 @@ class DepartmentController extends Controller
     public function destroy(string $id)
     {
         // echo "This is destroy controller";
+        // return $id;
         $dept = Department::findOrFail($id);
         $dept->destroy($id);
         return redirect()->back()->with('message', 'Department details deleted successfully!'); 

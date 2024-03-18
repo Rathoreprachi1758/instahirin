@@ -19,18 +19,18 @@
                        able to oversee leave master with holiday details.</p>
                </div>
                <div class="custom_tabs">
-                   <ul>
-                       <li><a href="{{ route('master.index') }}">Company</a></li>
-                       <li><a href="{{route('department.index')}}">Department</a></li>
-                       <li><a href="{{route('master.designation')}}">Designation</a></li>
-                       <li><a href="{{route('master.shift_master')}}">Shift Master Daily</a></li>
-                       <li><a href="{{route('master.category')}}">Category</a></li>
-                       <li><a href="{{route('master.emp_master')}}">Employee Master</a></li>
-                       <li><a href="{{route('master.shift_config')}}">Employee Configuration</a></li>
-                       <li><a href="{{route('master.master_data')}}" class="active">Import/Export - Excel</a></li>
-                       <li><a href="{{route('master.master_leave')}}">Leave</a></li>
-                       <li><a href="{{route('master.master_holiday')}}">Holiday</a></li>
-                   </ul>
+                <ul>
+                    <li><a href="{{ route('Master.index') }}">Company</a></li>
+                    <li><a href="{{ route('Department.index') }}">Department</a></li>
+                    <li><a href="{{ route('Designation.index') }}">Designation</a></li>
+                    <li><a href="{{ route('shift_master.index') }}">Shift Master Daily</a></li>
+                    <li><a href="{{ route('Category.index') }}">Category</a></li>
+                    <li><a href="{{ route('Employee-Master.index') }}">Employee Master</a></li>
+                    <li><a href="{{ route('Employee-Configurations.index') }}">Employee Configuration</a></li>
+                    <li><a href="{{ route('Employee-Master.index') }}" class="active">Import/Export - Excel</a></li>
+                    <li><a href="{{ route('Leave.index') }}">Leave</a></li>
+                    <li><a href="{{ route('Holiday.index') }}">Holiday</a></li>
+                </ul>
                </div>
                <div class="custom_tabs_data" id="tab8" style="display: block;">
                   <div class="masterTab_bg">

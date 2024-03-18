@@ -872,11 +872,17 @@
                                                     <li><span>Skill</span></li>
                                                     <li><span>Skill2</span></li>
                                                     <li><span>Skill3</span></li>
-                                                    <li><span>Skill4</span></li>
+                                                    {{-- <li><span>{{ $instahirin->key_skills[0]['name'] }}
+                                                    </span></li> --}}
+                                                    {{-- <li><span>{{ $instahirin->key_skills}}</span></li> --}}
                                                 </ul>
+                                                {{-- @foreach ($job->skills as $skill)
+                                                <li>{{ $skill->title }}</li>
+                                                 @endforeach --}}
                                             </div>
                                         </div>
                                     </div>
+                                    <hire-me-application></hire-me-application>
                                     <button class="employeementSecTittle"  style="justify-content: end; color:#00439f;margin-left: 655px;width: 15%;"onclick="isPressed()"><a>Add Employment</a></button>
                                     <br>
                                     <div class="resumeBoxes">
