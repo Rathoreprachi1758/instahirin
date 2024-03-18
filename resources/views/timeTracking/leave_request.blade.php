@@ -20,8 +20,7 @@
                                     </button>
                                     <button class="nav-link" id="nav-profile-tab" data-bs-toggle="tab"
                                             data-bs-target="#nav-profile"
-                                            type="button" role="tab" aria-controls="nav-profile" aria-selected="false">
-                                        My
+                                            type="button" role="tab" aria-controls="nav-profile" aria-selected="false">My
                                         Request
                                     </button>
                                 </div>
@@ -103,13 +102,11 @@
                                                    id="inputBalance" readonly>
                                         </div>
                                         <div class="col-md-6">
-                                            <label for="inputEmail" class="form-label">Contact Email During
-                                                Leave</label>
+                                            <label for="inputEmail" class="form-label">Contact Email During Leave</label>
                                             <input type="email" name="email" class="form-control" id="inputEmail">
                                         </div>
                                         <div class="col-md-6">
-                                            <label for="inputNumber" class="form-label">Contact Number During
-                                                Leave</label>
+                                            <label for="inputNumber" class="form-label">Contact Number During Leave</label>
                                             <input type="number" name="phone" class="form-control" id="inputNumber">
                                         </div>
                                         <div class="col-12">
@@ -141,8 +138,7 @@
                                                 <option selected disabled>Choose Emp Code</option>
                                                 @isset($employees)
                                                     @foreach($employees as $employee)
-                                                        <option
-                                                            value="{{ $employee->employee_code }}">{{ $employee->employee_code }}</option>
+                                                        <option value="{{ $employee->employee_code }}">{{ $employee->employee_code }}</option>
                                                     @endforeach
                                                 @endisset
                                             </select>
@@ -205,7 +201,7 @@
                                                                 </td>
                                                                 <td>
                                                                     <div class="tabletext">
-                                                                        <p>{{ $leaveRequest->department->name }}</p>
+                                                                        <p>{{ $leaveRequest->department->department_name }}</p>
                                                                     </div>
                                                                 </td>
                                                                 <td>
@@ -220,8 +216,7 @@
                                                                 </td>
                                                                 <td>
                                                                     <div class="tabletext">
-                                                                        <p>start
-                                                                            date:-{{ $leaveRequest->start_date }}</p>
+                                                                        <p>start date:-{{ $leaveRequest->start_date }}</p>
                                                                     </div>
                                                                     <div class="tabletext">
                                                                         <p>End date:-{{ $leaveRequest->end_date }}</p>
@@ -263,9 +258,8 @@
                                                                             <div class="statusFieldInfo">
                                                                                 <div class="statusDrop">
                                                                                     @if(auth()->user()->roles == 'company')
-                                                                                        <span><i
-                                                                                                class="fa fa-ellipsis-v"
-                                                                                                aria-hidden="true"></i></span>
+                                                                                        <span><i class="fa fa-ellipsis-v"
+                                                                                                 aria-hidden="true"></i></span>
                                                                                         <div class="statusDropdown">
                                                                                             <ul>
                                                                                                 <li>
@@ -273,18 +267,15 @@
                                                                                                         action="{{ route('leaveStatus') }}"
                                                                                                         method="post">
                                                                                                         @csrf
-                                                                                                        <input
-                                                                                                            type="hidden"
-                                                                                                            value="1"
-                                                                                                            name="status">
-                                                                                                        <input
-                                                                                                            type="hidden"
-                                                                                                            value="{{ $leaveRequest->id }}"
-                                                                                                            name="requestId">
-                                                                                                        <input
-                                                                                                            type="submit"
-                                                                                                            value="Accept"
-                                                                                                            name="button">
+                                                                                                        <input type="hidden"
+                                                                                                               value="1"
+                                                                                                               name="status">
+                                                                                                        <input type="hidden"
+                                                                                                               value="{{ $leaveRequest->id }}"
+                                                                                                               name="requestId">
+                                                                                                        <input type="submit"
+                                                                                                               value="Accept"
+                                                                                                               name="button">
                                                                                                     </form>
                                                                                                 </li>
                                                                                                 <li>
@@ -292,18 +283,15 @@
                                                                                                         action="{{ route('leaveStatus') }}"
                                                                                                         method="post">
                                                                                                         @csrf
-                                                                                                        <input
-                                                                                                            type="hidden"
-                                                                                                            value="0"
-                                                                                                            name="status">
-                                                                                                        <input
-                                                                                                            type="hidden"
-                                                                                                            value="{{ $leaveRequest->id }}"
-                                                                                                            name="requestId">
-                                                                                                        <input
-                                                                                                            type="submit"
-                                                                                                            value="Reject"
-                                                                                                            name="button">
+                                                                                                        <input type="hidden"
+                                                                                                               value="0"
+                                                                                                               name="status">
+                                                                                                        <input type="hidden"
+                                                                                                               value="{{ $leaveRequest->id }}"
+                                                                                                               name="requestId">
+                                                                                                        <input type="submit"
+                                                                                                               value="Reject"
+                                                                                                               name="button">
                                                                                                     </form>
                                                                                                 </li>
                                                                                             </ul>
@@ -351,7 +339,7 @@
                                 data.forEach(function (department) {
                                     var option = document.createElement('option');
                                     option.value = department.id;
-                                    option.textContent = department.name;
+                                    option.textContent = department.department_name;
                                     departmentSelect.appendChild(option);
                                 });
                             })
