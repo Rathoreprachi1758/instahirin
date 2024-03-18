@@ -19,4 +19,34 @@ class Company extends Model
     {
         return $this->hasMany(Department::class);
     }
+
+    /**
+     * @return HasMany
+     */
+    public function leaveRequest(): HasMany
+    {
+        return $this->hasMany(LeaveRequest::class);
+
+    }
+
+    /**
+     * @return HasMany
+     */
+    public function lateRequest(): HasMany
+    {
+        return $this->hasMany(LateRequest::class);
+
+    }
+
+    public function employee(): HasMany
+    {
+        return $this->hasMany(Employee::class);
+
+    }
+
+    public function employeeTimeLogs(): HasMany
+    {
+        return $this->hasMany(EmployeeLogTime::class);
+
+    }
 }

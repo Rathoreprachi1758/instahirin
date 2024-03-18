@@ -1,12 +1,13 @@
 <?php
 
+use App\Http\Controllers\AgencyContractor;
+use App\Http\Controllers\ContentController;
+use App\Http\Controllers\Logincontroller;
+use App\Http\Controllers\profileController;
 use App\Http\Controllers\TimeTracking;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Route;
-use App\Http\Controllers\ContentController;
 use App\Http\Controllers\OnboardController;
-use App\Http\Controllers\Logincontroller;
-use App\Http\Controllers\profileController;
 use App\Http\Controllers\MasterController;
 use App\Http\Controllers\DepartmentController;
 use App\Http\Controllers\DesignationController;
@@ -97,6 +98,10 @@ Route::middleware(['middleware' => 'auth.check'])->group(function () {
     Route::post('upload/Resume/secondary', [profileController::class, 'Employee_Resume_secondary'])->name('Employee.Resume.secondary');
     Route::post('upload/Resume/personal_info', [profileController::class, 'Employee_Resume_personal_info'])->name('Employee.Resume.personal_info');
     Route::get('upload/Resume/delete/{id}', [profileController::class, 'Employee_Resume_delete'])->name('Employee.Resume.delete');
+
+    //activity-agency-contractor
+    Route::get('agency-contractor', [AgencyContractor::class, 'agencyContractor'])->name('agencyContractor');
+
     //
     Route::get('/Favorites', [profileController::class, 'emp_favorates'])->name('favorites');
     Route::get('Applied-jobs', [profileController::class, 'Applied_jobs'])->name('Applied.jobs');
