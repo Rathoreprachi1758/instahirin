@@ -32,7 +32,7 @@
                             @isset($departments)
                                 @foreach($departments as $department)
                                     <option value="{{ $department->id }}">
-                                        {{ $department->name }}
+                                        {{ $department->department_name }}
                                     </option>
                                 @endforeach
                             @endisset
@@ -95,7 +95,7 @@
                                                 </td>
                                                 <td>
                                                     <div class="tabletext">
-                                                        <p>{{ $punchInOutData['department']->name }}</p>
+                                                        <p>{{ $punchInOutData['department']->department_name }}</p>
                                                     </div>
                                                 </td>
                                                 <td>
@@ -302,7 +302,7 @@
                 data.forEach(function (department) {
                     var option = document.createElement('option');
                     option.value = department.id;
-                    option.textContent = department.name;
+                    option.textContent = department.department_name;
                     departmentSelect.appendChild(option);
                 });
             })
@@ -312,7 +312,9 @@
 <script>
     function populateModal() {
         // Get the punch histories data from PHP
-        var punchHistories = <?php echo json_encode($punchInOutData['punchHistories']); ?>;
+        var punchHistories = <?php if (isset($punchInOutData)) {
+            echo json_encode($punchInOutData['punchHistories']);
+        } ?>;
 
         // Create HTML content for punch histories
         var html = '';

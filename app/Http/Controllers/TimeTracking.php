@@ -43,6 +43,7 @@ class TimeTracking extends Controller
         foreach ($employee as $employeeCompany) {
             $companies[] = $employeeCompany->company;
         }
+        $companies = array_unique($companies);
 
         $employeeInfo = Employee::where('user_id', Auth::id())->where('department_id', Session::get('department_id'))->where('company_id', Session::get('logInOffCompanyId'))->first();
 
@@ -180,6 +181,8 @@ class TimeTracking extends Controller
         foreach ($employee as $employeeCompany) {
             $companies[] = $employeeCompany->company;
         }
+        $companies = array_unique($companies);
+
         $employeeInfo = Employee::where('user_id', Auth::id())->where('department_id', $request->department)->where('company_id', Session::get('logInOffCompanyId'))->where('user_id', Auth::id())->first();
         $punchHistories = [];
         $punchDetails = null;
@@ -554,6 +557,8 @@ class TimeTracking extends Controller
                 $companies[] = $employee->company;
             }
             $companies = array_unique($companies);
+
+            $companies = array_unique($companies);
             $employeeLeaveRequest = LeaveRequest::where('user_id', Auth::id())->where('leave_status', true);
         }
         $employeeLeaveRequests = $employeeLeaveRequest->get();
@@ -596,6 +601,8 @@ class TimeTracking extends Controller
                 $companies[] = $employeeCompany->company;
                 $companiesId[] = $employeeCompany->company->id;
             }
+            $companies = array_unique($companies);
+
             $leaveRequest = LeaveRequest::where('user_id', Auth::id());
             $employees = Employee::where('user_id', Auth::id())->get();
             $leaveTypes = Leave::whereIn('company_id', $companiesId)->get();
@@ -724,6 +731,7 @@ class TimeTracking extends Controller
             foreach ($employee as $employeeCompany) {
                 $companies[] = $employeeCompany->company;
             }
+            $companies = array_unique($companies);
             $lateRequest = LateRequest::where('user_id', Auth::id());
             $employees = Employee::where('user_id', Auth::id())->get();
         }
