@@ -52,5 +52,6 @@ class InstaHirinOnboard extends Model
         'availability',
         'dob',
         'nationality',
+        'key_skills',
     ];
 }

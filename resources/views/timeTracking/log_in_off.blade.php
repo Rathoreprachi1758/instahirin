@@ -1,5 +1,4 @@
-@php use Carbon\Carbon;
-@endphp
+@php use Carbon\Carbon; @endphp
 <x-header data="worklog"/>
 <link rel="stylesheet" href="css/bootstrap.min.css">
 <!-- custom css -->
@@ -16,37 +15,33 @@
                 <div class="row">
                     <div class="col-12">
                         <div class="d-flex">
-                            <div class="col-6">
-                                <select id="companyName" class="form-select me-3" name="company"
-                                        aria-label="First select example" onchange="fetchDepartments()">
+                            <form id="companyForm" action="{{ route('company') }}" method="POST">
+                                @csrf
+                                <select class="form-select me-3" name="company" aria-label="First select example">
                                     <option selected disabled>Select Company</option>
                                     @isset($companies)
                                         @foreach($companies as $company)
-                                            <option value="{{ $company->id }}">{{$company->company_name }}</option>
+                                            <option value="{{ $company->id }}">{{ $company->company_name }}</option>
                                         @endforeach
                                     @endisset
                                 </select>
-                            </div>
-                            <div class="col-6">
-
-                                <form id="departmentForm" action="{{ route('department') }}" method="POST">
-                                    @csrf
-                                    <select id="departmentName" class="form-select me-3" name="department"
-                                            aria-label="Second select example" onchange="this.form.submit()">
-                                        @if(!isset($companies))
-                                            disabled
-                                        @endif>
-                                        <option selected disabled>Select Department</option>
-                                        @isset($departments)
-                                            @foreach($departments as $department)
-                                                <option value="{{ $department->id }}">
-                                                    {{ $department->department_name }}
-                                                </option>
-                                            @endforeach
-                                        @endisset
-                                    </select>
-                                </form>
-                            </div>
+                                <button type="submit" class="btn btn-primary">Submit</button>
+                            </form>
+                            <form id="departmentForm" action="{{ route('department') }}" method="POST">
+                                @csrf
+                                <select class="form-select me-3" name="department" aria-label="Second select example"
+                                        @if(!isset($companies)) disabled @endif>
+                                    <option selected disabled>Select Department</option>
+                                    @isset($departments)
+                                        @foreach($departments as $department)
+                                            <option value="{{ $department->id }}">{{ $department->name }}</option>
+                                        @endforeach
+                                    @endisset
+                                </select>
+                                <button type="submit" class="btn btn-primary" @if(!isset($companies)) disabled @endif>
+                                    Submit
+                                </button>
+                            </form>
                         </div>
                     </div>
                 </div>
@@ -54,32 +49,30 @@
                     <div class="row col-12">
                         <div class="col-4">
                             <div class="row">
-                                <div class="card mt-5" style="width: 18rem;">
+                                <div class="card" style="width: 18rem;">
                                     <div class="card-header">
-                                        Time Sheet {{ Carbon::now()->format('j M Y') }}
+                                        Time Sheet
                                     </div>
                                     <form action="{{ route('punch') }}" method="post">
                                         @csrf
+                                        <input type="hidden" name="current_datetime"
+                                               value="{{ now()->toDateTimeString() }}">
                                         <input type="hidden" name="department_id"
                                                value=" @isset($employeeInfo)
                                                {{$employeeInfo->department?->id}}
                                                @endisset">
-                                        @if(is_null($lastPunch) || isset($lastPunch['punch_out']))
-                                            <ul class=" mt-3 list-group list-group-flush">
-                                                <button type="submit" name="punch" value="1" class="btn btn-dark"
-                                                        @if(!isset($employeeInfo)) disabled @endif>
-                                                    Punch In
-                                                </button>
-                                            </ul>
-                                        @endisset
-                                        @isset($lastPunch['punch_in'])
-                                            <ul class=" mt-3 list-group list-group-flush">
-                                                <button type="submit" name="punch" value="0" class="btn btn-dark"
-                                                        @if(!isset($employeeInfo)) disabled @endif>
-                                                    Punch Out
-                                                </button>
-                                            </ul>
-                                        @endisset($lastPunch['punch_in'])
+                                        <ul class=" list-group list-group-flush">
+                                            <button type="submit" name="punch" value="1" class="btn btn-dark"
+                                                    @if(!isset($employeeInfo)) disabled @endif>
+                                                Punch In
+                                            </button>
+                                        </ul>
+                                        <ul class="list-group list-group-flush">
+                                            <button type="submit" name="punch" value="0" class="btn btn-dark"
+                                                    @if(!isset($employeeInfo)) disabled @endif>
+                                                Punch Out
+                                            </button>
+                                        </ul>
                                     </form>
                                 </div>
                             </div>
@@ -92,22 +85,22 @@
                                 </div>
                                 <ul class="list-group list-group-flush">
                                     <li class="list-group-item">Name: @isset($employeeInfo)
-                                            {{ $employeeInfo->employee_name }}
+                                            {{ $employeeInfo->name }}
                                         @endisset</li>
                                     <li class=" list-group-item">Company: @isset($employeeInfo)
-                                            {{ $employeeInfo->company->company_name }}
+                                            {{ $companyName }}
                                         @endisset</li>
                                     <li class="list-group-item">Department: @isset($employeeInfo)
-                                            {{ $employeeInfo->department?->department_name }}
+                                            {{ $employeeInfo->department?->name }}
                                         @endisset</li>
                                     <li class="list-group-item">Designation: @isset($employeeInfo)
                                             {{ $employeeInfo->designation }}
                                         @endisset</li>
                                     <li class="list-group-item">Employee ID: @isset($employeeInfo)
-                                            {{ $employeeInfo->employee_code }}
+                                            {{ $employeeInfo->id }}
                                         @endisset</li>
                                     <li class="list-group-item">Email: @isset($employeeInfo)
-                                            {{ $employeeInfo->Email }}
+                                            {{ $employeeInfo->email }}
                                         @endisset</li>
                                     <li class="list-group-item">Reporting Manager: @isset($employeeInfo)
                                             {{ $employeeInfo->reporting_manager }}
@@ -150,7 +143,7 @@
                             <div class="row">
                                 <div class="card mt-5" style="width: 18rem;">
                                     <div class="card-header">
-                                        Calendar
+                                        Time Sheet
                                     </div>
                                     <ul class="list-group list-group-flush">
                                         <!-- Additional content for time sheet can be added here -->
@@ -181,9 +174,7 @@
                                                 N/A
                                             @endisset
                                         </li>
-                                        <li class="list-group-item">Work Hours: @isset($totalWorkHours)
-                                                {{$totalWorkHours}}
-                                            @endisset</li>
+                                        <li class="list-group-item">Work Hours:</li>
                                     </ul>
                                 </div>
                             </div>
@@ -194,32 +185,3 @@
         </div>
     </div>
 </div>
-<script>
-    function fetchDepartments() {
-        var companyId = document.getElementById('companyName').value;
-        var departmentSelect = document.getElementById('departmentName');
-        console.log(companyId);
-        // Clear previous options
-        departmentSelect.innerHTML = ' <option selected disabled>Select Department</option>';
-
-        // Fetch departments based on selected company
-        fetch('/company/' + companyId, {
-            method: 'GET',
-            headers: {
-                'Content-Type': 'application/json'
-            }
-        })
-            .then(response => response.json())
-            .then(data => {
-                data.forEach(function (department) {
-                    var option = document.createElement('option');
-                    option.value = department.id;
-                    option.textContent = department.department_name;
-                    departmentSelect.appendChild(option);
-                });
-            })
-            .catch(error => console.error('Error fetching departments:', error));
-    }
-
-</script>
-

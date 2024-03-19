@@ -7,6 +7,16 @@ use App\Http\Controllers\profileController;
 use App\Http\Controllers\TimeTracking;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\OnboardController;
+use App\Http\Controllers\MasterController;
+use App\Http\Controllers\DepartmentController;
+use App\Http\Controllers\DesignationController;
+use App\Http\Controllers\shift_masterController;
+use App\Http\Controllers\CategoryController;
+use App\Http\Controllers\EmployeeConfigController;
+use App\Http\Controllers\EmployeeMasterController;
+use App\Http\Controllers\LeaveController;
+use App\Http\Controllers\HolidayController;
 
 /*
 |--------------------------------------------------------------------------
@@ -50,11 +60,6 @@ Route::middleware(['middleware' => 'auth.check'])->group(function () {
     Route::patch('edit-contact/{id}', [ProfileController::class, 'edituserinfo'])->name('edit.contact');
     Route::patch('edit-nationality/{id}', [ProfileController::class, 'editnation'])->name('edit.nation');
     Route::post('change-password', [Logincontroller::class, 'changePasswordSave']);
-    Route::post('verify-email', [ProfileController::class, 'emailVerify'])->name('emailVerify');
-    Route::post('verify-email-otp', [ProfileController::class, 'verifyOtp'])->name('verifyOtp');
-    Route::post('verify-phone', [ProfileController::class, 'phoneVerify'])->name('phoneVerify');
-
-
     //
     Route::get('reset-password', [LoginController::class, 'resetpswd']);
     Route::post('password-reset', [Logincontroller::class, 'resetpassword']);
@@ -82,21 +87,7 @@ Route::middleware(['middleware' => 'auth.check'])->group(function () {
     });
     Route::get('Interview-schedule', [profileController::class, 'Interviewschedule']);
     Route::post('Meeting-link', [ProfileController::class, 'schedule_interview'])->name('interview_schedule');
-    //emp
-    // Route::get('master',function()
-    // {
-    //    return view('dashboard.master.master');
-    // });
-    Route::get('/master', [profileController::class, 'master_company'])->name('master.company');
-    Route::get('/Department', [profileController::class, 'master_department'])->name('master.department');
-    Route::get('/Designation', [profileController::class, 'master_designation'])->name('master.designation');
-    Route::get('/Shift-master-data', [profileController::class, 'master_shift'])->name('master.shift_master');
-    Route::get('/Category', [profileController::class, 'master_category'])->name('master.category');
-    Route::get('/Employee-master', [profileController::class, 'emp_master'])->name('master.emp_master');
-    Route::get('/Employee-configuration', [profileController::class, 'master_config'])->name('master.shift_config');
-    Route::get('/Mastery-data', [profileController::class, 'master_data'])->name('master.master_data');
-    Route::get('/Leave-table', [profileController::class, 'master_leave'])->name('master.master_leave');
-    Route::get('/Holiday-table', [profileController::class, 'master_holiday'])->name('master.master_holiday');
+    Route::get('Employee/Mastery-data',[profileController::class,'master_data'])->name('master.master_data');
     //activity of employees
     Route::get('Employee-activity', [profileController::class, 'Employee_activity']);
     Route::post('upload-resume', [profileController::class, 'Employee_Resume'])->name('Employee.Resume.submit');
@@ -118,38 +109,18 @@ Route::middleware(['middleware' => 'auth.check'])->group(function () {
     Route::get('offers', [profileController::class, 'employee_offers'])->name('Applied.offers');
     Route::get('Talent-History', [profileController::class, 'employee_History'])->name('Applied.History');
     //
-    Route::get('log-in-off', [TimeTracking::class, 'logInOff'])->name('logInOff');
-    Route::get('/company/{companyId}', [TimeTracking::class, 'company']);
-    Route::post('department', [TimeTracking::class, 'department'])->name('department');
-    Route::post('employee', [TimeTracking::class, 'employee'])->name('employee');
-    Route::get('Employee-work-log', [TimeTracking::class, 'employeeWorkLog'])->name('employeeWorkLog');
-    Route::post('work-log-company', [TimeTracking::class, 'workLogCompany'])->name('workLogCompany');
-    Route::post('work-log-department', [TimeTracking::class, 'workLogDepartment'])->name('workLogDepartment');
-    Route::post('punch', [TimeTracking::class, 'punch'])->name('punch');
-    Route::post('status', [TimeTracking::class, 'status'])->name('status');
-    Route::get('time-logs', [TimeTracking::class, 'timeLogs'])->name('timeLogs');
-    Route::post('time-log-company', [TimeTracking::class, 'timeLogCompany'])->name('timeLogCompany');
-    Route::get('time-off', [TimeTracking::class, 'timeOff'])->name('timeOff');
-    Route::post('time-off-status', [TimeTracking::class, 'timeOffStatus'])->name('timeOffStatus');
-    Route::post('time-off-company', [TimeTracking::class, 'timeOffCompany'])->name('timeOffCompany');
+    Route::resource('Master',MasterController::class);
+    Route::resource('Department',DepartmentController::class);
+    Route::resource('Designation',DesignationController::class);
+    Route::resource('shift_master', shift_masterController::class);
+    Route::resource('Category',CategoryController::class);
+    Route::resource('Employee-Configurations',EmployeeConfigController::class);
+    Route::resource('Employee-Master',EmployeeMasterController::class);
+    Route::resource('Leave',LeaveController::class);
+    Route::resource('Holiday',HolidayController::class);
 
-    Route::get('leave-request', [TimeTracking::class, 'leaveRequest'])->name('leaveRequest');
-    Route::post('leave-request-filter', [TimeTracking::class, 'leaveRequestFilter'])->name('leaveRequestFilter');
-    Route::post('leave-request-submit', [TimeTracking::class, 'leaveRequestSubmit'])->name('leaveRequestSubmit');
-    Route::get('/leaveRequestDepartments/{companyId}', [TimeTracking::class, 'leaveRequestDepartments']);
-    Route::post('/fetch-employee-code', [TimeTracking::class, 'fetchEmployeeCode']);
-    Route::post('leave-status', [TimeTracking::class, 'leaveStatus'])->name('leaveStatus');
-    Route::get('late-request', [TimeTracking::class, 'lateRequest'])->name('lateRequest');
-    Route::post('late-request-submit', [TimeTracking::class, 'lateRequestSubmit'])->name('lateRequestSubmit');
-    Route::get('/lateRequestDepartments/{companyId}', [TimeTracking::class, 'lateRequestDepartments']);
-    Route::post('late-request-submit', [TimeTracking::class, 'lateRequestSubmit'])->name('lateRequestSubmit');
-    Route::post('late-status', [TimeTracking::class, 'lateStatus'])->name('lateStatus');
-    Route::post('late-request-filter', [TimeTracking::class, 'lateRequestFilter'])->name('lateRequestFilter');
-    Route::get('leave-late-approval', [TimeTracking::class, 'leaveLateApproval'])->name('leaveLateApproval');
-    Route::post('leave-request-approval-filter', [TimeTracking::class, 'leaveRequestApprovalFilter'])->name('leaveRequestApprovalFilter');
-    Route::post('late-request-approval-filter', [TimeTracking::class, 'lateApprovalFilter'])->name('lateApprovalFilter');
 });
-
+Route::get('loading_shift_codes',[profileController::class,'Shift_codes']);
 Route::get('/{levelOneSlug?}/{levelTwoSlug?}/{levelThreeSlug?}/{levelFourSlug?}', 'App\Http\Controllers\ContentController@index')->name('index');
 
 // ContactUs Form Submission

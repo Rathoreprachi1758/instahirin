@@ -202,13 +202,9 @@ class TimeTracking extends Controller
     }
 
     /**
-     * Handles punching in or out.
-     *
-     * @param Request $request
-     * @return RedirectResponse
+     * @return Application|Factory|View|\Illuminate\Foundation\Application
      */
-    public
-    function punch(Request $request): RedirectResponse
+    public function punch(Request $request): RedirectResponse
     {
         $punchStatus = $request->punch;
         $currentDateTime = now()->toDateTimeString();
@@ -360,7 +356,7 @@ class TimeTracking extends Controller
 
     /**
      * @param Request $request
-     * @return \Illuminate\Foundation\Application|View|Factory|Application
+     * @return Application|Factory|View|\Illuminate\Foundation\Application
      */
     public
     function workLogCompany(Request $request): \Illuminate\Foundation\Application|View|Factory|Application
@@ -952,3 +948,5 @@ class TimeTracking extends Controller
         return view('timeTracking.leave_late_approval')->with(compact('companies', 'lateRequests', 'late'));
     }
 }
+
+

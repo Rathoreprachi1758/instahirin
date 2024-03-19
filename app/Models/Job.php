@@ -4,6 +4,7 @@ namespace App\Models;
 
 use App\Models\Skill;
 use App\Models\Experty;
+use App\Models\HireMeApplication;
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Relations\BelongsToMany;
@@ -39,6 +40,7 @@ class Job extends Model
         'responsibilities',
         'availability',
         'user_id',
+        'document',
     ];
 
     public function skills(): BelongsToMany
@@ -64,5 +66,16 @@ class Job extends Model
     public function experties(): BelongsToMany
     {
         return $this->belongsToMany(Experty::class);
+    }
+
+    //
+    public function user()
+    {
+        return $this->belongsTo(User::class);
+    }
+    //
+    public function applicants()
+    {
+        return $this->belongsTo(HireMeApplication::class, 'job_id');
     }
 }
