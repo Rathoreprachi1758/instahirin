@@ -119,6 +119,37 @@ Route::middleware(['middleware' => 'auth.check'])->group(function () {
     Route::resource('Leave',LeaveController::class);
     Route::resource('Holiday',HolidayController::class);
 
+    Route::get('log-in-off', [TimeTracking::class, 'logInOff'])->name('logInOff');
+    Route::get('/company/{companyId}', [TimeTracking::class, 'company']);
+    Route::post('department', [TimeTracking::class, 'department'])->name('department');
+    Route::post('employee', [TimeTracking::class, 'employee'])->name('employee');
+    Route::get('Employee-work-log', [TimeTracking::class, 'employeeWorkLog'])->name('employeeWorkLog');
+    Route::post('work-log-company', [TimeTracking::class, 'workLogCompany'])->name('workLogCompany');
+    Route::post('work-log-department', [TimeTracking::class, 'workLogDepartment'])->name('workLogDepartment');
+    Route::post('punch', [TimeTracking::class, 'punch'])->name('punch');
+    Route::post('status', [TimeTracking::class, 'status'])->name('status');
+    Route::get('time-logs', [TimeTracking::class, 'timeLogs'])->name('timeLogs');
+    Route::post('time-log-company', [TimeTracking::class, 'timeLogCompany'])->name('timeLogCompany');
+    Route::get('time-off', [TimeTracking::class, 'timeOff'])->name('timeOff');
+    Route::post('time-off-status', [TimeTracking::class, 'timeOffStatus'])->name('timeOffStatus');
+    Route::post('time-off-company', [TimeTracking::class, 'timeOffCompany'])->name('timeOffCompany');
+
+    Route::get('leave-request', [TimeTracking::class, 'leaveRequest'])->name('leaveRequest');
+    Route::post('leave-request-filter', [TimeTracking::class, 'leaveRequestFilter'])->name('leaveRequestFilter');
+    Route::post('leave-request-submit', [TimeTracking::class, 'leaveRequestSubmit'])->name('leaveRequestSubmit');
+    Route::get('/leaveRequestDepartments/{companyId}', [TimeTracking::class, 'leaveRequestDepartments']);
+    Route::post('/fetch-employee-code', [TimeTracking::class, 'fetchEmployeeCode']);
+    Route::post('leave-status', [TimeTracking::class, 'leaveStatus'])->name('leaveStatus');
+    Route::get('late-request', [TimeTracking::class, 'lateRequest'])->name('lateRequest');
+    Route::post('late-request-submit', [TimeTracking::class, 'lateRequestSubmit'])->name('lateRequestSubmit');
+    Route::get('/lateRequestDepartments/{companyId}', [TimeTracking::class, 'lateRequestDepartments']);
+    Route::post('late-request-submit', [TimeTracking::class, 'lateRequestSubmit'])->name('lateRequestSubmit');
+    Route::post('late-status', [TimeTracking::class, 'lateStatus'])->name('lateStatus');
+    Route::post('late-request-filter', [TimeTracking::class, 'lateRequestFilter'])->name('lateRequestFilter');
+    Route::get('leave-late-approval', [TimeTracking::class, 'leaveLateApproval'])->name('leaveLateApproval');
+    Route::post('leave-request-approval-filter', [TimeTracking::class, 'leaveRequestApprovalFilter'])->name('leaveRequestApprovalFilter');
+    Route::post('late-request-approval-filter', [TimeTracking::class, 'lateApprovalFilter'])->name('lateApprovalFilter');
+
 });
 Route::get('loading_shift_codes',[profileController::class,'Shift_codes']);
 Route::get('/{levelOneSlug?}/{levelTwoSlug?}/{levelThreeSlug?}/{levelFourSlug?}', 'App\Http\Controllers\ContentController@index')->name('index');
