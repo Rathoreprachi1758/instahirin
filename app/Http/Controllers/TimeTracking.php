@@ -560,8 +560,12 @@ class TimeTracking extends Controller
 
             $companies = array_unique($companies);
             $employeeLeaveRequest = LeaveRequest::where('user_id', Auth::id())->where('leave_status', true);
+        } else {
+            $employees = [];
+            $companies = [];
+            $employeeLeaveRequest = null;
         }
-        $employeeLeaveRequests = $employeeLeaveRequest->get();
+        $employeeLeaveRequests = $employeeLeaveRequest?->get();
 
         return view('timeTracking.time_off', compact('companies', 'employeeLeaveRequests', 'employees'));
     }
