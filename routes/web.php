@@ -106,7 +106,6 @@ Route::middleware(['middleware' => 'auth.check'])->group(function () {
     Route::post('edit-delete-certificates', [AgencyContractor::class, 'editOrDeleteCertificates'])->name('editOrDeleteCertificates');
     Route::get('download/{id}', [AgencyContractor::class, 'fileDownload'])->name('fileDownload');
     Route::get('/getCertificateData/{id}',[AgencyContractor::class, 'complianceCertificate'])->name('complianceCertificate');
-
     //
     Route::get('/Favorites', [profileController::class, 'emp_favorates'])->name('favorites');
     Route::get('Applied-jobs', [profileController::class, 'Applied_jobs'])->name('Applied.jobs');
