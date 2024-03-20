@@ -110,6 +110,12 @@ Route::middleware(['middleware' => 'auth.check'])->group(function () {
 
     //activity-agency-contractor
     Route::get('agency-contractor', [AgencyContractor::class, 'agencyContractor'])->name('agencyContractor');
+    Route::post('agency-contractor-company', [AgencyContractor::class, 'companyDetails'])->name('companyDetails');
+    Route::post('certification-form', [AgencyContractor::class, 'certificationsForm'])->name('certificationsForm');
+    Route::post('edit-delete-certificates', [AgencyContractor::class, 'editOrDeleteCertificates'])->name('editOrDeleteCertificates');
+    Route::get('download/{id}', [AgencyContractor::class, 'fileDownload'])->name('fileDownload');
+    Route::get('/getCertificateData/{id}',[AgencyContractor::class, 'complianceCertificate'])->name('complianceCertificate');
+
 
     //
     Route::get('/Favorites', [profileController::class, 'emp_favorates'])->name('favorites');
