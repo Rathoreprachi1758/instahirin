@@ -770,6 +770,9 @@
                                                         </script>
                                                     @endforeach
                                                 </ul>
+                                                {{-- @foreach ($job->skills as $skill)
+                                                <li>{{ $skill->title }}</li>
+                                                 @endforeach --}}
                                             </div>
                                         @endif
                                         <p><label class="pb-2" style="margin-left:323px">OR Instahirin Resume</p>

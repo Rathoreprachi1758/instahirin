@@ -5,12 +5,15 @@ namespace App\Http\Controllers;
 use Log;
 use Auth;
 use ZipArchive;
+use DateTime;
+use Carbon\Carbon;
 use App\Models\Job;
 use App\Models\Hire;
 use App\Models\Lead;
 use App\Models\Page;
 use App\Models\Blogs;
 use App\Models\Career;
+use App\Models\week;
 use App\Models\Expert;
 // use App\Models\Expert;
 use App\Models\Country;
@@ -20,6 +23,7 @@ use App\Models\Experty;
 use App\Models\Countrie;
 use App\Models\TimeZones;
 use App\Models\HireRequest;
+use App\Models\Shiftcode;
 use App\Models\Subscription;
 //use Laravel\Nova\Fields\Timezone;
 use Illuminate\Http\Request;
@@ -1054,6 +1058,8 @@ class ContentController extends Controller
         $formData->experience_year = $validatedData['experience_year'];
         $formData->experience_month = $validatedData['experience_month'];
         $formData->employment_type = $validatedData['employment_type'];
+        $formData->user_id = Auth::id();
+        $formData->applied_on  = now()->format('d-m-Y');
         // $formData->key_skills = json_decode($validatedData['key_skills']);
         // $formData->expert_in = json_decode($validatedData['expert_in']);
         // $formData->also_work_with = json_decode($validatedData['also_work_with']);
@@ -1130,5 +1136,13 @@ class ContentController extends Controller
 
         // Return a response indicating success
         return response()->json(['message' => 'Form submitted successfully']);
+    }
+    public function Shift_codes(Request $request)
+    {  
+       $data = new week();
+       $data->week_name = $request->weekname;
+       $data->save();
+       return "Hiii";
+
     }
 }

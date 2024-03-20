@@ -63,6 +63,9 @@
                                         <th>
                                             <h6>Actions</h6>
                                         </th>
+                                        <th>
+                                            <h6>Punch History</h6>
+                                        </th>
                                     </tr>
                                     </thead>
                                     <tbody>
@@ -105,7 +108,7 @@
                                                             @elseif($punchInOutData['work_log_status'] == 0)
                                                                 <strong class="">Reject</strong>
                                                             @elseif($punchInOutData['work_log_status'] == 2)
-                                                                <strong class="">Accepted</strong>
+                                                                <strong class="">Approved</strong>
                                                             @elseif($punchInOutData['work_log_status'] == 3)
                                                                 <strong class="">Rejected</strong>
                                                             @endif
@@ -130,7 +133,7 @@
                                                                                     <input type="hidden"
                                                                                            value="{{ $punchInOutData['date'] }}"
                                                                                            name="date">
-                                                                                    <input type="submit" value="Accept"
+                                                                                    <input type="submit" value="Approve"
                                                                                            name="timeLog">
                                                                                 </form>
                                                                             </li>
@@ -160,6 +163,50 @@
                                                         </div>
                                                     </div>
                                                 </td>
+                                                <td>
+                                                    <button type="button" class="btn btn-primary" data-toggle="modal"
+                                                            data-target="#exampleModal-{{$increamentId}}"
+                                                            data-whatever="{{json_encode($punchInOutData['punchHistories'])}}">
+                                                        View
+                                                    </button>
+                                                </td>
+                                                <div class="modal fade" id="exampleModal-{{$increamentId}}"
+                                                     tabindex="-1" role="dialog"
+                                                     aria-labelledby="exampleModalLabel" aria-hidden="true">
+                                                    <div class="modal-dialog" role="document">
+                                                        <div class="modal-content">
+                                                            <div class="modal-header">
+                                                                <h5 class="modal-title" id="exampleModalLabel">Punch
+                                                                    History</h5>
+                                                                <button type="button" class="close" data-dismiss="modal"
+                                                                        aria-label="Close">
+                                                                    <span aria-hidden="true">&times;</span>
+                                                                </button>
+                                                            </div>
+                                                            <div class="modal-body">
+                                                                @isset($punchInOutData['punchHistories'])
+                                                                    <ul class="list-group">
+                                                                        @foreach($punchInOutData['punchHistories'] as $punchHistory)
+                                                                            @isset($punchHistory['punch_in'])
+                                                                                @if($punchHistory['punch_in'] !== null)
+                                                                                    <li class="list-group-item">Punch In
+                                                                                        At: {{ Carbon\Carbon::parse($punchHistory['punch_in'])->format('h:i A') }}</li>
+                                                                                @endif
+                                                                            @endisset
+                                                                            @isset($punchHistory['punch_out'])
+                                                                                @if($punchHistory['punch_out'] !== null)
+                                                                                    <li class="list-group-item">Punch
+                                                                                        Out
+                                                                                        At: {{ Carbon\Carbon::parse($punchHistory['punch_out'])->format('h:i A') }}</li>
+                                                                                @endif
+                                                                            @endisset
+                                                                        @endforeach
+                                                                    </ul>
+                                                                @endisset
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
                                             </tr>
                                             @php($increamentId++)
                                         @endforeach

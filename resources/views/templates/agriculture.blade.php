@@ -317,7 +317,7 @@
 
                         <div class="col-lg-4 col-md-6 provide_col">
                             <div class="industryNew_section2_colsInfo">
-                                <span><img src="/bizionic/images/ind_agriculture2_icon13.png" alt="#" /></span>
+                                <span><img src="/bizionic/images/ind_agriculture2_ico13.png" alt="#" /></span>
                                 <h6>CONTINUOUS IMPROVEMENT</h6>
                                 <p>Bizionic Technologies is committed to continual improvement. We stay updated with emerging technologies, client feedback, and industry trends to enhance our solutions.</p>
                             </div>

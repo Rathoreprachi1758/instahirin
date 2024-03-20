@@ -42,6 +42,9 @@ return new class extends Migration
             $table->string('availability_time_from')->nullable();
             $table->string('availability_time_to')->nullable();
             $table->string('availability_time_zone')->nullable();
+            $table->string('applied_on')->nullable();
+            $table->unsignedBigInteger('user_id');
+            $table->foreign('user_id')->references('id')->on('users')->onDelete('cascade');
             $table->timestamps();
         });
     }

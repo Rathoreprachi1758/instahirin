@@ -25,5 +25,9 @@ class AppServiceProvider extends ServiceProvider
         Blade::directive('limitWords', function ($expression) {
             return "<?php echo Str::words($expression, 50); ?>";
         });
+        //
+        // if(config('app.env') === 'local') {
+            // \URL::forceScheme('https');
+        // }
     }
 }

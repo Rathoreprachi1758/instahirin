@@ -2,12 +2,6 @@
     <experts-list-component></experts-list-component>
 </div>
 
-
-
-
-
-
-
 <!-- about project section -->
 
 

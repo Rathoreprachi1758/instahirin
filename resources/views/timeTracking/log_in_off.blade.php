@@ -40,7 +40,7 @@
                                         @isset($departments)
                                             @foreach($departments as $department)
                                                 <option value="{{ $department->id }}">
-                                                    {{ $department->name }}
+                                                    {{ $department->department_name }}
                                                 </option>
                                             @endforeach
                                         @endisset
@@ -98,7 +98,7 @@
                                             {{ $employeeInfo->company->company_name }}
                                         @endisset</li>
                                     <li class="list-group-item">Department: @isset($employeeInfo)
-                                            {{ $employeeInfo->department?->name }}
+                                            {{ $employeeInfo->department?->department_name }}
                                         @endisset</li>
                                     <li class="list-group-item">Designation: @isset($employeeInfo)
                                             {{ $employeeInfo->designation }}
@@ -214,7 +214,7 @@
                 data.forEach(function (department) {
                     var option = document.createElement('option');
                     option.value = department.id;
-                    option.textContent = department.name;
+                    option.textContent = department.department_name;
                     departmentSelect.appendChild(option);
                 });
             })
