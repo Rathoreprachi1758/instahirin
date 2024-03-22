@@ -30,7 +30,7 @@
                                 @endforeach
                             @endisset
                         </select>
-                        <button type="submit">Filter</button>
+                        <button class="btn-dark" type="submit">Filter</button>
                     </form>
                     <!-- End of 'from' and 'to' date inputs -->
                     <div class="custom_tabs_data" style="display: block" id="tab5">
@@ -49,7 +49,7 @@
                                             <h6>From</h6>
                                         </th>
                                         <th>
-                                            <h6>Till</h6>
+                                            <h6>To</h6>
                                         </th>
                                         <th>
                                             <h6>No of Days</h6>
