@@ -46,6 +46,11 @@
     .btn {
         margin-right: 10px;
     }
+    .small-select {
+        width: 50px !important; /* Adjust the width as needed */
+        height: 38px; /* Adjust the height as needed */
+        font-size: 12px; /* Adjust the font size as needed */
+    }
 </style>
 <div class="fr-section" style="margin-top: -72px">
     <div class="fr-section_detail">
@@ -167,9 +172,11 @@
                                                             <select class="form-select" name="company_total_employees"
                                                                     id="autoSizingSelect">
                                                                 <option selected>Choose...</option>
-                                                                <option value="1">One</option>
-                                                                <option value="2">Two</option>
-                                                                <option value="3">Three</option>
+                                                                <option value="0-49">0-49</option>
+                                                                <option value="50-249">50-249</option>
+                                                                <option value="250-999">250-999</option>
+                                                                <option value="1000-9999">1000-9999</option>
+                                                                <option value="10000+">10000+</option>
                                                             </select>
                                                         </div>
                                                         <div class="row mt-3">
@@ -191,21 +198,34 @@
                                                                 <select class="form-select" name="company_projectSize"
                                                                         id="autoSizingSelect">
                                                                     <option selected>Choose...</option>
-                                                                    <option value="1">One</option>
-                                                                    <option value="2">Two</option>
-                                                                    <option value="3">Three</option>
+                                                                    <option value="1000">1,000+</option>
+                                                                    <option value="5000">5,000+</option>
+                                                                    <option value="25000">25,000+</option>
+                                                                    <option value="50000">50,000+</option>
+                                                                    <option value="100000">100,000+</option>
                                                                 </select>
                                                             </div>
+
                                                             <div class="col">
                                                                 <label for="exampleFormControlTextarea1"
                                                                        class="form-label">Average Hourly Rates</label>
-                                                                <select class="form-select" name="company_hourly_rate"
-                                                                        id="autoSizingSelect">
-                                                                    <option selected>Choose...</option>
-                                                                    <option value="1">One</option>
-                                                                    <option value="2">Two</option>
-                                                                    <option value="3">Three</option>
-                                                                </select>
+                                                                <div class="input-group">
+                                                                    <select class="form-select small-select" name="currency" id="currency">
+                                                                        <!-- Currency options will be populated dynamically -->
+                                                                    </select>
+                                                                    <select class="form-select"
+                                                                            name="company_hourly_rate"
+                                                                            id="autoSizingSelect">
+                                                                        <option selected>Choose...</option>
+                                                                        <option value="< 25">< 25</option>
+                                                                        <option value="25-49">25-49</option>
+                                                                        <option value="50-99">50-99</option>
+                                                                        <option value="100-149">100-149</option>
+                                                                        <option value="150-199">150-199</option>
+                                                                        <option value="200-300">200-300</option>
+                                                                        <option value="300">300+</option>
+                                                                    </select>
+                                                                </div>
                                                             </div>
                                                         </div>
                                                     </div>
@@ -344,7 +364,37 @@
                                                                             </button>
                                                                         </div>
                                                                         <div class="modal-body">
-                                                                            <p>{{$agencyPortfolio->portfolio_description}}</p>
+                                                                            <p>Client
+                                                                                Name:-{{$agencyPortfolio->client_name}}</p>
+                                                                            <p>Client
+                                                                                Website:-{{$agencyPortfolio->client_website}}</p>
+                                                                            <p>Portfolio
+                                                                                Title:-{{$agencyPortfolio->portfolio_title}}</p>
+                                                                            <p>Service
+                                                                                Lines:-{{$agencyPortfolio->portfolio_service_lines}}</p>
+                                                                            <p>Project
+                                                                                Size:-{{$agencyPortfolio->portfolio_project_size}}</p>
+                                                                            <p>Start
+                                                                                Date:-{{$agencyPortfolio->portfolio_start_date}}</p>
+                                                                            <p>
+                                                                                End_date:-{{$agencyPortfolio->portfolio_end_date}}</p>
+                                                                            <p>
+                                                                                Descriptions:-{{$agencyPortfolio->portfolio_description}}</p>
+                                                                            @if ($agencyPortfolio->videoLink != null)
+                                                                                <p> Video
+                                                                                    Link:-{{$agencyPortfolio->videoLink}}</p>
+                                                                            @endif
+                                                                            @if ($agencyPortfolio->imageUpload != null)
+                                                                                <p> Image
+                                                                                    :-{{$agencyPortfolio->imageUpload}}</p>
+                                                                            @endif
+                                                                            <p>
+                                                                            <P> Privacy:-
+                                                                                @if ($agencyPortfolio->imageUpload == 1)
+                                                                                    Show All</p>
+                                                                            @elseif($agencyPortfolio->imageUpload == 0)
+                                                                                Confidential</p>
+                                                                            @endif
                                                                             <!-- You can include other details here -->
                                                                         </div>
                                                                         <div class="modal-footer">
@@ -1329,6 +1379,19 @@
                                 $('#editPortfolioModal' + id).modal('show');
                             });
                         });
+                    </script>
+                    <script>
+                        fetch('https://api.exchangerate-api.com/v4/latest/USD')
+                            .then(response => response.json())
+                            .then(data => {
+                                const currencyDropdown = document.getElementById('currency');
+                                for(const currency in data.rates) {
+                                    const option = document.createElement('option');
+                                    option.text = currency;
+                                    currencyDropdown.add(option);
+                                }
+                            })
+                            .catch(error => console.error('Error fetching currencies:', error));
                     </script>
                 </div>
             </div>
