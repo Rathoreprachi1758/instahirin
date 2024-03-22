@@ -24,7 +24,7 @@
                         </select>
                         <label for="departmentSelect">Select Department:</label>
                         <select id="departmentName" name="department"
-                                aria-label="Second select example" onchange="this.form.submit()">
+                                aria-label="Second select example">
                             @if(!isset($companies))
                                 disabled
                             @endif>
@@ -41,7 +41,7 @@
                         <input type="date" id="from" name="from">
                         <label for="to">To:</label>
                         <input type="date" id="to" name="to">
-                        <button type="submit">Filter</button>
+                        <button class="btn-dark" type="submit">Filter</button>
                     </form>
                     <!-- End of 'from' and 'to' date inputs -->
                     <div class="custom_tabs_data" style="display: block" id="tab5">
@@ -62,8 +62,19 @@
                                         <th>
                                             <h6>Calendar</h6>
                                         </th>
-                                        <th>
+                                        <th width="180">
                                             <h6>Time Recorder</h6>
+                                            <hr style="border: 1px">
+                                            <table>
+                                                <thead>
+                                                <th width="60">
+                                                    <h6>Punch In</h6>
+                                                </th>
+                                                <th width="60">
+                                                    <h6>Punch Out</h6>
+                                                </th>
+                                                </thead>
+                                            </table>
                                         </th>
                                         <th>
                                             <h6>Total Hours</h6>
@@ -103,12 +114,31 @@
                                                         <p>{{ $punchInOutData['date'] }}</p>
                                                     </div>
                                                 </td>
-                                                <td>
-                                                    <div class="tabletext">
-                                                        <p>punchIn - {{ $punchInOutData['punchIn'] }}</p>
-                                                        <p>punchOut - {{ $punchInOutData['punchOut'] }}</p>
-                                                    </div>
+                                                <td width="180">
+                                                    <table>
+                                                        <tbody>
+                                                        <tr>
+                                                            <td width="80" style="border-right: 1px solid #000;">
+                                                                <div class="tabletext">
+                                                                    <p>{{ $punchInOutData['punchIn'] }}</p>
+                                                                </div>
+                                                            </td>
+
+                                                            <td width="50">
+                                                                <div class="tabletext">
+                                                                    <p>{{ $punchInOutData['punchOut'] }}</p>
+                                                                </div>
+                                                            </td>
+                                                        </tr>
+                                                        </tbody>
+                                                    </table>
                                                 </td>
+{{--                                                <td>--}}
+{{--                                                    <div class="tabletext">--}}
+{{--                                                        <p>punchIn - {{ $punchInOutData['punchIn'] }}</p>--}}
+{{--                                                        <p>punchOut - {{ $punchInOutData['punchOut'] }}</p>--}}
+{{--                                                    </div>--}}
+{{--                                                </td>--}}
                                                 <td>
                                                     <div class="tabletext">
                                                         <p>{{$punchInOutData['totalWorkHours']}}</p>

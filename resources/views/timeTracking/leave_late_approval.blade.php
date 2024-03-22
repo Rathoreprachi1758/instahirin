@@ -54,7 +54,7 @@
                                                 @endforeach
                                             @endisset
                                         </select>
-                                        <button type="submit">Filter</button>
+                                        <button class="btn-dark" type="submit">Filter</button>
                                     </form>
                                     <div class="col-xxl-9 col-xl-11 col-lg-11 col-md-12">
                                         <div class="activityTable_data">
@@ -253,7 +253,7 @@
                                                     @endforeach
                                                 @endisset
                                             </select>
-                                            <button type="submit">Filter</button>
+                                            <button class="btn-dark" type="submit">Filter</button>
                                         </form>
                                         <div class="activityTable_data">
                                             <table class="table table-striped">

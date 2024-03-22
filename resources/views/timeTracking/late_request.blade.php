@@ -77,7 +77,7 @@
                                             </div>
                                         </div>
                                         <div class="col-md-12">
-                                            <label for="inputEmail" class="form-label">Reason For Leave</label>
+                                            <label for="inputEmail" class="form-label">Reason for Late Arrival</label>
                                             <div class="form-floating">
                                             <textarea class="form-control" placeholder="Type" name="reason"
                                                       id="floatingTextarea"></textarea>
@@ -118,7 +118,7 @@
                                                     @endforeach
                                                 @endisset
                                             </select>
-                                            <button type="submit">Filter</button>
+                                            <button class="btn-dark" type="submit">Filter</button>
                                         </form>
                                         <div class="col-xxl-9 col-xl-11 col-lg-11 col-md-12">
                                             <div class="activityTable_data">
@@ -144,7 +144,7 @@
                                                             <h6>Expected time of arrival</h6>
                                                         </th>
                                                         <th>
-                                                            <h6>Reason</h6>
+                                                            <h6>Reason for Late Arriva</h6>
                                                         </th>
                                                         <th>
                                                             <h6>Status</h6>
