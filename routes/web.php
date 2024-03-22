@@ -1,22 +1,21 @@
 <?php
 
 use App\Http\Controllers\AgencyContractor;
+use App\Http\Controllers\CategoryController;
 use App\Http\Controllers\ContentController;
+use App\Http\Controllers\DepartmentController;
+use App\Http\Controllers\DesignationController;
+use App\Http\Controllers\EmployeeConfigController;
+use App\Http\Controllers\EmployeeMasterController;
+use App\Http\Controllers\HolidayController;
+use App\Http\Controllers\LeaveController;
 use App\Http\Controllers\Logincontroller;
+use App\Http\Controllers\MasterController;
 use App\Http\Controllers\profileController;
+use App\Http\Controllers\shift_masterController;
 use App\Http\Controllers\TimeTracking;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Route;
-use App\Http\Controllers\OnboardController;
-use App\Http\Controllers\MasterController;
-use App\Http\Controllers\DepartmentController;
-use App\Http\Controllers\DesignationController;
-use App\Http\Controllers\shift_masterController;
-use App\Http\Controllers\CategoryController;
-use App\Http\Controllers\EmployeeConfigController;
-use App\Http\Controllers\EmployeeMasterController;
-use App\Http\Controllers\LeaveController;
-use App\Http\Controllers\HolidayController;
 
 /*
 |--------------------------------------------------------------------------
@@ -87,7 +86,7 @@ Route::middleware(['middleware' => 'auth.check'])->group(function () {
     });
     Route::get('Interview-schedule', [profileController::class, 'Interviewschedule']);
     Route::post('Meeting-link', [ProfileController::class, 'schedule_interview'])->name('interview_schedule');
-    Route::get('Employee/Mastery-data',[profileController::class,'master_data'])->name('master.master_data');
+    Route::get('Employee/Mastery-data', [profileController::class, 'master_data'])->name('master.master_data');
     //activity of employees
     Route::get('Employee-activity', [profileController::class, 'Employee_activity']);
     Route::post('upload-resume', [profileController::class, 'Employee_Resume'])->name('Employee.Resume.submit');
@@ -101,23 +100,30 @@ Route::middleware(['middleware' => 'auth.check'])->group(function () {
 
     //activity-agency-contractor
     Route::get('agency-contractor', [AgencyContractor::class, 'agencyContractor'])->name('agencyContractor');
+    Route::post('agency-contractor-company', [AgencyContractor::class, 'companyDetails'])->name('companyDetails');
+    Route::post('certification-form', [AgencyContractor::class, 'certificationsForm'])->name('certificationsForm');
+    Route::post('edit-delete-certificates', [AgencyContractor::class, 'editOrDeleteCertificates'])->name('editOrDeleteCertificates');
+    Route::get('download/{id}', [AgencyContractor::class, 'fileDownload'])->name('fileDownload');
+    Route::get('/getCertificateData/{id}', [AgencyContractor::class, 'complianceCertificate'])->name('complianceCertificate');
+    Route::post('/portfolio', [AgencyContractor::class, 'portfolioSubmit'])->name('portfolioSubmit');
+    Route::get('/portfolio-delete', [AgencyContractor::class, 'portfolioDelete'])->name('portfolioDelete');
 
     //
     Route::get('/Favorites', [profileController::class, 'emp_favorates'])->name('favorites');
     Route::get('Applied-jobs', [profileController::class, 'Applied_jobs'])->name('Applied.jobs');
     Route::get('Interview-schedule-calander', [profileController::class, 'schedule_interview_calander'])->name('Interview.schedule.calander');
     Route::get('offers', [profileController::class, 'employee_offers'])->name('Applied.offers');
-    Route::get('Talent-History', [profileController::class, 'employee_History'])->name('Applied.History');
+    Route::post('Talent-History', [profileController::class, 'employee_History'])->name('Applied.History');
     //
-    Route::resource('Master',MasterController::class);
-    Route::resource('Department',DepartmentController::class);
-    Route::resource('Designation',DesignationController::class);
+    Route::resource('Master', MasterController::class);
+    Route::resource('Department', DepartmentController::class);
+    Route::resource('Designation', DesignationController::class);
     Route::resource('shift_master', shift_masterController::class);
-    Route::resource('Category',CategoryController::class);
-    Route::resource('Employee-Configurations',EmployeeConfigController::class);
-    Route::resource('Employee-Master',EmployeeMasterController::class);
-    Route::resource('Leave',LeaveController::class);
-    Route::resource('Holiday',HolidayController::class);
+    Route::resource('Category', CategoryController::class);
+    Route::resource('Employee-Configurations', EmployeeConfigController::class);
+    Route::resource('Employee-Master', EmployeeMasterController::class);
+    Route::resource('Leave', LeaveController::class);
+    Route::resource('Holiday', HolidayController::class);
 
     Route::get('log-in-off', [TimeTracking::class, 'logInOff'])->name('logInOff');
     Route::get('/company/{companyId}', [TimeTracking::class, 'company']);
@@ -151,7 +157,7 @@ Route::middleware(['middleware' => 'auth.check'])->group(function () {
     Route::post('late-request-approval-filter', [TimeTracking::class, 'lateApprovalFilter'])->name('lateApprovalFilter');
 
 });
-Route::get('loading_shift_codes',[profileController::class,'Shift_codes']);
+Route::get('loading_shift_codes', [profileController::class, 'Shift_codes']);
 Route::get('/{levelOneSlug?}/{levelTwoSlug?}/{levelThreeSlug?}/{levelFourSlug?}', 'App\Http\Controllers\ContentController@index')->name('index');
 
 // ContactUs Form Submission

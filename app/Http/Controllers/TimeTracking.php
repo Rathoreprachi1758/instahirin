@@ -48,7 +48,6 @@ class TimeTracking extends Controller
         $companies = array_unique($companies);
         $employeeInfo = Employee::where('user_id', Auth::id())->where('department_id', Session::get('department_id'))->where('company_id', Session::get('logInOffCompanyId'))->first();
 
-
         if ($employeeInfo) {
             $punchHistories = $this->punchHistory($employeeInfo, null);
             $punchDetails = $this->punchDetails($employeeInfo) ?? null;
@@ -563,12 +562,8 @@ class TimeTracking extends Controller
 
             $companies = array_unique($companies);
             $employeeLeaveRequest = LeaveRequest::where('user_id', Auth::id())->where('leave_status', true);
-        } else {
-            $employees = [];
-            $companies = [];
-            $employeeLeaveRequest = null;
         }
-        $employeeLeaveRequests = $employeeLeaveRequest?->get();
+        $employeeLeaveRequests = $employeeLeaveRequest->get();
 
         return view('timeTracking.time_off', compact('companies', 'employeeLeaveRequests', 'employees'));
     }
@@ -826,7 +821,7 @@ class TimeTracking extends Controller
     {
         $companies = Company::where('user_id', Auth::id())->get();
         $leaveTypes = Leave::all();
-        $employees = [];
+
         if (auth()->user()->roles == 'company') {
             $companyIds = [];
             foreach ($companies as $company) {

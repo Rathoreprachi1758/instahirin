@@ -13,8 +13,6 @@ return new class extends Migration
     {
         Schema::create('shiftcodes', function (Blueprint $table) {
             $table->id();
-            $table->string('name');
-            $table->foreignId('company_id')->constrained('companies');
             $table->string('shift_code');
             $table->string('shift_Name');
             $table->timestamps();
