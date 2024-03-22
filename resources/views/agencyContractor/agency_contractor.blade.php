@@ -15,11 +15,37 @@
         flex: 1;
         padding: 10px;
     }
-     #preview {
-         max-width: 100%;
-         max-height: 200px;
-         margin-top: 10px;
-     }
+
+    #preview {
+        max-width: 100%;
+        max-height: 200px;
+        margin-top: 10px;
+    }
+
+    .transition-screen {
+        display: none;
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background-color: rgba(0, 0, 0, 0.5);
+        z-index: 9999;
+    }
+
+    .form-container {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        background-color: white;
+        padding: 20px;
+        border-radius: 5px;
+    }
+
+    .btn {
+        margin-right: 10px;
+    }
 </style>
 <div class="fr-section" style="margin-top: -72px">
     <div class="fr-section_detail">
@@ -60,6 +86,12 @@
                                             <button class="nav-link" id="pills-profile-tab" data-bs-toggle="pill"
                                                     data-bs-target="#pills-profile" type="button" role="tab"
                                                     aria-controls="pills-profile" aria-selected="false">Locations
+                                            </button>
+                                        </li>
+                                        <li class="nav-item" role="presentation">
+                                            <button class="nav-link" id="pills-portfolio-tab" data-bs-toggle="pill"
+                                                    data-bs-target="#pills-portfolio" type="button" role="tab"
+                                                    aria-controls="pills-portfolio" aria-selected="false">Portfolio
                                             </button>
                                         </li>
                                         <li class="nav-item" role="presentation">
@@ -259,6 +291,430 @@
                                                 </div>
                                             </div>
                                         </div>
+                                        <div class="tab-pane fade" id="pills-portfolio" role="tabpanel"
+                                             aria-labelledby="pills-portfolio-tab" tabindex="0">
+                                            <div class="container">
+                                                <div class="row">
+                                                    @isset($agencyPortfolios)
+                                                        @foreach($agencyPortfolios as $agencyPortfolio)
+                                                            <div class="col-sm-4 mb-3 mb-sm-0">
+                                                                <div class="card border-primary mb-3"
+                                                                     style="max-width: 18rem;">
+                                                                    <div class="card-body text-primary">
+                                                                        <h5 class="card-title"></h5>
+                                                                        <p class="card-text"></p>
+                                                                    </div>
+                                                                    <div class="card-footer text-center bg-transparent border-success">
+                                                                        <a href="#" class="portfolio-link"
+                                                                           data-toggle="modal"
+                                                                           data-target="#portfolioModal{{$agencyPortfolio->id}}">{{$agencyPortfolio->portfolio_title}}</a>
+                                                                    </div>
+                                                                    <div class="text-end">
+                                                                        <a href="#" class="edit-portfolio"
+                                                                           data-id="{{$agencyPortfolio->id}}"
+                                                                           data-title="{{$agencyPortfolio->portfolio_title}}"
+                                                                           data-description="{{$agencyPortfolio->portfolio_description}}"
+                                                                           data-service-lines="{{$agencyPortfolio->portfolio_service_lines}}"
+                                                                           data-project-size="{{$agencyPortfolio->portfolio_project_size}}"
+                                                                           data-start-date="{{$agencyPortfolio->portfolio_start_date}}"
+                                                                           data-end-date="{{$agencyPortfolio->portfolio_end_date}}"
+                                                                           data-video-link="{{$agencyPortfolio->videoLink}}"
+                                                                           data-image-upload="{{$agencyPortfolio->imageUpload}}"
+                                                                           data-privacy="{{$agencyPortfolio->privacy}}">Edit</a>
+                                                                        <a href="{{ route('portfolioDelete', ['id' => $agencyPortfolio->id]) }}">Delete</a>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+
+                                                            <!-- Portfolio Modal -->
+                                                            <div class="modal fade"
+                                                                 id="portfolioModal{{$agencyPortfolio->id}}"
+                                                                 tabindex="-1" role="dialog"
+                                                                 aria-labelledby="portfolioModalLabel{{$agencyPortfolio->id}}"
+                                                                 aria-hidden="true">
+                                                                <div class="modal-dialog" role="document">
+                                                                    <div class="modal-content">
+                                                                        <div class="modal-header">
+                                                                            <h5 class="modal-title"
+                                                                                id="portfolioModalLabel{{$agencyPortfolio->id}}">{{$agencyPortfolio->portfolio_title}}</h5>
+                                                                            <button type="button" class="close"
+                                                                                    data-dismiss="modal"
+                                                                                    aria-label="Close">
+                                                                                <span aria-hidden="true">&times;</span>
+                                                                            </button>
+                                                                        </div>
+                                                                        <div class="modal-body">
+                                                                            <p>{{$agencyPortfolio->portfolio_description}}</p>
+                                                                            <!-- You can include other details here -->
+                                                                        </div>
+                                                                        <div class="modal-footer">
+                                                                            <!-- Add buttons or additional content for the modal footer if needed -->
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                            <div class="modal fade"
+                                                                 id="editPortfolioModal{{$agencyPortfolio->id}}"
+                                                                 tabindex="-1" role="dialog"
+                                                                 aria-labelledby="editPortfolioModalLabel{{$agencyPortfolio->id}}"
+                                                                 aria-hidden="true">
+                                                                <div class="modal-dialog" role="document">
+                                                                    <div class="modal-content">
+                                                                        <div class="modal-header">
+                                                                            <h5 class="modal-title"
+                                                                                id="editPortfolioModalLabel{{$agencyPortfolio->id}}">
+                                                                                Edit Portfolio</h5>
+                                                                            <button type="button" class="close"
+                                                                                    data-dismiss="modal"
+                                                                                    aria-label="Close">
+                                                                                <span aria-hidden="true">&times;</span>
+                                                                            </button>
+                                                                        </div>
+                                                                        <div class="modal-body">
+                                                                            <form action="{{route('portfolioSubmit')}}"
+                                                                                  method="post"
+                                                                                  id="editPortfolioForm{{$agencyPortfolio->id}}"
+                                                                                  enctype="multipart/form-data">
+                                                                                @csrf
+                                                                                <input type="hidden" name="id"
+                                                                                       value="{{$agencyPortfolio->id}}">
+                                                                                <div class="row mb-3">
+                                                                                    <div class="col">
+                                                                                        <label class="fw-bold">Client
+                                                                                            Name</label>
+                                                                                        <input type="text"
+                                                                                               name="client_name"
+                                                                                               class="form-control"
+                                                                                               placeholder="Name"
+                                                                                               aria-label="Name"
+                                                                                               value="{{$agencyPortfolio->client_name}}">
+                                                                                    </div>
+                                                                                    <div class="col">
+                                                                                        <label class="fw-bold">Client
+                                                                                            Website</label>
+                                                                                        <input type="text"
+                                                                                               name="client_website"
+                                                                                               class="form-control"
+                                                                                               placeholder="https://www.example.com"
+                                                                                               aria-label="Last name"
+                                                                                               value="{{$agencyPortfolio->client_website}}">
+                                                                                    </div>
+                                                                                </div>
+                                                                                <!-- Portfolio Item Details -->
+                                                                                <div>
+                                                                                    <label class="fw-bold">Title</label>
+                                                                                    <input type="text"
+                                                                                           name="portfolio_title"
+                                                                                           class="form-control"
+                                                                                           placeholder="Enter a title for this portfolio item"
+                                                                                           value="{{$agencyPortfolio->portfolio_title}}">
+                                                                                </div>
+                                                                                <div class="mb-3">
+                                                                                    <label class="fw-bold mt-2">Service
+                                                                                        Lines</label>
+                                                                                    <input type="text"
+                                                                                           name="portfolio_service_lines"
+                                                                                           class="form-control"
+                                                                                           placeholder="Search for Service"
+                                                                                           value="{{$agencyPortfolio->portfolio_service_lines}}">
+                                                                                </div>
+                                                                                <div class="row mt-3">
+                                                                                    <div class="col-md-6">
+                                                                                        <label for="inputState"
+                                                                                               class="form-label fw-bold">Estimate
+                                                                                            Project Size</label>
+                                                                                        <select id="inputState"
+                                                                                                name="portfolio_project_size"
+                                                                                                class="form-select">
+                                                                                            <option selected>Select the
+                                                                                                estimate project size
+                                                                                            </option>
+                                                                                            <option value="0-49" {{$agencyPortfolio->portfolio_project_size == '0-49' ? 'selected' : ''}}>
+                                                                                                0-49
+                                                                                            </option>
+                                                                                            <option value="50-249" {{$agencyPortfolio->portfolio_project_size == '50-249' ? 'selected' : ''}}>
+                                                                                                50-249
+                                                                                            </option>
+                                                                                            <option value="250-999" {{$agencyPortfolio->portfolio_project_size == '250-999' ? 'selected' : ''}}>
+                                                                                                250-999
+                                                                                            </option>
+                                                                                            <option value="1000-9999" {{$agencyPortfolio->portfolio_project_size == '1000-9999' ? 'selected' : ''}}>
+                                                                                                1000-9999
+                                                                                            </option>
+                                                                                            <option value="10000+" {{$agencyPortfolio->portfolio_project_size == '10000+' ? 'selected' : ''}}>
+                                                                                                10000+
+                                                                                            </option>
+                                                                                        </select>
+                                                                                    </div>
+                                                                                    <div class="col-md-3">
+                                                                                        <label for="input-start-date"
+                                                                                               class="form-label fw-bold">Start
+                                                                                            Date (optional)</label>
+                                                                                        <input type="date"
+                                                                                               name="portfolio_start_date"
+                                                                                               class="form-control"
+                                                                                               id="start-date"
+                                                                                               value="{{$agencyPortfolio->portfolio_start_date}}">
+                                                                                    </div>
+                                                                                    <div class="col-md-3">
+                                                                                        <label for="input-end-date"
+                                                                                               class="form-label fw-bold">End
+                                                                                            Date (optional)</label>
+                                                                                        <input type="date"
+                                                                                               name="portfolio_end_date"
+                                                                                               class="form-control"
+                                                                                               id="end-date"
+                                                                                               value="{{$agencyPortfolio->portfolio_end_date}}">
+                                                                                    </div>
+                                                                                </div>
+                                                                                <div class="mb-3 mt-3">
+                                                                                    <label for="exampleFormControlTextarea1"
+                                                                                           class="form-label fw-bold">Descriptions</label>
+                                                                                    <textarea class="form-control"
+                                                                                              name="portfolio_description"
+                                                                                              id="exampleFormControlTextarea1"
+                                                                                              rows="3">{{$agencyPortfolio->portfolio_description}}</textarea>
+                                                                                </div>
+                                                                                <div class="mb-3 mt-3">
+                                                                                    <label for="exampleFormControlTextarea1"
+                                                                                           class="form-label fw-bold">Add
+                                                                                        Video Link or Image
+                                                                                        (Optional)</label><br>
+                                                                                    <input type="radio" id="videoOption"
+                                                                                           name="option"
+                                                                                           onclick="showInput('video')" {{$agencyPortfolio->videoLink ? 'checked' : ''}}>
+                                                                                    <label for="videoOption">Video
+                                                                                        Link</label><br>
+                                                                                    <input type="radio" id="imageOption"
+                                                                                           name="option"
+                                                                                           onclick="showInput('image')" {{$agencyPortfolio->imageUpload ? 'checked' : ''}}>
+                                                                                    <label for="imageOption">Upload
+                                                                                        Image</label><br><br>
+                                                                                    <div id="videoInput"
+                                                                                         style="{{$agencyPortfolio->videoLink ? '' : 'display:none;'}}">
+                                                                                        <label for="videoLink">Video
+                                                                                            Link:</label>
+                                                                                        <input class="form-control"
+                                                                                               type="text"
+                                                                                               id="videoLink"
+                                                                                               name="videoLink"
+                                                                                               value="{{$agencyPortfolio->videoLink}}">
+                                                                                    </div>
+                                                                                    <div id="imageInput"
+                                                                                         style="{{$agencyPortfolio->imageUpload ? '' : 'display:none;'}}">
+                                                                                        <label for="imageUpload">Upload
+                                                                                            Image:</label><br>
+                                                                                        <input class="form-control"
+                                                                                               type="file"
+                                                                                               id="imageUpload"
+                                                                                               name="imageUpload"><br><br>
+                                                                                    </div>
+                                                                                    <hr>
+                                                                                    <label class="fw-bold fa-2x mb-2">Privacy
+                                                                                        Setting</label>
+                                                                                    <div class="form-check">
+                                                                                        <input class="form-check-input"
+                                                                                               value="1" type="radio"
+                                                                                               name="privacy"
+                                                                                               id="flexRadioDefault1" {{$agencyPortfolio->privacy == 1 ? 'checked' : ''}}>
+                                                                                        <label class="form-check-label fa-2x"
+                                                                                               for="flexRadioDefault1">
+                                                                                            Show All
+                                                                                        </label>
+                                                                                        <p>All of the above content will
+                                                                                            be displayed on your
+                                                                                            profile. Currently, we will
+                                                                                            only show portfolio items
+                                                                                            with images</p>
+                                                                                    </div>
+                                                                                    <div class="form-check">
+                                                                                        <input class="form-check-input"
+                                                                                               value="0" type="radio"
+                                                                                               name="privacy"
+                                                                                               id="flexRadioDefault2" {{$agencyPortfolio->privacy == 0 ? 'checked' : ''}}>
+                                                                                        <label class="form-check-label fa-2x"
+                                                                                               for="flexRadioDefault2">
+                                                                                            Confidential
+                                                                                        </label>
+                                                                                        <p>Only the following details
+                                                                                            for this portfolio item will
+                                                                                            be displayed on your
+                                                                                            profile: Title, Description,
+                                                                                            Category, Image or Video
+                                                                                            link. This is ideal for
+                                                                                            projects where you are not
+                                                                                            able to showcase client
+                                                                                            details.</p>
+                                                                                    </div>
+                                                                                </div>
+                                                                                <button type="submit"
+                                                                                        class="btn btn-primary">Update
+                                                                                </button>
+                                                                            </form>
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        @endforeach
+                                                    @endisset
+                                                </div>
+                                            </div>
+                                            <!-- Edit Portfolio Modal -->
+
+                                            <div class="container">
+                                                <div class="row">
+                                                    <div class="card mb-3" style="max-width: 18rem;">
+                                                        <div class="card-body">
+                                                            <button id="addPortfolioBtn" class="btn">+ Add New
+                                                                Portfolio
+                                                            </button>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div id="transitionScreen" class="transition-screen">
+                                                <div class="form-container">
+                                                    <div style="height: 600px; overflow-y: auto;">
+                                                        <form action="{{route('portfolioSubmit')}}" method="post"
+                                                              id="portfolioForm" enctype="multipart/form-data">
+                                                            @csrf
+                                                            <label class="fa-2x fw-bold">Add a New Portfolio</label><br>
+                                                            <label class="fw-bold">Share Your Latest Existing
+                                                                Work</label><br>
+                                                            <label class="fw-bold mt-2">Client Details</label>
+                                                            <hr>
+                                                            <div class="row mt-3">
+                                                                <div class="col">
+                                                                    <label class="fw-bold mt-2">Client Name</label>
+                                                                    <input type="text" name="client_name"
+                                                                           class="form-control"
+                                                                           placeholder="Name" aria-label="Name">
+                                                                </div>
+                                                                <div class="col">
+                                                                    <label class="fw-bold mt-2">Client Website</label>
+                                                                    <input type="text" name="client_website"
+                                                                           class="form-control"
+                                                                           placeholder="https://www.example.com"
+                                                                           aria-label="Last name">
+                                                                </div>
+                                                            </div>
+                                                            <label class="fa-2x mt-2">Portfolio Item Details</label>
+                                                            <hr>
+                                                            <div>
+                                                                <label class="fw-bold">Title</label>
+                                                                <input type="text" name="portfolio_title"
+                                                                       class="form-control"
+                                                                       id="formGroupExampleInput"
+                                                                       placeholder="Enter a title for this portfolio item">
+                                                            </div>
+                                                            <div class="mb-3">
+                                                                <label class="fw-bold mt-2">Service Lines</label>
+                                                                <input type="text" name="portfolio_service_lines"
+                                                                       class="form-control"
+                                                                       id="formGroupExampleInput2"
+                                                                       placeholder="Search for Service">
+                                                            </div>
+                                                            <div class="row mt-3">
+                                                                <div class="col-md-6">
+                                                                    <label for="inputState" class="form-label fw-bold">Estimate
+                                                                        Project Size</label>
+                                                                    <select id="inputState"
+                                                                            name="portfolio_project_size"
+                                                                            class="form-select">
+                                                                        <option selected>Select the estimate project
+                                                                            size
+                                                                        </option>
+                                                                        <option value="0-49">0-49</option>
+                                                                        <option value="50-249">50-249</option>
+                                                                        <option value="250-999">250-999</option>
+                                                                        <option value="1000-9999">1000-9999</option>
+                                                                        <option value="10000+">10000+</option>
+                                                                    </select>
+                                                                </div>
+                                                                <div class="col-md-3">
+                                                                    <label for="input-start-date"
+                                                                           class="form-label fw-bold">Start Date
+                                                                        (optional)</label>
+                                                                    <input type="date" name="portfolio_start_date"
+                                                                           class="form-control"
+                                                                           id="start-date">
+                                                                </div>
+                                                                <div class="col-md-3">
+                                                                    <label for="input-end-date"
+                                                                           class="form-label fw-bold">End Date
+                                                                        (optional)</label>
+                                                                    <input type="date" name="portfolio_end_date"
+                                                                           class="form-control"
+                                                                           id="end-date">
+                                                                </div>
+                                                            </div>
+                                                            <div class="mb-3 mt-3">
+                                                                <label for="exampleFormControlTextarea1"
+                                                                       class="form-label  fw-bold">Descriptions</label>
+                                                                <textarea class="form-control"
+                                                                          name="portfolio_description"
+                                                                          id="exampleFormControlTextarea1"
+                                                                          rows="3"></textarea>
+                                                            </div>
+                                                            <div class="mb-3 mt-3">
+                                                                <label for="exampleFormControlTextarea1"
+                                                                       class="form-label fw-bold">Add Video Link or
+                                                                    Image (Optional)</label><br>
+                                                                <input type="radio" id="videoOption" name="option"
+                                                                       onclick="showInput('video')" checked>
+                                                                <label for="videoOption">Video Link</label><br>
+                                                                <input type="radio" id="imageOption" name="option"
+                                                                       onclick="showInput('image')">
+                                                                <label for="imageOption">Upload Image</label><br><br>
+                                                                <div id="videoInput">
+                                                                    <label for="videoLink">Video Link:</label>
+                                                                    <input class="form-control" type="text"
+                                                                           id="videoLink" name="videoLink">
+                                                                </div>
+                                                                <div id="imageInput" style="display:none;">
+                                                                    <label for="imageUpload">Upload Image:</label><br>
+                                                                    <input class="form-control" type="file"
+                                                                           id="imageUpload" name="imageUpload"><br><br>
+                                                                </div>
+                                                                <hr>
+                                                                <label class="fw-bold fa-2x mb-2">Privacy
+                                                                    Setting</label>
+                                                                <div class="form-check">
+                                                                    <input class="form-check-input" value="1"
+                                                                           type="radio" name="privacy"
+                                                                           id="flexRadioDefault1">
+                                                                    <label class="form-check-label fa-2x"
+                                                                           for="flexRadioDefault1">
+                                                                        Show All
+                                                                    </label>
+                                                                    <p>All of the above content will be displayed on
+                                                                        your profile. Currently, we will only show
+                                                                        portfolio items with images</p>
+                                                                </div>
+                                                                <div class="form-check">
+                                                                    <input class="form-check-input" value="0"
+                                                                           type="radio" name="privacy"
+                                                                           id="flexRadioDefault2">
+                                                                    <label class="form-check-label fa-2x"
+                                                                           for="flexRadioDefault2">
+                                                                        Confidential
+                                                                    </label>
+                                                                    <p>Only the following details for this portfolio
+                                                                        item will be item will be displayed on your
+                                                                        profile: Title, Description, Category, Image or
+                                                                        Video link. This is ideal for projects where you
+                                                                        are not able to showcase client details.</p>
+                                                                </div>
+                                                            </div>
+                                                            <button type="button" id="cancelBtn" class="btn">Cancel
+                                                            </button>
+                                                            <button type="submit" id="saveBtn" class="btn">Save</button>
+                                                        </form>
+                                                    </div>
+                                                </div>
+                                            </div>
+
+                                        </div>
                                         <div class="tab-pane fade" id="pills-contact" role="tabpanel"
                                              aria-labelledby="pills-contact-tab" tabindex="0">
                                             <div class="container">
@@ -337,42 +793,56 @@
                                             </div>
                                         </div>
                                         <!-- Modal -->
-                                        <div class="modal fade" id="editCertificateModal" tabindex="-1" aria-labelledby="editCertificateModalLabel" aria-hidden="true">
+                                        <div class="modal fade" id="editCertificateModal" tabindex="-1"
+                                             aria-labelledby="editCertificateModalLabel" aria-hidden="true">
                                             <div class="modal-dialog">
                                                 <div class="modal-content">
                                                     <div class="modal-header">
-                                                        <h5 class="modal-title" id="editCertificateModalLabel">Edit Certificate</h5>
-                                                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                                                        <h5 class="modal-title" id="editCertificateModalLabel">Edit
+                                                            Certificate</h5>
+                                                        <button type="button" class="btn-close" data-bs-dismiss="modal"
+                                                                aria-label="Close"></button>
                                                     </div>
                                                     <div class="modal-body">
                                                         <!-- Edit Certificate Form -->
-                                                        <form id="editCertificateForm" action="{{ route('certificationsForm') }}" method="post" enctype="multipart/form-data">
+                                                        <form id="editCertificateForm"
+                                                              action="{{ route('certificationsForm') }}" method="post"
+                                                              enctype="multipart/form-data">
                                                             @csrf
-                                                            <input type="hidden" name="certificate_id" id="certificateId"> <!-- Hidden input for certificate ID -->
+                                                            <input type="hidden" name="certificate_id"
+                                                                   id="certificateId">
+                                                            <!-- Hidden input for certificate ID -->
                                                             <div class="mb-3">
-                                                                <label for="name" class="form-label">Company Certificate Title</label>
-                                                                <input type="text" class="form-control" name="name" id="name" placeholder="Enter Certificate Title">
+                                                                <label for="name" class="form-label">Company Certificate
+                                                                    Title</label>
+                                                                <input type="text" class="form-control" name="name"
+                                                                       id="name" placeholder="Enter Certificate Title">
                                                                 @error('name')
                                                                 <div class="alert alert-danger">{{ $message }}</div>
                                                                 @enderror
                                                             </div>
                                                             <div class="mb-3">
                                                                 <label for="url" class="form-label">Company URL</label>
-                                                                <input type="url" class="form-control" name="url" id="url" placeholder="https://www.example.com">
+                                                                <input type="url" class="form-control" name="url"
+                                                                       id="url" placeholder="https://www.example.com">
                                                                 @error('url')
                                                                 <div class="alert alert-danger">{{ $message }}</div>
                                                                 @enderror
                                                             </div>
                                                             <div class="mb-3">
-                                                                <label for="attachment" class="form-label">Upload Attachment</label>
-                                                                <input type="file" class="form-control" name="attachment" id="attachment">
+                                                                <label for="attachment" class="form-label">Upload
+                                                                    Attachment</label>
+                                                                <input type="file" class="form-control"
+                                                                       name="attachment" id="attachment">
                                                                 @error('attachment')
                                                                 <div class="alert alert-danger">{{ $message }}</div>
                                                                 @enderror
                                                             </div>
                                                             <div class="mb-3" id="filePreviewContainer"></div>
                                                             <button type="submit" class="btn btn-primary">Save</button>
-                                                            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancel</button>
+                                                            <button type="button" class="btn btn-secondary"
+                                                                    data-bs-dismiss="modal">Cancel
+                                                            </button>
                                                         </form>
                                                     </div>
                                                 </div>
@@ -601,6 +1071,7 @@
                                         country: countryName
                                     })
                                 });
+
                                 if (!response.ok) {
                                     throw new Error(`Failed to fetch cities for ${countryName}`);
                                 }
@@ -821,6 +1292,43 @@
                                 preview.innerHTML = "No file selected";
                             }
                         }
+
+                        document.getElementById("addPortfolioBtn").addEventListener("click", function () {
+                            document.getElementById("transitionScreen").style.display = "block";
+                        });
+
+                        document.getElementById("cancelBtn").addEventListener("click", function () {
+                            document.getElementById("transitionScreen").style.display = "none";
+                        });
+                    </script>
+                    <script>
+                        // Function to show input fields based on the selected option
+                        function showInput(option) {
+                            var videoInput = document.getElementById("videoInput");
+                            var imageInput = document.getElementById("imageInput");
+
+                            if (option === 'video') {
+                                videoInput.style.display = "block";
+                                imageInput.style.display = "none";
+                            } else if (option === 'image') {
+                                imageInput.style.display = "block";
+                                videoInput.style.display = "none";
+                            }
+                        }
+                    </script>
+                    <script>
+                        $(document).ready(function () {
+                            // Function to populate edit form with data
+                            $('.edit-portfolio').click(function (e) {
+                                e.preventDefault();
+                                var id = $(this).data('id');
+                                var title = $(this).data('title');
+                                // Populate form fields with data
+                                $('#editPortfolioTitle' + id).val(title);
+                                // Open modal
+                                $('#editPortfolioModal' + id).modal('show');
+                            });
+                        });
                     </script>
                 </div>
             </div>

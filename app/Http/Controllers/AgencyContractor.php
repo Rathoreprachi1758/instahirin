@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Models\AgencyContractorCompany;
+use App\Models\AgencyContractorPortfolio;
 use App\Models\ComplianceCertificate;
 use Illuminate\Contracts\Foundation\Application;
 use Illuminate\Contracts\View\Factory;
@@ -19,13 +20,19 @@ class AgencyContractor extends Controller
     public function agencyContractor(): \Illuminate\Foundation\Application|View|Factory|Application
     {
         $certificateList = $this->certificate();
+        $agencyPortfolios = $this->agencyPortfolio();
 
-        return view('agencyContractor.agency_contractor', compact('certificateList'));
+        return view('agencyContractor.agency_contractor', compact('certificateList', 'agencyPortfolios'));
     }
 
     public function certificate()
     {
         return ComplianceCertificate::where('user_id', Auth::id())->get();
+    }
+
+    public function agencyPortfolio()
+    {
+        return AgencyContractorPortfolio::where('user_id', Auth::id())->get();
     }
 
     public function companyDetails(Request $request)
@@ -114,11 +121,44 @@ class AgencyContractor extends Controller
             return redirect()->back()->with('error', 'Please select at least one certificate.');
         }
 
-        if ($action === 'edit') {
-//            return redirect()->route('editMultipleCertificates', ['certificate_ids' => $certificateIds]);
-        } elseif ($action === 'delete') {
+        if ($action === 'delete') {
             ComplianceCertificate::whereIn('id', $certificateIds)->delete();
         }
         return view('agencyContractor.agency_contractor');
+    }
+
+    public function portfolioSubmit(Request $request)
+    {
+        if (isset($request->id)) {
+            $agencyContractorPortfolio = AgencyContractorPortfolio::find($request->id);
+        } else {
+            $agencyContractorPortfolio = new AgencyContractorPortfolio();
+        }
+        $agencyContractorPortfolio->client_name = $request->client_name;
+        $agencyContractorPortfolio->client_website = $request->client_website;
+        $agencyContractorPortfolio->portfolio_title = $request->portfolio_title;
+        $agencyContractorPortfolio->portfolio_service_lines = $request->portfolio_service_lines;
+        $agencyContractorPortfolio->portfolio_project_size = $request->portfolio_project_size;
+        $agencyContractorPortfolio->portfolio_start_date = $request->portfolio_start_date;
+        $agencyContractorPortfolio->portfolio_end_date = $request->portfolio_end_date;
+        $agencyContractorPortfolio->portfolio_description = $request->portfolio_description;
+        if ($request->videoLink != null) {
+            $agencyContractorPortfolio->videoLink = $request->videoLink;
+        }
+        if ($request->imageUpload != null) {
+            $filename = time() . '_' . $request->file('imageUpload')->getClientOriginalName();
+            $agencyContractorPortfolio->imageUpload = $request->file('imageUpload')->storeAs('\public\uploads', $filename);
+        }
+        $agencyContractorPortfolio->privacy = $request->privacy;
+        $agencyContractorPortfolio->user_id = Auth::id();
+        $agencyContractorPortfolio->save();
+        return redirect()->route('agencyContractor');
+    }
+
+    public function portfolioDelete(Request $request)
+    {
+        $portfolioId = $request->id;
+        AgencyContractorPortfolio::find($portfolioId)?->delete();
+        return redirect()->route('agencyContractor');
     }
 }
