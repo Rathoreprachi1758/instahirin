@@ -20,7 +20,8 @@
                                     </button>
                                     <button class="nav-link" id="nav-profile-tab" data-bs-toggle="tab"
                                             data-bs-target="#nav-profile"
-                                            type="button" role="tab" aria-controls="nav-profile" aria-selected="false">My
+                                            type="button" role="tab" aria-controls="nav-profile" aria-selected="false">
+                                        My
                                         Request
                                     </button>
                                 </div>
@@ -102,11 +103,13 @@
                                                    id="inputBalance" readonly>
                                         </div>
                                         <div class="col-md-6">
-                                            <label for="inputEmail" class="form-label">Contact Email During Leave</label>
+                                            <label for="inputEmail" class="form-label">Contact Email During
+                                                Leave</label>
                                             <input type="email" name="email" class="form-control" id="inputEmail">
                                         </div>
                                         <div class="col-md-6">
-                                            <label for="inputNumber" class="form-label">Contact Number During Leave</label>
+                                            <label for="inputNumber" class="form-label">Contact Number During
+                                                Leave</label>
                                             <input type="number" name="phone" class="form-control" id="inputNumber">
                                         </div>
                                         <div class="col-12">
@@ -138,11 +141,12 @@
                                                 <option selected disabled>Choose Emp Code</option>
                                                 @isset($employees)
                                                     @foreach($employees as $employee)
-                                                        <option value="{{ $employee->employee_code }}">{{ $employee->employee_code }}</option>
+                                                        <option
+                                                            value="{{ $employee->employee_code }}">{{ $employee->employee_code }}</option>
                                                     @endforeach
                                                 @endisset
                                             </select>
-                                            <button type="submit">Filter</button>
+                                            <button class=" btn-dark" type="submit">Filter</button>
                                         </form>
                                         <div class="col-xxl-9 col-xl-11 col-lg-11 col-md-12">
                                             <div class="activityTable_data">
@@ -166,6 +170,17 @@
                                                         </th>
                                                         <th>
                                                             <h6>Leave Periods</h6>
+                                                            <hr style="border: 1px">
+                                                            <table>
+                                                                <thead>
+                                                                <th width="60">
+                                                                    <h6>start date</h6>
+                                                                </th>
+                                                                <th width="60">
+                                                                    <h6>End date</h6>
+                                                                </th>
+                                                                </thead>
+                                                            </table>
                                                         </th>
                                                         <th>
                                                             <h6>No of Days</h6>
@@ -175,6 +190,17 @@
                                                         </th>
                                                         <th>
                                                             <h6>Alternate Details</h6>
+                                                            <hr style="border: 1px">
+                                                            <table>
+                                                                <thead>
+                                                                <th width="60">
+                                                                    <h6>Email</h6>
+                                                                </th>
+                                                                <th width="60">
+                                                                    <h6>Phone</h6>
+                                                                </th>
+                                                                </thead>
+                                                            </table>
                                                         </th>
                                                         <th>
                                                             <h6>Reason for leave</h6>
@@ -215,12 +241,23 @@
                                                                     </div>
                                                                 </td>
                                                                 <td>
-                                                                    <div class="tabletext">
-                                                                        <p>start date:-{{ $leaveRequest->start_date }}</p>
-                                                                    </div>
-                                                                    <div class="tabletext">
-                                                                        <p>End date:-{{ $leaveRequest->end_date }}</p>
-                                                                    </div>
+                                                                    <table>
+                                                                        <tbody>
+                                                                        <tr>
+                                                                            <td width="80">
+                                                                                <div class="tabletext">
+                                                                                    <p>{{$leaveRequest->start_date }}</p>
+                                                                                </div>
+                                                                            </td>
+
+                                                                            <td width="50">
+                                                                                <div class="tabletext">
+                                                                                    <p>{{  $leaveRequest->end_date }}</p>
+                                                                                </div>
+                                                                            </td>
+                                                                        </tr>
+                                                                        </tbody>
+                                                                    </table>
                                                                 </td>
                                                                 <td>
                                                                     <div class="tabletext">
@@ -233,13 +270,32 @@
                                                                     </div>
                                                                 </td>
                                                                 <td>
-                                                                    <div class="tabletext">
-                                                                        <p>Email:- {{ $leaveRequest->email }}</p>
-                                                                    </div>
-                                                                    <div class="tabletext">
-                                                                        <p>Phone:- {{ $leaveRequest->phone }}</p>
-                                                                    </div>
+                                                                    <table>
+                                                                        <tbody>
+                                                                        <tr>
+                                                                            <td width="80">
+                                                                                <div class="tabletext">
+                                                                                    <p>{{ $leaveRequest->email }}</p>
+                                                                                </div>
+                                                                            </td>
+
+                                                                            <td width="50">
+                                                                                <div class="tabletext">
+                                                                                    <p>{{  $leaveRequest->phone }}</p>
+                                                                                </div>
+                                                                            </td>
+                                                                        </tr>
+                                                                        </tbody>
+                                                                    </table>
                                                                 </td>
+                                                                {{--                                                                <td>--}}
+                                                                {{--                                                                    <div class="tabletext">--}}
+                                                                {{--                                                                        <p>Email:- {{ $leaveRequest->email }}</p>--}}
+                                                                {{--                                                                    </div>--}}
+                                                                {{--                                                                    <div class="tabletext">--}}
+                                                                {{--                                                                        <p>Phone:- {{ $leaveRequest->phone }}</p>--}}
+                                                                {{--                                                                    </div>--}}
+                                                                {{--                                                                </td>--}}
                                                                 <td>
                                                                     <div class="tabletext">
                                                                         <p>{{ $leaveRequest->leave_reason }}</p>
@@ -258,8 +314,9 @@
                                                                             <div class="statusFieldInfo">
                                                                                 <div class="statusDrop">
                                                                                     @if(auth()->user()->roles == 'company')
-                                                                                        <span><i class="fa fa-ellipsis-v"
-                                                                                                 aria-hidden="true"></i></span>
+                                                                                        <span><i
+                                                                                                class="fa fa-ellipsis-v"
+                                                                                                aria-hidden="true"></i></span>
                                                                                         <div class="statusDropdown">
                                                                                             <ul>
                                                                                                 <li>
@@ -267,15 +324,18 @@
                                                                                                         action="{{ route('leaveStatus') }}"
                                                                                                         method="post">
                                                                                                         @csrf
-                                                                                                        <input type="hidden"
-                                                                                                               value="1"
-                                                                                                               name="status">
-                                                                                                        <input type="hidden"
-                                                                                                               value="{{ $leaveRequest->id }}"
-                                                                                                               name="requestId">
-                                                                                                        <input type="submit"
-                                                                                                               value="Accept"
-                                                                                                               name="button">
+                                                                                                        <input
+                                                                                                            type="hidden"
+                                                                                                            value="1"
+                                                                                                            name="status">
+                                                                                                        <input
+                                                                                                            type="hidden"
+                                                                                                            value="{{ $leaveRequest->id }}"
+                                                                                                            name="requestId">
+                                                                                                        <input
+                                                                                                            type="submit"
+                                                                                                            value="Accept"
+                                                                                                            name="button">
                                                                                                     </form>
                                                                                                 </li>
                                                                                                 <li>
@@ -283,15 +343,18 @@
                                                                                                         action="{{ route('leaveStatus') }}"
                                                                                                         method="post">
                                                                                                         @csrf
-                                                                                                        <input type="hidden"
-                                                                                                               value="0"
-                                                                                                               name="status">
-                                                                                                        <input type="hidden"
-                                                                                                               value="{{ $leaveRequest->id }}"
-                                                                                                               name="requestId">
-                                                                                                        <input type="submit"
-                                                                                                               value="Reject"
-                                                                                                               name="button">
+                                                                                                        <input
+                                                                                                            type="hidden"
+                                                                                                            value="0"
+                                                                                                            name="status">
+                                                                                                        <input
+                                                                                                            type="hidden"
+                                                                                                            value="{{ $leaveRequest->id }}"
+                                                                                                            name="requestId">
+                                                                                                        <input
+                                                                                                            type="submit"
+                                                                                                            value="Reject"
+                                                                                                            name="button">
                                                                                                     </form>
                                                                                                 </li>
                                                                                             </ul>
@@ -422,9 +485,5 @@
                 </script>
             </div>
         </div>
-
     </div>
 </div>
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"
-        integrity="sha384-kenU1KFdBIe4zVF0s0G1M5b4hcpxyD9F7jL+jjXkk+Q2h455rYXK/7HAuoJl+0I4"
-        crossorigin="anonymous"></script>
