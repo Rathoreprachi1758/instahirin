@@ -18,7 +18,7 @@ class LeaveController extends Controller
     public function index()
     {   
         $companyId = Company::where('user_id',Auth::id())->pluck('id');
-        $department = Department::whereIn('comapny_id',$companyId)->get();
+        $department = Department::whereIn('company_id',$companyId)->get();
         $comapnaies = Company::where('user_id',Auth::id())->get();
         $leaves = leave::all();
         return view('dashboard.master.leave',['leaves'=>$leaves,'comapnaies' =>$comapnaies,'department'=>$department]);
@@ -44,7 +44,7 @@ class LeaveController extends Controller
          $leave->encash = $request->leave_encash;
          $leave->carry_forward = $request->leave_carry_forward;
          $leave->annual_limit = $request->annual_limit;
-         $leave->comapny_id = $request->company_id;
+         $leave->company_id = $request->company_id;
          $leave->user_id = Auth::id();
          $leave->save();
          Alert::success('Leave Details', 'Added Successfully');
@@ -73,18 +73,18 @@ class LeaveController extends Controller
      */
     public function update(Request $request, string $id)
     {   
-        $request->all();
-        $leave = leave::find($request->id);
+        // $request->all();
+        $leave = leave::find($id);
          $leave->leave_code = $request->leave_code;
          $leave->leave_name = $request->Leave_Name;
          $leave->encash = $request->leave_encash;
          $leave->carry_forward = $request->leave_carry_forward;
          $leave->annual_limit = $request->annual_limit;
-         $leave->comapny_id = $request->company_id;
-         $leave->user_id = Auth::id();
+        //  $leave->comapny_id = $request->company_id;
+        //  $leave->user_id = Auth::id();
          $leave->save();
-         Alert::success('Leave Details', 'Added Successfully');
-        return redirect()->back()->with('message','Leave Detasils Succesfully');
+         Alert::success('Leave Details', 'Updated Successfully');
+        return redirect()->back()->with('message','Leave Details Updated Succesfully');
     }
 
     /**

@@ -17,7 +17,7 @@ class DesignationController extends Controller
     public function index()
     {   
         $companyId = Company::where('user_id',Auth::id())->pluck('id');
-        $department = Department::whereIn('comapny_id',$companyId)->get();
+        $department = Department::whereIn('company_id',$companyId)->get();
         $comapnaies = Company::where('user_id',Auth::id())->get();
         $designation = designation::where('user_id', Auth::id())->get();
         // return $department;
@@ -43,7 +43,7 @@ class DesignationController extends Controller
         $designation->department_id = $request->dept_id;
         $designation->designation_name = $request->designation_name;
         $designation->user_id = Auth::id();
-        $designation->comapny_id = $request->company_id;
+        $designation->company_id = $request->company_id;
         $designation->save();
         Alert::success('Designation Details', 'Added Successfully');
         return redirect()->back()->with('message','Designation Entered Succesfully');
@@ -77,7 +77,7 @@ class DesignationController extends Controller
         $designation->department_id = $request->dept_id;
         $designation->designation_name = $request->designation_name;
         $designation->user_id = Auth::id();
-        $designation->comapny_id = $request->company_id;
+        $designation->company_id = $request->company_id;
         $designation->save();
         Alert::success('Designation Details', 'Updated Successfully');
         return redirect()->back()->with('message','Designation Updated Succesfully');

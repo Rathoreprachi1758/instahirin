@@ -7,20 +7,20 @@
         $btnDefault = $menu->data->is_action_item ? true : false;
         $customClass = $menu->data->is_action_item ? $menu->data->is_action_item : '';
         $floatingMenuClass = 'floatingMenu ' . $menu->data->slug . 'Floating_menu';
+        $excludeMenuNames = ['Services','Industries',
+        'startups', 'portfolio', 'product-eShare', 'product-letwizard', 'product-nestle',
+        'product-continental', 'product-prime-video', 'product-dubai-land', 'product-alchemy',
+        'product-hubun', 'product-work-vital', 'product-black-smokeHouse', 'product-time-house',
+        'product-bhuth', 'product-little-amigos', 'product-maine-rest', 'product-shan-food',
+        'blogs', 'funding-apply-now-form', 'blogId','Insta Hirin View All','global-talent','Talent Onboard Process','Insta
+        Requirement Form','own-boss-learn-more','revolution-journey','insta Hirin Onboard
+        Form','hireme-view-all-job','Spotify','Virgin Mobile',
+        'Nakheel','Ericsson','Emporium Capital','Sky','Byte Dance','Just Eat','Montblanc','Amazon Music','Century
+        Financial','Fuji Film','Baazex','Jobtome','Leadnest','American Hospital','Bizionic Team','Portfolio','product-jnk','Blogs','InstaHirin View All'
+        ];
         @endphp
-        @if ($menu->name !== 'Services' && $menu->name !== 'Industries' && $menu->name !== 'Bizionic Team' &&
-        $menu->name !== 'startups' && $menu->name !== 'Portfolio' && $menu->name !== 'product-eShare' && $menu->name !==
-        'product-letwizard' && $menu->name !== 'product-nestle' && $menu->name !== 'product-continental' && $menu->name
-        !== 'product-prime-video' && $menu->name !== 'product-dubai-land' && $menu->name !== 'product-alchemy' &&
-        $menu->name !== 'product-hubun' && $menu->name !== 'product-work-vital' && $menu->name !==
-        'product-black-smokeHouse' && $menu->name !== 'product-time-house' && $menu->name !== 'product-bhuth' &&
-        $menu->name !== 'product-little-amigos' && $menu->name !== 'product-maine-rest' && $menu->name !==
-        'product-shan-food' && $menu->name !== 'Blogs' && $menu->name !== 'funding-apply-now-form' && $menu->name !== 'blogId'
-        )
+        @if(!in_array($menu->name,$excludeMenuNames))
         <li @class(['has_nav'=> $hasNav])>
-            {{-- <a href="{{route('index',$menu->data->slug)}}"
-                @class([$customClass=>$btnDefault])>{{$menu->name}}<small><i class="fa fa-angle-down"
-                        aria-hidden="true"></i></small></a> --}}
             <a href="{{ route('index', $menu->data->slug) }}" class="{{ $customClass ?? '' }} {{ $btnDefault ?? '' }}">
                 {{ $menu->name }}
                 <small><i class="fa fa-angle-down" aria-hidden="true"></i></small>

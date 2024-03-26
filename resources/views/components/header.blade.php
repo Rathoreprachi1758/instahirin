@@ -319,7 +319,7 @@
                                         Time Tracking
                                         <em class="menu_icon"><i class="fa fa-angle-down" aria-hidden="true"></i></em>
                                     </a>
-                                    <ul>
+                                    {{-- <ul>
                                         @if(auth()->user()->roles == 'user')
                                             <li><a href="{{route('logInOff')}}">► Log In / Off</a></li>
                                         @endif
@@ -340,7 +340,7 @@
                                             <li><a href="{{route('leaveLateApproval')}}">► Leave / Late Request
                                                     Approval</a></li>
                                         @endif
-                                    </ul>
+                                    </ul> --}}
                                 </li>
                                 <li class="has_list"><a href="javascript:void(0)"><span><i class="fa fa-money"
                                                                                            aria-hidden="true"></i></span>

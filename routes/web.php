@@ -120,6 +120,7 @@ Route::middleware(['middleware' => 'auth.check'])->group(function () {
     Route::resource('Holiday',HolidayController::class);
 
 });
+Route::post('department', [TimeTracking::class, 'department'])->name('department');
 Route::get('loading_shift_codes',[profileController::class,'Shift_codes']);
 Route::get('/{levelOneSlug?}/{levelTwoSlug?}/{levelThreeSlug?}/{levelFourSlug?}', 'App\Http\Controllers\ContentController@index')->name('index');
 

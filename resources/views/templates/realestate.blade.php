@@ -96,9 +96,9 @@
                         <div class="row align-items-center">
                             <div class="col-lg-6 col-md-6 aos-init " data-aos="fade-right" data-aos-duration="1000" data-aos-easing="ease">
                                 <div class="custom_tittle text-left">
-                                    <h2>REAL ESTATE SOLUTIONS <br>
-                                    <strong>FOR ALL YOUR NEEDS!</strong>
-                                    </h2>
+                                    <h1>REAL ESTATE SOLUTIONS  
+                                    </h1>
+                                    <h5><strong>FOR ALL YOUR NEEDS!</strong></h5>
 
                                         <p class="p_color text-justify">The Property Sector, which includes the subsectors as Housing, Retail,
                                             Hospitality, and Commercial, is a fast growing industry in the world. The need for property management systems is quickly rising as well. At

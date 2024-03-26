@@ -42,7 +42,7 @@ class DepartmentController extends Controller
             $department = new Department();
             $department->department_id = $request->department_id;
             $department->department_name = $request->department_name;
-            $department->comapny_id = $request->company_id;
+            $department->company_id  = $request->company_id;
             $department->user_id = Auth::id();
             $department->save();
 
@@ -75,7 +75,7 @@ class DepartmentController extends Controller
             $department = Department::find($id);
             $department->department_id = $request->dept_id;
             $department->department_name = $request->dept_name;
-            $department->comapny_id = $request->company_id;
+            $department->company_id = $request->company_id;
             $department->user_id = Auth::id();
             $department->save();
         Alert::success('Department Details', 'Updated Successfully');
