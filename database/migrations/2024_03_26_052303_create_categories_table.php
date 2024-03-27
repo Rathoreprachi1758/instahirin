@@ -13,6 +13,7 @@ return new class extends Migration
     {
         Schema::create('categories', function (Blueprint $table) {
             $table->id();
+            $table->string('category_id')->nullable();
             $table->string('category_name')->nullable();
             $table->string('early_arrival_allow')->nullable();
             $table->string('Max_time_to allow')->nullable();
@@ -24,6 +25,9 @@ return new class extends Migration
             $table->string('Apply_OT_for')->nullable();
             $table->string('Late_arraival_allow')->nullable();
             $table->string('Early_depature_allow')->nullable();
+            $table->string('work_day')->nullable();
+            $table->string('Absent')->nullable();
+            $table->string('ot_calculations')->nullable();
             //
             $table->string('early_arraival_ignore')->nullable();
             $table->string('Late_depature_ignore')->nullable();
