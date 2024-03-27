@@ -1,6 +1,5 @@
-<!-- togather avatar section  -->
 <head>
-    <link rel="canonical" href="https://www.bizionictech.com/hire/developer/front-end-developement/portfolio">
+    <link rel="canonical" href="https://www.bizionictech.com/portfolio/portfolio">
 </head>
 <!-- our work section  -->
 
@@ -21,7 +20,7 @@
             <div class="custom_tittle  aos-init aos-animate" data-aos="fade-up" data-aos-duration="800"
                 data-aos-easing="ease">
                 <p class="p_color">Portfolio</p>
-                <h2><strong>Our</strong> Work</h2>
+                <h1><strong>Our</strong> Work</h1>
             </div>
 
             <div class="at_bizionic_steps">
@@ -29,13 +28,12 @@
                     <div class="col-lg-3 col-md-4 portfolioCol  aos-init aos-animate" data-aos="flip-left"
                         data-aos-duration="2000" data-aos-easing="ease-out-cubic">
                         <div class="at_bizionicSteps_col">
-                            <a href="/hire/developer/front-end-developement/product-eShare">
+                            <a href="portfolio/product-eShare">
                                 <img src="/bizionic/images/portfolio_pic01.png" alt="#" />
                                 <b><i class="fa fa-long-arrow-right" aria-hidden="true"></i></b>
                             </a>
                         </div>
                     </div>
-                    <p>-------</p>
                     <div class="col-lg-3 col-md-4 portfolioCol  aos-init aos-animate" data-aos="flip-left"
                         data-aos-duration="2000" data-aos-easing="ease-out-cubic">
                         <div class="at_bizionicSteps_col">
@@ -48,7 +46,7 @@
                     <div class="col-lg-3 col-md-4 portfolioCol  aos-init aos-animate" data-aos="flip-left"
                         data-aos-duration="2000" data-aos-easing="ease-out-cubic">
                         <div class="at_bizionicSteps_col">
-                            <a href="/hire/developer/front-end-developement/product-nestle">
+                            <a href="/portfolio/product-nestle">
                                 <img src="/bizionic/images/portfolio_pic1.png" alt="#" />
                                 <b><i class="fa fa-long-arrow-right" aria-hidden="true"></i></b>
                             </a>
@@ -57,7 +55,7 @@
                     <div class="col-lg-3 col-md-4 portfolioCol  aos-init aos-animate" data-aos="flip-left"
                         data-aos-duration="2000" data-aos-easing="ease-out-cubic">
                         <div class="at_bizionicSteps_col">
-                            <a href="/hire/developer/front-end-developement/product-continental">
+                            <a href="/portfolio/product-continental">
                                 <img src="/bizionic/images/portfolio_pic2.png" alt="#" />
                                 <b><i class="fa fa-long-arrow-right" aria-hidden="true"></i></b>
                             </a>
@@ -66,7 +64,7 @@
                     <div class="col-lg-3 col-md-4 portfolioCol  aos-init aos-animate" data-aos="flip-left"
                         data-aos-duration="2000" data-aos-easing="ease-out-cubic">
                         <div class="at_bizionicSteps_col">
-                            <a href="/hire/developer/front-end-developement/product-prime-video">
+                            <a href="/portfolio/product-prime-video">
                                 <img src="/bizionic/images/portfolio_pic3.png" alt="#" />
                                 <b><i class="fa fa-long-arrow-right" aria-hidden="true"></i></b>
                             </a>
@@ -77,7 +75,7 @@
                     <div class="col-lg-3 col-md-4 portfolioCol  aos-init aos-animate" data-aos="flip-left"
                         data-aos-duration="2000" data-aos-easing="ease-out-cubic">
                         <div class="at_bizionicSteps_col">
-                            <a href="#">
+                            <a href="portfolio/spotify">
                                 <img src="/bizionic/images/portfolio_pic6.png" alt="#" />
                                 <b><i class="fa fa-long-arrow-right" aria-hidden="true"></i></b>
                             </a>
@@ -86,7 +84,7 @@
                     <div class="col-lg-3 col-md-4 portfolioCol  aos-init aos-animate" data-aos="flip-left"
                         data-aos-duration="2000" data-aos-easing="ease-out-cubic">
                         <div class="at_bizionicSteps_col">
-                            <a href="#">
+                            <a href="portfolio/virginMobile">
                                 <img src="/bizionic/images/portfolio_pic7.png" alt="#" />
                                 <b><i class="fa fa-long-arrow-right" aria-hidden="true"></i></b>
                             </a>
@@ -95,7 +93,7 @@
                     <div class="col-lg-3 col-md-4 portfolioCol  aos-init aos-animate" data-aos="flip-left"
                         data-aos-duration="2000" data-aos-easing="ease-out-cubic">
                         <div class="at_bizionicSteps_col">
-                            <a href="#">
+                            <a href="portfolio/nakheel">
                                 <img src="/bizionic/images/portfolio_pic8.png" alt="#" />
                                 <b><i class="fa fa-long-arrow-right" aria-hidden="true"></i></b>
                             </a>
@@ -104,7 +102,7 @@
                     <div class="col-lg-3 col-md-4 portfolioCol  aos-init aos-animate" data-aos="flip-left"
                         data-aos-duration="2000" data-aos-easing="ease-out-cubic">
                         <div class="at_bizionicSteps_col">
-                            <a href="/hire/developer/front-end-developement/product-dubai-land">
+                            <a href="/portfolio/product-dubai-land">
                                 <img src="/bizionic/images/portfolio_pic9.png" alt="#" />
                                 <b><i class="fa fa-long-arrow-right" aria-hidden="true"></i></b>
                             </a>
@@ -113,7 +111,7 @@
                     <div class="col-lg-3 col-md-4 portfolioCol  aos-init aos-animate" data-aos="flip-left"
                         data-aos-duration="2000" data-aos-easing="ease-out-cubic">
                         <div class="at_bizionicSteps_col">
-                            <a href="#">
+                            <a href="portfolio/turkish-airline">
                                 <img src="/bizionic/images/portfolio_pic10.png" alt="#" />
                                 <b><i class="fa fa-long-arrow-right" aria-hidden="true"></i></b>
                             </a>
@@ -122,7 +120,7 @@
                     <div class="col-lg-3 col-md-4 portfolioCol  aos-init aos-animate" data-aos="flip-left"
                         data-aos-duration="2000" data-aos-easing="ease-out-cubic">
                         <div class="at_bizionicSteps_col">
-                            <a href="/hire/developer/front-end-developement/product-jnk">
+                            <a href="/portfolio/product-jnk">
                                 <img src="/bizionic/images/portfolio_pic11.png" alt="#" />
                                 <b><i class="fa fa-long-arrow-right" aria-hidden="true"></i></b>
                             </a>
@@ -131,7 +129,7 @@
                     <div class="col-lg-3 col-md-4 portfolioCol  aos-init aos-animate" data-aos="flip-left"
                         data-aos-duration="2000" data-aos-easing="ease-out-cubic">
                         <div class="at_bizionicSteps_col">
-                            <a href="#">
+                            <a href="portfolio/ericsson">
                                 <img src="/bizionic/images/portfolio_pic12.png" alt="#" />
                                 <b><i class="fa fa-long-arrow-right" aria-hidden="true"></i></b>
                             </a>
@@ -140,7 +138,7 @@
                     <div class="col-lg-3 col-md-4 portfolioCol  aos-init aos-animate" data-aos="flip-left"
                         data-aos-duration="2000" data-aos-easing="ease-out-cubic">
                         <div class="at_bizionicSteps_col">
-                            <a href="/hire/developer/front-end-developement/product-alchemy">
+                            <a href="/portfolio/product-alchemy">
                                 <img src="/bizionic/images/portfolio_pic13.png" alt="#" />
                                 <b><i class="fa fa-long-arrow-right" aria-hidden="true"></i></b>
                             </a>
@@ -149,7 +147,7 @@
                     <div class="col-lg-3 col-md-4 portfolioCol  aos-init aos-animate" data-aos="flip-left"
                         data-aos-duration="2000" data-aos-easing="ease-out-cubic">
                         <div class="at_bizionicSteps_col">
-                            <a href="/hire/developer/front-end-developement/product-hubun">
+                            <a href="/portfolio/product-hubun">
                                 <img src="/bizionic/images/portfolio_pic14.png" alt="#" />
                                 <b><i class="fa fa-long-arrow-right" aria-hidden="true"></i></b>
                             </a>
@@ -158,7 +156,7 @@
                     <div class="col-lg-3 col-md-4 portfolioCol  aos-init aos-animate" data-aos="flip-left"
                         data-aos-duration="2000" data-aos-easing="ease-out-cubic">
                         <div class="at_bizionicSteps_col">
-                            <a href="#">
+                            <a href="portfolio/sky">
                                 <img src="/bizionic/images/portfolio_pic15.png" alt="#" />
                                 <b><i class="fa fa-long-arrow-right" aria-hidden="true"></i></b>
                             </a>
@@ -168,7 +166,7 @@
                     <div class="col-lg-3 col-md-4 portfolioCol  aos-init aos-animate" data-aos="flip-left"
                         data-aos-duration="2000" data-aos-easing="ease-out-cubic">
                         <div class="at_bizionicSteps_col">
-                            <a href="/hire/developer/front-end-developement/product-work-vital">
+                            <a href="/portfolio/product-work-vital">
                                 <img src="/bizionic/images/portfolio_pic16.png" alt="#" />
                                 <b><i class="fa fa-long-arrow-right" aria-hidden="true"></i></b>
                             </a>
@@ -196,7 +194,7 @@
                     <div class="col-lg-3 col-md-4 portfolioCol  aos-init aos-animate" data-aos="flip-left"
                         data-aos-duration="2000" data-aos-easing="ease-out-cubic">
                         <div class="at_bizionicSteps_col">
-                            <a href="#">
+                            <a href="portfolio/byte-dance">
                                 <img src="/bizionic/images/portfolio_pic018.png" alt="#" />
                                 <b><i class="fa fa-long-arrow-right" aria-hidden="true"></i></b>
                             </a>
@@ -223,7 +221,7 @@
                     <div class="col-lg-3 col-md-4 portfolioCol  aos-init aos-animate" data-aos="flip-left"
                         data-aos-duration="2000" data-aos-easing="ease-out-cubic">
                         <div class="at_bizionicSteps_col">
-                            <a href="#">
+                            <a href="portfolio/just-eat">
                                 <img src="/bizionic/images/portfolio_pic18.png" alt="#" />
                                 <b><i class="fa fa-long-arrow-right" aria-hidden="true"></i></b>
                             </a>
@@ -259,7 +257,7 @@
                     <div class="col-lg-3 col-md-4 portfolioCol  aos-init aos-animate" data-aos="flip-left"
                         data-aos-duration="2000" data-aos-easing="ease-out-cubic">
                         <div class="at_bizionicSteps_col">
-                            <a href="/hire/developer/front-end-developement/product-black-smokeHouse">
+                            <a href="portfolio/montblanc">
                                 <img src="/bizionic/images/portfolio_pic022.png" alt="#" />
                                 <b><i class="fa fa-long-arrow-right" aria-hidden="true"></i></b>
                             </a>
@@ -268,7 +266,7 @@
                     <div class="col-lg-3 col-md-4 portfolioCol  aos-init aos-animate" data-aos="flip-left"
                         data-aos-duration="2000" data-aos-easing="ease-out-cubic">
                         <div class="at_bizionicSteps_col">
-                            <a href="/hire/developer/front-end-developement/product-time-house">
+                            <a href="/portfolio/product-time-house">
                                 <img src="/bizionic/images/portfolio_pic023.png" alt="#" />
                                 <b><i class="fa fa-long-arrow-right" aria-hidden="true"></i></b>
                             </a>
@@ -286,7 +284,7 @@
                     <div class="col-lg-3 col-md-4 portfolioCol  aos-init aos-animate" data-aos="flip-left"
                         data-aos-duration="2000" data-aos-easing="ease-out-cubic">
                         <div class="at_bizionicSteps_col">
-                            <a href="/hire/developer/front-end-developement/product-bhuth">
+                            <a href="/portfolio/product-bhuth">
                                 <img src="/bizionic/images/portfolio_pic025.png" alt="#" />
                                 <b><i class="fa fa-long-arrow-right" aria-hidden="true"></i></b>
                             </a>
@@ -306,7 +304,7 @@
                     <div class="col-lg-3 col-md-4 portfolioCol  aos-init aos-animate" data-aos="flip-left"
                         data-aos-duration="2000" data-aos-easing="ease-out-cubic">
                         <div class="at_bizionicSteps_col">
-                            <a href="#">
+                            <a href="portfolio/amazon-music">
                                 <img src="/bizionic/images/portfolio_pic24.png" alt="#" />
                                 <b><i class="fa fa-long-arrow-right" aria-hidden="true"></i></b>
                             </a>
@@ -315,7 +313,7 @@
                     <div class="col-lg-3 col-md-4 portfolioCol  aos-init aos-animate" data-aos="flip-left"
                         data-aos-duration="2000" data-aos-easing="ease-out-cubic">
                         <div class="at_bizionicSteps_col">
-                            <a href="#">
+                            <a href="portfolio/century-financial">
                                 <img src="/bizionic/images/portfolio_pic25.png" alt="#" />
                                 <b><i class="fa fa-long-arrow-right" aria-hidden="true"></i></b>
                             </a>
@@ -324,7 +322,7 @@
                     <div class="col-lg-3 col-md-4 portfolioCol  aos-init aos-animate" data-aos="flip-left"
                         data-aos-duration="2000" data-aos-easing="ease-out-cubic">
                         <div class="at_bizionicSteps_col">
-                            <a href="#">
+                            <a href="portfolio/emporium-capital">
                                 <img src="/bizionic/images/portfolio_pic4.png" alt="#" />
                                 <b><i class="fa fa-long-arrow-right" aria-hidden="true"></i></b>
                             </a>
@@ -342,7 +340,7 @@
                     <div class="col-lg-3 col-md-4 portfolioCol  aos-init aos-animate" data-aos="flip-left"
                         data-aos-duration="2000" data-aos-easing="ease-out-cubic">
                         <div class="at_bizionicSteps_col">
-                            <a href="/hire/developer/front-end-developement/product-little-amigos">
+                            <a href="/portfolio/product-little-amigos">
                                 <img src="/bizionic/images/portfolio_pic27.png" alt="#" />
                                 <b><i class="fa fa-long-arrow-right" aria-hidden="true"></i></b>
                             </a>
@@ -360,7 +358,7 @@
                     <div class="col-lg-3 col-md-4 portfolioCol  aos-init aos-animate" data-aos="flip-left"
                         data-aos-duration="2000" data-aos-easing="ease-out-cubic">
                         <div class="at_bizionicSteps_col">
-                            <a href="#">
+                            <a href="/portfolio/american-hospital">
                                 <img src="/bizionic/images/portfolio_pic29.png" alt="#" />
                                 <b><i class="fa fa-long-arrow-right" aria-hidden="true"></i></b>
                             </a>
@@ -369,7 +367,7 @@
                     <div class="col-lg-3 col-md-4 portfolioCol  aos-init aos-animate" data-aos="flip-left"
                         data-aos-duration="2000" data-aos-easing="ease-out-cubic">
                         <div class="at_bizionicSteps_col">
-                            <a href="/hire/developer/front-end-developement/product-maine-rest">
+                            <a href="/portfolio/product-maine-rest">
                                 <img src="/bizionic/images/portfolio_pic30.png" alt="#" />
                                 <b><i class="fa fa-long-arrow-right" aria-hidden="true"></i></b>
                             </a>
@@ -378,7 +376,7 @@
                     <div class="col-lg-3 col-md-4 portfolioCol  aos-init aos-animate" data-aos="flip-left"
                         data-aos-duration="2000" data-aos-easing="ease-out-cubic">
                         <div class="at_bizionicSteps_col">
-                            <a href="#">
+                            <a href="/portfolio/fuji-film">
                                 <img src="/bizionic/images/portfolio_pic31.png" alt="#" />
                                 <b><i class="fa fa-long-arrow-right" aria-hidden="true"></i></b>
                             </a>
@@ -387,7 +385,7 @@
                     <div class="col-lg-3 col-md-4 portfolioCol  aos-init aos-animate" data-aos="flip-left"
                         data-aos-duration="2000" data-aos-easing="ease-out-cubic">
                         <div class="at_bizionicSteps_col">
-                            <a href="/hire/developer/front-end-developement/product-shan-food">
+                            <a href="/portfolio/product-shan-food">
                                 <img src="/bizionic/images/portfolio_pic32.png" alt="#" />
                                 <b><i class="fa fa-long-arrow-right" aria-hidden="true"></i></b>
                             </a>
@@ -396,7 +394,7 @@
                     <div class="col-lg-3 col-md-4 portfolioCol  aos-init aos-animate" data-aos="flip-left"
                         data-aos-duration="2000" data-aos-easing="ease-out-cubic">
                         <div class="at_bizionicSteps_col">
-                            <a href="#">
+                            <a href="/portfolio/Baazex">
                                 <img src="/bizionic/images/portfolio_pic33.png" alt="#" />
                                 <b><i class="fa fa-long-arrow-right" aria-hidden="true"></i></b>
                             </a>
@@ -405,7 +403,7 @@
                     <div class="col-lg-3 col-md-4 portfolioCol  aos-init aos-animate" data-aos="flip-left"
                         data-aos-duration="2000" data-aos-easing="ease-out-cubic">
                         <div class="at_bizionicSteps_col">
-                            <a href="/hire/developer/front-end-developement/product-black-smokeHouse">
+                            <a href="/portfolio/product-black-smokeHouse">
                                 <img src="/bizionic/images/portfolio_pic34.png" alt="#" />
                                 <b><i class="fa fa-long-arrow-right" aria-hidden="true"></i></b>
                             </a>
@@ -414,7 +412,7 @@
                     <div class="col-lg-3 col-md-4 portfolioCol  aos-init aos-animate" data-aos="flip-left"
                         data-aos-duration="2000" data-aos-easing="ease-out-cubic">
                         <div class="at_bizionicSteps_col">
-                            <a href="#">
+                            <a href="/portfolio/jobtome">
                                 <img src="/bizionic/images/portfolio_pic35.png" alt="#" />
                                 <b><i class="fa fa-long-arrow-right" aria-hidden="true"></i></b>
                             </a>
@@ -430,6 +428,15 @@
                             </a>
                         </div>
                     </div>
+                    <div class="col-lg-3 col-md-4 portfolioCol  aos-init aos-animate" data-aos="flip-left"
+                    data-aos-duration="2000" data-aos-easing="ease-out-cubic">
+                    <div class="at_bizionicSteps_col">
+                        <a href="portfolio/Leadnest">
+                            <img src="/bizionic/images/LeadNest.jpg" alt="#" />
+                            <b><i class="fa fa-long-arrow-right" aria-hidden="true"></i></b>
+                        </a>
+                    </div>
+                </div>
                 </div>
             </div>
 

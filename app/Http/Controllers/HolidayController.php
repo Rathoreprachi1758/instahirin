@@ -18,9 +18,9 @@ class HolidayController extends Controller
     public function index()
     {   
         $companyId = Company::where('user_id',Auth::id())->pluck('id');
-        $department = Department::whereIn('comapny_id',$companyId)->get();
+        $department = Department::whereIn('company_id',$companyId)->get();
         $comapnaies = Company::where('user_id',Auth::id())->get();
-        $HoliDay = holiday::where('comapny_id',$companyId)->get();
+        $HoliDay = holiday::where('company_id',$companyId)->get();
         return view('dashboard.master.Holiday',['HoliDay'=>$HoliDay,'comapnaies' =>$comapnaies,'department'=>$department]);
     }
 
@@ -43,7 +43,7 @@ class HolidayController extends Controller
         $HoLiday->holiday_date = date_format(new DateTime($request->Holiday_date), 'd-m-Y');
         // $HoLiday->holiday_date = $request->Holiday_date;
         $HoLiday->holiday_type = $request->Holiday_type;
-        $HoLiday->comapny_id = $request->company_id;
+        $HoLiday->company_id = $request->company_id;
         $HoLiday->user_id = Auth::id();
         $HoLiday->save();
         Alert::success('Holiday Details', 'Added Successfully');
@@ -71,7 +71,16 @@ class HolidayController extends Controller
      */
     public function update(Request $request, string $id)
     {
-        //
+        $HoLiday = holiday::find($request->id);
+        $HoLiday->holiday_name = $request->Holiday_name;
+        $HoLiday->holiday_date = date_format(new DateTime($request->Holiday_date), 'd-m-Y');
+        // $HoLiday->holiday_date = $request->Holiday_date;
+        $HoLiday->holiday_type = $request->Holiday_type;
+        // $HoLiday->company_id = $request->company_id;
+        // $HoLiday->user_id = Auth::id();
+        $HoLiday->save();
+        Alert::success('Holiday Details', 'Added Successfully');
+        return redirect()->back()->with('message','Holiday List Entered Succesfully');
     }
 
     /**

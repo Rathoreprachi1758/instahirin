@@ -7,16 +7,14 @@
 <script>
     $(document).ready(function() {
         $('#shift_master').DataTable({
-            "order": [
-                [1, "asc"]
-            ]
+            "ordering": false
         });
     });
 </script>
 <style>
     .shift_heade {
         font-size: 12px;
-        color:#ededed
+        color: #ededed
     }
 
     td {
@@ -38,13 +36,14 @@
         text-align: center;
         vertical-align: middle;
     }
-    
-    .align2{
-        display:flex;
+
+    .align2 {
+        display: flex;
         justify-content: center;
     }
-    .bg-clr{
-        background-color:#343a40 !important;
+
+    .bg-clr {
+        background-color: #343a40 !important;
     }
 </style>
 @include('sweetalert::alert')
@@ -78,6 +77,16 @@
                         <script>
                             setTimeout(function() {
                                 document.getElementById('success-message').style.display = 'none';
+                            }, 3000);
+                        </script>
+                    </div>
+                @endif
+                @if (Session::has('danger'))
+                    <div class="alert alert-danger" style="margin-top: 12px;" id="danger-message">
+                        <span style="margin-left:330px">{{ Session::get('danger') }}</span>
+                        <script>
+                            setTimeout(function() {
+                                document.getElementById('danger-message').style.display = 'none';
                             }, 3000);
                         </script>
                     </div>
@@ -348,31 +357,47 @@
                                                                                             <input type="checkbox" name="select_all">
                                                                                         </th> --}}
                                                                                         <th class="bg-clr">
-                                                                                            <h6 class="text-left shift_heade" style="color:#ededed">Week Day</h6>
+                                                                                            <h6 class="text-left shift_heade"
+                                                                                                style="color:#ededed">
+                                                                                                Week Day</h6>
                                                                                         </th>
                                                                                         <th class="bg-clr">
-                                                                                            <h6 class="text-left shift_heade" style="color:#ededed">Time Zone</h6>
+                                                                                            <h6 class="text-left shift_heade"
+                                                                                                style="color:#ededed">
+                                                                                                Time Zone</h6>
                                                                                         </th>
                                                                                         <th class="bg-clr">
-                                                                                            <h6 class="text-left shift_heade" style="color:#ededed">Shift In</h6>
+                                                                                            <h6 class="text-left shift_heade"
+                                                                                                style="color:#ededed">
+                                                                                                Shift In</h6>
                                                                                         </th>
                                                                                         <th class="bg-clr">
-                                                                                            <h6 class="text-left shift_heade" style="color:#ededed">Shift Out</h6>
+                                                                                            <h6 class="text-left shift_heade"
+                                                                                                style="color:#ededed">
+                                                                                                Shift Out</h6>
                                                                                         </th>
                                                                                         <th class="bg-clr">
-                                                                                            <h6 class="text-left shift_heade" style="color:#ededed">Lunch In</h6>
+                                                                                            <h6 class="text-left shift_heade"
+                                                                                                style="color:#ededed">
+                                                                                                Lunch In</h6>
                                                                                         </th>
                                                                                         <th class="bg-clr">
-                                                                                            <h6 class="text-left shift_heade" style="color:#ededed">Lunch Out</h6>
+                                                                                            <h6 class="text-left shift_heade"
+                                                                                                style="color:#ededed">
+                                                                                                Lunch Out</h6>
                                                                                         </th>
                                                                                         <th class="bg-clr">
-                                                                                            <h6 class="text-left shift_heade" style="color:#ededed">Ded.Full Lunch Hrs</h6>
+                                                                                            <h6 class="text-left shift_heade"
+                                                                                                style="color:#ededed">
+                                                                                                Ded.Full Lunch Hrs</h6>
                                                                                         </th>
                                                                                         {{-- <th>
                                                                                         <h6 class="text-left shift_heade">Extra Day Hrs</h6>
                                                                                     </th> --}}
                                                                                         <th class="bg-clr">
-                                                                                            <h6 class="text-left shift_heade" style="color:#ededed">Send SMS Delay</h6>
+                                                                                            <h6 class="text-left shift_heade"
+                                                                                                style="color:#ededed">
+                                                                                                Send SMS Delay</h6>
                                                                                         </th>
                                                                                     </tr>
                                                                                 </thead>
@@ -381,7 +406,8 @@
                                                                                         @if ($week->week_name == $shift->week_day)
                                                                                             <tr>
                                                                                                 <td>
-                                                                                                    <div class="tabletext" style="display: flex; align-items: center;">
+                                                                                                    <div class="tabletext"
+                                                                                                        style="display: flex; align-items: center;">
                                                                                                         {{-- <button
                                                                                                             class="btn btn-primary"
                                                                                                             style="height: 30px;">Copy</button> --}}
@@ -560,16 +586,8 @@
                 <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                     <span aria-hidden="true">&times;</span>
                 </button>
-                @if ($errors->any())
-                    <div class="alert alert-danger">
-                        <ul>
-                            @foreach ($errors->all() as $error)
-                                <li>{{ $error }}</li>
-                            @endforeach
-                        </ul>
-                    </div>
-                @endif
             </div>
+
             <div class="modal-body" style="background-color: #ededed">
                 <form method="post" id="skills" action="{{ route('shift_master.store') }}">
                     @csrf
@@ -642,25 +660,25 @@
                                                 <input type="checkbox" name="select_all">
                                             </th> --}}
                                         <th>
-                                            <h6 class="text-left shift_heade" >Week Day</h6>
+                                            <h6 class="text-left shift_heade">Week Day</h6>
                                         </th>
                                         <th>
-                                            <h6 class="text-left shift_heade" >Time Zone</h6>
+                                            <h6 class="text-left shift_heade">Time Zone</h6>
                                         </th>
                                         <th>
-                                            <h6 class="text-left shift_heade" >Shift In</h6>
+                                            <h6 class="text-left shift_heade">Shift In</h6>
                                         </th>
                                         <th>
-                                            <h6 class="text-left shift_heade" >Shift Out</h6>
+                                            <h6 class="text-left shift_heade">Shift Out</h6>
                                         </th>
                                         <th>
                                             <h6 class="text-left shift_heade">Lunch In</h6>
                                         </th>
                                         <th>
-                                            <h6 class="text-left shift_heade" >Lunch Out</h6>
+                                            <h6 class="text-left shift_heade">Lunch Out</h6>
                                         </th>
                                         <th>
-                                            <h6 class="text-left shift_heade" >Ded.Full Lunch Hrs</h6>
+                                            <h6 class="text-left shift_heade">Ded.Full Lunch Hrs</h6>
                                         </th>
                                         {{-- <th>
                                             <h6 class="text-left shift_heade">Extra Day Hrs</h6>

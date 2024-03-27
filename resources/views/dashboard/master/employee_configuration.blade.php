@@ -7,11 +7,40 @@
 <script>
     $(document).ready(function() {
         $('#employee_config').DataTable();
-    //
-    $('#emp_click_modal').click(function(){
-        $('#create_emp').modal('show');
-    })
+        //
+        $('#emp_click_modal').click(function() {
+            $('#create_emp').modal('show');
+        });
+
+        $('.edit_company').click(function() {
+            var config_id = $(this).data('config-id');
+            console.log('====', config_id);
+            var dynamic_Id = '#' + config_id;
+            $(dynamic_Id).modal('show');
+        });
     });
+    //
+    function showCustomAlert(button) {
+        var shiftId = button.getAttribute('data-conf-id');
+        console.log(shiftId);
+        console.log("Hii");
+        Swal.fire({
+            title: 'Delete Confirmation',
+            text: 'Are you sure you want to delete this data?',
+            icon: 'warning',
+            showCancelButton: true,
+            confirmButtonColor: '#3085d6',
+            cancelButtonColor: '#d33',
+            confirmButtonText: 'OK'
+        }).then((result) => {
+            if (result.isConfirmed) {
+                var formAction = "{{ route('Employee-Configurations.destroy', ':shiftId') }}".replace(':shiftId',
+                    shiftId);
+                document.getElementById('deleteForm').action = formAction;
+                document.getElementById('deleteForm').submit();
+            }
+        });
+    }
 </script>
 <div class="fr-section" style="margin-top: -72px">
     <div class="fr-section_detail ">
@@ -54,9 +83,17 @@
                                                     <div class="allSelect">
                                                         <strong class="entitiesSelect">Select Company</strong>
                                                         <div class="showSort_select seleComp">
-                                                            <select class="fav_show">
+                                                            {{-- <select class="fav_show">
                                                                 <option value="Yes">Yes</option>
                                                                 <option value="No">No</option>
+                                                            </select> --}}
+                                                            <select id="companyName" class="form-select me-3" name="company" aria-label="First select example" onchange="fetchDepartments()">
+                                                                <option selected disabled>Select Company</option>
+                                                                    @isset($companies)
+                                                                        @foreach($companies as $company)
+                                                                            <option value="{{ $company->id }}">{{$company->company_name }}</option>
+                                                                        @endforeach
+                                                                    @endisset
                                                             </select>
                                                         </div>
                                                     </div>
@@ -64,10 +101,27 @@
                                                     <div class="allSelect">
                                                         <strong class="entitiesSelect">Select Department</strong>
                                                         <div class="showSort_select seleComp">
-                                                            <select class="fav_show">
+                                                            {{-- <select class="fav_show">
                                                                 <option value="Yes">Yes</option>
                                                                 <option value="No">No</option>
-                                                            </select>
+                                                            </select> --}}
+                                                            <form id="departmentForm" action="{{ route('department') }}" method="POST">
+                                                                @csrf
+                                                                <select id="departmentName" class="form-select me-3" name="department"
+                                                                        aria-label="Second select example" onchange="this.form.submit()">
+                                                                    @if(!isset($companies))
+                                                                        disabled
+                                                                    @endif>
+                                                                    <option selected disabled>Select Department</option>
+                                                                    @isset($departments)
+                                                                        @foreach($departments as $department)
+                                                                            <option value="{{ $department->id }}">
+                                                                                {{ $department->department_name }}
+                                                                            </option>
+                                                                        @endforeach
+                                                                    @endisset
+                                                                </select>
+                                                            </form>
                                                         </div>
                                                     </div>
                                                     <div class="filterBtn">
@@ -118,56 +172,72 @@
                                                         <tr>
                                                             <td>
                                                                 <div class="tabletext">
-                                                                    <p>{{ $emp->name }}</p>
+                                                                    <p>{{ $emp->Emp_code }}</p>
                                                                 </div>
                                                             </td>
                                                             <td>
                                                                 <div class="tabletext">
-                                                                    <p>{{ $emp->name }}</p>
+                                                                    <p>{{ $emp->Emp_name }}</p>
                                                                 </div>
                                                             </td>
                                                             <td>
                                                                 <div class="tabletext">
-                                                                    <p>{{ $emp->email }}</p>
+                                                                    <p>{{ $emp->department }}</p>
                                                                 </div>
                                                             </td>
                                                             <td>
                                                                 <div class="tabletext">
-                                                                    <p>{{ $emp->current_location }}</p>
+                                                                    <p>{{ $emp->send_sms_allow }}</p>
                                                                 </div>
                                                             </td>
                                                             <td>
                                                                 <div class="tabletext">
-                                                                    <p>NO</p>
+                                                                    <p>{{ $emp->employee_self_service_allow }}</p>
                                                                 </div>
                                                             </td>
                                                             <td>
                                                                 <div class="tabletext">
-                                                                    <p>NO</p>
+                                                                    <p>{{ $emp->selfie_punch_allow }}</p>
                                                                 </div>
                                                             </td>
                                                             <td>
                                                                 <div class="tabletext">
-                                                                    <p>NO</p>
+                                                                    <p>{{ $emp->approve_selfie_punch }}</p>
                                                                 </div>
                                                             </td>
                                                             <td>
                                                                 <div class="tabletext">
-                                                                    <p>NO</p>
+                                                                    <p>{{ $emp->notification_to_own }}</p>
                                                                 </div>
                                                             </td>
                                                             <td>
                                                                 <div class="tabletext">
-                                                                    <p>Yes</p>
+                                                                    <p>{{ $emp->notification_to_admin }}</p>
                                                                 </div>
                                                             </td>
                                                             <td>
                                                                 <div class="actionBtns">
-                                                                    <button class="actBtn"><i
+                                                                    <button class="actBtn edit_company"
+                                                                        id="config_button" data-toggle="modal"
+                                                                        data-target ="#confg_id"
+                                                                        data-config-id = "config_id_{{ $emp->id }}"><i
                                                                             class="fa fa-pencil-square-o"
                                                                             aria-hidden="true"></i></button>
-                                                                    <button class="actBtn"><i class="fa fa-trash"
-                                                                            aria-hidden="true"></i></button>
+                                                                    {{-- <button class="actBtn"><i class="fa fa-trash"
+                                                                            aria-hidden="true"></i></button> --}}
+                                                                    <form id = "deleteForm"
+                                                                        action="{{ route('Employee-Configurations.destroy', $emp->id) }}"
+                                                                        method="post">
+                                                                        @csrf
+                                                                        @method('delete')
+                                                                        <button type="button"
+                                                                            class="actBtn delete_shift"
+                                                                            data-conf-id="{{ $emp->id }}"
+                                                                            onclick="showCustomAlert(this)">
+                                                                            <i class="fa fa-trash"
+                                                                                aria-hidden="true"></i>
+                                                                        </button>
+                                                                    </form>
                                                                 </div>
                                                             </td>
                                                         </tr>
@@ -228,18 +298,195 @@
                                                     @endforelse
                                                 </tbody>
                                             </table>
+                                            @foreach ($EmpConfig as $emp)
+                                                <div class="modal fade" id="config_id_{{ $emp->id }}"
+                                                    tabindex="-1" role="dialog" aria-hidden="true"
+                                                    style="top: 38px;left: -186px">
+                                                    <div class="modal-dialog" role="document">
+                                                        <div class="modal-content" style="width: 173%;">
+                                                            <div class="modal-header"
+                                                                style="background-color: #BCBCBC;">
+                                                                <h6 style="padding-bottom: 0px;margin-left: 310px;">
+                                                                    Edit Selected Department</h6>
+                                                                <button type="button" class="close"
+                                                                    data-dismiss="modal" aria-label="Close">
+                                                                    <span aria-hidden="true">&times;</span>
+                                                                </button>
+                                                                @if ($errors->any())
+                                                                    <div class="alert alert-danger">
+                                                                        <ul>
+                                                                            @foreach ($errors->all() as $error)
+                                                                                <li>{{ $error }}</li>
+                                                                            @endforeach
+                                                                        </ul>
+                                                                    </div>
+                                                                @endif
+                                                            </div>
+                                                            <div class="modal-body" style="background-color: #ededed">
+                                                                <form method="post" id="skills"
+                                                                    action="{{ route('Employee-Configurations.update', $emp->id) }}">
+                                                                    @csrf
+                                                                    @method('patch')
+                                                                    <div class="row">
+                                                                        {{-- <hr style="border: -1px solid black; width: 97%;"> --}}
+                                                                        <div class="col-6">
+                                                                            <div class="popupForm_col">
+                                                                                <strong>Company Name*</strong>
+                                                                                <div class="popupForm_field">
+                                                                                    <select name="company_id"
+                                                                                        class="selective">
+                                                                                        @foreach ($companies as $id)
+                                                                                            <option value="{{ $id->id }}"
+                                                                                                @if ($id->id == $emp->company_id) selected @endif>
+                                                                                                {{ $id->company_name }}
+                                                                                            </option>
+                                                                                        @endforeach
+                                                                                    </select>
+                                                                                </div>
+                                                                            </div>
+                                                                        </div>
+                                                                        <div class="col-6">
+                                                                            <div class="popupForm_col">
+                                                                                <strong>Department Name*</strong>
+                                                                                <div class="popupForm_field">
+                                                                                    <select name="dept_id"
+                                                                                        class="selective">
+                                                                                        @foreach ($departments as $id)
+                                                                                            <option value="{{ $id->id }}"
+                                                                                                @if ($id->id == $emp->dept_id) selected @endif>
+                                                                                                {{ $id->department_name }}
+                                                                                            </option>
+                                                                                        @endforeach
+                                                                                    </select>
+                                                                                </div>
+                                                                            </div>
+                                                                        </div>
+                                                                        {{-- // --}}
+                                                                        <div class="col-6">
+                                                                            <div class="popupForm_col">
+                                                                                <strong>Employee code*</strong>
+                                                                                <div class="popupForm_field">
+                                                                                    <select name="shift_code"
+                                                                                        class="selective">
+                                                                                        @foreach ($employees as $id)
+                                                                                            <option
+                                                                                                value="{{ $id->id }}"
+                                                                                                @if ($id->id == $emp->id) selected @endif>
+                                                                                                {{ $id->employee_code }}
+                                                                                            </option>
+                                                                                        @endforeach
+                                                                                    </select>
+                                                                                </div>
+                                                                            </div>
+                                                                        </div>
+                                                                        {{-- // --}}
+                                                                        <div class="col-6">
+                                                                            <div class="popupForm_col">
+                                                                                <strong>Employee Name*</strong>
+                                                                                <div class="popupForm_field">
+                                                                                    <select name="shift_name"
+                                                                                        class="selective">
+                                                                                        @foreach ($employees as $shiftname)
+                                                                                            <option
+                                                                                                value="{{ $shiftname->employee_name }}"@if ($shiftname->employee_name == $emp->Emp_name) selected @endif>
+                                                                                                {{ $shiftname->employee_name }}
+                                                                                            </option>
+                                                                                        @endforeach
+                                                                                    </select>
+                                                                                </div>
+                                                                            </div>
+                                                                        </div>
+                                                                        <br><br>
+                                                                        <hr
+                                                                            style="border: -1px solid black; width: 97%;">
+                                                                        <div class="tabletext"
+                                                                            style="display:flex; margin-left:300px;">
+                                                                            <input type="checkbox" name="send_sms"
+                                                                                value="{{ $emp->send_sms_allow }}"
+                                                                                @if ($emp->send_sms_allow == 'on') checked @endif>
+                                                                            <h8 class="pl-3">Send SMS Allow</h8>
+                                                                        </div><br>
+                                                                        <div class="tabletext"
+                                                                            style="display:flex; margin-left:300px;">
+                                                                            <input type="checkbox" name="self_service"
+                                                                                value="{{ $emp->employee_self_service_allow }}"
+                                                                                @if ($emp->employee_self_service_allow == 'on') checked @endif>
+                                                                            <h8 class="pl-3">Employee Self Service
+                                                                                Portal Allow</h8>
+                                                                        </div><br>
+                                                                        <div class="tabletext"
+                                                                            style="display:flex; margin-left:300px;">
+                                                                            <input type="checkbox" name="selfie_punch"
+                                                                                value="{{ $emp->selfie_punch_allow }}"
+                                                                                @if ($emp->selfie_punch_allow == 'on') checked @endif>
+                                                                            <h8 class="pl-3">Selfie Punch Allow</h8>
+                                                                        </div><br>
+                                                                        <div class="tabletext"
+                                                                            style="display:flex; margin-left:300px;">
+                                                                            <input type="checkbox"
+                                                                                name="selfie_approve"
+                                                                                value="{{ $emp->approve_selfie_punch }}"
+                                                                                @if ($emp->approve_selfie_punch == 'on') checked @endif>
+                                                                            <h8 class="pl-3">Approve Selfie Punch
+                                                                                Auto</h8>
+                                                                        </div><br>
+                                                                        <hr
+                                                                            style="border: -1px solid black; width: 97%;">
+                                                                        <div class="tabletext"
+                                                                            style="display:flex; margin-left:300px;">
+                                                                            <input type="checkbox"
+                                                                                name="notification_allow"
+                                                                                value="{{ $emp->notification_to_own }}"
+                                                                                @if ($emp->notification_to_own == 'on') checked @endif>
+                                                                            <h8 class="pl-3">Notification to Own</h8>
+                                                                        </div><br>
+                                                                        <div class="tabletext"
+                                                                            style="display:flex; margin-left:300px;">
+                                                                            <input type="checkbox"
+                                                                                name="Notification_admin"
+                                                                                value="{{ $emp->notification_to_admin }}"
+                                                                                @if ($emp->notification_to_admin == 'on') checked @endif>
+                                                                            <h8 class="pl-3">Notification to Admin
+                                                                            </h8>
+                                                                        </div><br>
+
+                                                                    </div>
+                                                                    {{-- </div> --}}
+                                                                    <br>
+                                                                    <div class="table_actions"
+                                                                        style="margin-left: -105px">
+                                                                        <div class="row align-items-center ">
+                                                                            <div
+                                                                                class="col-xxl-6 col-xl-6 col-lg-6 col-md-6 m-auto ">
+                                                                                <div
+                                                                                    class="table_actionsBtns justify-content-center">
+                                                                                    <button
+                                                                                        class="tb_actionBtn">Save</button>
+                                                                                    <button class="tb_actionBtn"
+                                                                                        data-dismiss="modal">Exit</button>
+                                                                                </div>
+                                                                            </div>
+                                                                        </div>
+                                                                    </div>
+                                                                 </div>
+                                                                </div>
+                                                            </form>
+                                                    </div>
+                                                </div>
                                         </div>
+
                                     </div>
+                                    @endforeach
                                 </div>
                             </div>
-                            <div class="table_actions">
-                                <div class="row align-items-center">
-                                    <div class="col-xxl-6 col-xl-6 col-lg-6 col-md-6 ">
-                                        <div class="table_actionsBtns">
-                                            <button class="tb_actionBtn" id="emp_click_modal">Add</button>
-                                            <button class="tb_actionBtn">Exit</button>
-                                        </div>
-                                    </div>
+                        </div>
+                    </div>
+                    <div class="table_actions">
+                        <div class="row align-items-center">
+                            <div class="col-xxl-6 col-xl-6 col-lg-6 col-md-6 ">
+                                <div class="table_actionsBtns">
+                                    <button class="tb_actionBtn" id="emp_click_modal">Add</button>
+                                    <button class="tb_actionBtn">Exit</button>
                                 </div>
                             </div>
                         </div>
@@ -249,13 +496,15 @@
         </div>
     </div>
 </div>
+</div>
+</div>
 {{-- add_model --}}
 <div class="modal fade" id="create_emp" tabindex="-1" role="dialog" aria-hidden="true"
-    style="top: 38px;left: -186px ">
+    style="top: 38px;left: -186px">
     <div class="modal-dialog" role="document">
         <div class="modal-content" style="width: 173%;">
             <div class="modal-header" style="background-color: #BCBCBC;">
-                <h6 style="padding-bottom: 0px;margin-left: 357px;">Add New Leave Details Here</h6>
+                <h6 style="padding-bottom: 0px;margin-left: 310px;">Add Employee Configuration</h6>
                 <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                     <span aria-hidden="true">&times;</span>
                 </button>
@@ -273,12 +522,13 @@
                 <form method="post" id="skills" action="{{ route('Employee-Configurations.store') }}">
                     @csrf
                     <div class="row">
+                        {{-- <hr style="border: -1px solid black; width: 97%;"> --}}
                         <div class="col-6">
                             <div class="popupForm_col">
                                 <strong>Company Name*</strong>
                                 <div class="popupForm_field">
                                     <select name="company_id" class="selective">
-                                        @foreach ($comapnaies as $id)
+                                        @foreach ($companies as $id)
                                             <option value="{{ $id->id }}">
                                                 {{ $id->company_name }}
                                             </option>
@@ -292,7 +542,7 @@
                                 <strong>Department Name*</strong>
                                 <div class="popupForm_field">
                                     <select name="dept_id" class="selective">
-                                        @foreach ($department as $id)
+                                        @foreach ($departments as $id)
                                             <option value="{{ $id->id }}">
                                                 {{ $id->department_name }}
                                             </option>
@@ -308,8 +558,8 @@
                                 <div class="popupForm_field">
                                     <select name="shift_code" class="selective">
                                         @foreach ($employees as $id)
-                                            <option value="{{ $id->employee_code }}">
-                                                {{ $id->shift_code }}
+                                            <option value="{{ $id->id }}">
+                                                {{ $id->employee_code }}
                                             </option>
                                         @endforeach
                                     </select>
@@ -324,23 +574,49 @@
                                     <select name="shift_name" class="selective">
                                         @foreach ($employees as $shiftname)
                                             <option value="{{ $shiftname->employee_name }}">
-                                                {{ $shiftname->shift_Name }}
+                                                {{ $shiftname->employee_name }}
                                             </option>
                                         @endforeach
                                     </select>
                                 </div>
                             </div>
-                            <br>
-                            <p style=""></p>
-                            <div class="tabletext" style="display:flex; margin-left:-67px;">
-                                <input type="checkbox" name="send_sms">
-                                <p class="pl-3">Send SMS Allow</p>
-                            </div>
-                            </div>
                         </div>
+                        <br><br>
+                        <hr style="border: -1px solid black; width: 97%;">
+                        <div class="tabletext" style="display:flex; margin-left:300px;">
+                            <input type="checkbox" name="send_sms" @if (old('send_sms')) checked @endif>
+                            <h8 class="pl-3">Send SMS Allow</h8>
+                        </div><br>
+                        <div class="tabletext" style="display:flex; margin-left:300px;">
+                            <input type="checkbox" name="self_service"
+                                @if (old('self_service')) checked @endif>
+                            <h8 class="pl-3">Employee Self Service Portal Allow</h8>
+                        </div><br>
+                        <div class="tabletext" style="display:flex; margin-left:300px;">
+                            <input type="checkbox" name="selfie_punch"
+                                @if (old('selfie_punch')) checked @endif>
+                            <h8 class="pl-3">Selfie Punch Allow</h8>
+                        </div><br>
+                        <div class="tabletext" style="display:flex; margin-left:300px;">
+                            <input type="checkbox" name="selfie_approve"
+                                @if (old('selfie_approve')) checked @endif>
+                            <h8 class="pl-3">Approve Selfie Punch Auto</h8>
+                        </div><br>
+                        <hr style="border: -1px solid black; width: 97%;">
+                        <div class="tabletext" style="display:flex; margin-left:300px;">
+                            <input type="checkbox" name="notification_allow"
+                                @if (old('notification_allow')) checked @endif>
+                            <h8 class="pl-3">Notification to Own</h8>
+                        </div><br>
+                        <div class="tabletext" style="display:flex; margin-left:300px;">
+                            <input type="checkbox" name="Notification_admin"
+                                @if (old('Notification_admin')) checked @endif>
+                            <h8 class="pl-3">Notification to Admin</h8>
+                        </div><br>
                     </div>
+                    {{-- </div> --}}
                     <br>
-                    <div class="table_actions">
+                    <div class="table_actions" style="margin-left: -105px">
                         <div class="row align-items-center ">
                             <div class="col-xxl-6 col-xl-6 col-lg-6 col-md-6 m-auto ">
                                 <div class="table_actionsBtns justify-content-center">
@@ -350,9 +626,37 @@
                             </div>
                         </div>
                     </div>
-                </form>
             </div>
         </div>
-
+        </form>
     </div>
 </div>
+
+<script>
+    function fetchDepartments() {
+        var companyId = document.getElementById('companyName').value;
+        var departmentSelect = document.getElementById('departmentName');
+        console.log(companyId);
+        // Clear previous options
+        departmentSelect.innerHTML = ' <option selected disabled>Select Department</option>';
+
+        // Fetch departments based on selected company
+        fetch('/company/' + companyId, {
+            method: 'GET',
+            headers: {
+                'Content-Type': 'application/json'
+            }
+        })
+            .then(response => response.json())
+            .then(data => {
+                data.forEach(function (department) {
+                    var option = document.createElement('option');
+                    option.value = department.id;
+                    option.textContent = department.department_name;
+                    departmentSelect.appendChild(option);
+                });
+            })
+            .catch(error => console.error('Error fetching departments:', error));
+    }
+
+</script>

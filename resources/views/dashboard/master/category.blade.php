@@ -1,13 +1,61 @@
 <x-header data="category_config component" />
 <link rel="stylesheet" href="{{ asset('css/css/master_tab.css') }}">
 <link rel="stylesheet" href="https://cdn.datatables.net/1.11.5/css/jquery.dataTables.min.css">
-<script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
 <script src="https://cdn.datatables.net/1.11.5/js/jquery.dataTables.min.js"></script>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/sweetalert2@10.15.7/dist/sweetalert2.min.css">
+<script src="https://cdn.jsdelivr.net/npm/sweetalert2@10.15.7/dist/sweetalert2.all.min.js"></script>
 <script>
     $(document).ready(function() {
         $('#category_config').DataTable();
+    //
+        $('#category_modal').click(function() {
+            $('#add_shift').modal('show');
+        })
+        $('.edit_company').click(function() {
+            var Shiftid = $(this).data('dept-id');
+            console.log('kkk', Shiftid);
+            var $shift_Id = "#" + Shiftid;
+            $($shift_Id).modal('show');
+        })
     });
+    //
+    const checkboxes = document.querySelectorAll('input[type="checkbox"]');
+    checkboxes.forEach((checkbox) => {
+        checkbox.addEventListener('click', () => {
+            checkboxes.forEach((cb) => {
+                if (cb !== checkbox) {
+                    cb.checked = false;
+                }
+            });
+        });
+    });
+    //alert
+    function showCustomAlert(button) {
+        var shiftId = button.getAttribute('data-shift-id');
+        Swal.fire({
+            title: 'Delete Confirmation',
+            text: 'Are you sure you want to delete this data?',
+            icon: 'warning',
+            showCancelButton: true,
+            confirmButtonColor: '#3085d6',
+            cancelButtonColor: '#d33',
+            confirmButtonText: 'OK'
+        }).then((result) => {
+            if (result.isConfirmed) {
+                var formAction = "{{ route('Category.destroy', ':shiftId') }}".replace(':shiftId',
+                    shiftId);
+                document.getElementById('deleteForm').action = formAction;
+                document.getElementById('deleteForm').submit();
+            }
+        });
+    }
 </script>
+<style>
+    .modal-body {
+        overflow-y: scroll !important;
+        height: 514px !important;
+    }
+</style>
 <div class="fr-section" style="margin-top: -72px">
     <div class="fr-section_detail ">
         <div class="dashboard_innerPages">
@@ -32,6 +80,27 @@
                         <li><a href="{{ route('Holiday.index') }}">Holiday</a></li>
                     </ul>
                 </div>
+                @include('sweetalert::alert')
+                @if (Session::has('message'))
+                    <div class="alert alert-success" style="margin-top: 12px;" id="success-message">
+                        <span style="margin-left:330px">{{ Session::get('message') }}</span>
+                        <script>
+                            setTimeout(function() {
+                                document.getElementById('success-message').style.display = 'none';
+                            }, 3000);
+                        </script>
+                    </div>
+                @endif
+                @if (Session::has('danger'))
+                    <div class="alert alert-danger" style="margin-top: 12px;" id="danger-message">
+                        <span style="margin-left:330px">{{ Session::get('danger') }}</span>
+                        <script>
+                            setTimeout(function() {
+                                document.getElementById('danger-message').style.display = 'none';
+                            }, 3000);
+                        </script>
+                    </div>
+                @endif
                 <div class="custom_tabs_data" id="tab5" style="display: block;">
                     <div class="masterTab_bg">
                         <div class="masterTab_data">
@@ -96,34 +165,367 @@
                                                         <tr>
                                                             <td>
                                                                 <div class="tabletext">
-                                                                    <p>01</p>
+                                                                    <p>{{$catgry->category_id}}</p>
                                                                 </div>
                                                             </td>
                                                             <td>
                                                                 <div class="tabletext">
-                                                                    <p>Full Time</p>
+                                                                    <p>{{$catgry->category_name}}</p>
                                                                 </div>
                                                             </td>
                                                             <td>
                                                                 <div class="tabletext">
-                                                                    <p>02:00</p>
+                                                                    <p>{{$catgry->early_arrival_allow}}</p>
                                                                 </div>
                                                             </td>
                                                             <td>
                                                                 <div class="tabletext">
-                                                                    <p>08:00</p>
+                                                                    <p>{{$catgry->Max_time_to_allow}}</p>
                                                                 </div>
                                                             </td>
                                                             <td>
                                                                 <div class="actionBtns">
-                                                                    <button class="actBtn"><i
-                                                                            class="fa fa-pencil-square-o"
-                                                                            aria-hidden="true"></i></button>
-                                                                    <button class="actBtn"><i class="fa fa-trash"
-                                                                            aria-hidden="true"></i></button>
+                                                                    <button class="actBtn edit_company"
+                                                                        id="shift_edit_button" data-toggle="modal"
+                                                                        data-target="#edit_shift"
+                                                                        data-dept-id="edit_shift_{{ $catgry->id }}">
+                                                                        <i class="fa fa-pencil-square-o"
+                                                                            aria-hidden="true"></i>
+                                                                    </button>
+                                                                    <form id = "deleteForm"
+                                                                        action="{{ route('Category.destroy', $catgry->id) }}"
+                                                                        method="post">
+                                                                        @csrf
+                                                                        @method('delete')
+                                                                        <button type="button"
+                                                                            class="actBtn delete_shift"
+                                                                            data-shift-id="{{ $catgry->id }}"
+                                                                            onclick="showCustomAlert(this)">
+                                                                            <i class="fa fa-trash"
+                                                                                aria-hidden="true"></i>
+                                                                        </button>
+                                                                    </form>
                                                                 </div>
                                                             </td>
                                                         </tr>
+                                                        {{-- //edit --}}
+                                                        <div class="modal fade edit" id="edit_shift_{{ $catgry->id }}" tabindex="-1" role="dialog" aria-hidden="true"
+                                                        style="top:37px;">
+                                                        <div class="modal-dialog" role="document">
+                                                            {{-- <div class="modal-content" style="width: 173%;"> --}}
+                                                            <div class="modal-content" style="width: 252%;left: -380px">
+                                                                <div class="modal-header" style="background-color: #BCBCBC;">
+                                                                    <h6 style="padding-bottom: 0px;margin-left: 500px;">Add Category Details Here</h6>
+                                                                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                                                        <span aria-hidden="true">&times;</span>
+                                                                    </button>
+                                                                </div>
+                                                                <div class="modal-body" style="background-color: #ededed">
+                                                                    <form method="post" id="skills" action="{{ route('Category.update', $catgry->id) }}">
+                                                                        @csrf
+                                                                        @method('patch')
+                                                                        <div class="row">
+                                                                            <div class="col-6">
+                                                                                <div class="popupForm_col">
+                                                                                    <strong>Category Id*</strong>
+                                                                                    <div class="popupForm_field">
+                                                                                        <input type="text" name="category_id" value="{{$catgry->category_id}}">
+                                                                                    </div>
+                                                                                </div>
+                                                                            </div>
+                                                                            {{-- // --}}
+                                                                            <div class="col-6">
+                                                                                <div class="popupForm_col">
+                                                                                    <strong>Category Name*</strong>
+                                                                                    <div class="popupForm_field">
+                                                                                        <input type="text" name="category_name" value="{{$catgry->category_name}}">
+                                                                                    </div>
+                                                                                </div>
+                                                                            </div>
+                                                                            <div class="col-lg-8" style="flex: 2 1 72.666667%;max-width: 100.666667%;">
+                                                                                <div class="addCategory_column">
+                                                                                    <div class="row">
+                                                                                        <div class="col-xxl-4 col-xl-4 col-lg-4 col-md-4 ">
+                                                                                            <div class="addCategory_colInfo">
+                                                                                                <div class="addCategory_colList">
+                                                                                                    <ul>
+                                                                                                        <li>
+                                                                                                            <div class="addCategory_colListInfo">
+                                                                                                                <strong>Early Arrival Allow</strong>
+                                                                                                                <div class="shitInput">
+                                                                                                                    <input type="time"  name="early_bird" value="{{$catgry->early_arrival_allow}}">
+                                                                                                                </div>
+                                                                                                            </div>
+                                                                                                        </li>
+                                                    
+                                                                                                        <li>
+                                                                                                            <div class="addCategory_colListInfo">
+                                                                                                                <strong>Max. OT Allow</strong>
+                                                                                                                <div class="shitInput">
+                                                                                                                    <input type="time" name="Max_OT_allow" value="{{$catgry->Max_time_to_allow}}">
+                                                                                                                </div>
+                                                                                                            </div>
+                                                                                                        </li>
+                                                                                                    </ul>
+                                                                                                </div>
+                                                                                                <div class="hoursRange_sec">
+                                                                                                    <div class="hoursRange_sec_info">
+                                                                                                        <label>OT Hours Range For Half C.off</label>
+                                                                                                        <div class="hoursRange_sec_row pb-3">
+                                                                                                            <div class="addCategory_colListInfo">
+                                                                                                                <strong>From</strong>
+                                                                                                                <div class="shitInput">
+                                                                                                                    <input type="time" name="OT_range_half_from" value="{{$catgry->OT_half_From}}">
+                                                                                                                </div>
+                                                                                                            </div>
+                                                                                                            <div class="addCategory_colListInfo">
+                                                                                                                <strong>To</strong>
+                                                                                                                <div class="shitInput">
+                                                                                                                    <input type="time" name="OT_range_half_to" value="{{$catgry->OT_half_To}}">
+                                                                                                                </div>
+                                                                                                            </div>
+                                                                                                        </div>
+                                                                                                    </div>
+                                                                                                    <div class="hoursRange_sec_info">
+                                                                                                        <label>OT Hours Range For Full C.off</label>
+                                                                                                        <div class="hoursRange_sec_row ">
+                                                                                                            <div class="addCategory_colListInfo">
+                                                                                                                <strong>From</strong>
+                                                                                                                <div class="shitInput">
+                                                                                                                    <input type="time" name="OT_range_hals_c_From" value="{{$catgry->OT_full_from}}">
+                                                                                                                </div>
+                                                                                                            </div>
+                                                                                                            <div class="addCategory_colListInfo">
+                                                                                                                <strong>To</strong>
+                                                                                                                <div class="shitInput">
+                                                                                                                    <input type="time" name="OT_range_hals_c_off_To" value="{{$catgry->OT_full_To}}">
+                                                                                                                </div>
+                                                                                                            </div>
+                                                                                                        </div>
+                                                                                                    </div>
+                                                                                                </div>
+                                                                                                <div class="hoursRange_sec_info applyFor">
+                                                                                                    <label>Apply for</label>
+                                                                                                    <div>
+                                                                                                        <ul>
+                                                                                                            <li>
+                                                                                                                <div class="tableCheckbox lunchCheck">
+                                                                                                                    <label class="checkbox-label">
+                                                                                                                        <input type="checkbox" name="work_day" @if($catgry->work_day == 'week_day') checked @endif>
+                                                                                                                        <span class="checkbox-custom rectangular"></span>
+                                                                                                                    </label>
+                                                                                                                    Work Days
+                                                                                                                </div>
+                                                                                                            </li>
+                                                                                                            <li>
+                                                                                                                <div class="tableCheckbox lunchCheck">
+                                                                                                                    <label class="checkbox-label">
+                                                                                                                        <input type="checkbox" name="week_off" @if($catgry->work_day == 'week_off') checked @endif>
+                                                                                                                        <span class="checkbox-custom rectangular"></span>
+                                                                                                                    </label>
+                                                                                                                    Week off
+                                                                                                                </div>
+                                                                                                            </li>
+                                                                                                            <li>
+                                                                                                                <div class="tableCheckbox lunchCheck">
+                                                                                                                    <label class="checkbox-label">
+                                                                                                                        <input type="checkbox" name="holidays" @if($catgry->work_day == 'holidays') checked @endif>
+                                                                                                                        <span class="checkbox-custom rectangular"></span>
+                                                                                                                    </label>
+                                                                                                                    Holidays
+                                                                                                                </div>
+                                                                                                            </li>
+                                                                                                        </ul>
+                                                                                                    </div>
+                                                                                                </div>
+                                                                                            </div>
+                                                                                        </div>
+                                                                                        <div class="col-xxl-4 col-xl-4 col-lg-4 col-md-4 ">
+                                                                                            <div class="addCategory_colInfo secndCol">
+                                                                                                <div class="addCategory_colList">
+                                                                                                    <ul>
+                                                                                                        <li>
+                                                                                                            <div class="addCategory_colListInfo">
+                                                                                                                <strong>Early Arrival Ignore</strong>
+                                                                                                                <div class="shitInput">
+                                                                                                                    <input type="time" name="Early_arraival" value="{{$catgry->early_arraival_ignore}}">
+                                                                                                                </div>
+                                                                                                            </div>
+                                                                                                        </li>
+                                                    
+                                                                                                        <li>
+                                                                                                            <div class="addCategory_colListInfo">
+                                                                                                                <strong>Late Arrival Allow</strong>
+                                                                                                                <div class="shitInput">
+                                                                                                                    <input type="time" name="Late_arraival" value="{{$catgry->Late_arraival_allow}}">
+                                                                                                                </div>
+                                                                                                            </div>
+                                                                                                        </li>
+                                                                                                        <li>
+                                                                                                            <div class="addCategory_colListInfo">
+                                                                                                                <strong>Early Departure Allow</strong>
+                                                                                                                <div class="shitInput">
+                                                                                                                    <input type="time" name="Early_departure" value="{{$catgry->Early_depature_allow}}">
+                                                                                                                </div>
+                                                                                                            </div>
+                                                                                                        </li>
+                                                                                                        <li>
+                                                                                                            <div class="addCategory_colListInfo">
+                                                                                                                <strong>Late Departure Ignore</strong>
+                                                                                                                <div class="shitInput">
+                                                                                                                    <input type="time" name="late_depature_ignore" value="{{$catgry->Late_depature_ignore}}">
+                                                                                                                </div>
+                                                                                                            </div>
+                                                                                                        </li>
+                                                                                                        <li>
+                                                                                                            <div class="addCategory_colListInfo">
+                                                                                                                <strong>OverTime Ignore</strong>
+                                                                                                                <div class="shitInput">
+                                                                                                                    <input type="time" name="OT_ignore" value="{{$catgry->OT_ignore}}">
+                                                                                                                </div>
+                                                                                                            </div>
+                                                                                                        </li>
+                                                                                                        <li>
+                                                                                                            <div class="addCategory_colListInfo timeSelect">
+                                                                                                                <strong>Select No. of Late Arraival(dates)/month</strong>
+                                                                                                                <div class="auth_select_info ">
+                                                                                                                    <select name="no_of_late">
+                                                                                                                        <option @if($catgry->select_no_of_late == 5) selected @endif>5</option>
+                                                                                                                        <option @if($catgry->select_no_of_late == 10) selected @endif>10</option>
+                                                                                                                        <option @if($catgry->select_no_of_late == 15) selected @endif>15</option>
+                                                                                                                    </select>
+                                                                                                                </div>
+                                                                                                            </div>
+                                                                                                        </li>
+                                                                                                        <li>
+                                                                                                            <div class="addCategory_colListInfo timeSelect lateAction">
+                                                                                                                <strong>Late Action</strong>
+                                                                                                                <div class="auth_select_info">
+                                                                                                                    <select name="Absent">
+                                                                                                                        <option value="Half Absent" {{ $catgry->Absent == 'Half Absent' ? 'selected' : '' }}>Half Absent</option>
+                                                                                                                        <option value="Full Absent" {{ $catgry->Absent == 'Full Absent' ? 'selected' : '' }}>Full Absent</option>
+                                                                                                                    </select>
+                                                                                                                </div>   
+                                                                                                            </div>
+                                                                                                        </li>
+                                                                                                    </ul>
+                                                                                                </div>
+                                                    
+                                                                                            </div>
+                                                                                        </div>
+                                                                                        <div class="col-xxl-4 col-xl-4 col-lg-4 col-md-4 ">
+                                                                                            <div class="addCategory_colInfo ">
+                                                                                                <div class="addCategory_colList">
+                                                                                                    <ul>
+                                                                                                        <li>
+                                                                                                            <div class="addCategory_colListInfo">
+                                                                                                                <strong>Half Day If Late Hours Greater Than</strong>
+                                                                                                                <div class="shitInput">
+                                                                                                                    <input type="time" name="half_late_hours" value="{{$catgry->halfday_if_late_hours_greater_than}}">
+                                                                                                                </div>
+                                                                                                            </div>
+                                                                                                        </li>
+                                                                                                        <li>
+                                                                                                            <div class="addCategory_colListInfo">
+                                                                                                               <strong>Half Day If Work Hrs Less Than</strong>
+                                                                                                                <div class="shitInput">
+                                                                                                                    <input type="time" name="half_less_hours" value="{{$catgry->halfday_if_Work_hours_less_than}}">
+                                                                                                                </div>
+                                                                                                            </div>
+                                                                                                        </li>
+                                                                                                        <li>
+                                                                                                            <div class="addCategory_colListInfo">
+                                                                                                                <strong>Absent If Late Hrs Greater Than</strong>
+                                                                                                                <div class="shitInput">
+                                                                                                                    <input type="time" name="Absent_after_hours" value="{{$catgry->absent_if_Work_hours_less_than}}">
+                                                                                                                </div>
+                                                                                                            </div>
+                                                                                                        </li>
+                                                                                                        {{-- <li>
+                                                                                                            <div class="addCategory_colListInfo">
+                                                                                                                <strong>Absent If Work Hours Less Than</strong>
+                                                                                                                <div class="shitInput">
+                                                                                                                    <input type="text" name="Absent_after_hours" value="{{old('Absent_after_hours')}}">
+                                                                                                                </div>
+                                                                                                            </div>
+                                                                                                        </li> --}}
+                                                                                                        <li>
+                                                                                                            <div class="addCategory_colListInfo">
+                                                                                                                <strong>Shift Hrs For OT Calculation</strong>
+                                                                                                                <div class="shitInput">
+                                                                                                                    <input type="time" name="ot_calculations" value="{{$catgry->ot_calculations}}">
+                                                                                                                </div>
+                                                                                                            </div>
+                                                                                                        </li>
+                                                                                                        <li>
+                                                                                                            <div class="addCategory_colListInfo">
+                                                                                                                <strong>OverTime Payment Multiplyer</strong>
+                                                                                                                <div class="shitInput">
+                                                                                                                    <input type="time" name="ot_payment_multiplayer" value="{{$catgry->OT_payment_multiplyaer}}">
+                                                                                                                </div>
+                                                                                                            </div>
+                                                                                                        </li>
+                                                    
+                                                                                                    </ul>
+                                                                                                </div>
+                                                                                                <div class="allIn">
+                                                                                                    <ul>
+                                                                                                        <li>
+                                                                                                            <div class="allInRadio_btn">
+                                                                                                                <label>
+                                                                                                                    <input type="radio" name="all" value="All_in" @if($catgry->all_in_first_in == 'All_in') checked @endif>
+                                                                                                                    All IN/OUT
+                                                                                                                </label>
+                                                                                                            </div>
+                                                                                                        </li>
+                                                                                                        <li>
+                                                                                                            <div class="allInRadio_btn">
+                                                                                                                <label>
+                                                                                                                    <input type="radio" name="all"  value="First_in" @if($catgry->all_in_first_in == 'First_in') checked @endif>
+                                                                                                                    First IN Last OUT
+                                                                                                                </label>
+                                                                                                            </div>
+                                                                                                        </li>
+                                                                                                    </ul>
+                                                                                                </div>
+                                                                                                
+                                                                                                <div class="hoursRange_sec_info applyFor">
+                                                                                                    <div>
+                                                                                                        <ul>
+                                                                                                            <li>
+                                                                                                                <div class="tableCheckbox lunchCheck">
+                                                                                                                    <label class="checkbox-label">
+                                                                                                                        <input type="checkbox" name="wo_lapse"  value="on" @if($catgry->WO_Lapse_on_previous_and_next_absent == 'on') checked @endif>
+                                                                                                                        <span class="checkbox-custom rectangular"></span>
+                                                                                                                    </label>
+                                                                                                                    WO Lapse on Previous And Next Absent
+                                                                                                                </div>
+                                                                                                            </li>
+                                                                                                        </ul>
+                                                                                                    </div>
+                                                                                                </div>
+                                                                                            </div>
+                                                                                        </div>
+                                                                                    </div>
+                                                                                </div>
+                                                                            </div>
+                                                                        </div>
+                                                                        <br>
+                                                                        <div class="table_actions">
+                                                                            <div class="row align-items-center ">
+                                                                                <div class="col-xxl-6 col-xl-6 col-lg-6 col-md-6 m-auto ">
+                                                                                    <div class="table_actionsBtns justify-content-center">
+                                                                                        <button class="tb_actionBtn">Save</button>
+                                                                                        <button class="tb_actionBtn" data-dismiss="modal">Exit</button>
+                                                                                    </div>
+                                                                                </div>
+                                                                            </div>
+                                                                        </div>
+                                                                    </form>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
                                                     @empty
                                                         <p style="color:red;margin-top: -120px">Oops ! No Records Found
                                                             Category
@@ -182,6 +584,9 @@
                                                     @endforelse
                                                 </tbody>
                                             </table>
+                                            {{-- //edit --}}
+                                            {{-- @foreach ( as )
+                                            @endforeach --}}
                                         </div>
                                     </div>
                                 </div>
@@ -191,7 +596,7 @@
                                 <div class="row align-items-center">
                                     <div class="col-xxl-6 col-xl-6 col-lg-6 col-md-6 ">
                                         <div class="table_actionsBtns">
-                                            <button class="tb_actionBtn">Add</button>
+                                            <button class="tb_actionBtn" id="category_modal">Add</button>
                                             <button class="tb_actionBtn">Exit</button>
                                         </div>
                                     </div>
@@ -204,4 +609,344 @@
         </div>
     </div>
 </div>
+{{-- //add_modal --}}
+<div class="modal fade" id="add_shift" tabindex="-1" role="dialog" aria-hidden="true"
+    style="top:37px;">
+    <div class="modal-dialog" role="document">
+        {{-- <div class="modal-content" style="width: 173%;"> --}}
+        <div class="modal-content" style="width: 252%;left: -380px">
+            <div class="modal-header" style="background-color: #BCBCBC;">
+                <h6 style="padding-bottom: 0px;margin-left: 500px;">Add New Category Details Here</h6>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            <div class="modal-body" style="background-color: #ededed">
+                <form method="post" id="skills" action="{{ route('Category.store') }}">
+                    @csrf
+                    <div class="row">
+                        <div class="col-6">
+                            <div class="popupForm_col">
+                                <strong>Company Name*</strong>
+                                <div class="popupForm_field">
+                                    <select name="company_id" class="selective">
+                                        @foreach ($comapnaies as $id)
+                                            <option value="{{ $id->id }}">
+                                                {{ $id->company_name }}
+                                            </option>
+                                        @endforeach
+                                    </select>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-6">
+                            <div class="popupForm_col">
+                                <strong>Department Name*</strong>
+                                <div class="popupForm_field">
+                                    <select name="dept_id" class="selective">
+                                        @foreach ($department as $id)
+                                            <option value="{{ $id->id }}">
+                                                {{ $id->department_name }}
+                                            </option>
+                                        @endforeach
+                                    </select>
+                                </div>
+                            </div>
+                        </div>
+                        {{-- // --}}
+                        <div class="col-6">
+                            <div class="popupForm_col">
+                                <strong>Category Id*</strong>
+                                <div class="popupForm_field">
+                                    <input type="text" name="category_id" value="{{ old('category_id') }}">
+                                </div>
+                            </div>
+                        </div>
+                        {{-- // --}}
+                        <div class="col-6">
+                            <div class="popupForm_col">
+                                <strong>Category Name*</strong>
+                                <div class="popupForm_field">
+                                    <input type="text" name="category_name" value="{{ old('category_name') }}">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-lg-8" style="flex: 2 1 72.666667%;max-width: 100.666667%;">
+                            <div class="addCategory_column">
+                                <div class="row">
+                                    <div class="col-xxl-4 col-xl-4 col-lg-4 col-md-4 ">
+                                        <div class="addCategory_colInfo">
+                                            <div class="addCategory_colList">
+                                                <ul>
+                                                    <li>
+                                                        <div class="addCategory_colListInfo">
+                                                            <strong>Early Arrival Allow</strong>
+                                                            <div class="shitInput">
+                                                                <input type="time"  name="early_bird" value="{{old('early_bird')}}">
+                                                            </div>
+                                                        </div>
+                                                    </li>
+
+                                                    <li>
+                                                        <div class="addCategory_colListInfo">
+                                                            <strong>Max. OT Allow</strong>
+                                                            <div class="shitInput">
+                                                                <input type="time" name="Max_OT_allow" value="{{old('Max_OT_allow')}}">
+                                                            </div>
+                                                        </div>
+                                                    </li>
+                                                </ul>
+                                            </div>
+                                            <div class="hoursRange_sec">
+                                                <div class="hoursRange_sec_info">
+                                                    <label>OT Hours Range For Half C.off</label>
+                                                    <div class="hoursRange_sec_row pb-3">
+                                                        <div class="addCategory_colListInfo">
+                                                            <strong>From</strong>
+                                                            <div class="shitInput">
+                                                                <input type="time" name="OT_range_half_from" value="{{old('OT_range_half_from')}}">
+                                                            </div>
+                                                        </div>
+                                                        <div class="addCategory_colListInfo">
+                                                            <strong>To</strong>
+                                                            <div class="shitInput">
+                                                                <input type="time" name="OT_range_half_to" value="{{old('OT_range_half_to')}}">
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="hoursRange_sec_info">
+                                                    <label>OT Hours Range For Full C.off</label>
+                                                    <div class="hoursRange_sec_row ">
+                                                        <div class="addCategory_colListInfo">
+                                                            <strong>From</strong>
+                                                            <div class="shitInput">
+                                                                <input type="time" name="OT_range_hals_c_From" value="{{old('OT_range_hals_c_From')}}">
+                                                            </div>
+                                                        </div>
+                                                        <div class="addCategory_colListInfo">
+                                                            <strong>To</strong>
+                                                            <div class="shitInput">
+                                                                <input type="time" name="OT_range_hals_c_off_To" value="{{old('OT_range_hals_c_off_To')}}">
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="hoursRange_sec_info applyFor">
+                                                <label>Apply for</label>
+                                                <div>
+                                                    <ul>
+                                                        <li>
+                                                            <div class="tableCheckbox lunchCheck">
+                                                                <label class="checkbox-label">
+                                                                    <input type="checkbox" name="work_day" value="on">
+                                                                    <span class="checkbox-custom rectangular"></span>
+                                                                </label>
+                                                                Work Days
+                                                            </div>
+                                                        </li>
+                                                        <li>
+                                                            <div class="tableCheckbox lunchCheck">
+                                                                <label class="checkbox-label">
+                                                                    <input type="checkbox" name="week_off" value="on">
+                                                                    <span class="checkbox-custom rectangular"></span>
+                                                                </label>
+                                                                Week off
+                                                            </div>
+                                                        </li>
+                                                        <li>
+                                                            <div class="tableCheckbox lunchCheck">
+                                                                <label class="checkbox-label">
+                                                                    <input type="checkbox" name="holidays" value="on">
+                                                                    <span class="checkbox-custom rectangular"></span>
+                                                                </label>
+                                                                Holidays
+                                                            </div>
+                                                        </li>
+                                                    </ul>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-xxl-4 col-xl-4 col-lg-4 col-md-4 ">
+                                        <div class="addCategory_colInfo secndCol">
+                                            <div class="addCategory_colList">
+                                                <ul>
+                                                    <li>
+                                                        <div class="addCategory_colListInfo">
+                                                            <strong>Early Arrival Ignore</strong>
+                                                            <div class="shitInput">
+                                                                <input type="time" name="Early_arraival" value="{{old('Early_arraival')}}">
+                                                            </div>
+                                                        </div>
+                                                    </li>
+
+                                                    <li>
+                                                        <div class="addCategory_colListInfo">
+                                                            <strong>Late Arrival Allow</strong>
+                                                            <div class="shitInput">
+                                                                <input type="time" name="Late_arraival" value="{{old('Late_arraival')}}">
+                                                            </div>
+                                                        </div>
+                                                    </li>
+                                                    <li>
+                                                        <div class="addCategory_colListInfo">
+                                                            <strong>Early Departure Allow</strong>
+                                                            <div class="shitInput">
+                                                                <input type="time" name="Early_departure" value="{{old('Early_departure')}}">
+                                                            </div>
+                                                        </div>
+                                                    </li>
+                                                    <li>
+                                                        <div class="addCategory_colListInfo">
+                                                            <strong>Late Departure Ignore</strong>
+                                                            <div class="shitInput">
+                                                                <input type="time" name="late_depature_ignore" value="{{old('late_departure')}}">
+                                                            </div>
+                                                        </div>
+                                                    </li>
+                                                    <li>
+                                                        <div class="addCategory_colListInfo">
+                                                            <strong>OverTime Ignore</strong>
+                                                            <div class="shitInput">
+                                                                <input type="time" name="OT_ignore" value="{{old('OT_ignore')}}">
+                                                            </div>
+                                                        </div>
+                                                    </li>
+                                                    <li>
+                                                        <div class="addCategory_colListInfo timeSelect">
+                                                            <strong>Select No. of Late Arraival(dates)/month</strong>
+                                                            <div class="auth_select_info ">
+                                                                <select name="no_of_late">
+                                                                    <option value="5">5</option>
+                                                                    <option value="10">10</option>
+                                                                    <option value="15">15</option>
+                                                                </select>
+                                                            </div>
+                                                        </div>
+                                                    </li>
+                                                    <li>
+                                                        <div class="addCategory_colListInfo timeSelect lateAction">
+                                                            <strong>Late Action</strong>
+                                                            <div class="auth_select_info">
+                                                                <select name="Absent">
+                                                                    <option value="Half Absent" {{ old('Absent') == 'Half Absent' ? 'selected' : '' }}>Half Absent</option>
+                                                                    <option value="Full Absent" {{ old('Absent') == 'Full Absent' ? 'selected' : '' }}>Full Absent</option>
+                                                                </select>
+                                                            </div>   
+                                                        </div>
+                                                    </li>
+                                                </ul>
+                                            </div>
+
+                                        </div>
+                                    </div>
+                                    <div class="col-xxl-4 col-xl-4 col-lg-4 col-md-4 ">
+                                        <div class="addCategory_colInfo ">
+                                            <div class="addCategory_colList">
+                                                <ul>
+                                                    <li>
+                                                        <div class="addCategory_colListInfo">
+                                                            <strong>Half Day If Late Hours Greater Than</strong>
+                                                            <div class="shitInput">
+                                                                <input type="time" name="half_late_hours" value="{{old('half_late_hours')}}">
+                                                            </div>
+                                                        </div>
+                                                    </li>
+                                                    <li>
+                                                        <div class="addCategory_colListInfo">
+                                                       <strong>Half Day If Work Hrs Less Than</strong>
+                                                            <div class="shitInput">
+                                                                <input type="time" name="half_less_hours" value="{{old('half_less_hours')}}">
+                                                            </div>
+                                                        </div>
+                                                    </li>
+                                                    <li>
+                                                        <div class="addCategory_colListInfo">
+                                                            <strong>Absent If Late Hrs Greater Than</strong>
+                                                            <div class="shitInput">
+                                                                <input type="time" name="Absent_after_hours" value="{{old('Absent_after_hours')}}">
+                                                            </div>
+                                                        </div>
+                                                    </li>
+                                                    {{-- <li>
+                                                        <div class="addCategory_colListInfo">
+                                                            <strong>Absent If Work Hours Less Than</strong>
+                                                            <div class="shitInput">
+                                                                <input type="text" name="Absent_after_hours" value="{{old('Absent_after_hours')}}">
+                                                            </div>
+                                                        </div>
+                                                    </li> --}}
+                                                    <li>
+                                                        <div class="addCategory_colListInfo">
+                                                            <strong>Shift Hrs For OT Calculation</strong>
+                                                            <div class="shitInput">
+                                                                <input type="time" name="ot_calculations" value="{{old('ot_calculations')}}">
+                                                            </div>
+                                                        </div>
+                                                    </li>
+                                                    <li>
+                                                        <div class="addCategory_colListInfo">
+                                                            <strong>OverTime Payment Multiplyer</strong>
+                                                            <div class="shitInput">
+                                                                <input type="time" name="ot_payment_multiplayer" value="{{old('ot_payment_multiplayer')}}">
+                                                            </div>
+                                                        </div>
+                                                    </li>
+
+                                                </ul>
+                                            </div>
+                                            <div class="allIn">
+                                                <ul>
+                                                    <li>
+                                                        <div class="allInRadio_btn">
+                                                            <label><input type="radio" name="all" value="All_in">All
+                                                                IN/OUT</label>
+                                                        </div>
+                                                    </li>
+                                                    <li>
+                                                        <div class="allInRadio_btn">
+                                                            <label><input type="radio" name="all" value="First_in"> First IN
+                                                                Last OUT</label>
+                                                        </div>
+                                                    </li>
+                                                </ul>
+                                            </div>
+                                            <div class="hoursRange_sec_info applyFor">
+                                                <div>
+                                                    <ul>
+                                                        <li>
+                                                            <div class="tableCheckbox lunchCheck">
+                                                                <label class="checkbox-label">
+                                                                    <input type="checkbox" name="wo_lapse">
+                                                                    <span class="checkbox-custom rectangular"></span>
+                                                                </label>
+                                                                WO Lapse on Previous And Next Absent
+                                                            </div>
+                                                        </li>
+                                                    </ul>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <br>
+                    <div class="table_actions">
+                        <div class="row align-items-center ">
+                            <div class="col-xxl-6 col-xl-6 col-lg-6 col-md-6 m-auto ">
+                                <div class="table_actionsBtns justify-content-center">
+                                    <button class="tb_actionBtn">Save</button>
+                                    <button class="tb_actionBtn" data-dismiss="modal">Exit</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
 </div>

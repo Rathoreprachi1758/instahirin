@@ -1,13 +1,25 @@
 <x-header data="employee_master component" />
 <link rel="stylesheet" href="{{ asset('css/css/master_tab.css') }}">
 <link rel="stylesheet" href="https://cdn.datatables.net/1.11.5/css/jquery.dataTables.min.css">
-<script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
 <script src="https://cdn.datatables.net/1.11.5/js/jquery.dataTables.min.js"></script>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/sweetalert2@10.15.7/dist/sweetalert2.min.css">
+<script src="https://cdn.jsdelivr.net/npm/sweetalert2@10.15.7/dist/sweetalert2.all.min.js"></script>
 <script>
     $(document).ready(function() {
         $('#employee_master').DataTable();
+        //
+        $('#employee_modal').click(function() {
+            $('#add_emp').modal('show');
+        })
     });
 </script>
+<style>
+    .modal-body {
+        overflow-y: scroll !important;
+        overflow: hidden;
+        height: 514px !important;
+    }
+</style>
 <div class="fr-section" style="margin-top: -72px">
     <div class="fr-section_detail ">
         <div class="dashboard_innerPages">
@@ -32,6 +44,27 @@
                         <li><a href="{{ route('Holiday.index') }}">Holiday</a></li>
                     </ul>
                 </div>
+                @include('sweetalert::alert')
+                @if (Session::has('message'))
+                    <div class="alert alert-success" style="margin-top: 12px;" id="success-message">
+                        <span style="margin-left:330px">{{ Session::get('message') }}</span>
+                        <script>
+                            setTimeout(function() {
+                                document.getElementById('success-message').style.display = 'none';
+                            }, 3000);
+                        </script>
+                    </div>
+                @endif
+                @if (Session::has('danger'))
+                    <div class="alert alert-danger" style="margin-top: 12px;" id="danger-message">
+                        <span style="margin-left:330px">{{ Session::get('danger') }}</span>
+                        <script>
+                            setTimeout(function() {
+                                document.getElementById('danger-message').style.display = 'none';
+                            }, 3000);
+                        </script>
+                    </div>
+                @endif
                 {{-- // --}}
                 <div class="custom_tabs_data" id="tab6" style="display: block;">
                     <div class="masterTab_bg">
@@ -120,41 +153,58 @@
                                                             </td>
                                                             <td>
                                                                 <div class="tabletext">
-                                                                    <p>001</p>
+                                                                    <p>{{ $emp->employee_code }}</p>
                                                                 </div>
                                                             </td>
                                                             <td>
                                                                 <div class="tabletext">
-                                                                    <p>00000001</p>
+                                                                    <p>{{ $emp->bizionic_id }}</p>
                                                                 </div>
                                                             </td>
                                                             <td>
                                                                 <div class="tabletext">
-                                                                    <p>Employee Name</p>
+                                                                    <p>{{ $emp->employee_name }}</p>
                                                                 </div>
                                                             </td>
                                                             <td>
                                                                 <div class="tabletext">
-                                                                    <p>Default</p>
+                                                                    <p>{{ $emp->designation }}</p>
                                                                 </div>
                                                             </td>
                                                             <td>
                                                                 <div class="tabletext">
-                                                                    <p>Default</p>
+                                                                    <p>{{ $emp->department }}</p>
                                                                 </div>
                                                             </td>
                                                             <td>
                                                                 <div class="tabletext">
-                                                                    <p>Default</p>
+                                                                    <p>{{ $emp->category }}</p>
                                                                 </div>
                                                             </td>
                                                             <td>
                                                                 <div class="actionBtns">
-                                                                    <button class="actBtn"><i
-                                                                            class="fa fa-pencil-square-o"
-                                                                            aria-hidden="true"></i></button>
-                                                                    <button class="actBtn"><i class="fa fa-trash"
-                                                                            aria-hidden="true"></i></button>
+                                                                    <div class="actionBtns">
+                                                                        <button class="actBtn edit_company"
+                                                                            id="shift_edit_button" data-toggle="modal"
+                                                                            data-target="#edit_shift"
+                                                                            data-dept-id="edit_shift_{{ $emp->id }}">
+                                                                            <i class="fa fa-pencil-square-o"
+                                                                                aria-hidden="true"></i>
+                                                                        </button>
+                                                                        <form id = "deleteForm"
+                                                                            action="{{ route('Employee-Master.destroy', $emp->id) }}"
+                                                                            method="post">
+                                                                            @csrf
+                                                                            @method('delete')
+                                                                            <button type="button"
+                                                                                class="actBtn delete_shift"
+                                                                                data-shift-id="{{ $emp->id }}"
+                                                                                onclick="showCustomAlert(this)">
+                                                                                <i class="fa fa-trash"
+                                                                                    aria-hidden="true"></i>
+                                                                            </button>
+                                                                        </form>
+                                                                    </div>
                                                                 </div>
                                                             </td>
                                                         </tr>
@@ -226,7 +276,7 @@
                                 <div class="row align-items-center">
                                     <div class="col-xxl-6 col-xl-6 col-lg-6 col-md-6 ">
                                         <div class="table_actionsBtns">
-                                            <button class="tb_actionBtn">Add</button>
+                                            <button class="tb_actionBtn" id="employee_modal">Add</button>
                                             <button class="tb_actionBtn">Exit</button>
                                         </div>
                                     </div>
@@ -239,4 +289,409 @@
         </div>
     </div>
 </div>
+{{-- //add_modal --}}
+<div class="modal fade" id="add_emp" tabindex="-1" role="dialog" aria-hidden="true" style="top:50px;">
+    <div class="modal-dialog" role="document">
+        {{-- <div class="modal-content" style="width: 173%;"> --}}
+        <div class="modal-content" style="width: 220%;left: -305px">
+            <div class="modal-header" style="background-color: #BCBCBC;">
+                <h6 style="padding-bottom: 0px;margin-left: 417px;">Add New Employee Details Here</h6>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            <div class="modal-body" style="background-color: #ededed">
+                <form method="post" id="skills" action="{{ route('Employee-Master.store') }}">
+                    @csrf
+                    <div class="row">
+                        <div class="col-6">
+                            <div class="popupForm_col">
+                                <strong>Employee code<span style="color: red">*</span></strong>
+                                <div class="popupForm_field">
+                                    <select name="company_id" class="selective">
+                                        @foreach ($comapnaies as $id)
+                                            <option value="{{ $id->id }}">
+                                                {{ $id->company_name }}
+                                            </option>
+                                        @endforeach
+                                    </select>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-6">
+                            <div class="popupForm_col">
+                                <strong>Employee Name<span style="color: red">*</span></strong>
+                                <div class="popupForm_field">
+                                    <select name="dept_id" class="selective">
+                                        @foreach ($department as $id)
+                                            <option value="{{ $id->id }}">
+                                                {{ $id->department_name }}
+                                            </option>
+                                        @endforeach
+                                    </select>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-6">
+                            <div class="popupForm_col">
+                                <strong>Company<span style="color: red">*</span></strong>
+                                <div class="popupForm_field">
+                                    <input type="text" name="category_id" value="{{ old('category_id') }}">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-6">
+                            <div class="popupForm_col">
+                                <strong>Bizionic Id<span style="color: red">*</span></strong>
+                                <div class="popupForm_field">
+                                    <input type="text" name="category_name" value="{{ old('category_name') }}">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-6">
+                            <div class="popupForm_col">
+                                <strong>Department<span style="color: red">*</span></strong>
+                                <div class="popupForm_field">
+                                    <select name="company_id" class="selective">
+                                        @foreach ($comapnaies as $id)
+                                            <option value="{{ $id->id }}">
+                                                {{ $id->company_name }}
+                                            </option>
+                                        @endforeach
+                                    </select>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-6">
+                            <div class="popupForm_col">
+                                <strong>Emp status<span style="color: red">*</span></strong>
+                                <div class="popupForm_field">
+                                    <select name="dept_id" class="selective">
+                                        @foreach ($department as $id)
+                                            <option value="{{ $id->id }}">
+                                                {{ $id->department_name }}
+                                            </option>
+                                        @endforeach
+                                    </select>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-6">
+                            <div class="popupForm_col">
+                                <strong>Designation<span style="color: red">*</span></strong>
+                                <div class="popupForm_field">
+                                    <input type="text" name="category_id" value="{{ old('category_id') }}">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-6">
+                            <div class="popupForm_col">
+                                <strong>Punch Entry Required<span style="color: red">*</span></strong>
+                                <div class="popupForm_field">
+                                    <input type="text" name="category_name" value="{{ old('category_name') }}">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-6">
+                            <div class="popupForm_col">
+                                <strong>Category<span style="color: red">*</span></strong>
+                                <div class="popupForm_field">
+                                    <input type="text" name="category_id" value="{{ old('category_id') }}">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-6">
+                            <div class="popupForm_col">
+                                <strong>Mobile Number<span style="color: red">*</span></strong>
+                                <div class="popupForm_field">
+                                    <input type="text" name="category_name" value="{{ old('category_name') }}">
+                                </div>
+                            </div>
+                        </div>
+                        <br><br>
+                        <div class="row rowFieldSetting">
+                            <div class="col-lg-3 col-md-6">
+                              <div class="popupForm_col">
+                                <strong>Shift1</strong>
+                                <div class="auth_select_info p-0">
+                                  <select>
+                                    <option>Any</option>
+                                    <option>Uae</option>
+                                    <option>Uk</option>
+                                  </select>
+                                </div>
+                              </div>
+                            </div>
+                            <div class="col-lg-3 col-md-6">
+                              <div class="popupForm_col">
+                                <strong>Shift2</strong>
+                                <div class="auth_select_info p-0">
+                                  <select>
+                                    <option>Any</option>
+                                    <option>Uae</option>
+                                    <option>Uk</option>
+                                  </select>
+                                </div>
+                              </div>
+                            </div>
+                            <div class="col-lg-3 col-md-6">
+                              <div class="popupForm_col">
+                                <strong>Shift3</strong>
+                                <div class="auth_select_info p-0">
+                                  <select>
+                                    <option>Any</option>
+                                    <option>Uae</option>
+                                    <option>Uk</option>
+                                  </select>
+                                </div>
+                              </div>
+                            </div>
+                            <div class="col-lg-3 col-md-6">
+                              <div class="popupForm_col">
+                                <strong>Shift4</strong>
+                                <div class="auth_select_info p-0">
+                                  <select>
+                                    <option>Any</option>
+                                    <option>Uae</option>
+                                    <option>Uk</option>
+                                  </select>
+                                </div>
+                              </div>
+                            </div>
+          
+                            <div class="col-lg-3 col-md-6">
+                              <div class="popupForm_col">
+                                <strong>Shift5</strong>
+                                <div class="auth_select_info p-0">
+                                  <select>
+                                    <option>Any</option>
+                                    <option>Uae</option>
+                                    <option>Uk</option>
+                                  </select>
+                                </div>
+                              </div>
+                            </div>
+          
+                            <div class="col-lg-3 col-md-6">
+                              <div class="popupForm_col">
+                                <strong>Shift6</strong>
+                                <div class="auth_select_info p-0">
+                                  <select>
+                                    <option>Any</option>
+                                    <option>Uae</option>
+                                    <option>Uk</option>
+                                  </select>
+                                </div>
+                              </div>
+                            </div>
+          
+                            <div class="col-lg-3 col-md-6">
+                              <div class="popupForm_col">
+                                <strong>Shift7</strong>
+                                <div class="auth_select_info p-0">
+                                  <select>
+                                    <option>Any</option>
+                                    <option>Uae</option>
+                                    <option>Uk</option>
+                                  </select>
+                                </div>
+                              </div>
+                            </div>
+          
+                            <div class="col-lg-3 col-md-6">
+                              <div class="popupForm_col">
+                                <strong>Shift8</strong>
+                                <div class="auth_select_info p-0">
+                                  <select>
+                                    <option>Any</option>
+                                    <option>Uae</option>
+                                    <option>Uk</option>
+                                  </select>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                          {{-- // --}}
+                          <div class="row rowFieldSetting pt-2">
+                            <div class="col-lg-4 col-md-4">
+                              <div class="popupForm_col">
+                                <strong>Weekoff1</strong>
+                                <div class="auth_select_info p-0">
+                                  <select>
+                                    <option>Any</option>
+                                    <option>Uae</option>
+                                    <option>Uk</option>
+                                  </select>
+                                </div>
+                              </div>
+                              <div class="popupForm_col">
+                                <strong>Weekoff2</strong>
+                                <div class="auth_select_info p-0">
+                                  <select>
+                                    <option>Any</option>
+                                    <option>Uae</option>
+                                    <option>Uk</option>
+                                  </select>
+                                </div>
+                              </div>
+                            </div>
+          
+                            <div class="col-lg-4 col-md-4">
+                              <div class="shiftSelect">
+                                <strong>Saturday Full Day Off</strong>
+                                <div class="shiftSelect_col">
+                                  <div class="tableCheckbox lunchCheck">
+                                    <label class="checkbox-label">
+                                      <input type="checkbox" />
+                                      <span class="checkbox-custom rectangular"></span>
+                                    </label>
+                                    Select All
+                                  </div>
+                                </div>
+          
+                                <div class="allshiftSelect">
+                                  <div class="tableCheckbox lunchCheck">
+                                    <label class="checkbox-label">
+                                      <input type="checkbox" />
+                                      <span class="checkbox-custom rectangular"></span>
+                                    </label>
+                                    1st
+                                  </div>
+                                  <div class="tableCheckbox lunchCheck">
+                                    <label class="checkbox-label">
+                                      <input type="checkbox" />
+                                      <span class="checkbox-custom rectangular"></span>
+                                    </label>
+                                    2nd
+                                  </div>
+                                  <div class="tableCheckbox lunchCheck">
+                                    <label class="checkbox-label">
+                                      <input type="checkbox" />
+                                      <span class="checkbox-custom rectangular"></span>
+                                    </label>
+                                    3rd
+                                  </div>
+                                  <div class="tableCheckbox lunchCheck">
+                                    <label class="checkbox-label">
+                                      <input type="checkbox" />
+                                      <span class="checkbox-custom rectangular"></span>
+                                    </label>
+                                    4th
+                                  </div>
+                                  <div class="tableCheckbox lunchCheck">
+                                    <label class="checkbox-label">
+                                      <input type="checkbox" />
+                                      <span class="checkbox-custom rectangular"></span>
+                                    </label>
+                                    5th
+                                  </div>
+                                </div>
+                              </div>
+                            </div>
+          
+                            <div class="col-lg-4 col-md-4">
+                              <div class="shiftSelect shiftSelectHalf">
+                                <strong>Saturday Half Day Off</strong>
+                                <div class="shiftSelect_col">
+                                  <div class="tableCheckbox lunchCheck">
+                                    <label class="checkbox-label">
+                                      <input type="checkbox" />
+                                      <span class="checkbox-custom rectangular"></span>
+                                    </label>
+                                    Select All
+                                  </div>
+                                </div>
+          
+                                <div class="allshiftSelect">
+                                  <div class="tableCheckbox lunchCheck">
+                                    <label class="checkbox-label">
+                                      <input type="checkbox" />
+                                      <span class="checkbox-custom rectangular"></span>
+                                    </label>
+                                    1st
+                                  </div>
+                                  <div class="tableCheckbox lunchCheck">
+                                    <label class="checkbox-label">
+                                      <input type="checkbox" />
+                                      <span class="checkbox-custom rectangular"></span>
+                                    </label>
+                                    2nd
+                                  </div>
+                                  <div class="tableCheckbox lunchCheck">
+                                    <label class="checkbox-label">
+                                      <input type="checkbox" />
+                                      <span class="checkbox-custom rectangular"></span>
+                                    </label>
+                                    3rd
+                                  </div>
+                                  <div class="tableCheckbox lunchCheck">
+                                    <label class="checkbox-label">
+                                      <input type="checkbox" />
+                                      <span class="checkbox-custom rectangular"></span>
+                                    </label>
+                                    4th
+                                  </div>
+                                  <div class="tableCheckbox lunchCheck">
+                                    <label class="checkbox-label">
+                                      <input type="checkbox" />
+                                      <span class="checkbox-custom rectangular"></span>
+                                    </label>
+                                    5th
+                                  </div>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                          {{-- // --}}
+                          <div class="row rowFieldSetting">
+                            <div class="col-lg-6 col-md-6">
+                              <div class="popupForm_col">
+                                <strong>Father/Husband Name</strong>
+                                <div class="popupForm_field">
+                                  <input type="text" value="" />
+                                </div>
+                              </div>
+                            </div>
+          
+                            <div class="col-lg-6 col-md-6">
+                              <div class="popupForm_col">
+                                <strong>Date Of Joining*</strong>
+                                <div class="popupForm_field">
+                                  <input type="text" value="" />
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                          {{-- // --}}
+                          <div class="row rowFieldSetting">
+                            <div class="col-lg-6 col-md-6">
+                              <div class="popupForm_col">
+                                <strong>Address</strong>
+                                <div class="popupForm_field">
+                                  <textarea></textarea>
+                                </div>
+                              </div>
+                            </div>
+          
+                            <div class="col-lg-6 col-md-6">
+                              <div class="popupForm_col">
+                                <strong>E-Mail</strong>
+                                <div class="popupForm_field">
+                                  <input type="text" value="" />
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                          {{-- // --}}
+                          <div class="table_actions" style="margin-left: 500px;margin-top:25px">
+                                <div class="table_actionsBtns">
+                                  <button class="tb_actionBtn">Save</button>
+                                  <button class="tb_actionBtn">Exit</button>
+                                </div>
+                          </div>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
 </div>
