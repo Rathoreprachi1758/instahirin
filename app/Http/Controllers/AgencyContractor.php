@@ -21,10 +21,15 @@ class AgencyContractor extends Controller
     {
         $certificateList = $this->certificate();
         $agencyPortfolios = $this->agencyPortfolio();
+//        $agencyService =
 
         return view('agencyContractor.agency_contractor', compact('certificateList', 'agencyPortfolios'));
     }
 
+    public function service()
+    {
+//        return
+    }
     public function certificate()
     {
         return ComplianceCertificate::where('user_id', Auth::id())->get();
@@ -34,6 +39,7 @@ class AgencyContractor extends Controller
     {
         return AgencyContractorPortfolio::where('user_id', Auth::id())->get();
     }
+
 
     public function companyDetails(Request $request)
     {

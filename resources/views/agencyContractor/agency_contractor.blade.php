@@ -2,6 +2,73 @@
 <link rel="stylesheet" href="{{ asset('css/css/Employer_activity_style.css') }}">
 <link rel="stylesheet" href="{{ asset('css/css/Employer_activity_style.css') }}">
 <style>
+    .btn-group {
+
+        .select {
+            position: relative;
+
+            input:checked + label {
+                background-color: #ffc107;
+
+                &:hover,
+                &:focus,
+                &:active {
+                    background-color: #ffc107;
+                }
+            }
+
+            input {
+                opacity: 0;
+                position: absolute;
+            }
+
+            .button_select {
+                margin: 0 10px 10px 0;
+                display: flex;
+                background-color: transparent;
+
+                &:hover,
+                &:focus,
+                &:active {
+                    background-color: transparent;
+                }
+            }
+        }
+
+    }
+
+
+    .option {
+        position: relative;
+
+        input {
+            opacity: 0;
+            position: absolute;
+        }
+
+        input:checked + span {
+            background-color: #ffc107;
+
+            &:hover,
+            &:focus,
+            &:active {
+                background-color: #ffc107;
+            }
+        }
+
+        .btn-option {
+            margin: 0 10px 10px 0;
+            display: flex;
+            background-color: transparent;
+
+            &:hover,
+            &:focus,
+            &:active {
+                background-color: transparent;
+            }
+        }
+    }
+
     .bordered-container {
         border: 1px solid #000; /* Border style */
         padding: 10px; /* Padding for inner content */
@@ -46,6 +113,7 @@
     .btn {
         margin-right: 10px;
     }
+
     .small-select {
         width: 50px !important; /* Adjust the width as needed */
         height: 38px; /* Adjust the height as needed */
@@ -91,6 +159,12 @@
                                             <button class="nav-link" id="pills-profile-tab" data-bs-toggle="pill"
                                                     data-bs-target="#pills-profile" type="button" role="tab"
                                                     aria-controls="pills-profile" aria-selected="false">Locations
+                                            </button>
+                                        </li>
+                                        <li class="nav-item" role="presentation">
+                                            <button class="nav-link" id="pills-service-tab" data-bs-toggle="pill"
+                                                    data-bs-target="#pills-service" type="button" role="tab"
+                                                    aria-controls="pills-service" aria-selected="false">Service Lines
                                             </button>
                                         </li>
                                         <li class="nav-item" role="presentation">
@@ -210,7 +284,8 @@
                                                                 <label for="exampleFormControlTextarea1"
                                                                        class="form-label">Average Hourly Rates</label>
                                                                 <div class="input-group">
-                                                                    <select class="form-select small-select" name="currency" id="currency">
+                                                                    <select class="form-select small-select"
+                                                                            name="currency" id="currency">
                                                                         <!-- Currency options will be populated dynamically -->
                                                                     </select>
                                                                     <select class="form-select"
@@ -311,6 +386,49 @@
                                                 </div>
                                             </div>
                                         </div>
+                                        <div class="tab-pane fade" id="pills-service" role="tabpanel"
+                                             aria-labelledby="pills-service-tab" tabindex="0">
+                                            <div class="row col-12">
+                                                <div class="accordion" id="accordionPanelsStayOpenExample">
+                                                    <div class="accordion-item">
+                                                        <h2 class="accordion-header">
+                                                            <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#panelsStayOpen-collapseOne" aria-expanded="true" aria-controls="panelsStayOpen-collapseOne">
+                                                                Accordion Item #1
+                                                            </button>
+                                                        </h2>
+                                                        <div id="panelsStayOpen-collapseOne" class="accordion-collapse collapse show">
+                                                            <div class="accordion-body">
+                                                                <strong>This is the first item's accordion body.</strong> It is shown by default, until the collapse plugin adds the appropriate classes that we use to style each element. These classes control the overall appearance, as well as the showing and hiding via CSS transitions. You can modify any of this with custom CSS or overriding our default variables. It's also worth noting that just about any HTML can go within the <code>.accordion-body</code>, though the transition does limit overflow.
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="accordion-item">
+                                                        <h2 class="accordion-header">
+                                                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#panelsStayOpen-collapseTwo" aria-expanded="false" aria-controls="panelsStayOpen-collapseTwo">
+                                                                Accordion Item #2
+                                                            </button>
+                                                        </h2>
+                                                        <div id="panelsStayOpen-collapseTwo" class="accordion-collapse collapse">
+                                                            <div class="accordion-body">
+                                                                <strong>This is the second item's accordion body.</strong> It is hidden by default, until the collapse plugin adds the appropriate classes that we use to style each element. These classes control the overall appearance, as well as the showing and hiding via CSS transitions. You can modify any of this with custom CSS or overriding our default variables. It's also worth noting that just about any HTML can go within the <code>.accordion-body</code>, though the transition does limit overflow.
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="accordion-item">
+                                                        <h2 class="accordion-header">
+                                                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#panelsStayOpen-collapseThree" aria-expanded="false" aria-controls="panelsStayOpen-collapseThree">
+                                                                Accordion Item #3
+                                                            </button>
+                                                        </h2>
+                                                        <div id="panelsStayOpen-collapseThree" class="accordion-collapse collapse">
+                                                            <div class="accordion-body">
+                                                                <strong>This is the third item's accordion body.</strong> It is hidden by default, until the collapse plugin adds the appropriate classes that we use to style each element. These classes control the overall appearance, as well as the showing and hiding via CSS transitions. You can modify any of this with custom CSS or overriding our default variables. It's also worth noting that just about any HTML can go within the <code>.accordion-body</code>, though the transition does limit overflow.
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
                                         <div class="tab-pane fade" id="pills-portfolio" role="tabpanel"
                                              aria-labelledby="pills-portfolio-tab" tabindex="0">
                                             <div class="container">
@@ -324,7 +442,8 @@
                                                                         <h5 class="card-title"></h5>
                                                                         <p class="card-text"></p>
                                                                     </div>
-                                                                    <div class="card-footer text-center bg-transparent border-success">
+                                                                    <div
+                                                                        class="card-footer text-center bg-transparent border-success">
                                                                         <a href="#" class="portfolio-link"
                                                                            data-toggle="modal"
                                                                            data-target="#portfolioModal{{$agencyPortfolio->id}}">{{$agencyPortfolio->portfolio_title}}</a>
@@ -479,19 +598,24 @@
                                                                                             <option selected>Select the
                                                                                                 estimate project size
                                                                                             </option>
-                                                                                            <option value="0-49" {{$agencyPortfolio->portfolio_project_size == '0-49' ? 'selected' : ''}}>
+                                                                                            <option
+                                                                                                value="0-49" {{$agencyPortfolio->portfolio_project_size == '0-49' ? 'selected' : ''}}>
                                                                                                 0-49
                                                                                             </option>
-                                                                                            <option value="50-249" {{$agencyPortfolio->portfolio_project_size == '50-249' ? 'selected' : ''}}>
+                                                                                            <option
+                                                                                                value="50-249" {{$agencyPortfolio->portfolio_project_size == '50-249' ? 'selected' : ''}}>
                                                                                                 50-249
                                                                                             </option>
-                                                                                            <option value="250-999" {{$agencyPortfolio->portfolio_project_size == '250-999' ? 'selected' : ''}}>
+                                                                                            <option
+                                                                                                value="250-999" {{$agencyPortfolio->portfolio_project_size == '250-999' ? 'selected' : ''}}>
                                                                                                 250-999
                                                                                             </option>
-                                                                                            <option value="1000-9999" {{$agencyPortfolio->portfolio_project_size == '1000-9999' ? 'selected' : ''}}>
+                                                                                            <option
+                                                                                                value="1000-9999" {{$agencyPortfolio->portfolio_project_size == '1000-9999' ? 'selected' : ''}}>
                                                                                                 1000-9999
                                                                                             </option>
-                                                                                            <option value="10000+" {{$agencyPortfolio->portfolio_project_size == '10000+' ? 'selected' : ''}}>
+                                                                                            <option
+                                                                                                value="10000+" {{$agencyPortfolio->portfolio_project_size == '10000+' ? 'selected' : ''}}>
                                                                                                 10000+
                                                                                             </option>
                                                                                         </select>
@@ -518,16 +642,18 @@
                                                                                     </div>
                                                                                 </div>
                                                                                 <div class="mb-3 mt-3">
-                                                                                    <label for="exampleFormControlTextarea1"
-                                                                                           class="form-label fw-bold">Descriptions</label>
+                                                                                    <label
+                                                                                        for="exampleFormControlTextarea1"
+                                                                                        class="form-label fw-bold">Descriptions</label>
                                                                                     <textarea class="form-control"
                                                                                               name="portfolio_description"
                                                                                               id="exampleFormControlTextarea1"
                                                                                               rows="3">{{$agencyPortfolio->portfolio_description}}</textarea>
                                                                                 </div>
                                                                                 <div class="mb-3 mt-3">
-                                                                                    <label for="exampleFormControlTextarea1"
-                                                                                           class="form-label fw-bold">Add
+                                                                                    <label
+                                                                                        for="exampleFormControlTextarea1"
+                                                                                        class="form-label fw-bold">Add
                                                                                         Video Link or Image
                                                                                         (Optional)</label><br>
                                                                                     <input type="radio" id="videoOption"
@@ -567,8 +693,9 @@
                                                                                                value="1" type="radio"
                                                                                                name="privacy"
                                                                                                id="flexRadioDefault1" {{$agencyPortfolio->privacy == 1 ? 'checked' : ''}}>
-                                                                                        <label class="form-check-label fa-2x"
-                                                                                               for="flexRadioDefault1">
+                                                                                        <label
+                                                                                            class="form-check-label fa-2x"
+                                                                                            for="flexRadioDefault1">
                                                                                             Show All
                                                                                         </label>
                                                                                         <p>All of the above content will
@@ -582,8 +709,9 @@
                                                                                                value="0" type="radio"
                                                                                                name="privacy"
                                                                                                id="flexRadioDefault2" {{$agencyPortfolio->privacy == 0 ? 'checked' : ''}}>
-                                                                                        <label class="form-check-label fa-2x"
-                                                                                               for="flexRadioDefault2">
+                                                                                        <label
+                                                                                            class="form-check-label fa-2x"
+                                                                                            for="flexRadioDefault2">
                                                                                             Confidential
                                                                                         </label>
                                                                                         <p>Only the following details
@@ -914,7 +1042,7 @@
                                                     @isset($companies)
                                                         @foreach($companies as $company)
                                                             <option
-                                                                    value="{{ $company->id }}">{{ $company->company_name }}</option>
+                                                                value="{{ $company->id }}">{{ $company->company_name }}</option>
                                                         @endforeach
                                                     @endisset
                                                 </select>
@@ -927,7 +1055,7 @@
                                                     @isset($employees)
                                                         @foreach($employees as $employee)
                                                             <option
-                                                                    value="{{ $employee->employee_code }}">{{ $employee->employee_code }}</option>
+                                                                value="{{ $employee->employee_code }}">{{ $employee->employee_code }}</option>
                                                         @endforeach
                                                     @endisset
                                                 </select>
@@ -1021,40 +1149,40 @@
                                                                                         <ul>
                                                                                             <li>
                                                                                                 <form
-                                                                                                        action="{{ route('lateStatus') }}"
-                                                                                                        method="post">
+                                                                                                    action="{{ route('lateStatus') }}"
+                                                                                                    method="post">
                                                                                                     @csrf
                                                                                                     <input
-                                                                                                            type="hidden"
-                                                                                                            value="1"
-                                                                                                            name="status">
+                                                                                                        type="hidden"
+                                                                                                        value="1"
+                                                                                                        name="status">
                                                                                                     <input
-                                                                                                            type="hidden"
-                                                                                                            value="{{ $lateRequest->id }}"
-                                                                                                            name="requestId">
+                                                                                                        type="hidden"
+                                                                                                        value="{{ $lateRequest->id }}"
+                                                                                                        name="requestId">
                                                                                                     <input
-                                                                                                            type="submit"
-                                                                                                            value="Accept"
-                                                                                                            name="button">
+                                                                                                        type="submit"
+                                                                                                        value="Accept"
+                                                                                                        name="button">
                                                                                                 </form>
                                                                                             </li>
                                                                                             <li>
                                                                                                 <form
-                                                                                                        action="{{ route('lateStatus') }}"
-                                                                                                        method="post">
+                                                                                                    action="{{ route('lateStatus') }}"
+                                                                                                    method="post">
                                                                                                     @csrf
                                                                                                     <input
-                                                                                                            type="hidden"
-                                                                                                            value="0"
-                                                                                                            name="status">
+                                                                                                        type="hidden"
+                                                                                                        value="0"
+                                                                                                        name="status">
                                                                                                     <input
-                                                                                                            type="hidden"
-                                                                                                            value="{{ $lateRequest->id }}"
-                                                                                                            name="requestId">
+                                                                                                        type="hidden"
+                                                                                                        value="{{ $lateRequest->id }}"
+                                                                                                        name="requestId">
                                                                                                     <input
-                                                                                                            type="submit"
-                                                                                                            value="Reject"
-                                                                                                            name="button">
+                                                                                                        type="submit"
+                                                                                                        value="Reject"
+                                                                                                        name="button">
                                                                                                 </form>
                                                                                             </li>
                                                                                         </ul>
@@ -1385,7 +1513,7 @@
                             .then(response => response.json())
                             .then(data => {
                                 const currencyDropdown = document.getElementById('currency');
-                                for(const currency in data.rates) {
+                                for (const currency in data.rates) {
                                     const option = document.createElement('option');
                                     option.text = currency;
                                     currencyDropdown.add(option);
