@@ -30,6 +30,10 @@ class AgencyContractor extends Controller
         return view('agencyContractor.agency_contractor', compact('certificateList', 'agencyPortfolios', 'agencyServices', 'agencySubServices'));
     }
 
+    public function service()
+    {
+//        return
+    }
     public function certificate()
     {
         return ComplianceCertificate::where('user_id', Auth::id())->get();

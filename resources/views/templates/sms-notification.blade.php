@@ -13,8 +13,8 @@
                 <div class="row align-items-center">
                     <div class="col-lg-7 col-md-6 aos-init " data-aos="fade-right" data-aos-duration="1000" data-aos-easing="ease">
                         <div class="custom_tittle text-left">
-                            <h3><strong>SEND ENGAGING</strong> TEXT MESSAGES <br> 
-                            <strong>AND</strong> ALERTS <strong>USING A RELIABLE<br> MESSAGING SERVICE</strong></h3> 
+                            <h1><strong>SEND ENGAGING</strong> TEXT MESSAGES <br> 
+                            <strong>AND</strong> ALERTS <strong>USING A RELIABLE<br> MESSAGING SERVICE</strong></h1> 
 
                             <p class="p_color text-justify">Send Engaging Texts <b>Quickly</b> and <b>Efficiently</b> <br>
                             to  <b>Boost Your Business.</b></p>

@@ -337,7 +337,7 @@
                                         Time Tracking
                                         <em class="menu_icon"><i class="fa fa-angle-down" aria-hidden="true"></i></em>
                                     </a>
-                                    <ul>
+                                     <ul>
                                         @if(auth()->user()->roles == 'user')
                                             <li><a href="{{route('logInOff')}}">► Log In / Off</a></li>
                                         @endif

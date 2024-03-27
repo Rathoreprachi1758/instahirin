@@ -126,7 +126,7 @@
                                                             <td>
                                                                 <div class="tabletext">
                                                                     @foreach ($companyId as $company)
-                                                                        @if ($company->id == $dept->comapny_id)
+                                                                        @if ($company->id == $dept->company_id)
                                                                             <p>{{ $company->company_name }}</p>
                                                                         @endif
                                                                     @endforeach

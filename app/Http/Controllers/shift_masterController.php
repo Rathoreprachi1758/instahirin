@@ -9,6 +9,7 @@ use App\Models\Department;
 use App\Models\Company;
 use App\Models\TimeZones;
 use App\Models\week;
+use Illuminate\Validation\Rule;
 use App\Models\Shiftcode;
 use RealRashid\SweetAlert\Facades\Alert;
 use Illuminate\Support\Facades\Config;
@@ -21,23 +22,15 @@ class shift_masterController extends Controller
     public function index()
     {
         $companyId = Company::where('user_id', Auth::id())->pluck('id');
-        $department = Department::whereIn('comapny_id', $companyId)->get();
+        $department = Department::whereIn('company_id', $companyId)->get();
         $comapnaies = Company::where('user_id', Auth::id())->get();
-        $shify = Shift_master_daily::where('user_id', Auth::id())->get();
+        $shify = Shift_master_daily::where('user_id', Auth::id())
+        ->orderByRaw("FIELD(week_day, 'Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday', 'Sunday')")
+        ->orderBy('week_day', 'ASC')
+        ->get();
         $shiftCode = Shiftcode::all();
         $timezones = TimeZones::all();
-        // $getWeek = week::all();
         $week = week::all();
-        // dd($week);
-        // $week = array();
-        // foreach($getWeek as $value)
-        // {  
-        //     $getW = array();
-        //     $getW['week_id'] = $value->id;
-        //     $getW['week_name'] = $value->week_name;
-        //     $week[] = $getW;
-        // }
-        // dd($week);
         return view('dashboard.master.shift_master_daily', ['shify' => $shify, 'department' => $department, 'comapnaies' => $comapnaies, 'timezones' => $timezones, 'weeks' => $week,'shiftCode'=>$shiftCode]);
     }
 
@@ -53,31 +46,39 @@ class shift_masterController extends Controller
      * Store a newly created resource in storage.
      */
     public function store(Request $request)
-    {   
+    {    
+        // $request->validate([
+        //     'week_name' => ['required', 'email', Rule::unique('shift_master_dailies', 'week_day')],
+        // ]);
         // dd($request->all());
         foreach ($request->week_name as $week_name) {
-            if(is_array($week_name))
-            {
-                if (!is_null($week_name['sign_in']) && !is_null($week_name['sign_out']) && !is_null($week_name['Lunch_in']) && !is_null($week_name['Lunch_out']))
-                {
-                    $shifty = new Shift_master_daily();
-                    $shifty->shift_code = $request->shift_code;
-                    $shifty->shift_name = $request->shift_name;
-                    // foreach($week_name['time_zone'])
-                    $shifty->time_zone = $week_name['time_zone'];
-                    $shifty->Shift_in = $week_name['sign_in'];
-                    $shifty->Shift_out = $week_name['sign_out'];
-                    $shifty->Lunch_in = $week_name['Lunch_in'];
-                    $shifty->Lunch_out = $week_name['Lunch_out'];
-                    $shifty->ded_full_lunch_hrs = $week_name['Monday_check']?? 'off';
-                    // $shifty->extraday_hrs = $request->shiftname;
-                    $shifty->Send_sms_delay = 'N/A';
-                    $shifty->department_id = $request->dept_id;
-                    $shifty->user_id = Auth::id();
-                    $shifty->comapny_id = $request->company_id;
-                    $shifty->week_day = $week_name['week_name'];
-                    $shifty->save();
-    
+            if (is_array($week_name) && !is_null($week_name['sign_in']) && !is_null($week_name['sign_out']) &&  !is_null($week_name['Lunch_in']) && !is_null($week_name['Lunch_out'])) {
+                $existingRecordCount = Shift_master_daily::where([
+                    'department_id' => $request->dept_id,
+                    'company_id' => $request->company_id,
+                    'week_day' => $week_name['week_name']
+                ])->count();
+                
+                if ($existingRecordCount === 0) {
+                    Shift_master_daily::create([
+                        'shift_code' => $request->shift_code,
+                        'shift_name' => $request->shift_name,
+                        'time_zone' => $week_name['time_zone'],
+                        'Shift_in' => $week_name['sign_in'],
+                        'Shift_out' => $week_name['sign_out'],
+                        'Lunch_in' => $week_name['Lunch_in'],
+                        'Lunch_out' => $week_name['Lunch_out'],
+                        'ded_full_lunch_hrs' => $week_name['Monday_check'] ?? 'off',
+                        'Send_sms_delay' => 'N/A',
+                        'department_id' => $request->dept_id,
+                        'user_id' => Auth::id(),
+                        'company_id' => $request->company_id,
+                        'week_day' => $week_name['week_name']
+                    ]);
+                }
+                else{
+                    Alert::error('danger', 'Added Already');
+                    return redirect()->back()->with('danger', 'These shift details created Added Already');
                 }
             }
         }
