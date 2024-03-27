@@ -4,7 +4,10 @@ namespace App\Http\Controllers;
 
 use App\Models\AgencyContractorCompany;
 use App\Models\AgencyContractorPortfolio;
+use App\Models\AgencyService;
+use App\Models\AgencySubServices;
 use App\Models\ComplianceCertificate;
+use App\Models\serviceLine;
 use Illuminate\Contracts\Foundation\Application;
 use Illuminate\Contracts\View\Factory;
 use Illuminate\Contracts\View\View;
@@ -21,15 +24,12 @@ class AgencyContractor extends Controller
     {
         $certificateList = $this->certificate();
         $agencyPortfolios = $this->agencyPortfolio();
-//        $agencyService =
+        $agencyServices = $this->services();
+        $agencySubServices = $this->subServices();
 
-        return view('agencyContractor.agency_contractor', compact('certificateList', 'agencyPortfolios'));
+        return view('agencyContractor.agency_contractor', compact('certificateList', 'agencyPortfolios', 'agencyServices', 'agencySubServices'));
     }
 
-    public function service()
-    {
-//        return
-    }
     public function certificate()
     {
         return ComplianceCertificate::where('user_id', Auth::id())->get();
@@ -38,6 +38,38 @@ class AgencyContractor extends Controller
     public function agencyPortfolio()
     {
         return AgencyContractorPortfolio::where('user_id', Auth::id())->get();
+    }
+
+    public function services()
+    {
+        return AgencyService::all();
+    }
+
+    public function subServices()
+    {
+        return AgencySubServices::all();
+    }
+
+    public function saveServices(Request $request)
+    {
+        $serviceLineData = ServiceLine::where('user_id', Auth::id())->first();
+
+        if ($serviceLineData == null) {
+            $serviceLine = new ServiceLine();
+            $serviceLine->services = json_encode($request->service);
+            $serviceLine->user_id = Auth::id();
+            $serviceLine->save();
+        } else {
+            $services = json_decode($serviceLineData->services);
+            $newServices = array_diff($request->service, $services);
+            if (!empty($newServices)) {
+                $updatedServices = array_merge($services, $newServices);
+                $serviceLineData->services = json_encode($updatedServices);
+                $serviceLineData->save();
+            }
+        }
+
+        return redirect()->route('agencyContractor');
     }
 
 
