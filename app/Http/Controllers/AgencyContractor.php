@@ -30,7 +30,6 @@ class AgencyContractor extends Controller
         $agencyPortfolios = $this->agencyPortfolio();
         $agencyServices = $this->services();
         $agencySubServices = $this->subServices();
-
         return view('agencyContractor.agency_contractor', compact('certificateList', 'agencyPortfolios', 'agencyServices', 'agencySubServices'));
     }
 
