@@ -2,18 +2,32 @@
 <link rel="stylesheet" href="{{ asset('css/css/Employer_activity_style.css') }}">
 <link rel="stylesheet" href="{{ asset('css/css/Employer_activity_style.css') }}">
 <style>
+    .selected-sub-service {
+        display: inline-block;
+        background-color: #f0f0f0;
+        padding: 5px 10px;
+        margin-right: 10px;
+        margin-bottom: 5px;
+        border-radius: 5px;
+    }
+
+    .remove-sub-service {
+        margin-left: 5px;
+        cursor: pointer;
+    }
+
     .btn-group {
 
         .select {
             position: relative;
 
             input:checked + label {
-                background-color: #ffc107;
+                background-color: #b0b0b0;
 
                 &:hover,
                 &:focus,
                 &:active {
-                    background-color: #ffc107;
+                    background-color: #b0b0b0;
                 }
             }
 
@@ -386,45 +400,61 @@
                                                 </div>
                                             </div>
                                         </div>
+                                        @php
+                                            $subServiceNames = [];
+                                        @endphp
+                                        @foreach($agencySubServices as $agencySubService )
+                                            @php
+                                                $subServiceNames[] = $agencySubService->sub_service_name;
+                                            @endphp
+                                        @endforeach
                                         <div class="tab-pane fade" id="pills-service" role="tabpanel"
                                              aria-labelledby="pills-service-tab" tabindex="0">
                                             <div class="row col-12">
-                                                <div class="accordion" id="accordionPanelsStayOpenExample">
-                                                    <div class="accordion-item">
-                                                        <h2 class="accordion-header">
-                                                            <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#panelsStayOpen-collapseOne" aria-expanded="true" aria-controls="panelsStayOpen-collapseOne">
-                                                                Accordion Item #1
-                                                            </button>
-                                                        </h2>
-                                                        <div id="panelsStayOpen-collapseOne" class="accordion-collapse collapse show">
-                                                            <div class="accordion-body">
-                                                                <strong>This is the first item's accordion body.</strong> It is shown by default, until the collapse plugin adds the appropriate classes that we use to style each element. These classes control the overall appearance, as well as the showing and hiding via CSS transitions. You can modify any of this with custom CSS or overriding our default variables. It's also worth noting that just about any HTML can go within the <code>.accordion-body</code>, though the transition does limit overflow.
-                                                            </div>
-                                                        </div>
+                                                <div class="row">
+                                                    <div class="col-md-6">
+                                                        <label class="fa-2x fw-bold">Add Service Line</label>
+                                                        <p>Give Buyer A sense of how you spend your time. You must add at least one(1) service line to your company profile</p>
+                                                        <input type="text" id="search" class="form-control mb-3" placeholder="Search for your service line">
+                                                        <div id="selectedSubServices"></div>
+                                                        <hr>
                                                     </div>
-                                                    <div class="accordion-item">
-                                                        <h2 class="accordion-header">
-                                                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#panelsStayOpen-collapseTwo" aria-expanded="false" aria-controls="panelsStayOpen-collapseTwo">
-                                                                Accordion Item #2
-                                                            </button>
-                                                        </h2>
-                                                        <div id="panelsStayOpen-collapseTwo" class="accordion-collapse collapse">
-                                                            <div class="accordion-body">
-                                                                <strong>This is the second item's accordion body.</strong> It is hidden by default, until the collapse plugin adds the appropriate classes that we use to style each element. These classes control the overall appearance, as well as the showing and hiding via CSS transitions. You can modify any of this with custom CSS or overriding our default variables. It's also worth noting that just about any HTML can go within the <code>.accordion-body</code>, though the transition does limit overflow.
-                                                            </div>
-                                                        </div>
-                                                    </div>
-                                                    <div class="accordion-item">
-                                                        <h2 class="accordion-header">
-                                                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#panelsStayOpen-collapseThree" aria-expanded="false" aria-controls="panelsStayOpen-collapseThree">
-                                                                Accordion Item #3
-                                                            </button>
-                                                        </h2>
-                                                        <div id="panelsStayOpen-collapseThree" class="accordion-collapse collapse">
-                                                            <div class="accordion-body">
-                                                                <strong>This is the third item's accordion body.</strong> It is hidden by default, until the collapse plugin adds the appropriate classes that we use to style each element. These classes control the overall appearance, as well as the showing and hiding via CSS transitions. You can modify any of this with custom CSS or overriding our default variables. It's also worth noting that just about any HTML can go within the <code>.accordion-body</code>, though the transition does limit overflow.
-                                                            </div>
-                                                        </div>
+                                                </div>
+                                            </div>
+                                            <div class="row col-12">
+                                                <div class="col-6">
+                                                    <label class="fa-2x fw-bold">All Available Service Line</label>
+                                                    <p>Below is the full list of all the service lines available on Instahirin</p>
+                                                    <div class="accordion" id="accordionPanelsStayOpenExample">
+                                                        <form action="{{route('saveServices')}}" method="post">
+                                                            @csrf
+                                                            @foreach($agencyServices as $agencyService)
+                                                                <div class="accordion-item">
+                                                                    <h2 class="accordion-header">
+                                                                        <button class="accordion-button bg-dark text-white" type="button" data-bs-toggle="collapse" data-bs-target="#panelsStayOpen-collapseOne{{ $agencyService->id }}" aria-expanded="true" aria-controls="panelsStayOpen-collapseOne{{ $agencyService->id }}">
+                                                                            {{ $agencyService->service_name }}
+                                                                        </button>
+                                                                    </h2>
+                                                                    <div id="panelsStayOpen-collapseOne{{ $agencyService->id }}" class="accordion-collapse collapse show">
+                                                                        <div class="accordion-body">
+                                                                            <div class="container">
+                                                                                <div class="btn-group col-xs-12">
+                                                                                    @foreach($agencySubServices as $agencySubService)
+                                                                                        @if($agencySubService->service_id == $agencyService->id)
+                                                                                            <div class="select sub-service">
+                                                                                                <input type="checkbox" name="service[]" value="{{ $agencySubService->id }}" id="item_{{ $agencySubService->id }}" onchange="updateSelectedSubServices()">
+                                                                                                <label class="btn btn-secondary text-dark button_select" for="item_{{ $agencySubService->id }}">{{ $agencySubService->sub_service_name }}</label>
+                                                                                            </div>
+                                                                                        @endif
+                                                                                    @endforeach
+                                                                                </div>
+                                                                            </div>
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+                                                            @endforeach
+                                                            <button class="btn btn-secondary mt-4" type="submit">Save</button>
+                                                        </form>
                                                     </div>
                                                 </div>
                                             </div>
@@ -443,7 +473,7 @@
                                                                         <p class="card-text"></p>
                                                                     </div>
                                                                     <div
-                                                                        class="card-footer text-center bg-transparent border-success">
+                                                                            class="card-footer text-center bg-transparent border-success">
                                                                         <a href="#" class="portfolio-link"
                                                                            data-toggle="modal"
                                                                            data-target="#portfolioModal{{$agencyPortfolio->id}}">{{$agencyPortfolio->portfolio_title}}</a>
@@ -479,7 +509,8 @@
                                                                             <button type="button" class="close"
                                                                                     data-dismiss="modal"
                                                                                     aria-label="Close">
-                                                                                <span aria-hidden="true">&times;</span>
+                                                                                    <span
+                                                                                            aria-hidden="true">&times;</span>
                                                                             </button>
                                                                         </div>
                                                                         <div class="modal-body">
@@ -536,14 +567,16 @@
                                                                             <button type="button" class="close"
                                                                                     data-dismiss="modal"
                                                                                     aria-label="Close">
-                                                                                <span aria-hidden="true">&times;</span>
+                                                                                    <span
+                                                                                            aria-hidden="true">&times;</span>
                                                                             </button>
                                                                         </div>
                                                                         <div class="modal-body">
-                                                                            <form action="{{route('portfolioSubmit')}}"
-                                                                                  method="post"
-                                                                                  id="editPortfolioForm{{$agencyPortfolio->id}}"
-                                                                                  enctype="multipart/form-data">
+                                                                            <form
+                                                                                    action="{{route('portfolioSubmit')}}"
+                                                                                    method="post"
+                                                                                    id="editPortfolioForm{{$agencyPortfolio->id}}"
+                                                                                    enctype="multipart/form-data">
                                                                                 @csrf
                                                                                 <input type="hidden" name="id"
                                                                                        value="{{$agencyPortfolio->id}}">
@@ -571,7 +604,8 @@
                                                                                 </div>
                                                                                 <!-- Portfolio Item Details -->
                                                                                 <div>
-                                                                                    <label class="fw-bold">Title</label>
+                                                                                    <label
+                                                                                            class="fw-bold">Title</label>
                                                                                     <input type="text"
                                                                                            name="portfolio_title"
                                                                                            class="form-control"
@@ -595,34 +629,37 @@
                                                                                         <select id="inputState"
                                                                                                 name="portfolio_project_size"
                                                                                                 class="form-select">
-                                                                                            <option selected>Select the
-                                                                                                estimate project size
+                                                                                            <option selected>Select
+                                                                                                the
+                                                                                                estimate project
+                                                                                                size
                                                                                             </option>
                                                                                             <option
-                                                                                                value="0-49" {{$agencyPortfolio->portfolio_project_size == '0-49' ? 'selected' : ''}}>
+                                                                                                    value="0-49" {{$agencyPortfolio->portfolio_project_size == '0-49' ? 'selected' : ''}}>
                                                                                                 0-49
                                                                                             </option>
                                                                                             <option
-                                                                                                value="50-249" {{$agencyPortfolio->portfolio_project_size == '50-249' ? 'selected' : ''}}>
+                                                                                                    value="50-249" {{$agencyPortfolio->portfolio_project_size == '50-249' ? 'selected' : ''}}>
                                                                                                 50-249
                                                                                             </option>
                                                                                             <option
-                                                                                                value="250-999" {{$agencyPortfolio->portfolio_project_size == '250-999' ? 'selected' : ''}}>
+                                                                                                    value="250-999" {{$agencyPortfolio->portfolio_project_size == '250-999' ? 'selected' : ''}}>
                                                                                                 250-999
                                                                                             </option>
                                                                                             <option
-                                                                                                value="1000-9999" {{$agencyPortfolio->portfolio_project_size == '1000-9999' ? 'selected' : ''}}>
+                                                                                                    value="1000-9999" {{$agencyPortfolio->portfolio_project_size == '1000-9999' ? 'selected' : ''}}>
                                                                                                 1000-9999
                                                                                             </option>
                                                                                             <option
-                                                                                                value="10000+" {{$agencyPortfolio->portfolio_project_size == '10000+' ? 'selected' : ''}}>
+                                                                                                    value="10000+" {{$agencyPortfolio->portfolio_project_size == '10000+' ? 'selected' : ''}}>
                                                                                                 10000+
                                                                                             </option>
                                                                                         </select>
                                                                                     </div>
                                                                                     <div class="col-md-3">
-                                                                                        <label for="input-start-date"
-                                                                                               class="form-label fw-bold">Start
+                                                                                        <label
+                                                                                                for="input-start-date"
+                                                                                                class="form-label fw-bold">Start
                                                                                             Date (optional)</label>
                                                                                         <input type="date"
                                                                                                name="portfolio_start_date"
@@ -643,8 +680,8 @@
                                                                                 </div>
                                                                                 <div class="mb-3 mt-3">
                                                                                     <label
-                                                                                        for="exampleFormControlTextarea1"
-                                                                                        class="form-label fw-bold">Descriptions</label>
+                                                                                            for="exampleFormControlTextarea1"
+                                                                                            class="form-label fw-bold">Descriptions</label>
                                                                                     <textarea class="form-control"
                                                                                               name="portfolio_description"
                                                                                               id="exampleFormControlTextarea1"
@@ -652,16 +689,18 @@
                                                                                 </div>
                                                                                 <div class="mb-3 mt-3">
                                                                                     <label
-                                                                                        for="exampleFormControlTextarea1"
-                                                                                        class="form-label fw-bold">Add
+                                                                                            for="exampleFormControlTextarea1"
+                                                                                            class="form-label fw-bold">Add
                                                                                         Video Link or Image
                                                                                         (Optional)</label><br>
-                                                                                    <input type="radio" id="videoOption"
+                                                                                    <input type="radio"
+                                                                                           id="videoOption"
                                                                                            name="option"
                                                                                            onclick="showInput('video')" {{$agencyPortfolio->videoLink ? 'checked' : ''}}>
                                                                                     <label for="videoOption">Video
                                                                                         Link</label><br>
-                                                                                    <input type="radio" id="imageOption"
+                                                                                    <input type="radio"
+                                                                                           id="imageOption"
                                                                                            name="option"
                                                                                            onclick="showInput('image')" {{$agencyPortfolio->imageUpload ? 'checked' : ''}}>
                                                                                     <label for="imageOption">Upload
@@ -686,47 +725,60 @@
                                                                                                name="imageUpload"><br><br>
                                                                                     </div>
                                                                                     <hr>
-                                                                                    <label class="fw-bold fa-2x mb-2">Privacy
+                                                                                    <label
+                                                                                            class="fw-bold fa-2x mb-2">Privacy
                                                                                         Setting</label>
                                                                                     <div class="form-check">
-                                                                                        <input class="form-check-input"
-                                                                                               value="1" type="radio"
-                                                                                               name="privacy"
-                                                                                               id="flexRadioDefault1" {{$agencyPortfolio->privacy == 1 ? 'checked' : ''}}>
+                                                                                        <input
+                                                                                                class="form-check-input"
+                                                                                                value="1"
+                                                                                                type="radio"
+                                                                                                name="privacy"
+                                                                                                id="flexRadioDefault1" {{$agencyPortfolio->privacy == 1 ? 'checked' : ''}}>
                                                                                         <label
-                                                                                            class="form-check-label fa-2x"
-                                                                                            for="flexRadioDefault1">
+                                                                                                class="form-check-label fa-2x"
+                                                                                                for="flexRadioDefault1">
                                                                                             Show All
                                                                                         </label>
-                                                                                        <p>All of the above content will
+                                                                                        <p>All of the above content
+                                                                                            will
                                                                                             be displayed on your
-                                                                                            profile. Currently, we will
-                                                                                            only show portfolio items
+                                                                                            profile. Currently, we
+                                                                                            will
+                                                                                            only show portfolio
+                                                                                            items
                                                                                             with images</p>
                                                                                     </div>
                                                                                     <div class="form-check">
-                                                                                        <input class="form-check-input"
-                                                                                               value="0" type="radio"
-                                                                                               name="privacy"
-                                                                                               id="flexRadioDefault2" {{$agencyPortfolio->privacy == 0 ? 'checked' : ''}}>
+                                                                                        <input
+                                                                                                class="form-check-input"
+                                                                                                value="0"
+                                                                                                type="radio"
+                                                                                                name="privacy"
+                                                                                                id="flexRadioDefault2" {{$agencyPortfolio->privacy == 0 ? 'checked' : ''}}>
                                                                                         <label
-                                                                                            class="form-check-label fa-2x"
-                                                                                            for="flexRadioDefault2">
+                                                                                                class="form-check-label fa-2x"
+                                                                                                for="flexRadioDefault2">
                                                                                             Confidential
                                                                                         </label>
-                                                                                        <p>Only the following details
-                                                                                            for this portfolio item will
+                                                                                        <p>Only the following
+                                                                                            details
+                                                                                            for this portfolio item
+                                                                                            will
                                                                                             be displayed on your
-                                                                                            profile: Title, Description,
+                                                                                            profile: Title,
+                                                                                            Description,
                                                                                             Category, Image or Video
                                                                                             link. This is ideal for
-                                                                                            projects where you are not
+                                                                                            projects where you are
+                                                                                            not
                                                                                             able to showcase client
                                                                                             details.</p>
                                                                                     </div>
                                                                                 </div>
                                                                                 <button type="submit"
-                                                                                        class="btn btn-primary">Update
+                                                                                        class="btn btn-primary">
+                                                                                    Update
                                                                                 </button>
                                                                             </form>
                                                                         </div>
@@ -769,7 +821,8 @@
                                                                            placeholder="Name" aria-label="Name">
                                                                 </div>
                                                                 <div class="col">
-                                                                    <label class="fw-bold mt-2">Client Website</label>
+                                                                    <label class="fw-bold mt-2">Client
+                                                                        Website</label>
                                                                     <input type="text" name="client_website"
                                                                            class="form-control"
                                                                            placeholder="https://www.example.com"
@@ -794,7 +847,8 @@
                                                             </div>
                                                             <div class="row mt-3">
                                                                 <div class="col-md-6">
-                                                                    <label for="inputState" class="form-label fw-bold">Estimate
+                                                                    <label for="inputState"
+                                                                           class="form-label fw-bold">Estimate
                                                                         Project Size</label>
                                                                     <select id="inputState"
                                                                             name="portfolio_project_size"
@@ -843,16 +897,19 @@
                                                                 <label for="videoOption">Video Link</label><br>
                                                                 <input type="radio" id="imageOption" name="option"
                                                                        onclick="showInput('image')">
-                                                                <label for="imageOption">Upload Image</label><br><br>
+                                                                <label for="imageOption">Upload
+                                                                    Image</label><br><br>
                                                                 <div id="videoInput">
                                                                     <label for="videoLink">Video Link:</label>
                                                                     <input class="form-control" type="text"
                                                                            id="videoLink" name="videoLink">
                                                                 </div>
                                                                 <div id="imageInput" style="display:none;">
-                                                                    <label for="imageUpload">Upload Image:</label><br>
+                                                                    <label for="imageUpload">Upload
+                                                                        Image:</label><br>
                                                                     <input class="form-control" type="file"
-                                                                           id="imageUpload" name="imageUpload"><br><br>
+                                                                           id="imageUpload"
+                                                                           name="imageUpload"><br><br>
                                                                 </div>
                                                                 <hr>
                                                                 <label class="fw-bold fa-2x mb-2">Privacy
@@ -879,14 +936,17 @@
                                                                     </label>
                                                                     <p>Only the following details for this portfolio
                                                                         item will be item will be displayed on your
-                                                                        profile: Title, Description, Category, Image or
-                                                                        Video link. This is ideal for projects where you
+                                                                        profile: Title, Description, Category, Image
+                                                                        or
+                                                                        Video link. This is ideal for projects where
+                                                                        you
                                                                         are not able to showcase client details.</p>
                                                                 </div>
                                                             </div>
                                                             <button type="button" id="cancelBtn" class="btn">Cancel
                                                             </button>
-                                                            <button type="submit" id="saveBtn" class="btn">Save</button>
+                                                            <button type="submit" id="saveBtn" class="btn">Save
+                                                            </button>
                                                         </form>
                                                     </div>
                                                 </div>
@@ -899,7 +959,8 @@
                                                 <div class="bordered-container">
                                                     <div class="row col-12">
                                                         <div class="col-6">
-                                                            <label class="fa-2x">Compliance and certificate list</label>
+                                                            <label class="fa-2x">Compliance and certificate
+                                                                list</label>
                                                             <hr>
                                                             <form action="{{ route('editOrDeleteCertificates') }}"
                                                                   method="POST" id="certificateForm">
@@ -921,7 +982,8 @@
                                                                 </button>
                                                             </form>
                                                             <button type="submit" name="action" value="edit"
-                                                                    id="editButton" disabled>Edit Selected Certificates
+                                                                    id="editButton" disabled>Edit Selected
+                                                                Certificates
                                                             </button>
                                                         </div>
                                                         <div class="col-6">
@@ -933,22 +995,26 @@
                                                                 <div class="mb-3">
                                                                     <label for="name" class="form-label">Company
                                                                         Certificate Title</label>
-                                                                    <input type="text" class="form-control" name="name"
+                                                                    <input type="text" class="form-control"
+                                                                           name="name"
                                                                            id="name"
                                                                            placeholder="Enter Certificate Title">
                                                                     @error('name')
-                                                                    <div class="alert alert-danger">{{ $message }}</div>
+                                                                    <div
+                                                                            class="alert alert-danger">{{ $message }}</div>
                                                                     @enderror
                                                                 </div>
 
                                                                 <div class="mb-3">
                                                                     <label for="url" class="form-label">Company
                                                                         URL</label>
-                                                                    <input type="url" class="form-control" name="url"
+                                                                    <input type="url" class="form-control"
+                                                                           name="url"
                                                                            id="url"
                                                                            placeholder="https://www.example.com">
                                                                     @error('url')
-                                                                    <div class="alert alert-danger">{{ $message }}</div>
+                                                                    <div
+                                                                            class="alert alert-danger">{{ $message }}</div>
                                                                     @enderror
                                                                 </div>
                                                                 <div class="mb-3">
@@ -957,12 +1023,14 @@
                                                                     <input type="file" class="form-control"
                                                                            name="attachment" id="attachment">
                                                                     @error('attachment')
-                                                                    <div class="alert alert-danger">{{ $message }}</div>
+                                                                    <div
+                                                                            class="alert alert-danger">{{ $message }}</div>
                                                                     @enderror
                                                                 </div>
                                                                 <button type="submit" class="btn btn-primary">Save
                                                                 </button>
-                                                                <button type="button" class="btn btn-secondary">Cancel
+                                                                <button type="button" class="btn btn-secondary">
+                                                                    Cancel
                                                                 </button>
                                                             </form>
                                                         </div>
@@ -978,31 +1046,37 @@
                                                     <div class="modal-header">
                                                         <h5 class="modal-title" id="editCertificateModalLabel">Edit
                                                             Certificate</h5>
-                                                        <button type="button" class="btn-close" data-bs-dismiss="modal"
+                                                        <button type="button" class="btn-close"
+                                                                data-bs-dismiss="modal"
                                                                 aria-label="Close"></button>
                                                     </div>
                                                     <div class="modal-body">
                                                         <!-- Edit Certificate Form -->
                                                         <form id="editCertificateForm"
-                                                              action="{{ route('certificationsForm') }}" method="post"
+                                                              action="{{ route('certificationsForm') }}"
+                                                              method="post"
                                                               enctype="multipart/form-data">
                                                             @csrf
                                                             <input type="hidden" name="certificate_id"
                                                                    id="certificateId">
                                                             <!-- Hidden input for certificate ID -->
                                                             <div class="mb-3">
-                                                                <label for="name" class="form-label">Company Certificate
+                                                                <label for="name" class="form-label">Company
+                                                                    Certificate
                                                                     Title</label>
                                                                 <input type="text" class="form-control" name="name"
-                                                                       id="name" placeholder="Enter Certificate Title">
+                                                                       id="name"
+                                                                       placeholder="Enter Certificate Title">
                                                                 @error('name')
                                                                 <div class="alert alert-danger">{{ $message }}</div>
                                                                 @enderror
                                                             </div>
                                                             <div class="mb-3">
-                                                                <label for="url" class="form-label">Company URL</label>
+                                                                <label for="url" class="form-label">Company
+                                                                    URL</label>
                                                                 <input type="url" class="form-control" name="url"
-                                                                       id="url" placeholder="https://www.example.com">
+                                                                       id="url"
+                                                                       placeholder="https://www.example.com">
                                                                 @error('url')
                                                                 <div class="alert alert-danger">{{ $message }}</div>
                                                                 @enderror
@@ -1017,7 +1091,8 @@
                                                                 @enderror
                                                             </div>
                                                             <div class="mb-3" id="filePreviewContainer"></div>
-                                                            <button type="submit" class="btn btn-primary">Save</button>
+                                                            <button type="submit" class="btn btn-primary">Save
+                                                            </button>
                                                             <button type="button" class="btn btn-secondary"
                                                                     data-bs-dismiss="modal">Cancel
                                                             </button>
@@ -1042,7 +1117,7 @@
                                                     @isset($companies)
                                                         @foreach($companies as $company)
                                                             <option
-                                                                value="{{ $company->id }}">{{ $company->company_name }}</option>
+                                                                    value="{{ $company->id }}">{{ $company->company_name }}</option>
                                                         @endforeach
                                                     @endisset
                                                 </select>
@@ -1055,7 +1130,7 @@
                                                     @isset($employees)
                                                         @foreach($employees as $employee)
                                                             <option
-                                                                value="{{ $employee->employee_code }}">{{ $employee->employee_code }}</option>
+                                                                    value="{{ $employee->employee_code }}">{{ $employee->employee_code }}</option>
                                                         @endforeach
                                                     @endisset
                                                 </select>
@@ -1095,7 +1170,6 @@
                                                     @php($increamentId = 1)
                                                     @isset($lateRequests)
                                                         @foreach($lateRequests as $lateRequest)
-                                                            {{--                                                        @php(dd($leaveRequest))--}}
                                                             <tr>
                                                                 <td>
                                                                     <div class="tabletext">
@@ -1149,40 +1223,40 @@
                                                                                         <ul>
                                                                                             <li>
                                                                                                 <form
-                                                                                                    action="{{ route('lateStatus') }}"
-                                                                                                    method="post">
+                                                                                                        action="{{ route('lateStatus') }}"
+                                                                                                        method="post">
                                                                                                     @csrf
                                                                                                     <input
-                                                                                                        type="hidden"
-                                                                                                        value="1"
-                                                                                                        name="status">
+                                                                                                            type="hidden"
+                                                                                                            value="1"
+                                                                                                            name="status">
                                                                                                     <input
-                                                                                                        type="hidden"
-                                                                                                        value="{{ $lateRequest->id }}"
-                                                                                                        name="requestId">
+                                                                                                            type="hidden"
+                                                                                                            value="{{ $lateRequest->id }}"
+                                                                                                            name="requestId">
                                                                                                     <input
-                                                                                                        type="submit"
-                                                                                                        value="Accept"
-                                                                                                        name="button">
+                                                                                                            type="submit"
+                                                                                                            value="Accept"
+                                                                                                            name="button">
                                                                                                 </form>
                                                                                             </li>
                                                                                             <li>
                                                                                                 <form
-                                                                                                    action="{{ route('lateStatus') }}"
-                                                                                                    method="post">
+                                                                                                        action="{{ route('lateStatus') }}"
+                                                                                                        method="post">
                                                                                                     @csrf
                                                                                                     <input
-                                                                                                        type="hidden"
-                                                                                                        value="0"
-                                                                                                        name="status">
+                                                                                                            type="hidden"
+                                                                                                            value="0"
+                                                                                                            name="status">
                                                                                                     <input
-                                                                                                        type="hidden"
-                                                                                                        value="{{ $lateRequest->id }}"
-                                                                                                        name="requestId">
+                                                                                                            type="hidden"
+                                                                                                            value="{{ $lateRequest->id }}"
+                                                                                                            name="requestId">
                                                                                                     <input
-                                                                                                        type="submit"
-                                                                                                        value="Reject"
-                                                                                                        name="button">
+                                                                                                            type="submit"
+                                                                                                            value="Reject"
+                                                                                                            name="button">
                                                                                                 </form>
                                                                                             </li>
                                                                                         </ul>
@@ -1520,6 +1594,47 @@
                                 }
                             })
                             .catch(error => console.error('Error fetching currencies:', error));
+                    </script>
+                    <script>
+                        // Get all sub-service names
+                        var subServiceNames = @json($subServiceNames);
+
+                        // Function to update selected sub-services
+                        function updateSelectedSubServices() {
+                            var selectedSubServicesContainer = document.getElementById('selectedSubServices');
+                            selectedSubServicesContainer.innerHTML = ''; // Clear previous selections
+                            var selectedSubServices = document.querySelectorAll('input[name="service[]"]:checked');
+                            selectedSubServices.forEach(function(subService) {
+                                var subServiceLabel = document.querySelector('label[for="' + subService.id + '"]').textContent;
+                                var subServiceElement = document.createElement('div');
+                                subServiceElement.className = 'selected-sub-service';
+                                subServiceElement.textContent = subServiceLabel;
+                                var removeButton = document.createElement('span');
+                                removeButton.className = 'remove-sub-service';
+                                removeButton.textContent = 'x';
+                                removeButton.addEventListener('click', function() {
+                                    subService.checked = false; // Uncheck the corresponding checkbox
+                                    updateSelectedSubServices(); // Update the displayed selected sub-services
+                                });
+                                subServiceElement.appendChild(removeButton);
+                                selectedSubServicesContainer.appendChild(subServiceElement);
+                            });
+                        }
+
+                        // Real-time search functionality
+                        document.getElementById('search').addEventListener('input', function() {
+                            var searchInput = this.value.toLowerCase();
+                            var subServiceElements = document.querySelectorAll('.sub-service');
+                            console.log(subServiceElements);
+                            subServiceElements.forEach(function(element) {
+                                var label = element.querySelector('label').textContent.toLowerCase();
+                                if (label.includes(searchInput)) {
+                                    element.style.display = 'block';
+                                } else {
+                                    element.style.display = 'none';
+                                }
+                            });
+                        });
                     </script>
                 </div>
             </div>

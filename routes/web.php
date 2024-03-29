@@ -107,6 +107,8 @@ Route::middleware(['middleware' => 'auth.check'])->group(function () {
     Route::get('/getCertificateData/{id}', [AgencyContractor::class, 'complianceCertificate'])->name('complianceCertificate');
     Route::post('/portfolio', [AgencyContractor::class, 'portfolioSubmit'])->name('portfolioSubmit');
     Route::get('/portfolio-delete', [AgencyContractor::class, 'portfolioDelete'])->name('portfolioDelete');
+    Route::post('/services', [AgencyContractor::class, 'saveServices'])->name('saveServices');
+
 
     //
     Route::get('/Favorites', [profileController::class, 'emp_favorates'])->name('favorites');

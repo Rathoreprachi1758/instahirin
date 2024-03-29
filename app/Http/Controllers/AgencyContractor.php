@@ -4,13 +4,20 @@ namespace App\Http\Controllers;
 
 use App\Models\AgencyContractorCompany;
 use App\Models\AgencyContractorPortfolio;
+use App\Models\AgencyService;
+use App\Models\AgencySubServices;
 use App\Models\ComplianceCertificate;
+use App\Models\serviceLine;
 use Illuminate\Contracts\Foundation\Application;
 use Illuminate\Contracts\View\Factory;
 use Illuminate\Contracts\View\View;
+use Illuminate\Database\Eloquent\Collection;
+use Illuminate\Http\JsonResponse;
+use Illuminate\Http\RedirectResponse;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Storage;
+use Symfony\Component\HttpFoundation\BinaryFileResponse;
 
 class AgencyContractor extends Controller
 {
@@ -21,27 +28,75 @@ class AgencyContractor extends Controller
     {
         $certificateList = $this->certificate();
         $agencyPortfolios = $this->agencyPortfolio();
-//        $agencyService =
-
-        return view('agencyContractor.agency_contractor', compact('certificateList', 'agencyPortfolios'));
+        $agencyServices = $this->services();
+        $agencySubServices = $this->subServices();
+        return view('agencyContractor.agency_contractor', compact('certificateList', 'agencyPortfolios', 'agencyServices', 'agencySubServices'));
     }
 
-    public function service()
-    {
-//        return
-    }
-    public function certificate()
+    /**
+     * @return mixed
+     */
+    public function certificate(): mixed
     {
         return ComplianceCertificate::where('user_id', Auth::id())->get();
     }
 
-    public function agencyPortfolio()
+    /**
+     * @return mixed
+     */
+    public function agencyPortfolio(): mixed
     {
         return AgencyContractorPortfolio::where('user_id', Auth::id())->get();
     }
 
+    /**
+     * @return Collection
+     */
+    public function services(): Collection
+    {
+        return AgencyService::all();
+    }
 
-    public function companyDetails(Request $request)
+    /**
+     * @return Collection
+     */
+    public function subServices(): Collection
+    {
+        return AgencySubServices::all();
+    }
+
+    /**
+     * @param Request $request
+     * @return RedirectResponse
+     */
+    public function saveServices(Request $request): RedirectResponse
+    {
+        $serviceLineData = ServiceLine::where('user_id', Auth::id())->first();
+
+        if ($serviceLineData == null) {
+            $serviceLine = new ServiceLine();
+            $serviceLine->services = json_encode($request->service);
+            $serviceLine->user_id = Auth::id();
+            $serviceLine->save();
+        } else {
+            $services = json_decode($serviceLineData->services);
+            $newServices = array_diff($request->service, $services);
+            if (!empty($newServices)) {
+                $updatedServices = array_merge($services, $newServices);
+                $serviceLineData->services = json_encode($updatedServices);
+                $serviceLineData->save();
+            }
+        }
+
+        return redirect()->route('agencyContractor');
+    }
+
+
+    /**
+     * @param Request $request
+     * @return RedirectResponse
+     */
+    public function companyDetails(Request $request): RedirectResponse
     {
         $request->validate([
             "company_name" => 'required',
@@ -74,9 +129,9 @@ class AgencyContractor extends Controller
 
     /**
      * @param Request $request
-     * @return null
+     * @return View|Factory|\Illuminate\Foundation\Application|Application|null
      */
-    public function certificationsForm(Request $request)
+    public function certificationsForm(Request $request): View|Factory|\Illuminate\Foundation\Application|Application|null
     {
         $request->validate([
             "name" => 'required',
@@ -99,19 +154,30 @@ class AgencyContractor extends Controller
         return $this->certificateList();
     }
 
+    /**
+     * @return View|\Illuminate\Foundation\Application|Factory|Application
+     */
     public function certificateList(): View|\Illuminate\Foundation\Application|Factory|Application
     {
         $certificateList = $this->certificate();
         return view('agencyContractor.agency_contractor', compact('certificateList'));
     }
 
-    public function complianceCertificate($id)
+    /**
+     * @param $id
+     * @return JsonResponse
+     */
+    public function complianceCertificate($id): JsonResponse
     {
         $certificate = ComplianceCertificate::find($id);
         return response()->json($certificate);
     }
 
-    public function fileDownload($id)
+    /**
+     * @param $id
+     * @return BinaryFileResponse
+     */
+    public function fileDownload($id): BinaryFileResponse
     {
         $complianceCertificate = ComplianceCertificate::find($id);
         $file = Storage::path($complianceCertificate->certificate);
@@ -119,7 +185,11 @@ class AgencyContractor extends Controller
         return response()->download($file);
     }
 
-    public function editOrDeleteCertificates(Request $request)
+    /**
+     * @param Request $request
+     * @return Application|Factory|View|\Illuminate\Foundation\Application|RedirectResponse
+     */
+    public function editOrDeleteCertificates(Request $request): \Illuminate\Foundation\Application|View|Factory|RedirectResponse|Application
     {
         $certificateIds = $request->input('certificate_ids', []);
         $action = $request->input('action');
@@ -133,7 +203,11 @@ class AgencyContractor extends Controller
         return view('agencyContractor.agency_contractor');
     }
 
-    public function portfolioSubmit(Request $request)
+    /**
+     * @param Request $request
+     * @return RedirectResponse
+     */
+    public function portfolioSubmit(Request $request): RedirectResponse
     {
         if (isset($request->id)) {
             $agencyContractorPortfolio = AgencyContractorPortfolio::find($request->id);
@@ -161,7 +235,11 @@ class AgencyContractor extends Controller
         return redirect()->route('agencyContractor');
     }
 
-    public function portfolioDelete(Request $request)
+    /**
+     * @param Request $request
+     * @return RedirectResponse
+     */
+    public function portfolioDelete(Request $request): RedirectResponse
     {
         $portfolioId = $request->id;
         AgencyContractorPortfolio::find($portfolioId)?->delete();
