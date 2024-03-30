@@ -19,6 +19,7 @@ use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Storage;
 use Symfony\Component\HttpFoundation\BinaryFileResponse;
 
+
 class AgencyContractor extends Controller
 {
     /**
@@ -30,7 +31,8 @@ class AgencyContractor extends Controller
         $agencyPortfolios = $this->agencyPortfolio();
         $agencyServices = $this->services();
         $agencySubServices = $this->subServices();
-        return view('agencyContractor.agency_contractor', compact('certificateList', 'agencyPortfolios', 'agencyServices', 'agencySubServices'));
+        $serviceLine = $this->serviceLine();
+        return view('agencyContractor.agency_contractor', compact('certificateList', 'agencyPortfolios', 'agencyServices', 'agencySubServices', 'serviceLine'));
     }
 
     /**
@@ -66,6 +68,14 @@ class AgencyContractor extends Controller
     }
 
     /**
+     * @return mixed
+     */
+    public function serviceLine(): mixed
+    {
+        return ServiceLine::where('user_id', Auth::id())->first();
+    }
+
+    /**
      * @param Request $request
      * @return RedirectResponse
      */
@@ -76,18 +86,16 @@ class AgencyContractor extends Controller
         if ($serviceLineData == null) {
             $serviceLine = new ServiceLine();
             $serviceLine->services = json_encode($request->service);
+            $serviceLine->ranges = json_encode($request->ranges);
             $serviceLine->user_id = Auth::id();
             $serviceLine->save();
         } else {
-            $services = json_decode($serviceLineData->services);
-            $newServices = array_diff($request->service, $services);
-            if (!empty($newServices)) {
-                $updatedServices = array_merge($services, $newServices);
-                $serviceLineData->services = json_encode($updatedServices);
+            if (!empty($serviceLineData)) {
+                $serviceLineData->services = json_encode($request->service);
+                $serviceLineData->ranges = json_encode($request->ranges);
                 $serviceLineData->save();
             }
         }
-
         return redirect()->route('agencyContractor');
     }
 
@@ -98,20 +106,8 @@ class AgencyContractor extends Controller
      */
     public function companyDetails(Request $request): RedirectResponse
     {
-        $request->validate([
-            "company_name" => 'required',
-            "company_tagline" => 'required',
-            "company_logo" => 'required',
-            "company_establishment" => 'required',
-            "company_website" => 'required',
-            "company_email" => 'required',
-            "company_total_employees" => 'required',
-            "company_description" => 'required',
-            "company_projectSize" => 'required',
-            "company_hourly_rate" => 'required',
-        ]);
+        $request->validate(["company_name" => 'required', "company_tagline" => 'required', "company_logo" => 'required', "company_establishment" => 'required', "company_website" => 'required', "company_email" => 'required', "company_total_employees" => 'required', "company_description" => 'required', "company_projectSize" => 'required', "company_hourly_rate" => 'required',]);
         $agencyContractCompany = new AgencyContractorCompany();
-
         $agencyContractCompany->company_name = $request->company_name;
         $agencyContractCompany->tagline = $request->company_tagline;
         $agencyContractCompany->logo = $request->company_logo;
@@ -124,6 +120,7 @@ class AgencyContractor extends Controller
         $agencyContractCompany->company_email = $request->company_email;
         $agencyContractCompany->user_id = Auth::id();
         $agencyContractCompany->save();
+
         return redirect()->route('agencyContractor');
     }
 
@@ -133,14 +130,10 @@ class AgencyContractor extends Controller
      */
     public function certificationsForm(Request $request): View|Factory|\Illuminate\Foundation\Application|Application|null
     {
-        $request->validate([
-            "name" => 'required',
-            "url" => 'required',
-            "attachment" => 'required|mimes:pdf,png,jpg',
-        ]);
+        $request->validate(["name" => 'required', "url" => 'required', "attachment" => 'required|mimes:pdf,png,jpg',]);
 
         if (isset($request->certificate_id)) {
-            $complianceCertificate = ComplianceCertificate::find($request->certificate_id);;
+            $complianceCertificate = ComplianceCertificate::find($request->certificate_id);
         } else {
             $complianceCertificate = new ComplianceCertificate();
         }

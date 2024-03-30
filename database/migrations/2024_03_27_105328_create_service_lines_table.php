@@ -13,6 +13,7 @@ return new class extends Migration {
         Schema::create('service_lines', function (Blueprint $table) {
             $table->id();
             $table->string('services');
+            $table->string('ranges');
             $table->foreignId('user_id')->constrained('users');
             $table->timestamps();
         });
