@@ -91,16 +91,6 @@ class AgencyContractor extends Controller
             $serviceLine->save();
         } else {
             if (!empty($serviceLineData)) {
-//            $serviceLineData->services = json_encode($updatedServices);
-//            $serviceLineData->ranges = json_encode($updatedRanges);
-//
-//            $services = json_decode($serviceLineData->services);
-//            $ranges = json_decode($serviceLineData->ranges, true);
-//            $newServices = array_diff($request->service, $services);
-//            $newServicesRanges = array_diff_assoc($request->ranges, $ranges);
-
-//                $updatedServices = array_merge($services, $newServices);
-//                $updatedRanges = $ranges + $newServicesRanges;
                 $serviceLineData->services = json_encode($request->service);
                 $serviceLineData->ranges = json_encode($request->ranges);
                 $serviceLineData->save();
@@ -116,18 +106,7 @@ class AgencyContractor extends Controller
      */
     public function companyDetails(Request $request): RedirectResponse
     {
-        $request->validate([
-            "company_name" => 'required',
-            "company_tagline" => 'required',
-            "company_logo" => 'required',
-            "company_establishment" => 'required',
-            "company_website" => 'required',
-            "company_email" => 'required',
-            "company_total_employees" => 'required',
-            "company_description" => 'required',
-            "company_projectSize" => 'required',
-            "company_hourly_rate" => 'required',
-        ]);
+        $request->validate(["company_name" => 'required', "company_tagline" => 'required', "company_logo" => 'required', "company_establishment" => 'required', "company_website" => 'required', "company_email" => 'required', "company_total_employees" => 'required', "company_description" => 'required', "company_projectSize" => 'required', "company_hourly_rate" => 'required',]);
         $agencyContractCompany = new AgencyContractorCompany();
         $agencyContractCompany->company_name = $request->company_name;
         $agencyContractCompany->tagline = $request->company_tagline;
@@ -151,14 +130,10 @@ class AgencyContractor extends Controller
      */
     public function certificationsForm(Request $request): View|Factory|\Illuminate\Foundation\Application|Application|null
     {
-        $request->validate([
-            "name" => 'required',
-            "url" => 'required',
-            "attachment" => 'required|mimes:pdf,png,jpg',
-        ]);
+        $request->validate(["name" => 'required', "url" => 'required', "attachment" => 'required|mimes:pdf,png,jpg',]);
 
         if (isset($request->certificate_id)) {
-            $complianceCertificate = ComplianceCertificate::find($request->certificate_id);;
+            $complianceCertificate = ComplianceCertificate::find($request->certificate_id);
         } else {
             $complianceCertificate = new ComplianceCertificate();
         }
