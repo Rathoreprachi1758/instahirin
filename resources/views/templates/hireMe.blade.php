@@ -317,7 +317,7 @@
                                         </div>
 
                                         <div class="col-lg-4 col-md-5">
-                                            <a href="/about-us/bizionic-team#goto_form" class="btn_default_white">Join Team
+                                            <a href="/bizionic-team" class="btn_default_white">Join Team
                                                 Bizionic</a>
                                         </div>
                                     </div>
@@ -419,7 +419,7 @@
                                 </h2>
                                 <p class="p_color">Join Forces with Our Proficient Software Developers,<br> Creative
                                     Designers, and Sharp Marketers.</p>
-                                <a href="/about-us/bizionic-team#goto_form" class="btn_default mt-4">Join Team Bizionic</a>
+                                <a href="/bizionic-team" class="btn_default mt-4">Join Team Bizionic</a>
                             </div>
                         </div>
                     </div>
@@ -771,14 +771,14 @@
                     <div class="hirinLinks_info">
                         <h6><u>FOR TALENT</u></h6>
                         <ul>
-                            <li><a href="#">Post Resume</a></li> 
-                            <li><a href="#">Get Directly Hired</a></li> 
-                            <li><a href="#">Get Projects</a></li> 
-                            <li><a href="#">Freelancer Jobs</a></li> 
-                            <li><a href="#">Find Contract Work</a></li> 
-                            <li><a href="#">Get Consultant Role</a></li> 
-                            <li><a href="#">InstaHirin Expert Support</a></li> 
-                            <li><a href="#">Skill Development</a></li> 
+                            <li><a href="#">Post Resume</a></li>
+                            <li><a href="#">Get Directly Hired</a></li>
+                            <li><a href="#">Get Projects</a></li>
+                            <li><a href="#">Freelancer Jobs</a></li>
+                            <li><a href="#">Find Contract Work</a></li>
+                            <li><a href="#">Get Consultant Role</a></li>
+                            <li><a href="#">InstaHirin Expert Support</a></li>
+                            <li><a href="#">Skill Development</a></li>
                         </ul>
                     </div>
                 </div>
@@ -786,13 +786,13 @@
                     <div class="hirinLinks_info">
                         <h6><u>GLOBAL TALENT TEAM</u></h6>
                         <ul>
-                            <li><a href="#">Global Workforce</a></li>  
-                            <li><a href="#">Remote Team</a></li>  
-                            <li><a href="#">Remote Developers</a></li>  
-                            <li><a href="#">EOR Guide</a></li>  
-                            <li><a href="#">Payroll Guide</a></li>  
-                            <li><a href="#">Project Management</a></li>  
-                            <li><a href="#">Multi Currency payment</a></li>  
+                            <li><a href="#">Global Workforce</a></li>
+                            <li><a href="#">Remote Team</a></li>
+                            <li><a href="#">Remote Developers</a></li>
+                            <li><a href="#">EOR Guide</a></li>
+                            <li><a href="#">Payroll Guide</a></li>
+                            <li><a href="#">Project Management</a></li>
+                            <li><a href="#">Multi Currency payment</a></li>
                         </ul>
                     </div>
                 </div>
@@ -800,7 +800,7 @@
                     <div class="hirinLinks_info">
                         <h6><u>QUICK LINKS</u></h6>
                         <ul>
-                            <li><a href="#">Blogs</a></li>  
+                            <li><a href="#">Blogs</a></li>
                             <li><a href="#">Terms of Services</a></li>
                             <li><a href="/industries/industries-we-serve/industries/acceptable-policy">Acceptable
                                     Policy</a></li>
@@ -808,7 +808,7 @@
                                     Policy</a></li>
                             <li><a href="/industries/industries-we-serve/industries/privacy-policy">Privacy
                                     Policy</a></li>
-                            <li><a href="#">Services Agreement</a></li>  
+                            <li><a href="#">Services Agreement</a></li>
                         </ul>
                     </div>
                 </div>
