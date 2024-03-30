@@ -22,7 +22,7 @@ return new class extends Migration {
             $table->string('leave_balance')->nullable();
             $table->string('email');
             $table->string('phone');
-            $table->string('currency');
+            $table->string('country_code');
             $table->string('employee_code')->nullable();
             $table->boolean('leave_status')->nullable();
             $table->date('start_date');

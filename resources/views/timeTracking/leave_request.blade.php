@@ -296,7 +296,7 @@
 
                                                                             <td width="50">
                                                                                 <div class="tabletext">
-                                                                                    <p>{{  $leaveRequest->phone }}</p>
+                                                                                    <p>+{{  $leaveRequest->country_code }}{{  $leaveRequest->phone }}</p>
                                                                                 </div>
                                                                             </td>
                                                                         </tr>

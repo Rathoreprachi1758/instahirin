@@ -681,7 +681,7 @@ class TimeTracking extends Controller
         $leaveRequest->leave_balance = $request->leaveBalance;
         $leaveRequest->email = $request->email;
         $leaveRequest->phone = $request->phone;
-        $leaveRequest->currency = $request->currency;
+        $leaveRequest->country_code = $request->country_code;
         $leaveRequest->save();
         return redirect()->route('leaveRequest');
 
