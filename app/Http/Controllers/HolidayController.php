@@ -18,9 +18,10 @@ class HolidayController extends Controller
     public function index()
     {   
         $companyId = Company::where('user_id',Auth::id())->pluck('id');
+        // return $companyId;
         $department = Department::whereIn('company_id',$companyId)->get();
         $comapnaies = Company::where('user_id',Auth::id())->get();
-        $HoliDay = holiday::where('company_id',$companyId)->get();
+        $HoliDay = holiday::whereIn('company_id',$companyId)->get();
         return view('dashboard.master.Holiday',['HoliDay'=>$HoliDay,'comapnaies' =>$comapnaies,'department'=>$department]);
     }
 

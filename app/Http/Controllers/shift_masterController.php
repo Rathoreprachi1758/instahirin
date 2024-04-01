@@ -9,6 +9,7 @@ use App\Models\Department;
 use App\Models\Company;
 use App\Models\TimeZones;
 use App\Models\week;
+use Illuminate\Support\Facades\Validator;
 use Illuminate\Validation\Rule;
 use App\Models\Shiftcode;
 use RealRashid\SweetAlert\Facades\Alert;
@@ -47,19 +48,22 @@ class shift_masterController extends Controller
      */
     public function store(Request $request)
     {    
-        // $request->validate([
-        //     'week_name' => ['required', 'email', Rule::unique('shift_master_dailies', 'week_day')],
-        // ]);
-        // dd($request->all());
-        foreach ($request->week_name as $week_name) {
+        // $weeks = week::pluck('week_name');
+        // foreach($weeks as $week){
+        //     $request->validate([
+        //         $week => [ 'week_day', Rule::unique('shift_master_dailies', 'week_day')],
+        //     ]);
+        // }
+        // return $request->all();
+        foreach ($request->week_name as $week_name) {       
             if (is_array($week_name) && !is_null($week_name['sign_in']) && !is_null($week_name['sign_out']) &&  !is_null($week_name['Lunch_in']) && !is_null($week_name['Lunch_out'])) {
                 $existingRecordCount = Shift_master_daily::where([
+                    'user_id' => Auth::id(),
                     'department_id' => $request->dept_id,
                     'company_id' => $request->company_id,
                     'week_day' => $week_name['week_name']
-                ])->count();
-                
-                if ($existingRecordCount === 0) {
+                ])->count(); 
+                if ($existingRecordCount === 0){
                     Shift_master_daily::create([
                         'shift_code' => $request->shift_code,
                         'shift_name' => $request->shift_name,
@@ -77,7 +81,7 @@ class shift_masterController extends Controller
                     ]);
                 }
                 else{
-                    Alert::error('danger', 'Added Already');
+                    Alert::error('Warning', 'Added Already Do Update');
                     return redirect()->back()->with('danger', 'These shift details created Added Already');
                 }
             }
