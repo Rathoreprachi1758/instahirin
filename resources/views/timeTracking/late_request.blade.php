@@ -151,7 +151,7 @@
                                                             <h6>Expected time of arrival</h6>
                                                         </th>
                                                         <th>
-                                                            <h6>Reason for Late Arriva</h6>
+                                                            <h6>Reason for Late Arrival</h6>
                                                         </th>
                                                         <th>
                                                             <h6>Status</h6>

@@ -15,7 +15,7 @@
                             <div class="nav nav-tabs" id="nav-tab" role="tablist">
                                 <button class="nav-link active" id="nav-home-tab" data-bs-toggle="tab"
                                         data-bs-target="#nav-home"
-                                        type="button" role="tab" aria-controls="nav-home" aria-selected="true">Post
+                                        type="button" role="tab" aria-controls="nav-home" aria-selected="true">
                                     Leave Request
                                 </button>
                                 <button class="nav-link" id="nav-profile-tab" data-bs-toggle="tab"
@@ -100,7 +100,6 @@
                                                 @php($increamentId = 1)
                                                 @isset($leaveRequests)
                                                     @foreach($leaveRequests as $leaveRequest)
-                                                        {{--                                                        @php(dd($leaveRequest))--}}
                                                         <tr>
                                                             <td>
                                                                 <div class="tabletext">
