@@ -108,9 +108,24 @@
                                             <input type="email" name="email" class="form-control" id="inputEmail">
                                         </div>
                                         <div class="col-md-6">
-                                            <label for="inputNumber" class="form-label">Contact Number During
-                                                Leave</label>
-                                            <input type="number" name="phone" class="form-control" id="inputNumber">
+                                            <div class="col">
+                                                <label for="exampleFormControlTextarea1"
+                                                       class="form-label">Contact Number During
+                                                    Leave</label>
+                                                <div class="input-group">
+                                                    <select class="form-select small-select" name="country_code" id="countryCode">
+                                                        <option selected>Choose...</option>
+                                                        @foreach($countries as $country)
+                                                            <option
+                                                                value="{{$country->phone}}">{{$country->phone}}</option>
+                                                        @endforeach
+                                                    </select>
+                                                    <input type="number" name="phone" class="form-control"
+                                                           id="inputNumber" placeholder="1234567890">
+                                                </div>
+                                            </div>
+                                            <label for="inputNumber" class="form-label"></label>
+
                                         </div>
                                         <div class="col-12">
                                             <button type="submit" class="btn btn-primary">Submit</button>
@@ -281,7 +296,7 @@
 
                                                                             <td width="50">
                                                                                 <div class="tabletext">
-                                                                                    <p>{{  $leaveRequest->phone }}</p>
+                                                                                    <p>+{{  $leaveRequest->country_code }}{{  $leaveRequest->phone }}</p>
                                                                                 </div>
                                                                             </td>
                                                                         </tr>
@@ -480,7 +495,6 @@
                             }
                         });
                     }
-
                     $('#inputDepartment').change(fetchEmployeeCode);
                 </script>
             </div>

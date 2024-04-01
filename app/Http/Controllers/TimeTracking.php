@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Models\Company;
+use App\Models\Country;
 use App\Models\Department;
 use App\Models\Employee;
 use App\Models\EmployeeLogTime;
@@ -629,9 +630,9 @@ class TimeTracking extends Controller
             $leaveRequest->whereBetween('start_date', [$from, $to]);
         }
 
-
+        $countries = Country::all();
         $leaveRequests = $leaveRequest->get();
-        return view('timeTracking.leave_request')->with(compact('companies', 'leaveTypes', 'leaveRequests', 'employees'));
+        return view('timeTracking.leave_request')->with(compact('companies', 'leaveTypes', 'leaveRequests', 'employees', 'countries'));
     }
 
     /**
@@ -680,6 +681,7 @@ class TimeTracking extends Controller
         $leaveRequest->leave_balance = $request->leaveBalance;
         $leaveRequest->email = $request->email;
         $leaveRequest->phone = $request->phone;
+        $leaveRequest->country_code = $request->country_code;
         $leaveRequest->save();
         return redirect()->route('leaveRequest');
 
