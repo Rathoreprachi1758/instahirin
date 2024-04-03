@@ -15,14 +15,11 @@ return new class extends Migration
             $table->id();
             $table->string('employee_code');
             $table->string('employee_name')->nullable();
-            $table->string('company')->nullable();
             $table->string('bizionic_id')->nullable();
-            $table->string('department')->nullable();
-            $table->string('designation')->nullable();
-            $table->string('category')->nullable();
             $table->string('emp_status')->nullable();
             $table->string('enroll_id')->nullable();
             $table->string('punch_enquirey_required')->nullable();
+            $table->string('country_code')->nullable();
             $table->string('mobile_number')->nullable();
             $table->string('father_or_husband_name')->nullable();
             $table->string('address')->nullable();
@@ -39,12 +36,16 @@ return new class extends Migration
             $table->string('weekoff2')->nullable();
             $table->string('weekoff2_no')->nullable();
             //
-            $table->unsignedBigInteger('user_id');
-            $table->foreign('user_id')->references('id')->on('users')->onDelete('cascade');
-            $table->unsignedBigInteger('comapny_id');
-            $table->foreign('comapny_id')->references('id')->on('companies')->onDelete('cascade');
+            $table->unsignedBigInteger('category_id');
+            $table->foreign('category_id')->references('id')->on('categories')->onDelete('cascade');
+            $table->unsignedBigInteger('designation_id');
+            $table->foreign('designation_id')->references('id')->on('designations')->onDelete('cascade');
             $table->unsignedBigInteger('department_id');
             $table->foreign('department_id')->references('id')->on('departments')->onDelete('cascade');
+            $table->unsignedBigInteger('comapny_id');
+            $table->foreign('comapny_id')->references('id')->on('companies')->onDelete('cascade');
+            $table->unsignedBigInteger('user_id');
+            $table->foreign('user_id')->references('id')->on('users')->onDelete('cascade');
             $table->timestamps();
         });
     }

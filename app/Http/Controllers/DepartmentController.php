@@ -13,17 +13,28 @@ class DepartmentController extends Controller
     /**
      * Display a listing of the resource.
      */
-    public function index(Request $request)
+    // public function getDepartments(Request $request)
+    // {  
+
+    //     $userid = Company::where('user_id', Auth::id())->get();
+    //     $companes = json_decode($userid);
+    //     $companyId = $request->input('company_id');
+
+    //     // $departments = Department::where('company_id', $companyId)->get();
+    //     // return response()->json($departments);
+    //     $departMent = Department::where('company_id', $companyId)->where('user_id', Auth::id())->get();
+    //             return view('dashboard.master.department',['companes' => $companes,'department'=>$departMent]);
+    //     // return view('dashboard.master.department',['companyId' => $companes,'department'=>$departMent,'CompanyFilter'=> $CompanyFilter]);
+    // }
+     public function index(Request $request)
     {  
         $CompanyFilter = Company::query();
-        if ($request->has('company_filter')) {
-            return $request->company_filter;
-        }
         $CompanyFilter = $CompanyFilter->get();
+        // return $request->country;
         $companyId = Company::where('user_id', Auth::id())->get();
         $companes = json_decode($companyId);
         $departMent = Department::where('user_id', Auth::id())->get();
-        return view('dashboard.master.department',['companyId' => $companes,'department'=>$departMent,'CompanyFilter'=> $CompanyFilter]);
+        return view('dashboard.master.department',['companes' => $companes,'department'=>$departMent,'CompanyFilter'=> $CompanyFilter]);
     }
 
     /**

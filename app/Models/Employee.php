@@ -7,7 +7,7 @@ use Illuminate\Database\Eloquent\Model;
 use Illuminate\Database\Eloquent\Relations\BelongsTo;
 use Illuminate\Database\Eloquent\Relations\HasMany;
 
-class employee extends Model
+class Employee extends Model
 {
     use HasFactory;
 
@@ -22,13 +22,27 @@ class employee extends Model
     {
         return $this->belongsTo(Department::class);
     }
-
+      /**
+     * Define the relationship between an employee and their department.
+     *
+     * @return BelongsTo
+     */
+    
+    public function designation()
+    {
+        return $this->belongsTo(designation::class);
+    }
     /**
      * @return HasMany
      */
     public function employeeLogTimes(): HasMany
     {
         return $this->hasMany(EmployeeLogTime::class);
+    }
+
+    public function category()
+    {
+        return $this->belongsTo(Category::class);
     }
 
     /**

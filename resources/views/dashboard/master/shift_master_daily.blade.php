@@ -91,6 +91,20 @@
                         </script>
                     </div>
                 @endif
+                @if ($errors->any())
+                    <script>
+                        @foreach ($errors->all() as $error)
+                            Swal.fire({
+                                icon: 'error',
+                                title: 'Validation Error',
+                                text: '{{ $error }}',
+                                timer: 4000, // Adjust as needed
+                                timerProgressBar: true,
+                                showConfirmButton: false
+                            });
+                        @endforeach
+                    </script>
+                @endif
                 <div class="custom_tabs_data" id="tab4" style="display: block;">
                     <div class="masterTab_bg">
                         <div class="masterTab_data">
