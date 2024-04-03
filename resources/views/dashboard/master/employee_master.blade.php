@@ -11,7 +11,34 @@
         $('#employee_modal').click(function() {
             $('#add_emp').modal('show');
         })
+        //
+        $('.edit_company').click(function() {
+            var Shiftid = $(this).data('dept-id');
+            var $shift_Id = "#" + Shiftid;
+            console.log('kkk', $shift_Id);
+            $($shift_Id).modal('show');
+        });
     });
+
+    function showCustomAlert(button) {
+        var DeptId = button.getAttribute('data-dept-id');
+        // alert(DeptId);
+        Swal.fire({
+            title: 'Delete Confirmation',
+            text: 'Are you sure you want to delete this data?',
+            icon: 'warning',
+            showCancelButton: true,
+            confirmButtonColor: '#3085d6',
+            cancelButtonColor: '#d33',
+            confirmButtonText: 'OK'
+        }).then((result) => {
+            if (result.isConfirmed) {
+                var formAction = "{{ route('Employee-Master.destroy', ':DeptId') }}".replace(':DeptId', DeptId);
+                document.getElementById('deleteForm').action = formAction;
+                document.getElementById('deleteForm').submit();
+            }
+        });
+    }
 </script>
 <style>
     .modal-body {
@@ -66,6 +93,12 @@
                     </div>
                 @endif
                 {{-- // --}}
+                {{-- @forelse ($EmpMaster as $emp)
+                    {{$emp->category->category_name}}
+                @endforeach
+                @php
+                    die();
+                @endphp --}}
                 <div class="custom_tabs_data" id="tab6" style="display: block;">
                     <div class="masterTab_bg">
                         <div class="masterTab_data">
@@ -105,7 +138,7 @@
                                                 </div>
 
                                             </div>
-                                            <table class="table table-striped" id="employee_master">
+                                            <table class="table" id="employee_master">
                                                 <thead>
                                                     <tr>
                                                         <th>
@@ -168,60 +201,449 @@
                                                             </td>
                                                             <td>
                                                                 <div class="tabletext">
-                                                                    <p>{{ $emp->designation }}</p>
+                                                                    <p>{{ $emp->department->department_name }}</p>
                                                                 </div>
                                                             </td>
                                                             <td>
                                                                 <div class="tabletext">
-                                                                    <p>{{ $emp->department }}</p>
+                                                                    <p>{{ $emp->designation->designation_name }}</p>
                                                                 </div>
                                                             </td>
                                                             <td>
                                                                 <div class="tabletext">
-                                                                    <p>{{ $emp->category }}</p>
+                                                                    <p>{{ $emp->category->category_name }}</p>
                                                                 </div>
                                                             </td>
                                                             <td>
                                                                 <div class="actionBtns">
-                                                                    <div class="actionBtns">
-                                                                        <button class="actBtn edit_company"
-                                                                            id="shift_edit_button" data-toggle="modal"
-                                                                            data-target="#edit_shift"
-                                                                            data-dept-id="edit_shift_{{ $emp->id }}">
-                                                                            <i class="fa fa-pencil-square-o"
+                                                                    <button class="actBtn edit_company"
+                                                                        data-toggle="modal" data-target="#edit_emp"
+                                                                        data-dept-id="edit_emp_{{ $emp->id }}">
+                                                                        <i class="fa fa-pencil-square-o"
+                                                                            aria-hidden="true"></i>
+                                                                    </button>
+                                                                    <form id = "deleteForm"
+                                                                        action="{{ route('Employee-Master.destroy', $emp->id) }}"
+                                                                        method="post">
+                                                                        @csrf
+                                                                        @method('delete')
+                                                                        <button type="button" class="actBtn"
+                                                                            data-dept-id ="{{ $emp->id }}"
+                                                                            onclick="showCustomAlert(this)">
+                                                                            <i class="fa fa-trash"
                                                                                 aria-hidden="true"></i>
                                                                         </button>
-                                                                        <form id = "deleteForm"
-                                                                            action="{{ route('Employee-Master.destroy', $emp->id) }}"
-                                                                            method="post">
-                                                                            @csrf
-                                                                            @method('delete')
-                                                                            <button type="button"
-                                                                                class="actBtn delete_shift"
-                                                                                data-shift-id="{{ $emp->id }}"
-                                                                                onclick="showCustomAlert(this)">
-                                                                                <i class="fa fa-trash"
-                                                                                    aria-hidden="true"></i>
-                                                                            </button>
-                                                                        </form>
-                                                                    </div>
+                                                                    </form>
                                                                 </div>
                                                             </td>
                                                         </tr>
-                                                    @empty
-                                                        <p style="color:red;margin-top: -120px">Oops ! No Records In
-                                                            Employee Master
-                                                            <?xml version="1.0" standalone="no"?>
-                                                            <!DOCTYPE svg
-                                                                PUBLIC "-//W3C//DTD SVG 20010904//EN" "http://www.w3.org/TR/2001/REC-SVG-20010904/DTD/svg10.dtd">
-                                                            <svg version="1.0" xmlns="http://www.w3.org/2000/svg"
-                                                                width="40.000000pt" height="40.000000pt"
-                                                                viewBox="0 0 240.000000 240.000000"
-                                                                preserveAspectRatio="xMidYMid meet">
+                                                        {{-- //edit --}}
+                                                        <div class="modal fade" id="edit_emp_{{ $emp->id }}"
+                                                            tabindex="-1" role="dialog" aria-hidden="true"
+                                                            style="top:33px;">
+                                                            <div class="modal-dialog" role="document">
+                                                                <div class="modal-content"
+                                                                    style="width: 220%;left: -305px">
+                                                                    <div class="modal-header"
+                                                                        style="background-color: #BCBCBC;">
+                                                                        <h6 style="padding-bottom: 0px;margin-left: 417px;">Edit Selected Employee Details Here</h6>
+                                                                        <button type="button" class="close"
+                                                                            data-dismiss="modal" aria-label="Close">
+                                                                            <span aria-hidden="true">&times;</span>
+                                                                        </button>
+                                                                        @if ($errors->any())
+                                                                            <div class="alert alert-danger">
+                                                                                <ul>
+                                                                                    @foreach ($errors->all() as $error)
+                                                                                        <li>{{ $error }}</li>
+                                                                                    @endforeach
+                                                                                </ul>
+                                                                            </div>
+                                                                        @endif
+                                                                    </div>
+                                                                    <div class="modal-body"
+                                                                        style="background-color: #ededed">
+                                                                        <form method="post" id="skills"
+                                                                            action="{{ route('Employee-Master.update', $emp->id) }}">
+                                                                            @csrf
+                                                                            @method('patch')
+                                                                            <div class="row">
+                                                                                <div class="col-6">
+                                                                                    <div class="popupForm_col">
+                                                                                        <strong>Employee code</strong>
+                                                                                        <div class="popupForm_field">
+                                                                                            <input type="text"
+                                                                                                name="employee_code"
+                                                                                                value="{{$emp->employee_code}}"
+                                                                                                placeholder="Enter Employee Code(If any)">
+                                                                                        </div>
+                                                                                    </div>
+                                                                                </div>
+                                                                                <div class="col-6">
+                                                                                    <div class="popupForm_col">
+                                                                                        <strong>Employee Name<span
+                                                                                                style="color: red">*</span></strong>
+                                                                                        <div class="popupForm_field">
+                                                                                            <input type="text"
+                                                                                                name="employee_name"
+                                                                                                value="{{$emp->employee_name}}"
+                                                                                                placeholder="Enter Employee Name">
+                                                                                        </div>
+                                                                                    </div>
+                                                                                </div>
+                                                                                <div class="col-6">
+                                                                                    <div class="popupForm_col">
+                                                                                        <strong>Company<span
+                                                                                                style="color: red">*</span></strong>
+                                                                                        <div class="popupForm_field">
+                                                                                            <select name="company_name"
+                                                                                                class="selective">
+                                                                                                @foreach ($comapnaies as $id)
+                                                                                                    <option
+                                                                                                        value="{{ $id->id }}" @if ($id->id === $emp->company_id) selected @endif >
+                                                                                                        {{ $id->company_name }}
+                                                                                                    </option>
+                                                                                                @endforeach
+                                                                                            </select>
+                                                                                        </div>
+                                                                                    </div>
+                                                                                </div>
+                                                                                <div class="col-6">
+                                                                                    <div class="popupForm_col">
+                                                                                        <strong>Bizionic Id*</strong>
+                                                                                        <div class="popupForm_field">
+                                                                                            <input type="text"
+                                                                                                name="bizionic_id"
+                                                                                                value="{{ $emp->bizionic_id }}"
+                                                                                                placeholder="Enter Bizionic-Id">
+                                                                                        </div>
+                                                                                    </div>
+                                                                                </div>
+                                                                                <div class="col-6">
+                                                                                    <div class="popupForm_col">
+                                                                                        <strong>Department<span
+                                                                                                style="color: red">*</span></strong>
+                                                                                        <div class="popupForm_field">
+                                                                                            <select name="dept_name"
+                                                                                                class="selective">
+                                                                                                @foreach ($department as $id)
+                                                                                                    <option
+                                                                                                        value="{{ $id->id }}" @if($id->id === $emp->department_id) selected @endif>
+                                                                                                        {{ $id->department_name }}
+                                                                                                    </option>
+                                                                                                @endforeach
+                                                                                            </select>
+                                                                                        </div>
+                                                                                    </div>
+                                                                                </div>
+                                                                                <div class="col-6">
+                                                                                    <div class="popupForm_col">
+                                                                                        <strong>Emp status<span
+                                                                                                style="color: red">*</span></strong>
+                                                                                        <div class="popupForm_field">
+                                                                                            <input type="text"
+                                                                                                name="emp_status"
+                                                                                                value="{{$emp->emp_status}}"
+                                                                                                placeholder="Enter Employee Status">
+                                                                                        </div>
+                                                                                    </div>
+                                                                                </div>
+                                                                                <div class="col-6">
+                                                                                    <div class="popupForm_col">
+                                                                                        <strong>Designation<span
+                                                                                                style="color: red">*</span></strong>
+                                                                                        <div class="popupForm_field">
+                                                                                            <select name="desig_name"
+                                                                                                class="selective">
+                                                                                                @foreach ($designation as $id)
+                                                                                                    <option
+                                                                                                        value="{{ $id->id }}" @if($id->id == $emp->designation_id) selected @endif>
+                                                                                                        {{ $id->designation_name }}
+                                                                                                    </option>
+                                                                                                @endforeach
+                                                                                            </select>
+                                                                                        </div>
+                                                                                    </div>
+                                                                                </div>
+                                                                                <div class="col-6">
+                                                                                    <div class="popupForm_col">
+                                                                                        <strong>Punch Entry
+                                                                                            Required<span
+                                                                                                style="color: red">*</span></strong>
+                                                                                        <div class="popupForm_field">
+                                                                                            <select name="Punch_Entry"
+                                                                                                class="selective">
+                                                                                                <option
+                                                                                                    value="No_option" @if ($emp->punch_enquirey_required == 'No_option') checked @endif>
+                                                                                                    Not required
+                                                                                                </option>
+                                                                                                <option value="Yes" @if ($emp->punch_enquirey_required == 'Yes') checked @endif>
+                                                                                                    Yes</option>
+                                                                                                <option value="No" @if ($emp->punch_enquirey_required == 'No') checked @endif>
+                                                                                                    No</option>
+                                                                                            </select>
+                                                                                        </div>
+                                                                                    </div>
+                                                                                </div>
+                                                                                <div class="col-6">
+                                                                                    <div class="popupForm_col">
+                                                                                        <strong>Category<span
+                                                                                                style="color: red">*</span></strong>
+                                                                                        <div class="popupForm_field">
+                                                                                            <select
+                                                                                                name="category_name"
+                                                                                                class="selective">
+                                                                                                @foreach ($category as $id)
+                                                                                                    <option
+                                                                                                        value="{{ $id->id }}" @if($id->id == $emp->category_id) selected @endif>
+                                                                                                        {{ $id->category_name }}
+                                                                                                    </option>
+                                                                                                @endforeach
+                                                                                            </select>
+                                                                                        </div>
+                                                                                    </div>
+                                                                                </div>
+                                                                                <div class="col-6">
+                                                                                    <div class="popupForm_col">
+                                                                                        <strong>Mobile Number<span
+                                                                                                style="color: red">*</span></strong>
+                                                                                        <div
+                                                                                            class="col-4 popupForm_field">
+                                                                                            <select class = "selective"
+                                                                                                name="country_code"
+                                                                                                style="width:164px">
+                                                                                                <option value="null">
+                                                                                                    Country Code
+                                                                                                </option>
+                                                                                                @foreach ($countrycodes as $country)
+                                                                                                    <option
+                                                                                                        value="+{{ $country->phone }}" @if($country->phone == $emp->country_code) selected @endif>
+                                                                                                        {{ $country->name . '+' . $country->phone }}
+                                                                                                    </option>
+                                                                                                @endforeach
+                                                                                            </select>
+                                                                                        </div>
+                                                                                        <div
+                                                                                            class="col-2 popupForm_field">
+                                                                                            <input type="text"
+                                                                                                name="Mobile_number"
+                                                                                                style="width:175px"
+                                                                                                placeholder="Enter Phone Number Here"
+                                                                                                value="{{ $emp->mobile_number }}">
+                                                                                        </div>
+                                                                                    </div>
+                                                                                </div>
+                                                                                <br>
+                                                                                <div class="row rowFieldSetting"
+                                                                                    style="margin-top:20px">
+                                                                                    <div class="shift-class"
+                                                                                        style="display:flex;flex-wrap:wrap;margin-left: 20px">
+                                                                                        <div class="col-lg-3 col-md-6">
+                                                                                            <div class="popupForm_col">
+                                                                                                <strong>Shift1</strong>
+                                                                                                <div
+                                                                                                    class="auth_select_info p-0">
+                                                                                                    <select
+                                                                                                        name="shift_1">
+                                                                                                        <option>Any
+                                                                                                        </option>
+                                                                                                        @foreach ($Shiftcode as $shift_code)
+                                                                                                            <option
+                                                                                                                value="{{ $shift_code->shift_Name }}" @if($emp->shift_1 == $shift_code->shift_Name) selected @endif>
+                                                                                                                {{ $shift_code->shift_Name }}
+                                                                                                            </option>
+                                                                                                        @endforeach
+                                                                                                    </select>
+                                                                                                </div>
+                                                                                            </div>
+                                                                                        </div>
+                                                                                        <div class="col-lg-3 col-md-6">
+                                                                                            <div class="popupForm_col">
+                                                                                                <strong>Shift2</strong>
+                                                                                                <div
+                                                                                                    class="auth_select_info p-0">
+                                                                                                    <select
+                                                                                                        name="shift_2">
+                                                                                                        <option>Any
+                                                                                                        </option>
+                                                                                                        @foreach ($Shiftcode as $shift_code)
+                                                                                                            <option
+                                                                                                                value="{{ $shift_code->shift_Name }}" @if($emp->shift_2 == $shift_code->shift_Name) selected @endif>
+                                                                                                                {{ $shift_code->shift_Name }}
+                                                                                                            </option>
+                                                                                                        @endforeach
+                                                                                                    </select>
+                                                                                                </div>
+                                                                                            </div>
+                                                                                        </div>
+                                                                                        <div class="col-lg-3 col-md-6">
+                                                                                            <div class="popupForm_col">
+                                                                                                <strong>Shift3</strong>
+                                                                                                <div
+                                                                                                    class="auth_select_info p-0">
+                                                                                                    <select
+                                                                                                        name="shift_3">
+                                                                                                        <option>Any
+                                                                                                        </option>
+                                                                                                        @foreach ($Shiftcode as $shift_code)
+                                                                                                            <option
+                                                                                                                value="{{ $shift_code->shift_Name }}" @if($emp->shift_3 == $shift_code->shift_Name) selected @endif>
+                                                                                                                {{ $shift_code->shift_Name }}
+                                                                                                            </option>
+                                                                                                        @endforeach
+                                                                                                    </select>
+                                                                                                </div>
+                                                                                            </div>
+                                                                                        </div>
+                                                                                        <div class="col-lg-3 col-md-6">
+                                                                                            <div class="popupForm_col">
+                                                                                                <strong>Shift 4</strong>
+                                                                                                <div
+                                                                                                    class="auth_select_info p-0">
+                                                                                                    <select
+                                                                                                        name="shift_4">
+                                                                                                        <option>Any
+                                                                                                        </option>
+                                                                                                        @foreach ($Shiftcode as $shift_code)
+                                                                                                            <option
+                                                                                                                value="{{ $shift_code->shift_Name }}" @if($emp->shift_4 == $shift_code->shift_Name) selected @endif>
+                                                                                                                {{ $shift_code->shift_Name }}
+                                                                                                            </option>
+                                                                                                        @endforeach
+                                                                                                    </select>
+                                                                                                </div>
+                                                                                            </div>
+                                                                                        </div>
+                                                                                    </div>
+                                                                                </div>
+                                                                                <div class="row rowFieldSetting pt-2"
+                                                                                    style="margin-top: 29px;margin-left: 10px;">
+                                                                                    <div class="col-lg-6 col-md-6">
+                                                                                        <div class="popupForm_col"
+                                                                                            style="margin-left: 81px;width: 395px;">
+                                                                                            <strong>Week Off 1</strong>
+                                                                                            <div
+                                                                                                class="auth_select_info p-0">
+                                                                                                <select
+                                                                                                    name="week_off_1">
+                                                                                                    @foreach ($weeks as $week)
+                                                                                                        <option value="{{$week->week_name}}" @if($week->week_name == $emp->weekoff1) selected @endif>
+                                                                                                            {{ $week->week_name }}
+                                                                                                        </option>
+                                                                                                    @endforeach
+                                                                                                </select>
+                                                                                            </div>
+                                                                                        </div>
+                                                                                    </div>
+                                                                                    <div class="col-lg-6 col-md-6">
+                                                                                        <div class="popupForm_col"
+                                                                                            style="margin-left: 81px;width: 395px;">
+                                                                                            <strong>Week Off 2</strong>
+                                                                                            <div
+                                                                                                class="auth_select_info p-0">
+                                                                                                <select
+                                                                                                    name="week_off_2">
+                                                                                                    @foreach ($weeks as $week)
+                                                                                                        <option value="{{$week->week_name}}" @if($week->week_name == $emp->weekoff2) selected @endif>
+                                                                                                            {{ $week->week_name }}
+                                                                                                        </option>
+                                                                                                    @endforeach
+                                                                                                </select>
+                                                                                            </div>
+                                                                                        </div>
+                                                                                    </div>
+                                                                                    <div class="row rowFieldSetting"
+                                                                                        style="margin-left: 1px;">
+                                                                                        <div class="col-lg-6 col-md-6">
+                                                                                            <div class="popupForm_col">
+                                                                                                <strong>Father/Husband
+                                                                                                    Name</strong>                                                                                                <div
+                                                                                                    class="popupForm_field">
+                                                                                                    <input
+                                                                                                        type="text"
+                                                                                                        name="father_name"
+                                                                                                        value="{{$emp->father_or_husband_name}}"
+                                                                                                        placeholder="Enter Father/Husband Name Here">
+                                                                                                </div>
+                                                                                            </div>
+                                                                                        </div>
+                                                                                        <div class="col-lg-6 col-md-6">
+                                                                                            <div class="popupForm_col">
+                                                                                                <strong>Date Of
+                                                                                                    Joining*</strong>
+                                                                                                <div
+                                                                                                    class="popupForm_field">
+                                                                                                    <input
+                                                                                                        type="date"
+                                                                                                        name="DOJ"
+                                                                                                        value="{{ date('Y-m-d', strtotime($emp->date_of_join)) }}"
+                                                                                                        placeholder="Enter Date Of Joining Here">
+                                                                                                </div>
+                                                                                            </div>
+                                                                                        </div>
+                                                                                    </div>
+                                                                                    <div class="row rowFieldSetting"
+                                                                                        style="margin-left: 1px;">
+                                                                                        <div class="col-lg-6 col-md-6">
+                                                                                            <div class="popupForm_col">
+                                                                                                <strong>Address</strong>
+                                                                                                <div class="popupForm_field">
+                                                                                                    <textarea name="address" placeholder="Enter Address">{{$emp->address}}</textarea>
+                                                                                                </div>
+                                                                                            </div>
+                                                                                        </div>
+                                                                                        <div class="col-lg-6 col-md-6">
+                                                                                            <div class="popupForm_col">
+                                                                                                <strong>E-Mail</strong>
+                                                                                                <div
+                                                                                                    class="popupForm_field">
+                                                                                                    <input
+                                                                                                        type="text"
+                                                                                                        name="Email_address"
+                                                                                                        value="{{$emp->Email}}"
+                                                                                                        placeholder="Email-Address">
+                                                                                                </div>
+                                                                                            </div>
+                                                                                        </div>
+                                                                                    </div>
+                                                                                </div>
+                                                                            </div>
+                                                                        </form>
+                                                                        <br>
+                                                                        <div class="table_actions">
+                                                                            <div class="row align-items-center ">
+                                                                                <div
+                                                                                    class="col-xxl-6 col-xl-6 col-lg-6 col-md-6 m-auto ">
+                                                                                    <div
+                                                                                        class="table_actionsBtns justify-content-center">
+                                                                                        <button
+                                                                                            class="tb_actionBtn">Save</button>
+                                                                                        <button class="tb_actionBtn"
+                                                                                            data-dismiss="modal">Exit</button>
+                                                                                    </div>
+                                                                                </div>
+                                                                            </div>
+                                                                        </div>
+                                                                        </form>
+                                                                    </div>
+                                                                </div>
 
-                                                                <g transform="translate(0.000000,240.000000) scale(0.100000,-0.100000)"
-                                                                    fill="#000000" stroke="none">
-                                                                    <path d="M920 1969 c-119 -11 -322 -45 -418 -69 -70 -17 -73 -17 -82 0 -13 24
+                                                            </div>
+                                                        @empty
+                                                            <p style="color:red;margin-top: -120px">Oops ! No Records
+                                                                In
+                                                                Employee Master
+                                                                <?xml version="1.0" standalone="no"?>
+                                                                <!DOCTYPE svg
+                                                                    PUBLIC "-//W3C//DTD SVG 20010904//EN" "http://www.w3.org/TR/2001/REC-SVG-20010904/DTD/svg10.dtd">
+                                                                <svg version="1.0" xmlns="http://www.w3.org/2000/svg"
+                                                                    width="40.000000pt" height="40.000000pt"
+                                                                    viewBox="0 0 240.000000 240.000000"
+                                                                    preserveAspectRatio="xMidYMid meet">
+
+                                                                    <g transform="translate(0.000000,240.000000) scale(0.100000,-0.100000)"
+                                                                        fill="#000000" stroke="none">
+                                                                        <path d="M920 1969 c-119 -11 -322 -45 -418 -69 -70 -17 -73 -17 -82 0 -13 24
                                                                     -50 16 -43 -10 4 -14 -2 -21 -21 -26 -14 -3 -26 -12 -26 -18 0 -7 27 -104 59
                                                                     -217 32 -112 64 -223 70 -246 11 -40 12 -41 42 -33 36 11 26 33 109 -251 56
                                                                     -196 64 -216 82 -211 12 3 18 11 15 21 -2 9 -32 114 -67 234 -52 178 -61 220
@@ -244,25 +666,25 @@
                                                                     -107 -25 -84 -32 -98 -52 -101 -13 -2 -25 3 -28 12 -5 14 11 172 21 203 4 13
                                                                     62 8 79 -7z m-56 -249 c-2 -22 -8 -26 -33 -26 -21 0 -31 5 -33 18 -7 33 4 44
                                                                     38 39 27 -4 31 -8 28 -31z" />
-                                                                    <path d="M1015 1733 c8 -94 15 -136 23 -129 6 7 4 128 -4 174 -4 17 -11 32
+                                                                        <path d="M1015 1733 c8 -94 15 -136 23 -129 6 7 4 128 -4 174 -4 17 -11 32
                                                                     -16 32 -6 0 -7 -29 -3 -77z" />
-                                                                    <path d="M1250 1776 c0 -20 5 -36 10 -36 6 0 10 13 10 29 0 17 -4 33 -10 36
+                                                                        <path d="M1250 1776 c0 -20 5 -36 10 -36 6 0 10 13 10 29 0 17 -4 33 -10 36
                                                                     -6 4 -10 -8 -10 -29z" />
-                                                                    <path d="M780 1756 c0 -28 28 -167 35 -175 15 -14 15 17 0 98 -16 88 -35 129
+                                                                        <path d="M780 1756 c0 -28 28 -167 35 -175 15 -14 15 17 0 98 -16 88 -35 129
                                                                     -35 77z" />
-                                                                    <path d="M1050 1057 c-63 -33 -62 -51 2 -22 29 14 61 25 71 25 9 0 17 5 17 10
+                                                                        <path d="M1050 1057 c-63 -33 -62 -51 2 -22 29 14 61 25 71 25 9 0 17 5 17 10
                                                                     0 17 -45 11 -90 -13z" />
-                                                                    <path d="M1260 1071 c0 -6 8 -11 18 -11 9 0 41 -11 70 -25 59 -27 70 -18 17
+                                                                        <path d="M1260 1071 c0 -6 8 -11 18 -11 9 0 41 -11 70 -25 59 -27 70 -18 17
                                                                     15 -40 25 -105 38 -105 21z" />
-                                                                    <path d="M1061 994 c-40 -50 -17 -138 29 -114 27 14 40 42 40 82 0 60 -35 75
+                                                                        <path d="M1061 994 c-40 -50 -17 -138 29 -114 27 14 40 42 40 82 0 60 -35 75
                                                                     -69 32z" />
-                                                                    <path d="M1282 1008 c-15 -15 -16 -72 -2 -98 6 -11 19 -24 30 -30 46 -24 69
+                                                                        <path d="M1282 1008 c-15 -15 -16 -72 -2 -98 6 -11 19 -24 30 -30 46 -24 69
                                                                     64 29 114 -22 28 -39 32 -57 14z" />
-                                                                    <path d="M1135 706 c-16 -7 -39 -23 -49 -35 l-19 -21 34 17 c46 24 152 24 198
+                                                                        <path d="M1135 706 c-16 -7 -39 -23 -49 -35 l-19 -21 34 17 c46 24 152 24 198
                                                                     0 l34 -17 -19 21 c-40 46 -120 61 -179 35z" />
-                                                                </g>
-                                                            </svg>
-                                                        </p>
+                                                                    </g>
+                                                                </svg>
+                                                            </p>
                                                     @endforelse
                                                 </tbody>
                                             </table>
@@ -290,7 +712,7 @@
     </div>
 </div>
 {{-- //add_modal --}}
-<div class="modal fade" id="add_emp" tabindex="-1" role="dialog" aria-hidden="true" style="top:50px;">
+<div class="modal fade" id="add_emp" tabindex="-1" role="dialog" aria-hidden="true" style="top:33px;">
     <div class="modal-dialog" role="document">
         {{-- <div class="modal-content" style="width: 173%;"> --}}
         <div class="modal-content" style="width: 220%;left: -305px">
@@ -306,15 +728,10 @@
                     <div class="row">
                         <div class="col-6">
                             <div class="popupForm_col">
-                                <strong>Employee code<span style="color: red">*</span></strong>
+                                <strong>Employee code</strong>
                                 <div class="popupForm_field">
-                                    <select name="company_id" class="selective">
-                                        @foreach ($comapnaies as $id)
-                                            <option value="{{ $id->id }}">
-                                                {{ $id->company_name }}
-                                            </option>
-                                        @endforeach
-                                    </select>
+                                    <input type="text" name="employee_code" value="{{ old('employee_code') }}"
+                                        placeholder="Enter Employee Code(If any)">
                                 </div>
                             </div>
                         </div>
@@ -322,10 +739,19 @@
                             <div class="popupForm_col">
                                 <strong>Employee Name<span style="color: red">*</span></strong>
                                 <div class="popupForm_field">
-                                    <select name="dept_id" class="selective">
-                                        @foreach ($department as $id)
+                                    <input type="text" name="employee_name" value="{{ old('employee_name') }}"
+                                        placeholder="Enter Employee Name">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-6">
+                            <div class="popupForm_col">
+                                <strong>Company<span style="color: red">*</span></strong>
+                                <div class="popupForm_field">
+                                    <select name="company_name" class="selective">
+                                        @foreach ($comapnaies as $id)
                                             <option value="{{ $id->id }}">
-                                                {{ $id->department_name }}
+                                                {{ $id->company_name }}
                                             </option>
                                         @endforeach
                                     </select>
@@ -334,17 +760,10 @@
                         </div>
                         <div class="col-6">
                             <div class="popupForm_col">
-                                <strong>Company<span style="color: red">*</span></strong>
+                                <strong>Bizionic Id*</strong>
                                 <div class="popupForm_field">
-                                    <input type="text" name="category_id" value="{{ old('category_id') }}">
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-6">
-                            <div class="popupForm_col">
-                                <strong>Bizionic Id<span style="color: red">*</span></strong>
-                                <div class="popupForm_field">
-                                    <input type="text" name="category_name" value="{{ old('category_name') }}">
+                                    <input type="text" name="bizionic_id" value="{{ old('bizionic_id') }}"
+                                        placeholder="Enter Bizionic-Id">
                                 </div>
                             </div>
                         </div>
@@ -352,10 +771,10 @@
                             <div class="popupForm_col">
                                 <strong>Department<span style="color: red">*</span></strong>
                                 <div class="popupForm_field">
-                                    <select name="company_id" class="selective">
-                                        @foreach ($comapnaies as $id)
+                                    <select name="dept_name" class="selective">
+                                        @foreach ($department as $id)
                                             <option value="{{ $id->id }}">
-                                                {{ $id->company_name }}
+                                                {{ $id->department_name }}
                                             </option>
                                         @endforeach
                                     </select>
@@ -366,10 +785,19 @@
                             <div class="popupForm_col">
                                 <strong>Emp status<span style="color: red">*</span></strong>
                                 <div class="popupForm_field">
-                                    <select name="dept_id" class="selective">
-                                        @foreach ($department as $id)
+                                    <input type="text" name="emp_status" value="{{ old('emp_status') }}"
+                                        placeholder="Enter Employee Status">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-6">
+                            <div class="popupForm_col">
+                                <strong>Designation<span style="color: red">*</span></strong>
+                                <div class="popupForm_field">
+                                    <select name="desig_name" class="selective">
+                                        @foreach ($designation as $id)
                                             <option value="{{ $id->id }}">
-                                                {{ $id->department_name }}
+                                                {{ $id->designation_name }}
                                             </option>
                                         @endforeach
                                     </select>
@@ -378,17 +806,13 @@
                         </div>
                         <div class="col-6">
                             <div class="popupForm_col">
-                                <strong>Designation<span style="color: red">*</span></strong>
-                                <div class="popupForm_field">
-                                    <input type="text" name="category_id" value="{{ old('category_id') }}">
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-6">
-                            <div class="popupForm_col">
                                 <strong>Punch Entry Required<span style="color: red">*</span></strong>
                                 <div class="popupForm_field">
-                                    <input type="text" name="category_name" value="{{ old('category_name') }}">
+                                    <select name="Punch_Entry" class="selective">
+                                        <option value="No option">Not required</option>
+                                        <option value="Yes">Yes</option>
+                                        <option value="No">No</option>
+                                    </select>
                                 </div>
                             </div>
                         </div>
@@ -396,299 +820,171 @@
                             <div class="popupForm_col">
                                 <strong>Category<span style="color: red">*</span></strong>
                                 <div class="popupForm_field">
-                                    <input type="text" name="category_id" value="{{ old('category_id') }}">
+                                    <select name="category_name" class="selective">
+                                        @foreach ($category as $id)
+                                            <option value="{{ $id->id }}">
+                                                {{ $id->category_name }}
+                                            </option>
+                                        @endforeach
+                                    </select>
                                 </div>
                             </div>
                         </div>
                         <div class="col-6">
                             <div class="popupForm_col">
                                 <strong>Mobile Number<span style="color: red">*</span></strong>
-                                <div class="popupForm_field">
-                                    <input type="text" name="category_name" value="{{ old('category_name') }}">
+                                <div class="col-4 popupForm_field">
+                                    <select class = "selective" name="country_code" style="width:164px">
+                                        <option value="null">Country Code</option>
+                                        @foreach ($countrycodes as $country)
+                                            <option value="+{{ $country->phone }}">
+                                                {{ $country->name . '+' . $country->phone }}</option>
+                                        @endforeach
+                                    </select>
+                                </div>
+                                <div class="col-2 popupForm_field">
+                                    <input type="text" name="Mobile_number" style="width:175px"
+                                        placeholder="Enter Phone Number Here" value="{{ old('Mobile_number') }}">
                                 </div>
                             </div>
                         </div>
-                        <br><br>
-                        <div class="row rowFieldSetting">
-                            <div class="col-lg-3 col-md-6">
-                              <div class="popupForm_col">
-                                <strong>Shift1</strong>
-                                <div class="auth_select_info p-0">
-                                  <select>
-                                    <option>Any</option>
-                                    <option>Uae</option>
-                                    <option>Uk</option>
-                                  </select>
+                        <br>
+                        <div class="row rowFieldSetting" style="margin-top:20px">
+                            <div class="shift-class" style="display:flex;flex-wrap:wrap;margin-left: 20px">
+                                <div class="col-lg-3 col-md-6">
+                                    <div class="popupForm_col">
+                                        <strong>Shift1</strong>
+                                        <div class="auth_select_info p-0">
+                                            <select name="shift_1">
+                                                <option>Any</option>
+                                                @foreach ($Shiftcode as $shift_code)
+                                                    <option
+                                                        value="{{ $shift_code->shift_Name }} {{ old('shift_1') == $shift_code->shift_Name ? 'selected' : '' }}">
+                                                        {{ $shift_code->shift_Name }}</option>
+                                                @endforeach
+                                            </select>
+                                        </div>
+                                    </div>
                                 </div>
-                              </div>
+                                <div class="col-lg-3 col-md-6">
+                                    <div class="popupForm_col">
+                                        <strong>Shift2</strong>
+                                        <div class="auth_select_info p-0">
+                                            <select name="shift_2">
+                                                <option>Any</option>
+                                                @foreach ($Shiftcode as $shift_code)
+                                                    <option
+                                                        value="{{ $shift_code->shift_Name }} {{ old('shift_2') == $shift_code->shift_Name ? 'selected' : '' }}">
+                                                        {{ $shift_code->shift_Name }}</option>
+                                                @endforeach
+                                            </select>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-lg-3 col-md-6">
+                                    <div class="popupForm_col">
+                                        <strong>Shift3</strong>
+                                        <div class="auth_select_info p-0">
+                                            <select name="shift_3">
+                                                <option>Any</option>
+                                                @foreach ($Shiftcode as $shift_code)
+                                                    <option
+                                                        value="{{ $shift_code->shift_Name }} {{ old('shift_3') == $shift_code->shift_Name ? 'selected' : '' }}">
+                                                        {{ $shift_code->shift_Name }}</option>
+                                                @endforeach
+                                            </select>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-lg-3 col-md-6">
+                                    <div class="popupForm_col">
+                                        <strong>Shift 4</strong>
+                                        <div class="auth_select_info p-0">
+                                            <select name="shift_4">
+                                                <option>Any</option>
+                                                @foreach ($Shiftcode as $shift_code)
+                                                    <option value="{{ $shift_code->shift_Name }}"
+                                                        {{ old('shift_4') == $shift_code->shift_Name ? 'selected' : '' }}>
+                                                        {{ $shift_code->shift_Name }}</option>
+                                                @endforeach
+                                            </select>
+                                        </div>
+                                    </div>
+                                </div>
                             </div>
-                            <div class="col-lg-3 col-md-6">
-                              <div class="popupForm_col">
-                                <strong>Shift2</strong>
-                                <div class="auth_select_info p-0">
-                                  <select>
-                                    <option>Any</option>
-                                    <option>Uae</option>
-                                    <option>Uk</option>
-                                  </select>
-                                </div>
-                              </div>
-                            </div>
-                            <div class="col-lg-3 col-md-6">
-                              <div class="popupForm_col">
-                                <strong>Shift3</strong>
-                                <div class="auth_select_info p-0">
-                                  <select>
-                                    <option>Any</option>
-                                    <option>Uae</option>
-                                    <option>Uk</option>
-                                  </select>
-                                </div>
-                              </div>
-                            </div>
-                            <div class="col-lg-3 col-md-6">
-                              <div class="popupForm_col">
-                                <strong>Shift4</strong>
-                                <div class="auth_select_info p-0">
-                                  <select>
-                                    <option>Any</option>
-                                    <option>Uae</option>
-                                    <option>Uk</option>
-                                  </select>
-                                </div>
-                              </div>
-                            </div>
-          
-                            <div class="col-lg-3 col-md-6">
-                              <div class="popupForm_col">
-                                <strong>Shift5</strong>
-                                <div class="auth_select_info p-0">
-                                  <select>
-                                    <option>Any</option>
-                                    <option>Uae</option>
-                                    <option>Uk</option>
-                                  </select>
-                                </div>
-                              </div>
-                            </div>
-          
-                            <div class="col-lg-3 col-md-6">
-                              <div class="popupForm_col">
-                                <strong>Shift6</strong>
-                                <div class="auth_select_info p-0">
-                                  <select>
-                                    <option>Any</option>
-                                    <option>Uae</option>
-                                    <option>Uk</option>
-                                  </select>
-                                </div>
-                              </div>
-                            </div>
-          
-                            <div class="col-lg-3 col-md-6">
-                              <div class="popupForm_col">
-                                <strong>Shift7</strong>
-                                <div class="auth_select_info p-0">
-                                  <select>
-                                    <option>Any</option>
-                                    <option>Uae</option>
-                                    <option>Uk</option>
-                                  </select>
-                                </div>
-                              </div>
-                            </div>
-          
-                            <div class="col-lg-3 col-md-6">
-                              <div class="popupForm_col">
-                                <strong>Shift8</strong>
-                                <div class="auth_select_info p-0">
-                                  <select>
-                                    <option>Any</option>
-                                    <option>Uae</option>
-                                    <option>Uk</option>
-                                  </select>
-                                </div>
-                              </div>
-                            </div>
-                          </div>
-                          {{-- // --}}
-                          <div class="row rowFieldSetting pt-2">
-                            <div class="col-lg-4 col-md-4">
-                              <div class="popupForm_col">
-                                <strong>Weekoff1</strong>
-                                <div class="auth_select_info p-0">
-                                  <select>
-                                    <option>Any</option>
-                                    <option>Uae</option>
-                                    <option>Uk</option>
-                                  </select>
-                                </div>
-                              </div>
-                              <div class="popupForm_col">
-                                <strong>Weekoff2</strong>
-                                <div class="auth_select_info p-0">
-                                  <select>
-                                    <option>Any</option>
-                                    <option>Uae</option>
-                                    <option>Uk</option>
-                                  </select>
-                                </div>
-                              </div>
-                            </div>
-          
-                            <div class="col-lg-4 col-md-4">
-                              <div class="shiftSelect">
-                                <strong>Saturday Full Day Off</strong>
-                                <div class="shiftSelect_col">
-                                  <div class="tableCheckbox lunchCheck">
-                                    <label class="checkbox-label">
-                                      <input type="checkbox" />
-                                      <span class="checkbox-custom rectangular"></span>
-                                    </label>
-                                    Select All
-                                  </div>
-                                </div>
-          
-                                <div class="allshiftSelect">
-                                  <div class="tableCheckbox lunchCheck">
-                                    <label class="checkbox-label">
-                                      <input type="checkbox" />
-                                      <span class="checkbox-custom rectangular"></span>
-                                    </label>
-                                    1st
-                                  </div>
-                                  <div class="tableCheckbox lunchCheck">
-                                    <label class="checkbox-label">
-                                      <input type="checkbox" />
-                                      <span class="checkbox-custom rectangular"></span>
-                                    </label>
-                                    2nd
-                                  </div>
-                                  <div class="tableCheckbox lunchCheck">
-                                    <label class="checkbox-label">
-                                      <input type="checkbox" />
-                                      <span class="checkbox-custom rectangular"></span>
-                                    </label>
-                                    3rd
-                                  </div>
-                                  <div class="tableCheckbox lunchCheck">
-                                    <label class="checkbox-label">
-                                      <input type="checkbox" />
-                                      <span class="checkbox-custom rectangular"></span>
-                                    </label>
-                                    4th
-                                  </div>
-                                  <div class="tableCheckbox lunchCheck">
-                                    <label class="checkbox-label">
-                                      <input type="checkbox" />
-                                      <span class="checkbox-custom rectangular"></span>
-                                    </label>
-                                    5th
-                                  </div>
-                                </div>
-                              </div>
-                            </div>
-          
-                            <div class="col-lg-4 col-md-4">
-                              <div class="shiftSelect shiftSelectHalf">
-                                <strong>Saturday Half Day Off</strong>
-                                <div class="shiftSelect_col">
-                                  <div class="tableCheckbox lunchCheck">
-                                    <label class="checkbox-label">
-                                      <input type="checkbox" />
-                                      <span class="checkbox-custom rectangular"></span>
-                                    </label>
-                                    Select All
-                                  </div>
-                                </div>
-          
-                                <div class="allshiftSelect">
-                                  <div class="tableCheckbox lunchCheck">
-                                    <label class="checkbox-label">
-                                      <input type="checkbox" />
-                                      <span class="checkbox-custom rectangular"></span>
-                                    </label>
-                                    1st
-                                  </div>
-                                  <div class="tableCheckbox lunchCheck">
-                                    <label class="checkbox-label">
-                                      <input type="checkbox" />
-                                      <span class="checkbox-custom rectangular"></span>
-                                    </label>
-                                    2nd
-                                  </div>
-                                  <div class="tableCheckbox lunchCheck">
-                                    <label class="checkbox-label">
-                                      <input type="checkbox" />
-                                      <span class="checkbox-custom rectangular"></span>
-                                    </label>
-                                    3rd
-                                  </div>
-                                  <div class="tableCheckbox lunchCheck">
-                                    <label class="checkbox-label">
-                                      <input type="checkbox" />
-                                      <span class="checkbox-custom rectangular"></span>
-                                    </label>
-                                    4th
-                                  </div>
-                                  <div class="tableCheckbox lunchCheck">
-                                    <label class="checkbox-label">
-                                      <input type="checkbox" />
-                                      <span class="checkbox-custom rectangular"></span>
-                                    </label>
-                                    5th
-                                  </div>
-                                </div>
-                              </div>
-                            </div>
-                          </div>
-                          {{-- // --}}
-                          <div class="row rowFieldSetting">
+                        </div>
+                        <div class="row rowFieldSetting pt-2" style="margin-top: 29px;margin-left: 10px;">
                             <div class="col-lg-6 col-md-6">
-                              <div class="popupForm_col">
-                                <strong>Father/Husband Name</strong>
-                                <div class="popupForm_field">
-                                  <input type="text" value="" />
+                                <div class="popupForm_col" style="margin-left: 81px;width: 395px;">
+                                    <strong>Week Off 1</strong>
+                                    <div class="auth_select_info p-0">
+                                        <select name="week_off_1">
+                                            @foreach ($weeks as $week)
+                                                <option>{{ $week->week_name }}</option>
+                                            @endforeach
+                                        </select>
+                                    </div>
                                 </div>
-                              </div>
                             </div>
-          
                             <div class="col-lg-6 col-md-6">
-                              <div class="popupForm_col">
-                                <strong>Date Of Joining*</strong>
-                                <div class="popupForm_field">
-                                  <input type="text" value="" />
+                                <div class="popupForm_col" style="margin-left: 81px;width: 395px;">
+                                    <strong>Week Off 2</strong>
+                                    <div class="auth_select_info p-0">
+                                        <select name="week_off_2">
+                                            @foreach ($weeks as $week)
+                                                <option>{{ $week->week_name }}</option>
+                                            @endforeach
+                                        </select>
+                                    </div>
                                 </div>
-                              </div>
                             </div>
-                          </div>
-                          {{-- // --}}
-                          <div class="row rowFieldSetting">
-                            <div class="col-lg-6 col-md-6">
-                              <div class="popupForm_col">
-                                <strong>Address</strong>
-                                <div class="popupForm_field">
-                                  <textarea></textarea>
+                            <div class="row rowFieldSetting" style="margin-left: 1px;">
+                                <div class="col-lg-6 col-md-6">
+                                    <div class="popupForm_col">
+                                        <strong>Father/Husband Name</strong>
+                                        <div class="popupForm_field">
+                                            <input type="text" name="father_name"
+                                                value="{{ old('father_name') }}"
+                                                placeholder="Enter Father/Husband Name Here">
+                                        </div>
+                                    </div>
                                 </div>
-                              </div>
-                            </div>
-          
-                            <div class="col-lg-6 col-md-6">
-                              <div class="popupForm_col">
-                                <strong>E-Mail</strong>
-                                <div class="popupForm_field">
-                                  <input type="text" value="" />
+                                <div class="col-lg-6 col-md-6">
+                                    <div class="popupForm_col">
+                                        <strong>Date Of Joining*</strong>
+                                        <div class="popupForm_field">
+                                            <input type="date" name="DOJ" value="{{ old('DOJ') }}"
+                                                placeholder="Enter Date Of Joining Here">
+                                        </div>
+                                    </div>
                                 </div>
-                              </div>
                             </div>
-                          </div>
-                          {{-- // --}}
-                          <div class="table_actions" style="margin-left: 500px;margin-top:25px">
+                            <div class="row rowFieldSetting" style="margin-left: 1px;">
+                                <div class="col-lg-6 col-md-6">
+                                    <div class="popupForm_col">
+                                        <strong>Address</strong>
+                                        <div class="popupForm_field">
+                                            <textarea name ="address"placeholder="Enter Address" value="{{ old('address') }}"></textarea>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-lg-6 col-md-6">
+                                    <div class="popupForm_col">
+                                        <strong>E-Mail</strong>
+                                        <div class="popupForm_field">
+                                            <input type="text" name="Email_address"
+                                                value="{{ old('Email_address') }}" placeholder="Email-Address">
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="table_actions" style="margin-left: 470px;margin-top:25px">
                                 <div class="table_actionsBtns">
-                                  <button class="tb_actionBtn">Save</button>
-                                  <button class="tb_actionBtn">Exit</button>
+                                    <button class="tb_actionBtn">Save</button>
+                                    <button class="tb_actionBtn">Exit</button>
                                 </div>
-                          </div>
+                            </div>
+                        </div>
                     </div>
                 </form>
             </div>

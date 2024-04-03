@@ -5,8 +5,6 @@
 <script src="https://cdn.datatables.net/1.11.5/js/jquery.dataTables.min.js"></script>
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/sweetalert2@10.15.7/dist/sweetalert2.min.css">
 <script src="https://cdn.jsdelivr.net/npm/sweetalert2@10.15.7/dist/sweetalert2.all.min.js"></script>
-{{-- // --}}
-{{-- <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script> --}}
 <script>
     $(document).ready(function() {
         $('#department').DataTable();
@@ -59,6 +57,73 @@
                         </script>
                     </div>
                 @endif
+                {{-- ///trie --}}
+                <script>
+                    // var $j = jQuery.noConflict();
+                    $(document).ready(function() {
+                        $("#submitFilter").click(function() {
+                            let selectedCompanyId = $('#company_filter_select').val();
+                            alert(selectedCompanyId);
+                        //     $.ajax({
+                        //         url: '/dept_id', // Corrected URL
+                        //         type: 'GET', // Removed unnecessary semicolon
+                        //         data: {
+                        //             company_id: selectedCompanyId
+                        //         }, // Passed selected company ID as data
+                        //         dataType: 'json',
+                        //         success: function(response) {
+                        //             console.log('Success:', response);
+                        //         },
+                        //         error: function(xhr, status, error) {
+                        //             console.error('Error:', xhr, status, error);
+                        //         }
+                            // });
+                        });
+                    });
+                    // $(function() {
+                    //     $('select[name=country]').change(function() {
+                    //         alert($(this).val());
+                    //     });
+                    // });
+                </script>
+                <div class="allSelect">
+                    <strong class="entitiesSelect">Select Company</strong>
+                    {{-- <form action="{{ url('dept_id') }}" method="post" class="d-flex align-items-end"
+                        id="filterForm">
+                        @csrf
+                        <div class="mr-3">
+                            <div class="showSort_select seleComp">
+                                <select class="fav_show" name="country" id="company_filter_select">
+                                    @foreach ($CompanyFilter as $company_filter)
+                                        <option value="{{ $company_filter->id }}">
+                                            {{ $company_filter->company_name }}
+                                        </option>
+                                    @endforeach
+                                </select>
+                            </div>
+                        </div>
+                        <button type="button" id="submitFilter" class="btn btn-primary mt-2">Filter</button>
+                    </form> --}}
+                    {{-- <form action="{{ url('dept_id') }}" method="POST" class="d-flex align-items-end" id="filterForm">
+                        @csrf <!-- Add CSRF token -->
+                        <div class="mr-3">
+                            <div class="showSort_select seleComp">
+                                <select class="fav_show" name="company_id" id="company_filter_select"> <!-- Change name attribute to 'company_id' -->
+                                    @foreach ($CompanyFilter as $company_filter)
+                                        <option value="{{ $company_filter->id }}">
+                                            {{ $company_filter->company_name }}
+                                        </option>
+                                    @endforeach
+                                </select>
+                            </div>
+                        </div>
+                        <button type="submit" class="btn btn-primary mt-2">Filter</button> <!-- Change type to 'submit' -->
+                    </form> --}}
+                    
+                </div>
+                {{-- @php
+                    die();
+                @endphp --}}
                 <div class="custom_tabs_data" id="tab2" style="display: block;">
                     <div class="masterTab_bg">
                         <div class="masterTab_data">
@@ -73,11 +138,11 @@
                                                 <div class="showSort">
                                                     <div class="allSelect">
                                                         <strong class="entitiesSelect">Select Company</strong>
-                                                        <form action="{{ route('Department.index') }}" method="GET"
+                                                        {{-- <form action="{{ route('Department.index') }}" method="GET"
                                                             class="d-flex align-items-end" id="filterForm">
                                                             <div class="mr-3">
                                                                 <div class="showSort_select seleComp">
-                                                                    <select class="fav_show" name="company_filter"
+                                                                    <select class="fav_show" name="country"
                                                                         id="company_filter_select">
                                                                         @foreach ($CompanyFilter as $company_filter)
                                                                             <option value="{{ $company_filter->id }}">
@@ -89,6 +154,21 @@
                                                             </div>
                                                             <button type="button" id="submitFilter"
                                                                 class="btn btn-primary mt-2">Filter</button>
+                                                        </form> --}}
+                                                        <form action="{{ url('dept_id') }}" method="POST" class="d-flex align-items-end" id="filterForm">
+                                                            @csrf <!-- Add CSRF token -->
+                                                            <div class="mr-3">
+                                                                <div class="showSort_select seleComp">
+                                                                    <select class="fav_show" name="company_id" id="company_filter_select"> <!-- Change name attribute to 'company_id' -->
+                                                                        @foreach ($companes as $company_filter)
+                                                                            <option value="{{ $company_filter->id }}">
+                                                                                {{ $company_filter->company_name }}
+                                                                            </option>
+                                                                        @endforeach
+                                                                    </select>
+                                                                </div>
+                                                            </div>
+                                                            <button type="submit" class="btn btn-primary mt-2">Filter</button> <!-- Change type to 'submit' -->
                                                         </form>
                                                     </div>
                                                 </div>
@@ -125,7 +205,7 @@
                                                             </td>
                                                             <td>
                                                                 <div class="tabletext">
-                                                                    @foreach ($companyId as $company)
+                                                                    @foreach ($companes as $company)
                                                                         @if ($company->id == $dept->company_id)
                                                                             <p>{{ $company->company_name }}</p>
                                                                         @endif
@@ -146,7 +226,8 @@
                                                                         method="post">
                                                                         @csrf
                                                                         @method('delete')
-                                                                        <button type="button" class="actBtn" data-dept-id ="{{ $dept->id }}"
+                                                                        <button type="button" class="actBtn"
+                                                                            data-dept-id ="{{ $dept->id }}"
                                                                             onclick="showCustomAlert(this)">
                                                                             <i class="fa fa-trash"
                                                                                 aria-hidden="true"></i>
@@ -210,7 +291,7 @@
                                                                                                 <select
                                                                                                     name="company_id"
                                                                                                     class="select">
-                                                                                                    @foreach ($companyId as $id)
+                                                                                                    @foreach ($companes as $id)
                                                                                                         <option
                                                                                                             value="{{ $id->id }}"@if ($dept->comapny_id == $id->id) selected @endif>
                                                                                                             {{ $id->company_name }}
@@ -371,7 +452,7 @@
                                                                         <strong>Company Name*</strong>
                                                                         <div class="popupForm_field">
                                                                             <select name="company_id" class="select">
-                                                                                @foreach ($companyId as $id)
+                                                                                @foreach ($companes as $id)
                                                                                     <option
                                                                                         value="{{ $id->id }}">
                                                                                         {{ $id->company_name }}
@@ -450,7 +531,7 @@
             confirmButtonText: 'OK'
         }).then((result) => {
             if (result.isConfirmed) {
-                var formAction = "{{ route('Department.destroy',':DeptId') }}".replace(':DeptId', DeptId);
+                var formAction = "{{ route('Department.destroy', ':DeptId') }}".replace(':DeptId', DeptId);
                 document.getElementById('deleteForm').action = formAction;
                 document.getElementById('deleteForm').submit();
             }
@@ -474,4 +555,30 @@
             });
         });
     });
+</script>
+<script>
+    // $(document).ready(function(){
+    //     $("#submitFilter").click(function(){
+    //         var $data = $("#county").val();
+    //         alert($data);
+    //     });
+    // });
+    // $(function() {
+    //     $('select[name=country]').change(function() {
+    //         alert($(this).val());
+
+
+    //     var url = '{{ url('country') }}' + $(this).val() + '/states/';
+
+    //     $.get(url, function(data) {
+    //         var select = $('form select[name= state]');
+
+    //         select.empty();
+
+    //         $.each(data,function(key, value) {
+    //             select.append('<option value=' + value.id + '>' + value.name + '</option>');
+    //         });
+    //     });
+    //     });
+    // });
 </script>

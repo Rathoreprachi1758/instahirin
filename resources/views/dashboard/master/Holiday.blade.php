@@ -437,7 +437,7 @@
                                 <div class="popupForm_col">
                                     <strong>Holiday Date*</strong>
                                     <div class="popupForm_field">
-                                        <input type="date"name="Holiday_date" value="{{ old('Holiday_date') }}" />
+                                        <input type="date"name="Holiday_date" value="{{ old('Holiday_date') }}">
                                     </div>
                                 </div>
                             </div>

@@ -10,13 +10,15 @@
         $excludeMenuNames = ['Services','Industries',
         'startups', 'portfolio', 'product-eShare', 'product-letwizard', 'product-nestle',
         'product-continental', 'product-prime-video', 'product-dubai-land', 'product-alchemy',
-        'product-hubun', 'product-work-vital', 'product-black-smokeHouse', 'product-time-house',
+        'product-hubun', 'product-work-vital','product-black-smokeHouse', 'product-time-house',
         'product-bhuth', 'product-little-amigos', 'product-maine-rest', 'product-shan-food',
-        'blogs', 'funding-apply-now-form', 'blogId','Insta Hirin View All','global-talent','Talent Onboard Process','Insta
-        Requirement Form','own-boss-learn-more','revolution-journey','insta Hirin Onboard
+        'blogs', 'funding-apply-now-form', 'blogId','Insta Hirin View All','global-talent','Talent Onboard Process',
+        'own-boss-learn-more','revolution-journey','insta Hirin Onboard
         Form','hireme-view-all-job','Spotify','Virgin Mobile',
-        'Nakheel','Ericsson','Emporium Capital','Sky','Byte Dance','Just Eat','Montblanc','Amazon Music','Century
-        Financial','Fuji Film','Baazex','Jobtome','Leadnest','American Hospital','Bizionic Team','Portfolio','product-jnk','Blogs','InstaHirin View All'
+        'Nakheel','Ericsson',' ','Sky','Byte Dance','Just Eat','Montblanc','Amazon Music','Century Financial',
+        'Fuji Film','Baazex','Jobtome','Leadnest','American Hospital','Bizionic Team','Portfolio','product-jnk','Blogs','InstaHirin View All',
+        'Turkish Airline', 'Emporium Capital' , 'Mobile Push Notifications','Web Push Notifications', 'In App Push Notifications',
+        'Email Notifications','SMS Notifications','Journey Notifications','Insta Requirement Form','hirin-view-all','instaRequirement','talent-onboard-process','global-talent','view-all-job','instaHirin-Onboard-Form','revolution-journey','own-boss-learn-more'
         ];
         @endphp
         @if(!in_array($menu->name,$excludeMenuNames))
@@ -76,7 +78,6 @@
                                                             $childMenuItem->data->is_action_item ? true : false;
                                                             $childMenuItemClass = $childMenuItem->data->is_action_item ?
                                                             $childMenuItem->data->is_action_item : '';
-
                                                             @endphp
                                                             <li @class([$childMenuItemClass=> $hasChildMenuItemClass])>
                                                                 <a href="{{ url("/{$menu->data->slug}/{$cmenu->data->slug}/{$cMenuItem->data->slug}/{$childMenuItem->data->slug}")
