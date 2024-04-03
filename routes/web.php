@@ -101,6 +101,7 @@ Route::middleware(['middleware' => 'auth.check'])->group(function () {
     //activity-agency-contractor
     Route::get('agency-contractor', [AgencyContractor::class, 'agencyContractor'])->name('agencyContractor');
     Route::post('agency-contractor-company', [AgencyContractor::class, 'companyDetails'])->name('companyDetails');
+    Route::post('agency-contractor-location', [AgencyContractor::class, 'agencyLocationSubmit'])->name('agencyLocationSubmit');
     Route::post('certification-form', [AgencyContractor::class, 'certificationsForm'])->name('certificationsForm');
     Route::post('edit-delete-certificates', [AgencyContractor::class, 'editOrDeleteCertificates'])->name('editOrDeleteCertificates');
     Route::get('download/{id}', [AgencyContractor::class, 'fileDownload'])->name('fileDownload');
@@ -108,6 +109,8 @@ Route::middleware(['middleware' => 'auth.check'])->group(function () {
     Route::post('/portfolio', [AgencyContractor::class, 'portfolioSubmit'])->name('portfolioSubmit');
     Route::get('/portfolio-delete', [AgencyContractor::class, 'portfolioDelete'])->name('portfolioDelete');
     Route::post('/services', [AgencyContractor::class, 'saveServices'])->name('saveServices');
+    Route::post('/specialization-services', [AgencyContractor::class, 'specializationSubmit'])->name('specializationSubmit');
+    Route::post('/client-update', [AgencyContractor::class, 'clientUpdate'])->name('clientUpdate');
 
 
     //
@@ -157,9 +160,10 @@ Route::middleware(['middleware' => 'auth.check'])->group(function () {
     Route::get('leave-late-approval', [TimeTracking::class, 'leaveLateApproval'])->name('leaveLateApproval');
     Route::post('leave-request-approval-filter', [TimeTracking::class, 'leaveRequestApprovalFilter'])->name('leaveRequestApprovalFilter');
     Route::post('late-request-approval-filter', [TimeTracking::class, 'lateApprovalFilter'])->name('lateApprovalFilter');
+    Route::post('department', [TimeTracking::class, 'department'])->name('department');
 
 });
-Route::post('department', [TimeTracking::class, 'department'])->name('department');
+
 Route::get('loading_shift_codes',[profileController::class,'Shift_codes']);
 Route::get('/{levelOneSlug?}/{levelTwoSlug?}/{levelThreeSlug?}/{levelFourSlug?}', 'App\Http\Controllers\ContentController@index')->name('index');
 

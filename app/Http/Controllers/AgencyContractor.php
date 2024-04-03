@@ -2,9 +2,12 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\AgencyClient;
 use App\Models\AgencyContractorCompany;
 use App\Models\AgencyContractorPortfolio;
+use App\Models\AgencyLocation;
 use App\Models\AgencyService;
+use App\Models\AgencySpecializationService;
 use App\Models\AgencySubServices;
 use App\Models\ComplianceCertificate;
 use App\Models\serviceLine;
@@ -32,7 +35,12 @@ class AgencyContractor extends Controller
         $agencyServices = $this->services();
         $agencySubServices = $this->subServices();
         $serviceLine = $this->serviceLine();
-        return view('agencyContractor.agency_contractor', compact('certificateList', 'agencyPortfolios', 'agencyServices', 'agencySubServices', 'serviceLine'));
+        $specializationService = $this->specializationServices();
+        $agencyClient = $this->agencyClient();
+        $agencyLocations = $this->agencyLocation();
+        $agencyHeadQuarter = $this->agencyLocation()->where('type', 'headQuarter')->first();
+
+        return view('agencyContractor.agency_contractor', compact('certificateList', 'agencyPortfolios', 'agencyServices', 'agencySubServices', 'serviceLine', 'specializationService', 'agencyClient' , 'agencyLocations' , 'agencyHeadQuarter'));
     }
 
     /**
@@ -76,6 +84,54 @@ class AgencyContractor extends Controller
     }
 
     /**
+     * @return mixed
+     */
+    public function specializationServices(): mixed
+    {
+        return AgencySpecializationService::where('user_id', Auth::id())->first();
+    }
+
+    public function agencyClient()
+    {
+        return AgencyClient::where('user_id', Auth::id())->first();
+    }
+
+    public function agencyLocation()
+    {
+        return AgencyLocation::where('user_id', Auth::id());
+    }
+
+    public function agencyLocationSubmit(Request $request)
+    {
+        $request->validate(
+            [
+                'country' => 'required',
+                'city' => 'required',
+                'branch' => 'required',
+                'postal' => 'required',
+                'country_code' => 'required',
+                'phone' => 'required',
+                'address' => 'required',
+                'total_employee' => 'required',
+            ]
+        );
+
+        $agencyLocation = new AgencyLocation();
+
+        $agencyLocation->country = $request->country;
+        $agencyLocation->city = $request->city;
+        $agencyLocation->type = $request->branch;
+        $agencyLocation->postal_code = $request->postal;
+        $agencyLocation->country_code = $request->country_code;
+        $agencyLocation->phone_number = $request->phone;
+        $agencyLocation->address = $request->address;
+        $agencyLocation->total_employee = $request->total_employee;
+        $agencyLocation->user_id = Auth::id();
+        $agencyLocation->save();
+        return redirect()->route('agencyContractor');
+    }
+
+    /**
      * @param Request $request
      * @return RedirectResponse
      */
@@ -99,6 +155,54 @@ class AgencyContractor extends Controller
         return redirect()->route('agencyContractor');
     }
 
+    public function clientUpdate(Request $request)
+    {
+        $agencyClient = $this->agencyClient();
+
+        if ($agencyClient == null) {
+            $agencyClient = new AgencyClient();
+            $agencyClient->smallBusiness = $request->smallBusiness;
+            $agencyClient->mediumBusiness = $request->mediumBusiness;
+            $agencyClient->enterprise = $request->enterprise;
+            $agencyClient->user_id = Auth::id();
+            $agencyClient->save();
+        } else {
+            if (!empty($serviceLineData)) {
+                $agencyClient->smallBusiness = $request->smallBusiness;
+                $agencyClient->mediumBusiness = $request->mediumBusiness;
+                $agencyClient->enterprise = $request->enterprise;
+
+            }
+        }
+        $agencyClient->save();
+        return redirect()->route('agencyContractor');
+
+    }
+
+    /**
+     * @param Request $request
+     * @return RedirectResponse|void
+     */
+    public function specializationSubmit(Request $request)
+    {
+        $specializationServiceData = AgencySpecializationService::where('user_id', Auth::id())->first();
+        if ($specializationServiceData == null) {
+            $specializationService = new AgencySpecializationService();
+            $specializationService->service_id = $request->service;
+            $specializationService->sub_services = json_encode($request->specializationService);
+            $specializationService->ranges = json_encode($request->ranges);
+            $specializationService->user_id = Auth::id();
+            $specializationService->save();
+        } else {
+            if (!empty($specializationServiceData)) {
+                $specializationServiceData->service_id = $request->service;
+                $specializationServiceData->sub_services = json_encode($request->specializationService);
+                $specializationServiceData->ranges = json_encode($request->ranges);
+                $specializationServiceData->save();
+            }
+            return redirect()->route('agencyContractor');
+        }
+    }
 
     /**
      * @param Request $request
@@ -160,7 +264,8 @@ class AgencyContractor extends Controller
      * @param $id
      * @return JsonResponse
      */
-    public function complianceCertificate($id): JsonResponse
+    public
+    function complianceCertificate($id): JsonResponse
     {
         $certificate = ComplianceCertificate::find($id);
         return response()->json($certificate);
