@@ -533,11 +533,13 @@
                                                                 <div class="tabletext">
                                                                     <p>{{ $agencyHeadQuarter?->country_code . ' '. $agencyHeadQuarter?->phone_number}}</p>
                                                                 </div>
-                                                            </td>  <td>
+                                                            </td>
+                                                            <td>
                                                                 <div class="tabletext">
                                                                     <p>{{ $agencyHeadQuarter?->address }}</p>
                                                                 </div>
-                                                            </td>  <td>
+                                                            </td>
+                                                            <td>
                                                                 <div class="tabletext">
                                                                     <p>{{ $agencyHeadQuarter?->total_employee }}</p>
                                                                 </div>
@@ -2221,5 +2223,4 @@
             </script>
         </div>
     </div>
-</div>
 </div>
