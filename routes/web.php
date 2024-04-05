@@ -104,6 +104,7 @@ Route::middleware(['middleware' => 'auth.check'])->group(function () {
     Route::post('/services', [AgencyContractor::class, 'saveServices'])->name('saveServices');
     Route::post('/specialization-services', [AgencyContractor::class, 'specializationSubmit'])->name('specializationSubmit');
     Route::post('/client-update', [AgencyContractor::class, 'clientUpdate'])->name('clientUpdate');
+    Route::get('/agency-locations/delete/{id}',  [AgencyContractor::class, 'deleteAgencyLocation'])->name('deleteAgencyLocation');
 
 
     //

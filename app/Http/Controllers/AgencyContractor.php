@@ -38,9 +38,8 @@ class AgencyContractor extends Controller
         $specializationService = $this->specializationServices();
         $agencyClient = $this->agencyClient();
         $agencyLocations = $this->agencyLocation();
-        $agencyHeadQuarter = $this->agencyLocation()->where('type', 'headQuarter')->first();
 
-        return view('agencyContractor.agency_contractor', compact('certificateList', 'agencyPortfolios', 'agencyServices', 'agencySubServices', 'serviceLine', 'specializationService', 'agencyClient' , 'agencyLocations' , 'agencyHeadQuarter'));
+        return view('agencyContractor.agency_contractor', compact('certificateList', 'agencyPortfolios', 'agencyServices', 'agencySubServices', 'serviceLine', 'specializationService', 'agencyClient', 'agencyLocations'));
     }
 
     /**
@@ -91,17 +90,38 @@ class AgencyContractor extends Controller
         return AgencySpecializationService::where('user_id', Auth::id())->first();
     }
 
-    public function agencyClient()
+    /**
+     * @return mixed
+     */
+    public function agencyClient(): mixed
     {
         return AgencyClient::where('user_id', Auth::id())->first();
     }
 
-    public function agencyLocation()
+    /**
+     * @return mixed
+     */
+    public function agencyLocation(): mixed
     {
-        return AgencyLocation::where('user_id', Auth::id());
+        return AgencyLocation::where('user_id', Auth::id())->get();
     }
 
-    public function agencyLocationSubmit(Request $request)
+    /**
+     * @param Request $request
+     * @return RedirectResponse
+     */
+    public function deleteAgencyLocation(Request $request): RedirectResponse
+    {
+        $agencyLocation = AgencyLocation::find($request->id);
+        $agencyLocation->delete();
+        return redirect()->route('agencyContractor');
+    }
+
+    /**
+     * @param Request $request
+     * @return RedirectResponse
+     */
+    public function agencyLocationSubmit(Request $request): RedirectResponse
     {
         $request->validate(
             [
@@ -116,8 +136,11 @@ class AgencyContractor extends Controller
             ]
         );
 
-        $agencyLocation = new AgencyLocation();
-
+        if (isset($request->locationId)) {
+            $agencyLocation = AgencyLocation::find($request->locationId);
+        } else {
+            $agencyLocation = new AgencyLocation();
+        }
         $agencyLocation->country = $request->country;
         $agencyLocation->city = $request->city;
         $agencyLocation->type = $request->branch;
@@ -155,7 +178,11 @@ class AgencyContractor extends Controller
         return redirect()->route('agencyContractor');
     }
 
-    public function clientUpdate(Request $request)
+    /**
+     * @param Request $request
+     * @return RedirectResponse
+     */
+    public function clientUpdate(Request $request): RedirectResponse
     {
         $agencyClient = $this->agencyClient();
 
@@ -264,8 +291,7 @@ class AgencyContractor extends Controller
      * @param $id
      * @return JsonResponse
      */
-    public
-    function complianceCertificate($id): JsonResponse
+    public function complianceCertificate($id): JsonResponse
     {
         $certificate = ComplianceCertificate::find($id);
         return response()->json($certificate);
