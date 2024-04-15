@@ -402,6 +402,7 @@
                                                                     <option value="">Select a country
                                                                     </option>
                                                                 </select>
+
                                                             </div>
                                                             <div class="col-md-4">
                                                                 <label for="city"
@@ -420,11 +421,9 @@
                                                                         onchange="updateLabel()">
                                                                     <option disabled>Select a type
                                                                     </option>
-                                                                    @if($agencyHeadQuarter?->type != 'headQuarter')
-                                                                        <option value="headQuarter">
-                                                                            Headquarters
-                                                                        </option>
-                                                                    @endif
+                                                                    <option value="headQuarter">
+                                                                        Headquarters
+                                                                    </option>
                                                                     <option value="branch" selected>
                                                                         Branch
                                                                     </option>
@@ -486,14 +485,15 @@
                                                             </div>
                                                             <button class="btn btn-secondary mt-2"
                                                                     type="submit"
-                                                                    id="submitButton"></button>
+                                                                    id="submitButton">Submit
+                                                            </button>
                                                         </form>
                                                     </div>
                                                     <table class="table table-striped mt-5">
                                                         <thead>
                                                         <tr>
                                                             <th>
-                                                                <h6>Company</h6>
+                                                                <h6>Country</h6>
                                                             </th>
                                                             <th>
                                                                 <h6>City</h6>
@@ -510,40 +510,226 @@
                                                             <th>
                                                                 <h6>Total Employee</h6>
                                                             </th>
+                                                            <th>
+                                                                <h6>Type</h6>
+                                                            </th>
+                                                            <th>
+                                                                <h6>Action</h6>
+                                                            </th>
                                                         </tr>
                                                         </thead>
                                                         <tbody>
-                                                        <tr>
-                                                            <td>
-                                                                <div class="tabletext">
-                                                                    <p>{{$agencyHeadQuarter?->country }}</p>
+                                                        @foreach($agencyLocations as $agencyLocation)
+                                                            <tr>
+                                                                <td>
+                                                                    <div class="tabletext">
+                                                                        <p>{{$agencyLocation?->country }}</p>
+                                                                    </div>
+                                                                </td>
+                                                                <td>
+                                                                    <div class="tabletext">
+                                                                        <p>{{ $agencyLocation?->city }}</p>
+                                                                    </div>
+                                                                </td>
+                                                                <td>
+                                                                    <div class="tabletext">
+                                                                        <p>{{ $agencyLocation?->postal_code }}</p>
+                                                                    </div>
+                                                                </td>
+                                                                <td>
+                                                                    <div class="tabletext">
+                                                                        <p>{{ $agencyLocation?->country_code . ' '. $agencyLocation?->phone_number}}</p>
+                                                                    </div>
+                                                                </td>
+                                                                <td>
+                                                                    <div class="tabletext">
+                                                                        <p>{{ $agencyLocation?->address }}</p>
+                                                                    </div>
+                                                                </td>
+                                                                <td>
+                                                                    <div class="tabletext">
+                                                                        <p>{{ $agencyLocation?->total_employee }}</p>
+                                                                    </div>
+                                                                </td>
+                                                                <td>
+                                                                    <div class="tabletext">
+                                                                        <p>{{$agencyLocation?->type }}</p>
+                                                                    </div>
+                                                                </td>
+                                                                <td>
+                                                                    <div class="tabletext">
+                                                                        <button class="btn btn-primary editBtn"
+                                                                                data-bs-toggle="modal"
+                                                                                data-bs-target="#editModal{{ $agencyLocation->id }}"
+                                                                                data-id="{{ $agencyLocation->id }}">
+                                                                            Edit
+                                                                        </button>
+                                                                        <div class="tabletext">
+                                                                            <a href="{{ route('deleteAgencyLocation', ['id' => $agencyLocation->id]) }}" class="btn btn-danger">Delete</a>
+                                                                        </div>
+                                                                    </div>
+                                                                </td>
+                                                                <div class="modal fade"
+                                                                     id="editModal{{ $agencyLocation->id }}"
+                                                                     tabindex="-1" aria-labelledby="editModalLabel"
+                                                                     aria-hidden="true">
+                                                                    <div class="modal-dialog">
+                                                                        <div class="modal-content">
+                                                                            <div class="modal-header">
+                                                                                <h5 class="modal-title"
+                                                                                    id="editModalLabel">Edit Agency
+                                                                                    Location</h5>
+                                                                                <button type="button" class="btn-close"
+                                                                                        data-bs-dismiss="modal"
+                                                                                        aria-label="Close"></button>
+                                                                            </div>
+                                                                            <form id="editForm"
+                                                                                  action="{{route('agencyLocationSubmit')}}"
+                                                                                  method="post">
+                                                                                @csrf
+                                                                                <div class="modal-body">
+                                                                                    <div class="row container-fluid">
+                                                                                        <input type="hidden" name="locationId" value="{{$agencyLocation->id}}">
+                                                                                        <div class="col-md-4">
+                                                                                            <label
+                                                                                                for="Country{{ $agencyLocation->id }}"
+                                                                                                class="form-label">Country</label>
+                                                                                            <select
+                                                                                                id="Country{{ $agencyLocation->id }}"
+                                                                                                name="country"
+                                                                                                class="form-select"
+                                                                                                onchange="fetchModalCities({{ $agencyLocation->id }})">
+                                                                                                <option
+                                                                                                    value=""></option>
+
+                                                                                            </select>
+                                                                                        </div>
+                                                                                        <div class="col-md-4">
+                                                                                            <label for="city"
+                                                                                                   class="form-label">City</label>
+                                                                                            <select
+                                                                                                id="city{{ $agencyLocation->id }}"
+                                                                                                name="city"
+                                                                                                class="form-select">
+                                                                                                <option value="">
+                                                                                                </option>
+                                                                                            </select>
+                                                                                        </div>
+                                                                                        <div class="col-md-4">
+                                                                                            <label for="type"
+                                                                                                   class="form-label">Type</label>
+                                                                                            <select id="type"
+                                                                                                    name="branch"
+                                                                                                    class="form-select"
+                                                                                                    onchange="updateLabel()">
+                                                                                                <option disabled>Select
+                                                                                                    a type
+                                                                                                </option>
+                                                                                                <option
+                                                                                                    value="headQuarter" {{ $agencyLocation->type == "headQuarter" ? 'selected' : '' }}>
+                                                                                                    Headquarters
+                                                                                                </option>
+                                                                                                <option
+                                                                                                    value="branch" {{ $agencyLocation->type == "branch" ? 'selected' : '' }}>
+                                                                                                    Branch
+                                                                                                </option>
+                                                                                            </select>
+                                                                                        </div>
+                                                                                        <div class="col-md-4">
+                                                                                            <label for="inputCity"
+                                                                                                   class="form-label">Postal
+                                                                                                Code</label>
+                                                                                            <input type="text"
+                                                                                                   name="postal"
+                                                                                                   class="form-control"
+                                                                                                   value="{{ $agencyLocation->postal_code }}"
+                                                                                                   id="inputCity">
+                                                                                        </div>
+                                                                                        <div class="col-md-4">
+                                                                                            <label for="countryCode"
+                                                                                                   class="form-label">Country
+                                                                                                Code</label>
+                                                                                            <input type="text"
+                                                                                                   name="country_code"
+                                                                                                   id="countryCode{{ $agencyLocation->id }}"
+                                                                                                   class="form-control"
+                                                                                                   value="{{ $agencyLocation->country_code }}"
+                                                                                                   readonly>
+                                                                                        </div>
+                                                                                        <div class="col-md-4">
+                                                                                            <label for="inputZip"
+                                                                                                   class="form-label">Phone
+                                                                                                Number</label>
+                                                                                            <input type="text"
+                                                                                                   name="phone"
+                                                                                                   class="form-control"
+                                                                                                   value="{{ $agencyLocation->phone_number }}"
+                                                                                                   id="inputZip">
+                                                                                        </div>
+                                                                                        <div class="col-12">
+                                                                                            <label for="inputAddress"
+                                                                                                   class="form-label">Address</label>
+                                                                                            <input type="text"
+                                                                                                   class="form-control"
+                                                                                                   id="inputAddress"
+                                                                                                   name="address"
+                                                                                                   value="{{ $agencyLocation->address }}"
+                                                                                                   placeholder="1234 Main St">
+                                                                                        </div>
+                                                                                        <div class="col-md-12">
+                                                                                            <label for="inputState"
+                                                                                                   class="form-label">Total
+                                                                                                Employees at
+                                                                                                this
+                                                                                                Location</label>
+                                                                                            <select
+                                                                                                name="total_employee"
+                                                                                                id="inputState"
+                                                                                                class="form-select">
+                                                                                                <option
+                                                                                                    value="" {{ $agencyLocation->total_employee == "" ? 'selected' : '' }}>
+                                                                                                    Choose...
+                                                                                                </option>
+                                                                                                <option
+                                                                                                    value="0-49" {{ $agencyLocation->total_employee == "0-49" ? 'selected' : '' }}>
+                                                                                                    0-49
+                                                                                                </option>
+                                                                                                <option
+                                                                                                    value="50-249" {{ $agencyLocation->total_employee == "50-249" ? 'selected' : '' }}>
+                                                                                                    50-249
+                                                                                                </option>
+                                                                                                <option
+                                                                                                    value="250-999" {{ $agencyLocation->total_employee == "250-999" ? 'selected' : '' }}>
+                                                                                                    250-999
+                                                                                                </option>
+                                                                                                <option
+                                                                                                    value="1000-9999" {{ $agencyLocation->total_employee == "1000-9999" ? 'selected' : '' }}>
+                                                                                                    1000-9999
+                                                                                                </option>
+                                                                                                <option
+                                                                                                    value="10000+" {{ $agencyLocation->total_employee == "10000+" ? 'selected' : '' }}>
+                                                                                                    10000+
+                                                                                                </option>
+                                                                                            </select>
+                                                                                        </div>
+                                                                                    </div>
+                                                                                </div>
+                                                                                <div class="modal-footer">
+                                                                                    <button type="button"
+                                                                                            class="btn btn-secondary"
+                                                                                            data-bs-dismiss="modal">
+                                                                                        Close
+                                                                                    </button>
+                                                                                    <button type="submit"
+                                                                                            class="btn btn-primary">Save
+                                                                                        changes
+                                                                                    </button>
+                                                                                </div>
+                                                                            </form>
+                                                                        </div>
+                                                                    </div>
                                                                 </div>
-                                                            </td>
-                                                            <td>
-                                                                <div class="tabletext">
-                                                                    <p>{{ $agencyHeadQuarter?->city }}</p>
-                                                                </div>
-                                                            </td>
-                                                            <td>
-                                                                <div class="tabletext">
-                                                                    <p>{{ $agencyHeadQuarter?->postal_code }}</p>
-                                                                </div>
-                                                            </td>
-                                                            <td>
-                                                                <div class="tabletext">
-                                                                    <p>{{ $agencyHeadQuarter?->country_code . ' '. $agencyHeadQuarter?->phone_number}}</p>
-                                                                </div>
-                                                            </td>
-                                                            <td>
-                                                                <div class="tabletext">
-                                                                    <p>{{ $agencyHeadQuarter?->address }}</p>
-                                                                </div>
-                                                            </td>
-                                                            <td>
-                                                                <div class="tabletext">
-                                                                    <p>{{ $agencyHeadQuarter?->total_employee }}</p>
-                                                                </div>
-                                                            </td>
+                                                        @endforeach
                                                         </tbody>
                                                     </table>
                                                 </div>
@@ -1257,70 +1443,134 @@
                                             </div>
                                         </div>
                                     </div>
-                                </div>
-                                <div class="tab-pane fade" id="pills-contact" role="tabpanel"
-                                     aria-labelledby="pills-contact-tab" tabindex="0">
-                                    <div class="container">
-                                        <div class="bordered-container">
-                                            <div class="row col-12">
-                                                <div class="col-6">
-                                                    <label class="fa-2x">Compliance and certificate
-                                                        list</label>
-                                                    <hr>
-                                                    <form action="{{ route('editOrDeleteCertificates') }}"
-                                                          method="POST" id="certificateForm">
-                                                        @csrf
-                                                        @isset($certificateList)
-                                                            @foreach($certificateList as $certificate)
-                                                                <div>
-                                                                    <input type="checkbox"
-                                                                           class="certificateCheckbox"
-                                                                           name="certificate_ids[]"
-                                                                           value="{{ $certificate->id }}">
-                                                                    <a href="{{ route('fileDownload', $certificate->id) }}">{{ $certificate->certificate_title }}</a>
-                                                                </div>
-                                                            @endforeach
-                                                        @endisset
 
-                                                        <button type="submit" name="action" value="delete"
-                                                                id="deleteButton" disabled>Delete Selected
+                                    <div class="tab-pane fade" id="pills-contact" role="tabpanel"
+                                         aria-labelledby="pills-contact-tab" tabindex="0">
+                                        <div class="container">
+                                            <div class="bordered-container">
+                                                <div class="row col-12">
+                                                    <div class="col-6">
+                                                        <label class="fa-2x">Compliance and certificate
+                                                            list</label>
+                                                        <hr>
+                                                        <form action="{{ route('editOrDeleteCertificates') }}"
+                                                              method="POST" id="certificateForm">
+                                                            @csrf
+                                                            @isset($certificateList)
+                                                                @foreach($certificateList as $certificate)
+                                                                    <div>
+                                                                        <input type="checkbox"
+                                                                               class="certificateCheckbox"
+                                                                               name="certificate_ids[]"
+                                                                               value="{{ $certificate->id }}">
+                                                                        <a href="{{ route('fileDownload', $certificate->id) }}">{{ $certificate->certificate_title }}</a>
+                                                                    </div>
+                                                                @endforeach
+                                                            @endisset
+
+                                                            <button type="submit" name="action" value="delete"
+                                                                    id="deleteButton" disabled>Delete Selected
+                                                                Certificates
+                                                            </button>
+                                                        </form>
+                                                        <button type="submit" name="action" value="edit"
+                                                                id="editButton" disabled>Edit Selected
                                                             Certificates
                                                         </button>
-                                                    </form>
-                                                    <button type="submit" name="action" value="edit"
-                                                            id="editButton" disabled>Edit Selected
-                                                        Certificates
-                                                    </button>
+                                                    </div>
+                                                    <div class="col-6">
+                                                        <label class="fa-2x">Certification Details</label>
+                                                        <hr>
+                                                        <form action="{{ route('certificationsForm') }}"
+                                                              method="post" enctype="multipart/form-data">
+                                                            @csrf
+                                                            <div class="mb-3">
+                                                                <label for="name" class="form-label">Company
+                                                                    Certificate Title</label>
+                                                                <input type="text" class="form-control"
+                                                                       name="name"
+                                                                       id="name"
+                                                                       placeholder="Enter Certificate Title">
+                                                                @error('name')
+                                                                <div
+                                                                    class="alert alert-danger">{{ $message }}</div>
+                                                                @enderror
+                                                            </div>
+
+                                                            <div class="mb-3">
+                                                                <label for="url" class="form-label">Company
+                                                                    URL</label>
+                                                                <input type="url" class="form-control"
+                                                                       name="url"
+                                                                       id="url"
+                                                                       placeholder="https://www.example.com">
+                                                                @error('url')
+                                                                <div
+                                                                    class="alert alert-danger">{{ $message }}</div>
+                                                                @enderror
+                                                            </div>
+                                                            <div class="mb-3">
+                                                                <label for="attachment" class="form-label">Upload
+                                                                    Attachment</label>
+                                                                <input type="file" class="form-control"
+                                                                       name="attachment" id="attachment">
+                                                                @error('attachment')
+                                                                <div
+                                                                    class="alert alert-danger">{{ $message }}</div>
+                                                                @enderror
+                                                            </div>
+                                                            <button type="submit" class="btn btn-primary">Save
+                                                            </button>
+                                                            <button type="button" class="btn btn-secondary">
+                                                                Cancel
+                                                            </button>
+                                                        </form>
+                                                    </div>
                                                 </div>
-                                                <div class="col-6">
-                                                    <label class="fa-2x">Certification Details</label>
-                                                    <hr>
-                                                    <form action="{{ route('certificationsForm') }}"
-                                                          method="post" enctype="multipart/form-data">
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <!-- Modal -->
+                                    <div class="modal fade" id="editCertificateModal" tabindex="-1"
+                                         aria-labelledby="editCertificateModalLabel" aria-hidden="true">
+                                        <div class="modal-dialog">
+                                            <div class="modal-content">
+                                                <div class="modal-header">
+                                                    <h5 class="modal-title" id="editCertificateModalLabel">Edit
+                                                        Certificate</h5>
+                                                    <button type="button" class="btn-close"
+                                                            data-bs-dismiss="modal"
+                                                            aria-label="Close"></button>
+                                                </div>
+                                                <div class="modal-body">
+                                                    <!-- Edit Certificate Form -->
+                                                    <form id="editCertificateForm"
+                                                          action="{{ route('certificationsForm') }}"
+                                                          method="post"
+                                                          enctype="multipart/form-data">
                                                         @csrf
+                                                        <input type="hidden" name="certificate_id"
+                                                               id="certificateId">
+                                                        <!-- Hidden input for certificate ID -->
                                                         <div class="mb-3">
                                                             <label for="name" class="form-label">Company
-                                                                Certificate Title</label>
-                                                            <input type="text" class="form-control"
-                                                                   name="name"
+                                                                Certificate
+                                                                Title</label>
+                                                            <input type="text" class="form-control" name="name"
                                                                    id="name"
                                                                    placeholder="Enter Certificate Title">
                                                             @error('name')
-                                                            <div
-                                                                class="alert alert-danger">{{ $message }}</div>
+                                                            <div class="alert alert-danger">{{ $message }}</div>
                                                             @enderror
                                                         </div>
-
                                                         <div class="mb-3">
                                                             <label for="url" class="form-label">Company
                                                                 URL</label>
-                                                            <input type="url" class="form-control"
-                                                                   name="url"
+                                                            <input type="url" class="form-control" name="url"
                                                                    id="url"
                                                                    placeholder="https://www.example.com">
                                                             @error('url')
-                                                            <div
-                                                                class="alert alert-danger">{{ $message }}</div>
+                                                            <div class="alert alert-danger">{{ $message }}</div>
                                                             @enderror
                                                         </div>
                                                         <div class="mb-3">
@@ -1329,14 +1579,14 @@
                                                             <input type="file" class="form-control"
                                                                    name="attachment" id="attachment">
                                                             @error('attachment')
-                                                            <div
-                                                                class="alert alert-danger">{{ $message }}</div>
+                                                            <div class="alert alert-danger">{{ $message }}</div>
                                                             @enderror
                                                         </div>
+                                                        <div class="mb-3" id="filePreviewContainer"></div>
                                                         <button type="submit" class="btn btn-primary">Save
                                                         </button>
-                                                        <button type="button" class="btn btn-secondary">
-                                                            Cancel
+                                                        <button type="button" class="btn btn-secondary"
+                                                                data-bs-dismiss="modal">Cancel
                                                         </button>
                                                     </form>
                                                 </div>
@@ -1344,196 +1594,215 @@
                                         </div>
                                     </div>
                                 </div>
-                                <!-- Modal -->
-                                <div class="modal fade" id="editCertificateModal" tabindex="-1"
-                                     aria-labelledby="editCertificateModalLabel" aria-hidden="true">
-                                    <div class="modal-dialog">
-                                        <div class="modal-content">
-                                            <div class="modal-header">
-                                                <h5 class="modal-title" id="editCertificateModalLabel">Edit
-                                                    Certificate</h5>
-                                                <button type="button" class="btn-close"
-                                                        data-bs-dismiss="modal"
-                                                        aria-label="Close"></button>
-                                            </div>
-                                            <div class="modal-body">
-                                                <!-- Edit Certificate Form -->
-                                                <form id="editCertificateForm"
-                                                      action="{{ route('certificationsForm') }}"
-                                                      method="post"
-                                                      enctype="multipart/form-data">
-                                                    @csrf
-                                                    <input type="hidden" name="certificate_id"
-                                                           id="certificateId">
-                                                    <!-- Hidden input for certificate ID -->
-                                                    <div class="mb-3">
-                                                        <label for="name" class="form-label">Company
-                                                            Certificate
-                                                            Title</label>
-                                                        <input type="text" class="form-control" name="name"
-                                                               id="name"
-                                                               placeholder="Enter Certificate Title">
-                                                        @error('name')
-                                                        <div class="alert alert-danger">{{ $message }}</div>
-                                                        @enderror
-                                                    </div>
-                                                    <div class="mb-3">
-                                                        <label for="url" class="form-label">Company
-                                                            URL</label>
-                                                        <input type="url" class="form-control" name="url"
-                                                               id="url"
-                                                               placeholder="https://www.example.com">
-                                                        @error('url')
-                                                        <div class="alert alert-danger">{{ $message }}</div>
-                                                        @enderror
-                                                    </div>
-                                                    <div class="mb-3">
-                                                        <label for="attachment" class="form-label">Upload
-                                                            Attachment</label>
-                                                        <input type="file" class="form-control"
-                                                               name="attachment" id="attachment">
-                                                        @error('attachment')
-                                                        <div class="alert alert-danger">{{ $message }}</div>
-                                                        @enderror
-                                                    </div>
-                                                    <div class="mb-3" id="filePreviewContainer"></div>
-                                                    <button type="submit" class="btn btn-primary">Save
-                                                    </button>
-                                                    <button type="button" class="btn btn-secondary"
-                                                            data-bs-dismiss="modal">Cancel
-                                                    </button>
-                                                </form>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
                             </div>
-                        </div>
-                        <div class="tab-pane fade" id="nav-profile" role="tabpanel"
-                             aria-labelledby="nav-profile-tab" tabindex="0">
-
                         </div>
                     </div>
                 </div>
-            </div>
-            <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"
-                    integrity="sha384-kenU1KFdBIe4zVF0s0G1M5b4hcpxyD9F7jL+jjXkk+Q2h455rYXK/7HAuoJl+0I4"
-                    crossorigin="anonymous">
-            </script>
-            <script>
-                async function fetchCountries() {
-                    const response = await fetch('https://restcountries.com/v3.1/all');
-                    const countries = await response.json();
-                    const countryDropdown = document.getElementById('country');
-                    countries.forEach(country => {
-                        const option = document.createElement('option');
-                        var countryCode = country.idd.root + country.idd.suffixes
-                        option.value = country.name.common;
-                        option.countryCode = countryCode
-                        option.textContent = country.name.common;
-                        countryDropdown.appendChild(option);
-                    });
-                }
-
-                async function fetchCities() {
-                    const countryDropdown = document.getElementById('country');
-                    const countryName = countryDropdown.value;
-                    const countryCodeInput = document.getElementById('countryCode');
-
-                    if (!countryName) {
-                        console.error("No country selected.");
-                        return;
+                <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"
+                        integrity="sha384-kenU1KFdBIe4zVF0s0G1M5b4hcpxyD9F7jL+jjXkk+Q2h455rYXK/7HAuoJl+0I4"
+                        crossorigin="anonymous">
+                </script>
+                <script>
+                    async function fetchCountries() {
+                        const response = await fetch('https://restcountries.com/v3.1/all');
+                        const countries = await response.json();
+                        const countryDropdown = document.getElementById('country');
+                        countries.forEach(country => {
+                            const option = document.createElement('option');
+                            var countryCode = country.idd.root + country.idd.suffixes
+                            option.value = country.name.common;
+                            option.countryCode = countryCode
+                            option.textContent = country.name.common;
+                            countryDropdown.appendChild(option);
+                        });
                     }
 
-                    const selectedOption = countryDropdown.options[countryDropdown.selectedIndex];
-                    const countryCode = selectedOption.countryCode;
+                    async function fetchModalCountries(agencyLocationId) {
+                        try {
+                            const response = await fetch('https://restcountries.com/v3.1/all');
+                            const countries = await response.json();
+                            const countryDropdown = document.getElementById('Country' + agencyLocationId);
+                            const existingCountry = "{{ $agencyLocation->country }}";
 
-                    countryCodeInput.value = countryCode; // Update country code input
+                            countries.forEach(country => {
+                                const option = document.createElement('option');
+                                var countryCode = country.idd.root + country.idd.suffixes;
+                                option.value = country.name.common;
+                                option.countryCode = countryCode;
+                                option.textContent = country.name.common;
 
-                    try {
-                        const response = await fetch('https://countriesnow.space/api/v0.1/countries/cities', {
-                            method: 'POST',
-                            headers: {
-                                'Content-Type': 'application/json'
-                            },
-                            body: JSON.stringify({
-                                country: countryName
-                            })
-                        });
+                                // Check if the fetched country matches the existing country data
+                                if (existingCountry === country.name.common) {
+                                    option.selected = true; // Select the existing country
+                                }
 
-                        if (!response.ok) {
-                            throw new Error(`Failed to fetch cities for ${countryName}`);
+                                countryDropdown.appendChild(option);
+                            });
+                        } catch (error) {
+                            console.error('Error fetching countries:', error);
+                        }
+                    }
+
+
+                    async function fetchModalCities(agencyLocationId) {
+                        const countryDropdown = document.getElementById('Country' + agencyLocationId);
+                        const cityDropdown = document.getElementById('city' + agencyLocationId);
+                        const existingCity = "{{ $agencyLocation->city }}";
+
+                        const countryName = countryDropdown.value;
+                        const countryCodeInput = document.getElementById('countryCode' + agencyLocationId);
+
+                        if (!countryName) {
+                            console.error("No country selected.");
+                            return;
                         }
 
-                        const data = await response.json();
-                        const cities = data.data.sort((a, b) => a - b);
+                        const selectedOption = countryDropdown.options[countryDropdown.selectedIndex];
+                        const countryCode = selectedOption.countryCode;
+                        console.log(countryCode);
 
-                        const cityDropdown = document.getElementById('city');
-                        cityDropdown.innerHTML = '<option value="">Select a city</option>';
+                        countryCodeInput.value = countryCode; // Update country code input
 
-                        cities.forEach(city => {
-                            const option = document.createElement('option');
-                            option.value = city;
-                            option.textContent = city;
-                            cityDropdown.appendChild(option);
-                        });
-                    } catch (error) {
-                        console.error("Error fetching cities:", error);
+                        try {
+                            const response = await fetch('https://countriesnow.space/api/v0.1/countries/cities', {
+                                method: 'POST',
+                                headers: {
+                                    'Content-Type': 'application/json'
+                                },
+                                body: JSON.stringify({
+                                    country: countryName
+                                })
+                            });
+
+                            if (!response.ok) {
+                                throw new Error(`Failed to fetch cities for ${countryName}`);
+                            }
+
+                            const data = await response.json();
+                            const cities = data.data.sort((a, b) => a - b);
+
+                            cityDropdown.innerHTML = ''; // Clear existing options
+
+                            cities.forEach(city => {
+                                const option = document.createElement('option');
+                                option.value = city;
+                                option.textContent = city;
+
+                                // Check if city matches existing data, if so, select it
+                                if (city === existingCity) {
+                                    option.selected = true;
+                                }
+
+                                cityDropdown.appendChild(option);
+                            });
+                        } catch (error) {
+                            console.error("Error fetching cities:", error);
+                        }
                     }
-                }
 
-                fetchCountries();
 
-                function updateLabel() {
-                    var typeSelect = document.getElementById("type");
-                    var typeLabel = document.getElementById("typeLabel");
+                    async function fetchCities() {
+                        const countryDropdown = document.getElementById('country');
+                        const countryName = countryDropdown.value;
+                        const countryCodeInput = document.getElementById('countryCode');
 
-                    if (typeSelect.value === "headQuarter") {
-                        typeLabel.textContent = "Add Headquarters";
-                        submitButton.textContent = "Submit Headquarters";
-                    } else if (typeSelect.value === "branch") {
-                        typeLabel.textContent = "Add Branch";
-                        submitButton.textContent = "Submit Branches";
-                    } else {
-                        typeLabel.textContent = "";
-                        submitButton.textContent = "Submit";
+                        if (!countryName) {
+                            console.error("No country selected.");
+                            return;
+                        }
+
+                        const selectedOption = countryDropdown.options[countryDropdown.selectedIndex];
+                        const countryCode = selectedOption.countryCode;
+
+                        countryCodeInput.value = countryCode; // Update country code input
+
+                        try {
+                            const response = await fetch('https://countriesnow.space/api/v0.1/countries/cities', {
+                                method: 'POST',
+                                headers: {
+                                    'Content-Type': 'application/json'
+                                },
+                                body: JSON.stringify({
+                                    country: countryName
+                                })
+                            });
+
+                            if (!response.ok) {
+                                throw new Error(`Failed to fetch cities for ${countryName}`);
+                            }
+
+                            const data = await response.json();
+                            const cities = data.data.sort((a, b) => a - b);
+
+                            const cityDropdown = document.getElementById('city');
+                            cityDropdown.innerHTML = '<option value="">Select a city</option>';
+
+                            cities.forEach(city => {
+                                const option = document.createElement('option');
+                                option.value = city;
+                                option.textContent = city;
+                                cityDropdown.appendChild(option);
+                            });
+                        } catch (error) {
+                            console.error("Error fetching cities:", error);
+                        }
                     }
-                }
-            </script>
-            <script>
-                function showEditPopup() {
-                    const checkboxes = document.querySelectorAll('input[name="certificate_ids[]"]:checked');
-                    const popup = document.getElementById('editPopup');
-                    const formContainer = popup.querySelector('.form-container');
 
-                    // Clear previous forms if any
-                    formContainer.innerHTML = '';
+                    fetchCountries();
+                    @foreach($agencyLocations as $agencyLocation)
+                    fetchModalCountries('{{ $agencyLocation->id }}');
+                    @endforeach
 
-                    checkboxes.forEach(checkbox => {
-                        const certificateId = checkbox.value;
+                    function updateLabel() {
+                        var typeSelect = document.getElementById("type");
+                        var typeLabel = document.getElementById("typeLabel");
 
-                        // Create a form for each selected certificate
-                        const form = document.createElement('form');
-                        form.action = "{{ route('certificationsForm') }}";
-                        form.method = "post";
-                        form.enctype = "multipart/form-data";
+                        if (typeSelect.value === "headQuarter") {
+                            typeLabel.textContent = "Add Headquarters";
+                            submitButton.textContent = "Submit Headquarters";
+                        } else if (typeSelect.value === "branch") {
+                            typeLabel.textContent = "Add Branch";
+                            submitButton.textContent = "Submit Branches";
+                        } else {
+                            typeLabel.textContent = "";
+                            submitButton.textContent = "Submit";
+                        }
+                    }
+                </script>
+                <script>
+                    function showEditPopup() {
+                        const checkboxes = document.querySelectorAll('input[name="certificate_ids[]"]:checked');
+                        const popup = document.getElementById('editPopup');
+                        const formContainer = popup.querySelector('.form-container');
 
-                        // Add CSRF token input
-                        const csrfInput = document.createElement('input');
-                        csrfInput.type = "hidden";
-                        csrfInput.name = "_token";
-                        csrfInput.value = "{{ csrf_token() }}";
-                        form.appendChild(csrfInput);
+                        // Clear previous forms if any
+                        formContainer.innerHTML = '';
 
-                        // Add certificate ID input
-                        const idInput = document.createElement('input');
-                        idInput.type = "hidden";
-                        idInput.name = "certificate_id";
-                        idInput.value = certificateId;
-                        form.appendChild(idInput);
+                        checkboxes.forEach(checkbox => {
+                            const certificateId = checkbox.value;
 
-                        // Add form fields
-                        form.innerHTML += `
+                            // Create a form for each selected certificate
+                            const form = document.createElement('form');
+                            form.action = "{{ route('certificationsForm') }}";
+                            form.method = "post";
+                            form.enctype = "multipart/form-data";
+
+                            // Add CSRF token input
+                            const csrfInput = document.createElement('input');
+                            csrfInput.type = "hidden";
+                            csrfInput.name = "_token";
+                            csrfInput.value = "{{ csrf_token() }}";
+                            form.appendChild(csrfInput);
+
+                            // Add certificate ID input
+                            const idInput = document.createElement('input');
+                            idInput.type = "hidden";
+                            idInput.name = "certificate_id";
+                            idInput.value = certificateId;
+                            form.appendChild(idInput);
+
+                            // Add form fields
+                            form.innerHTML += `
                 <div class="mb-3">
                     <label for="name" class="form-label">Company Certificate Title</label>
                     <input type="text" class="form-control" name="name" id="name" placeholder="Enter Certificate Title">
@@ -1550,370 +1819,609 @@
                 <button type="button" class="btn btn-secondary" onclick="hideEditPopup()">Cancel</button>
             `;
 
-                        // Append form to form container
-                        formContainer.appendChild(form);
-                    });
-
-                    // Show popup
-                    popup.style.display = 'block';
-                }
-
-                function hideEditPopup() {
-                    const popup = document.getElementById('editPopup');
-                    popup.style.display = 'none';
-                }
-            </script>
-
-            <script>
-                document.addEventListener('DOMContentLoaded', function () {
-                    const checkboxes = document.querySelectorAll('.certificateCheckbox');
-                    const editButton = document.getElementById('editButton');
-                    const deleteButton = document.getElementById('deleteButton');
-
-                    function updateButtonState() {
-                        const checkedCheckboxes = document.querySelectorAll('.certificateCheckbox:checked');
-                        if (checkedCheckboxes.length === 1) {
-                            editButton.disabled = false;
-                            deleteButton.disabled = false;
-                        } else if (checkedCheckboxes.length > 1) {
-                            editButton.disabled = true;
-                            deleteButton.disabled = false;
-                        } else {
-                            editButton.disabled = true;
-                            deleteButton.disabled = true;
-                        }
-                    }
-
-                    checkboxes.forEach(function (checkbox) {
-                        checkbox.addEventListener('change', updateButtonState);
-                    });
-
-                    // Initial state check
-                    updateButtonState();
-                });
-            </script>
-            <script>
-                document.addEventListener('DOMContentLoaded', function () {
-                    const checkboxes = document.querySelectorAll('.certificateCheckbox');
-                    const editButton = document.getElementById('editButton');
-                    const deleteButton = document.getElementById('deleteButton');
-                    const editCertificateForm = document.getElementById('editCertificateForm');
-                    const editCertificateModal = new bootstrap.Modal(document.getElementById('editCertificateModal'));
-
-                    function updateButtonState() {
-                        const checkedCheckboxes = document.querySelectorAll('.certificateCheckbox:checked');
-                        if (checkedCheckboxes.length === 1) {
-                            editButton.disabled = false;
-                            deleteButton.disabled = false;
-                        } else if (checkedCheckboxes.length > 1) {
-                            editButton.disabled = true;
-                            deleteButton.disabled = false;
-                        } else {
-                            editButton.disabled = true;
-                            deleteButton.disabled = true;
-                        }
-                    }
-
-                    checkboxes.forEach(function (checkbox) {
-                        checkbox.addEventListener('change', updateButtonState);
-                    });
-
-                    editButton.addEventListener('click', function () {
-                        const checkedCheckbox = document.querySelector('.certificateCheckbox:checked');
-                        if (checkedCheckbox) {
-                            const certificateId = checkedCheckbox.value;
-                            // Send AJAX request to fetch certificate data
-                            fetch(`/getCertificateData/${certificateId}`)
-                                .then(response => response.json())
-                                .then(data => {
-                                    // Populate form fields with certificate data
-                                    document.getElementById('certificateId').value = certificateId; // Set certificate ID
-                                    editCertificateForm.querySelector('#name').value = data.certificate_title;
-                                    editCertificateForm.querySelector('#url').value = data.company_url;
-                                    // Optionally, you can populate attachment field if needed
-
-                                    // Show the modal
-                                    editCertificateModal.show();
-                                })
-                                .catch(error => console.error('Error:', error));
-                        }
-                    });
-
-                    // Optional: Close the modal when Cancel button is clicked
-                    editCertificateForm.querySelector('button[data-bs-dismiss="modal"]').addEventListener('click', function () {
-                        editCertificateModal.hide();
-                    });
-                });
-            </script>
-            <script>
-                function previewFile() {
-                    const preview = document.getElementById('preview');
-                    const file = document.querySelector('input[type=file]').files[0];
-                    const reader = new FileReader();
-
-                    reader.onloadend = function () {
-                        const img = document.createElement('img');
-                        img.src = reader.result;
-                        preview.innerHTML = '';
-                        preview.appendChild(img);
-                    }
-
-                    if (file) {
-                        reader.readAsDataURL(file);
-                    } else {
-                        preview.innerHTML = "No file selected";
-                    }
-                }
-
-                document.getElementById("addPortfolioBtn").addEventListener("click", function () {
-                    document.getElementById("transitionScreen").style.display = "block";
-                });
-
-                document.getElementById("cancelBtn").addEventListener("click", function () {
-                    document.getElementById("transitionScreen").style.display = "none";
-                });
-            </script>
-            <script>
-                // Function to show input fields based on the selected option
-                function showInput(option) {
-                    var videoInput = document.getElementById("videoInput");
-                    var imageInput = document.getElementById("imageInput");
-
-                    if (option === 'video') {
-                        videoInput.style.display = "block";
-                        imageInput.style.display = "none";
-                    } else if (option === 'image') {
-                        imageInput.style.display = "block";
-                        videoInput.style.display = "none";
-                    }
-                }
-            </script>
-            <script>
-                $(document).ready(function () {
-                    // Function to populate edit form with data
-                    $('.edit-portfolio').click(function (e) {
-                        e.preventDefault();
-                        var id = $(this).data('id');
-                        var title = $(this).data('title');
-                        // Populate form fields with data
-                        $('#editPortfolioTitle' + id).val(title);
-                        // Open modal
-                        $('#editPortfolioModal' + id).modal('show');
-                    });
-                });
-            </script>
-            <script>
-                fetch('https://api.exchangerate-api.com/v4/latest/USD')
-                    .then(response => response.json())
-                    .then(data => {
-                        const currencyDropdown = document.getElementById('currency');
-                        for (const currency in data.rates) {
-                            const option = document.createElement('option');
-                            option.text = currency;
-                            currencyDropdown.add(option);
-                        }
-                    })
-                    .catch(error => console.error('Error fetching currencies:', error));
-            </script>
-            <script>
-                // Function to update range value display
-                function updateRangeValue(subServiceId) {
-                    var rangeInput = document.getElementById("customRange_" + subServiceId);
-                    var percentageDisplay = document.getElementById("percentage_" + subServiceId);
-                    if (rangeInput && percentageDisplay) {
-                        percentageDisplay.innerHTML = rangeInput.value + "%";
-                    }
-                }
-
-                // Function to update range percentage display
-                function updateRangePercentage(subServiceId) {
-                    var rangeInput = document.getElementById("customRange_" + subServiceId);
-                    var percentageDisplay = document.getElementById("percentage_" + subServiceId);
-                    if (rangeInput && percentageDisplay) {
-                        percentageDisplay.innerHTML = rangeInput.value + "%";
-                    }
-                }
-            </script>
-
-            <script>
-                // Function to update selected sub-services and their ranges
-                function updateSelectedSubServices() {
-                    var selectedSubServicesContainer = document.getElementById('selectedSubServices');
-                    selectedSubServicesContainer.innerHTML = ''; // Clear previous selections
-
-                    var selectedSubServices = document.querySelectorAll('input[name="service[]"]:checked');
-                    selectedSubServices.forEach(function (subService) {
-                        var subServiceLabel = document.querySelector('label[for="' + subService.id + '"]').textContent;
-
-                        // Create a div to contain the selected sub-service
-                        var subServiceDiv = document.createElement('div');
-                        subServiceDiv.className = 'selected-sub-service';
-                        subServiceDiv.textContent = subServiceLabel;
-
-                        // Create a remove button
-                        var removeButton = document.createElement('span');
-                        removeButton.className = 'remove-sub-service';
-                        removeButton.textContent = 'x';
-                        removeButton.addEventListener('click', function () {
-                            subService.checked = false; // Uncheck the corresponding checkbox
-                            updateSelectedSubServices(); // Update the displayed selected sub-services
+                            // Append form to form container
+                            formContainer.appendChild(form);
                         });
 
-                        // Append the remove button to the div
-                        subServiceDiv.appendChild(removeButton);
+                        // Show popup
+                        popup.style.display = 'block';
+                    }
 
-                        // Append the div to the container
-                        selectedSubServicesContainer.appendChild(subServiceDiv);
+                    function hideEditPopup() {
+                        const popup = document.getElementById('editPopup');
+                        popup.style.display = 'none';
+                    }
+                </script>
+
+                <script>
+                    document.addEventListener('DOMContentLoaded', function () {
+                        const checkboxes = document.querySelectorAll('.certificateCheckbox');
+                        const editButton = document.getElementById('editButton');
+                        const deleteButton = document.getElementById('deleteButton');
+
+                        function updateButtonState() {
+                            const checkedCheckboxes = document.querySelectorAll('.certificateCheckbox:checked');
+                            if (checkedCheckboxes.length === 1) {
+                                editButton.disabled = false;
+                                deleteButton.disabled = false;
+                            } else if (checkedCheckboxes.length > 1) {
+                                editButton.disabled = true;
+                                deleteButton.disabled = false;
+                            } else {
+                                editButton.disabled = true;
+                                deleteButton.disabled = true;
+                            }
+                        }
+
+                        checkboxes.forEach(function (checkbox) {
+                            checkbox.addEventListener('change', updateButtonState);
+                        });
+
+                        // Initial state check
+                        updateButtonState();
+                    });
+                </script>
+                <script>
+                    document.addEventListener('DOMContentLoaded', function () {
+                        const checkboxes = document.querySelectorAll('.certificateCheckbox');
+                        const editButton = document.getElementById('editButton');
+                        const deleteButton = document.getElementById('deleteButton');
+                        const editCertificateForm = document.getElementById('editCertificateForm');
+                        const editCertificateModal = new bootstrap.Modal(document.getElementById('editCertificateModal'));
+
+                        function updateButtonState() {
+                            const checkedCheckboxes = document.querySelectorAll('.certificateCheckbox:checked');
+                            if (checkedCheckboxes.length === 1) {
+                                editButton.disabled = false;
+                                deleteButton.disabled = false;
+                            } else if (checkedCheckboxes.length > 1) {
+                                editButton.disabled = true;
+                                deleteButton.disabled = false;
+                            } else {
+                                editButton.disabled = true;
+                                deleteButton.disabled = true;
+                            }
+                        }
+
+                        checkboxes.forEach(function (checkbox) {
+                            checkbox.addEventListener('change', updateButtonState);
+                        });
+
+                        editButton.addEventListener('click', function () {
+                            const checkedCheckbox = document.querySelector('.certificateCheckbox:checked');
+                            if (checkedCheckbox) {
+                                const certificateId = checkedCheckbox.value;
+                                // Send AJAX request to fetch certificate data
+                                fetch(`/getCertificateData/${certificateId}`)
+                                    .then(response => response.json())
+                                    .then(data => {
+                                        // Populate form fields with certificate data
+                                        document.getElementById('certificateId').value = certificateId; // Set certificate ID
+                                        editCertificateForm.querySelector('#name').value = data.certificate_title;
+                                        editCertificateForm.querySelector('#url').value = data.company_url;
+                                        // Optionally, you can populate attachment field if needed
+
+                                        // Show the modal
+                                        editCertificateModal.show();
+                                    })
+                                    .catch(error => console.error('Error:', error));
+                            }
+                        });
+
+                        // Optional: Close the modal when Cancel button is clicked
+                        editCertificateForm.querySelector('button[data-bs-dismiss="modal"]').addEventListener('click', function () {
+                            editCertificateModal.hide();
+                        });
+                    });
+                </script>
+                <script>
+                    function previewFile() {
+                        const preview = document.getElementById('preview');
+                        const file = document.querySelector('input[type=file]').files[0];
+                        const reader = new FileReader();
+
+                        reader.onloadend = function () {
+                            const img = document.createElement('img');
+                            img.src = reader.result;
+                            preview.innerHTML = '';
+                            preview.appendChild(img);
+                        }
+
+                        if (file) {
+                            reader.readAsDataURL(file);
+                        } else {
+                            preview.innerHTML = "No file selected";
+                        }
+                    }
+
+                    document.getElementById("addPortfolioBtn").addEventListener("click", function () {
+                        document.getElementById("transitionScreen").style.display = "block";
                     });
 
-                    // Update selected sub-services ranges and their labels with values
-                    var selectedSubServicesRangesContainer = document.getElementById('selectedSubServicesRanges');
-                    selectedSubServicesRangesContainer.innerHTML = ''; // Clear previous selections
+                    document.getElementById("cancelBtn").addEventListener("click", function () {
+                        document.getElementById("transitionScreen").style.display = "none";
+                    });
+                </script>
+                <script>
+                    // Function to show input fields based on the selected option
+                    function showInput(option) {
+                        var videoInput = document.getElementById("videoInput");
+                        var imageInput = document.getElementById("imageInput");
 
-                    var totalRange = 0; // Variable to store the total range value
-                    selectedSubServices.forEach(function (subService) {
-                        var subServiceLabel = document.querySelector('label[for="' + subService.id + '"]').textContent;
-                        var rangeValue = rangeValues[subService.value] || 0;
+                        if (option === 'video') {
+                            videoInput.style.display = "block";
+                            imageInput.style.display = "none";
+                        } else if (option === 'image') {
+                            imageInput.style.display = "block";
+                            videoInput.style.display = "none";
+                        }
+                    }
+                </script>
+                <script>
+                    $(document).ready(function () {
+                        // Function to populate edit form with data
+                        $('.edit-portfolio').click(function (e) {
+                            e.preventDefault();
+                            var id = $(this).data('id');
+                            var title = $(this).data('title');
+                            // Populate form fields with data
+                            $('#editPortfolioTitle' + id).val(title);
+                            // Open modal
+                            $('#editPortfolioModal' + id).modal('show');
+                        });
+                    });
+                </script>
+                <script>
+                    fetch('https://api.exchangerate-api.com/v4/latest/USD')
+                        .then(response => response.json())
+                        .then(data => {
+                            const currencyDropdown = document.getElementById('currency');
+                            for (const currency in data.rates) {
+                                const option = document.createElement('option');
+                                option.text = currency;
+                                currencyDropdown.add(option);
+                            }
+                        })
+                        .catch(error => console.error('Error fetching currencies:', error));
+                </script>
+                <script>
+                    // Function to update range value display
+                    function updateRangeValue(subServiceId) {
+                        var rangeInput = document.getElementById("customRange_" + subServiceId);
+                        var percentageDisplay = document.getElementById("percentage_" + subServiceId);
+                        if (rangeInput && percentageDisplay) {
+                            percentageDisplay.innerHTML = rangeInput.value + "%";
+                        }
+                    }
 
-                        // Create a div to contain the range input and label with value
-                        var rangeDiv = document.createElement('div');
-                        rangeDiv.className = 'sub-service-range';
+                    // Function to update range percentage display
+                    function updateRangePercentage(subServiceId) {
+                        var rangeInput = document.getElementById("customRange_" + subServiceId);
+                        var percentageDisplay = document.getElementById("percentage_" + subServiceId);
+                        if (rangeInput && percentageDisplay) {
+                            percentageDisplay.innerHTML = rangeInput.value + "%";
+                        }
+                    }
+                </script>
 
-                        // Create a label for the range input
-                        var rangeLabel = document.createElement('label');
-                        rangeLabel.className = 'form-label';
-                        rangeLabel.textContent = subServiceLabel + ' [' + rangeValue + '%]';
+                <script>
+                    // Function to update selected sub-services and their ranges
+                    function updateSelectedSubServices() {
+                        var selectedSubServicesContainer = document.getElementById('selectedSubServices');
+                        selectedSubServicesContainer.innerHTML = ''; // Clear previous selections
 
-                        // Create a range input for the sub-service
-                        var rangeInput = document.createElement('input');
-                        rangeInput.type = 'range';
-                        rangeInput.className = 'form-range';
-                        rangeInput.id = 'range_' + subService.value;
-                        rangeInput.name = 'ranges[' + subService.value + ']'; // Use subservice ID as key
-                        rangeInput.value = rangeValue; // Set the initial value
-                        rangeInput.addEventListener('input', function () {
-                            // Update the corresponding label with the range value
-                            rangeValue = rangeInput.value;
-                            rangeValues[subService.value] = rangeValue;
+                        var selectedSubServices = document.querySelectorAll('input[name="service[]"]:checked');
+                        selectedSubServices.forEach(function (subService) {
+                            var subServiceLabel = document.querySelector('label[for="' + subService.id + '"]').textContent;
+
+                            // Create a div to contain the selected sub-service
+                            var subServiceDiv = document.createElement('div');
+                            subServiceDiv.className = 'selected-sub-service';
+                            subServiceDiv.textContent = subServiceLabel;
+
+                            // Create a remove button
+                            var removeButton = document.createElement('span');
+                            removeButton.className = 'remove-sub-service';
+                            removeButton.textContent = 'x';
+                            removeButton.addEventListener('click', function () {
+                                subService.checked = false; // Uncheck the corresponding checkbox
+                                updateSelectedSubServices(); // Update the displayed selected sub-services
+                            });
+
+                            // Append the remove button to the div
+                            subServiceDiv.appendChild(removeButton);
+
+                            // Append the div to the container
+                            selectedSubServicesContainer.appendChild(subServiceDiv);
+                        });
+
+                        // Update selected sub-services ranges and their labels with values
+                        var selectedSubServicesRangesContainer = document.getElementById('selectedSubServicesRanges');
+                        selectedSubServicesRangesContainer.innerHTML = ''; // Clear previous selections
+
+                        var totalRange = 0; // Variable to store the total range value
+                        selectedSubServices.forEach(function (subService) {
+                            var subServiceLabel = document.querySelector('label[for="' + subService.id + '"]').textContent;
+                            var rangeValue = rangeValues[subService.value] || 0;
+
+                            // Create a div to contain the range input and label with value
+                            var rangeDiv = document.createElement('div');
+                            rangeDiv.className = 'sub-service-range';
+
+                            // Create a label for the range input
+                            var rangeLabel = document.createElement('label');
+                            rangeLabel.className = 'form-label';
                             rangeLabel.textContent = subServiceLabel + ' [' + rangeValue + '%]';
 
-                            // Update total range
-                            totalRange = calculateTotalRange();
-                            if (totalRange > 100) {
-                                document.getElementById('error-message').style.display = 'block';
-                                document.getElementById('submit-button').disabled = true;
-                            } else {
-                                document.getElementById('error-message').style.display = 'none';
-                                document.getElementById('submit-button').disabled = false;
-                            }
+                            // Create a range input for the sub-service
+                            var rangeInput = document.createElement('input');
+                            rangeInput.type = 'range';
+                            rangeInput.className = 'form-range';
+                            rangeInput.id = 'range_' + subService.value;
+                            rangeInput.name = 'ranges[' + subService.value + ']'; // Use subservice ID as key
+                            rangeInput.value = rangeValue; // Set the initial value
+                            rangeInput.addEventListener('input', function () {
+                                // Update the corresponding label with the range value
+                                rangeValue = rangeInput.value;
+                                rangeValues[subService.value] = rangeValue;
+                                rangeLabel.textContent = subServiceLabel + ' [' + rangeValue + '%]';
 
-                            // Update overall percentage display
-                            updateOverallPercentage(totalRange);
+                                // Update total range
+                                totalRange = calculateTotalRange();
+                                if (totalRange > 100) {
+                                    document.getElementById('error-message').style.display = 'block';
+                                    document.getElementById('submit-button').disabled = true;
+                                } else {
+                                    document.getElementById('error-message').style.display = 'none';
+                                    document.getElementById('submit-button').disabled = false;
+                                }
+
+                                // Update overall percentage display
+                                updateOverallPercentage(totalRange);
+                            });
+
+                            // Append the label and range input to the div
+                            rangeDiv.appendChild(rangeLabel);
+                            rangeDiv.appendChild(rangeInput);
+
+                            // Append the div to the container
+                            selectedSubServicesRangesContainer.appendChild(rangeDiv);
                         });
 
-                        // Append the label and range input to the div
-                        rangeDiv.appendChild(rangeLabel);
-                        rangeDiv.appendChild(rangeInput);
+                        // Update overall percentage display
+                        totalRange = calculateTotalRange();
+                        updateOverallPercentage(totalRange);
+                        createOrUpdatePieChart();
+                    }
 
-                        // Append the div to the container
-                        selectedSubServicesRangesContainer.appendChild(rangeDiv);
+                    // Function to calculate total range
+                    function calculateTotalRange() {
+                        var total = 0;
+                        for (var key in rangeValues) {
+                            total += parseInt(rangeValues[key]);
+                        }
+                        return total;
+                    }
+
+                    // Function to update overall percentage display
+                    function updateOverallPercentage(totalRange) {
+                        var overallPercentageDiv = document.getElementById('overall-percentage');
+                        overallPercentageDiv.textContent = 'Overall Percentage: ' + totalRange + '%';
+                    }
+
+                    // Real-time search functionality
+                    document.getElementById('search').addEventListener('input', function () {
+                        var searchInput = this.value.toLowerCase();
+                        var subServiceElements = document.querySelectorAll('.sub-service');
+                        subServiceElements.forEach(function (element) {
+                            var label = element.querySelector('label').textContent.toLowerCase();
+                            if (label.includes(searchInput)) {
+                                element.style.display = 'block';
+                            } else {
+                                element.style.display = 'none';
+                            }
+                        });
                     });
 
-                    // Update overall percentage display
-                    totalRange = calculateTotalRange();
-                    updateOverallPercentage(totalRange);
-                    createOrUpdatePieChart();
-                }
-
-                // Function to calculate total range
-                function calculateTotalRange() {
-                    var total = 0;
-                    for (var key in rangeValues) {
-                        total += parseInt(rangeValues[key]);
-                    }
-                    return total;
-                }
-
-                // Function to update overall percentage display
-                function updateOverallPercentage(totalRange) {
-                    var overallPercentageDiv = document.getElementById('overall-percentage');
-                    overallPercentageDiv.textContent = 'Overall Percentage: ' + totalRange + '%';
-                }
-
-                // Real-time search functionality
-                document.getElementById('search').addEventListener('input', function () {
-                    var searchInput = this.value.toLowerCase();
-                    var subServiceElements = document.querySelectorAll('.sub-service');
-                    subServiceElements.forEach(function (element) {
-                        var label = element.querySelector('label').textContent.toLowerCase();
-                        if (label.includes(searchInput)) {
-                            element.style.display = 'block';
-                        } else {
-                            element.style.display = 'none';
+                    // Form submission validation
+                    document.querySelector('form').addEventListener('submit', function (event) {
+                        var totalRange = calculateTotalRange();
+                        if (totalRange > 100) {
+                            document.getElementById('error-message').style.display = 'block';
+                            document.getElementById('submit-button').disabled = true;
+                            event.preventDefault(); // Prevent form submission
                         }
                     });
-                });
 
-                // Form submission validation
-                document.querySelector('form').addEventListener('submit', function (event) {
-                    var totalRange = calculateTotalRange();
-                    if (totalRange > 100) {
-                        document.getElementById('error-message').style.display = 'block';
-                        document.getElementById('submit-button').disabled = true;
-                        event.preventDefault(); // Prevent form submission
-                    }
-                });
+                    // Populate rangeValues with the values from $servicesRanges
+                    var rangeValues = <?php echo json_encode($servicesRanges); ?>;
 
-                // Populate rangeValues with the values from $servicesRanges
-                var rangeValues = <?php echo json_encode($servicesRanges); ?>;
+                    function createOrUpdatePieChart() {
+                        var ctx = document.getElementById('pieChart').getContext('2d');
+                        var labels = [];
+                        var data = [];
 
-                function createOrUpdatePieChart() {
-                    var ctx = document.getElementById('pieChart').getContext('2d');
-                    var labels = [];
-                    var data = [];
+                        var colors = [
+                            'rgba(255, 99, 132, 0.7)',   // Red
+                            'rgba(54, 162, 235, 0.7)',   // Blue
+                            'rgba(255, 206, 86, 0.7)',   // Yellow
+                            'rgba(75, 192, 192, 0.7)',   // Teal
+                            'rgba(153, 102, 255, 0.7)',  // Purple
+                            'rgba(255, 159, 64, 0.7)',   // Orange
+                            'rgba(128, 0, 128, 0.7)',    // Purple
+                            'rgba(0, 128, 128, 0.7)',    // Teal
+                            'rgba(0, 255, 0, 0.7)',      // Lime
+                            'rgba(0, 0, 255, 0.7)',      // Blue
+                            'rgba(255, 0, 255, 0.7)',    // Magenta
+                            'rgba(128, 128, 0, 0.7)',    // Olive
+                            'rgba(0, 128, 0, 0.7)',      // Green
+                            'rgba(0, 255, 255, 0.7)',    // Cyan
+                            'rgba(255, 0, 0, 0.7)',      // Red
+                            'rgba(192, 192, 192, 0.7)'   // Silver
+                            // Add more colors as needed
+                        ];
 
-                    var colors = [
-                        'rgba(255, 99, 132, 0.7)',   // Red
-                        'rgba(54, 162, 235, 0.7)',   // Blue
-                        'rgba(255, 206, 86, 0.7)',   // Yellow
-                        'rgba(75, 192, 192, 0.7)',   // Teal
-                        'rgba(153, 102, 255, 0.7)',  // Purple
-                        'rgba(255, 159, 64, 0.7)',   // Orange
-                        'rgba(128, 0, 128, 0.7)',    // Purple
-                        'rgba(0, 128, 128, 0.7)',    // Teal
-                        'rgba(0, 255, 0, 0.7)',      // Lime
-                        'rgba(0, 0, 255, 0.7)',      // Blue
-                        'rgba(255, 0, 255, 0.7)',    // Magenta
-                        'rgba(128, 128, 0, 0.7)',    // Olive
-                        'rgba(0, 128, 0, 0.7)',      // Green
-                        'rgba(0, 255, 255, 0.7)',    // Cyan
-                        'rgba(255, 0, 0, 0.7)',      // Red
-                        'rgba(192, 192, 192, 0.7)'   // Silver
-                        // Add more colors as needed
-                    ];
+                        // Populate labels and data arrays
+                        for (var subServiceId in rangeValues) {
 
-                    // Populate labels and data arrays
-                    for (var subServiceId in rangeValues) {
+                            var labelElement = document.querySelector('label[for="service_' + subServiceId + '"]');
+                            if (labelElement) {
 
-                        var labelElement = document.querySelector('label[for="service_' + subServiceId + '"]');
-                        if (labelElement) {
+                                labels.push(labelElement.textContent);
+                                data.push(rangeValues[subServiceId]);
+                            }
+                        }
 
-                            labels.push(labelElement.textContent);
-                            data.push(rangeValues[subServiceId]);
+                        if (labels.length > 0) { // Check if there are labels to create the chart
+                            if (pieChart) {
+                                // Update existing chart
+
+                                pieChart.data.labels = labels;
+                                pieChart.data.datasets[0].data = data;
+                                pieChart.data.datasets[0].backgroundColor = colors.slice(0, data.length);
+                                pieChart.update();
+                            } else {
+                                // Create new chart
+                                pieChart = new Chart(ctx, {
+                                    type: 'pie',
+                                    data: {
+                                        labels: labels,
+                                        datasets: [{
+                                            label: 'Range Values',
+                                            data: data,
+                                            backgroundColor: colors.slice(0, data.length),
+                                            borderWidth: 1
+                                        }]
+                                    },
+                                    options: {
+                                        responsive: true
+                                    }
+                                });
+                            }
                         }
                     }
 
-                    if (labels.length > 0) { // Check if there are labels to create the chart
-                        if (pieChart) {
-                            // Update existing chart
+                    // Call updateSelectedSubServices() initially to display already selected sub-services
+                    window.addEventListener('DOMContentLoaded', updateSelectedSubServices);
+                </script>
+                <script>
+                    var rangeInputValues = {};
+                    var specializationServiceChart;
+                    var saveButton;
 
-                            pieChart.data.labels = labels;
-                            pieChart.data.datasets[0].data = data;
-                            pieChart.data.datasets[0].backgroundColor = colors.slice(0, data.length);
-                            pieChart.update();
+                    window.onload = function () {
+                        populateSubServices();
+                        saveButton = document.getElementById('submitSpecialization');
+                    };
+
+                    function populateSubServices() {
+                        var serviceSelect = document.getElementById("serviceSelect");
+                        var selectedServiceId = serviceSelect.value;
+
+                        var specializationServiceRanges = <?php echo json_encode($specializationServiceRanges); ?>;
+                        var subServices = <?php echo json_encode($agencySubServices); ?>;
+
+                        var subServicesContainer = document.getElementById("subServicesContainer");
+                        subServicesContainer.innerHTML = "";
+
+                        subServices.forEach(function (subService) {
+                            if (subService.service_id == selectedServiceId) {
+                                var checkbox = document.createElement("input");
+                                checkbox.type = "checkbox";
+                                checkbox.name = "specializationService[]";
+                                checkbox.value = subService.id;
+                                checkbox.id = "subService_" + subService.id;
+                                checkbox.onchange = function () {
+                                    checkedSubServices();
+                                };
+
+                                var label = document.createElement("label");
+                                label.htmlFor = "subService_" + subService.id;
+                                label.appendChild(document.createTextNode(subService.sub_service_name));
+
+                                var br = document.createElement("br");
+
+                                subServicesContainer.appendChild(checkbox);
+                                subServicesContainer.appendChild(label);
+                                subServicesContainer.appendChild(br);
+
+                                checkbox.style.display = "none";
+
+                                if (specializationServiceRanges[subService.id] !== undefined) {
+                                    checkbox.checked = true;
+                                    label.classList.add("checked-label");
+
+                                    // Set range input value based on existing data
+                                    var rangeValue = specializationServiceRanges[subService.id];
+                                    var rangeInput = document.getElementById("customRange_" + subService.id);
+                                    if (rangeInput) {
+                                        rangeInput.value = rangeValue;
+                                        updatePercentageInput(subService.id); // Update associated percentage input
+                                    }
+                                }
+                            }
+                        });
+
+                        checkedSubServices();
+                        updateChart();
+                    }
+
+                    function checkedSubServices() {
+                        var checkedSubServices = document.querySelectorAll('input[name="specializationService[]"]:checked');
+                        var rangeContainer = document.getElementById("rangeContainer");
+
+                        var currentRangeValues = {};
+
+                        checkedSubServices.forEach(function (subService) {
+                            var subServiceId = subService.value;
+                            var rangeInput = document.getElementById("customRange_" + subServiceId);
+                            if (rangeInput) {
+                                currentRangeValues[subServiceId] = rangeInput.value;
+                            }
+                        });
+
+                        rangeContainer.innerHTML = "";
+
+                        if (checkedSubServices.length > 0) {
+                            checkedSubServices.forEach(function (subService) {
+                                var subServiceId = subService.value;
+                                var subServiceName = subService.nextElementSibling.textContent;
+
+                                var rangeInput = document.createElement("input");
+                                rangeInput.type = "range";
+                                rangeInput.className = "form-range";
+                                rangeInput.id = "customRange_" + subServiceId;
+                                rangeInput.max = 100;
+                                rangeInput.defaultValue = rangeInput.oninput = function () {
+                                    updatePercentageInput(subServiceId);
+                                };
+
+                                rangeInput.value = currentRangeValues[subServiceId] || 0;
+
+                                var percentageInput = document.createElement("input");
+                                percentageInput.type = "text";
+                                percentageInput.name = 'ranges[' + subService.value + ']';
+                                percentageInput.className = "form-control";
+                                percentageInput.id = "percentageInput_" + subServiceId;
+                                percentageInput.placeholder = "Range Percentage";
+
+                                var percentage = (rangeInput.value / rangeInput.max) * 100;
+                                percentageInput.value = Math.round(percentage) + "%";
+
+                                rangeContainer.appendChild(document.createTextNode(subServiceName + ": "));
+                                rangeContainer.appendChild(rangeInput);
+                                rangeContainer.appendChild(percentageInput);
+                                rangeContainer.appendChild(document.createElement("br"));
+
+                                rangeInputValues[subServiceId] = rangeInput.value;
+
+                                var label = subService.nextElementSibling;
+                                label.classList.add("checked-label");
+                            });
+
+                            rangeContainer.style.display = "block";
                         } else {
-                            // Create new chart
-                            pieChart = new Chart(ctx, {
+                            rangeContainer.style.display = "none";
+                        }
+
+                        var allLabels = document.querySelectorAll('input[name="specializationService[]"] ~ label');
+                        allLabels.forEach(function (label) {
+                            var checkbox = label.previousElementSibling;
+                            if (!checkbox.checked) {
+                                label.classList.remove("checked-label");
+                            }
+                        });
+                        updateChartAndValidate();
+                        updateChart();
+                    }
+
+                    function updatePercentageInput(subServiceId) {
+                        var rangeInput = document.getElementById("customRange_" + subServiceId);
+                        var percentageInput = document.getElementById("percentageInput_" + subServiceId);
+
+                        if (rangeInput.max != 0) {
+                            var percentage = (rangeInput.value / rangeInput.max) * 100;
+                            percentageInput.value = Math.round(percentage);
+
+                            percentageInput.style.marginLeft = "5px";
+                        } else {
+                            rangeInput.max = 100;
+                            percentageInput.value = "Maximum value set to 100";
+                        }
+
+                        rangeInputValues[subServiceId] = rangeInput.value;
+                        updateChartAndValidate();
+                        updateChart();
+                    }
+
+                    function validatePercentage() {
+                        var totalPercentage = 0;
+                        for (var subServiceId in rangeInputValues) {
+                            totalPercentage += parseInt(rangeInputValues[subServiceId]);
+                        }
+                        var errorMessageElement = document.getElementById('errorMessage');
+                        if (totalPercentage > 100) {
+                            errorMessageElement.textContent = "Total percentage cannot exceed 100%";
+                            document.getElementById('submitSpecialization').disabled = true
+                            return false;
+                        } else {
+                            errorMessageElement.textContent = "";
+                            document.getElementById('submitSpecialization').disabled = false
+
+                            return true;
+                        }
+                    }
+
+                    function updateChartAndValidate() {
+                        var isValid = validatePercentage();
+                        updateChart();
+                        // if (!isValid) {
+                        //     saveButton.disabled = true;
+                        //     console.log('Button disabled');
+                        // } else {
+                        //     saveButton.disabled = false;
+                        //     console.log('Button eanble');
+                        // }
+                    }
+
+                    function updateChart() {
+                        var labels = [];
+                        var data = [];
+                        var colors = [
+                            'rgba(255, 99, 132, 0.7)',
+                            'rgba(54, 162, 235, 0.7)',
+                            'rgba(255, 206, 86, 0.7)',
+                            'rgba(75, 192, 192, 0.7)',
+                            'rgba(153, 102, 255, 0.7)',
+                            'rgba(255, 159, 64, 0.7)',
+                            'rgba(128, 0, 128, 0.7)',
+                            'rgba(0, 128, 128, 0.7)',
+                            'rgba(0, 255, 0, 0.7)',
+                            'rgba(0, 0, 255, 0.7)',
+                            'rgba(255, 0, 255, 0.7)',
+                            'rgba(128, 128, 0, 0.7)',
+                            'rgba(0, 128, 0, 0.7)',
+                            'rgba(0, 255, 255, 0.7)',
+                            'rgba(255, 0, 0, 0.7)',
+                            'rgba(192, 192, 192, 0.7)'
+                        ];
+
+                        for (var subServiceId in rangeInputValues) {
+                            var subServiceName = document.querySelector('label[for="subService_' + subServiceId + '"]').textContent;
+                            labels.push(subServiceName);
+                            data.push(rangeInputValues[subServiceId]);
+                        }
+
+                        if (specializationServiceChart) {
+                            specializationServiceChart.data.labels = labels;
+                            specializationServiceChart.data.datasets[0].data = data;
+                            specializationServiceChart.data.datasets[0].backgroundColor = colors.slice(0, data.length);
+                            specializationServiceChart.update();
+                        } else {
+                            var ctx = document.getElementById('specializationServiceChart').getContext('2d');
+                            ctx.canvas.width = 300;
+                            ctx.canvas.height = 300;
+                            specializationServiceChart = new Chart(ctx, {
                                 type: 'pie',
                                 data: {
                                     labels: labels,
@@ -1921,306 +2429,67 @@
                                         label: 'Range Values',
                                         data: data,
                                         backgroundColor: colors.slice(0, data.length),
+                                        borderColor: 'rgba(255, 255, 255, 0)',
                                         borderWidth: 1
                                     }]
-                                },
-                                options: {
-                                    responsive: true
                                 }
                             });
                         }
                     }
-                }
+                </script>
 
-                // Call updateSelectedSubServices() initially to display already selected sub-services
-                window.addEventListener('DOMContentLoaded', updateSelectedSubServices);
-            </script>
-            <script>
-                var rangeInputValues = {};
-                var specializationServiceChart;
-                var saveButton;
+                <script>
+                    // Get the range inputs
+                    const ranges = document.querySelectorAll('input[type="range"]');
 
-                window.onload = function () {
-                    populateSubServices();
-                    saveButton = document.getElementById('submitSpecialization');
-                };
+                    // Initial data for the pie chart
+                    let data = {
+                        labels: ['Small Business', 'Medium Business', 'Enterprise'],
+                        datasets: [{
+                            data: [<?= $agencyClient->smallBusiness ?? 0 ?>, <?= $agencyClient->mediumBusiness ?? 0 ?>, <?= $agencyClient->enterprise ?? 0 ?>],
+                            backgroundColor: [
+                                'rgba(255, 99, 132, 0.7)', // Red
+                                'rgba(54, 162, 235, 0.7)', // Blue
+                                'rgba(255, 206, 86, 0.7)' // Yellow
+                            ],
+                            borderColor: [
+                                'rgba(255, 99, 132, 1)',
+                                'rgba(54, 162, 235, 1)',
+                                'rgba(255, 206, 86, 1)'
+                            ],
+                            borderWidth: 1
+                        }]
+                    };
 
-                function populateSubServices() {
-                    var serviceSelect = document.getElementById("serviceSelect");
-                    var selectedServiceId = serviceSelect.value;
-
-                    var specializationServiceRanges = <?php echo json_encode($specializationServiceRanges); ?>;
-                    var subServices = <?php echo json_encode($agencySubServices); ?>;
-
-                    var subServicesContainer = document.getElementById("subServicesContainer");
-                    subServicesContainer.innerHTML = "";
-
-                    subServices.forEach(function (subService) {
-                        if (subService.service_id == selectedServiceId) {
-                            var checkbox = document.createElement("input");
-                            checkbox.type = "checkbox";
-                            checkbox.name = "specializationService[]";
-                            checkbox.value = subService.id;
-                            checkbox.id = "subService_" + subService.id;
-                            checkbox.onchange = function () {
-                                checkedSubServices();
-                            };
-
-                            var label = document.createElement("label");
-                            label.htmlFor = "subService_" + subService.id;
-                            label.appendChild(document.createTextNode(subService.sub_service_name));
-
-                            var br = document.createElement("br");
-
-                            subServicesContainer.appendChild(checkbox);
-                            subServicesContainer.appendChild(label);
-                            subServicesContainer.appendChild(br);
-
-                            checkbox.style.display = "none";
-
-                            if (specializationServiceRanges[subService.id] !== undefined) {
-                                checkbox.checked = true;
-                                label.classList.add("checked-label");
-
-                                // Set range input value based on existing data
-                                var rangeValue = specializationServiceRanges[subService.id];
-                                var rangeInput = document.getElementById("customRange_" + subService.id);
-                                if (rangeInput) {
-                                    rangeInput.value = rangeValue;
-                                    updatePercentageInput(subService.id); // Update associated percentage input
-                                }
-                            }
+                    // Options for the pie chart
+                    const options = {
+                        responsive: true,
+                        maintainAspectRatio: false,
+                        title: {
+                            display: true,
+                            text: 'Business Distribution'
                         }
+                    };
+
+                    // Create pie chart
+                    const ctx = document.getElementById('myPieChart').getContext('2d');
+                    const myPieChart = new Chart(ctx, {
+                        type: 'pie',
+                        data: data,
+                        options: options
                     });
 
-                    checkedSubServices();
-                    updateChart();
-                }
-
-                function checkedSubServices() {
-                    var checkedSubServices = document.querySelectorAll('input[name="specializationService[]"]:checked');
-                    var rangeContainer = document.getElementById("rangeContainer");
-
-                    var currentRangeValues = {};
-
-                    checkedSubServices.forEach(function (subService) {
-                        var subServiceId = subService.value;
-                        var rangeInput = document.getElementById("customRange_" + subServiceId);
-                        if (rangeInput) {
-                            currentRangeValues[subServiceId] = rangeInput.value;
-                        }
-                    });
-
-                    rangeContainer.innerHTML = "";
-
-                    if (checkedSubServices.length > 0) {
-                        checkedSubServices.forEach(function (subService) {
-                            var subServiceId = subService.value;
-                            var subServiceName = subService.nextElementSibling.textContent;
-
-                            var rangeInput = document.createElement("input");
-                            rangeInput.type = "range";
-                            rangeInput.className = "form-range";
-                            rangeInput.id = "customRange_" + subServiceId;
-                            rangeInput.max = 100;
-                            rangeInput.defaultValue = rangeInput.oninput = function () {
-                                updatePercentageInput(subServiceId);
-                            };
-
-                            rangeInput.value = currentRangeValues[subServiceId] || 0;
-
-                            var percentageInput = document.createElement("input");
-                            percentageInput.type = "text";
-                            percentageInput.name = 'ranges[' + subService.value + ']';
-                            percentageInput.className = "form-control";
-                            percentageInput.id = "percentageInput_" + subServiceId;
-                            percentageInput.placeholder = "Range Percentage";
-
-                            var percentage = (rangeInput.value / rangeInput.max) * 100;
-                            percentageInput.value = Math.round(percentage) + "%";
-
-                            rangeContainer.appendChild(document.createTextNode(subServiceName + ": "));
-                            rangeContainer.appendChild(rangeInput);
-                            rangeContainer.appendChild(percentageInput);
-                            rangeContainer.appendChild(document.createElement("br"));
-
-                            rangeInputValues[subServiceId] = rangeInput.value;
-
-                            var label = subService.nextElementSibling;
-                            label.classList.add("checked-label");
+                    // Update pie chart when range inputs change
+                    ranges.forEach(range => {
+                        range.addEventListener('input', () => {
+                            // Update chart data
+                            myPieChart.data.datasets[0].data = [parseFloat(document.getElementById('customRange1').value),
+                                parseFloat(document.getElementById('customRange2').value),
+                                parseFloat(document.getElementById('customRange3').value)];
+                            myPieChart.update();
                         });
-
-                        rangeContainer.style.display = "block";
-                    } else {
-                        rangeContainer.style.display = "none";
-                    }
-
-                    var allLabels = document.querySelectorAll('input[name="specializationService[]"] ~ label');
-                    allLabels.forEach(function (label) {
-                        var checkbox = label.previousElementSibling;
-                        if (!checkbox.checked) {
-                            label.classList.remove("checked-label");
-                        }
                     });
-                    updateChartAndValidate();
-                    updateChart();
-                }
-
-                function updatePercentageInput(subServiceId) {
-                    var rangeInput = document.getElementById("customRange_" + subServiceId);
-                    var percentageInput = document.getElementById("percentageInput_" + subServiceId);
-
-                    if (rangeInput.max != 0) {
-                        var percentage = (rangeInput.value / rangeInput.max) * 100;
-                        percentageInput.value = Math.round(percentage);
-
-                        percentageInput.style.marginLeft = "5px";
-                    } else {
-                        rangeInput.max = 100;
-                        percentageInput.value = "Maximum value set to 100";
-                    }
-
-                    rangeInputValues[subServiceId] = rangeInput.value;
-                    updateChartAndValidate();
-                    updateChart();
-                }
-
-                function validatePercentage() {
-                    var totalPercentage = 0;
-                    for (var subServiceId in rangeInputValues) {
-                        totalPercentage += parseInt(rangeInputValues[subServiceId]);
-                    }
-                    var errorMessageElement = document.getElementById('errorMessage');
-                    if (totalPercentage > 100) {
-                        errorMessageElement.textContent = "Total percentage cannot exceed 100%";
-                        document.getElementById('submitSpecialization').disabled = true
-                        return false;
-                    } else {
-                        errorMessageElement.textContent = "";
-                        document.getElementById('submitSpecialization').disabled = false
-
-                        return true;
-                    }
-                }
-
-                function updateChartAndValidate() {
-                    var isValid = validatePercentage();
-                    updateChart();
-                    // if (!isValid) {
-                    //     saveButton.disabled = true;
-                    //     console.log('Button disabled');
-                    // } else {
-                    //     saveButton.disabled = false;
-                    //     console.log('Button eanble');
-                    // }
-                }
-
-                function updateChart() {
-                    var labels = [];
-                    var data = [];
-                    var colors = [
-                        'rgba(255, 99, 132, 0.7)',
-                        'rgba(54, 162, 235, 0.7)',
-                        'rgba(255, 206, 86, 0.7)',
-                        'rgba(75, 192, 192, 0.7)',
-                        'rgba(153, 102, 255, 0.7)',
-                        'rgba(255, 159, 64, 0.7)',
-                        'rgba(128, 0, 128, 0.7)',
-                        'rgba(0, 128, 128, 0.7)',
-                        'rgba(0, 255, 0, 0.7)',
-                        'rgba(0, 0, 255, 0.7)',
-                        'rgba(255, 0, 255, 0.7)',
-                        'rgba(128, 128, 0, 0.7)',
-                        'rgba(0, 128, 0, 0.7)',
-                        'rgba(0, 255, 255, 0.7)',
-                        'rgba(255, 0, 0, 0.7)',
-                        'rgba(192, 192, 192, 0.7)'
-                    ];
-
-                    for (var subServiceId in rangeInputValues) {
-                        var subServiceName = document.querySelector('label[for="subService_' + subServiceId + '"]').textContent;
-                        labels.push(subServiceName);
-                        data.push(rangeInputValues[subServiceId]);
-                    }
-
-                    if (specializationServiceChart) {
-                        specializationServiceChart.data.labels = labels;
-                        specializationServiceChart.data.datasets[0].data = data;
-                        specializationServiceChart.data.datasets[0].backgroundColor = colors.slice(0, data.length);
-                        specializationServiceChart.update();
-                    } else {
-                        var ctx = document.getElementById('specializationServiceChart').getContext('2d');
-                        ctx.canvas.width = 300;
-                        ctx.canvas.height = 300;
-                        specializationServiceChart = new Chart(ctx, {
-                            type: 'pie',
-                            data: {
-                                labels: labels,
-                                datasets: [{
-                                    label: 'Range Values',
-                                    data: data,
-                                    backgroundColor: colors.slice(0, data.length),
-                                    borderColor: 'rgba(255, 255, 255, 0)',
-                                    borderWidth: 1
-                                }]
-                            }
-                        });
-                    }
-                }
-            </script>
-
-            <script>
-                // Get the range inputs
-                const ranges = document.querySelectorAll('input[type="range"]');
-
-                // Initial data for the pie chart
-                let data = {
-                    labels: ['Small Business', 'Medium Business', 'Enterprise'],
-                    datasets: [{
-                        data: [<?= $agencyClient->smallBusiness ?? 0 ?>, <?= $agencyClient->mediumBusiness ?? 0 ?>, <?= $agencyClient->enterprise ?? 0 ?>],
-                        backgroundColor: [
-                            'rgba(255, 99, 132, 0.7)', // Red
-                            'rgba(54, 162, 235, 0.7)', // Blue
-                            'rgba(255, 206, 86, 0.7)' // Yellow
-                        ],
-                        borderColor: [
-                            'rgba(255, 99, 132, 1)',
-                            'rgba(54, 162, 235, 1)',
-                            'rgba(255, 206, 86, 1)'
-                        ],
-                        borderWidth: 1
-                    }]
-                };
-
-                // Options for the pie chart
-                const options = {
-                    responsive: true,
-                    maintainAspectRatio: false,
-                    title: {
-                        display: true,
-                        text: 'Business Distribution'
-                    }
-                };
-
-                // Create pie chart
-                const ctx = document.getElementById('myPieChart').getContext('2d');
-                const myPieChart = new Chart(ctx, {
-                    type: 'pie',
-                    data: data,
-                    options: options
-                });
-
-                // Update pie chart when range inputs change
-                ranges.forEach(range => {
-                    range.addEventListener('input', () => {
-                        // Update chart data
-                        myPieChart.data.datasets[0].data = [parseFloat(document.getElementById('customRange1').value),
-                            parseFloat(document.getElementById('customRange2').value),
-                            parseFloat(document.getElementById('customRange3').value)];
-                        myPieChart.update();
-                    });
-                });
-            </script>
+                </script>
+            </div>
         </div>
     </div>
-</div>
