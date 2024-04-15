@@ -10,6 +10,7 @@ use App\Models\AgencyService;
 use App\Models\AgencySpecializationService;
 use App\Models\AgencySubServices;
 use App\Models\ComplianceCertificate;
+use App\Models\Country;
 use App\Models\serviceLine;
 use Illuminate\Contracts\Foundation\Application;
 use Illuminate\Contracts\View\Factory;
@@ -31,6 +32,7 @@ class AgencyContractor extends Controller
     public function agencyContractor(): \Illuminate\Foundation\Application|View|Factory|Application
     {
         $certificateList = $this->certificate();
+
         $agencyPortfolios = $this->agencyPortfolio();
         $agencyServices = $this->services();
         $agencySubServices = $this->subServices();
@@ -38,8 +40,21 @@ class AgencyContractor extends Controller
         $specializationService = $this->specializationServices();
         $agencyClient = $this->agencyClient();
         $agencyLocations = $this->agencyLocation();
+        $companyDetails = $this->companyDetails();
+        $countries = $this->countries();
 
-        return view('agencyContractor.agency_contractor', compact('certificateList', 'agencyPortfolios', 'agencyServices', 'agencySubServices', 'serviceLine', 'specializationService', 'agencyClient', 'agencyLocations'));
+        return view('agencyContractor.agency_contractor', compact(
+            'certificateList',
+            'agencyPortfolios',
+            'agencyServices',
+            'agencySubServices',
+            'serviceLine',
+            'specializationService',
+            'agencyClient',
+            'agencyLocations',
+            'companyDetails',
+            'countries'
+        ));
     }
 
     /**
@@ -107,6 +122,19 @@ class AgencyContractor extends Controller
     }
 
     /**
+     * @return mixed
+     */
+    public function companyDetails(): mixed
+    {
+        return AgencyContractorCompany::where('user_id', Auth::id())->get();
+    }
+
+    public function countries()
+    {
+        return Country::all();
+    }
+
+    /**
      * @param Request $request
      * @return RedirectResponse
      */
@@ -114,6 +142,12 @@ class AgencyContractor extends Controller
     {
         $agencyLocation = AgencyLocation::find($request->id);
         $agencyLocation->delete();
+        return redirect()->route('agencyContractor');
+    }
+
+    public function deleteCompanyDetail(Request $request)
+    {
+        AgencyContractorCompany::find($request->id)->delete();
         return redirect()->route('agencyContractor');
     }
 
@@ -235,10 +269,15 @@ class AgencyContractor extends Controller
      * @param Request $request
      * @return RedirectResponse
      */
-    public function companyDetails(Request $request): RedirectResponse
+    public function companyDetailsSubmit(Request $request): RedirectResponse
     {
         $request->validate(["company_name" => 'required', "company_tagline" => 'required', "company_logo" => 'required', "company_establishment" => 'required', "company_website" => 'required', "company_email" => 'required', "company_total_employees" => 'required', "company_description" => 'required', "company_projectSize" => 'required', "company_hourly_rate" => 'required',]);
-        $agencyContractCompany = new AgencyContractorCompany();
+        if (isset($request->companyId)) {
+            $agencyContractCompany = AgencyContractorCompany::find($request->companyId);
+        } else {
+            $agencyContractCompany = new AgencyContractorCompany();
+
+        }
         $agencyContractCompany->company_name = $request->company_name;
         $agencyContractCompany->tagline = $request->company_tagline;
         $agencyContractCompany->logo = $request->company_logo;
@@ -247,6 +286,7 @@ class AgencyContractor extends Controller
         $agencyContractCompany->total_employee = $request->company_total_employees;
         $agencyContractCompany->descriptions = $request->company_description;
         $agencyContractCompany->project_size = $request->company_projectSize;
+        $agencyContractCompany->currency = $request->currency;
         $agencyContractCompany->project_rate = $request->company_hourly_rate;
         $agencyContractCompany->company_email = $request->company_email;
         $agencyContractCompany->user_id = Auth::id();
@@ -324,7 +364,7 @@ class AgencyContractor extends Controller
         if ($action === 'delete') {
             ComplianceCertificate::whereIn('id', $certificateIds)->delete();
         }
-        return view('agencyContractor.agency_contractor');
+        return redirect()->route('agencyContractor');
     }
 
     /**
