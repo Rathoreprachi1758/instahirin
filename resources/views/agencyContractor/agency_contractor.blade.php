@@ -1133,8 +1133,7 @@
                                         $specializationSubService =   isset($specializationService->sub_services) ? json_decode($specializationService->sub_services, true) ?? [] : [];
                                         $specializationServiceRanges = isset($specializationService->ranges) ? json_decode($specializationService?->ranges , true) ?? [] : [];
                                         $servicesRanges =isset($serviceLine?->range) ? json_decode($serviceLine->ranges, true) ?? [] : [];
-                //                                            dump($agencyClient->smallBusiness , $agencyClient->mediumBusiness , $agencyClient->enterprise );
-                //dump($specializationServiceRanges);
+
                                     @endphp
                                     @isset($agencySubServices)
                                         @foreach($agencySubServices as $agencySubService )
@@ -2368,21 +2367,7 @@
                             $('#editPortfolioModal' + id).modal('show');
                         });
                     });
-                </script>
-                {{--                <script>--}}
-                {{--                    fetch('https://api.exchangerate-api.com/v4/latest/USD')--}}
-                {{--                        .then(response => response.json())--}}
-                {{--                        .then(data => {--}}
-                {{--                            const currencyDropdown = document.getElementById('currency');--}}
-                {{--                            for (const currency in data.rates) {--}}
-                {{--                                const option = document.createElement('option');--}}
-                {{--                                option.text = currency;--}}
-                {{--                                currencyDropdown.add(option);--}}
-                {{--                            }--}}
-                {{--                        })--}}
-                {{--                        .catch(error => console.error('Error fetching currencies:', error));--}}
-                {{--                </script>--}}
-                <script>
+
                     // Function to update range value display
                     function updateRangeValue(subServiceId) {
                         var rangeInput = document.getElementById("customRange_" + subServiceId);
@@ -2617,7 +2602,7 @@
                         var selectedServiceId = serviceSelect.value;
 
                         var specializationServiceRanges = <?php echo json_encode($specializationServiceRanges); ?>;
-                        var subServices = <?php isset($agencySubServices) && is_array($agencySubServices) ? json_encode($agencySubServices) : json_encode([]); ?>;
+                        var subServices = <?php echo json_encode($agencySubServices) ?>;
 
                         var subServicesContainer = document.getElementById("subServicesContainer");
                         subServicesContainer.innerHTML = "";
