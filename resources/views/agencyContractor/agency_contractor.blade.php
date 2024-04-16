@@ -257,122 +257,502 @@
                                 <div class="tab-content" id="pills-tabContent">
                                     <div class="tab-pane fade show active" id="pills-home" role="tabpanel"
                                          aria-labelledby="pills-home-tab" tabindex="0">
-                                        <div class="row">
-                                            <form action="{{route('companyDetails')}}" method="post"
-                                                  enctype="multipart/form-data">
-                                                @csrf
-                                                <div class="row">
-                                                    <div class="col">
-                                                        <label for="exampleFormControlTextarea1" class="form-label">Company
-                                                            Name</label>
-                                                        <input type="text" class="form-control" name="company_name"
-                                                               placeholder="Company Name"
-                                                               aria-label="Company Name">
-                                                    </div>
-                                                    <div class="col">
-                                                        <label for="exampleFormControlTextarea1" class="form-label">Tagline</label>
-                                                        <input type="text" class="form-control"
-                                                               name="company_tagline" placeholder="Tagline"
-                                                               aria-label="Tagline">
-                                                    </div>
-                                                    <div class="col">
-                                                        <label for="exampleFormControlTextarea1"
-                                                               class="form-label">Logo</label>
-                                                        <div class="input-group mb-3">
-                                                            <input type="file" class="form-control"
-                                                                   name="company_logo"
-                                                                   id="inputGroupFile01">
+                                        <div class="container">
+                                            <div class="row">
+                                                <form action="{{route('companyDetailsSubmit')}}" method="post"
+                                                      enctype="multipart/form-data">
+                                                    @csrf
+                                                    <div class="row">
+                                                        <div class="col">
+                                                            <label for="exampleFormControlTextarea1" class="form-label">Company
+                                                                Name</label>
+                                                            <input type="text" class="form-control" name="company_name"
+                                                                   placeholder="Company Name"
+                                                                   aria-label="Company Name">
                                                         </div>
-                                                    </div>
-                                                </div>
-                                                <div class="row mt-3">
-                                                    <div class="col">
-                                                        <label for="exampleFormControlTextarea1" class="form-label">Establishment
-                                                            Date</label>
-                                                        <input type="date" class="form-control"
-                                                               placeholder="First name" name="company_establishment"
-                                                               aria-label="First name">
-                                                    </div>
-                                                    <div class="col">
-                                                        <label for="exampleFormControlTextarea1" class="form-label">Company
-                                                            Website</label>
-                                                        <input type="text" class="form-control" placeholder="www"
-                                                               name="company_website"
-                                                               aria-label="Last name">
-                                                    </div>
-                                                    <div class="col">
-                                                        <label for="exampleFormControlTextarea1" class="form-label">Sales
-                                                            Email</label>
-                                                        <input type="email" class="form-control" placeholder="Email"
-                                                               name="company_email"
-                                                               aria-label="email">
-                                                    </div>
-                                                    <div class="col">
-                                                        <label for="exampleFormControlTextarea1" class="form-label">Total
-                                                            Employees</label>
-                                                        <select class="form-select" name="company_total_employees"
-                                                                id="autoSizingSelect">
-                                                            <option selected>Choose...</option>
-                                                            <option value="0-49">0-49</option>
-                                                            <option value="50-249">50-249</option>
-                                                            <option value="250-999">250-999</option>
-                                                            <option value="1000-9999">1000-9999</option>
-                                                            <option value="10000+">10000+</option>
-                                                        </select>
-                                                    </div>
-                                                    <div class="row mt-3">
-                                                        <div class="mb-3">
-                                                            <label for="exampleFormControlTextarea1"
-                                                                   class="form-label">Descriptions</label>
-                                                            <textarea class="form-control"
-                                                                      id="exampleFormControlTextarea1"
-                                                                      name="company_description"
-                                                                      rows="3"></textarea>
+                                                        <div class="col">
+                                                            <label for="exampleFormControlTextarea1" class="form-label">Tagline</label>
+                                                            <input type="text" class="form-control"
+                                                                   name="company_tagline" placeholder="Tagline"
+                                                                   aria-label="Tagline">
                                                         </div>
-                                                    </div>
-                                                    <div class="row mt-3">
-                                                        <label for="exampleFormControlTextarea1"
-                                                               class="form-label fa-2x">Project Information</label>
                                                         <div class="col">
                                                             <label for="exampleFormControlTextarea1"
-                                                                   class="form-label">Minimum Project Size</label>
-                                                            <select class="form-select" name="company_projectSize"
-                                                                    id="autoSizingSelect">
-                                                                <option selected>Choose...</option>
-                                                                <option value="1000">1,000+</option>
-                                                                <option value="5000">5,000+</option>
-                                                                <option value="25000">25,000+</option>
-                                                                <option value="50000">50,000+</option>
-                                                                <option value="100000">100,000+</option>
-                                                            </select>
-                                                        </div>
-
-                                                        <div class="col">
-                                                            <label for="exampleFormControlTextarea1"
-                                                                   class="form-label">Average Hourly Rates</label>
-                                                            <div class="input-group">
-                                                                <select class="form-select small-select"
-                                                                        name="currency" id="currency">
-                                                                    <!-- Currency options will be populated dynamically -->
-                                                                </select>
-                                                                <select class="form-select"
-                                                                        name="company_hourly_rate"
-                                                                        id="autoSizingSelect">
-                                                                    <option selected>Choose...</option>
-                                                                    <option value="< 25">< 25</option>
-                                                                    <option value="25-49">25-49</option>
-                                                                    <option value="50-99">50-99</option>
-                                                                    <option value="100-149">100-149</option>
-                                                                    <option value="150-199">150-199</option>
-                                                                    <option value="200-300">200-300</option>
-                                                                    <option value="300">300+</option>
-                                                                </select>
+                                                                   class="form-label">Logo</label>
+                                                            <div class="input-group mb-3">
+                                                                <input type="file" class="form-control"
+                                                                       name="company_logo"
+                                                                       id="inputGroupFile01">
                                                             </div>
                                                         </div>
                                                     </div>
-                                                </div>
-                                                <button type="submit" class="btn btn-primary">Submit</button>
-                                            </form>
+                                                    <div class="row mt-3">
+                                                        <div class="col">
+                                                            <label for="exampleFormControlTextarea1" class="form-label">Establishment
+                                                                Date</label>
+                                                            <input type="date" class="form-control"
+                                                                   placeholder="First name" name="company_establishment"
+                                                                   aria-label="First name">
+                                                        </div>
+                                                        <div class="col">
+                                                            <label for="exampleFormControlTextarea1" class="form-label">Company
+                                                                Website</label>
+                                                            <input type="text" class="form-control" placeholder="www"
+                                                                   name="company_website"
+                                                                   aria-label="Last name">
+                                                        </div>
+                                                        <div class="col">
+                                                            <label for="exampleFormControlTextarea1" class="form-label">Sales
+                                                                Email</label>
+                                                            <input type="email" class="form-control" placeholder="Email"
+                                                                   name="company_email"
+                                                                   aria-label="email">
+                                                        </div>
+                                                        <div class="col">
+                                                            <label for="exampleFormControlTextarea1" class="form-label">Total
+                                                                Employees</label>
+                                                            <select class="form-select" name="company_total_employees"
+                                                                    id="autoSizingSelect">
+                                                                <option selected>Choose...</option>
+                                                                <option value="0-49">0-49</option>
+                                                                <option value="50-249">50-249</option>
+                                                                <option value="250-999">250-999</option>
+                                                                <option value="1000-9999">1000-9999</option>
+                                                                <option value="10000+">10000+</option>
+                                                            </select>
+                                                        </div>
+                                                        <div class="row mt-3">
+                                                            <div class="mb-3">
+                                                                <label for="exampleFormControlTextarea1"
+                                                                       class="form-label">Descriptions</label>
+                                                                <textarea class="form-control"
+                                                                          id="exampleFormControlTextarea1"
+                                                                          name="company_description"
+                                                                          rows="3"></textarea>
+                                                            </div>
+                                                        </div>
+                                                        <div class="row mt-3">
+                                                            <label for="exampleFormControlTextarea1"
+                                                                   class="form-label fa-2x">Project Information</label>
+                                                            <div class="col">
+                                                                <label for="exampleFormControlTextarea1"
+                                                                       class="form-label">Minimum Project Size</label>
+                                                                <select class="form-select" name="company_projectSize"
+                                                                        id="autoSizingSelect">
+                                                                    <option selected>Choose...</option>
+                                                                    <option value="1000">1,000+</option>
+                                                                    <option value="5000">5,000+</option>
+                                                                    <option value="25000">25,000+</option>
+                                                                    <option value="50000">50,000+</option>
+                                                                    <option value="100000">100,000+</option>
+                                                                </select>
+                                                            </div>
+
+                                                            <div class="col">
+                                                                <label for="exampleFormControlTextarea1"
+                                                                       class="form-label">Average Hourly Rates</label>
+                                                                <div class="input-group">
+                                                                    <select class="form-select small-select"
+                                                                            name="currency" id="currency">
+                                                                        @isset($countries)
+                                                                            @foreach($countries as $country)
+                                                                                <option
+                                                                                    value="{{$country->currency}}">{{$country->currency}}</option>
+                                                                            @endforeach
+                                                                        @endisset
+                                                                    </select>
+                                                                    <select class="form-select"
+                                                                            name="company_hourly_rate"
+                                                                            id="autoSizingSelect">
+                                                                        <option selected>Choose...</option>
+                                                                        <option value="< 25">< 25</option>
+                                                                        <option value="25-49">25-49</option>
+                                                                        <option value="50-99">50-99</option>
+                                                                        <option value="100-149">100-149</option>
+                                                                        <option value="150-199">150-199</option>
+                                                                        <option value="200-300">200-300</option>
+                                                                        <option value="300">300+</option>
+                                                                    </select>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <button type="submit" class="btn btn-primary">Submit</button>
+                                                </form>
+                                                <table class="table table-striped mt-5">
+                                                    <thead>
+                                                    <tr>
+                                                        <th>
+                                                            <h6>Company Name</h6>
+                                                        </th>
+                                                        <th>
+                                                            <h6>Tagline</h6>
+                                                        </th>
+                                                        <th>
+                                                            <h6>Logo</h6>
+                                                        </th>
+                                                        <th>
+                                                            <h6>Establishment Date</h6>
+                                                        </th>
+                                                        <th>
+                                                            <h6>Company Website</h6>
+                                                        </th>
+                                                        <th>
+                                                            <h6>Sales Email</h6>
+                                                        </th>
+                                                        <th>
+                                                            <h6>Total Employee</h6>
+                                                        </th>
+                                                        <th>
+                                                            <h6>Descriptions</h6>
+                                                        </th>
+                                                        <th>
+                                                            <h6>Minimum Project Size</h6>
+                                                        </th>
+                                                        <th>
+                                                            <h6>Average Hourly Rates</h6>
+                                                        </th>
+                                                        <th>
+                                                            <h6>Action</h6>
+                                                        </th>
+                                                    </tr>
+                                                    </thead>
+                                                    <tbody>
+                                                    @isset($companyDetails)
+                                                        @foreach($companyDetails as $companyDetail)
+                                                            <tr>
+                                                                <td>
+                                                                    <div class="tabletext">
+                                                                        <p>{{$companyDetail?->company_name }}</p>
+                                                                    </div>
+                                                                </td>
+                                                                <td>
+                                                                    <div class="tabletext">
+                                                                        <p>{{ $companyDetail?->tagline }}</p>
+                                                                    </div>
+                                                                </td>
+                                                                <td>
+                                                                    <div class="tabletext">
+                                                                        <p>{{ $companyDetail?->logo }}</p>
+                                                                    </div>
+                                                                </td>
+                                                                <td>
+                                                                    <div class="tabletext">
+                                                                        <p>{{ $companyDetail?->establishment_date }}</p>
+                                                                    </div>
+                                                                </td>
+                                                                <td>
+                                                                    <div class="tabletext">
+                                                                        <p>{{ $companyDetail?->company_website }}</p>
+                                                                    </div>
+                                                                </td>
+                                                                <td>
+                                                                    <div class="tabletext">
+                                                                        <p>{{ $companyDetail?->company_email }}</p>
+                                                                    </div>
+                                                                </td>
+                                                                <td>
+                                                                    <div class="tabletext">
+                                                                        <p>{{$companyDetail?->total_employee }}</p>
+                                                                    </div>
+                                                                </td>
+                                                                <td>
+                                                                    <div class="tabletext">
+                                                                        <p>{{$companyDetail?->descriptions }}</p>
+                                                                    </div>
+                                                                </td>
+                                                                <td>
+                                                                    <div class="tabletext">
+                                                                        <p>{{$companyDetail?->project_size }}</p>
+                                                                    </div>
+                                                                </td>
+                                                                <td>
+                                                                    <div class="tabletext">
+                                                                        <p>{{$country->currency}} {{$companyDetail?->project_rate }}</p>
+                                                                    </div>
+                                                                <td>
+                                                                    <div class="tabletext">
+                                                                        <button class="btn btn-primary editBtn"
+                                                                                data-bs-toggle="modal"
+                                                                                data-bs-target="#editModal{{ $companyDetail->id }}"
+                                                                                data-id="{{ $companyDetail->id }}">
+                                                                            Edit
+                                                                        </button>
+                                                                        <div class="tabletext">
+                                                                            <a href="{{ route('deleteCompanyDetail', ['id' => $companyDetail->id]) }}"
+                                                                               class="btn btn-danger">Delete</a>
+                                                                        </div>
+                                                                    </div>
+                                                                </td>
+                                                                <div class="modal fade"
+                                                                     id="editModal{{ $companyDetail->id }}"
+                                                                     tabindex="-1" aria-labelledby="editModalLabel"
+                                                                     aria-hidden="true">
+                                                                    <div class="modal-dialog">
+                                                                        <div class="modal-content">
+                                                                            <div class="modal-header">
+                                                                                <h5 class="modal-title"
+                                                                                    id="editModalLabel">Edit Agency
+                                                                                    Location</h5>
+                                                                                <button type="button" class="btn-close"
+                                                                                        data-bs-dismiss="modal"
+                                                                                        aria-label="Close"></button>
+                                                                            </div>
+                                                                            <form id="editForm"
+                                                                                  action="{{route('companyDetailsSubmit')}}"
+                                                                                  method="post">
+                                                                                @csrf
+                                                                                <div class="modal-body">
+                                                                                    <div class="container-fluid">
+                                                                                        <div class="row">
+                                                                                            <input type="hidden"
+                                                                                                   name="companyId"
+                                                                                                   value="{{$companyDetail->id}}">
+                                                                                            <div class="col">
+                                                                                                <label
+                                                                                                    for="exampleFormControlTextarea1"
+                                                                                                    class="form-label">Company
+                                                                                                    Name</label>
+                                                                                                <input type="text"
+                                                                                                       class="form-control"
+                                                                                                       name="company_name"
+                                                                                                       placeholder="Company Name"
+                                                                                                       value="{{$companyDetail?->company_name }}"
+                                                                                                       aria-label="Company Name">
+                                                                                            </div>
+                                                                                            <div class="col">
+                                                                                                <label
+                                                                                                    for="exampleFormControlTextarea1"
+                                                                                                    class="form-label">Tagline</label>
+                                                                                                <input type="text"
+                                                                                                       class="form-control"
+                                                                                                       name="company_tagline"
+                                                                                                       placeholder="Tagline"
+                                                                                                       value="{{$companyDetail?->tagline }}"
+
+                                                                                                       aria-label="Tagline">
+                                                                                            </div>
+                                                                                            <div class="col">
+                                                                                                <label
+                                                                                                    for="exampleFormControlTextarea1"
+                                                                                                    class="form-label">Logo</label>
+                                                                                                <div
+                                                                                                    class="input-group mb-3">
+                                                                                                    <input type="file"
+                                                                                                           class="form-control"
+                                                                                                           name="company_logo"
+                                                                                                           value="{{$companyDetail?->logo }}"
+
+                                                                                                           id="inputGroupFile01">
+                                                                                                </div>
+                                                                                            </div>
+                                                                                        </div>
+                                                                                        <div class="row mt-3">
+                                                                                            <div class="col-3">
+                                                                                                <label
+                                                                                                    for="exampleFormControlTextarea1"
+                                                                                                    class="form-label">Establishment
+                                                                                                    Date</label>
+                                                                                                <input type="date"
+                                                                                                       class="form-control"
+                                                                                                       placeholder="First name"
+                                                                                                       name="company_establishment"
+                                                                                                       value="{{$companyDetail?->establishment_date }}"
+
+                                                                                                       aria-label="First name">
+                                                                                            </div>
+                                                                                            <div class="col-3">
+                                                                                                <label
+                                                                                                    for="exampleFormControlTextarea1"
+                                                                                                    class="form-label">Company
+                                                                                                    Website</label>
+                                                                                                <input type="text"
+                                                                                                       class="form-control"
+                                                                                                       placeholder="www"
+                                                                                                       name="company_website"
+                                                                                                       value="{{$companyDetail?->company_website }}"
+
+                                                                                                       aria-label="Last name">
+                                                                                            </div>
+                                                                                            <div class="col-3">
+                                                                                                <label
+                                                                                                    for="exampleFormControlTextarea1"
+                                                                                                    class="form-label">Sales
+                                                                                                    Email</label>
+                                                                                                <input type="email"
+                                                                                                       class="form-control"
+                                                                                                       placeholder="Email"
+                                                                                                       name="company_email"
+                                                                                                       value="{{$companyDetail?->company_email }}"
+                                                                                                       aria-label="email">
+                                                                                            </div>
+                                                                                            <div class="col-3">
+                                                                                                <label
+                                                                                                    for="exampleFormControlTextarea1"
+                                                                                                    class="form-label">Total
+                                                                                                    Employees</label>
+                                                                                                <select
+                                                                                                    class="form-select"
+                                                                                                    name="company_total_employees"
+                                                                                                    id="autoSizingSelect">
+                                                                                                    <option
+                                                                                                        value="0-49" {{ $companyDetail->total_employee === '0-49' ? 'selected' : '' }}>
+                                                                                                        0-49
+                                                                                                    </option>
+                                                                                                    <option
+                                                                                                        value="50-249" {{ $companyDetail->total_employee === '50-249' ? 'selected' : '' }}>
+                                                                                                        50-249
+                                                                                                    </option>
+                                                                                                    <option
+                                                                                                        value="250-999" {{ $companyDetail->total_employee === '250-999' ? 'selected' : '' }}>
+                                                                                                        250-999
+                                                                                                    </option>
+                                                                                                    <option
+                                                                                                        value="1000-9999" {{ $companyDetail->total_employee === '1000-9999' ? 'selected' : '' }}>
+                                                                                                        1000-9999
+                                                                                                    </option>
+                                                                                                    <option
+                                                                                                        value="10000+" {{ $companyDetail->total_employee === '10000+' ? 'selected' : '' }}>
+                                                                                                        10000+
+                                                                                                    </option>
+                                                                                                </select>
+                                                                                            </div>
+                                                                                            <div class="row mt-3">
+                                                                                                <div class="mb-3">
+                                                                                                    <label
+                                                                                                        for="exampleFormControlTextarea1"
+                                                                                                        class="form-label">Descriptions</label>
+                                                                                                    <textarea
+                                                                                                        class="form-control"
+                                                                                                        id="exampleFormControlTextarea1"
+                                                                                                        name="company_description"
+                                                                                                        rows="3">{{ $companyDetail->descriptions ?? '' }}</textarea>
+                                                                                                </div>
+                                                                                            </div>
+                                                                                            <div class="row mt-3">
+                                                                                                <label
+                                                                                                    for="exampleFormControlTextarea1"
+                                                                                                    class="form-label fa-2x">Project
+                                                                                                    Information</label>
+                                                                                                <div class="col">
+                                                                                                    <label
+                                                                                                        for="exampleFormControlTextarea1"
+                                                                                                        class="form-label">Minimum
+                                                                                                        Project
+                                                                                                        Size</label>
+                                                                                                    <select
+                                                                                                        class="form-select"
+                                                                                                        name="company_projectSize"
+                                                                                                        id="autoSizingSelect">
+                                                                                                        <option
+                                                                                                            value="" {{ $companyDetail->project_size === null ? 'selected' : '' }}>
+                                                                                                            Choose...
+                                                                                                        </option>
+                                                                                                        <option
+                                                                                                            value="1000" {{ $companyDetail->project_size == 1000 ? 'selected' : '' }}>
+                                                                                                            1,000+
+                                                                                                        </option>
+                                                                                                        <option
+                                                                                                            value="5000" {{ $companyDetail->project_size == 5000 ? 'selected' : '' }}>
+                                                                                                            5,000+
+                                                                                                        </option>
+                                                                                                        <option
+                                                                                                            value="25000" {{ $companyDetail->project_size == 25000 ? 'selected' : '' }}>
+                                                                                                            25,000+
+                                                                                                        </option>
+                                                                                                        <option
+                                                                                                            value="50000" {{ $companyDetail->project_size == 50000 ? 'selected' : '' }}>
+                                                                                                            50,000+
+                                                                                                        </option>
+                                                                                                        <option
+                                                                                                            value="100000" {{ $companyDetail->project_size == 100000 ? 'selected' : '' }}>
+                                                                                                            100,000+
+                                                                                                        </option>
+                                                                                                    </select>
+                                                                                                </div>
+
+                                                                                                <div class="col">
+                                                                                                    <label
+                                                                                                        for="exampleFormControlTextarea1"
+                                                                                                        class="form-label">Average
+                                                                                                        Hourly
+                                                                                                        Rates</label>
+                                                                                                    <div
+                                                                                                        class="input-group">
+                                                                                                        <select
+                                                                                                            class="form-select small-select"
+                                                                                                            name="currency"
+                                                                                                            id="currency">
+                                                                                                            @isset($countries)
+                                                                                                                @foreach($countries as $country)
+                                                                                                                    <option
+                                                                                                                        value="{{$country->currency}}">{{$country->currency}}</option>
+                                                                                                                @endforeach
+                                                                                                            @endisset
+                                                                                                        </select>
+                                                                                                        <select
+                                                                                                            class="form-select"
+                                                                                                            name="company_hourly_rate"
+                                                                                                            id="autoSizingSelect">
+                                                                                                            <option
+                                                                                                                value="" {{ is_null($companyDetail->project_rate) ? 'selected' : '' }}>
+                                                                                                                Choose...
+                                                                                                            </option>
+                                                                                                            <option
+                                                                                                                value="< 25" {{ $companyDetail->project_rate === '< 25' ? 'selected' : '' }}>
+                                                                                                                &lt; 25
+                                                                                                            </option>
+                                                                                                            <option
+                                                                                                                value="25-49" {{ $companyDetail->project_rate === '25-49' ? 'selected' : '' }}>
+                                                                                                                25-49
+                                                                                                            </option>
+                                                                                                            <option
+                                                                                                                value="50-99" {{ $companyDetail->project_rate === '50-99' ? 'selected' : '' }}>
+                                                                                                                50-99
+                                                                                                            </option>
+                                                                                                            <option
+                                                                                                                value="100-149" {{ $companyDetail->project_rate === '100-149' ? 'selected' : '' }}>
+                                                                                                                100-149
+                                                                                                            </option>
+                                                                                                            <option
+                                                                                                                value="150-199" {{ $companyDetail->project_rate === '150-199' ? 'selected' : '' }}>
+                                                                                                                150-199
+                                                                                                            </option>
+                                                                                                            <option
+                                                                                                                value="200-300" {{ $companyDetail->project_rate === '200-300' ? 'selected' : '' }}>
+                                                                                                                200-300
+                                                                                                            </option>
+                                                                                                            <option
+                                                                                                                value="300" {{ $companyDetail->project_rate === '300' ? 'selected' : '' }}>
+                                                                                                                300+
+                                                                                                            </option>
+                                                                                                        </select>
+                                                                                                    </div>
+                                                                                                </div>
+                                                                                            </div>
+                                                                                        </div>
+                                                                                    </div>
+                                                                                </div>
+                                                                                <div class="modal-footer">
+                                                                                    <button type="button"
+                                                                                            class="btn btn-secondary"
+                                                                                            data-bs-dismiss="modal">
+                                                                                        Close
+                                                                                    </button>
+                                                                                    <button type="submit"
+                                                                                            class="btn btn-primary">Save
+                                                                                        changes
+                                                                                    </button>
+                                                                                </div>
+                                                                            </form>
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+                                                        @endforeach
+                                                    @endisset
+                                                    </tbody>
+                                                </table>
+                                            </div>
                                         </div>
                                     </div>
                                     <div class="tab-pane fade" id="pills-profile" role="tabpanel"
@@ -519,217 +899,227 @@
                                                         </tr>
                                                         </thead>
                                                         <tbody>
-                                                        @foreach($agencyLocations as $agencyLocation)
-                                                            <tr>
-                                                                <td>
-                                                                    <div class="tabletext">
-                                                                        <p>{{$agencyLocation?->country }}</p>
-                                                                    </div>
-                                                                </td>
-                                                                <td>
-                                                                    <div class="tabletext">
-                                                                        <p>{{ $agencyLocation?->city }}</p>
-                                                                    </div>
-                                                                </td>
-                                                                <td>
-                                                                    <div class="tabletext">
-                                                                        <p>{{ $agencyLocation?->postal_code }}</p>
-                                                                    </div>
-                                                                </td>
-                                                                <td>
-                                                                    <div class="tabletext">
-                                                                        <p>{{ $agencyLocation?->country_code . ' '. $agencyLocation?->phone_number}}</p>
-                                                                    </div>
-                                                                </td>
-                                                                <td>
-                                                                    <div class="tabletext">
-                                                                        <p>{{ $agencyLocation?->address }}</p>
-                                                                    </div>
-                                                                </td>
-                                                                <td>
-                                                                    <div class="tabletext">
-                                                                        <p>{{ $agencyLocation?->total_employee }}</p>
-                                                                    </div>
-                                                                </td>
-                                                                <td>
-                                                                    <div class="tabletext">
-                                                                        <p>{{$agencyLocation?->type }}</p>
-                                                                    </div>
-                                                                </td>
-                                                                <td>
-                                                                    <div class="tabletext">
-                                                                        <button class="btn btn-primary editBtn"
-                                                                                data-bs-toggle="modal"
-                                                                                data-bs-target="#editModal{{ $agencyLocation->id }}"
-                                                                                data-id="{{ $agencyLocation->id }}">
-                                                                            Edit
-                                                                        </button>
+                                                        @isset($agencyLocations)
+                                                            @foreach($agencyLocations as $agencyLocation)
+                                                                <tr>
+                                                                    <td>
                                                                         <div class="tabletext">
-                                                                            <a href="{{ route('deleteAgencyLocation', ['id' => $agencyLocation->id]) }}" class="btn btn-danger">Delete</a>
+                                                                            <p>{{$agencyLocation?->country }}</p>
                                                                         </div>
-                                                                    </div>
-                                                                </td>
-                                                                <div class="modal fade"
-                                                                     id="editModal{{ $agencyLocation->id }}"
-                                                                     tabindex="-1" aria-labelledby="editModalLabel"
-                                                                     aria-hidden="true">
-                                                                    <div class="modal-dialog">
-                                                                        <div class="modal-content">
-                                                                            <div class="modal-header">
-                                                                                <h5 class="modal-title"
-                                                                                    id="editModalLabel">Edit Agency
-                                                                                    Location</h5>
-                                                                                <button type="button" class="btn-close"
-                                                                                        data-bs-dismiss="modal"
-                                                                                        aria-label="Close"></button>
+                                                                    </td>
+                                                                    <td>
+                                                                        <div class="tabletext">
+                                                                            <p>{{ $agencyLocation?->city }}</p>
+                                                                        </div>
+                                                                    </td>
+                                                                    <td>
+                                                                        <div class="tabletext">
+                                                                            <p>{{ $agencyLocation?->postal_code }}</p>
+                                                                        </div>
+                                                                    </td>
+                                                                    <td>
+                                                                        <div class="tabletext">
+                                                                            <p>{{ $agencyLocation?->country_code . ' '. $agencyLocation?->phone_number}}</p>
+                                                                        </div>
+                                                                    </td>
+                                                                    <td>
+                                                                        <div class="tabletext">
+                                                                            <p>{{ $agencyLocation?->address }}</p>
+                                                                        </div>
+                                                                    </td>
+                                                                    <td>
+                                                                        <div class="tabletext">
+                                                                            <p>{{ $agencyLocation?->total_employee }}</p>
+                                                                        </div>
+                                                                    </td>
+                                                                    <td>
+                                                                        <div class="tabletext">
+                                                                            <p>{{$agencyLocation?->type }}</p>
+                                                                        </div>
+                                                                    </td>
+                                                                    <td>
+                                                                        <div class="tabletext">
+                                                                            <button class="btn btn-primary editBtn"
+                                                                                    data-bs-toggle="modal"
+                                                                                    data-bs-target="#editModal{{ $agencyLocation->id }}"
+                                                                                    data-id="{{ $agencyLocation->id }}">
+                                                                                Edit
+                                                                            </button>
+                                                                            <div class="tabletext">
+                                                                                <a href="{{ route('deleteAgencyLocation', ['id' => $agencyLocation->id]) }}"
+                                                                                   class="btn btn-danger">Delete</a>
                                                                             </div>
-                                                                            <form id="editForm"
-                                                                                  action="{{route('agencyLocationSubmit')}}"
-                                                                                  method="post">
-                                                                                @csrf
-                                                                                <div class="modal-body">
-                                                                                    <div class="row container-fluid">
-                                                                                        <input type="hidden" name="locationId" value="{{$agencyLocation->id}}">
-                                                                                        <div class="col-md-4">
-                                                                                            <label
-                                                                                                for="Country{{ $agencyLocation->id }}"
-                                                                                                class="form-label">Country</label>
-                                                                                            <select
-                                                                                                id="Country{{ $agencyLocation->id }}"
-                                                                                                name="country"
-                                                                                                class="form-select"
-                                                                                                onchange="fetchModalCities({{ $agencyLocation->id }})">
-                                                                                                <option
-                                                                                                    value=""></option>
-
-                                                                                            </select>
-                                                                                        </div>
-                                                                                        <div class="col-md-4">
-                                                                                            <label for="city"
-                                                                                                   class="form-label">City</label>
-                                                                                            <select
-                                                                                                id="city{{ $agencyLocation->id }}"
-                                                                                                name="city"
-                                                                                                class="form-select">
-                                                                                                <option value="">
-                                                                                                </option>
-                                                                                            </select>
-                                                                                        </div>
-                                                                                        <div class="col-md-4">
-                                                                                            <label for="type"
-                                                                                                   class="form-label">Type</label>
-                                                                                            <select id="type"
-                                                                                                    name="branch"
+                                                                        </div>
+                                                                    </td>
+                                                                    <div class="modal fade"
+                                                                         id="editModal{{ $agencyLocation->id }}"
+                                                                         tabindex="-1" aria-labelledby="editModalLabel"
+                                                                         aria-hidden="true">
+                                                                        <div class="modal-dialog">
+                                                                            <div class="modal-content">
+                                                                                <div class="modal-header">
+                                                                                    <h5 class="modal-title"
+                                                                                        id="editModalLabel">Edit Agency
+                                                                                        Location</h5>
+                                                                                    <button type="button"
+                                                                                            class="btn-close"
+                                                                                            data-bs-dismiss="modal"
+                                                                                            aria-label="Close"></button>
+                                                                                </div>
+                                                                                <form id="editForm"
+                                                                                      action="{{route('agencyLocationSubmit')}}"
+                                                                                      method="post">
+                                                                                    @csrf
+                                                                                    <div class="modal-body">
+                                                                                        <div
+                                                                                            class="row container-fluid">
+                                                                                            <input type="hidden"
+                                                                                                   name="locationId"
+                                                                                                   value="{{$agencyLocation->id}}">
+                                                                                            <div class="col-md-4">
+                                                                                                <label
+                                                                                                    for="Country{{ $agencyLocation->id }}"
+                                                                                                    class="form-label">Country</label>
+                                                                                                <select
+                                                                                                    id="Country{{ $agencyLocation->id }}"
+                                                                                                    name="country"
                                                                                                     class="form-select"
-                                                                                                    onchange="updateLabel()">
-                                                                                                <option disabled>Select
-                                                                                                    a type
-                                                                                                </option>
-                                                                                                <option
-                                                                                                    value="headQuarter" {{ $agencyLocation->type == "headQuarter" ? 'selected' : '' }}>
-                                                                                                    Headquarters
-                                                                                                </option>
-                                                                                                <option
-                                                                                                    value="branch" {{ $agencyLocation->type == "branch" ? 'selected' : '' }}>
-                                                                                                    Branch
-                                                                                                </option>
-                                                                                            </select>
-                                                                                        </div>
-                                                                                        <div class="col-md-4">
-                                                                                            <label for="inputCity"
-                                                                                                   class="form-label">Postal
-                                                                                                Code</label>
-                                                                                            <input type="text"
-                                                                                                   name="postal"
-                                                                                                   class="form-control"
-                                                                                                   value="{{ $agencyLocation->postal_code }}"
-                                                                                                   id="inputCity">
-                                                                                        </div>
-                                                                                        <div class="col-md-4">
-                                                                                            <label for="countryCode"
-                                                                                                   class="form-label">Country
-                                                                                                Code</label>
-                                                                                            <input type="text"
-                                                                                                   name="country_code"
-                                                                                                   id="countryCode{{ $agencyLocation->id }}"
-                                                                                                   class="form-control"
-                                                                                                   value="{{ $agencyLocation->country_code }}"
-                                                                                                   readonly>
-                                                                                        </div>
-                                                                                        <div class="col-md-4">
-                                                                                            <label for="inputZip"
-                                                                                                   class="form-label">Phone
-                                                                                                Number</label>
-                                                                                            <input type="text"
-                                                                                                   name="phone"
-                                                                                                   class="form-control"
-                                                                                                   value="{{ $agencyLocation->phone_number }}"
-                                                                                                   id="inputZip">
-                                                                                        </div>
-                                                                                        <div class="col-12">
-                                                                                            <label for="inputAddress"
-                                                                                                   class="form-label">Address</label>
-                                                                                            <input type="text"
-                                                                                                   class="form-control"
-                                                                                                   id="inputAddress"
-                                                                                                   name="address"
-                                                                                                   value="{{ $agencyLocation->address }}"
-                                                                                                   placeholder="1234 Main St">
-                                                                                        </div>
-                                                                                        <div class="col-md-12">
-                                                                                            <label for="inputState"
-                                                                                                   class="form-label">Total
-                                                                                                Employees at
-                                                                                                this
-                                                                                                Location</label>
-                                                                                            <select
-                                                                                                name="total_employee"
-                                                                                                id="inputState"
-                                                                                                class="form-select">
-                                                                                                <option
-                                                                                                    value="" {{ $agencyLocation->total_employee == "" ? 'selected' : '' }}>
-                                                                                                    Choose...
-                                                                                                </option>
-                                                                                                <option
-                                                                                                    value="0-49" {{ $agencyLocation->total_employee == "0-49" ? 'selected' : '' }}>
-                                                                                                    0-49
-                                                                                                </option>
-                                                                                                <option
-                                                                                                    value="50-249" {{ $agencyLocation->total_employee == "50-249" ? 'selected' : '' }}>
-                                                                                                    50-249
-                                                                                                </option>
-                                                                                                <option
-                                                                                                    value="250-999" {{ $agencyLocation->total_employee == "250-999" ? 'selected' : '' }}>
-                                                                                                    250-999
-                                                                                                </option>
-                                                                                                <option
-                                                                                                    value="1000-9999" {{ $agencyLocation->total_employee == "1000-9999" ? 'selected' : '' }}>
-                                                                                                    1000-9999
-                                                                                                </option>
-                                                                                                <option
-                                                                                                    value="10000+" {{ $agencyLocation->total_employee == "10000+" ? 'selected' : '' }}>
-                                                                                                    10000+
-                                                                                                </option>
-                                                                                            </select>
+                                                                                                    onchange="fetchModalCities({{ $agencyLocation->id }})">
+                                                                                                    <option
+                                                                                                        value=""></option>
+
+                                                                                                </select>
+                                                                                            </div>
+                                                                                            <div class="col-md-4">
+                                                                                                <label for="city"
+                                                                                                       class="form-label">City</label>
+                                                                                                <select
+                                                                                                    id="city{{ $agencyLocation->id }}"
+                                                                                                    name="city"
+                                                                                                    class="form-select">
+                                                                                                    <option value="">
+                                                                                                    </option>
+                                                                                                </select>
+                                                                                            </div>
+                                                                                            <div class="col-md-4">
+                                                                                                <label for="type"
+                                                                                                       class="form-label">Type</label>
+                                                                                                <select id="type"
+                                                                                                        name="branch"
+                                                                                                        class="form-select"
+                                                                                                        onchange="updateLabel()">
+                                                                                                    <option disabled>
+                                                                                                        Select
+                                                                                                        a type
+                                                                                                    </option>
+                                                                                                    <option
+                                                                                                        value="headQuarter" {{ $agencyLocation->type == "headQuarter" ? 'selected' : '' }}>
+                                                                                                        Headquarters
+                                                                                                    </option>
+                                                                                                    <option
+                                                                                                        value="branch" {{ $agencyLocation->type == "branch" ? 'selected' : '' }}>
+                                                                                                        Branch
+                                                                                                    </option>
+                                                                                                </select>
+                                                                                            </div>
+                                                                                            <div class="col-md-4">
+                                                                                                <label for="inputCity"
+                                                                                                       class="form-label">Postal
+                                                                                                    Code</label>
+                                                                                                <input type="text"
+                                                                                                       name="postal"
+                                                                                                       class="form-control"
+                                                                                                       value="{{ $agencyLocation->postal_code }}"
+                                                                                                       id="inputCity">
+                                                                                            </div>
+                                                                                            <div class="col-md-4">
+                                                                                                <label for="countryCode"
+                                                                                                       class="form-label">Country
+                                                                                                    Code</label>
+                                                                                                <input type="text"
+                                                                                                       name="country_code"
+                                                                                                       id="countryCode{{ $agencyLocation->id }}"
+                                                                                                       class="form-control"
+                                                                                                       value="{{ $agencyLocation->country_code }}"
+                                                                                                       readonly>
+                                                                                            </div>
+                                                                                            <div class="col-md-4">
+                                                                                                <label for="inputZip"
+                                                                                                       class="form-label">Phone
+                                                                                                    Number</label>
+                                                                                                <input type="text"
+                                                                                                       name="phone"
+                                                                                                       class="form-control"
+                                                                                                       value="{{ $agencyLocation->phone_number }}"
+                                                                                                       id="inputZip">
+                                                                                            </div>
+                                                                                            <div class="col-12">
+                                                                                                <label
+                                                                                                    for="inputAddress"
+                                                                                                    class="form-label">Address</label>
+                                                                                                <input type="text"
+                                                                                                       class="form-control"
+                                                                                                       id="inputAddress"
+                                                                                                       name="address"
+                                                                                                       value="{{ $agencyLocation->address }}"
+                                                                                                       placeholder="1234 Main St">
+                                                                                            </div>
+                                                                                            <div class="col-md-12">
+                                                                                                <label for="inputState"
+                                                                                                       class="form-label">Total
+                                                                                                    Employees at
+                                                                                                    this
+                                                                                                    Location</label>
+                                                                                                <select
+                                                                                                    name="total_employee"
+                                                                                                    id="inputState"
+                                                                                                    class="form-select">
+                                                                                                    <option
+                                                                                                        value="" {{ $agencyLocation->total_employee == "" ? 'selected' : '' }}>
+                                                                                                        Choose...
+                                                                                                    </option>
+                                                                                                    <option
+                                                                                                        value="0-49" {{ $agencyLocation->total_employee == "0-49" ? 'selected' : '' }}>
+                                                                                                        0-49
+                                                                                                    </option>
+                                                                                                    <option
+                                                                                                        value="50-249" {{ $agencyLocation->total_employee == "50-249" ? 'selected' : '' }}>
+                                                                                                        50-249
+                                                                                                    </option>
+                                                                                                    <option
+                                                                                                        value="250-999" {{ $agencyLocation->total_employee == "250-999" ? 'selected' : '' }}>
+                                                                                                        250-999
+                                                                                                    </option>
+                                                                                                    <option
+                                                                                                        value="1000-9999" {{ $agencyLocation->total_employee == "1000-9999" ? 'selected' : '' }}>
+                                                                                                        1000-9999
+                                                                                                    </option>
+                                                                                                    <option
+                                                                                                        value="10000+" {{ $agencyLocation->total_employee == "10000+" ? 'selected' : '' }}>
+                                                                                                        10000+
+                                                                                                    </option>
+                                                                                                </select>
+                                                                                            </div>
                                                                                         </div>
                                                                                     </div>
-                                                                                </div>
-                                                                                <div class="modal-footer">
-                                                                                    <button type="button"
-                                                                                            class="btn btn-secondary"
-                                                                                            data-bs-dismiss="modal">
-                                                                                        Close
-                                                                                    </button>
-                                                                                    <button type="submit"
-                                                                                            class="btn btn-primary">Save
-                                                                                        changes
-                                                                                    </button>
-                                                                                </div>
-                                                                            </form>
+                                                                                    <div class="modal-footer">
+                                                                                        <button type="button"
+                                                                                                class="btn btn-secondary"
+                                                                                                data-bs-dismiss="modal">
+                                                                                            Close
+                                                                                        </button>
+                                                                                        <button type="submit"
+                                                                                                class="btn btn-primary">
+                                                                                            Save
+                                                                                            changes
+                                                                                        </button>
+                                                                                    </div>
+                                                                                </form>
+                                                                            </div>
                                                                         </div>
                                                                     </div>
-                                                                </div>
-                                                        @endforeach
+                                                            @endforeach
+                                                        @endisset
                                                         </tbody>
                                                     </table>
                                                 </div>
@@ -738,19 +1128,20 @@
                                     </div>
                                     @php
                                         $subServiceNames = [];
-                                        $services = ($serviceLine?->services !== null) ? json_decode($serviceLine->services, true) ?? [] : [];
-                                        $specializationServicesId = ($specializationService?->service_id !== null) ? json_decode($specializationService->service_id, true) ?? [] : [];
-                                        $specializationSubService = ($specializationService?->sub_services !== null) ? json_decode($specializationService->sub_services, true) ?? [] : [];
-                                        $specializationServiceRanges = ($specializationService?->ranges !== null) ? json_decode($specializationService?->ranges , true) ?? [] : [];
-                                        $servicesRanges =($serviceLine?->ranges !== null) ? json_decode($serviceLine->ranges, true) ?? [] : [];
-                //                                            dump($agencyClient->smallBusiness , $agencyClient->mediumBusiness , $agencyClient->enterprise );
-                //dump($specializationServiceRanges);
+                                        $services =   isset($serviceLine->services)? json_decode($serviceLine->services, true) : [];
+                                        $specializationServicesId =   isset($specializationService->service_id) ? json_decode($specializationService->service_id, true)  : [];
+                                        $specializationSubService =   isset($specializationService->sub_services) ? json_decode($specializationService->sub_services, true) ?? [] : [];
+                                        $specializationServiceRanges = isset($specializationService->ranges) ? json_decode($specializationService?->ranges , true) ?? [] : [];
+                                        $servicesRanges =isset($serviceLine?->range) ? json_decode($serviceLine->ranges, true) ?? [] : [];
+
                                     @endphp
-                                    @foreach($agencySubServices as $agencySubService )
-                                        @php
-                                            $subServiceNames[] = $agencySubService->sub_service_name;
-                                        @endphp
-                                    @endforeach
+                                    @isset($agencySubServices)
+                                        @foreach($agencySubServices as $agencySubService )
+                                            @php
+                                                $subServiceNames[] = $agencySubService->sub_service_name;
+                                            @endphp
+                                        @endforeach
+                                    @endisset
                                     <div class="tab-pane fade" id="pills-service" role="tabpanel"
                                          aria-labelledby="pills-service-tab" tabindex="0">
                                         <div class="row col-12">
@@ -783,51 +1174,53 @@
                                                     <p>Below is the full list of all the service lines available on
                                                         Instahirin</p>
                                                     <div class="accordion" id="accordionPanelsStayOpenExample">
-                                                        @foreach($agencyServices as $agencyService)
-                                                            <div class="accordion-item">
-                                                                <h2 class="accordion-header">
-                                                                    <button
-                                                                        class="accordion-button bg-dark text-white"
-                                                                        type="button" data-bs-toggle="collapse"
-                                                                        data-bs-target="#panelsStayOpen-collapseOne{{ $agencyService->id }}"
-                                                                        aria-expanded="true"
-                                                                        aria-controls="panelsStayOpen-collapseOne{{ $agencyService->id }}">
-                                                                        {{ $agencyService->service_name }}
-                                                                    </button>
-                                                                </h2>
-                                                                <div
-                                                                    id="panelsStayOpen-collapseOne{{ $agencyService->id }}"
-                                                                    class="accordion-collapse collapse show">
-                                                                    <div class="accordion-body">
-                                                                        <div class="container">
-                                                                            <div class="btn-group">
-                                                                                <div class="row">
-                                                                                    @foreach($agencySubServices as $agencySubService)
-                                                                                        @if($agencySubService->service_id == $agencyService->id)
-                                                                                            <div
-                                                                                                class="select sub-service">
-                                                                                                <input
-                                                                                                    type="checkbox"
-                                                                                                    name="service[]"
-                                                                                                    value="{{ $agencySubService->id }}"
-                                                                                                    id="item_{{ $agencySubService->id }}"
-                                                                                                    onchange="updateSelectedSubServices()"
-                                                                                                    {{ in_array($agencySubService->id, $services) ? 'checked' : '' }}>
-                                                                                                <label
-                                                                                                    class="btn btn-secondary text-dark button_select"
-                                                                                                    for="item_{{ $agencySubService->id }}">
-                                                                                                    {{ $agencySubService->sub_service_name }}
-                                                                                                </label>
-                                                                                            </div>
-                                                                                        @endif
-                                                                                    @endforeach
+                                                        @isset($agencyServices)
+                                                            @foreach($agencyServices as $agencyService)
+                                                                <div class="accordion-item">
+                                                                    <h2 class="accordion-header">
+                                                                        <button
+                                                                            class="accordion-button bg-dark text-white"
+                                                                            type="button" data-bs-toggle="collapse"
+                                                                            data-bs-target="#panelsStayOpen-collapseOne{{ $agencyService->id }}"
+                                                                            aria-expanded="true"
+                                                                            aria-controls="panelsStayOpen-collapseOne{{ $agencyService->id }}">
+                                                                            {{ $agencyService->service_name }}
+                                                                        </button>
+                                                                    </h2>
+                                                                    <div
+                                                                        id="panelsStayOpen-collapseOne{{ $agencyService->id }}"
+                                                                        class="accordion-collapse collapse show">
+                                                                        <div class="accordion-body">
+                                                                            <div class="container">
+                                                                                <div class="btn-group">
+                                                                                    <div class="row">
+                                                                                        @foreach($agencySubServices as $agencySubService)
+                                                                                            @if($agencySubService->service_id == $agencyService->id)
+                                                                                                <div
+                                                                                                    class="select sub-service">
+                                                                                                    <input
+                                                                                                        type="checkbox"
+                                                                                                        name="service[]"
+                                                                                                        value="{{ $agencySubService->id }}"
+                                                                                                        id="item_{{ $agencySubService->id }}"
+                                                                                                        onchange="updateSelectedSubServices()"
+                                                                                                        {{ in_array($agencySubService->id, $services) ? 'checked' : '' }}>
+                                                                                                    <label
+                                                                                                        class="btn btn-secondary text-dark button_select"
+                                                                                                        for="item_{{ $agencySubService->id }}">
+                                                                                                        {{ $agencySubService->sub_service_name }}
+                                                                                                    </label>
+                                                                                                </div>
+                                                                                            @endif
+                                                                                        @endforeach
+                                                                                    </div>
                                                                                 </div>
                                                                             </div>
                                                                         </div>
                                                                     </div>
                                                                 </div>
-                                                            </div>
-                                                        @endforeach
+                                                            @endforeach
+                                                        @endisset
                                                     </div>
                                                 </div>
                                                 <div class="col-6">
@@ -1362,10 +1755,12 @@
                                                                     aria-label="Default select example"
                                                                     onchange="populateSubServices()">
                                                                 <option selected disabled>Select a service</option>
-                                                                @foreach($agencyServices as $agencyService)
-                                                                    <option value="{{ $agencyService->id }}"
-                                                                            @if($agencyService->id == $specializationServicesId) selected @endif>{{ $agencyService->service_name }}</option>
-                                                                @endforeach
+                                                                @isset($agencyServices)
+                                                                    @foreach($agencyServices as $agencyService)
+                                                                        <option value="{{ $agencyService->id }}"
+                                                                                @if($agencyService->id == $specializationServicesId) selected @endif>{{ $agencyService->service_name }}</option>
+                                                                    @endforeach
+                                                                @endisset
                                                             </select>
                                                             <div id="subServicesContainer">
                                                                 <!-- Sub-services checkboxes will be dynamically populated here -->
@@ -1622,7 +2017,7 @@
                             const response = await fetch('https://restcountries.com/v3.1/all');
                             const countries = await response.json();
                             const countryDropdown = document.getElementById('Country' + agencyLocationId);
-                            const existingCountry = "{{ $agencyLocation->country }}";
+                            const existingCountry = "{{!! isset($agencyLocation) && isset($agencyLocation->country) ? $agencyLocation->country : '' }}";
 
                             countries.forEach(country => {
                                 const option = document.createElement('option');
@@ -1647,7 +2042,7 @@
                     async function fetchModalCities(agencyLocationId) {
                         const countryDropdown = document.getElementById('Country' + agencyLocationId);
                         const cityDropdown = document.getElementById('city' + agencyLocationId);
-                        const existingCity = "{{ $agencyLocation->city }}";
+                        const existingCity = "{{ !! isset($agencyLocation) && isset($agencyLocation->city) ? $agencyLocation->city : '' }}";
 
                         const countryName = countryDropdown.value;
                         const countryCodeInput = document.getElementById('countryCode' + agencyLocationId);
@@ -1749,9 +2144,11 @@
                     }
 
                     fetchCountries();
+                    @isset($agencyServices)
                     @foreach($agencyLocations as $agencyLocation)
                     fetchModalCountries('{{ $agencyLocation->id }}');
                     @endforeach
+                    @endisset
 
                     function updateLabel() {
                         var typeSelect = document.getElementById("type");
@@ -1970,21 +2367,7 @@
                             $('#editPortfolioModal' + id).modal('show');
                         });
                     });
-                </script>
-                <script>
-                    fetch('https://api.exchangerate-api.com/v4/latest/USD')
-                        .then(response => response.json())
-                        .then(data => {
-                            const currencyDropdown = document.getElementById('currency');
-                            for (const currency in data.rates) {
-                                const option = document.createElement('option');
-                                option.text = currency;
-                                currencyDropdown.add(option);
-                            }
-                        })
-                        .catch(error => console.error('Error fetching currencies:', error));
-                </script>
-                <script>
+
                     // Function to update range value display
                     function updateRangeValue(subServiceId) {
                         var rangeInput = document.getElementById("customRange_" + subServiceId);
@@ -2219,7 +2602,7 @@
                         var selectedServiceId = serviceSelect.value;
 
                         var specializationServiceRanges = <?php echo json_encode($specializationServiceRanges); ?>;
-                        var subServices = <?php echo json_encode($agencySubServices); ?>;
+                        var subServices = <?php echo json_encode($agencySubServices) ?>;
 
                         var subServicesContainer = document.getElementById("subServicesContainer");
                         subServicesContainer.innerHTML = "";

@@ -21,6 +21,7 @@ return new class extends Migration {
             $table->string('total_employee');
             $table->string('descriptions');
             $table->string('project_size');
+            $table->string('currency');
             $table->string('project_rate');
             $table->foreignId('user_id')->constrained('users');
             $table->timestamps();

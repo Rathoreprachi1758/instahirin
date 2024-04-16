@@ -93,7 +93,7 @@ Route::middleware(['middleware' => 'auth.check'])->group(function () {
 
     //activity-agency-contractor
     Route::get('agency-contractor', [AgencyContractor::class, 'agencyContractor'])->name('agencyContractor');
-    Route::post('agency-contractor-company', [AgencyContractor::class, 'companyDetails'])->name('companyDetails');
+    Route::post('agency-contractor-company', [AgencyContractor::class, 'companyDetailsSubmit'])->name('companyDetailsSubmit');
     Route::post('agency-contractor-location', [AgencyContractor::class, 'agencyLocationSubmit'])->name('agencyLocationSubmit');
     Route::post('certification-form', [AgencyContractor::class, 'certificationsForm'])->name('certificationsForm');
     Route::post('edit-delete-certificates', [AgencyContractor::class, 'editOrDeleteCertificates'])->name('editOrDeleteCertificates');
@@ -105,6 +105,7 @@ Route::middleware(['middleware' => 'auth.check'])->group(function () {
     Route::post('/specialization-services', [AgencyContractor::class, 'specializationSubmit'])->name('specializationSubmit');
     Route::post('/client-update', [AgencyContractor::class, 'clientUpdate'])->name('clientUpdate');
     Route::get('/agency-locations/delete/{id}',  [AgencyContractor::class, 'deleteAgencyLocation'])->name('deleteAgencyLocation');
+    Route::get('/agency-company-delete/delete/{id}',  [AgencyContractor::class, 'deleteCompanyDetail'])->name('deleteCompanyDetail');
 
 
     //

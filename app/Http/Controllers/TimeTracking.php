@@ -610,7 +610,6 @@ class TimeTracking extends Controller
             $employees = Employee::where('user_id', Auth::id())->get();
             $leaveTypes = Leave::whereIn('company_id', $companiesId)->get();
         }
-
         if ($employee_code != null && $companyId != null && $from != null && $to != null) {
             $leaveRequest->where('employee_code', $employee_code)
                 ->where('company_id', $companyId)
