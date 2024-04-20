@@ -20,7 +20,6 @@ use Illuminate\Contracts\View\Factory;
 use Illuminate\Contracts\View\View;
 use Illuminate\Http\RedirectResponse;
 use Illuminate\Http\Request;
-use Illuminate\Support\Facades\File;
 
 class profileController extends Controller
 {
@@ -124,7 +123,6 @@ class profileController extends Controller
      */
     public function kyc_submit(Request $request)
     {
-
         if (isset($request->individual)) {
             $request->validate([
                 'dob' => 'required',
@@ -168,8 +166,19 @@ class profileController extends Controller
                 'agrement_checkbox' => 'required',
             ]);
         }
-
         if (isset($request->individual)) {
+
+            $uploadFields = [
+                'Scanned_passport',
+                'back_side_copy',
+                'address_proof_copy',
+                'Trade_licence',
+                'other_doc',
+                'FATCA',
+                'w_8BEN_form',
+                'customer_compliance',
+            ];
+
             $kyc_info = new CompanyKycInformation;
             $kyc_info->dob = Carbon::createFromFormat('d-m-Y', $request->dob)->format('Y-m-d');
             $kyc_info->complete_address = $request->complete_address;
@@ -189,8 +198,12 @@ class profileController extends Controller
             $uploadFolder = 'Kyc_info/' . auth()->user()->email;
             $kyc_info->User_id = Auth::id();
 
+        }
+        if (isset($request->company)) {
+
             $uploadFields = [
                 'Scanned_passport',
+                'scanned_Id',
                 'back_side_copy',
                 'address_proof_copy',
                 'Trade_licence',
@@ -200,17 +213,6 @@ class profileController extends Controller
                 'customer_compliance',
             ];
 
-            foreach ($uploadFields as $field) {
-                if ($request->hasFile($field)) {
-                    $file = $request->file($field);
-                    $filename = $uploadFolder . '/' . time() . '_' . $file->getClientOriginalName();
-                    $file->move('storage/Kyc_info/' . auth()->user()->email, $filename);
-                    $kyc_info->{$field} = $filename;
-                }
-                // print_r($field);
-            }
-        }
-        if (isset($request->company)) {
             $kyc_info = new CompanyKycInformation;
             $kyc_info->Company_Name = $request->Company_Name;
             $kyc_info->User_id = Auth::id();
@@ -230,27 +232,23 @@ class profileController extends Controller
             $kyc_info->agrement_checkbox = $request->agrement_checkbox;
             $uploadFolder = 'Kyc_info/' . auth()->user()->email;
 
-            $uploadFields = [
-                'Scanned_passport',
-                'back_side_copy',
-                'address_proof_copy',
-                'Trade_licence',
-                'other_doc',
-                'FATCA',
-                'w_8BEN_form',
-                'customer_compliance',
-            ];
 
-            foreach ($uploadFields as $field) {
-                if ($request->hasFile($field)) {
-                    $file = $request->file($field);
-                    $filename = $uploadFolder . '/' . time() . '_' . $file->getClientOriginalName();
-                    $file->move('storage/Kyc_info/' . auth()->user()->email, $filename);
-                    $kyc_info->{$field} = $filename;
-                }
-                // print_r($field);
-            }
         }
+
+
+        foreach ($uploadFields as $field) {
+
+            if ($request->hasFile($field)) {
+//                dump($field);
+
+                $file = $request->file($field);
+                $filename = $uploadFolder . '/' . time() . '_' . $file->getClientOriginalName();
+                $file->move('storage/Kyc_info/' . auth()->user()->email, $filename);
+                $kyc_info->{$field} = $filename;
+            }
+            // print_r($field);
+        }
+//        dd($kyc_info);
 
         $kyc_info->save();
         return redirect()->back()->with('kyc_msg', ' KYC Request has been updated!');
