@@ -45,7 +45,7 @@ class MailNotify extends Mailable
     /**
      * Get the attachments for the message.
      *
-     * @return array<int, \Illuminate\Mail\Mailables\Attachment>
+     * @return MailNotify
      */
     // public function attachments(): array
     // {
@@ -57,7 +57,7 @@ class MailNotify extends Mailable
                     //  ->from('')
                     // ->attachFromStorage('Pictures/download1.jpg')
                     ->view('mailsample',['data'=>$this->data]);
-          
-           
+
+
     }
 }

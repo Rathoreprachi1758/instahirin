@@ -2,6 +2,8 @@
 
 namespace App\Http\Controllers;
 
+use App\Events\KycSubmitNotification;
+use App\Events\KycUpdateNotifications;
 use App\Models\CompanyKycInformation;
 use App\Models\Country;
 use App\Models\Creditrequest;
@@ -123,6 +125,7 @@ class profileController extends Controller
      */
     public function kyc_submit(Request $request)
     {
+        event(new KycUpdateNotifications());
         if (isset($request->individual)) {
             $request->validate([
                 'dob' => 'required',
@@ -251,6 +254,8 @@ class profileController extends Controller
 //        dd($kyc_info);
 
         $kyc_info->save();
+        event(new KycSubmitNotification($kyc_info));
+
         return redirect()->back()->with('kyc_msg', ' KYC Request has been updated!');
     }
 

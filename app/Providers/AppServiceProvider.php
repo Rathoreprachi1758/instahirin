@@ -2,9 +2,12 @@
 
 namespace App\Providers;
 
+use App\Events\KycSubmitNotification as KycSubmitEvent;
+use App\Events\KycUpdateNotifications;
+use App\Listeners\KycSubmitNotification;
 use Illuminate\Support\Facades\Blade;
+use Illuminate\Support\Facades\Event;
 use Illuminate\Support\ServiceProvider;
-use Illuminate\Support\Str;
 
 class AppServiceProvider extends ServiceProvider
 {
@@ -29,5 +32,13 @@ class AppServiceProvider extends ServiceProvider
         // if(config('app.env') === 'local') {
         //     \URL::forceScheme('https');
         // }
+//        Event::listen(
+//            KycSubmitEvent::class,
+
+//            KycSubmitNotification::class,
+//        );
+
+        Event::subscribe(KycSubmitNotification::class);
     }
+
 }
