@@ -3,7 +3,6 @@
 namespace App\Http\Controllers;
 
 use App\Events\KycSubmitNotification;
-use App\Events\KycUpdateNotifications;
 use App\Models\CompanyKycInformation;
 use App\Models\Country;
 use App\Models\Creditrequest;
@@ -109,7 +108,8 @@ class profileController extends Controller
     public function userInfo()
     {
         $kyc = $this->getKycInfo();
-        return view('dashboard.kyc_info', compact('kyc'));
+        $countries = Country::all();
+        return view('dashboard.kyc_info', compact('kyc', 'countries'));
     }
 
 
@@ -125,7 +125,7 @@ class profileController extends Controller
      */
     public function kyc_submit(Request $request)
     {
-        event(new KycUpdateNotifications());
+//        event(new KycUpdateNotifications());
         if (isset($request->individual)) {
             $request->validate([
                 'dob' => 'required',
@@ -134,8 +134,6 @@ class profileController extends Controller
                 'p_o_Box' => 'required',
                 'country' => 'required',
                 'city' => 'required',
-                'date_id_passport' => 'required',
-                'passport_id_no' => 'required',
                 'individual_sanctionedcountries' => 'required',
                 'individual_presencein_sanctioned_Country' => 'required',
                 'individual_any_service_provided_in_sactioned_country' => 'required',
@@ -159,8 +157,6 @@ class profileController extends Controller
                 'any_service_provided_in_sactioned_country' => 'required',
                 'Scanned_passport' => 'required|image|mimes:jpeg,png,jpg,gif',
                 'resident_citizen' => 'required',
-                'back_side_copy' => 'required|image|mimes:jpeg,png,jpg,gif',
-                'address_proof_copy' => 'required|image|mimes:jpeg,png,jpg,gif',
                 'Trade_licence' => 'required|image|mimes:jpeg,png,jpg,gif',
                 'other_doc' => 'required|image|mimes:jpeg,png,jpg,gif',
                 'FATCA' => 'required|image|mimes:jpeg,png,jpg,gif',
@@ -188,8 +184,10 @@ class profileController extends Controller
             $kyc_info->p_o_Box = $request->p_o_Box;
             $kyc_info->country = $request->country;
             $kyc_info->city = $request->city;
-            $kyc_info->passport_id_no = $request->passport_id_no;
-            $kyc_info->date_id_passport = Carbon::createFromFormat('d-m-Y', $request->date_id_passport)->format('Y-m-d');
+            $kyc_info->first_name = $request->first_name;
+            $kyc_info->last_name = $request->last_name;
+            $kyc_info->country_code = '+' . $request->country_code;
+            $kyc_info->phone = $request->phone;
             $kyc_info->kyc_for = $request->individual;
             $kyc_info->nationality = $request->individual_nationality;
             $kyc_info->tax_identification_number = $request->tax_identification_number;
@@ -207,16 +205,17 @@ class profileController extends Controller
             $uploadFields = [
                 'Scanned_passport',
                 'scanned_Id',
-                'back_side_copy',
-                'address_proof_copy',
                 'Trade_licence',
                 'other_doc',
                 'FATCA',
                 'w_8BEN_form',
                 'customer_compliance',
             ];
-
-            $kyc_info = new CompanyKycInformation;
+            if ($this->getKycInfo() == null) {
+                $kyc_info = new CompanyKycInformation;
+            } else {
+                $kyc_info = $this->getKycInfo();
+            }
             $kyc_info->Company_Name = $request->Company_Name;
             $kyc_info->User_id = Auth::id();
             $kyc_info->Licence_number = $request->Licence_number;
@@ -225,7 +224,7 @@ class profileController extends Controller
             $kyc_info->Company_address_line1 = $request->Company_address_line1;
             $kyc_info->Company_address_line2 = $request->Company_address_line2;
             $kyc_info->beneficiary_owner = $request->beneficiary_owner;
-            $kyc_info->nationality = $request->nationality;
+            $kyc_info->nationality = $request->company_nationality;
             $kyc_info->kyc_for = $request->company;
             $kyc_info->tax_identification_number = $request->tax_identification_number;
             $kyc_info->sanctionedcountries = $request->sanctionedcountries;
@@ -234,24 +233,16 @@ class profileController extends Controller
             $kyc_info->resident_citizen = $request->resident_citizen;
             $kyc_info->agrement_checkbox = $request->agrement_checkbox;
             $uploadFolder = 'Kyc_info/' . auth()->user()->email;
-
-
         }
 
-
         foreach ($uploadFields as $field) {
-
             if ($request->hasFile($field)) {
-//                dump($field);
-
                 $file = $request->file($field);
                 $filename = $uploadFolder . '/' . time() . '_' . $file->getClientOriginalName();
                 $file->move('storage/Kyc_info/' . auth()->user()->email, $filename);
                 $kyc_info->{$field} = $filename;
             }
-            // print_r($field);
         }
-//        dd($kyc_info);
 
         $kyc_info->save();
         event(new KycSubmitNotification($kyc_info));

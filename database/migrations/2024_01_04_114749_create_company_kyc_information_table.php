@@ -14,6 +14,10 @@ return new class extends Migration
         Schema::create('company_kyc_information', function (Blueprint $table) {
             $table->id();
             $table->string('Company_Name')->nullable();
+            $table->string('first_name')->nullable();
+            $table->string('last_name')->nullable();
+            $table->string('country_code')->nullable();
+            $table->string('phone')->nullable();
             $table->unsignedBigInteger('User_id');
             $table->foreign('User_id')->references('id')->on('users')->onDelete('cascade');
             $table->string('Licence_number')->nullable();
@@ -26,17 +30,14 @@ return new class extends Migration
             $table->string('city')->nullable();
             $table->string('country')->nullable();
             $table->string('kyc_for');
-            $table->string('passport_id_no')->nullable();
             $table->string('p_o_Box')->nullable();
             $table->string('complete_address')->nullable();
             $table->date('dob')->nullable();
-            $table->date('date_id_passport')->nullable();
             $table->string('tax_identification_number')->nullable();
             $table->string('sanctionedcountries');
             $table->string('subsidiary_office_sanctioned_Country');
             $table->string('any_service_provided_in_sactioned_country');
             $table->string('Scanned_passport')->nullable();
-            $table->string('scanned_Id')->nullable();
             $table->string('resident_citizen')->nullable();
             $table->string('address_proof_copy')->nullable();
             $table->string('Trade_licence')->nullable();
