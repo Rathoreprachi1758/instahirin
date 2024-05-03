@@ -13,8 +13,10 @@
         "laravel/framework": "^10.10",
         "laravel/nova": "~4.0",
         "laravel/sanctum": "^3.2",
+        "laravel/socialite": "^5.13",
         "laravel/tinker": "^2.8",
         "laravel/ui": "^4.2",
+        "lcobucci/jwt": "^4.0",
         "outl1ne/nova-menu-builder": "^7.1",
         "outl1ne/nova-sortable": "^3.4",
         "realrashid/sweet-alert": "^7.1",
@@ -79,5 +81,5 @@
             "url": "https://nova.laravel.com"
         }
     }
-    
+
 }

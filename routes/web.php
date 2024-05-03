@@ -13,6 +13,7 @@ use App\Http\Controllers\Logincontroller;
 use App\Http\Controllers\MasterController;
 use App\Http\Controllers\profileController;
 use App\Http\Controllers\shift_masterController;
+use App\Http\Controllers\SocialLoginController;
 use App\Http\Controllers\TimeTracking;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Route;
@@ -35,6 +36,16 @@ Route::get('sitemap.xml', function () {
 Route::get('/get-sign-Up', [Logincontroller::class, 'index'])->name('signin');
 Route::Post('signin', [Logincontroller::class, 'store'])->name('submit.signup');
 Route::get('/loginpage', [LoginController::class, 'login'])->name('loginpage');
+Route::get('/social-google-login', [SocialLoginController::class, 'googleLogin'])->name('googleLogin');
+Route::get('/social-google-callback', [SocialLoginController::class, 'callBack'])->name('callBack');
+Route::get('/social-linkedin-login', [SocialLoginController::class, 'linkedinLogin'])->name('linkedinLogin');
+Route::get('/social-linkedin-callback', [SocialLoginController::class, 'linkedinCallBack'])->name('linkedinCallBack');
+Route::get('/social-github-login', [SocialLoginController::class, 'githubLogin'])->name('githubLogin');
+Route::get('/social-github-callback', [SocialLoginController::class, 'githubCallBack'])->name('githubCallBack');
+//Route::get('/social-apple-login', [SocialLoginController::class, 'appleLogin'])->name('appleLogin');
+Route::get('/apple-callback', [SocialLoginController::class, 'appleCallBack'])->name('appleCallBack');
+
+
 // Route::post('login', [LoginController::class, 'authenticate'])->name('login');
 Route::post('dashboard', [LoginController::class, 'authenticate'])->name('logino');
 //Route::get('profile', [ProfileController::class, 'index']);
