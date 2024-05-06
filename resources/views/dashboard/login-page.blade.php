@@ -170,6 +170,7 @@
 @php
     $baseUrl = 'https://' . $_SERVER['HTTP_HOST'] . '/';
 @endphp
+
 <script src="js/myscript.js"></script>
 <script src="js/merge_script.js"></script>
 <!-- bootstrap -->
