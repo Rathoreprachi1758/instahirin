@@ -93,9 +93,8 @@ class SocialLoginController extends Controller
     {
         try {
             $githubUser = Socialite::driver('github')->user();
-//            dd($githubUser);
         } catch (\Exception $e) {
-            return redirect('/loginpage')->with('error', 'Google authentication failed.');
+            return redirect('/loginpage')->with('error', 'Github authentication failed.');
         }
         $existingUser = User::where('email', $githubUser->email)->first();
         if ($existingUser) {

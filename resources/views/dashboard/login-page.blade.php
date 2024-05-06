@@ -136,7 +136,7 @@
                 </div>
                 <div class="authentication-button" style="display: flex; flex-direction: column">
                     <a href="{{route('googleLogin')}}" class="btn btn-info" role="button">Login with google</a><br>
-                    <a href="{{route('linkedinLogin')}}" class="btn btn-info" role="button">Login with Linkedin</a><br>
+{{--                    <a href="{{route('linkedinLogin')}}" class="btn btn-info" role="button">Login with Linkedin</a><br>--}}
                     <a href="{{route('githubLogin')}}" class="btn btn-info" role="button">Login with Github</a><br>
                     <div class='appleSignIn' style="padding: 3px 79px;width: 387px;height: 41px;">
                         <div id="appleid-signin" data-color="black" data-border="true" data-type="sign in"></div>
@@ -199,7 +199,7 @@
     AppleID.auth.init({
         clientId: 'com.instahirin',
         scope: 'name email',
-        redirectURI: 'https://instahirin.test/apple-callback',
+        redirectURI: 'https://demo.instahirin.com/apple-callback',
         state: generateCSRFToken(),
         nonce: generateNonce(),
         usePopup : true
@@ -222,7 +222,7 @@
         const detailData = JSON.stringify(event.detail);
 
         // Construct redirect URL with query parameter for the event.detail data
-        const redirectUrl = `https://instahirin.test/apple-callback?detailData=${encodeURIComponent(detailData)}`;
+        const redirectUrl = `https://demo.instahirin.com/apple-callback?detailData=${encodeURIComponent(detailData)}`;
 
         // Redirect user to the constructed URL
         window.location.href = redirectUrl;
