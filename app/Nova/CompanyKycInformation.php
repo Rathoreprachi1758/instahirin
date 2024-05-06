@@ -2,9 +2,8 @@
 
 namespace App\Nova;
 
+use App\Events\KycUpdateNotifications;
 use Illuminate\Http\Request;
-use Illuminate\Support\Facades\Storage;
-use Laravel\Nova\Actions\Action;
 use Laravel\Nova\Fields\Date;
 use Laravel\Nova\Fields\ID;
 use Laravel\Nova\Fields\Image;
@@ -37,6 +36,13 @@ class CompanyKycInformation extends Resource
         'id',
     ];
 
+    public static function authorizedToCreate(Request $request): bool
+    {
+        // Implement your authorization logic here.
+        // For example, you may check if the user has certain permissions.
+        return false; // Return false to deny creating new instances.
+    }
+
     /**
      * Get the fields displayed by the resource.
      *
@@ -68,7 +74,6 @@ class CompanyKycInformation extends Resource
             Text::make('Subsidiary Office Or Presence In Sanctioned Country?', 'subsidiary_office_sanctioned_Country')->onlyOnDetail(),
             Text::make('Any Service Provided In Sactioned Country?', 'any_service_provided_in_sactioned_country')->onlyOnDetail(),
             Image::make('Scanned Passport', 'Scanned_passport'),
-            Image::make('Scanned Id', 'scanned_Id')->disk('public')->path('/Kyc_info/' . auth()->user()->email)->onlyOnDetail(),
             Image::make('Trade Licence', 'Trade_licence')->onlyOnDetail(),
             Image::make('Beneficiary Owner', 'other_doc')->onlyOnDetail(),
             Image::make('FATCA', 'FATCA')->onlyOnDetail(),
@@ -76,7 +81,9 @@ class CompanyKycInformation extends Resource
             Image::make('Customer Compliance', 'customer_compliance'),
             Text::make('Agreement Checkbox', 'agrement_checkbox')->onlyOnDetail(),
             Select::make('Action', 'is_approved')->options(['approved' => 'Approve', 'rejected' => 'Reject',])->displayUsingLabels()->rules('required'),
+
         ];
+
     }
 
     /**
@@ -87,6 +94,7 @@ class CompanyKycInformation extends Resource
      */
     public function cards(NovaRequest $request)
     {
+
         return [];
     }
 
@@ -109,6 +117,7 @@ class CompanyKycInformation extends Resource
      */
     public function lenses(NovaRequest $request)
     {
+
         return [];
     }
 
@@ -123,16 +132,10 @@ class CompanyKycInformation extends Resource
         return [];
     }
 
-    public static function authorizedToCreate(Request $request): bool
-    {
-        // Implement your authorization logic here.
-        // For example, you may check if the user has certain permissions.
-        return false; // Return false to deny creating new instances.
-    }
     /**
      * Determine if the current user can delete the resource.
      *
-     * @param  \Illuminate\Http\Request  $request
+     * @param \Illuminate\Http\Request $request
      * @return bool
      */
     public function authorizedToDelete(Request $request)
@@ -141,11 +144,35 @@ class CompanyKycInformation extends Resource
         // For example, check if the user has a specific role or permission.
         return false; // Return false to deny delete action.
     }
+
     public function authorizedToReplicate(Request $request)
     {
         // Implement your authorization logic here.
         // For example, check if the user has a specific role or permission.
         return false; // Return false to deny delete action.
     }
-}
 
+    /**
+     * Boot the resource.
+     *
+     * @return void
+     */
+    public static function boot()
+    {
+        parent::boot();
+
+        // Observer for field changes
+        self::updating(function ($model) {
+            // Check if 'is_approved' field is being updated
+            if ($model->isDirty('is_approved')) {
+                $originalApproved = $model->getOriginal('is_approved');
+                $newApproved = $model->is_approved;
+
+                if ($originalApproved !== $newApproved) {
+                    // Dispatch the custom event when 'is_approved' is updated
+                    event(new KycUpdateNotifications($model));
+                }
+            }
+        });
+    }
+}

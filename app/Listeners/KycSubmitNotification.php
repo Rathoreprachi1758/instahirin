@@ -27,15 +27,14 @@ class KycSubmitNotification
 //    }
 
 
-
     public function kycSubmit(KycSubmitEvent $event): void
     {
         Mail::to('khanallama@gmail.com')->send(new \App\Mail\KycSubmitNotification());
-        dd($event);
     }
 
-    public function KycStatusUpdate(KycUpdateNotifications $event): void {
-dump('hello');
+    public function KycStatusUpdate(KycUpdateNotifications $event): void
+    {
+        dd($event);
     }
 
     /**
