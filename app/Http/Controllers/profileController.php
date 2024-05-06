@@ -109,7 +109,8 @@ class profileController extends Controller
     {
         $kyc = $this->getKycInfo();
         $countries = Country::all();
-        return view('dashboard.kyc_info', compact('kyc', 'countries'));
+        $user = User::find(Auth::id());
+        return view('dashboard.kyc_info', compact('kyc', 'countries', 'user'));
     }
 
 
