@@ -17,7 +17,7 @@ return [
     'google' => [
         'client_id' => '969738769103-5pr9h954os280esiepjgdnffvcbh200d.apps.googleusercontent.com',
         'client_secret' => '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',
-        'redirect' => 'http://127.0.0.1:8000/social-google-callback'
+        'redirect' => 'https://demo.instahirin.com/social-google-callback'
 
     ],
 
