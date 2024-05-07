@@ -2,6 +2,8 @@
 
 use Illuminate\Support\Facades\Facade;
 use Illuminate\Support\ServiceProvider;
+//use SocialiteProviders\Manager\ServiceProvider;
+
 
 return [
 
@@ -170,6 +172,7 @@ return [
         App\Providers\NovaServiceProvider::class,
         App\Providers\RouteServiceProvider::class,
         RealRashid\SweetAlert\SweetAlertServiceProvider::class,
+//        SocialiteProviders\Manager\ServiceProvider::class,
     ])->toArray(),
 
     /*
