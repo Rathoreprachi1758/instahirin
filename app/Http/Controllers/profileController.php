@@ -126,7 +126,7 @@ class profileController extends Controller
      */
     public function kyc_submit(Request $request)
     {
-//        event(new KycUpdateNotifications());
+//        event(new KycSubmitNotification());
         if (isset($request->individual)) {
             $request->validate([
                 'dob' => 'required',
@@ -244,9 +244,8 @@ class profileController extends Controller
                 $kyc_info->{$field} = $filename;
             }
         }
-
+     event(new KycSubmitNotification($kyc_info));
         $kyc_info->save();
-        event(new KycSubmitNotification($kyc_info));
 
         return redirect()->back()->with('kyc_msg', ' KYC Request has been updated!');
     }

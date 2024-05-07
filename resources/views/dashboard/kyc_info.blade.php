@@ -83,6 +83,10 @@
                         <div class="alert alert-danger">
                             <span style="margin-left:330px">Kyc Rejected</span>
                         </div>
+                    @elseif($kyc == null)
+                        <div class="alert alert-danger">
+                            <span>Please complete the KYC form to access all the products and services on the Instahirin platform.</span>
+                        </div>
                     @endif
 
 
@@ -221,10 +225,12 @@
                                     <div class="col-xxl-6 col-xl-6 col-lg-6 col-md-12">
                                         <div class="kycForm_field">
                                             <strong>Country Code</strong>
-                                            <select class="form-select small-select" name="country_code" id="countryCode">
+                                            <select class="form-select small-select" name="country_code"
+                                                    id="countryCode">
                                                 <option disabled>Country Code</option>
                                                 @foreach($countries as $country)
-                                                    <option value="{{ $country->phone }}" @if($user->country_code == $country->phone) selected @endif>
+                                                    <option value="{{ $country->phone }}"
+                                                            @if($user->country_code == $country->phone) selected @endif>
                                                         {{ $country->phone }}
                                                     </option>
                                                 @endforeach
@@ -238,7 +244,8 @@
                                         <div class="kycForm_field">
                                             <strong>Phone Number</strong>
                                             <input type="number" name="phone" class="form-control"
-                                                   id="inputNumber" placeholder="Phone Number" value="{{$user?->mobilenumber}}">
+                                                   id="inputNumber" placeholder="Phone Number"
+                                                   value="{{$user?->mobilenumber}}">
                                             @error('phone')
                                             <div class="text-danger">{{ $message }}</div>
                                             @enderror
@@ -496,7 +503,7 @@
                                         <div class="auth_text">
                                             <p>
                                                 <label class="checkbox-label">
-                                                    <input type="checkbox" name="agrement_checkbox"
+                                                    <input type="checkbox" name="individual_agrement_checkbox"
                                                            value="1" {{ $kyc?->agrement_checkbox ? 'checked' : '' }}/>
                                                     <span class="checkbox-custom rectangular"></span>
                                                 </label>

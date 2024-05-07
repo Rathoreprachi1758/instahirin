@@ -3,7 +3,6 @@
 namespace App\Mail;
 
 use Illuminate\Bus\Queueable;
-use Illuminate\Contracts\Queue\ShouldQueue;
 use Illuminate\Mail\Mailable;
 use Illuminate\Mail\Mailables\Content;
 use Illuminate\Mail\Mailables\Envelope;
@@ -16,9 +15,8 @@ class KycSubmitNotification extends Mailable
     /**
      * Create a new message instance.
      */
-    public function __construct()
+    public function __construct(public $kycData)
     {
-        //
     }
 
     /**
@@ -27,7 +25,7 @@ class KycSubmitNotification extends Mailable
     public function envelope(): Envelope
     {
         return new Envelope(
-            subject: 'Kyc Submit Notification',
+            subject: 'Your KYC Application Has Been Submitted',
         );
     }
 
@@ -38,6 +36,9 @@ class KycSubmitNotification extends Mailable
     {
         return new Content(
             view: 'dashboard.kyc_notification',
+            with: [
+                'kycData' => $this->kycData,
+            ],
         );
     }
 
