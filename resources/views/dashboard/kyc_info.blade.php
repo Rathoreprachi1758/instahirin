@@ -1214,7 +1214,6 @@
         }
     }
 
-
     // Call the function with the existing nationality value from PHP
     const existingNationality = "{{ $user?->nationality }}";
     fetchIndividualNationality(existingNationality);
