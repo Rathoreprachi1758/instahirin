@@ -33,9 +33,77 @@
                         <li><a href="{{url('InstaProject/My-Projects')}}">My Project</a></li>
                         <li><a href="{{url('InstaProject/My-Project-Bid')}}">My Project Bids</a></li>
                         <li><a href="{{url('InstaProject/Post-Review')}}">Post Review</a></li>
-                        <li><a href="{{url('InstaProject/My-Review')}}" class="active">My Review</a></li>
+                        <li><a href="{{url('InstaProject/My-Review')}}" class="active">My Reviews</a></li>
                     </ul>
                 </div>
+                <div class="row col-12 mt-5">
+                    @foreach($instaProjectReviews as $instaProjectReview)
+                        <div class="col-4">
+                            <div class="card" style="width: 18rem;">
+                                <div class="card-header">
+                                    {{$instaProjectReview->company->company_name}}
+                                </div>
+                                <ul class="list-group list-group-flush">
+                                    <li class="list-group-item">Quality of service and deliverable:
+                                        @for ($i = 1; $i <= 5; $i++)
+                                            @if ($i <= $instaProjectReview->quality_deliverable_rating)
+                                                <i class="fa fa-star"></i>
+                                            @elseif ($i - 0.5 == $instaProjectReview->quality_deliverable_rating)
+                                                <i class="fa fa-star-half"></i>
+                                            @else
+                                                <i class="fa fa-star-o"></i>
+                                            @endif
+                                        @endfor
+                                    </li>
+
+                                    <li class="list-group-item">Cost and value of money:
+                                        @for ($i = 1; $i <= 5; $i++)
+                                            @if ($i <= $instaProjectReview->cost_value_rating)
+                                                <i class="fa fa-star"></i>
+                                            @elseif ($i - 0.5 == $instaProjectReview->cost_value_rating)
+                                                <i class="fa fa-star-half"></i>
+                                            @else
+                                                <i class="fa fa-star-o"></i>
+                                            @endif
+                                        @endfor
+                                    </li>
+
+                                    <li class="list-group-item">Timelines and marketing deadlines:
+                                        @for ($i = 1; $i <= 5; $i++)
+                                            @if ($i <= $instaProjectReview->time_lines_marketing_rating)
+                                                <i class="fa fa-star"></i>
+                                            @elseif ($i - 0.5 == $instaProjectReview->time_lines_marketing_rating)
+                                                <i class="fa fa-star-half"></i>
+                                            @else
+                                                <i class="fa fa-star-o"></i>
+                                            @endif
+                                        @endfor
+                                    </li>
+
+                                    <li class="list-group-item">Overall experience:
+                                        @php
+                                            $overall_rating = $instaProjectReview->over_all_rating;
+                                            $full_stars = floor($overall_rating);
+                                            $half_star = ($overall_rating - $full_stars) >= 0.5 ? true : false;
+                                        @endphp
+                                        @for ($i = 1; $i <= 5; $i++)
+                                            @if ($i <= $full_stars)
+                                                <i class="fa fa-star"></i>
+                                            @elseif ($half_star && $i - 0.5 == $full_stars)
+                                                <i class="fa fa-star-half"></i>
+                                            @else
+                                                <i class="fa fa-star-o"></i>
+                                            @endif
+                                        @endfor
+                                        {{ $overall_rating }}
+                                    </li>
+                                </ul>
+
+                            </div>
+                        </div>
+                    @endforeach
+                </div>
+
                 @if (Session::has('message'))
                     <div class="alert alert-success" style="margin-top: 12px;" id="success-message">
                         <span style="margin-left:330px">{{ Session::get('message') }}</span>

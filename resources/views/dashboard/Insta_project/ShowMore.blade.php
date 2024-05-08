@@ -44,7 +44,7 @@
                         <li><a href="{{ url('InstaProject/My-Projects') }}" class="active">My Project</a></li>
                         <li><a href="{{ url('InstaProject/My-Project-Bid') }}">My Project Bids</a></li>
                         <li><a href="{{ url('InstaProject/Post-Review') }}">Post Review</a></li>
-                        <li><a href="{{ url('InstaProject/My-Review') }}">My Review</a></li>
+                        <li><a href="{{ url('InstaProject/My-Review') }}">My Reviews</a></li>
                     </ul>
                 </div>
                 @if (Session::has('message'))

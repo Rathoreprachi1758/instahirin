@@ -2,7 +2,10 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Company;
+use App\Models\InstaProjectReview;
 use Auth;
+use Illuminate\Http\RedirectResponse;
 use Illuminate\Http\Request;
 use App\Models\ExpertCategory;
 use App\Models\Country;
@@ -45,7 +48,7 @@ class InstaHirinProjectController extends Controller
         $CreateProject = CreateProject::where('user_id',Auth::id())->get();
         return view('dashboard.Insta_project.my_projects',['CreateProject'=>$CreateProject]);
     }
-    
+
     Public function myProjShow(Request $request)
     {
         $ProjectId =  $request->query('ProjectId');
@@ -68,10 +71,33 @@ class InstaHirinProjectController extends Controller
     }
     Public function PostReview()
     {
-        return view('dashboard.Insta_project.create_revwies');
+        $companies = Company::where('user_id', \Illuminate\Support\Facades\Auth::id())->get();
+        return view('dashboard.Insta_project.create_reviews' , compact('companies'));
     }
     Public function MyReview()
     {
-        return view('dashboard.Insta_project.my_reviews');
+        $instaProjectReviews = InstaProjectReview::where('user_id' , Auth::id())->get();
+        return view('dashboard.Insta_project.my_reviews', compact('instaProjectReviews'));
+    }
+
+    /**
+     * @param Request $request
+     * @return RedirectResponse
+     */
+    public function instaProjectReviewSubmit(Request $request): RedirectResponse
+    {
+        $review = new InstaProjectReview;
+
+        $review->company_id = $request->company;
+        $review->scope_work = $request->scope_work;
+        $review->company_review_comment = $request->company_review_comment;
+        $review->quality_deliverable_rating = $request->quality_deliverable_rating;
+        $review->cost_value_rating = $request->cost_value_rating;
+        $review->time_lines_marketing_rating = $request->time_lines_marketing_rating;
+        $review->over_all_rating = $request->over_all_rating;
+        $review->user_id = auth()->user()->id;
+        $review->save();
+
+        return redirect()->route('PostReview');
     }
 }

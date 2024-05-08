@@ -8,6 +8,7 @@ use App\Http\Controllers\DesignationController;
 use App\Http\Controllers\EmployeeConfigController;
 use App\Http\Controllers\EmployeeMasterController;
 use App\Http\Controllers\HolidayController;
+use App\Http\Controllers\InstaProject;
 use App\Http\Controllers\LeaveController;
 use App\Http\Controllers\Logincontroller;
 use App\Http\Controllers\MasterController;
@@ -124,6 +125,19 @@ Route::middleware(['middleware' => 'auth.check'])->group(function () {
     Route::get('/agency-locations/delete/{id}', [AgencyContractor::class, 'deleteAgencyLocation'])->name('deleteAgencyLocation');
     Route::get('/agency-company-delete/delete/{id}', [AgencyContractor::class, 'deleteCompanyDetail'])->name('deleteCompanyDetail');
 
+    Route::get('/InstaProject',[InstaHirinProjectController::class,'createProject']);
+    Route::post('create-project',[InstaHirinProjectController::class,'post_project'])->name('store_project');
+    Route::get('/InstaProject/My-Projects',[InstaHirinProjectController::class,'my_project'])->name('myProjects');
+    Route::get('/InstaProject/My-Project-Bid',[InstaHirinProjectController::class,'my_project_bids']);
+    // Route::get('/InstaProject/ShowMore/{id}', [InstaHirinProjectController::class,'myProjShow'])->name('myProjShowMore');
+    Route::get('/InstaProject/ShowMore', [InstaHirinProjectController::class,'myProjShow'])->name('myProjShowMore');
+    Route::patch('/InstaProject/update-Project-Overview/{id}', [InstaHirinProjectController::class,'updateProjOverview'])->name('updateOverview');
+    // Route::post('create-project',[InstaHirinProjectController::class,'post_project'])->name('store_project');
+    Route::get('/InstaProject/Post-Review',[InstaHirinProjectController::class,'PostReview'])->name('PostReview');
+    Route::get('/InstaProject/My-Review',[InstaHirinProjectController::class,'MyReview']);
+
+//    Route::get('/insta-project', [InstaProject::class, 'instaProject'])->name('instaProject');
+    Route::post('/insta-project-review-submit', [InstaHirinProjectController::class, 'instaProjectReviewSubmit'])->name('instaProjectReviewSubmit');
 
     //
     Route::get('/Favorites', [profileController::class, 'emp_favorates'])->name('favorites');
