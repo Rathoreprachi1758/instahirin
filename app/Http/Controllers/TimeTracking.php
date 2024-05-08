@@ -46,6 +46,7 @@ class TimeTracking extends Controller
         }
         $companies = array_unique($companies);
 
+        $companies = array_unique($companies);
         $employeeInfo = Employee::where('user_id', Auth::id())->where('department_id', Session::get('department_id'))->where('company_id', Session::get('logInOffCompanyId'))->first();
 
         if ($employeeInfo) {
@@ -62,7 +63,6 @@ class TimeTracking extends Controller
         foreach ($employees as $employee) {
             $departments[] = $employee->department;
         }
-
         return view('timeTracking.log_in_off')->with([
             'companies' => $companies,
             'selectedCompany' => $selectedCompany,
@@ -283,6 +283,7 @@ class TimeTracking extends Controller
             $companiesId[] = $employeeCompany->company->id;
 
         }
+
         $companies = array_unique($companies);
         $departments = [];
         if (Session::has('workLogDepartment')) {
@@ -434,6 +435,7 @@ class TimeTracking extends Controller
         foreach ($companies as $company) {
             $companyIds[] = $company->id;
         }
+
         $employees = Employee::whereIn('company_id', $companyIds)->get();
 
         $employeePunchLogs = EmployeeLogTime::whereNot('work_log_status', 0)->whereIn('company_id', $companyIds)->get();
@@ -608,7 +610,6 @@ class TimeTracking extends Controller
             $employees = Employee::where('user_id', Auth::id())->get();
             $leaveTypes = Leave::whereIn('company_id', $companiesId)->get();
         }
-
         if ($employee_code != null && $companyId != null && $from != null && $to != null) {
             $leaveRequest->where('employee_code', $employee_code)
                 ->where('company_id', $companyId)

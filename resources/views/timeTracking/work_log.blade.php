@@ -220,7 +220,7 @@
                                                 <td>
                                                     <button type="button" class="btn btn-primary" data-toggle="modal"
                                                             data-target="#exampleModal-{{$increamentId}}"
-                                                            data-whatever="{{json_encode($punchInOutData['punchHistories'])}}">
+                                                            data-whatever="@isset($punchInOutData['punchHistories']){{json_encode($punchInOutData['punchHistories'])}}@endisset">
                                                         View
                                                     </button>
                                                 </td>
@@ -340,6 +340,8 @@
     }
 </script>
 <script>
+
+    <?php if (isset($punchInOutData['punchHistories'])) { ?>
     function populateModal() {
         // Get the punch histories data from PHP
         var punchHistories = <?php if (isset($punchInOutData)) {
@@ -368,6 +370,7 @@
         // Populate the modal body with HTML content
         document.getElementById('modalBody').innerHTML = html;
     }
+    <?php } ?>
 </script>
 <!-- Include moment.js via CDN -->
 <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.29.1/moment.min.js"></script>

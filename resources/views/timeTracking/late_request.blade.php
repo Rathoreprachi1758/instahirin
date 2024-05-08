@@ -289,7 +289,7 @@
                                 data.forEach(function (department) {
                                     var option = document.createElement('option');
                                     option.value = department.id;
-                                    option.textContent = department.name;
+                                    option.textContent = department.department_name;
                                     departmentSelect.appendChild(option);
                                 });
                             })

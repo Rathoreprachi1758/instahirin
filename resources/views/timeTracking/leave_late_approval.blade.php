@@ -301,7 +301,7 @@
                                                             </td>
                                                             <td>
                                                                 <div class="tabletext">
-                                                                    <p>{{ $lateRequest->department->name }}</p>
+                                                                    <p>{{ $lateRequest->department->department_name }}</p>
                                                                 </div>
                                                             </td>
                                                             <td>
