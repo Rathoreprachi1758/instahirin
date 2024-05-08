@@ -594,7 +594,8 @@ p {
 
 
 .main_container {
-    padding-top: 150px;
+    /* padding-top: 150px; */
+    padding-top: 0px;
     width: 100%;
 }
 
@@ -3414,12 +3415,6 @@ html {
 .servicesForm .addFile_button {
     justify-content: center;
 }
-
-
-
-
-
-
 
 
 /* contact-us and folating menu style  */

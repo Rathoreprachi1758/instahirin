@@ -155,21 +155,20 @@
                                                             <button type="button" id="submitFilter"
                                                                 class="btn btn-primary mt-2">Filter</button>
                                                         </form> --}}
-                                                        <form action="{{ url('dept_id') }}" method="POST" class="d-flex align-items-end" id="filterForm">
-                                                            @csrf <!-- Add CSRF token -->
-                                                            <div class="mr-3">
-                                                                <div class="showSort_select seleComp">
-                                                                    <select class="fav_show" name="company_id" id="company_filter_select"> <!-- Change name attribute to 'company_id' -->
-                                                                        @foreach ($companes as $company_filter)
-                                                                            <option value="{{ $company_filter->id }}">
-                                                                                {{ $company_filter->company_name }}
-                                                                            </option>
-                                                                        @endforeach
-                                                                    </select>
+                                                        <form action="{{ route('Department.index') }}" method="GET" class="d-flex align-items-end" id="filterForm">
+                                                            <div class="form-row">
+                                                                <select class="fav_show" name="company_id" id="company_filter_select"> <!-- Change name attribute to 'company_id' -->
+                                                                    @foreach ($CompanyFilter as $company_filter)
+                                                                        <option value="{{ $company_filter->id }}">
+                                                                            {{ $company_filter->company_name }}
+                                                                        </option>
+                                                                    @endforeach
+                                                                </select>
+                                                                <div class="col-md-4">
+                                                                    <button type="submit" class="btn btn-primary mt-2">Filter</button>
                                                                 </div>
                                                             </div>
-                                                            <button type="submit" class="btn btn-primary mt-2">Filter</button> <!-- Change type to 'submit' -->
-                                                        </form>
+                                                        </form>                                    
                                                     </div>
                                                 </div>
                                             </div>
@@ -177,7 +176,7 @@
                                                 <thead>
                                                     <tr>
                                                         <th>
-                                                            <h6 class="text-left">Department ID</h6>
+                                                            <h6 class="text-left">ID</h6>
                                                         </th>
                                                         <th width="550">
                                                             <h6>Department Name</h6>

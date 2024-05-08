@@ -11,6 +11,7 @@ use App\Http\Controllers\HolidayController;
 use App\Http\Controllers\LeaveController;
 use App\Http\Controllers\Logincontroller;
 use App\Http\Controllers\MasterController;
+use App\Http\controllers\InstaHirinProjectController;
 use App\Http\Controllers\profileController;
 use App\Http\Controllers\shift_masterController;
 use App\Http\Controllers\TimeTracking;
@@ -38,6 +39,11 @@ Route::get('/loginpage', [LoginController::class, 'login'])->name('loginpage');
 // Route::post('login', [LoginController::class, 'authenticate'])->name('login');
 Route::post('dashboard', [LoginController::class, 'authenticate'])->name('logino');
 //Route::get('profile', [ProfileController::class, 'index']);
+// Route::post('/apple-login-callback', [LoginController::class, 'appleCallback'])->name('appleCallback');
+Route::group(['middleware' => 'web'], function () {
+    Route::post('/apple-login-callback', [LoginController::class, 'appleCallback'])->name('appleCallback');
+});
+
 Route::middleware(['middleware' => 'auth.check'])->group(function () {
             Route::get('dashboard', function () {
                 return view('dashboard.dashboard');
@@ -119,9 +125,19 @@ Route::middleware(['middleware' => 'auth.check'])->group(function () {
             Route::resource('Holiday', HolidayController::class);
             
             // Route::post('dept_id', [DepartmentController::class,'getDepartments']);
-            Route::post('dept_id', [DepartmentController::class, 'getDepartments']);
-
-
+            // Route::post('Department.index', [DepartmentController::class, 'index']);
+            //instahirin project
+            Route::get('/InstaProject',[InstaHirinProjectController::class,'createProject']);
+            Route::post('create-project',[InstaHirinProjectController::class,'post_project'])->name('store_project');
+            Route::get('/InstaProject/My-Projects',[InstaHirinProjectController::class,'my_project'])->name('myProjects');
+            Route::get('/InstaProject/My-Project-Bid',[InstaHirinProjectController::class,'my_project_bids']);
+            // Route::get('/InstaProject/ShowMore/{id}', [InstaHirinProjectController::class,'myProjShow'])->name('myProjShowMore');
+            Route::get('/InstaProject/ShowMore', [InstaHirinProjectController::class,'myProjShow'])->name('myProjShowMore');
+            Route::patch('/InstaProject/update-Project-Overview/{id}', [InstaHirinProjectController::class,'updateProjOverview'])->name('updateOverview');
+            // Route::post('create-project',[InstaHirinProjectController::class,'post_project'])->name('store_project');
+            Route::get('/InstaProject/Post-Review',[InstaHirinProjectController::class,'PostReview']);
+            Route::get('/InstaProject/My-Review',[InstaHirinProjectController::class,'MyReview']);
+            //
             Route::get('log-in-off', [TimeTracking::class, 'logInOff'])->name('logInOff');
             Route::get('/company/{companyId}', [TimeTracking::class, 'company']);
             Route::post('department', [TimeTracking::class, 'department'])->name('department');

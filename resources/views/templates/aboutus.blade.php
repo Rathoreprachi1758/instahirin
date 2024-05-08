@@ -237,7 +237,7 @@
             </div>
 
             <div class="teamBttn">
-                <a href="/bizionic-team" class="btn_default">Bizionic Team</a>
+                <a href="/about-us/bizionic-team" class="btn_default">Bizionic Team</a>
             </div>
         </div>
     </div>
@@ -1126,6 +1126,7 @@
 </div>
 
 <!-- section cindustries 4 -->
+
 <div class="indust_work_section">
     <div class="auto_container">
         <div class="indust_work_sectionDetail">
@@ -1140,8 +1141,8 @@
                 <div class="row">
                     <div class="col-lg-3 col-md-4 indCol">
                         <div class="indust_work_col">
-                            <a href="/industries/industries-we-serve/industries/startups">
-                                <span><img src="/bizionic/images/industriesIcon_1.png" alt="#" ></span>
+                            <a href="/industries/industries-we-serve/1/startups">
+                                <span><img src="/bizionic/images/industriesIcon_1.png" alt="Startup India"></span>
                                 <strong>Startups</strong>
                             </a>
                         </div>
@@ -1149,8 +1150,8 @@
 
                     <div class="col-lg-3 col-md-4 indCol">
                         <div class="indust_work_col">
-                            <a href="/industries/industries-we-serve/industries/real-estate">
-                                <span><img src="/bizionic/images/industriesIcon_2.png" alt="#" ></span>
+                            <a href="/industries/industries-we-serve/1/real-estate">
+                                <span><img src="/bizionic/images/industriesIcon_2.png" alt="Real Estate Business"></span>
                                 <strong>REAL ESTATE</strong>
                             </a>
                         </div>
@@ -1158,8 +1159,8 @@
 
                     <div class="col-lg-3 col-md-4 indCol">
                         <div class="indust_work_col">
-                            <a href="/industries/industries-we-serve/industries/b2b-solutions">
-                                <span><img src="/bizionic/images/industriesIcon_3.png" alt="#" ></span>
+                            <a href="/industries/industries-we-serve/1/b2b-solutions">
+                                <span><img src="/bizionic/images/industriesIcon_3.png" alt="B2b Solutions"></span>
                                 <strong>B2B SOLUTIONS</strong>
                             </a>
                         </div>
@@ -1167,8 +1168,8 @@
 
                     <div class="col-lg-3 col-md-4 indCol">
                         <div class="indust_work_col">
-                            <a href="/industries/industries-we-serve/industries/b2c-solutions">
-                                <span><img src="/bizionic/images/industriesIcon_4.png" alt="#" ></span>
+                            <a href="/industries/industries-we-serve/1/b2c-solutions">
+                                <span><img src="/bizionic/images/industriesIcon_4.png" alt="B2c Solutions"></span>
                                 <strong>B2C SOLUTIONS</strong>
                             </a>
                         </div>
@@ -1179,8 +1180,8 @@
 
                     <div class="col-lg-3 col-md-4 indCol">
                         <div class="indust_work_col">
-                            <a href="/industries/industries-we-serve/industries/healthcare">
-                                <span><img src="/bizionic/images/industriesIcon_5.png" alt="#" ></span>
+                            <a href="/industries/industries-we-serve/1/healthcare">
+                                <span><img src="/bizionic/images/industriesIcon_5.png" alt="Healthcare Services"></span>
                                 <strong>HEALTHCARE</strong>
                             </a>
                         </div>
@@ -1188,8 +1189,8 @@
 
                     <div class="col-lg-3 col-md-4 indCol">
                         <div class="indust_work_col">
-                            <a href="/industries/industries-we-serve/industries/travel-and-hospitality">
-                                <span><img src="/bizionic/images/industriesIcon_6.png" alt="#"></span>
+                            <a href="/industries/industries-we-serve/1/travel-and-hospitality">
+                                <span><img src="/bizionic/images/industriesIcon_6.png" alt="Hospitality Management"></span>
                                 <strong>TRAVEL & HOSPITALITY</strong>
                             </a>
                         </div>
@@ -1197,8 +1198,8 @@
 
                     <div class="col-lg-3 col-md-4 indCol">
                         <div class="indust_work_col">
-                            <a href="/industries/industries-we-serve/industries/banking-and-finance">
-                                <span><img src="/bizionic/images/industriesIcon_7.png" alt="#"></span>
+                            <a href="/industries/industries-we-serve/1/banking-and-finance">
+                                <span><img src="/bizionic/images/industriesIcon_7.png" alt="Banking & Finance Marketing"></span>
                                 <strong>BANKING & FINANCE</strong>
                             </a>
                         </div>
@@ -1206,8 +1207,8 @@
 
                     <div class="col-lg-3 col-md-4 indCol">
                         <div class="indust_work_col">
-                            <a href="/industries/industries-we-serve/industries/media-and-publishing">
-                                <span><img src="/bizionic/images/industriesIcon_8.png" alt="#"></span>
+                            <a href="/industries/industries-we-serve/1/media-and-publishing">
+                                <span><img src="/bizionic/images/industriesIcon_8.png" alt="Media Publishing"></span>
                                 <strong>MEDIA & PUBLISHING</strong>
                             </a>
                         </div>
@@ -1217,8 +1218,8 @@
 
                     <div class="col-lg-3 col-md-4 indCol">
                         <div class="indust_work_col">
-                            <a href="/industries/industries-we-serve/industries/education-and-e-Learning">
-                                <span><img src="/bizionic/images/industriesIcon_9.png" alt="#"></span>
+                            <a href="/industries/industries-we-serve/1/education-and-e-Learning">
+                                <span><img src="/bizionic/images/industriesIcon_9.png" alt="E-learning Marketing Solution"></span>
                                 <strong>EDUCATION AND E-LEARNING</strong>
                             </a>
                         </div>
@@ -1226,8 +1227,8 @@
 
                     <div class="col-lg-3 col-md-4 indCol">
                         <div class="indust_work_col">
-                            <a href="/industries/industries-we-serve/industries/food-and-fmcg">
-                                <span><img src="/bizionic/images/industriesIcon_10.png" alt="#"></span>
+                            <a href="/industries/industries-we-serve/1/food-and-fmcg">
+                                <span><img src="/bizionic/images/industriesIcon_10.png" alt="Food App"></span>
                                 <strong>FOOD & FMCG</strong>
                             </a>
                         </div>
@@ -1235,8 +1236,8 @@
 
                     <div class="col-lg-3 col-md-4 indCol">
                         <div class="indust_work_col">
-                            <a href="/industries/industries-we-serve/industries/automotive">
-                                <span><img src="/bizionic/images/industriesIcon_11.png" alt="#"></span>
+                            <a href="/industries/industries-we-serve/1/automotive">
+                                <span><img src="/bizionic/images/industriesIcon_11.png" alt="Automotive Marketing Strategies"></span>
                                 <strong>AUTOMOTIVE</strong>
                             </a>
                         </div>
@@ -1245,8 +1246,8 @@
 
                     <div class="col-lg-3 col-md-4 indCol">
                         <div class="indust_work_col">
-                            <a href="/industries/industries-we-serve/industries/e-commerce">
-                                <span><img src="/bizionic/images/industriesIcon_12.png" alt="#"></span>
+                            <a href="/industries/industries-we-serve/1/retail-e-commerce">
+                                <span><img src="/bizionic/images/industriesIcon_12.png" alt="E-commerce Website"></span>
                                 <strong>E-COMMERCE</strong>
                             </a>
                         </div>

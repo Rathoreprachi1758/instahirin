@@ -325,6 +325,7 @@ class profileController extends Controller
         // $insta_onboard = HireRequest::where('user_id', Auth::id())->get();
         // dd($insta_onboard);
         $insta_onboard = HireRequest::where('user_id', Auth::id())->with('expert')->get();
+        // return $insta_onboard;
         $expertDataArray = [];
         foreach ($insta_onboard as $hireRequest) {
             $expertData = $hireRequest->expertise_talent;
@@ -424,6 +425,7 @@ class profileController extends Controller
     }
     public function Employee_Resume(Request $request)
     {   
+        // return $request->all();
         $request->validate([
             'document' => 'required|mimes:doc,pdf,rtf,docx|max:2048',
         ]);
