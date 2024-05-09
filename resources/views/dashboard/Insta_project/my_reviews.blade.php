@@ -39,7 +39,7 @@
                 <div class="row col-12 mt-5">
                     @foreach($instaProjectReviews as $instaProjectReview)
                         <div class="col-4">
-                            <div class="card" style="width: 18rem;">
+                            <div class="card mt-2" style="width: 18rem;">
                                 <div class="card-header">
                                     {{$instaProjectReview->company->company_name}}
                                 </div>
