@@ -155,6 +155,12 @@ Route::middleware(['middleware' => 'auth.check'])->group(function () {
     Route::resource('Employee-Master', EmployeeMasterController::class);
     Route::resource('Leave', LeaveController::class);
     Route::resource('Holiday', HolidayController::class);
+    Route::get('/designation-company/{companyId}', [DesignationController::class, 'company']);
+    Route::get('/shift-master-company/{companyId}', [shift_masterController::class, 'company']);
+    Route::get('/category-master-company/{companyId}', [CategoryController::class, 'company']);
+
+
+
 
     Route::get('log-in-off', [TimeTracking::class, 'logInOff'])->name('logInOff');
     Route::get('/company/{companyId}', [TimeTracking::class, 'company']);
