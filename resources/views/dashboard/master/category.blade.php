@@ -116,9 +116,14 @@
                                                     <div class="allSelect">
                                                         <strong class="entitiesSelect">Select Company</strong>
                                                         <div class="showSort_select seleComp">
-                                                            <select class="fav_show">
-                                                                <option value="Yes">Yes</option>
-                                                                <option value="No">No</option>
+                                                            <select id="companyName" name="company_desig"
+                                                                    aria-label="First select example" onchange="fetchDepartments()">
+                                                                <option selected disabled>Select Company</option>
+                                                                @isset($companies)
+                                                                    @foreach($companies as $company)
+                                                                        <option value="{{ $company->id }}">{{$company->company_name }}</option>
+                                                                    @endforeach
+                                                                @endisset
                                                             </select>
                                                         </div>
                                                     </div>
@@ -126,9 +131,19 @@
                                                     <div class="allSelect">
                                                         <strong class="entitiesSelect">Select Department</strong>
                                                         <div class="showSort_select seleComp">
-                                                            <select class="fav_show">
-                                                                <option value="Yes">Yes</option>
-                                                                <option value="No">No</option>
+                                                            <select id="departmentName" name="department"
+                                                                    aria-label="Second select example">
+                                                                @if(!isset($companies))
+                                                                    disabled
+                                                                @endif>
+                                                                <option selected disabled>Select Department</option>
+                                                                @isset($departments)
+                                                                    @foreach($departments as $department)
+                                                                        <option value="{{ $department->id }}">
+                                                                            {{ $department->department_name }}
+                                                                        </option>
+                                                                    @endforeach
+                                                                @endisset
                                                             </select>
                                                         </div>
                                                     </div>
@@ -257,7 +272,7 @@
                                                                                                                 </div>
                                                                                                             </div>
                                                                                                         </li>
-                                                    
+
                                                                                                         <li>
                                                                                                             <div class="addCategory_colListInfo">
                                                                                                                 <strong>Max. OT Allow</strong>
@@ -352,7 +367,7 @@
                                                                                                                 </div>
                                                                                                             </div>
                                                                                                         </li>
-                                                    
+
                                                                                                         <li>
                                                                                                             <div class="addCategory_colListInfo">
                                                                                                                 <strong>Late Arrival Allow</strong>
@@ -405,12 +420,12 @@
                                                                                                                         <option value="Half Absent" {{ $catgry->Absent == 'Half Absent' ? 'selected' : '' }}>Half Absent</option>
                                                                                                                         <option value="Full Absent" {{ $catgry->Absent == 'Full Absent' ? 'selected' : '' }}>Full Absent</option>
                                                                                                                     </select>
-                                                                                                                </div>   
+                                                                                                                </div>
                                                                                                             </div>
                                                                                                         </li>
                                                                                                     </ul>
                                                                                                 </div>
-                                                    
+
                                                                                             </div>
                                                                                         </div>
                                                                                         <div class="col-xxl-4 col-xl-4 col-lg-4 col-md-4 ">
@@ -465,7 +480,7 @@
                                                                                                                 </div>
                                                                                                             </div>
                                                                                                         </li>
-                                                    
+
                                                                                                     </ul>
                                                                                                 </div>
                                                                                                 <div class="allIn">
@@ -488,7 +503,7 @@
                                                                                                         </li>
                                                                                                     </ul>
                                                                                                 </div>
-                                                                                                
+
                                                                                                 <div class="hoursRange_sec_info applyFor">
                                                                                                     <div>
                                                                                                         <ul>
@@ -630,7 +645,7 @@
                                 <strong>Company Name*</strong>
                                 <div class="popupForm_field">
                                     <select name="company_id" class="selective">
-                                        @foreach ($comapnaies as $id)
+                                        @foreach ($companies as $id)
                                             <option value="{{ $id->id }}">
                                                 {{ $id->company_name }}
                                             </option>
@@ -834,7 +849,7 @@
                                                                     <option value="Half Absent" {{ old('Absent') == 'Half Absent' ? 'selected' : '' }}>Half Absent</option>
                                                                     <option value="Full Absent" {{ old('Absent') == 'Full Absent' ? 'selected' : '' }}>Full Absent</option>
                                                                 </select>
-                                                            </div>   
+                                                            </div>
                                                         </div>
                                                     </li>
                                                 </ul>
@@ -950,3 +965,27 @@
         </div>
     </div>
 </div>
+<script>
+    function fetchDepartments() {
+        var companyId = document.getElementById('companyName').value;
+        var departmentSelect = document.getElementById('departmentName');
+        console.log(companyId);
+        departmentSelect.innerHTML = ' <option selected disabled>Select Department</option>';
+        fetch('/category-master-company/' + companyId, {
+            method: 'GET',
+            headers: {
+                'Content-Type': 'application/json'
+            }
+        })
+            .then(response => response.json())
+            .then(data => {
+                data.forEach(function (department) {
+                    var option = document.createElement('option');
+                    option.value = department.id;
+                    option.textContent = department.department_name;
+                    departmentSelect.appendChild(option);
+                });
+            })
+            .catch(error => console.error('Error fetching departments:', error));
+    }
+</script>
