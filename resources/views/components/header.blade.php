@@ -340,16 +340,18 @@
                                         <em class="menu_icon"><i class="fa fa-angle-down"
                                                 aria-hidden="true"></i></em></a>
                                 </li>
-                                <li class="has_list"><a href="javascript:void(0)"><span><i class="fa fa-usd"
-                                                aria-hidden="true"></i></span>
+
+                                <li class="has_list open_sublist" onclick="toggleSublist(this)">
+                                    <a href="javascript:void(0)">
+                                        <span><i class="fa fa-usd"
+                                                 aria-hidden="true"></i></span>
                                         Salary Details
                                         <em class="menu_icon"><i class="fa fa-angle-down"
-                                                aria-hidden="true"></i></em></a>
-
+                                                                 aria-hidden="true"></i></em>
+                                    </a>
                                     <ul>
-                                        <li><a href="javascript:void(0)">Employee Salary Details</a></li>
-                                        <li><a href="javascript:void(0)">Salary Head Master</a></li>
-                                        <li><a href="javascript:void(0)">Normal Salary</a></li>
+                                        <li><a href="{{route('salaryDetails')}}">Employee Salary Details</a></li>
+                                        <li><a href="{{route('normalSalary')}}">Normal Salary</a></li>
                                     </ul>
                                 </li>
                                 <li class="has_list open_sublist" onclick="toggleSublist(this)">
