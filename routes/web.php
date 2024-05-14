@@ -145,6 +145,13 @@ Route::middleware(['middleware' => 'auth.check'])->group(function () {
     Route::get('/salary-details',[SalaryDetailContoller::class, 'salaryDetails'])->name('salaryDetails');
     Route::get('/salary-company/{companyId}',[SalaryDetailContoller::class , 'company']);
     Route::post('/salary-detail',[SalaryDetailContoller::class , 'salaryDetailFilters'])->name('salaryDetailFilters');
+    Route::get('/salary-head-master',[SalaryDetailContoller::class , 'SalaryHeadMaster'])->name('SalaryHeadMaster');
+    Route::post('/salary-head-master-submit',[SalaryDetailContoller::class , 'submitSalaryMaster'])->name('submitSalaryMaster');
+    Route::get('/normal-salary',[SalaryDetailContoller::class , 'normalSalary'])->name('normalSalary');
+    Route::post('/normal-salary-submit',[SalaryDetailContoller::class , 'normalSalarySubmit'])->name('normalSalarySubmit');
+    Route::get('/get-salary-head/{employeeId}',[SalaryDetailContoller::class , 'getSalaryHead']);
+
+
 
     //
     Route::get('/Favorites', [profileController::class, 'emp_favorates'])->name('favorites');

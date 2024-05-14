@@ -351,8 +351,7 @@
                                     </a>
                                     <ul>
                                         <li><a href="{{route('salaryDetails')}}">Employee Salary Details</a></li>
-                                        <li><a href="javascript:void(0)">Salary Head Master</a></li>
-                                        <li><a href="javascript:void(0)">Normal Salary</a></li>
+                                        <li><a href="{{route('normalSalary')}}">Normal Salary</a></li>
                                     </ul>
                                 </li>
                                 <li class="has_list open_sublist" onclick="toggleSublist(this)">
