@@ -11,7 +11,7 @@ use App\Models\AgencySpecializationService;
 use App\Models\AgencySubServices;
 use App\Models\ComplianceCertificate;
 use App\Models\Country;
-use App\Models\serviceLine;
+use App\Models\ServiceLine;
 use Illuminate\Contracts\Foundation\Application;
 use Illuminate\Contracts\View\Factory;
 use Illuminate\Contracts\View\View;
