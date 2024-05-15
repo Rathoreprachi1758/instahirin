@@ -58,8 +58,7 @@
                                        aria-label="employee_name"
                                        @isset($employeeData)value="{{$employeeData->employee_name}}" @endisset>
                             </div>
-                            <input type="hidden" name="employee_id"
-                                   @isset($employeeData)value="{{$employeeData->id}}" @endisset>
+                            <input type="hidden" name="employee_id" @isset($employeeData)value="{{$employeeData->id}}" @endisset>
                         </div>
                         <div class="container mt-5">
                             <div class="row mt-3">
