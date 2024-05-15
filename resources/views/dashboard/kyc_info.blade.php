@@ -83,6 +83,10 @@
                         <div class="alert alert-danger">
                             <span style="margin-left:330px">Kyc Rejected</span>
                         </div>
+                    @elseif($kyc == null)
+                        <div class="alert alert-danger">
+                            <span>Please complete the KYC form to access all the products and services on the Instahirin platform.</span>
+                        </div>
                     @endif
 
 
@@ -111,7 +115,7 @@
                                             <div class="kycForm_field_info">
                                                 <input type="text" placeholder="First Name"
                                                        name="first_name"
-                                                       value="{{ $kyc?->first_name }}" {{ $disabled }}/>
+                                                       value="{{ $user->name }}" {{ $disabled }}/>
                                             </div>
                                             @error('first_name')
                                             <div class="text-danger">{{ $message }}</div>
@@ -223,10 +227,12 @@
                                             <strong>Country Code</strong>
                                             <select class="form-select small-select" name="country_code"
                                                     id="countryCode">
-                                                <option selected disabled>Country Code</option>
+                                                <option disabled>Country Code</option>
                                                 @foreach($countries as $country)
-                                                    <option
-                                                        value="{{$country->phone}}">{{$country->phone}}</option>
+                                                    <option value="{{ $country->phone }}"
+                                                            @if($user->country_code == $country->phone) selected @endif>
+                                                        {{ $country->phone }}
+                                                    </option>
                                                 @endforeach
                                             </select>
                                             @error('country_code')
@@ -238,7 +244,8 @@
                                         <div class="kycForm_field">
                                             <strong>Phone Number</strong>
                                             <input type="number" name="phone" class="form-control"
-                                                   id="inputNumber" placeholder="Phone Number" value="{{$kyc->phone}}">
+                                                   id="inputNumber" placeholder="Phone Number"
+                                                   value="{{$user?->mobilenumber}}">
                                             @error('phone')
                                             <div class="text-danger">{{ $message }}</div>
                                             @enderror
@@ -392,11 +399,11 @@
                                                 <select class="fav_show"
                                                         name="individual_sanctionedcountries" {{ $disabled }}>
                                                     <option
-                                                        value="Yes" {{ $kyc->sanctionedcountries === 'Yes' ? 'selected' : '' }}>
+                                                        value="Yes" {{ $kyc?->sanctionedcountries === 'Yes' ? 'selected' : '' }}>
                                                         Yes
                                                     </option>
                                                     <option
-                                                        value="No" {{ $kyc->sanctionedcountries === 'No' ? 'selected' : '' }}>
+                                                        value="No" {{ $kyc?->sanctionedcountries === 'No' ? 'selected' : '' }}>
                                                         No
                                                     </option>
                                                 </select>
@@ -417,11 +424,11 @@
                                                 <select class="fav_show"
                                                         name="individual_presencein_sanctioned_Country" {{ $disabled }}>
                                                     <option
-                                                        value="Yes" {{ $kyc->subsidiary_office_sanctioned_Country === 'Yes' ? 'selected' : '' }}>
+                                                        value="Yes" {{ $kyc?->subsidiary_office_sanctioned_Country === 'Yes' ? 'selected' : '' }}>
                                                         Yes
                                                     </option>
                                                     <option
-                                                        value="No" {{ $kyc->subsidiary_office_sanctioned_Country === 'No' ? 'selected' : '' }}>
+                                                        value="No" {{ $kyc?->subsidiary_office_sanctioned_Country === 'No' ? 'selected' : '' }}>
                                                         No
                                                     </option>
                                                 </select>
@@ -443,11 +450,11 @@
                                                 <select class="fav_show"
                                                         name="individual_any_service_provided_in_sactioned_country"{{ $disabled }}>
                                                     <option
-                                                        value="Yes" {{ $kyc->any_service_provided_in_sactioned_country === 'Yes' ? 'selected' : '' }}>
+                                                        value="Yes" {{ $kyc?->any_service_provided_in_sactioned_country === 'Yes' ? 'selected' : '' }}>
                                                         Yes
                                                     </option>
                                                     <option
-                                                        value="No" {{ $kyc->any_service_provided_in_sactioned_country === 'No' ? 'selected' : '' }}>
+                                                        value="No" {{ $kyc?->any_service_provided_in_sactioned_country === 'No' ? 'selected' : '' }}>
                                                         No
                                                     </option>
                                                 </select>
@@ -496,7 +503,7 @@
                                         <div class="auth_text">
                                             <p>
                                                 <label class="checkbox-label">
-                                                    <input type="checkbox" name="agrement_checkbox"
+                                                    <input type="checkbox" name="individual_agrement_checkbox"
                                                            value="1" {{ $kyc?->agrement_checkbox ? 'checked' : '' }}/>
                                                     <span class="checkbox-custom rectangular"></span>
                                                 </label>
@@ -923,11 +930,11 @@
                                                         name="any_service_provided_in_sactioned_country"
                                                         value="{{ old('any_service_provided_in_sactioned_country') }}">
                                                     <option
-                                                        value="Yes" {{ $kyc->any_service_provided_in_sactioned_country === 'Yes' ? 'selected' : '' }}>
+                                                        value="Yes" {{ $kyc?->any_service_provided_in_sactioned_country === 'Yes' ? 'selected' : '' }}>
                                                         Yes
                                                     </option>
                                                     <option
-                                                        value="No" {{ $kyc->any_service_provided_in_sactioned_country === 'No' ? 'selected' : '' }}>
+                                                        value="No" {{ $kyc?->any_service_provided_in_sactioned_country === 'No' ? 'selected' : '' }}>
                                                         No
                                                     </option>
                                                 </select>
@@ -1207,13 +1214,12 @@
         }
     }
 
-
     // Call the function with the existing nationality value from PHP
-    const existingNationality = "{{ $kyc?->nationality }}";
+    const existingNationality = "{{ $user?->nationality }}";
     fetchIndividualNationality(existingNationality);
     fetchCompanyNationality(existingNationality);
 
-    const existingCountry = "{{ $kyc?->country }}"; // Assuming $kyc->country contains the existing country name
+    const existingCountry = "{{ $user?->country }}"; // Assuming $kyc->country contains the existing country name
     fetchCountries(existingCountry);
     fetchNationality();
     fetchCities();

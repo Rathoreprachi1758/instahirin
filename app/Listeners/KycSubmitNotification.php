@@ -29,7 +29,7 @@ class KycSubmitNotification
 
     public function kycSubmit(KycSubmitEvent $event): void
     {
-        Mail::to('khanallama@gmail.com')->send(new \App\Mail\KycSubmitNotification());
+        Mail::to('khanallama@gmail.com')->send(new \App\Mail\KycSubmitNotification($event->companyKycInformation));
     }
 
     public function KycStatusUpdate(KycUpdateNotifications $event): void

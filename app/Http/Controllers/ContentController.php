@@ -95,8 +95,7 @@ class ContentController extends Controller
 
 
     public function hireExpert($id)
-    {
-
+    { 
         $expert = Expert::findOrFail($id);
         // dd($expert->experties);
         $menusResponse = Cache::get('menus', nova_get_menu_by_slug('header'));

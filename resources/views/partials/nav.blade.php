@@ -18,7 +18,8 @@
         'Nakheel','Ericsson',' ','Sky','Byte Dance','Just Eat','Montblanc','Amazon Music','Century Financial',
         'Fuji Film','Baazex','Jobtome','Leadnest','American Hospital','Bizionic Team','Portfolio','product-jnk','Blogs','InstaHirin View All',
         'Turkish Airline', 'Emporium Capital' , 'Mobile Push Notifications','Web Push Notifications', 'In App Push Notifications',
-        'Email Notifications','SMS Notifications','Journey Notifications','Insta Requirement Form','hirin-view-all','instaRequirement','talent-onboard-process','global-talent','view-all-job','instaHirin-Onboard-Form','revolution-journey','own-boss-learn-more'
+        'Email Notifications','SMS Notifications','Journey Notifications','Insta Requirement Form','hirin-view-all','instaRequirement','talent-onboard-process','global-talent','view-all-job','instaHirin-Onboard-Form',
+        'revolution-journey','own-boss-learn-more'
         ];
         @endphp
         @if(!in_array($menu->name,$excludeMenuNames))

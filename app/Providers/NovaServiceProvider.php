@@ -25,6 +25,9 @@ class NovaServiceProvider extends NovaApplicationServiceProvider
     {
         parent::boot();
 
+        Nova::withBreadcrumbs();
+
+
         Nova::footer(function ($request) {
             // return "===========Testing=======";
         });

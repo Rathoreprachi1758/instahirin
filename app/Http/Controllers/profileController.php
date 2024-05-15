@@ -109,7 +109,8 @@ class profileController extends Controller
     {
         $kyc = $this->getKycInfo();
         $countries = Country::all();
-        return view('dashboard.kyc_info', compact('kyc', 'countries'));
+        $user = User::find(Auth::id());
+        return view('dashboard.kyc_info', compact('kyc', 'countries', 'user'));
     }
 
 
@@ -125,7 +126,7 @@ class profileController extends Controller
      */
     public function kyc_submit(Request $request)
     {
-//        event(new KycUpdateNotifications());
+//        event(new KycSubmitNotification());
         if (isset($request->individual)) {
             $request->validate([
                 'dob' => 'required',
@@ -243,9 +244,8 @@ class profileController extends Controller
                 $kyc_info->{$field} = $filename;
             }
         }
-
+     event(new KycSubmitNotification($kyc_info));
         $kyc_info->save();
-        event(new KycSubmitNotification($kyc_info));
 
         return redirect()->back()->with('kyc_msg', ' KYC Request has been updated!');
     }
@@ -402,6 +402,7 @@ class profileController extends Controller
         // $insta_onboard = HireRequest::where('user_id', Auth::id())->get();
         // dd($insta_onboard);
         $insta_onboard = HireRequest::where('user_id', Auth::id())->with('expert')->get();
+        // return $insta_onboard;
         $expertDataArray = [];
         foreach ($insta_onboard as $hireRequest) {
             $expertData = $hireRequest->expertise_talent;

@@ -8,10 +8,13 @@ use App\Http\Controllers\DesignationController;
 use App\Http\Controllers\EmployeeConfigController;
 use App\Http\Controllers\EmployeeMasterController;
 use App\Http\Controllers\HolidayController;
+use App\Http\Controllers\InstaProject;
 use App\Http\Controllers\LeaveController;
 use App\Http\Controllers\Logincontroller;
 use App\Http\Controllers\MasterController;
+use App\Http\controllers\InstaHirinProjectController;
 use App\Http\Controllers\profileController;
+use App\Http\Controllers\SalaryDetailContoller;
 use App\Http\Controllers\shift_masterController;
 use App\Http\Controllers\SocialLoginController;
 use App\Http\Controllers\TimeTracking;
@@ -49,6 +52,11 @@ Route::get('/apple-callback', [SocialLoginController::class, 'appleCallBack'])->
 // Route::post('login', [LoginController::class, 'authenticate'])->name('login');
 Route::post('dashboard', [LoginController::class, 'authenticate'])->name('logino');
 //Route::get('profile', [ProfileController::class, 'index']);
+// Route::post('/apple-login-callback', [LoginController::class, 'appleCallback'])->name('appleCallback');
+Route::group(['middleware' => 'web'], function () {
+    Route::post('/apple-login-callback', [LoginController::class, 'appleCallback'])->name('appleCallback');
+});
+
 Route::middleware(['middleware' => 'auth.check'])->group(function () {
     Route::get('dashboard', function () {
         return view('dashboard.dashboard');
@@ -118,6 +126,32 @@ Route::middleware(['middleware' => 'auth.check'])->group(function () {
     Route::get('/agency-locations/delete/{id}', [AgencyContractor::class, 'deleteAgencyLocation'])->name('deleteAgencyLocation');
     Route::get('/agency-company-delete/delete/{id}', [AgencyContractor::class, 'deleteCompanyDetail'])->name('deleteCompanyDetail');
 
+    Route::get('/InstaProject',[InstaHirinProjectController::class,'createProject']);
+    Route::post('create-project',[InstaHirinProjectController::class,'post_project'])->name('store_project');
+    Route::get('/InstaProject/My-Projects',[InstaHirinProjectController::class,'my_project'])->name('myProjects');
+    Route::get('/InstaProject/My-Project-Bid',[InstaHirinProjectController::class,'my_project_bids']);
+    // Route::get('/InstaProject/ShowMore/{id}', [InstaHirinProjectController::class,'myProjShow'])->name('myProjShowMore');
+    Route::get('/InstaProject/ShowMore', [InstaHirinProjectController::class,'myProjShow'])->name('myProjShowMore');
+    Route::patch('/InstaProject/update-Project-Overview/{id}', [InstaHirinProjectController::class,'updateProjOverview'])->name('updateOverview');
+    // Route::post('create-project',[InstaHirinProjectController::class,'post_project'])->name('store_project');
+    Route::get('/InstaProject/Post-Review',[InstaHirinProjectController::class,'PostReview'])->name('PostReview');
+    Route::get('/InstaProject/My-Review',[InstaHirinProjectController::class,'MyReview']);
+
+//    Route::get('/insta-project', [InstaProject::class, 'instaProject'])->name('instaProject');
+    Route::post('/insta-project-review-submit', [InstaHirinProjectController::class, 'instaProjectReviewSubmit'])->name('instaProjectReviewSubmit');
+
+    //salary Details
+
+    Route::get('/salary-details',[SalaryDetailContoller::class, 'salaryDetails'])->name('salaryDetails');
+    Route::get('/salary-company/{companyId}',[SalaryDetailContoller::class , 'company']);
+    Route::post('/salary-detail',[SalaryDetailContoller::class , 'salaryDetailFilters'])->name('salaryDetailFilters');
+    Route::get('/salary-head-master',[SalaryDetailContoller::class , 'SalaryHeadMaster'])->name('SalaryHeadMaster');
+    Route::post('/salary-head-master-submit',[SalaryDetailContoller::class , 'submitSalaryMaster'])->name('submitSalaryMaster');
+    Route::get('/normal-salary',[SalaryDetailContoller::class , 'normalSalary'])->name('normalSalary');
+    Route::post('/normal-salary-submit',[SalaryDetailContoller::class , 'normalSalarySubmit'])->name('normalSalarySubmit');
+    Route::get('/get-salary-head/{employeeId}',[SalaryDetailContoller::class , 'getSalaryHead']);
+
+
 
     //
     Route::get('/Favorites', [profileController::class, 'emp_favorates'])->name('favorites');
@@ -135,6 +169,12 @@ Route::middleware(['middleware' => 'auth.check'])->group(function () {
     Route::resource('Employee-Master', EmployeeMasterController::class);
     Route::resource('Leave', LeaveController::class);
     Route::resource('Holiday', HolidayController::class);
+    Route::get('/designation-company/{companyId}', [DesignationController::class, 'company']);
+    Route::get('/shift-master-company/{companyId}', [shift_masterController::class, 'company']);
+    Route::get('/category-master-company/{companyId}', [CategoryController::class, 'company']);
+
+
+
 
     Route::get('log-in-off', [TimeTracking::class, 'logInOff'])->name('logInOff');
     Route::get('/company/{companyId}', [TimeTracking::class, 'company']);

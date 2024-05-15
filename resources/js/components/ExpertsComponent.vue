@@ -341,10 +341,20 @@
               <div class="ourWorked">
                 <label class="">Also worked with</label>
 
-                <div class="ourWorked_list">
+                <!-- <div class="ourWorked_list">
                   <ul>
                     <li v-for="(skill, index) in expert.skills" :key="index">
                       <span @click="fetchExpertsBySkill(skill)">{{ skill.title }}</span>
+                    </li>
+                  </ul>
+                </div> -->
+                <div class="ourExperties_list">
+                  <ul>
+                    <!-- <strong style="color:black">{{ auth()->user()->name }}</strong> -->
+                    <li v-for="(experty, index) in expert.experties" :key="index">
+                      <span @click="fetchExpertsByExperty(experty)">{{
+                        experty.title
+                      }}</span>
                     </li>
                   </ul>
                 </div>
@@ -414,7 +424,7 @@
 .meetTeam_sliderSection::-webkit-scrollbar {
   width: 0;
   height: 0;
-  gbackground: transparent;
+  background: transparent;
 }
 
 /* Optional: Style the navigation arrows for scrolling */

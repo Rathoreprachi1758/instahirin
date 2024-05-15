@@ -18,7 +18,7 @@ class KycSubmitNotification
     /**
      * Create a new event instance.
      */
-    public function __construct(private CompanyKycInformation $companyKycInformation)
+    public function __construct(public CompanyKycInformation $companyKycInformation)
     {
         //
     }

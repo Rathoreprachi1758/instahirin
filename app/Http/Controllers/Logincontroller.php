@@ -6,6 +6,7 @@ use Auth;
 use GuzzleHttp\Client;
 use App\Models\User;
 use App\Models\Country;
+use Illuminate\Support\Str;
 use Illuminate\Http\Request;
 use App\Models\Job;
 use Illuminate\Support\Facades\Http;
@@ -68,8 +69,11 @@ class Logincontroller extends Controller
 
     }
     public function login(Request $request)
-    {
-        return view('dashboard.login-page');
+    {   
+        $nonce = Str::uuid()->toString();
+
+        return view('dashboard.login-page', ['nonce' => $nonce]);
+        // return view('dashboard.login-page');
         // return "Hii";
     }
     public function authenticate(Request $request)
@@ -180,4 +184,8 @@ class Logincontroller extends Controller
     //    return $request->all();
     // }
 
+
+    public function appleCallback(Request $request){
+        dd($request);
+    }
 }

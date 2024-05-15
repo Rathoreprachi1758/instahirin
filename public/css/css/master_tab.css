@@ -283,7 +283,7 @@ h6 {
     width: 100%;
 }
 
-.header {
+/* .header {
     width: 100%;
     position: fixed;
     left: 0px;
@@ -291,7 +291,7 @@ h6 {
     z-index: 20;
     border-bottom: 1px solid #dedede;
     background-color: #fff;
-}
+} */
 
 .headerDetail {
     width: 100%;
@@ -2364,6 +2364,7 @@ h6 {
     font-size: 12px;
     border-radius: 4px;
     width: 100%;
+    border: 1px solid #ccc;
     background-color: #fff;
 }
 
@@ -2736,5 +2737,6 @@ h6 {
     font-size: 12px;
     border-radius: 4px;
     width: 100%;
+    border: 1px solid #ccc;
     background-color: #fff;
 }

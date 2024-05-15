@@ -1,6 +1,8 @@
-@php use Illuminate\Support\Facades\Auth;
- use App\Models\User;
+@php
+    use Illuminate\Support\Facades\Auth;
+    use App\Models\User;
 @endphp
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -8,9 +10,10 @@
     <meta name="format-detection" content="telephone=no">
     <title>Bizionic</title>
     <!-- bootstrap -->
-    <link rel="stylesheet" href="css/bootstrap.min.css">
+    {{-- <link rel="stylesheet" href="css/bootstrap.min.css"> --}}
     <!-- custom css -->
     <link rel="stylesheet" href="{{ asset('css/css/style.css') }}">
+    <link rel="stylesheet" href="{{ asset('css/css/bootstrap.min.css') }}">
     <link rel="stylesheet" href="{{ asset('css/css/responsive.css') }}">
     <!-- aos animation  -->
     <link rel="stylesheet" href="{{ asset('css/css/aos.css') }}">
@@ -19,12 +22,12 @@
 
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 
-    <script src="js/jquery-3.4.1.min.js"></script>
+    {{-- <script src="js/jquery-3.4.1.min.js"></script> --}}
 
     <!-- aos animation js  -->
-    <script src="js/aos.js"></script>
-    <link rel="stylesheet" href="css/owl.carousel.min.css">
-    <script src="js/owl.carousel.js "></script>
+    {{-- <script src="js/aos.js"></script> --}}
+    {{-- <link rel="stylesheet" href="css/owl.carousel.min.css"> --}}
+    {{-- <script src="js/owl.carousel.js "></script> --}}
 
     <link rel="icon" sizes="96x96" href="{{ asset('css/images/favicon-96x96.png') }}">
 
@@ -75,45 +78,47 @@
                         {{-- <img src="{{ asset('css/images/logo.png') }}" alt="Logo"></a> --}}
                         {{-- <a href="{{ url('/about-us') }}"> --}}
                         <? xml version = "1.0" encoding = "utf-8" ?>
-                            <!-- Generator: Adobe Illustrator 27.5.0, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
-                        <svg version="1.1" id="Layer_1" height="100px" width="150px" xmlns="http://www.w3.org/2000/svg"
-                             x="0px" y="0px"
-                             viewBox="0 0 219.4 53.5" style="enable-background:new 0 0 219.4 53.5;"
-                             xml:space="preserve">
-                        <style type="text/css">
-                            .st0 {
-                                fill: #010101;
-                            }
+                        <!-- Generator: Adobe Illustrator 27.5.0, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
+                        <svg version="1.1" id="Layer_1" height="100px" width="150px"
+                            xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" viewBox="0 0 219.4 53.5"
+                            style="enable-background:new 0 0 219.4 53.5;" xml:space="preserve">
+                            <style type="text/css">
+                                .st0 {
+                                    fill: #010101;
+                                }
 
-                            .st1 {
-                                fill: #333333;
-                            }
-                        </style>
+                                .st1 {
+                                    fill: #333333;
+                                }
+                            </style>
                             <g>
                                 <g>
-                                    <path class="st0" d="M4,2.5h5.7v25.9H4V2.5z"/>
+                                    <path class="st0" d="M4,2.5h5.7v25.9H4V2.5z" />
                                     <path class="st0"
-                                          d="M14.9,2.5h7.8l11,18h0.1v-18h5.7v25.9H32L20.7,10h-0.1v18.4h-5.7V2.5z"/>
-                                    <path class="st0" d="M57.6,8.9c-0.5-0.6-1.1-1-1.9-1.3s-1.5-0.4-2.3-0.4c-0.4,0-0.8,0-1.3,0.1c-0.4,0.1-0.9,0.3-1.2,0.5
+                                        d="M14.9,2.5h7.8l11,18h0.1v-18h5.7v25.9H32L20.7,10h-0.1v18.4h-5.7V2.5z" />
+                                    <path class="st0"
+                                        d="M57.6,8.9c-0.5-0.6-1.1-1-1.9-1.3s-1.5-0.4-2.3-0.4c-0.4,0-0.8,0-1.3,0.1c-0.4,0.1-0.9,0.3-1.2,0.5
                                     c-0.4,0.2-0.7,0.5-1,0.8c-0.2,0.3-0.3,0.7-0.3,1.2c0,0.8,0.3,1.4,0.9,1.8s1.3,0.8,2.2,1.1c0.9,0.3,1.8,0.6,2.9,0.9
                                     c1,0.3,2,0.7,2.9,1.2s1.6,1.3,2.2,2.2c0.6,0.9,0.9,2.1,0.9,3.6c0,1.4-0.3,2.7-0.8,3.8c-0.5,1.1-1.3,2-2.2,2.7
                                     c-0.9,0.7-2,1.2-3.2,1.6c-1.2,0.3-2.5,0.5-3.8,0.5c-1.7,0-3.2-0.3-4.7-0.8c-1.4-0.5-2.8-1.3-4-2.5l4.1-4.5
                                     c0.6,0.8,1.3,1.4,2.2,1.8c0.9,0.4,1.8,0.6,2.8,0.6c0.5,0,0.9-0.1,1.4-0.2s0.9-0.3,1.3-0.5s0.7-0.5,0.9-0.8
                                     c0.2-0.3,0.3-0.7,0.3-1.2c0-0.8-0.3-1.4-0.9-1.8c-0.6-0.5-1.3-0.8-2.3-1.2c-0.9-0.3-1.9-0.6-2.9-1c-1-0.3-2-0.7-2.9-1.3
                                     c-0.9-0.5-1.7-1.2-2.3-2.1c-0.6-0.9-0.9-2-0.9-3.5c0-1.4,0.3-2.6,0.8-3.7c0.5-1,1.3-1.9,2.2-2.6c0.9-0.7,2-1.2,3.2-1.6
-                                    c1.2-0.4,2.4-0.5,3.7-0.5c1.5,0,2.9,0.2,4.2,0.6c1.4,0.4,2.6,1.1,3.7,2.1L57.6,8.9z"/>
-                                    <path class="st0" d="M70.8,7.6h-7.4v-5h20.5v5h-7.4v20.9h-5.7V7.6z"/>
+                                    c1.2-0.4,2.4-0.5,3.7-0.5c1.5,0,2.9,0.2,4.2,0.6c1.4,0.4,2.6,1.1,3.7,2.1L57.6,8.9z" />
+                                    <path class="st0" d="M70.8,7.6h-7.4v-5h20.5v5h-7.4v20.9h-5.7V7.6z" />
                                     <path class="st0"
-                                          d="M95.3,2.5h4.7l11.3,25.9h-6.4l-2.2-5.5H92.6l-2.2,5.5h-6.3L95.3,2.5z M97.5,10.1l-3.1,8h6.3L97.5,10.1z"/>
-                                    <path class="st0" d="M146.6,2.5h5.7v25.9h-5.7V2.5z"/>
-                                    <path class="st0" d="M157.5,2.5h10c1.3,0,2.6,0.1,3.7,0.4c1.2,0.3,2.2,0.7,3.1,1.3c0.9,0.6,1.6,1.4,2.1,2.4s0.8,2.3,0.8,3.8
+                                        d="M95.3,2.5h4.7l11.3,25.9h-6.4l-2.2-5.5H92.6l-2.2,5.5h-6.3L95.3,2.5z M97.5,10.1l-3.1,8h6.3L97.5,10.1z" />
+                                    <path class="st0" d="M146.6,2.5h5.7v25.9h-5.7V2.5z" />
+                                    <path class="st0"
+                                        d="M157.5,2.5h10c1.3,0,2.6,0.1,3.7,0.4c1.2,0.3,2.2,0.7,3.1,1.3c0.9,0.6,1.6,1.4,2.1,2.4s0.8,2.3,0.8,3.8
                                     c0,1.8-0.5,3.4-1.4,4.7c-1,1.3-2.3,2.1-4.2,2.4l6.6,10.9h-6.8L166,18h-2.8v10.4h-5.7L157.5,2.5L157.5,2.5z M163.2,13.3h3.4
                                     c0.5,0,1.1,0,1.6-0.1c0.6,0,1.1-0.1,1.6-0.3c0.5-0.2,0.8-0.5,1.2-0.9c0.3-0.4,0.5-0.9,0.5-1.6c0-0.7-0.1-1.2-0.4-1.6
-                                    c-0.3-0.4-0.6-0.7-1-0.9s-0.9-0.3-1.4-0.4c-0.5-0.1-1.1-0.1-1.6-0.1h-3.7v5.9H163.2z"/>
-                                    <path class="st0" d="M181.2,2.5h5.7v25.9h-5.7V2.5z"/>
+                                    c-0.3-0.4-0.6-0.7-1-0.9s-0.9-0.3-1.4-0.4c-0.5-0.1-1.1-0.1-1.6-0.1h-3.7v5.9H163.2z" />
+                                    <path class="st0" d="M181.2,2.5h5.7v25.9h-5.7V2.5z" />
                                     <path class="st0"
-                                          d="M192.1,2.5h7.8l11,18h0.1v-18h5.7v25.9h-7.5L197.9,10h-0.1v18.4h-5.7V2.5z"/>
-                                    <path class="st0" d="M116.4,17.4l5.7,5.7v-0.4l-5.7-5.7V17.4z M116.4,16.2l5.7,5.7v-0.4l-5.7-5.7V16.2z M116.4,20.9l5.7,5.7v-0.4
+                                        d="M192.1,2.5h7.8l11,18h0.1v-18h5.7v25.9h-7.5L197.9,10h-0.1v18.4h-5.7V2.5z" />
+                                    <path class="st0"
+                                        d="M116.4,17.4l5.7,5.7v-0.4l-5.7-5.7V17.4z M116.4,16.2l5.7,5.7v-0.4l-5.7-5.7V16.2z M116.4,20.9l5.7,5.7v-0.4
                                     l-5.7-5.7V20.9z M116.4,22.1l5.7,5.7v-0.4l-5.7-5.7V22.1z M116.4,13.9l5.7,5.7v-0.4l-5.7-5.7V13.9z M116.4,19.7l5.7,5.7V25
                                     l-5.7-5.7V19.7z M116.4,18.6l5.7,5.7v-0.5l-5.7-5.7V18.6z M116.4,15l5.7,5.7v-0.4l-5.7-5.7V15z M116.4,8l10.4,10.4h0.4L116.4,7.6
                                     L116.4,8L116.4,8z M116.4,9.2l9.2,9.2h0.4l-9.6-9.6L116.4,9.2L116.4,9.2z M122.2,12.6l5.7,5.7h0.4l-5.7-5.7H122.2z M116.4,10.3
@@ -133,62 +138,69 @@
                                     l-1.8-1.8v0.5H133.2z M133.2,26l2.5,2.5h0.4l-2.9-2.9V26z M125.8,12.6l5.7,5.7h0.4l-5.7-5.7H125.8z M130.5,12.6l8.4,8.4v-0.4l-8-8
                                     H130.5z M126.9,12.6l5.7,5.7h0.4l-5.7-5.7H126.9z M133.2,28.3l0.1,0.1h0.4l-0.6-0.6v0.5H133.2z M128.1,12.6l10.8,10.8V23
                                     l-10.3-10.4H128.1z M129.3,12.6l9.6,9.6v-0.4l-9.2-9.2H129.3z M133.2,18.9l5.7,5.7v-0.4l-5.7-5.7V18.9z M133.2,22.4l5.7,5.7v-0.4
-                                    l-5.7-5.7V22.4z M133.2,20.1l5.7,5.7v-0.4l-5.7-5.7V20.1z M133.2,21.3l5.7,5.7v-0.4l-5.7-5.7V21.3z"/>
+                                    l-5.7-5.7V22.4z M133.2,20.1l5.7,5.7v-0.4l-5.7-5.7V20.1z M133.2,21.3l5.7,5.7v-0.4l-5.7-5.7V21.3z" />
                                 </g>
                                 <g>
-                                    <path class="st1" d="M23.8,33.2H22v-0.7h4.3v0.7h-1.8V38h-0.8L23.8,33.2L23.8,33.2z"/>
                                     <path class="st1"
-                                          d="M30.4,32.5h0.7l2.4,5.5h-0.9L32,36.6h-2.6L28.9,38H28L30.4,32.5z M31.7,36l-1-2.5l0,0l-1,2.5H31.7z"/>
-                                    <path class="st1" d="M35.7,32.5h0.7v4.8h2.5V38h-3.3v-5.5H35.7z"/>
+                                        d="M23.8,33.2H22v-0.7h4.3v0.7h-1.8V38h-0.8L23.8,33.2L23.8,33.2z" />
                                     <path class="st1"
-                                          d="M41.3,32.5h3.6v0.7h-2.8v1.6h2.6v0.7h-2.6v1.8h3V38h-3.7L41.3,32.5L41.3,32.5z"/>
+                                        d="M30.4,32.5h0.7l2.4,5.5h-0.9L32,36.6h-2.6L28.9,38H28L30.4,32.5z M31.7,36l-1-2.5l0,0l-1,2.5H31.7z" />
+                                    <path class="st1" d="M35.7,32.5h0.7v4.8h2.5V38h-3.3v-5.5H35.7z" />
                                     <path class="st1"
-                                          d="M47.7,32.5h1l3,4.5l0,0v-4.5h0.7V38h-1l-3.1-4.5l0,0V38h-0.8v-5.5H47.7z"/>
-                                    <path class="st1" d="M56.6,33.2h-1.8v-0.7h4.3v0.7h-1.8V38h-0.7V33.2z"/>
-                                    <path class="st1" d="M65.2,32.5h1.9c0.2,0,0.5,0,0.7,0.1s0.4,0.1,0.5,0.3c0.1,0.1,0.3,0.3,0.4,0.4s0.1,0.4,0.1,0.6
+                                        d="M41.3,32.5h3.6v0.7h-2.8v1.6h2.6v0.7h-2.6v1.8h3V38h-3.7L41.3,32.5L41.3,32.5z" />
+                                    <path class="st1"
+                                        d="M47.7,32.5h1l3,4.5l0,0v-4.5h0.7V38h-1l-3.1-4.5l0,0V38h-0.8v-5.5H47.7z" />
+                                    <path class="st1" d="M56.6,33.2h-1.8v-0.7h4.3v0.7h-1.8V38h-0.7V33.2z" />
+                                    <path class="st1"
+                                        d="M65.2,32.5h1.9c0.2,0,0.5,0,0.7,0.1s0.4,0.1,0.5,0.3c0.1,0.1,0.3,0.3,0.4,0.4s0.1,0.4,0.1,0.6
                                     c0,0.3-0.1,0.6-0.3,0.8c-0.2,0.2-0.4,0.3-0.7,0.4l0,0c0.2,0,0.3,0.1,0.5,0.1c0.1,0.1,0.3,0.2,0.4,0.3c0.1,0.1,0.2,0.3,0.3,0.4
                                     c0.1,0.2,0.1,0.3,0.1,0.5s-0.1,0.5-0.2,0.7s-0.2,0.4-0.4,0.5c-0.2,0.1-0.4,0.2-0.6,0.3C67.7,38,67.4,38,67.1,38h-1.9V32.5z
                                      M66,34.8h1c0.1,0,0.3,0,0.4,0s0.2-0.1,0.3-0.1c0.1-0.1,0.2-0.2,0.2-0.3C68,34.3,68,34.2,68,34c0-0.2-0.1-0.4-0.2-0.6
                                     s-0.4-0.2-0.7-0.2h-1.2L66,34.8L66,34.8z M66,37.3h1.1c0.1,0,0.2,0,0.4,0c0.1,0,0.3-0.1,0.4-0.1c0.1-0.1,0.2-0.2,0.3-0.3
-                                    c0.1-0.1,0.1-0.3,0.1-0.5c0-0.3-0.1-0.6-0.3-0.7c-0.2-0.2-0.5-0.2-0.9-0.2H66V37.3z"/>
+                                    c0.1-0.1,0.1-0.3,0.1-0.5c0-0.3-0.1-0.6-0.3-0.7c-0.2-0.2-0.5-0.2-0.9-0.2H66V37.3z" />
                                     <path class="st1"
-                                          d="M71.7,32.5h3.6v0.7h-2.8v1.6h2.6v0.7h-2.6v1.8h3V38h-3.7L71.7,32.5L71.7,32.5z"/>
+                                        d="M71.7,32.5h3.6v0.7h-2.8v1.6h2.6v0.7h-2.6v1.8h3V38h-3.7L71.7,32.5L71.7,32.5z" />
                                     <path class="st1"
-                                          d="M79.4,35.6l-2.1-3.2h1l1.5,2.4l1.6-2.4h0.9l-2.1,3.2V38h-0.7v-2.4H79.4z"/>
+                                        d="M79.4,35.6l-2.1-3.2h1l1.5,2.4l1.6-2.4h0.9l-2.1,3.2V38h-0.7v-2.4H79.4z" />
                                     <path class="st1" d="M87,38.1c-0.4,0-0.8-0.1-1.2-0.2c-0.4-0.1-0.7-0.4-0.9-0.6c-0.3-0.3-0.5-0.6-0.6-0.9
                                     c-0.1-0.4-0.2-0.7-0.2-1.1s0.1-0.8,0.2-1.1c0.1-0.4,0.3-0.7,0.6-0.9c0.3-0.3,0.6-0.5,0.9-0.6c0.4-0.1,0.7-0.2,1.2-0.2
                                     s0.8,0.1,1.2,0.2c0.4,0.1,0.7,0.4,0.9,0.6c0.3,0.3,0.5,0.6,0.6,0.9c0.1,0.4,0.2,0.7,0.2,1.1s-0.1,0.8-0.2,1.1
                                     c-0.1,0.4-0.3,0.7-0.6,0.9c-0.3,0.3-0.6,0.5-0.9,0.6C87.8,38.1,87.4,38.1,87,38.1z M87,37.4c0.3,0,0.6-0.1,0.9-0.2
                                     s0.5-0.3,0.7-0.5s0.3-0.4,0.4-0.7c0.1-0.3,0.1-0.6,0.1-0.9s0-0.6-0.1-0.9s-0.2-0.5-0.4-0.7c-0.2-0.2-0.4-0.4-0.7-0.5
                                     c-0.3-0.1-0.5-0.2-0.9-0.2c-0.3,0-0.6,0.1-0.9,0.2s-0.5,0.3-0.7,0.5s-0.3,0.4-0.4,0.7c-0.1,0.3-0.1,0.6-0.1,0.9s0,0.6,0.1,0.9
-                                    s0.2,0.5,0.4,0.7c0.2,0.2,0.4,0.4,0.7,0.5S86.6,37.4,87,37.4z"/>
+                                    s0.2,0.5,0.4,0.7c0.2,0.2,0.4,0.4,0.7,0.5S86.6,37.4,87,37.4z" />
                                     <path class="st1"
-                                          d="M92.5,32.5h1l3,4.5l0,0v-4.5h0.8V38h-1l-3.1-4.5l0,0V38h-0.7V32.5z"/>
-                                    <path class="st1" d="M100.1,32.5h1.9c0.4,0,0.7,0,1,0.1s0.5,0.2,0.8,0.4s0.4,0.3,0.5,0.5s0.3,0.4,0.3,0.6c0.1,0.2,0.1,0.4,0.2,0.6
+                                        d="M92.5,32.5h1l3,4.5l0,0v-4.5h0.8V38h-1l-3.1-4.5l0,0V38h-0.7V32.5z" />
+                                    <path class="st1"
+                                        d="M100.1,32.5h1.9c0.4,0,0.7,0,1,0.1s0.5,0.2,0.8,0.4s0.4,0.3,0.5,0.5s0.3,0.4,0.3,0.6c0.1,0.2,0.1,0.4,0.2,0.6
                                     c0,0.2,0.1,0.4,0.1,0.6c0,0.4-0.1,0.7-0.2,1c-0.1,0.3-0.3,0.6-0.6,0.9s-0.6,0.5-0.9,0.6c-0.4,0.2-0.8,0.2-1.3,0.2h-1.8V32.5z
                                      M100.9,37.3h0.9c0.3,0,0.6,0,0.9-0.1c0.3-0.1,0.5-0.2,0.7-0.4c0.2-0.2,0.4-0.4,0.5-0.6c0.1-0.3,0.2-0.6,0.2-0.9
-                                    c0-0.2,0-0.4-0.1-0.6s-0.2-0.5-0.3-0.7c-0.2-0.2-0.4-0.4-0.7-0.5s-0.6-0.2-1.1-0.2h-1.1v4H100.9z"/>
+                                    c0-0.2,0-0.4-0.1-0.6s-0.2-0.5-0.3-0.7c-0.2-0.2-0.4-0.4-0.7-0.5s-0.6-0.2-1.1-0.2h-1.1v4H100.9z" />
                                     <g>
-                                        <path class="st1" d="M157.5,32.5h1.9c0.2,0,0.5,0,0.7,0.1s0.4,0.1,0.5,0.3c0.1,0.1,0.3,0.3,0.4,0.4c0.1,0.2,0.1,0.4,0.1,0.6
+                                        <path class="st1"
+                                            d="M157.5,32.5h1.9c0.2,0,0.5,0,0.7,0.1s0.4,0.1,0.5,0.3c0.1,0.1,0.3,0.3,0.4,0.4c0.1,0.2,0.1,0.4,0.1,0.6
                                         c0,0.3-0.1,0.6-0.3,0.8c-0.2,0.2-0.4,0.3-0.7,0.4l0,0c0.2,0,0.3,0.1,0.5,0.1c0.1,0.1,0.3,0.2,0.4,0.3c0.1,0.1,0.2,0.3,0.3,0.4
                                         c0.1,0.2,0.1,0.3,0.1,0.5s-0.1,0.5-0.2,0.7c-0.1,0.2-0.2,0.4-0.4,0.5s-0.4,0.2-0.6,0.3c-0.2,0.1-0.5,0.1-0.8,0.1h-1.9V32.5z
                                          M158.3,34.8h1c0.1,0,0.3,0,0.4,0c0.1,0,0.2-0.1,0.3-0.1c0.1-0.1,0.2-0.2,0.2-0.3c0.1-0.1,0.1-0.2,0.1-0.4c0-0.2-0.1-0.4-0.2-0.6
                                         c-0.1-0.2-0.4-0.2-0.7-0.2h-1.2L158.3,34.8L158.3,34.8z M158.3,37.3h1.1c0.1,0,0.2,0,0.4,0c0.1,0,0.3-0.1,0.4-0.1
-                                        c0.1-0.1,0.2-0.2,0.3-0.3c0.1-0.1,0.1-0.3,0.1-0.5c0-0.3-0.1-0.6-0.3-0.7s-0.5-0.2-0.9-0.2h-1.1V37.3z"/>
-                                        <path class="st1" d="M172.1,32.5h1.9c0.4,0,0.6,0,0.9,0.1c0.2,0.1,0.4,0.2,0.5,0.4c0.1,0.1,0.2,0.3,0.3,0.5s0.1,0.4,0.1,0.5
+                                        c0.1-0.1,0.2-0.2,0.3-0.3c0.1-0.1,0.1-0.3,0.1-0.5c0-0.3-0.1-0.6-0.3-0.7s-0.5-0.2-0.9-0.2h-1.1V37.3z" />
+                                        <path class="st1"
+                                            d="M172.1,32.5h1.9c0.4,0,0.6,0,0.9,0.1c0.2,0.1,0.4,0.2,0.5,0.4c0.1,0.1,0.2,0.3,0.3,0.5s0.1,0.4,0.1,0.5
                                         c0,0.2,0,0.3-0.1,0.5s-0.2,0.3-0.3,0.4s-0.3,0.2-0.4,0.3c-0.2,0.1-0.4,0.1-0.6,0.2l1.6,2.5h-0.9l-1.4-2.4h-0.8v2.4h-0.7v-5.4
                                         H172.1z M172.8,34.9h1c0.1,0,0.3,0,0.4,0c0.1,0,0.3-0.1,0.4-0.1c0.1-0.1,0.2-0.2,0.3-0.3c0.1-0.1,0.1-0.3,0.1-0.5s0-0.3-0.1-0.5
-                                        c-0.1-0.1-0.2-0.2-0.3-0.3c-0.1-0.1-0.2-0.1-0.4-0.1c-0.1,0-0.3,0-0.4,0h-1V34.9z"/>
-                                        <path class="st1" d="M178.3,32.5h1.9c0.4,0,0.7,0,1,0.1s0.5,0.2,0.8,0.4c0.2,0.1,0.4,0.3,0.5,0.5s0.3,0.4,0.3,0.6
+                                        c-0.1-0.1-0.2-0.2-0.3-0.3c-0.1-0.1-0.2-0.1-0.4-0.1c-0.1,0-0.3,0-0.4,0h-1V34.9z" />
+                                        <path class="st1"
+                                            d="M178.3,32.5h1.9c0.4,0,0.7,0,1,0.1s0.5,0.2,0.8,0.4c0.2,0.1,0.4,0.3,0.5,0.5s0.3,0.4,0.3,0.6
                                         c0.1,0.2,0.1,0.4,0.2,0.6c0,0.2,0.1,0.4,0.1,0.6c0,0.4-0.1,0.7-0.2,1c-0.1,0.3-0.3,0.6-0.6,0.9s-0.6,0.5-0.9,0.6
                                         c-0.4,0.2-0.8,0.2-1.3,0.2h-1.8V32.5z M179.1,37.3h0.9c0.3,0,0.6,0,0.9-0.1c0.3-0.1,0.5-0.2,0.7-0.4c0.2-0.2,0.4-0.4,0.5-0.6
-                                        c0.1-0.3,0.2-0.6,0.2-0.9c0-0.2,0-0.4-0.1-0.6s-0.2-0.5-0.3-0.7c-0.2-0.2-0.4-0.4-0.7-0.5s-0.6-0.2-1.1-0.2H179v4H179.1z"/>
+                                        c0.1-0.3,0.2-0.6,0.2-0.9c0-0.2,0-0.4-0.1-0.6s-0.2-0.5-0.3-0.7c-0.2-0.2-0.4-0.4-0.7-0.5s-0.6-0.2-1.1-0.2H179v4H179.1z" />
                                         <path class="st1"
-                                              d="M185.8,32.5h3.6v0.7h-2.8v1.6h2.6v0.7h-2.6v1.8h3V38h-3.7v-5.5H185.8z"/>
-                                        <path class="st1" d="M192.1,32.5h1.9c0.4,0,0.6,0,0.9,0.1c0.2,0.1,0.4,0.2,0.5,0.4c0.1,0.1,0.2,0.3,0.3,0.5s0.1,0.4,0.1,0.5
+                                            d="M185.8,32.5h3.6v0.7h-2.8v1.6h2.6v0.7h-2.6v1.8h3V38h-3.7v-5.5H185.8z" />
+                                        <path class="st1"
+                                            d="M192.1,32.5h1.9c0.4,0,0.6,0,0.9,0.1c0.2,0.1,0.4,0.2,0.5,0.4c0.1,0.1,0.2,0.3,0.3,0.5s0.1,0.4,0.1,0.5
                                         c0,0.2,0,0.3-0.1,0.5s-0.2,0.3-0.3,0.4s-0.3,0.2-0.4,0.3c-0.2,0.1-0.4,0.1-0.6,0.2l1.6,2.5h-0.9l-1.4-2.4h-0.8v2.4h-0.7v-5.4
                                         H192.1z M192.9,34.9h1c0.1,0,0.3,0,0.4,0c0.1,0,0.3-0.1,0.4-0.1c0.1-0.1,0.2-0.2,0.3-0.3c0.1-0.1,0.1-0.3,0.1-0.5s0-0.3-0.1-0.5
-                                        c-0.1-0.1-0.2-0.2-0.3-0.3c-0.1-0.1-0.2-0.1-0.4-0.1c-0.1,0-0.3,0-0.4,0h-1V34.9z"/>
+                                        c-0.1-0.1-0.2-0.2-0.3-0.3c-0.1-0.1-0.2-0.1-0.4-0.1c-0.1,0-0.3,0-0.4,0h-1V34.9z" />
                                         <path class="st1" d="M198.6,36.8c0.1,0.2,0.3,0.4,0.5,0.4c0.2,0.1,0.4,0.1,0.7,0.1c0.1,0,0.3,0,0.4-0.1c0.1,0,0.2-0.1,0.4-0.2
                                         c0.1-0.1,0.2-0.2,0.3-0.3c0.1-0.1,0.1-0.2,0.1-0.4c0-0.2-0.1-0.4-0.2-0.5c-0.1-0.1-0.3-0.2-0.5-0.3c-0.2-0.1-0.4-0.1-0.7-0.2
                                         c-0.2-0.1-0.5-0.2-0.7-0.3c-0.2-0.1-0.4-0.3-0.5-0.5s-0.2-0.5-0.2-0.9c0-0.2,0-0.3,0.1-0.5s0.2-0.3,0.3-0.5
@@ -196,9 +208,10 @@
                                         c-0.1-0.1-0.2-0.3-0.4-0.4s-0.4-0.1-0.6-0.1c-0.2,0-0.4,0-0.5,0.1s-0.2,0.1-0.3,0.2s-0.1,0.2-0.2,0.3c0,0.1-0.1,0.2-0.1,0.3
                                         c0,0.2,0.1,0.4,0.2,0.5c0.1,0.1,0.3,0.2,0.5,0.3s0.4,0.1,0.7,0.2c0.2,0.1,0.5,0.1,0.7,0.3c0.2,0.1,0.4,0.3,0.5,0.5
                                         s0.2,0.5,0.2,0.8s-0.1,0.5-0.2,0.7c-0.1,0.2-0.2,0.4-0.4,0.5s-0.4,0.3-0.6,0.3c-0.2,0.1-0.5,0.1-0.8,0.1c-0.4,0-0.7-0.1-1-0.2
-                                        s-0.6-0.3-0.8-0.6L198.6,36.8z"/>
+                                        s-0.6-0.3-0.8-0.6L198.6,36.8z" />
                                         <g>
-                                            <path class="st1" d="M163.7,35.2c0-1.4,0.9-2.6,2.3-2.8c1.1-0.2,2.1,0.1,2.9,1c0.4,0.4,0.5,0.9,0.6,1.4c0.1,0.8,0,1.5-0.5,2.1
+                                            <path class="st1"
+                                                d="M163.7,35.2c0-1.4,0.9-2.6,2.3-2.8c1.1-0.2,2.1,0.1,2.9,1c0.4,0.4,0.5,0.9,0.6,1.4c0.1,0.8,0,1.5-0.5,2.1
                                             c-0.4,0.6-1,1-1.7,1.2c-0.8,0.2-1.6,0-2.3-0.5s-1.1-1.1-1.2-1.9C163.7,35.5,163.7,35.4,163.7,35.2z M169,33.9
                                             C169,34,169,34,169,33.9c0,0.1,0,0.1,0.1,0.1l0,0C169,34,169,34,169,33.9L169,33.9c-0.1-0.2-0.3-0.4-0.4-0.6
                                             c0,0.1-0.1,0.1-0.2,0.1h-0.1c-0.1,0-0.1,0-0.1,0.1v0.1c0,0,0,0,0,0.1c-0.1-0.1-0.2-0.1-0.3-0.1l0,0c-0.1,0.1-0.1,0.2,0,0.3V34
@@ -220,7 +233,7 @@
                                             c0,0-0.1,0-0.1-0.1H169c-0.1,0-0.2,0.1-0.3,0.2c0,0,0,0-0.1,0s-0.1-0.1-0.2-0.1c-0.1-0.1-0.2-0.1-0.3-0.1H168h-0.1
                                             c-0.1,0-0.2,0.1-0.3,0.1s-0.2,0.1-0.2,0.2s0,0.1,0,0.2s0,0.1,0,0.1l-0.1,0.1c0,0.1,0,0.3,0,0.4c0.1,0.3,0.3,0.4,0.6,0.3
                                             c0.2-0.1,0.3-0.1,0.5,0l0.1,0.1c0,0.1,0,0.2,0,0.2c0.1,0.1,0.1,0.1,0,0.2l0,0c-0.1,0.1-0.1,0.1,0,0.2
-                                            C168.6,36.6,168.7,36.8,168.7,36.9z M168.5,33.3L168.5,33.3c-0.1-0.1-0.1-0.1-0.2-0.2C168.3,33.2,168.4,33.2,168.5,33.3z"/>
+                                            C168.6,36.6,168.7,36.8,168.7,36.9z M168.5,33.3L168.5,33.3c-0.1-0.1-0.1-0.1-0.2-0.2C168.3,33.2,168.4,33.2,168.5,33.3z" />
                                         </g>
                                     </g>
                                 </g>
@@ -232,7 +245,7 @@
                                 c0,0-2.4,2.2-0.6,3.3c1.4,0.8,6.8,4.6,9.3,6.3C150.7,44.2,150.5,44.7,150.4,45.3z M155.8,46.1c-0.4,1.6-1.6,2.7-2.6,2.9
                                 c-0.1,0-0.3,0-0.4,0c-0.7-0.1-1.1-0.6-1.2-0.9c-0.3-0.7-0.4-1.5-0.2-2.4c0.4-1.6,1.6-2.7,2.6-2.9c0.1,0,0.3,0,0.4,0
                                 c0.7,0.1,1.1,0.6,1.2,0.9C155.9,44.3,156,45.2,155.8,46.1z M115,17.4v-1c-2.4,1.1-4.4,2.5-5.7,4.1l0.4,1
-                                C110.9,19.9,112.7,18.5,115,17.4z"/>
+                                C110.9,19.9,112.7,18.5,115,17.4z" />
                             </g>
                         </svg>
                     </a>
@@ -243,8 +256,8 @@
                     <div class="authBttns">
                         <div class="dropdown">
                             <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton"
-                                    data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"
-                                    style="background-color:#343A40">
+                                data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"
+                                style="background-color:#343A40">
                                 User profile
                             </button>
                             <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
@@ -282,9 +295,9 @@
                             <ul>
                                 <li>
                                     <a href="/dashboard-return" class="active"><span><i class="fa fa-user-circle-o"
-                                                                                        aria-hidden="true"></i></span>
-                                        Home <em class="menu_icon"><i
-                                                class="fa fa-angle-down" aria-hidden="true"></i></em></a>
+                                                aria-hidden="true"></i></span>
+                                        Home <em class="menu_icon"><i class="fa fa-angle-down"
+                                                aria-hidden="true"></i></em></a>
                                 </li>
                                 {{-- <li>
                                     <a href="/InstaHirin" ><span><i class="fa fa-user-circle-o"
@@ -299,74 +312,85 @@
                                 <li><a href="/profile"><span><i class="fa fa-id-card" aria-hidden="true"></i></span>
                                         Profile
                                         <em class="menu_icon"><i class="fa fa-angle-down"
-                                                                 aria-hidden="true"></i></em></a>
+                                                aria-hidden="true"></i></em></a>
                                 </li>
                                 <li class="has_list open_sublist" onclick="toggleSublist(this)">
                                     <a href="javascript:void(0)">
                                         <span><i class="fa fa-clock-o" aria-hidden="true"></i></span>
                                         Activity
-                                        <em class="menu_icon"><i class="fa fa-angle-down" aria-hidden="true"></i></em>
+                                        <em class="menu_icon"><i class="fa fa-angle-down"
+                                                aria-hidden="true"></i></em>
                                     </a>
                                     <ul>
-                                        <li><a href="{{url('Employer-activity')}}">► Employer / Company</a></li>
-                                        <li><a href="{{url('Employee-activity')}}">► Employee / Talent</a></li>
-                                        <li><a href="{{route('agencyContractor')}}">► Agency / Contractor</a></li>
+                                        <li><a href="{{ url('Employer-activity') }}">► Employer / Company</a></li>
+                                        <li><a href="{{ url('Employee-activity') }}">► Employee / Talent</a></li>
+                                        <li><a href="{{ route('agencyContractor') }}">► Agency / Contractor</a></li>
                                     </ul>
                                 </li>
-                                <li><a href="{{url('/Master')}}"><span><i class="fa fa-male"
-                                                                          aria-hidden="true"></i></span>
+                                <li><a href="{{ url('/InstaProject') }}"><span>
+                                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 576 512"><path d="M264.5 5.2c14.9-6.9 32.1-6.9 47 0l218.6 101c8.5 3.9 13.9 12.4 13.9 21.8s-5.4 17.9-13.9 21.8l-218.6 101c-14.9 6.9-32.1 6.9-47 0L45.9 149.8C37.4 145.8 32 137.3 32 128s5.4-17.9 13.9-21.8L264.5 5.2zM476.9 209.6l53.2 24.6c8.5 3.9 13.9 12.4 13.9 21.8s-5.4 17.9-13.9 21.8l-218.6 101c-14.9 6.9-32.1 6.9-47 0L45.9 277.8C37.4 273.8 32 265.3 32 256s5.4-17.9 13.9-21.8l53.2-24.6 152 70.2c23.4 10.8 50.4 10.8 73.8 0l152-70.2zm-152 198.2l152-70.2 53.2 24.6c8.5 3.9 13.9 12.4 13.9 21.8s-5.4 17.9-13.9 21.8l-218.6 101c-14.9 6.9-32.1 6.9-47 0L45.9 405.8C37.4 401.8 32 393.3 32 384s5.4-17.9 13.9-21.8l53.2-24.6 152 70.2c23.4 10.8 50.4 10.8 73.8 0z"/></svg>
+                                </span>
+                                        Insta Project
+                                        <em class="menu_icon"><i class="fa fa-angle-down"
+                                                aria-hidden="true"></i></em></a>
+                                </li>
+                                <li><a href="{{ url('/Master') }}"><span><i class="fa fa-male"
+                                                aria-hidden="true"></i></span>
                                         Master
                                         <em class="menu_icon"><i class="fa fa-angle-down"
-                                                                 aria-hidden="true"></i></em></a>
+                                                aria-hidden="true"></i></em></a>
                                 </li>
-                                <li class="has_list"><a href="javascript:void(0)"><span><i class="fa fa-usd"
-                                                                                           aria-hidden="true"></i></span>
+
+                                <li class="has_list open_sublist" onclick="toggleSublist(this)">
+                                    <a href="javascript:void(0)">
+                                        <span><i class="fa fa-usd"
+                                                 aria-hidden="true"></i></span>
                                         Salary Details
                                         <em class="menu_icon"><i class="fa fa-angle-down"
-                                                                 aria-hidden="true"></i></em></a>
-
+                                                                 aria-hidden="true"></i></em>
+                                    </a>
                                     <ul>
-                                        <li><a href="javascript:void(0)">Employee Salary Details</a></li>
-                                        <li><a href="javascript:void(0)">Salary Head Master</a></li>
-                                        <li><a href="javascript:void(0)">Normal Salary</a></li>
+                                        <li><a href="{{route('salaryDetails')}}">Employee Salary Details</a></li>
+                                        <li><a href="{{route('normalSalary')}}">Normal Salary</a></li>
                                     </ul>
                                 </li>
                                 <li class="has_list open_sublist" onclick="toggleSublist(this)">
                                     <a href="javascript:void(0)">
                                         <span><i class="fa fa-clock-o" aria-hidden="true"></i></span>
                                         Time Tracking
-                                        <em class="menu_icon"><i class="fa fa-angle-down" aria-hidden="true"></i></em>
+                                        <em class="menu_icon"><i class="fa fa-angle-down"
+                                                aria-hidden="true"></i></em>
                                     </a>
-                                     <ul>
-                                        @if(auth()->user()->roles == 'user')
-                                            <li><a href="{{route('logInOff')}}">► Log In / Off</a></li>
+                                    <ul>
+                                        @if (auth()->user()->roles == 'user')
+                                            <li><a href="{{ route('logInOff') }}">► Log In / Off</a></li>
                                         @endif
-                                        @if(auth()->user()->roles == 'user')
-                                            <li><a href="{{route('employeeWorkLog')}}">► Work Logs</a></li>
+                                        @if (auth()->user()->roles == 'user')
+                                            <li><a href="{{ route('employeeWorkLog') }}">► Work Logs</a></li>
                                         @endif
-                                        @if(auth()->user()->roles == 'company')
-                                            <li><a href="{{route('timeLogs')}}">► Time Logs</a></li>
+                                        @if (auth()->user()->roles == 'company')
+                                            <li><a href="{{ route('timeLogs') }}">► Time Logs</a></li>
                                         @endif
-                                        @if(auth()->user()->roles == 'user' || auth()->user()->roles == 'company')
-                                            <li><a href="{{route('timeOff')}}">► Time Off</a></li>
+                                        @if (auth()->user()->roles == 'user' || auth()->user()->roles == 'company')
+                                            <li><a href="{{ route('timeOff') }}">► Time Off</a></li>
                                         @endif
-                                        @if(auth()->user()->roles == 'user')
-                                            <li><a href="{{route('leaveRequest')}}">► Leave Request</a></li>
+                                        @if (auth()->user()->roles == 'user')
+                                            <li><a href="{{ route('leaveRequest') }}">► Leave Request</a></li>
                                         @endif
-                                        @if(auth()->user()->roles == 'user')
-                                            <li><a href="{{route('lateRequest')}}">► Late Coming Request</a></li>
+                                        @if (auth()->user()->roles == 'user')
+                                            <li><a href="{{ route('lateRequest') }}">► Late Coming Request</a></li>
                                         @endif
-                                        @if(auth()->user()->roles == 'company')
-                                            <li><a href="{{route('leaveLateApproval')}}">► Leave / Late Request
+                                        @if (auth()->user()->roles == 'company')
+                                            <li><a href="{{ route('leaveLateApproval') }}">► Leave / Late Request
                                                     Approval</a></li>
                                         @endif
                                     </ul>
                                 </li>
                                 <li class="has_list"><a href="javascript:void(0)"><span><i class="fa fa-money"
-                                                                                           aria-hidden="true"></i></span>
+                                                aria-hidden="true"></i></span>
                                         Payroll
                                         <em class="menu_icon"><i class="fa fa-angle-down"
-                                                                 aria-hidden="true"></i></em></a>
+                                                aria-hidden="true"></i></em></a>
 
                                     <ul>
                                         <li><a href="javascript:void(0)">Payrolls</a></li>
@@ -375,10 +399,10 @@
                                     </ul>
                                 </li>
                                 <li class="has_list"><a href="javascript:void(0)"><span><i class="fa fa-database"
-                                                                                           aria-hidden="true"></i></span>
+                                                aria-hidden="true"></i></span>
                                         Project
                                         <em class="menu_icon"><i class="fa fa-angle-down"
-                                                                 aria-hidden="true"></i></em></a>
+                                                aria-hidden="true"></i></em></a>
 
                                     <ul>
                                         <li><a href="javascript:void(0)">Create Project</a></li>
@@ -386,40 +410,40 @@
                                     </ul>
                                 </li>
                                 <li><a href="javascript:void(0)"><span><i class="fa fa-credit-card"
-                                                                          aria-hidden="true"></i></span> Payments
+                                                aria-hidden="true"></i></span> Payments
                                         <em class="menu_icon"><i class="fa fa-angle-down"
-                                                                 aria-hidden="true"></i></em></a>
+                                                aria-hidden="true"></i></em></a>
                                 </li>
                                 <li><a href="javascript:void(0)"><span><i class="fa fa-file-text"
-                                                                          aria-hidden="true"></i></span> Documents
+                                                aria-hidden="true"></i></span> Documents
                                         <em class="menu_icon"><i class="fa fa-angle-down"
-                                                                 aria-hidden="true"></i></em></a>
+                                                aria-hidden="true"></i></em></a>
                                 </li>
                                 <li><a href="javascript:void(0)"><span><i class="fa fa-line-chart"
-                                                                          aria-hidden="true"></i></span> Benefits
+                                                aria-hidden="true"></i></span> Benefits
                                         <em class="menu_icon"><i class="fa fa-angle-down"
-                                                                 aria-hidden="true"></i></em></a>
+                                                aria-hidden="true"></i></em></a>
                                 </li>
                                 <li><a href="javascript:void(0)"><span><i class="fa fa-file"
-                                                                          aria-hidden="true"></i></span>
+                                                aria-hidden="true"></i></span>
                                         Expenses
                                         <em class="menu_icon"><i class="fa fa-angle-down"
-                                                                 aria-hidden="true"></i></em></a>
+                                                aria-hidden="true"></i></em></a>
                                 </li>
                                 <li><a href="javascript:void(0)"><span><i class="fa fa-file-o"
-                                                                          aria-hidden="true"></i></span> Requests
+                                                aria-hidden="true"></i></span> Requests
                                         <em class="menu_icon"><i class="fa fa-angle-down"
-                                                                 aria-hidden="true"></i></em></a>
+                                                aria-hidden="true"></i></em></a>
                                 </li>
                                 <li><a href="javascript:void(0)"><span><i class="fa fa-inbox"
-                                                                          aria-hidden="true"></i></span> Inbox
+                                                aria-hidden="true"></i></span> Inbox
                                         <em class="menu_icon"><i class="fa fa-angle-down"
-                                                                 aria-hidden="true"></i></em></a>
+                                                aria-hidden="true"></i></em></a>
                                 </li>
                                 <li><a href="javascript:void(0)"><span><i class="fa fa-clipboard"
-                                                                          aria-hidden="true"></i></span> My eDashboard
+                                                aria-hidden="true"></i></span> My eDashboard
                                         <em class="menu_icon"><i class="fa fa-angle-down"
-                                                                 aria-hidden="true"></i></em></a>
+                                                aria-hidden="true"></i></em></a>
                                 </li>
 
 

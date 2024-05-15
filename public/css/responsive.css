@@ -165,9 +165,9 @@
         -webkit-transition: all 0.2s ease;
     }
 
-    .header {
+    /* .header {
         z-index: 22;
-    }
+    } */
     .nav-list {
         height: calc(100% - 0px);
     }
