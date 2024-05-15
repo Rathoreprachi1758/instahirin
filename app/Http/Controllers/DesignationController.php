@@ -2,11 +2,12 @@
 
 namespace App\Http\Controllers;
 
-use Auth;
-use Illuminate\Http\Request;
-use App\Models\Department;
 use App\Models\Company;
+use App\Models\Department;
 use App\Models\designation;
+use Auth;
+use Illuminate\Http\JsonResponse;
+use Illuminate\Http\Request;
 use RealRashid\SweetAlert\Facades\Alert;
 
 class DesignationController extends Controller
@@ -15,13 +16,24 @@ class DesignationController extends Controller
      * Display a listing of the resource.
      */
     public function index()
-    {   
-        $companyId = Company::where('user_id',Auth::id())->pluck('id');
-        $department = Department::whereIn('company_id',$companyId)->get();
-        $comapnaies = Company::where('user_id',Auth::id())->get();
+    {
+        $companyId = Company::where('user_id', Auth::id())->pluck('id');
+        $department = Department::whereIn('company_id', $companyId)->get();
+        $companies = Company::where('user_id', Auth::id())->get();
         $designation = designation::where('user_id', Auth::id())->get();
         // return $department;
-        return view('dashboard.master.designation',['comapnaies'=>$comapnaies,'department'=>$department,'designation' =>$designation]);
+        return view('dashboard.master.designation', ['companies' => $companies, 'department' => $department, 'designation' => $designation]);
+    }
+
+    /**
+     * @param $companyId
+     * @return JsonResponse
+     */
+    public function company($companyId)
+    {
+        $departments = Department::where('company_id', $companyId)->where('user_id', Auth::id())->get();
+        return response()->json($departments);
+
     }
 
     /**
@@ -46,7 +58,7 @@ class DesignationController extends Controller
         $designation->company_id = $request->company_id;
         $designation->save();
         Alert::success('Designation Details', 'Added Successfully');
-        return redirect()->back()->with('message','Designation Entered Succesfully');
+        return redirect()->back()->with('message', 'Designation Entered Succesfully');
 
 
     }
@@ -80,16 +92,16 @@ class DesignationController extends Controller
         $designation->company_id = $request->company_id;
         $designation->save();
         Alert::success('Designation Details', 'Updated Successfully');
-        return redirect()->back()->with('message','Designation Updated Succesfully');
+        return redirect()->back()->with('message', 'Designation Updated Succesfully');
     }
 
     /**
      * Remove the specified resource from storage.
      */
     public function destroy(string $id)
-    {   
+    {
         $designation = designation::findOrFail($id);
         $designation->destroy($id);
-        return redirect()->back()->with('message','Designation Deleted Succesfully');
+        return redirect()->back()->with('message', 'Designation Deleted Succesfully');
     }
 }

@@ -14,12 +14,23 @@ class CategoryController extends Controller
      * Display a listing of the resource.
      */
     public function index()
-    {   
+    {
         $companyId = Company::where('user_id', Auth::id())->pluck('id');
         $department = Department::whereIn('company_id', $companyId)->get();
-        $comapnaies = Company::where('user_id', Auth::id())->get();
+        $companies = Company::where('user_id', Auth::id())->get();
         $category = Category::where('user_id',Auth::id())->get();
-        return view('dashboard.master.category',['category'=>$category,'department' => $department, 'comapnaies' => $comapnaies,]);
+        return view('dashboard.master.category',['category'=>$category,'department' => $department, 'companies' => $companies,]);
+    }
+
+    /**
+     * @param $companyId
+     * @return \Illuminate\Http\JsonResponse
+     */
+    public function company($companyId)
+    {
+        $departments = Department::where('company_id', $companyId)->where('user_id', Auth::id())->get();
+        return response()->json($departments);
+
     }
 
     /**

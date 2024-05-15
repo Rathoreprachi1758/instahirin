@@ -507,7 +507,7 @@
                                                            value="1" {{ $kyc?->agrement_checkbox ? 'checked' : '' }}/>
                                                     <span class="checkbox-custom rectangular"></span>
                                                 </label>
-                                                I agree, <a href="#">read more</a>
+                                                 I agree, and confirm to the best of my knowledge that the information provided in this declaration form is current, accurate and representative of the anti-money laundering and anti-terrorist financing for the 'The Prevention of Money Laundering Act' in the relevant applicable jurisdiction and the regulations thereto: I have submitted evidence of identity and proof of address, dated within the last three months; and I hereby declare that my funds are not as a result of illegal means or activity. I also confirm and authorize letWizard platform to share my information provided in this declaration form to relevant authorities, correspondent and clearing banks and institution, and parties relevant to AML/CFT/KYC Compliance as and when requested.
                                             </p>
                                         </div>
                                         @error('individual_agrement_checkbox')
@@ -987,7 +987,7 @@
                                                            value="1" {{ $kyc?->agrement_checkbox ? 'checked' : '' }}/>
                                                     <span class="checkbox-custom rectangular"></span>
                                                 </label>
-                                                I agree, <a href="#">read more</a>
+                                                I agree, and confirm to the best of my knowledge that the information provided in this declaration form is current, accurate and representative of the anti-money laundering and anti-terrorist financing for the 'The Prevention of Money Laundering Act' in the relevant applicable jurisdiction and the regulations thereto: I have submitted evidence of identity and proof of address, dated within the last three months; and I hereby declare that my funds are not as a result of illegal means or activity. I also confirm and authorize letWizard platform to share my information provided in this declaration form to relevant authorities, correspondent and clearing banks and institution, and parties relevant to AML/CFT/KYC Compliance as and when requested.
                                             </p>
                                         </div>
                                         @error('agrement_checkbox')

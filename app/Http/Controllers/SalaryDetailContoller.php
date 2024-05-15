@@ -14,7 +14,6 @@ use Illuminate\Foundation\Application;
 use Illuminate\Http\JsonResponse;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
-use MongoDB\Driver\Session;
 
 class SalaryDetailContoller extends Controller
 {

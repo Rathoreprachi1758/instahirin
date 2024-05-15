@@ -114,9 +114,14 @@
                                                     <div class="allSelect">
                                                         <strong class="entitiesSelect">Select Company</strong>
                                                         <div class="showSort_select seleComp">
-                                                            <select class="fav_show">
-                                                                <option value="Yes">Yes</option>
-                                                                <option value="No">No</option>
+                                                            <select id="companyName" name="company_desig"
+                                                                    aria-label="First select example" onchange="fetchDepartments()">
+                                                                <option selected disabled>Select Company</option>
+                                                                @isset($companies)
+                                                                    @foreach($companies as $company)
+                                                                        <option value="{{ $company->id }}">{{$company->company_name }}</option>
+                                                                    @endforeach
+                                                                @endisset
                                                             </select>
                                                         </div>
                                                     </div>
@@ -124,9 +129,19 @@
                                                     <div class="allSelect">
                                                         <strong class="entitiesSelect">Select Department</strong>
                                                         <div class="showSort_select seleComp">
-                                                            <select class="fav_show">
-                                                                <option value="Yes">Yes</option>
-                                                                <option value="No">No</option>
+                                                            <select id="departmentName" name="department"
+                                                                    aria-label="Second select example">
+                                                                @if(!isset($companies))
+                                                                    disabled
+                                                                @endif>
+                                                                <option selected disabled>Select Department</option>
+                                                                @isset($departments)
+                                                                    @foreach($departments as $department)
+                                                                        <option value="{{ $department->id }}">
+                                                                            {{ $department->department_name }}
+                                                                        </option>
+                                                                    @endforeach
+                                                                @endisset
                                                             </select>
                                                         </div>
                                                     </div>
@@ -298,7 +313,7 @@
                                                                                         <div class="popupForm_field">
                                                                                             <select name="company_name"
                                                                                                 class="selective">
-                                                                                                @foreach ($comapnaies as $id)
+                                                                                                @foreach ($companies as $id)
                                                                                                     <option
                                                                                                         value="{{ $id->id }}" @if ($id->id === $emp->company_id) selected @endif >
                                                                                                         {{ $id->company_name }}
@@ -749,7 +764,7 @@
                                 <strong>Company<span style="color: red">*</span></strong>
                                 <div class="popupForm_field">
                                     <select name="company_name" class="selective">
-                                        @foreach ($comapnaies as $id)
+                                        @foreach ($companies as $id)
                                             <option value="{{ $id->id }}">
                                                 {{ $id->company_name }}
                                             </option>
@@ -991,3 +1006,28 @@
         </div>
     </div>
 </div>
+
+<script>
+    function fetchDepartments() {
+        var companyId = document.getElementById('companyName').value;
+        var departmentSelect = document.getElementById('departmentName');
+        console.log(companyId);
+        departmentSelect.innerHTML = ' <option selected disabled>Select Department</option>';
+        fetch('/employee-master-company/' + companyId, {
+            method: 'GET',
+            headers: {
+                'Content-Type': 'application/json'
+            }
+        })
+            .then(response => response.json())
+            .then(data => {
+                data.forEach(function (department) {
+                    var option = document.createElement('option');
+                    option.value = department.id;
+                    option.textContent = department.department_name;
+                    departmentSelect.appendChild(option);
+                });
+            })
+            .catch(error => console.error('Error fetching departments:', error));
+    }
+</script>

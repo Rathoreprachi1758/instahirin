@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use Auth;
 use DateTime;
+use Illuminate\Http\JsonResponse;
 use Illuminate\Http\Request;
 use App\Models\Department;
 use App\Models\Company;
@@ -21,18 +22,29 @@ class EmployeeMasterController extends Controller
      * Display a listing of the resource.
      */
     public function index()
-    {    
+    {
         $designation = designation::all();
         $category = Category::all();
         $companyId = Company::where('user_id', Auth::id())->pluck('id');
         $department = Department::whereIn('company_id', $companyId)->get();
-        $comapnaies = Company::where('user_id', Auth::id())->get();
-        $EmpMasters = Employee::all(); 
+        $companies = Company::where('user_id', Auth::id())->get();
+        $EmpMasters = Employee::all();
         $countrycodes = Country::all(['name', 'phone']);
         $Shiftcode = Shiftcode::all();
         $weeks = week::all();
         // return $countrycodes;
-        return view('dashboard.master.employee_master',['EmpMaster'=>$EmpMasters,'department' => $department, 'comapnaies' => $comapnaies,'designation' =>$designation,'category'=>$category,'countrycodes'=>$countrycodes,'Shiftcode'=>$Shiftcode,'weeks'=>$weeks]);
+        return view('dashboard.master.employee_master',['EmpMaster'=>$EmpMasters,'department' => $department, 'companies' => $companies,'designation' =>$designation,'category'=>$category,'countrycodes'=>$countrycodes,'Shiftcode'=>$Shiftcode,'weeks'=>$weeks]);
+    }
+
+    /**
+     * @param $companyId
+     * @return JsonResponse
+     */
+    public function company($companyId): JsonResponse
+    {
+        $departments = Department::where('company_id', $companyId)->where('user_id', Auth::id())->get();
+        return response()->json($departments);
+
     }
 
     /**

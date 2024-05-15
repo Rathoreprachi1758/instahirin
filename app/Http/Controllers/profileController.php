@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Events\KycSubmitNotification;
+use App\Models\Company;
 use App\Models\CompanyKycInformation;
 use App\Models\Country;
 use App\Models\Creditrequest;
@@ -244,7 +245,7 @@ class profileController extends Controller
                 $kyc_info->{$field} = $filename;
             }
         }
-     event(new KycSubmitNotification($kyc_info));
+        event(new KycSubmitNotification($kyc_info));
         $kyc_info->save();
 
         return redirect()->back()->with('kyc_msg', ' KYC Request has been updated!');
@@ -742,7 +743,8 @@ class profileController extends Controller
 
     public function master_data(Request $request)
     {
-        return view('dashboard.master.Import');
+        $companies = Company::where('user_id', Auth::id())->get();
+        return view('dashboard.master.Import', compact('companies'));
     }
 
     public function Shift_codes(Request $request)

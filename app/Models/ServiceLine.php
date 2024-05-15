@@ -8,4 +8,6 @@ use Illuminate\Database\Eloquent\Model;
 class ServiceLine extends Model
 {
     use HasFactory;
+
+    protected $table = "service_lines";
 }

@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use Auth;
+use Illuminate\Http\JsonResponse;
 use Illuminate\Http\Request;
 use App\Models\employeeconfig;
 use App\Models\Department;
@@ -17,16 +18,27 @@ class EmployeeConfigController extends Controller
      * Display a listing of the resource.
      */
     public function index()
-    {   
+    {
         $companyId = Company::where('user_id',Auth::id())->pluck('id');
         $department = Department::whereIn('company_id',$companyId)->get();
-        $comapnaies = Company::where('user_id',Auth::id())->get();
+        $companies = Company::where('user_id',Auth::id())->get();
         $employees  = employee::where('user_id',Auth::id())->whereIn('company_id',$companyId)->get();
         // $employees  = employee::where('user_id',Auth::id())->get();
         // return $employees;
         $EmpConfig = employeeconfig::all();
         // return $EmpConfig;
-        return view('dashboard.master.employee_configuration',['EmpConfig'=>$EmpConfig,'companies'=>$comapnaies,'departments'=>$department,'employees'=>$employees]);
+        return view('dashboard.master.employee_configuration',['EmpConfig'=>$EmpConfig,'companies'=>$companies,'departments'=>$department,'employees'=>$employees]);
+    }
+
+    /**
+     * @param $companyId
+     * @return JsonResponse
+     */
+    public function company($companyId): JsonResponse
+    {
+        $departments = Department::where('company_id', $companyId)->where('user_id', Auth::id())->get();
+        return response()->json($departments);
+
     }
 
     /**
@@ -59,7 +71,7 @@ class EmployeeConfigController extends Controller
         $EmpConfig->save();
         Alert::success('Configuration Details', 'Added Successfully');
         return redirect()->back()->with('message','Configuration added Succesfully');
-        
+
     }
 
     /**
@@ -82,7 +94,7 @@ class EmployeeConfigController extends Controller
      * Update the specified resource in storage.
      */
     public function update(Request $request, string $id)
-    {   
+    {
         $EmpConfig = employeeconfig :: find($id);
         $EmpConfig->Emp_code = $request->shift_code;
         $EmpConfig->Emp_name = $request->shift_code;

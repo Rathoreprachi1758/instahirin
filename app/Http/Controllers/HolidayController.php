@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use Auth;
 use DateTime;
+use Illuminate\Http\JsonResponse;
 use Illuminate\Http\Request;
 use App\Models\holiday;
 use App\Models\Department;
@@ -16,15 +17,25 @@ class HolidayController extends Controller
      * Display a listing of the resource.
      */
     public function index()
-    {   
+    {
         $companyId = Company::where('user_id',Auth::id())->pluck('id');
         // return $companyId;
         $department = Department::whereIn('company_id',$companyId)->get();
-        $comapnaies = Company::where('user_id',Auth::id())->get();
+        $companies = Company::where('user_id',Auth::id())->get();
         $HoliDay = holiday::whereIn('company_id',$companyId)->get();
-        return view('dashboard.master.Holiday',['HoliDay'=>$HoliDay,'comapnaies' =>$comapnaies,'department'=>$department]);
+        return view('dashboard.master.Holiday',['HoliDay'=>$HoliDay,'companies' =>$companies,'department'=>$department]);
     }
 
+    /**
+     * @param $companyId
+     * @return JsonResponse
+     */
+    public function company($companyId): JsonResponse
+    {
+        $departments = Department::where('company_id', $companyId)->where('user_id', Auth::id())->get();
+        return response()->json($departments);
+
+    }
     /**
      * Show the form for creating a new resource.
      */
@@ -37,7 +48,7 @@ class HolidayController extends Controller
      * Store a newly created resource in storage.
      */
     public function store(Request $request)
-    {   
+    {
         // return $request->all();
         $HoLiday = new holiday();
         $HoLiday->holiday_name = $request->Holiday_name;
