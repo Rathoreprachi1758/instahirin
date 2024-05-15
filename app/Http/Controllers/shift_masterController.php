@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use Illuminate\Http\JsonResponse;
 use Illuminate\Http\Request;
 use Auth;
 use App\Models\Shift_master_daily;
@@ -24,7 +25,7 @@ class shift_masterController extends Controller
     {
         $companyId = Company::where('user_id', Auth::id())->pluck('id');
         $department = Department::whereIn('company_id', $companyId)->get();
-        $comapnaies = Company::where('user_id', Auth::id())->get();
+        $companies = Company::where('user_id', Auth::id())->get();
         $shify = Shift_master_daily::where('user_id', Auth::id())
         ->orderByRaw("FIELD(week_day, 'Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday', 'Sunday')")
         ->orderBy('week_day', 'ASC')
@@ -32,9 +33,19 @@ class shift_masterController extends Controller
         $shiftCode = Shiftcode::all();
         $timezones = TimeZones::all();
         $week = week::all();
-        return view('dashboard.master.shift_master_daily', ['shify' => $shify, 'department' => $department, 'comapnaies' => $comapnaies, 'timezones' => $timezones, 'weeks' => $week,'shiftCode'=>$shiftCode]);
+        return view('dashboard.master.shift_master_daily', ['shify' => $shify, 'department' => $department, 'companies' => $companies, 'timezones' => $timezones, 'weeks' => $week,'shiftCode'=>$shiftCode]);
     }
 
+    /**
+     * @param $companyId
+     * @return JsonResponse
+     */
+    public function company($companyId): JsonResponse
+    {
+        $departments = Department::where('company_id', $companyId)->where('user_id', Auth::id())->get();
+        return response()->json($departments);
+
+    }
     /**
      * Show the form for creating a new resource.
      */
@@ -47,7 +58,7 @@ class shift_masterController extends Controller
      * Store a newly created resource in storage.
      */
     public function store(Request $request)
-    {    
+    {
         // $weeks = week::pluck('week_name');
         // foreach($weeks as $week){
         //     $request->validate([
@@ -55,14 +66,14 @@ class shift_masterController extends Controller
         //     ]);
         // }
         // return $request->all();
-        foreach ($request->week_name as $week_name) {       
+        foreach ($request->week_name as $week_name) {
             if (is_array($week_name) && !is_null($week_name['sign_in']) && !is_null($week_name['sign_out']) &&  !is_null($week_name['Lunch_in']) && !is_null($week_name['Lunch_out'])) {
                 $existingRecordCount = Shift_master_daily::where([
                     'user_id' => Auth::id(),
                     'department_id' => $request->dept_id,
                     'company_id' => $request->company_id,
                     'week_day' => $week_name['week_name']
-                ])->count(); 
+                ])->count();
                 if ($existingRecordCount === 0){
                     Shift_master_daily::create([
                         'shift_code' => $request->shift_code,
@@ -110,7 +121,7 @@ class shift_masterController extends Controller
      * Update the specified resource in storage.
      */
     public function update(Request $request, string $id)
-    {    
+    {
         // return $request->all();
         $shifty = Shift_master_daily::find($id);
         $shifty->shift_code = $request->shift_code;
@@ -137,7 +148,7 @@ class shift_masterController extends Controller
      * Remove the specified resource from storage.
      */
     public function destroy(string $id)
-    {   
+    {
         $shift = Shift_master_daily::findOrFail($id);
         $shift->destroy($id);
         return redirect()->back()->with('message', 'Shift details deleted successfully!');

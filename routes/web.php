@@ -8,11 +8,10 @@ use App\Http\Controllers\DesignationController;
 use App\Http\Controllers\EmployeeConfigController;
 use App\Http\Controllers\EmployeeMasterController;
 use App\Http\Controllers\HolidayController;
-use App\Http\Controllers\InstaProject;
+use App\Http\controllers\InstaHirinProjectController;
 use App\Http\Controllers\LeaveController;
 use App\Http\Controllers\Logincontroller;
 use App\Http\Controllers\MasterController;
-use App\Http\controllers\InstaHirinProjectController;
 use App\Http\Controllers\profileController;
 use App\Http\Controllers\shift_masterController;
 use App\Http\Controllers\SocialLoginController;
@@ -125,16 +124,16 @@ Route::middleware(['middleware' => 'auth.check'])->group(function () {
     Route::get('/agency-locations/delete/{id}', [AgencyContractor::class, 'deleteAgencyLocation'])->name('deleteAgencyLocation');
     Route::get('/agency-company-delete/delete/{id}', [AgencyContractor::class, 'deleteCompanyDetail'])->name('deleteCompanyDetail');
 
-    Route::get('/InstaProject',[InstaHirinProjectController::class,'createProject']);
-    Route::post('create-project',[InstaHirinProjectController::class,'post_project'])->name('store_project');
-    Route::get('/InstaProject/My-Projects',[InstaHirinProjectController::class,'my_project'])->name('myProjects');
-    Route::get('/InstaProject/My-Project-Bid',[InstaHirinProjectController::class,'my_project_bids']);
+    Route::get('/InstaProject', [InstaHirinProjectController::class, 'createProject']);
+    Route::post('create-project', [InstaHirinProjectController::class, 'post_project'])->name('store_project');
+    Route::get('/InstaProject/My-Projects', [InstaHirinProjectController::class, 'my_project'])->name('myProjects');
+    Route::get('/InstaProject/My-Project-Bid', [InstaHirinProjectController::class, 'my_project_bids']);
     // Route::get('/InstaProject/ShowMore/{id}', [InstaHirinProjectController::class,'myProjShow'])->name('myProjShowMore');
-    Route::get('/InstaProject/ShowMore', [InstaHirinProjectController::class,'myProjShow'])->name('myProjShowMore');
-    Route::patch('/InstaProject/update-Project-Overview/{id}', [InstaHirinProjectController::class,'updateProjOverview'])->name('updateOverview');
+    Route::get('/InstaProject/ShowMore', [InstaHirinProjectController::class, 'myProjShow'])->name('myProjShowMore');
+    Route::patch('/InstaProject/update-Project-Overview/{id}', [InstaHirinProjectController::class, 'updateProjOverview'])->name('updateOverview');
     // Route::post('create-project',[InstaHirinProjectController::class,'post_project'])->name('store_project');
-    Route::get('/InstaProject/Post-Review',[InstaHirinProjectController::class,'PostReview'])->name('PostReview');
-    Route::get('/InstaProject/My-Review',[InstaHirinProjectController::class,'MyReview']);
+    Route::get('/InstaProject/Post-Review', [InstaHirinProjectController::class, 'PostReview'])->name('PostReview');
+    Route::get('/InstaProject/My-Review', [InstaHirinProjectController::class, 'MyReview']);
 
 //    Route::get('/insta-project', [InstaProject::class, 'instaProject'])->name('instaProject');
     Route::post('/insta-project-review-submit', [InstaHirinProjectController::class, 'instaProjectReviewSubmit'])->name('instaProjectReviewSubmit');
@@ -158,6 +157,11 @@ Route::middleware(['middleware' => 'auth.check'])->group(function () {
     Route::get('/designation-company/{companyId}', [DesignationController::class, 'company']);
     Route::get('/shift-master-company/{companyId}', [shift_masterController::class, 'company']);
     Route::get('/category-master-company/{companyId}', [CategoryController::class, 'company']);
+    Route::get('/employee-master-company/{companyId}', [EmployeeMasterController::class, 'company']);
+    Route::get('/employee-configuration-company/{companyId}', [EmployeeConfigController::class, 'company']);
+    Route::get('/leave-master-company/{companyId}', [LeaveController::class, 'company']);
+    Route::get('/holiday-master-company/{companyId}', [HolidayController::class, 'company']);
+
 
 
 

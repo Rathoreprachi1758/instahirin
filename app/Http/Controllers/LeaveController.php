@@ -1,6 +1,7 @@
 <?php
 
 namespace App\Http\Controllers;
+use Illuminate\Http\JsonResponse;
 use Illuminate\Http\Request;
 
 use Auth;
@@ -16,14 +17,24 @@ class LeaveController extends Controller
      * Display a listing of the resource.
      */
     public function index()
-    {   
+    {
         $companyId = Company::where('user_id',Auth::id())->pluck('id');
         $department = Department::whereIn('company_id',$companyId)->get();
-        $comapnaies = Company::where('user_id',Auth::id())->get();
+        $companies = Company::where('user_id',Auth::id())->get();
         $leaves = leave::all();
-        return view('dashboard.master.leave',['leaves'=>$leaves,'comapnaies' =>$comapnaies,'department'=>$department]);
+        return view('dashboard.master.leave',['leaves'=>$leaves,'companies' =>$companies,'department'=>$department]);
     }
 
+    /**
+     * @param $companyId
+     * @return JsonResponse
+     */
+    public function company($companyId): JsonResponse
+    {
+        $departments = Department::where('company_id', $companyId)->where('user_id', Auth::id())->get();
+        return response()->json($departments);
+
+    }
     /**
      * Show the form for creating a new resource.
      */
@@ -72,7 +83,7 @@ class LeaveController extends Controller
      * Update the specified resource in storage.
      */
     public function update(Request $request, string $id)
-    {   
+    {
         // $request->all();
         $leave = leave::find($id);
          $leave->leave_code = $request->leave_code;

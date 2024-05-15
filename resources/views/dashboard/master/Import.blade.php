@@ -40,19 +40,24 @@
                           </div>
 
                           <div class="sorting_nav">
-                              <div class="showSort"> 
+                              <div class="showSort">
                                   <div class="allSelect">
                                       <strong class="entitiesSelect">Select Company</strong>
                                       <div class="showSort_select seleComp">
-                                          <select class="fav_show">
-                                              <option value="Yes">Yes</option>
-                                              <option value="No">No</option> 
+                                          <select id="companyName" name="company_desig"
+                                                  aria-label="First select example" onchange="fetchDepartments()">
+                                              <option selected disabled>Select Company</option>
+                                              @isset($companies)
+                                                  @foreach($companies as $company)
+                                                      <option value="{{ $company->id }}">{{$company->company_name }}</option>
+                                                  @endforeach
+                                              @endisset
                                           </select>
                                       </div>
                                   </div>
-                              </div> 
+                              </div>
 
-                          </div>  
+                          </div>
 
 
                           <div class="expImprt_sec">
@@ -69,7 +74,7 @@
 
 
                           <div class="chooseFile_impport">
-                              <div class="auth_field"> 
+                              <div class="auth_field">
                                   <strong>Upload supportive documents, If have</strong>
                                   <div class="">
                                       <input type="file" placeholder="" value="">
@@ -77,7 +82,7 @@
                               </div>
                           </div>
 
-                          {{-- <div class="expImprt_sec mb-3" style="border-top: 0px !important;"> 
+                          {{-- <div class="expImprt_sec mb-3" style="border-top: 0px !important;">
                               <div class="kycForm_file">
                                   <label class="uploadFile">
                                       <i class="fa fa-download" aria-hidden="true"></i>
@@ -89,12 +94,12 @@
                           </div> --}}
                           <div class="table_actions">
                               <div class="row align-items-center">
-                                  <div class="col-xxl-6 col-xl-6 col-lg-6 col-md-6 "> 
+                                  <div class="col-xxl-6 col-xl-6 col-lg-6 col-md-6 ">
                                       <div class="table_actionsBtns">
                                           <!-- <button class="tb_actionBtn">Add</button> -->
                                           <button class="tb_actionBtn">Exit</button>
                                       </div>
-                                  </div> 
+                                  </div>
                               </div>
                           </div>
                       </div>
@@ -102,6 +107,6 @@
               </div>
             </div>
          </div>
-      </div> 
-   </div> 
+      </div>
+   </div>
 </div>
