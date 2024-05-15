@@ -34,25 +34,32 @@
                     </div>
                 @endif
                 <div class="tabletext">
+                    <label for="emp_code" class="col-sm-2 col-form-label">Employee Code</label>
+                    <div class="col">
+                        <form action="{{ route('getSalaryHead') }}" method="POST">
+                            @csrf
+                            <select class="form-select" name="emp_code" id="emp_code"
+                                    onchange="this.form.submit()">
+                                <option selected disabled>Choose...</option>
+                                @foreach($employees as $employee)
+                                    <option value="{{$employee->id}}"
+                                            data-empname="{{$employee->employee_name}}">{{$employee->employee_code}}</option>
+                                @endforeach
+                            </select>
+                        </form>
+                    </div>
                     <form action="{{ route('normalSalarySubmit') }}" method="POST">
-                        @csrf
                         <div class="row">
-                            <label for="emp_code" class="col-sm-2 col-form-label">Employee Code</label>
-                            <div class="col">
-                                <select class="form-select" name="emp_code" id="emp_code">
-                                    <option selected disabled>Choose...</option>
-                                    @foreach($employees as $employee)
-                                        <option value="{{$employee->id}}"
-                                                data-empname="{{$employee->employee_name}}">{{$employee->employee_code}}</option>
-                                    @endforeach
-                                </select>
-                            </div>
+                            @csrf
                             <label for="emp_name" class="col-sm-2 col-form-label">Employee Name</label>
                             <div class="col">
                                 <input type="text" class="form-control" name="emp_name" id="emp_name"
                                        placeholder="Employee name"
-                                       aria-label="employee_name">
+                                       aria-label="employee_name"
+                                       @isset($employeeData)value="{{$employeeData->employee_name}}" @endisset>
                             </div>
+                            <input type="hidden" name="employee_id"
+                                   @isset($employeeData)value="{{$employeeData->id}}" @endisset>
                         </div>
                         <div class="container mt-5">
                             <div class="row mt-3">
@@ -111,71 +118,88 @@
                                 </div>
                             </div>
                             @isset($salaryHead)
-                            @php
-                                $additionalHeads = json_decode($salaryHead?->additional_Head , true) ?? null;
-                                $deductionHeads = json_decode($salaryHead?->deduction_Head , true) ?? null;
-                            @endphp
-                            @endisset
-                            <div id="additional-deduction-form" class="mt-3 hidden salary-form">
-                                <div class="row">
-                                    <label class="text-center fw-bold mt-2 mb-5">Professional Tax Range</label>
-                                    <div class="col-4">
-                                        <label class="text-center fw-bold mb-5">Additional Head</label>
-                                        <ul>
-                                            @isset($additionalHeads)
-                                            @foreach($additionalHeads as $key => $additionalHead )
+                                @php
+                                    $additionalHeads = json_decode($salaryHead?->additional_Head , true) ?? null;
+                                    $deductionHeads = json_decode($salaryHead?->deduction_Head , true) ?? null;
+                                @endphp
+                                <div id="additional-deduction-form" class="mt-3 hidden salary-form">
+                                    <div class="row">
+                                        <label class="text-center fw-bold mt-2 mb-5">Professional Tax Range</label>
+                                        <div class="col-4">
+                                            <label class="text-center fw-bold mb-5">Additional Head</label>
+                                            <ul>
+                                                @isset($additionalHeads)
+                                                    @foreach($additionalHeads as $key => $additionalHead )
+                                                        <li>
+                                                            <label class="mt-2" for="head1">{{$additionalHead}}</label>
+                                                            <input type="text" name="{{$key}}" class="form-control"
+                                                                   id="head1" aria-describedby="emailHelp">
+                                                        </li>
+                                                    @endforeach
+                                                @endisset
+                                            </ul>
+                                            <ul>
                                                 <li>
-                                                    <label class="mt-2" for="head1">{{$additionalHead}}</label>
-                                                    <input type="text" name="{{$key}}" class="form-control"
-                                                           id="head1" aria-describedby="emailHelp">
+                                                    <label class="mt-5" for="head5">Sub Total</label>
+                                                    <input type="text" class="form-control"
+                                                           name="sub_total_addtional_head"
+                                                           id="head5" aria-describedby="emailHelp">
                                                 </li>
-                                            @endforeach
-                                            @endisset
-                                        </ul>
-                                        <ul>
-                                            <li>
-                                                <label class="mt-5" for="head5">Sub Total</label>
-                                                <input type="text" class="form-control" name="sub_total_addtional_head" id="head5" aria-describedby="emailHelp">
-                                            </li>
-                                        </ul>
+                                            </ul>
 
-                                    </div>
-                                    <div class="col-4">
-                                        <label class="text-center fw-bold mb-5">Deduction Head</label>
-                                        <ul>
-                                            @isset($additionalHeads)
-                                            @foreach($deductionHeads as $key => $deductionHead )
+                                        </div>
+                                        <div class="col-4">
+                                            <label class="text-center fw-bold mb-5">Deduction Head</label>
+                                            <ul>
+                                                @isset($additionalHeads)
+                                                    @foreach($deductionHeads as $key => $deductionHead )
+                                                        <li>
+                                                            <label class="mt-2" for="head1">{{$deductionHead}}</label>
+                                                            <input type="text" name="{{$key}}" class="form-control"
+                                                                   id="head1" aria-describedby="emailHelp">
+                                                        </li>
+                                                    @endforeach
+                                                @endisset
+                                            </ul>
+                                            <ul>
                                                 <li>
-                                                    <label class="mt-2" for="head1">{{$deductionHead}}</label>
-                                                    <input type="text" name="{{$key}}" class="form-control"
-                                                           id="head1" aria-describedby="emailHelp">
+                                                    <label class="mt-5" for="head5"></label>
+                                                    <input type="text" class="form-control"
+                                                           name="sub_total_deduction_head"
+                                                           id="head5" aria-describedby="emailHelp">
                                                 </li>
-                                            @endforeach
-                                            @endisset
-                                        </ul>
-                                        <ul>
-                                            <li>
-                                                <label class="mt-5" for="head5"></label>
-                                                <input type="text" class="form-control" name="sub_total_deduction_head" id="head5" aria-describedby="emailHelp">
-                                            </li>
-                                        </ul>
-                                    </div>
-                                    <div class="col-4">
-                                        <label class="text-center fw-bold mb-5">Other Details</label>
-                                        <ul>
-                                            <li><label for="dedHead1">PF No.</label> <input  type="text" name="pf_no" class="form-control" id="dedHead1" aria-describedby="emailHelp"></li>
-                                            <li><label for="dedHead2">ESI No.</label> <input type="text" name="esi_no" class="form-control" id="dedHead2" aria-describedby="emailHelp"></li>
-                                        </ul>
+                                            </ul>
+                                        </div>
+                                        <div class="col-4">
+                                            <label class="text-center fw-bold mb-5">Other Details</label>
+                                            <ul>
+                                                <li><label for="dedHead1">PF No.</label> <input type="text" name="pf_no"
+                                                                                                class="form-control"
+                                                                                                id="dedHead1"
+                                                                                                aria-describedby="emailHelp">
+                                                </li>
+                                                <li><label for="dedHead2">ESI No.</label> <input type="text"
+                                                                                                 name="esi_no"
+                                                                                                 class="form-control"
+                                                                                                 id="dedHead2"
+                                                                                                 aria-describedby="emailHelp">
+                                                </li>
+                                            </ul>
 
-                                        <ul>
-                                            <li>
-                                                <label class="mt-5" for="head5">Total Amount</label>
-                                                <input type="text" class="form-control" name="total" id="head5" aria-describedby="emailHelp">
-                                            </li>
-                                        </ul>
+                                            <ul>
+                                                <li>
+                                                    <label class="mt-5" for="head5">Total Amount</label>
+                                                    <input type="text" class="form-control" name="total" id="head5"
+                                                           aria-describedby="emailHelp">
+                                                </li>
+                                            </ul>
+                                        </div>
                                     </div>
                                 </div>
-                            </div>
+                            @endisset
+                            @if($salaryHead == null)
+                                <p>Please fill the head master</p>
+                            @endif
                             <hr>
                         </div>
                         <button class="btn btn-secondary" type="submit">Save</button>
@@ -199,19 +223,19 @@
             $('#additional-deduction-form').show();
         });
 
-        $('#emp_code').change(function () {
-            var selectedOption = $(this).find('option:selected');
-            var empName = selectedOption.data('empname');
-            $('#emp_name').val(empName);
-
-            var employeeId = selectedOption.val();
-
-            // Send AJAX request to fetch salary head for the selected employee
-            $.get("/get-salary-head/" + employeeId, function (data) {
-                // Update UI with the fetched salary head
-                $("#salary_head").html(data);
-            });
-        });
+        // $('#emp_code').change(function () {
+        //     var selectedOption = $(this).find('option:selected');
+        //     var empName = selectedOption.data('empname');
+        //     $('#emp_name').val(empName);
+        //
+        //     var employeeId = selectedOption.val();
+        //
+        //     // Send AJAX request to fetch salary head for the selected employee
+        //     $.get("/get-salary-head/" + employeeId, function (data) {
+        //         // Update UI with the fetched salary head
+        //         $("#salary_head").html(data);
+        //     });
+        // });
 
         var perHourInput = $("#perHour");
         var totalHoursInput = $("#totalHours");

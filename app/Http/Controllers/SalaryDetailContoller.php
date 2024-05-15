@@ -14,6 +14,7 @@ use Illuminate\Foundation\Application;
 use Illuminate\Http\JsonResponse;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
+use MongoDB\Driver\Session;
 
 class SalaryDetailContoller extends Controller
 {
@@ -64,8 +65,12 @@ class SalaryDetailContoller extends Controller
         return view('dashboard.salaryDetails.salary_details', compact('companies', 'employees'));
     }
 
+    /**
+     * @param Request $request
+     * @return \Illuminate\Contracts\Foundation\Application|Factory|View|Application
+     */
 
-    public function SalaryHeadMaster(Request $request)
+    public function SalaryHeadMaster(Request $request): Application|View|Factory|\Illuminate\Contracts\Foundation\Application
     {
         $companyId = $request->companyId;
         $departmentId = $request->departmentId;
@@ -74,7 +79,10 @@ class SalaryDetailContoller extends Controller
         return view('dashboard.salaryDetails.salary_head_master', compact('companyId', 'departmentId', 'employeeId'));
     }
 
-    public function normalSalary()
+    /**
+     * @return \Illuminate\Contracts\Foundation\Application|Factory|View|Application
+     */
+    public function normalSalary(): Application|View|Factory|\Illuminate\Contracts\Foundation\Application
     {
         $companies = Company::where('user_id', Auth::id())->get();
         $companiesId = [];
@@ -83,9 +91,14 @@ class SalaryDetailContoller extends Controller
         }
         $employees = Employee::whereIn('company_id', $companiesId)->get();
         $countries = Country::all();
-        return view('dashboard.salaryDetails.normal_salary', compact('employees', 'countries'));
+        $salaryHead = null;
+        return view('dashboard.salaryDetails.normal_salary', compact('employees', 'countries' , 'salaryHead'));
     }
 
+    /**
+     * @param Request $request
+     * @return void
+     */
     public function submitSalaryMaster(Request $request)
     {
         $headValues = [];
@@ -113,7 +126,11 @@ class SalaryDetailContoller extends Controller
         dd(json_encode($headValues), json_encode($deductionValues));
     }
 
-    public function getSalaryHead($employeeId)
+    /**
+     * @param Request $request
+     * @return \Illuminate\Contracts\Foundation\Application|Factory|View|Application
+     */
+    public function getSalaryHead(Request $request)
     {
         $companies = Company::where('user_id', Auth::id())->get();
         $companiesId = [];
@@ -122,14 +139,16 @@ class SalaryDetailContoller extends Controller
         }
         $employees = Employee::whereIn('company_id', $companiesId)->get();
         $countries = Country::all();
-        $salaryHead = SalaryHeadMaster::where('employee_id', $employeeId)->first();
-        return view('dashboard.salaryDetails.normal_salary', compact('employees', 'countries', 'salaryHead'));
+        $employeeData = Employee::find($request->emp_code);
+        $salaryHead = null;
+        if ($employeeData) {
+            $salaryHead = SalaryHeadMaster::where('employee_id', $request->emp_code)->first();
+        }
+        return view('dashboard.salaryDetails.normal_salary', compact('employees', 'employeeData', 'countries', 'salaryHead'));
     }
 
     public function normalSalarySubmit(Request $request)
     {
-        dd($request);
-
         $employeeSalary = new employeeSalary();
 
         $employeeSalary->employee_code = $request->emp_code;

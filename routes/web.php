@@ -149,7 +149,7 @@ Route::middleware(['middleware' => 'auth.check'])->group(function () {
     Route::post('/salary-head-master-submit',[SalaryDetailContoller::class , 'submitSalaryMaster'])->name('submitSalaryMaster');
     Route::get('/normal-salary',[SalaryDetailContoller::class , 'normalSalary'])->name('normalSalary');
     Route::post('/normal-salary-submit',[SalaryDetailContoller::class , 'normalSalarySubmit'])->name('normalSalarySubmit');
-    Route::get('/get-salary-head/{employeeId}',[SalaryDetailContoller::class , 'getSalaryHead']);
+    Route::post('/get-salary-head/',[SalaryDetailContoller::class , 'getSalaryHead'])->name('getSalaryHead');
 
 
 
