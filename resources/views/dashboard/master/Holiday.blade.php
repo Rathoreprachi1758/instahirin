@@ -98,7 +98,6 @@
                                                         </div>
                                                     </div>
                                                 </div>
-
                                             </div>
                                             <table class="table table-striped" id="holiday_master">
                                                 <thead>
