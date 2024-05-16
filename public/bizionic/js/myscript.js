@@ -137,6 +137,47 @@
 
 
 
+  // meet comunity slider 
+
+
+  $('.communitySlider').slick({
+    dots: false,
+    infinite: true,
+    speed: 600,
+    slidesToShow: 3,
+    centerPadding: '20px',
+    slidesToScroll: 1,
+    autoplay: true,
+    autoplaySpeed: 6000,
+    centerMode: false,
+    arrows: true,
+    responsive: [
+      {
+        breakpoint: 1024,
+        settings: {
+          slidesToShow: 3,
+          slidesToScroll: 3,
+          infinite: true,
+          dots: false
+        }
+      },
+      {
+        breakpoint: 600,
+        settings: {
+          slidesToShow: 2,
+          slidesToScroll: 2
+        }
+      },
+      {
+        breakpoint: 480,
+        settings: {
+          slidesToShow: 1,
+          slidesToScroll: 1
+        }
+      } 
+    ]
+  });
+
  
   // sponsor slider 
 
@@ -239,6 +280,46 @@
         breakpoint: 1024,
         settings: {
           slidesToShow: 3,
+          slidesToScroll: 3,
+          infinite: true,
+          dots: false
+        }
+      },
+      {
+        breakpoint: 600,
+        settings: {
+          slidesToShow: 2,
+          slidesToScroll: 2
+        }
+      },
+      {
+        breakpoint: 480,
+        settings: {
+          slidesToShow: 1,
+          slidesToScroll: 1
+        }
+      } 
+    ]
+  });
+
+
+
+  $('.latestJobSec_slider').slick({
+    dots: false,
+    infinite: true,
+    speed: 1000,
+    slidesToShow: 1,
+    slidesToScroll: 1,
+    autoplay: true,
+    autoplaySpeed: 7000,
+    centerMode: false,
+    arrows: true, 
+
+    responsive: [
+      {
+        breakpoint: 1024,
+        settings: {
+          slidesToShow: 2,
           slidesToScroll: 3,
           infinite: true,
           dots: false
@@ -542,6 +623,20 @@ $(function() {
   $('.active').removeClass('active');
   $(this).addClass('active');
   $('.markServices_tabsInfo_detail').hide();
+  $($(this).attr('href')).show();
+});
+// $('.markServices_tabsBtn_info ul li a:first').trigger('click');
+
+
+
+       // tabs activity
+
+ $('.recent_activity_tab ul li a').on('click', function(event) {
+  event.preventDefault();
+
+  $('.activeTab').removeClass('activeTab');
+  $(this).addClass('activeTab');
+  $('.recent_activity_tab_info').hide();
   $($(this).attr('href')).show();
 });
 // $('.markServices_tabsBtn_info ul li a:first').trigger('click');

@@ -2151,6 +2151,53 @@
 
 
 
+.instProHub_banner_avatar { 
+    padding-left: 0px;
+}
+
+.embarkMain_section_detail { 
+    padding: 60px 0px;
+}
+
+.insta_howWork_list { 
+    padding-right: 0px;
+}
+
+.hireIn_minForm .agencyLocation { margin-left: 20px !important;}
+
+.allinOne_col_info { 
+    padding: 25px 20px 0px;}
+
+.allinOne_col {
+    padding: 8px !important;
+}
+
+.allinOne_col_info strong {
+    font-size: 16px;}
+.allinOne_col_info p { font-size: 14px;}
+
+.b2bBuyingSetion_info { 
+    padding: 50px 30px 50px 0px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -7072,7 +7119,7 @@ h6 { font-size: 18px; }
     padding-left: 3px;
 }
 .main_container {
-    padding-top: 136px;
+    padding-top: 120px;
 }
 
 
@@ -7677,14 +7724,97 @@ h6 { font-size: 18px; }
 
 
 
+.trustedLeading_list ul li {
+    width: auto;
+    padding: 10px 40px;
+}
+
+.whyInsta_skilled .onboardSkill_options {
+    padding: 35px 0px 25px;
+}
+.inGlobal_talent_info { 
+    padding: 40px 20px;
+}
+
+.global_emp_avatar { display: none;}
+
+.inGlobal_talent_section_detail .custom_tittle { padding-bottom: 25px;}
 
 
+.managementProcess ul { 
+    flex-wrap: wrap; 
+}
 
+.managementProcess ul li {
+    width: 100%; 
+}
 
+.hiringSlider_section_detail .custom_tittle { padding-bottom: 25px;}
 
+.benefit_wallet_section { 
+    padding: 30px 10px; margin-top: 25px;
+}
+.benefit_wallet_list { 
+    padding: 50px 20px; 
+}
 
+.meetAi_logo { padding-bottom: 20px;}
 
+.connect_btn { padding-top: 20px;}
 
+.biz_partnerSection_detail { 
+    padding: 50px 20px 40px;
+}
+
+.idealPartner_col_info { 
+    padding: 30px 20px 20px; 
+}
+.idealPartner_col_tittle strong {
+    font-size: 18px; 
+}
+.idealPartner_col_list ul li a {
+    font-size: 15px; 
+}
+
+.allinOne_section_detail { 
+    padding: 50px 20px 0px;
+}
+.allinOne_col_info { 
+    padding: 30px 20px 0px;}
+
+.b2bBuyingSetion_info { 
+    padding: 50px 0px 50px 0px;
+}
+
+.popularTag { 
+    display: block;
+}
+.popularTag_list {
+    width: 100%;
+    padding-bottom: 20px;
+}
+.instProHub_banner_avatar { 
+    padding-left: 0px;
+}
+.insta_howWork_list { 
+    padding-right: 0px; padding-bottom: 25px;
+}
+
+.insta_howWork_detail { 
+    padding: 50px 0px;
+}
+
+.talentTech_section_detail { 
+    padding: 50px 0px 40px;
+}
+.howWorkInfo { 
+    padding-top: 30px;
+    margin-top: 30px;
+    padding-bottom: 0px;
+}
+.instProHub_banner_detail { 
+    padding: 50px 0px;
+}
 
 
 
