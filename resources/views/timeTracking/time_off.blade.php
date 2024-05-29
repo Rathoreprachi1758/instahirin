@@ -1,17 +1,31 @@
 <x-header data="offers component"/>
 <link rel="stylesheet" href="{{ asset('css/css/Employer_activity_style.css') }}">
 <link rel="stylesheet" href="{{ asset('css/css/Employer_activity_style.css') }}">
+
+
+<style>
+    .table-responsive{
+        box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+        margin-top: 30px;
+        border-radius:10px;
+        position: relative;
+        z-index: 0;
+    }
+    
+    </style>
 <div class="fr-section" style="margin-top: -72px">
     <div class="fr-section_detail">
+        <div class="container-fluid">
+            <div style="font-size:22px;font-weight:600;margin-bottom:3px;">Time Tracking</div>
+            <div style="font-size:16px;font-weight:500;margin-bottom:15px"><b>Description:</b> To monitor the timekeeping records of employees within their respective companies.</div>
         <div class="dashboard_innerPages">
             <div class="custom_tabs_section">
-                <div class="custom_tabs">
-                </div>
+                <div class="custom_tabs"></div>
                 <br>
                 <div class="tabletext">
                     <form action="{{ route('timeOffCompany') }}" method="POST">
                         @csrf
-                        <label for="from">Select Company:</label>
+                        <label for="from" style="font-size: 14px;">Select Company:</label>
                         <select name="timeOffCompany">
                             <option selected disabled>Select Company</option>
                             @isset($companies)
@@ -20,7 +34,7 @@
                                 @endforeach
                             @endisset
                         </select>
-                        <label for="from">Select Emp Code:</label>
+                        <label for="from" style="font-size: 14px;">Select Emp Code:</label>
                         <input type="hidden" value="">
                         <select name="employee_code">
                             <option selected disabled>Choose Emp Code</option>
@@ -30,11 +44,15 @@
                                 @endforeach
                             @endisset
                         </select>
-                        <button class="btn-dark" type="submit">Filter</button>
+                        <button class="btn-dark" type="submit"style="font-size: 14px;">Filter</button>
                     </form>
+
+                </div>
                     <!-- End of 'from' and 'to' date inputs -->
                     <div class="custom_tabs_data" style="display: block" id="tab5">
-                        <div class="col-xxl-9 col-xl-11 col-lg-11 col-md-12">
+                        <div class="row d-flex justify-content-center">
+                        <div class="col-xl-12 col-sm-12 col-lg-12 col-md-12">
+                            <div class="table-responsive">
                             <div class="activityTable_data">
                                 <table class="table table-striped">
                                     <thead>
@@ -42,17 +60,21 @@
                                         <th>
                                             <h6>#</h6>
                                         </th>
+
+                                        <th>
+                                            <h6>Company Name</h6>
+                                        </th>
                                         <th>
                                             <h6>Emp Code</h6>
                                         </th>
                                         <th>
-                                            <h6>From</h6>
+                                            <h6>Celender</h6>
                                         </th>
                                         <th>
-                                            <h6>To</h6>
+                                            <h6>Time Recorder</h6>
                                         </th>
                                         <th>
-                                            <h6>No of Days</h6>
+                                            <h6>Publish</h6>
                                         </th>
 {{--                                        <th>--}}
 {{--                                            <h6>Publish</h6>--}}
@@ -60,9 +82,70 @@
                                         <th>
                                             <h6>Status</h6>
                                         </th>
+
+
+                                       
                                     </tr>
                                     </thead>
                                     <tbody>
+
+
+                                        <tr>
+                                            <td>1
+                                            </td>
+                                            <td class="text-center">Bizionic Tech
+                                            </td>
+                                            <td class="text-center">012
+                                            </td>
+                                            <td class="text-center">01/10/2023</td>
+                                            <td class="text-center">00:00
+
+                                            </td>
+                                            <td class="text-center">yes</td>
+                                            <td class="text-center"><span style="color:rgb(23, 239, 23)">Approved</span></td>
+                                           
+                                        </tr>
+
+
+                                       
+
+
+
+                                        <tr>
+                                            <td>1
+                                            </td>
+                                            <td class="text-center">Bizionic Tech
+                                            </td>
+                                            <td class="text-center">012
+                                            </td>
+                                            <td class="text-center">01/10/2023</td>
+                                            <td class="text-center">00:00
+
+                                            </td>
+                                            <td class="text-center">yes</td>
+                                            <td class="text-center"><span style="color:rgb(23, 239, 23)">Approved</span></td>
+                                           
+                                        </tr>
+
+
+
+                                        <tr>
+                                            <td>1
+                                            </td>
+                                            <td class="text-center">Bizionic Tech
+                                            </td>
+                                            <td class="text-center">012
+                                            </td>
+                                            <td class="text-center">01/10/2023</td>
+                                            <td class="text-center">00:00
+
+                                            </td>
+                                            <td class="text-center">yes</td>
+                                            <td class="text-center"><span style="color:rgb(23, 239, 23)">Approved</span></td>
+                                           
+                                        </tr>
+
+
                                     @php($increamentId = 1)
                                     @isset($employeeLeaveRequests)
                                         @foreach($employeeLeaveRequests as $employeeLeaveRequest)
@@ -161,8 +244,15 @@
                                 </table>
                             </div>
                         </div>
+
+
+                        </div>
+                        </div>
+
                     </div>
                 </div>
             </div>
-        </div>
+     
     </div>
+    </div>
+
