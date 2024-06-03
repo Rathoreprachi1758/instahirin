@@ -62,12 +62,151 @@
         cursor: pointer;
     }
 
-    td{
-        max-width: 100px; 
+    td {
+        max-width: 100px;
         white-space: normal;
         overflow: hidden;
         text-overflow: ellipsis;
         word-wrap: break-word;
+    }
+
+
+
+    .tracking-table li {
+        list-style: none;
+    }
+
+    .tracking-table {
+        position: relative;
+    }
+
+    .tracking-table .dropdown:hover .dropdown-menu {
+        display: block;
+        max-width: 100px !important;
+        position: absolute;
+        left: 0;
+        top: 100%;
+    }
+
+
+    .table.dataTable thead td {
+        border-bottom: 1px solid #dee2e6 !important;
+    }
+
+
+    /* .tracking-table .dropdown-menu {
+        --bs-dropdown-min-width: 2rem !important;
+        --bs-border-radius: 0 !important;
+        padding: 0 !important;
+        text-align: start
+    } */
+
+    .table> :not(:last-child)> :last-child>* {
+        border-bottom-color: #dee2e6 !important;
+    }
+
+    .tracking-table .dropdown-menu .dropdown-item:hover {
+        background-color: #eff5f9 !important;
+        color: #000 !important;
+    }
+
+    .dropdown-menu {
+        min-width: auto !important;
+        border-radius: 0 !important;
+        padding: 0 !important;
+        border: 1px solid #dee2e6 !important;
+    }
+
+    .dropdown-item {
+        padding: 5px 15px !important;
+    }
+
+
+    .tracking-table .dropdown-menu .dropdown-item:first-child {
+        background-color: #000 !important;
+        color: #fff !important;
+    }
+
+    .table-responsive {
+        overflow-x: inherit !important;
+    }
+
+    @media (max-width:480px) {
+        .table-responsive {
+            overflow-x: auto !important;
+        }
+    }
+
+    .tracking-table thead td {
+        background-color: #eff5f9 !important;
+        font-size: 12px !important;
+    }
+
+
+    .tracking-table tbody td:nth-child(1) {
+        background-color: #eff5f9 !important;
+    }
+
+    .tracking-table tbody td:nth-child(2) {
+        background-color: #eff5f9 !important;
+    }
+
+    table.dataTable.no-footer {
+        border-bottom: none !important;
+    }
+
+    .activityTabs {
+        background-color: transparent !important;
+        padding: 0 !important;
+    }
+
+    /* .activityTable_data table thead th {
+
+        background-color: #eff5f9 !important;
+        ;
+
+        padding: 0.8rem 0.6rem !important;
+        border: 0.5px solid #dee2e6;
+
+    } */
+
+    /* .activityTable_data table thead td h6 {
+        color: #333 !important;
+    } */
+
+    .custom_tabs ul li a.active {
+
+        /* background-color: #dddddd; */
+        background-color: transparent !important;
+        color: #007bff !important;
+
+        border-bottom: 3px solid #007bff !important;
+    }
+
+    .custom_tabs ul li a:hover {
+        background-color: transparent !important;
+        /* background-color: #425056; */
+    }
+
+    .custom_tabs ul li a {
+        padding: 0 15px !important;
+        font-weight: 500 !important;
+        font-size: 15px !important;
+        color: #555 !important;
+    }
+
+    .custom_tittle h4 {
+        font-size: 24px;
+        padding-bottom: 10px;
+        font-family: "avenirmedium";
+        color: #343A40;
+    }
+
+    .description_small_text {
+        font-size: 13px;
+        color: #777;
+        line-height: 25px;
+
     }
 </style>
 
@@ -77,12 +216,12 @@
             <div class="custom_tabs_section">
                 <div class="custom_tittle descriptionTxt">
                     <h4>Employer / Company</h4>
-                    <p>
-                        <strong>Description:</strong> Keep track of all your
+                    <p class="description_small_text">
+                        <strong style="color:#343A40;">Description:</strong> Keep track of all your
                         activities including job postings and job talents.
                         Details of shortlisted candidates will be scheduled
-                        <br />
-                        for interview. As well as track the status of Hired
+
+                        for interview. As well as track the <br /> status of Hired
                         details.
                     </p>
                 </div>
@@ -117,48 +256,48 @@
                     <div class="row">
                         <div class="col-xxl-12 col-xl-12 col-lg-12 col-md-12">
                             <div class="activityTable_data">
-                                <table class="table table-striped" id="Job_status">
+                                <table class="table table-bordered text-center tracking-table" id="Job_status">
                                     <thead>
                                         <tr>
-                                            <th>
-                                                <h6>Id</h6>
-                                            </th>
-                                            <th>
-                                                <h6>Name</h6>
-                                            </th>
-                                            <th>
-                                                <h6>Contact Details</h6>
-                                            </th>
-                                            <th>
-                                                <h6>Email Address</h6>
-                                            </th>
-                                            <th>
-                                                <h6>Location</h6>
-                                            </th>
-                                            <th>
-                                                <h6>Work Mode</h6>
-                                            </th>
-                                            <th>
-                                                <h6>Position Title</h6>
-                                            </th>
-                                            <th>
-                                                <h6>Work Exp</h6>
-                                            </th>
-                                            <th>
-                                                <h6>Annual Salary</h6>
-                                            </th>
-                                            <th>
-                                                <h6>Qualification</h6>
-                                            </th>
-                                            <th>
-                                                <h6>Notice Period</h6>
-                                            </th>
-                                            <th>
-                                                <h6>Availability</h6>
-                                            </th>
-                                            <th width="90">
-                                                <h6>Status</h6>
-                                            </th>
+                                            <td class="align-middle">
+                                                Id
+                                            </td>
+                                            <td class="align-middle">
+                                                Name
+                                            </td>
+                                            <td class="align-middle">
+                                                Contact Details
+                                            </td>
+                                            <td class="align-middle">
+                                                Email Address
+                                            </td>
+                                            <td class="align-middle">
+                                                Location
+                                            </td>
+                                            <td class="align-middle">
+                                                Work Mode
+                                            </td>
+                                            <td class="align-middle">
+                                                Position Title
+                                            </td>
+                                            <td class="align-middle">
+                                                Work Exp
+                                            </td>
+                                            <td class="align-middle">
+                                                Annual Salary
+                                            </td>
+                                            <td class="align-middle">
+                                                Qualification
+                                            </td>
+                                            <td class="align-middle">
+                                                Notice Period
+                                            </td>
+                                            <td class="align-middle">
+                                                Availability
+                                            </td>
+                                            <td class="align-middle">
+                                                Status
+                                            </td>
                                         </tr>
                                     </thead>
                                     <tbody>

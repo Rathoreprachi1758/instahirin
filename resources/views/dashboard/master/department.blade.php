@@ -19,6 +19,149 @@
         width: 100%;
         background-color: #fff;
     }
+
+
+    .custom_tabs {
+        width: 100%;
+        border: 0.5px solid #fff;
+    }
+
+    .custom_tabs ul li a.active {
+
+        /* background-color: #dddddd; */
+        background-color: transparent !important;
+        color: #007bff !important;
+
+        border-bottom: 3px solid #007bff !important;
+    }
+
+    .custom_tabs ul li a:hover {
+        background-color: transparent !important;
+        /* background-color: #425056; */
+    }
+
+    .custom_tabs ul li a {
+        padding: 0 11px !important;
+        font-weight: 500 !important;
+        font-size: 15px !important;
+        color: #555 !important;
+    }
+
+    .masterTab_bg {
+        background-color: #fff;
+        padding: 0px;
+        /* overflow: hidden; */
+    }
+
+    .custom_tittle h4 {
+        font-size: 25px;
+        padding-bottom: 10px;
+        font-family: "avenirmedium";
+        color: #343A40;
+    }
+
+    .description_small_text {
+        font-size: 14px !important;
+        color: #777;
+        line-height: 25px;
+
+    }
+
+    .masterTab_data {
+        width: 100%;
+        position: relative;
+        background-color: #fff;
+        box-shadow: 0px 0px 0px #cccccc96;
+        padding: 0px;
+        /* border: 1px solid #ebeaea; */
+    }
+
+    .sorting_nav {
+        display: block !important;
+        position: absolute;
+        left: 20%;
+        top: -13%;
+    }
+
+
+
+    .tracking-table li {
+        list-style: none;
+    }
+
+    .tracking-table {
+        position: relative;
+    }
+
+    .tracking-table .dropdown:hover .dropdown-menu {
+        display: block;
+        max-width: 100px !important;
+        position: absolute;
+        left: 0;
+        top: 100%;
+    }
+
+
+
+    /* .tracking-table .dropdown-menu {
+        --bs-dropdown-min-width: 2rem !important;
+        --bs-border-radius: 0 !important;
+        padding: 0 !important;
+        text-align: start
+    } */
+
+    .table> :not(:last-child)> :last-child>* {
+        border-bottom-color: #dee2e6 !important;
+    }
+
+    .tracking-table .dropdown-menu .dropdown-item:hover {
+        background-color: #eff5f9 !important;
+        color: #000 !important;
+    }
+
+    .dropdown-menu {
+        min-width: auto !important;
+        border-radius: 0 !important;
+        padding: 0 !important;
+        border: 1px solid #dee2e6 !important;
+    }
+
+    .dropdown-item {
+        padding: 5px 15px !important;
+    }
+
+
+    .tracking-table .dropdown-menu .dropdown-item:first-child {
+        background-color: #000 !important;
+        color: #fff !important;
+    }
+
+    .table-responsive {
+        overflow-x: inherit !important;
+    }
+
+    @media (max-width:480px) {
+        .table-responsive {
+            overflow-x: auto !important;
+        }
+    }
+
+    .tracking-table thead td {
+        background-color: #eff5f9 !important;
+    }
+
+
+    .tracking-table tbody td:nth-child(1) {
+        background-color: #eff5f9 !important;
+    }
+
+    /* .tracking-table tbody td:nth-child(2) {
+        background-color: #eff5f9 !important;
+    } */
+
+    table.dataTable.no-footer {
+        border-bottom: 1px solid #eff5f9 !important;
+    }
 </style>
 <link rel="stylesheet" href="{{ asset('vendor/sweetalert2/sweetalert2.min.css') }}">
 <script src="{{ asset('vendor/sweetalert2/sweetalert2.min.js') }}"></script>
@@ -29,9 +172,11 @@
             <div class="custom_tabs_section">
                 <div class="custom_tittle descriptionTxt">
                     <h4>Master</h4>
-                    <p><strong>Description:</strong> Keep track of all company master details including employee
-                        designations, shift information, category of employees, and <br> their configurations. Also
-                        able to oversee leave master with holiday details.</p>
+                    <p class="description_small_text"><strong style="color:#343A40;">Description:</strong
+                            style="color:#343A40;"> Keep track of
+                        all company master details including employee
+                        designations, shift information, category of employees, and their configurations. Also
+                        able to oversee <br> leave master with holiday details.</p>
                 </div>
                 <div class="custom_tabs">
                     <ul>
@@ -64,19 +209,19 @@
                         $("#submitFilter").click(function() {
                             let selectedCompanyId = $('#company_filter_select').val();
                             alert(selectedCompanyId);
-                        //     $.ajax({
-                        //         url: '/dept_id', // Corrected URL
-                        //         type: 'GET', // Removed unnecessary semicolon
-                        //         data: {
-                        //             company_id: selectedCompanyId
-                        //         }, // Passed selected company ID as data
-                        //         dataType: 'json',
-                        //         success: function(response) {
-                        //             console.log('Success:', response);
-                        //         },
-                        //         error: function(xhr, status, error) {
-                        //             console.error('Error:', xhr, status, error);
-                        //         }
+                            //     $.ajax({
+                            //         url: '/dept_id', // Corrected URL
+                            //         type: 'GET', // Removed unnecessary semicolon
+                            //         data: {
+                            //             company_id: selectedCompanyId
+                            //         }, // Passed selected company ID as data
+                            //         dataType: 'json',
+                            //         success: function(response) {
+                            //             console.log('Success:', response);
+                            //         },
+                            //         error: function(xhr, status, error) {
+                            //             console.error('Error:', xhr, status, error);
+                            //         }
                             // });
                         });
                     });
@@ -87,7 +232,7 @@
                     // });
                 </script>
                 <div class="allSelect">
-                    <strong class="entitiesSelect">Select Company</strong>
+
                     {{-- <form action="{{ url('dept_id') }}" method="post" class="d-flex align-items-end"
                         id="filterForm">
                         @csrf
@@ -119,7 +264,7 @@
                         </div>
                         <button type="submit" class="btn btn-primary mt-2">Filter</button> <!-- Change type to 'submit' -->
                     </form> --}}
-                    
+
                 </div>
                 {{-- @php
                     die();
@@ -127,17 +272,24 @@
                 <div class="custom_tabs_data" id="tab2" style="display: block;">
                     <div class="masterTab_bg">
                         <div class="masterTab_data">
-                            <div class="custom_tittle">
+                            <div class="custom_tittle mt-4">
                                 <h5>Department Master</h5>
                             </div>
                             <div class="masterTable">
                                 <div class="row">
-                                    <div class="col-xxl-12"style="margin-top:10px">
+                                    <div class="col-xl-12"style="margin-top:10px">
                                         <div class="masterTable_data">
-                                            <div class="sorting_nav" style="margin-left: 165px;margin-bottom: -40px">
+                                            <div class="sorting_nav">
                                                 <div class="showSort">
                                                     <div class="allSelect">
-                                                        <strong class="entitiesSelect">Select Company</strong>
+                                                        <label class="entitiesSelect" style="font-size: 14px;">Select
+                                                            Company</label>
+
+
+
+
+
+
                                                         {{-- <form action="{{ route('Department.index') }}" method="GET"
                                                             class="d-flex align-items-end" id="filterForm">
                                                             <div class="mr-3">
@@ -155,38 +307,42 @@
                                                             <button type="button" id="submitFilter"
                                                                 class="btn btn-primary mt-2">Filter</button>
                                                         </form> --}}
-                                                        <form action="{{ route('Department.index') }}" method="GET" class="d-flex align-items-end" id="filterForm">
+
+
+                                                        <form action="{{ route('Department.index') }}" method="GET"
+                                                            class="d-flex align-items-end" id="filterForm">
                                                             <div class="form-row">
-                                                                <select class="fav_show" name="company_id" id="company_filter_select"> <!-- Change name attribute to 'company_id' -->
+                                                                <select class="fav_show form-select" name="company_id"
+                                                                    id="company_filter_select">
+
                                                                     @foreach ($CompanyFilter as $company_filter)
                                                                         <option value="{{ $company_filter->id }}">
                                                                             {{ $company_filter->company_name }}
                                                                         </option>
                                                                     @endforeach
                                                                 </select>
-                                                                <div class="col-md-4">
-                                                                    <button type="submit" class="btn btn-primary mt-2">Filter</button>
-                                                                </div>
+
                                                             </div>
-                                                        </form>                                    
+                                                        </form>
                                                     </div>
                                                 </div>
                                             </div>
-                                            <table class="table" id="department">
+                                            <table class="table table-bordered text-center tracking-table"
+                                                id="department">
                                                 <thead>
                                                     <tr>
-                                                        <th>
-                                                            <h6 class="text-left">ID</h6>
-                                                        </th>
-                                                        <th width="550">
-                                                            <h6>Department Name</h6>
-                                                        </th>
-                                                        <th width="550">
-                                                            <h6>Company Name</h6>
-                                                        </th>
-                                                        <th>
-                                                            <h6>Action</h6>
-                                                        </th>
+                                                        <td class="align-middle">
+                                                            ID
+                                                        </td>
+                                                        <td class="align-middle">
+                                                            Department Name
+                                                        </td>
+                                                        <td class="align-middle">
+                                                            Company Name
+                                                        </td>
+                                                        <td class="align-middle">
+                                                            Action
+                                                        </td>
                                                     </tr>
                                                 </thead>
                                                 <tbody>

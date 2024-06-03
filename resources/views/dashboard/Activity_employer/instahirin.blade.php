@@ -9,18 +9,158 @@
         $('#instahire').DataTable();
     });
 </script>
+
+
+<style>
+    .tracking-table li {
+        list-style: none;
+    }
+
+    .tracking-table {
+        position: relative;
+    }
+
+    .tracking-table .dropdown:hover .dropdown-menu {
+        display: block;
+        max-width: 100px !important;
+        position: absolute;
+        left: 0;
+        top: 100%;
+    }
+
+
+    .table.dataTable thead td {
+        border-bottom: 1px solid #dee2e6 !important;
+    }
+
+
+    /* .tracking-table .dropdown-menu {
+        --bs-dropdown-min-width: 2rem !important;
+        --bs-border-radius: 0 !important;
+        padding: 0 !important;
+        text-align: start
+    } */
+
+    .table> :not(:last-child)> :last-child>* {
+        border-bottom-color: #dee2e6 !important;
+    }
+
+    .tracking-table .dropdown-menu .dropdown-item:hover {
+        background-color: #eff5f9 !important;
+        color: #000 !important;
+    }
+
+    .dropdown-menu {
+        min-width: auto !important;
+        border-radius: 0 !important;
+        padding: 0 !important;
+        border: 1px solid #dee2e6 !important;
+    }
+
+    .dropdown-item {
+        padding: 5px 15px !important;
+    }
+
+
+    .tracking-table .dropdown-menu .dropdown-item:first-child {
+        background-color: #000 !important;
+        color: #fff !important;
+    }
+
+    .table-responsive {
+        overflow-x: inherit !important;
+    }
+
+    @media (max-width:480px) {
+        .table-responsive {
+            overflow-x: auto !important;
+        }
+    }
+
+    .tracking-table thead td {
+        background-color: #eff5f9 !important;
+        font-size: 12px !important;
+    }
+
+
+    .tracking-table tbody td:nth-child(1) {
+        background-color: #eff5f9 !important;
+    }
+
+    .tracking-table tbody td:nth-child(2) {
+        background-color: #eff5f9 !important;
+    }
+
+    table.dataTable.no-footer {
+        border-bottom: none !important;
+    }
+
+    .activityTabs {
+        background-color: transparent !important;
+        padding: 0 !important;
+    }
+
+    /* .activityTable_data table thead th {
+
+        background-color: #eff5f9 !important;
+        ;
+
+        padding: 0.8rem 0.6rem !important;
+        border: 0.5px solid #dee2e6;
+
+    } */
+
+    /* .activityTable_data table thead td h6 {
+        color: #333 !important;
+    } */
+
+    .custom_tabs ul li a.active {
+
+        /* background-color: #dddddd; */
+        background-color: transparent !important;
+        color: #007bff !important;
+
+        border-bottom: 3px solid #007bff !important;
+    }
+
+    .custom_tabs ul li a:hover {
+        background-color: transparent !important;
+        /* background-color: #425056; */
+    }
+
+    .custom_tabs ul li a {
+        padding: 0 15px !important;
+        font-weight: 500 !important;
+        font-size: 15px !important;
+        color: #555 !important;
+    }
+
+    .custom_tittle h4 {
+        font-size: 24px;
+        padding-bottom: 10px;
+        font-family: "avenirmedium";
+        color: #343A40;
+    }
+
+    .description_small_text {
+        font-size: 13px;
+        color: #777;
+        line-height: 25px;
+
+    }
+</style>
 <div class="fr-section" style="margin-top: -72px">
     <div class="fr-section_detail">
         <div class="dashboard_innerPages">
             <div class="custom_tabs_section">
                 <div class="custom_tittle descriptionTxt">
                     <h4>Employer / Company</h4>
-                    <p>
-                        <strong>Description:</strong> Keep track of all your
+                    <p class="description_small_text">
+                        <strong style="color:#343A40;">Description:</strong> Keep track of all your
                         activities including job postings and job talents.
                         Details of shortlisted candidates will be scheduled
-                        <br />
-                        for interview. As well as track the status of Hired
+
+                        for interview. As well as track the<br> status of Hired
                         details.
                     </p>
                 </div>
@@ -43,59 +183,50 @@
             <!-- tab5 data  -->
             <div class="custom_tabs_data" style="display: block" id="tab5">
                 <div class="activityTable_data">
-                    <table class="table table-striped" id="instahire">
+                    <table class="table table-bordered text-center tracking-table" id="instahire">
                         <thead>
                             <tr>
-                                <th>
-                                    <h6>Id</h6>
-                                </th>
-                                <th>
-                                    <h6>Name</h6>
-                                </th>
-                                <th>
-                                    <h6>Position Title</h6>
-                                </th>
-                                <th>
-                                    <h6>Experience<br>
-                                        (In years)</h6>
-                                </th>
-                                <th>
-                                    <h6>Expert in</h6>
-                                </th>
-                                <th>
-                                    <h6>Also Work With</h6>
-                                </th>
-                                <th>
-                                    <h6>Avalilability</h6>
-                                </th>
-                                <th>
-                                    <h6>LinkedIn profile</h6>
-                                </th>
-                                <th>
-                                    <h6>Attachment</h6>
-                                </th>
-                                <th width="180">
-                                    <h6>Schedule Interview</h6>
-                                    <table>
-                                        <thead>
-                                            <th width="60">
-                                                <h6>Date</h6>
-                                            </th>
-                                            <th width="60">
-                                                <h6>From</h6>
-                                            </th>
-                                            <th width="60">
-                                                <h6>To</h6>
-                                            </th>
-                                        </thead>
-                                    </table>
-                                </th>
+                                <td rowspan="2" class="align-middle">
+                                    Id
+                                </td>
+                                <td rowspan="2" class="align-middle">
+                                    Name
+                                </td>
+                                <td rowspan="2" class="align-middle">
+                                    Position Title
+                                </td>
+                                <td rowspan="2" class="align-middle">
+                                    Experience<br>
+                                    (In years)
+                                </td>
+                                <td rowspan="2" class="align-middle">
+                                    Expert in
+                                </td>
+                                <td rowspan="2" class="align-middle">
+                                    Also Work With
+                                </td>
+                                <td rowspan="2" class="align-middle">
+                                    Avalilability
+                                </td>
+                                <td rowspan="2" class="align-middle">
+                                    LinkedIn profile
+                                </td>
+                                <td rowspan="2" class="align-middle">
+                                    Attachment
+                                </td>
+                                <td colspan="3">Schedule Interview</td>
 
-
-                                <th>
-                                    <h6>Action</h6>
-                                </th>
+                                <td rowspan="2" class="align-middle">
+                                    Action
+                                </td>
                             </tr>
+
+                            <tr>
+                                <td>Date</td>
+                                <td>From</td>
+                                <td>To</td>
+                            </tr>
+
                         </thead>
                         <tbody>
                             @forelse ($insta_onboard as $on_board)
@@ -179,17 +310,18 @@
                                         </div>
                                     </td>
                                 </tr>
-                                @empty
-                                <p style="color:red">Oops ! No Interviews  were Scheduled<?xml version="1.0" standalone="no"?>
-                                    <!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 20010904//EN"
-                                     "http://www.w3.org/TR/2001/REC-SVG-20010904/DTD/svg10.dtd">
-                                    <svg version="1.0" xmlns="http://www.w3.org/2000/svg"
-                                     width="40.000000pt" height="40.000000pt" viewBox="0 0 240.000000 240.000000"
-                                     preserveAspectRatio="xMidYMid meet">
-                                    
-                                    <g transform="translate(0.000000,240.000000) scale(0.100000,-0.100000)"
-                                    fill="#000000" stroke="none">
-                                    <path d="M920 1969 c-119 -11 -322 -45 -418 -69 -70 -17 -73 -17 -82 0 -13 24
+                            @empty
+                                <p style="color:red">Oops ! No Interviews were Scheduled
+                                    <?xml version="1.0" standalone="no"?>
+                                    <!DOCTYPE svg
+                                        PUBLIC "-//W3C//DTD SVG 20010904//EN" "http://www.w3.org/TR/2001/REC-SVG-20010904/DTD/svg10.dtd">
+                                    <svg version="1.0" xmlns="http://www.w3.org/2000/svg" width="40.000000pt"
+                                        height="40.000000pt" viewBox="0 0 240.000000 240.000000"
+                                        preserveAspectRatio="xMidYMid meet">
+
+                                        <g transform="translate(0.000000,240.000000) scale(0.100000,-0.100000)"
+                                            fill="#000000" stroke="none">
+                                            <path d="M920 1969 c-119 -11 -322 -45 -418 -69 -70 -17 -73 -17 -82 0 -13 24
                                     -50 16 -43 -10 4 -14 -2 -21 -21 -26 -14 -3 -26 -12 -26 -18 0 -7 27 -104 59
                                     -217 32 -112 64 -223 70 -246 11 -40 12 -41 42 -33 36 11 26 33 109 -251 56
                                     -196 64 -216 82 -211 12 3 18 11 15 21 -2 9 -32 114 -67 234 -52 178 -61 220
@@ -211,25 +343,26 @@
                                     121 -28 120 -26 140 16 165 43 27 90 26 122 -2z m839 -8 c4 -5 -5 -52 -20
                                     -107 -25 -84 -32 -98 -52 -101 -13 -2 -25 3 -28 12 -5 14 11 172 21 203 4 13
                                     62 8 79 -7z m-56 -249 c-2 -22 -8 -26 -33 -26 -21 0 -31 5 -33 18 -7 33 4 44
-                                    38 39 27 -4 31 -8 28 -31z"/>
-                                    <path d="M1015 1733 c8 -94 15 -136 23 -129 6 7 4 128 -4 174 -4 17 -11 32
-                                    -16 32 -6 0 -7 -29 -3 -77z"/>
-                                    <path d="M1250 1776 c0 -20 5 -36 10 -36 6 0 10 13 10 29 0 17 -4 33 -10 36
-                                    -6 4 -10 -8 -10 -29z"/>
-                                    <path d="M780 1756 c0 -28 28 -167 35 -175 15 -14 15 17 0 98 -16 88 -35 129
-                                    -35 77z"/>
-                                    <path d="M1050 1057 c-63 -33 -62 -51 2 -22 29 14 61 25 71 25 9 0 17 5 17 10
-                                    0 17 -45 11 -90 -13z"/>
-                                    <path d="M1260 1071 c0 -6 8 -11 18 -11 9 0 41 -11 70 -25 59 -27 70 -18 17
-                                    15 -40 25 -105 38 -105 21z"/>
-                                    <path d="M1061 994 c-40 -50 -17 -138 29 -114 27 14 40 42 40 82 0 60 -35 75
-                                    -69 32z"/>
-                                    <path d="M1282 1008 c-15 -15 -16 -72 -2 -98 6 -11 19 -24 30 -30 46 -24 69
-                                    64 29 114 -22 28 -39 32 -57 14z"/>
-                                    <path d="M1135 706 c-16 -7 -39 -23 -49 -35 l-19 -21 34 17 c46 24 152 24 198
-                                    0 l34 -17 -19 21 c-40 46 -120 61 -179 35z"/>
-                                    </g>
-                                    </svg></p>
+                                    38 39 27 -4 31 -8 28 -31z" />
+                                            <path d="M1015 1733 c8 -94 15 -136 23 -129 6 7 4 128 -4 174 -4 17 -11 32
+                                    -16 32 -6 0 -7 -29 -3 -77z" />
+                                            <path d="M1250 1776 c0 -20 5 -36 10 -36 6 0 10 13 10 29 0 17 -4 33 -10 36
+                                    -6 4 -10 -8 -10 -29z" />
+                                            <path d="M780 1756 c0 -28 28 -167 35 -175 15 -14 15 17 0 98 -16 88 -35 129
+                                    -35 77z" />
+                                            <path d="M1050 1057 c-63 -33 -62 -51 2 -22 29 14 61 25 71 25 9 0 17 5 17 10
+                                    0 17 -45 11 -90 -13z" />
+                                            <path d="M1260 1071 c0 -6 8 -11 18 -11 9 0 41 -11 70 -25 59 -27 70 -18 17
+                                    15 -40 25 -105 38 -105 21z" />
+                                            <path d="M1061 994 c-40 -50 -17 -138 29 -114 27 14 40 42 40 82 0 60 -35 75
+                                    -69 32z" />
+                                            <path d="M1282 1008 c-15 -15 -16 -72 -2 -98 6 -11 19 -24 30 -30 46 -24 69
+                                    64 29 114 -22 28 -39 32 -57 14z" />
+                                            <path d="M1135 706 c-16 -7 -39 -23 -49 -35 l-19 -21 34 17 c46 24 152 24 198
+                                    0 l34 -17 -19 21 c-40 46 -120 61 -179 35z" />
+                                        </g>
+                                    </svg>
+                                </p>
                             @endforelse
                         </tbody>
                     </table>

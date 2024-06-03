@@ -17,18 +17,152 @@
        text-overflow: ellipsis !important;
     } */
 </style>
+
+<style>
+    .tracking-table li {
+        list-style: none;
+    }
+
+    .tracking-table {
+        position: relative;
+    }
+
+    .tracking-table .dropdown:hover .dropdown-menu {
+        display: block;
+        max-width: 100px !important;
+        position: absolute;
+        left: 0;
+        top: 100%;
+    }
+
+
+
+    /* .tracking-table .dropdown-menu {
+        --bs-dropdown-min-width: 2rem !important;
+        --bs-border-radius: 0 !important;
+        padding: 0 !important;
+        text-align: start
+    } */
+
+    .table> :not(:last-child)> :last-child>* {
+        border-bottom-color: #dee2e6 !important;
+    }
+
+    .tracking-table .dropdown-menu .dropdown-item:hover {
+        background-color: #eff5f9 !important;
+        color: #000 !important;
+    }
+
+    .dropdown-menu {
+        min-width: auto !important;
+        border-radius: 0 !important;
+        padding: 0 !important;
+        border: 1px solid #dee2e6 !important;
+    }
+
+    .dropdown-item {
+        padding: 5px 15px !important;
+    }
+
+
+    .tracking-table .dropdown-menu .dropdown-item:first-child {
+        background-color: #000 !important;
+        color: #fff !important;
+    }
+
+    .table-responsive {
+        overflow-x: inherit !important;
+    }
+
+    @media (max-width:480px) {
+        .table-responsive {
+            overflow-x: auto !important;
+        }
+    }
+
+    .tracking-table thead td {
+        background-color: #eff5f9 !important;
+        font-size: 12px !important;
+    }
+
+
+    .tracking-table tbody td:nth-child(1) {
+        background-color: #eff5f9 !important;
+    }
+
+    .tracking-table tbody td:nth-child(2) {
+        background-color: #eff5f9 !important;
+    }
+
+    table.dataTable.no-footer {
+        border-bottom: none !important;
+    }
+
+    .activityTabs {
+        background-color: transparent !important;
+        padding: 0 !important;
+    }
+
+    /* .activityTable_data table thead th {
+
+        background-color: #eff5f9 !important;
+        ;
+
+        padding: 0.8rem 0.6rem !important;
+        border: 0.5px solid #dee2e6;
+
+    } */
+
+    /* .activityTable_data table thead td h6 {
+        color: #333 !important;
+    } */
+
+    .custom_tabs ul li a.active {
+
+        /* background-color: #dddddd; */
+        background-color: transparent !important;
+        color: #007bff !important;
+        border-bottom: 3px solid #007bff !important;
+    }
+
+    .custom_tabs ul li a:hover {
+        background-color: transparent !important;
+        /* background-color: #425056; */
+    }
+
+    .custom_tabs ul li a {
+        padding: 0 15px !important;
+        font-weight: 500 !important;
+        font-size: 15px !important;
+        color: #555 !important;
+    }
+
+    .custom_tittle h4 {
+        font-size: 24px;
+        padding-bottom: 10px;
+        font-family: "avenirmedium";
+        color: #343A40;
+    }
+
+    .description_small_text {
+        font-size: 13px;
+        color: #777;
+        line-height: 25px;
+
+    }
+</style>
 <div class="fr-section" style="margin-top: -72px">
     <div class="fr-section_detail">
         <div class="dashboard_innerPages">
             <div class="custom_tabs_section">
                 <div class="custom_tittle descriptionTxt">
                     <h4>Employer / Company</h4>
-                    <p>
-                        <strong>Description:</strong> Keep track of all your
+                    <p class="description_small_text">
+                        <strong style="color:#343A40;">Description:</strong> Keep track of all your
                         activities including job postings and job talents.
                         Details of shortlisted candidates will be scheduled
-                        <br />
-                        for interview. As well as track the status of Hired
+
+                        for interview. As well as track the <br> status of Hired
                         details.
                     </p>
                 </div>
@@ -46,56 +180,56 @@
                         <li><a href="/History ">History</a></li>
                     </ul>
                 </div>
-                <br>
-                <div class="custom_tabs_detail activityTabs actTabSetting">
+
+                <div class="custom_tabs_detail activityTabs actTabSetting  mt-3">
                     <!-- tab2 data  -->
                     <div class="custom_tabs_data" style="display: block" id="tab2">
                         <div class="activityTable_data">
-                            <table class="table table-striped" id="my-job">
+                            <table class="table table-bordered text-center tracking-table" id="my-job">
                                 <thead>
                                     <tr>
-                                        <th>
-                                            <h6>Id</h6>
-                                        </th>
-                                        <th>
-                                            <h6>Position Title</h6>
-                                        </th>
-                                        <th>
-                                            <h6>Work Mode</h6>
-                                        </th>
-                                        <th>
-                                            <h6>Skills</h6>
-                                        </th>
-                                        <th>
-                                            <h6>Work Exp(years)</h6>
-                                        </th>
-                                        <th>
-                                            <h6>Role Type</h6>
-                                        </th>
-                                        <th>
-                                            <h6>Gross Salary</h6>
-                                        </th>
-                                        <th>
-                                            <h6>Hourly</h6>
-                                        </th>
-                                        <th>
-                                            <h6>Monthly</h6>
-                                        </th>
-                                        <th>
-                                            <h6>Project</h6>
-                                        </th>
-                                        <th>
-                                            <h6>Qualification</h6>
-                                        </th>
-                                        <th>
-                                            <h6>Location</h6>
-                                        </th>
-                                        <th>
-                                            <h6>Contact Mail ID</h6>
-                                        </th>
-                                        <th>
-                                            <h6>Attachment</h6>
-                                        </th>
+                                        <td class="align-middle">
+                                            Id
+                                        </td>
+                                        <td class="align-middle">
+                                            Position Title
+                                        </td>
+                                        <td class="align-middle">
+                                            Work Mode
+                                        </td>
+                                        <td class="align-middle">
+                                            Skills
+                                        </td>
+                                        <td class="align-middle">
+                                            Work Exp(years)
+                                        </td>
+                                        <td class="align-middle">
+                                            Role Type
+                                        </td>
+                                        <td class="align-middle">
+                                            Gross Salary
+                                        </td>
+                                        <td class="align-middle">
+                                            Hourly
+                                        </td>
+                                        <td class="align-middle">
+                                            Monthly
+                                        </td>
+                                        <td class="align-middle">
+                                            Project
+                                        </td>
+                                        <td class="align-middle">
+                                            Qualification
+                                        </td>
+                                        <td class="align-middle">
+                                            Location
+                                        </td>
+                                        <td class="align-middle">
+                                            Contact Mail ID
+                                        </td>
+                                        <td class="align-middle">
+                                            Attachment
+                                        </td>
                                     </tr>
                                 </thead>
                                 @forelse ($myjob as $job)

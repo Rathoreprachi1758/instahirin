@@ -31,6 +31,11 @@
 
     <link rel="icon" sizes="96x96" href="{{ asset('css/images/favicon-96x96.png') }}">
 
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.3.0/font/bootstrap-icons.css" />
+
     <style>
         .has_list ul {
             display: none;
@@ -275,6 +280,7 @@
 
 <main>
     <div class="row">
+
         <div class="main_container">
 
             <div class="dashboard_screens">
@@ -300,15 +306,15 @@
                                                 aria-hidden="true"></i></em></a>
                                 </li>
                                 {{-- <li>
-                                    <a href="/InstaHirin" ><span><i class="fa fa-user-circle-o"
-                                        aria-hidden="true"></i></span> Instahirin <em class="menu_icon"><i
-                                        class="fa fa-angle-down" aria-hidden="true"></i></em></a>
-                                </li> --}}
+                                <a href="/InstaHirin" ><span><i class="fa fa-user-circle-o"
+                                    aria-hidden="true"></i></span> Instahirin <em class="menu_icon"><i
+                                    class="fa fa-angle-down" aria-hidden="true"></i></em></a>
+                            </li> --}}
                                 {{-- <li>
-                                    <a href="{{route('open-positions')}}" ><span><i class="fa fa-user-circle-o"
-                                        aria-hidden="true"></i></span>current-open-positions<em class="menu_icon"><i
-                                        class="fa fa-angle-down" aria-hidden="true"></i></em></a>
-                                </li> --}}
+                                <a href="{{route('open-positions')}}" ><span><i class="fa fa-user-circle-o"
+                                    aria-hidden="true"></i></span>current-open-positions<em class="menu_icon"><i
+                                    class="fa fa-angle-down" aria-hidden="true"></i></em></a>
+                            </li> --}}
                                 <li><a href="/profile"><span><i class="fa fa-id-card" aria-hidden="true"></i></span>
                                         Profile
                                         <em class="menu_icon"><i class="fa fa-angle-down"
@@ -328,8 +334,11 @@
                                     </ul>
                                 </li>
                                 <li><a href="{{ url('/InstaProject') }}"><span>
-                                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 576 512"><path d="M264.5 5.2c14.9-6.9 32.1-6.9 47 0l218.6 101c8.5 3.9 13.9 12.4 13.9 21.8s-5.4 17.9-13.9 21.8l-218.6 101c-14.9 6.9-32.1 6.9-47 0L45.9 149.8C37.4 145.8 32 137.3 32 128s5.4-17.9 13.9-21.8L264.5 5.2zM476.9 209.6l53.2 24.6c8.5 3.9 13.9 12.4 13.9 21.8s-5.4 17.9-13.9 21.8l-218.6 101c-14.9 6.9-32.1 6.9-47 0L45.9 277.8C37.4 273.8 32 265.3 32 256s5.4-17.9 13.9-21.8l53.2-24.6 152 70.2c23.4 10.8 50.4 10.8 73.8 0l152-70.2zm-152 198.2l152-70.2 53.2 24.6c8.5 3.9 13.9 12.4 13.9 21.8s-5.4 17.9-13.9 21.8l-218.6 101c-14.9 6.9-32.1 6.9-47 0L45.9 405.8C37.4 401.8 32 393.3 32 384s5.4-17.9 13.9-21.8l53.2-24.6 152 70.2c23.4 10.8 50.4 10.8 73.8 0z"/></svg>
-                                </span>
+                                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 576 512">
+                                                <path
+                                                    d="M264.5 5.2c14.9-6.9 32.1-6.9 47 0l218.6 101c8.5 3.9 13.9 12.4 13.9 21.8s-5.4 17.9-13.9 21.8l-218.6 101c-14.9 6.9-32.1 6.9-47 0L45.9 149.8C37.4 145.8 32 137.3 32 128s5.4-17.9 13.9-21.8L264.5 5.2zM476.9 209.6l53.2 24.6c8.5 3.9 13.9 12.4 13.9 21.8s-5.4 17.9-13.9 21.8l-218.6 101c-14.9 6.9-32.1 6.9-47 0L45.9 277.8C37.4 273.8 32 265.3 32 256s5.4-17.9 13.9-21.8l53.2-24.6 152 70.2c23.4 10.8 50.4 10.8 73.8 0l152-70.2zm-152 198.2l152-70.2 53.2 24.6c8.5 3.9 13.9 12.4 13.9 21.8s-5.4 17.9-13.9 21.8l-218.6 101c-14.9 6.9-32.1 6.9-47 0L45.9 405.8C37.4 401.8 32 393.3 32 384s5.4-17.9 13.9-21.8l53.2-24.6 152 70.2c23.4 10.8 50.4 10.8 73.8 0z" />
+                                            </svg>
+                                        </span>
                                         Insta Project
                                         <em class="menu_icon"><i class="fa fa-angle-down"
                                                 aria-hidden="true"></i></em></a>
@@ -343,15 +352,14 @@
 
                                 <li class="has_list open_sublist" onclick="toggleSublist(this)">
                                     <a href="javascript:void(0)">
-                                        <span><i class="fa fa-usd"
-                                                 aria-hidden="true"></i></span>
+                                        <span><i class="fa fa-usd" aria-hidden="true"></i></span>
                                         Salary Details
                                         <em class="menu_icon"><i class="fa fa-angle-down"
-                                                                 aria-hidden="true"></i></em>
+                                                aria-hidden="true"></i></em>
                                     </a>
                                     <ul>
-                                        <li><a href="{{route('salaryDetails')}}">Employee Salary Details</a></li>
-                                        <li><a href="{{route('normalSalary')}}">Normal Salary</a></li>
+                                        <li><a href="{{ route('salaryDetails') }}">Employee Salary Details</a></li>
+                                        <li><a href="{{ route('normalSalary') }}">Normal Salary</a></li>
                                     </ul>
                                 </li>
                                 <li class="has_list open_sublist" onclick="toggleSublist(this)">
@@ -453,6 +461,7 @@
                 </div>
             </div>
         </div>
+
     </div>
 </main>
 <!-- dashboard footer  -->

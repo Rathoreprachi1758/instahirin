@@ -11,6 +11,44 @@
     .auth_select_info option {
         width: 100%;
     }
+
+
+
+    .custom_tabs {
+        width: 100%;
+        border: 0.5px solid #fff !important;
+    }
+
+
+
+    .custom_tabs ul li a.active {
+
+        /* background-color: #dddddd; */
+        background-color: transparent !important;
+        color: #007bff !important;
+
+        border-bottom: 3px solid #007bff !important;
+    }
+
+    .custom_tabs ul li a:hover {
+        background-color: transparent !important;
+        /* background-color: #425056; */
+    }
+
+
+
+    .custom_tabs ul li a {
+        padding: 0 11px !important;
+        font-weight: 500 !important;
+        font-size: 15px !important;
+        color: #555 !important;
+    }
+
+    .masterTab_bg {
+        background-color: #fff;
+        padding: 0px;
+
+    }
 </style>
 <link rel="stylesheet " href="{{ asset('css/css/profilestyle.css') }} ">
 <link rel="stylesheet " href="{{ asset('css/css/profileresponsive.css') }} ">
@@ -63,7 +101,7 @@
                                                 <label>First Name</label>
                                             </div>
                                         </div>
-                                        <div class="col-xxl-9 col-xl-9 col-lg-8 col-md-7">
+                                        <div class="col-xl-9 col-xl-9 col-lg-8 col-md-7">
                                             <div class="p_userInfo_informationTxt">
                                                 <p>{{ $user->name }}</p>
                                             </div>
@@ -106,7 +144,7 @@
                                                             @foreach ($countryCodes as $country)
                                                                 <option value="{{ $country->name }}"
                                                                     @if ($user->nationality == $country->name) selected @endif>
-                                                                       {{ $country->name }}
+                                                                    {{ $country->name }}
                                                                 </option>
                                                             @endforeach
                                                         </select>
@@ -171,8 +209,9 @@
                                             </div>
                                             <div class="col-xxl-9 col-xl-9 col-lg-8 col-md-7">
                                                 <div class="p_userInfo_editInput">
-                                                    <input type="text" name="email" class="w-100" placeholder="Enter Your Email"
-                                                        value="{{ $user->email }}" disabled>
+                                                    <input type="text" name="email" class="w-100"
+                                                        placeholder="Enter Your Email" value="{{ $user->email }}"
+                                                        disabled>
                                                 </div>
                                             </div>
                                         </div>
@@ -188,7 +227,7 @@
                                             <div class="col-xxl-9 col-xl-9 col-lg-8 col-md-7">
                                                 <div class="auth_select_info" style="width: 42%; margin-top:5px">
                                                     <select name="country_code" required style="width: 100%;">
-                                                        <option value="" >Select a country code</option>
+                                                        <option value="">Select a country code</option>
                                                         @foreach ($countryCodes as $country)
                                                             <option value="+{{ $country->phone }}"
                                                                 @if ($user->country_code == $country->phone) selected @endif>
@@ -209,8 +248,9 @@
                                             <div class="col-xxl-9 col-xl-9 col-lg-8 col-md-7">
                                                 <div class="p_userInfo_editInput">
                                                     <input type="text" class="w-100" name="mobilenumber"
-                                                        pattern="[0-9]+" title="Numericals  only allowed" placeholder="Enter Your Mobile Number"
-                                                        maxlength="10" value="{{ $user->mobilenumber }}">
+                                                        pattern="[0-9]+" title="Numericals  only allowed"
+                                                        placeholder="Enter Your Mobile Number" maxlength="10"
+                                                        value="{{ $user->mobilenumber }}">
 
                                                 </div>
                                             </div>
@@ -227,12 +267,12 @@
                                             <div class="col-xxl-9 col-xl-9 col-lg-8 col-md-7">
                                                 <div class="auth_select_info" style="width: 42%; margin-top:5px">
                                                     <select name="country" required style="width: 100%;">
-                                                        <option value="" >Select a country code
+                                                        <option value="">Select a country code
                                                         </option>
                                                         @foreach ($countryCodes as $country)
                                                             <option value="{{ $country->name }}"
                                                                 @if ($user->country == $country->name) selected @endif>
-                                                                   {{ $country->name }}
+                                                                {{ $country->name }}
                                                             </option>
                                                         @endforeach
                                                     </select>
@@ -300,8 +340,7 @@
                                 <div class="col-xxl-9 col-xl-9 col-lg-8 col-md-12">
                                     <div class="verify_section">
                                         <div class="p_userInfo_editInput">
-                                            <input type="text" value=""
-                                                placeholder="info@bizionictech.com">
+                                            <input type="text" value="" placeholder="info@bizionictech.com">
                                         </div>
                                         <a href="#" class="verifyText">Verify</a>
 

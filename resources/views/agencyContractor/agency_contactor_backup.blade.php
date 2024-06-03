@@ -3,11 +3,6 @@
 <link rel="stylesheet" href="{{ asset('css/css/Employer_activity_style.css') }}">
 <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
 <style>
-    .Compliance_and_certificate_heading h3 {
-        border-bottom: 1px solid #ebeaea;
-        font-size: 18px;
-    }
-
     .error-message {
         color: red;
     }
@@ -22,15 +17,14 @@
     }
 
     .checked-label {
-        color: #fff !important;
+        color: #fff;
         /* Change the text color to white */
-        background-color: #6c757d !important;
+        background-color: #6c757d;
         /* Change the background color to btn-secondary */
         padding: 5px 10px;
         /* Adjust padding as needed */
         border-radius: 5px;
         /* Add border radius for rounded corners */
-
     }
 
     .select.sub-service input[type="checkbox"] {
@@ -66,20 +60,6 @@
         /* Adjust margin as needed */
     }
 
-    .check {
-        font-size: 16px !important;
-        /* background-color: #343A40; */
-        background-color: #fff;
-        margin-top: 10px;
-        border-radius: 10px;
-        color: #000;
-        border: 1px solid #000;
-        padding: 0px 12px;
-        margin: 5px;
-        margin-top: 20px;
-    }
-
-
     .selected-sub-service {
         display: inline-block;
         background-color: #f0f0f0;
@@ -87,7 +67,6 @@
         margin-right: 10px;
         margin-bottom: 5px;
         border-radius: 5px;
-        background-color: #000;
     }
 
     .remove-sub-service {
@@ -163,12 +142,10 @@
     }
 
     .bordered-container {
-        border: 1px solid #afafaf;
+        border: 1px solid #000;
         /* Border style */
-        padding: 5px;
+        padding: 10px;
         /* Padding for inner content */
-        border-radius: 4px;
-
     }
 
     .row {
@@ -220,7 +197,17 @@
         /* Adjust the font size as needed */
     }
 
-
+    .leave_button_bg,
+    .leave_button_bg2 {
+        background-color: #Fff !important;
+        box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+        padding: 16px 20px;
+        font-size: 14px;
+        position: relative;
+        border: none !important;
+        color: #495057;
+        border-radius: 5px;
+    }
 
     .leave_button_bg2 {
         position: relative;
@@ -235,12 +222,27 @@
         border-bottom: none !important;
     }
 
+    .tab-content {
+        background-color: #Fff !important;
+        border-radius: 10px;
+
+
+    }
 
     .track-form {
-        border: 1px solid #ebeaea;
-        padding: 10px;
-        background-color: #Fff !important;
-        border-radius: 4px;
+        padding: 25px !important;
+        box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+    }
+
+    .nav-link {
+
+        color: #000;
+    }
+
+    .nav-pills .nav-link.active,
+    .nav-pills .show>.nav-link {
+        color: #fff;
+        background-color: #343A40;
     }
 
 
@@ -256,25 +258,10 @@
     .card_portfoiio2 {
         width: 100%;
         height: auto !important;
-        margin-top: 15px;
-        border: 1px solid #ebeaea;
-        border-radius: 4px;
+        margin-top: 10px;
+        border: 1px solid #e1e1e3;
+        border-radius: 10px;
         padding-bottom: 61px;
-    }
-
-
-    .card {
-        position: relative;
-        display: -ms-flexbox;
-        display: flex;
-        -ms-flex-direction: column;
-        flex-direction: column;
-        min-width: 0;
-        word-wrap: break-word;
-        background-clip: border-box;
-        border: 1px solid #ebeaea;
-        background-color: #Fff !important;
-        border-radius: 4px;
     }
 
 
@@ -286,18 +273,6 @@
         position: relative;
     }
 
-    .card-header {
-        padding: .75rem 1.25rem;
-        margin-bottom: 0;
-        background-color: rgb(246, 248, 249);
-
-    }
-
-    .bordered-container {
-        border: 1px solid #fff;
-        padding: 0px;
-        border-radius: 4px;
-    }
 
     .card_portfoiio_header img {
         width: 100% !important;
@@ -350,148 +325,13 @@
         position: relative;
     }
 
-    .canvas_part {
-        width: 100px;
-        height: 100px;
-        position: relative;
-    }
-
-    .table-responsive {
-
-        margin-top: 30px;
-        border-radius: 10px;
-        position: relative;
-        z-index: 0;
-    }
-
-    .nav-tabs .nav-item.show .nav-link,
-    .nav-tabs .nav-link.active {
-        color: #007bff !important;
-        border: none !important;
-        background-color: transparent !important;
-        border: 1px solid #ebeaea !important;
-        border-color: none !important;
-        padding: 10px !important;
-    }
-
-    .nav-tabs .nav-item.show .nav-link,
-    .nav-tabs .nav-link {
-        padding: 0 15px !important;
-        font-weight: 500 !important;
-        font-size: 15px !important;
-        color: #555 !important;
-    }
-
-    .nav-pills .nav-link.active,
-    .nav-pills .show>.nav-link {
-        color: #007bff !important;
-        background-color: transparent !important;
-        border-bottom: 3px solid #007bff !important;
-        border-radius: 0px !important;
-        font-size: 15px !important;
-    }
-
-    .nav-pills .nav-link {
-        color: #555 !important;
-        font-size: 15px !important;
-    }
-
-
-    .custom_tittle h4 {
-        font-size: 24px;
-        padding-bottom: 10px;
-        font-family: "avenirmedium";
-        color: #343A40;
-    }
-
-    .description_small_text {
-        font-size: 16px !important;
-        color: #777;
-        line-height: 25px;
-    }
-
-
-
-    .tracking-table li {
-        list-style: none;
-    }
-
-    .tracking-table {
-        position: relative;
-    }
-
-    .tracking-table .dropdown:hover .dropdown-menu {
-        display: block;
-        max-width: 100px !important;
-        position: absolute;
-        left: 0;
-        top: 100%;
-    }
-
-
-
-    /* .tracking-table .dropdown-menu {
-        --bs-dropdown-min-width: 2rem !important;
-        --bs-border-radius: 0 !important;
-        padding: 0 !important;
-        text-align: start
-    } */
-
-    .table> :not(:last-child)> :last-child>* {
-        border-bottom-color: #dee2e6 !important;
-    }
-
-    .tracking-table .dropdown-menu .dropdown-item:hover {
-        background-color: #eff5f9 !important;
-        color: #000 !important;
-    }
-
-    .dropdown-menu {
-        min-width: auto !important;
-        border-radius: 0 !important;
-        padding: 0 !important;
-        border: 1px solid #dee2e6 !important;
-    }
-
-    .dropdown-item {
-        padding: 5px 15px !important;
-    }
-
-
-    .tracking-table .dropdown-menu .dropdown-item:first-child {
-        background-color: #000 !important;
-        color: #fff !important;
-    }
-
-    .table-responsive {
-        overflow-x: inherit !important;
-    }
-
-    @media (max-width:480px) {
-        .table-responsive {
-            overflow-x: auto !important;
-        }
-    }
-
-    .tracking-table thead td {
-        background-color: #eff5f9 !important;
-    }
-
-
-    .tracking-table tbody td:nth-child(1) {
-        background-color: #eff5f9 !important;
-    }
-
-    .tracking-table tbody td:nth-child(2) {
-        background-color: #eff5f9 !important;
-    }
 </style>
 <div class="fr-section" style="margin-top: -72px">
     <div class="fr-section_detail">
         <div class="container-fluid">
+
             <div style="font-size:22px;font-weight:600;margin-bottom:3px;">Time Tracking</div>
-            <div style="margin-bottom:15px" class="description_small_text"><b style="color:#343A40;">Description:</b> To
-                monitor the
+            <div style="font-size:16px;font-weight:500;margin-bottom:15px"><b>Description:</b> To monitor the
                 timekeeping
                 records of employees within their respective companies.</div>
 
@@ -504,12 +344,12 @@
                         <div class="row">
                             <nav>
                                 <div class="nav nav-tabs" id="nav-tab" role="tablist">
-                                    <button class="nav-link active leave_button_bg" id="nav-home-tab"
-                                        data-bs-toggle="tab" data-bs-target="#nav-home" type="button" role="tab"
+                                    <button class="nav-link active" id="nav-home-tab" data-bs-toggle="tab"
+                                        data-bs-target="#nav-home" type="button" role="tab"
                                         aria-controls="nav-home" aria-selected="true">Company
                                         Information
                                     </button>
-                                    <button class="nav-link leave_button_bg2" id="nav-profile-tab" data-bs-toggle="tab"
+                                    <button class="nav-link" id="nav-profile-tab" data-bs-toggle="tab"
                                         data-bs-target="#nav-profile" type="button" role="tab"
                                         aria-controls="nav-profile" aria-selected="false">
                                         Messages
@@ -524,8 +364,8 @@
                                             <li class="nav-item" role="presentation">
                                                 <button class="nav-link active" id="pills-home-tab"
                                                     data-bs-toggle="pill" data-bs-target="#pills-home" type="button"
-                                                    role="tab" aria-controls="pills-home"
-                                                    aria-selected="true">Company
+                                                    role="tab" aria-controls="pills-home" aria-selected="true"
+                                                    style="font-size:14px;background-color:#343A40;color:#Fff;">Company
                                                     Details
                                                 </button>
                                             </li>
@@ -760,223 +600,10 @@
                                                                         style="padding: 12px 30px;background-color:#343A40;color:#fff;
                                                                         ">Submit</button>
                                                                 </div>
-
-
-
                                                             </form>
 
 
 
-                                                            {{-- here_table --}}
-
-                                                            <div class="row d-flex justify-content-center mt-3">
-                                                                <div class="col-xl-12 col-sm-12 col-lg-12 col-md-12">
-                                                                    <div class="table-responsive">
-                                                                        <div class="activityTable_data">
-                                                                            <table
-                                                                                class="table table-bordered text-center tracking-table"
-                                                                                style="border-radius:10px;">
-
-
-                                                                                <thead>
-                                                                                    <tr>
-                                                                                        <td colspan="5"></td>
-                                                                                        <td colspan="2">
-
-                                                                                            Time Recorder
-                                                                                        </td>
-                                                                                        <td colspan="3"></td>
-                                                                                    </tr>
-                                                                                    <tr>
-                                                                                        <td class="align-middle">
-                                                                                            #
-                                                                                        </td>
-                                                                                        <td class="align-middle">
-                                                                                            Company
-                                                                                        </td>
-                                                                                        <td class="align-middle">
-                                                                                            Department
-                                                                                        </td class="align-middle">
-                                                                                        <td class="align-middle">
-                                                                                            Emp Code
-                                                                                        </td>
-                                                                                        {{-- <th width="180">
-                                                                            <h6>Time Recorder</h6>
-                                                                            <hr style="border: 1px">
-                                                                            <table>
-                                                                                <thead>
-                                                                                <th width="60">
-                                                                                    <h6>Punch In</h6>
-                                                                                </th>
-                                                                                <th width="60">
-                                                                                    <h6>Punch Out</h6>
-                                                                                </th>
-                                                                                </thead>
-                                                                            </table>
-                                                                        </th> --}}
-                                                                                        <td class="align-middle">
-                                                                                            Calendar
-                                                                                        </td>
-                                                                                        <td class="align-middle">
-                                                                                            Time In
-                                                                                        </td>
-                                                                                        <td class="align-middle">
-                                                                                            Time Out
-                                                                                        </td>
-
-                                                                                        <td class="align-middle">
-                                                                                            Total Hours
-                                                                                        </td>
-                                                                                        <td class="align-middle">
-                                                                                            Ip Address
-                                                                                        </td>
-                                                                                        <td class="align-middle">
-                                                                                            Action
-                                                                                        </td>
-                                                                                    </tr>
-                                                                                </thead>
-
-
-
-                                                                                <tbody>
-                                                                                    <tr>
-                                                                                        <td class="align-middle">1
-                                                                                        </td>
-                                                                                        <td class="text-center"
-                                                                                            class="align-middle">
-                                                                                            Bizionic Tech
-                                                                                        </td>
-                                                                                        <td class="text-center"
-                                                                                            class="align-middle">
-                                                                                            Marketing</td>
-                                                                                        <td class="text-center"
-                                                                                            class="align-middle">014
-                                                                                        </td>
-                                                                                        <td class="text-center"
-                                                                                            class="align-middle">
-                                                                                            01/12/2023</td>
-                                                                                        <td class="text-center"
-                                                                                            class="align-middle">11:00
-                                                                                        </td>
-                                                                                        <td class="text-center"
-                                                                                            class="align-middle">19:00
-                                                                                        </td>
-                                                                                        <td class="text-center"
-                                                                                            class="align-middle">07:00
-                                                                                            Hrs</td>
-                                                                                        <td class="text-center"
-                                                                                            class="align-middle">
-                                                                                            192.172.100.1</td>
-                                                                                        <td class="text-center"
-                                                                                            class="align-middle"><span
-                                                                                                style="color:rgb(23, 239, 23)">Accept</span>
-                                                                                        </td>
-                                                                                    </tr>
-
-
-                                                                                    <tr>
-                                                                                        <td class="align-middle">1
-                                                                                        </td>
-                                                                                        <td class="text-center"
-                                                                                            class="align-middle">
-                                                                                            Bizionic Tech
-                                                                                        </td>
-                                                                                        <td class="text-center"
-                                                                                            class="align-middle">
-                                                                                            Marketing</td>
-                                                                                        <td class="text-center"
-                                                                                            class="align-middle">014
-                                                                                        </td>
-                                                                                        <td class="text-center"
-                                                                                            class="align-middle">
-                                                                                            01/12/2023</td>
-                                                                                        <td class="text-center"
-                                                                                            class="align-middle">11:00
-                                                                                        </td>
-                                                                                        <td class="text-center"
-                                                                                            class="align-middle">19:00
-                                                                                        </td>
-                                                                                        <td class="text-center"
-                                                                                            class="align-middle">07:00
-                                                                                            Hrs</td>
-                                                                                        <td class="text-center"
-                                                                                            class="align-middle">
-                                                                                            192.172.100.1</td>
-                                                                                        <td class="text-center"
-                                                                                            class="align-middle"><span
-                                                                                                style="color:rgb(250, 86, 86)">Reject</span>
-                                                                                        </td>
-                                                                                    </tr>
-
-
-                                                                                    <tr>
-                                                                                        <td class="align-middle">1
-                                                                                        </td>
-                                                                                        <td class="text-center"
-                                                                                            class="align-middle">
-                                                                                            Bizionic Tech
-                                                                                        </td>
-                                                                                        <td class="text-center"
-                                                                                            class="align-middle">
-                                                                                            Marketing</td>
-                                                                                        <td class="text-center"
-                                                                                            class="align-middle">014
-                                                                                        </td>
-                                                                                        <td class="text-center"
-                                                                                            class="align-middle">
-                                                                                            01/12/2023</td>
-                                                                                        <td class="text-center"
-                                                                                            class="align-middle">11:00
-                                                                                        </td>
-                                                                                        <td class="text-center"
-                                                                                            class="align-middle">19:00
-                                                                                        </td>
-                                                                                        <td class="text-center"
-                                                                                            class="align-middle">07:00
-                                                                                            Hrs</td>
-                                                                                        <td class="text-center"
-                                                                                            class="align-middle">
-                                                                                            192.172.100.1</td>
-
-
-                                                                                        <td>
-                                                                                            <li
-                                                                                                class="nav-item dropdown">
-                                                                                                <a class="nav-link "
-                                                                                                    href="#"
-                                                                                                    id="navbarDropdown"
-                                                                                                    role="button"
-                                                                                                    data-toggle="dropdown"
-                                                                                                    aria-haspopup="true"
-                                                                                                    aria-expanded="false">
-                                                                                                    <i
-                                                                                                        class="bi bi-three-dots-vertical"></i>
-                                                                                                </a>
-                                                                                                <div class="dropdown-menu"
-                                                                                                    aria-labelledby="navbarDropdown">
-                                                                                                    <a class="dropdown-item"
-                                                                                                        href="#">&check;
-                                                                                                        Accept</a>
-                                                                                                    <a class="dropdown-item"
-                                                                                                        href="#">&#10005;
-                                                                                                        Reject</a>
-
-                                                                                                </div>
-                                                                                            </li>
-                                                                                        </td>
-
-                                                                                    </tr>
-
-
-
-                                                                                </tbody>
-
-                                                                            </table>
-
-                                                                        </div>
-                                                                    </div>
-                                                                </div>
-                                                            </div>
 
 
 
@@ -1533,220 +1160,7 @@
                                                                         ">Submit</button>
                                                                 </div>
 
-
-
-
                                                             </form>
-
-
-                                                            <div class="row d-flex justify-content-center mt-3">
-                                                                <div class="col-xl-12 col-xl-12 col-lg-12 col-md-12">
-                                                                    <div class="table-responsive">
-                                                                        <div class="activityTable_data">
-                                                                            <table
-                                                                                class="table table-bordered text-center tracking-table"
-                                                                                style="border-radius:10px;">
-
-
-                                                                                <thead>
-                                                                                    <tr>
-                                                                                        <td colspan="5"></td>
-                                                                                        <td colspan="2">
-
-                                                                                            Time Recorder
-                                                                                        </td>
-                                                                                        <td colspan="3"></td>
-                                                                                    </tr>
-                                                                                    <tr>
-                                                                                        <td class="align-middle">
-                                                                                            #
-                                                                                        </td>
-                                                                                        <td class="align-middle">
-                                                                                            Company
-                                                                                        </td>
-                                                                                        <td class="align-middle">
-                                                                                            Department
-                                                                                        </td>
-                                                                                        <td class="align-middle">
-                                                                                            Emp Code
-                                                                                        </td>
-                                                                                        {{-- <th width="180">
-                                                                            <h6>Time Recorder</h6>
-                                                                            <hr style="border: 1px">
-                                                                            <table>
-                                                                                <thead>
-                                                                                <th width="60">
-                                                                                    <h6>Punch In</h6>
-                                                                                </th>
-                                                                                <th width="60">
-                                                                                    <h6>Punch Out</h6>
-                                                                                </th>
-                                                                                </thead>
-                                                                            </table>
-                                                                        </th> --}}
-                                                                                        <td class="align-middle">
-                                                                                            Calendar
-                                                                                        </td>
-                                                                                        <td class="align-middle">
-                                                                                            Time In
-                                                                                        </td>
-                                                                                        <td class="align-middle">
-                                                                                            Time Out
-                                                                                        </td>
-
-                                                                                        <td class="align-middle">
-                                                                                            Total Hours
-                                                                                        </td>
-                                                                                        <td class="align-middle">
-                                                                                            Ip Address
-                                                                                        </td>
-                                                                                        <td class="align-middle">
-                                                                                            Action
-                                                                                        </td>
-                                                                                    </tr>
-                                                                                </thead>
-
-
-
-                                                                                <tbody>
-                                                                                    <tr>
-                                                                                        <td class="align-middle">1
-                                                                                        </td>
-                                                                                        <td class="text-center"
-                                                                                            class="align-middle">
-                                                                                            Bizionic Tech
-                                                                                        </td>
-                                                                                        <td class="text-center"
-                                                                                            class="align-middle">
-                                                                                            Marketing</td>
-                                                                                        <td class="text-center"
-                                                                                            class="align-middle">014
-                                                                                        </td>
-                                                                                        <td class="text-center"
-                                                                                            class="align-middle">
-                                                                                            01/12/2023</td>
-                                                                                        <td class="text-center"
-                                                                                            class="align-middle">11:00
-                                                                                        </td>
-                                                                                        <td class="text-center"
-                                                                                            class="align-middle">19:00
-                                                                                        </td>
-                                                                                        <td class="text-center"
-                                                                                            class="align-middle">07:00
-                                                                                            Hrs</td>
-                                                                                        <td class="text-center"
-                                                                                            class="align-middle">
-                                                                                            192.172.100.1</td>
-                                                                                        <td class="text-center"
-                                                                                            class="align-middle"><span
-                                                                                                style="color:rgb(23, 239, 23)">Accept</span>
-                                                                                        </td>
-                                                                                    </tr>
-
-
-                                                                                    <tr>
-                                                                                        <td class="align-middle">1
-                                                                                        </td>
-                                                                                        <td class="text-center"
-                                                                                            class="align-middle">
-                                                                                            Bizionic Tech
-                                                                                        </td>
-                                                                                        <td class="text-center"
-                                                                                            class="align-middle">
-                                                                                            Marketing</td>
-                                                                                        <td class="text-center"
-                                                                                            class="align-middle">014
-                                                                                        </td>
-                                                                                        <td class="text-center"
-                                                                                            class="align-middle">
-                                                                                            01/12/2023</td>
-                                                                                        <td class="text-center"
-                                                                                            class="align-middle">11:00
-                                                                                        </td>
-                                                                                        <td class="text-center"
-                                                                                            class="align-middle">19:00
-                                                                                        </td>
-                                                                                        <td class="text-center"
-                                                                                            class="align-middle">07:00
-                                                                                            Hrs</td>
-                                                                                        <td class="text-center"
-                                                                                            class="align-middle">
-                                                                                            192.172.100.1</td>
-                                                                                        <td class="text-center"
-                                                                                            class="align-middle"><span
-                                                                                                style="color:rgb(250, 86, 86)">Reject</span>
-                                                                                        </td>
-                                                                                    </tr>
-
-
-                                                                                    <tr>
-                                                                                        <td>1
-                                                                                        </td>
-                                                                                        <td class="text-center"
-                                                                                            class="align-middle">
-                                                                                            Bizionic Tech
-                                                                                        </td>
-                                                                                        <td class="text-center"
-                                                                                            class="align-middle">
-                                                                                            Marketing</td>
-                                                                                        <td class="text-center"
-                                                                                            class="align-middle">014
-                                                                                        </td>
-                                                                                        <td class="text-center"
-                                                                                            class="align-middle">
-                                                                                            01/12/2023</td>
-                                                                                        <td class="text-center"
-                                                                                            class="align-middle">11:00
-                                                                                        </td>
-                                                                                        <td class="text-center"
-                                                                                            class="align-middle">19:00
-                                                                                        </td>
-                                                                                        <td class="text-center"
-                                                                                            class="align-middle">07:00
-                                                                                            Hrs</td>
-                                                                                        <td class="text-center"
-                                                                                            class="align-middle">
-                                                                                            192.172.100.1</td>
-                                                                                        <td>
-                                                                                            <li
-                                                                                                class="nav-item dropdown">
-                                                                                                <a class="nav-link "
-                                                                                                    href="#"
-                                                                                                    id="navbarDropdown"
-                                                                                                    role="button"
-                                                                                                    data-toggle="dropdown"
-                                                                                                    aria-haspopup="true"
-                                                                                                    aria-expanded="false">
-                                                                                                    <i
-                                                                                                        class="bi bi-three-dots-vertical"></i>
-                                                                                                </a>
-                                                                                                <div class="dropdown-menu"
-                                                                                                    aria-labelledby="navbarDropdown">
-                                                                                                    <a class="dropdown-item"
-                                                                                                        href="#">&check;
-                                                                                                        Accept</a>
-                                                                                                    <a class="dropdown-item"
-                                                                                                        href="#">&#10005;
-                                                                                                        Reject</a>
-
-                                                                                                </div>
-                                                                                            </li>
-                                                                                        </td>
-                                                                                    </tr>
-
-
-
-                                                                                </tbody>
-
-                                                                            </table>
-
-                                                                        </div>
-                                                                    </div>
-                                                                </div>
-                                                            </div>
-
-
-
                                                         </div>
                                                         {{-- <table class="table table-striped mt-5">
                                                             <thead>
@@ -2063,8 +1477,8 @@
                                             <div class="row col-12">
                                                 <div class="row">
                                                     <div class="col-md-6">
-                                                        <label class="fa-2x fw-bold"> Add
-                                                            Service Line </label>
+                                                        <label class="fa-2x fw-bold">Add
+                                                            Service Line</label>
                                                         <p>Give Buyer A sense of how you
                                                             spend your time. You must
                                                             add
@@ -2107,7 +1521,7 @@
                                                         <div class="accordion" id="accordionPanelsStayOpenExample">
                                                             @isset($agencyServices)
                                                                 @foreach ($agencyServices as $agencyService)
-                                                                    <div class="accordion-item mt-3">
+                                                                    <div class="accordion-item">
                                                                         <h2 class="accordion-header">
                                                                             <button
                                                                                 class="accordion-button bg-dark text-white"
@@ -2124,37 +1538,25 @@
                                                                                 <div class="container">
                                                                                     <div class="btn-group">
                                                                                         <div class="row">
-
                                                                                             @foreach ($agencySubServices as $agencySubService)
                                                                                                 @if ($agencySubService->service_id == $agencyService->id)
                                                                                                     <div
-                                                                                                        class="col-xl-4 col-lg-4 col-md-12 col-sm-12">
-
-
-                                                                                                        <div
-                                                                                                            class="select sub-service">
-                                                                                                            <input
-                                                                                                                type="checkbox"
-                                                                                                                name="service[]"
-                                                                                                                value="{{ $agencySubService->id }}"
-                                                                                                                id="item_{{ $agencySubService->id }}"
-                                                                                                                onchange="updateSelectedSubServices()"
-                                                                                                                {{ in_array($agencySubService->id, $services) ? 'checked' : '' }}>
-                                                                                                            <label
-                                                                                                                class="btn btn-secondary text-dark button_select"
-                                                                                                                for="item_{{ $agencySubService->id }}">
-                                                                                                                {{ $agencySubService->sub_service_name }}
-                                                                                                            </label>
-                                                                                                        </div>
-
-
-
-
-
+                                                                                                        class="select sub-service">
+                                                                                                        <input
+                                                                                                            type="checkbox"
+                                                                                                            name="service[]"
+                                                                                                            value="{{ $agencySubService->id }}"
+                                                                                                            id="item_{{ $agencySubService->id }}"
+                                                                                                            onchange="updateSelectedSubServices()"
+                                                                                                            {{ in_array($agencySubService->id, $services) ? 'checked' : '' }}>
+                                                                                                        <label
+                                                                                                            class="btn btn-secondary text-dark button_select"
+                                                                                                            for="item_{{ $agencySubService->id }}">
+                                                                                                            {{ $agencySubService->sub_service_name }}
+                                                                                                        </label>
                                                                                                     </div>
                                                                                                 @endif
                                                                                             @endforeach
-
                                                                                         </div>
                                                                                     </div>
                                                                                 </div>
@@ -2183,7 +1585,6 @@
                                                 <!-- Hidden inputs for sending ranges with subservice ID and names -->
                                                 <div id="hidden-inputs"></div>
                                                 <button id="submit-button" class="btn btn-secondary mt-4"
-                                                    style="background-color: #343A40;padding: 12px 30px;"
                                                     type="submit">
                                                     Save
                                                 </button>
@@ -2533,13 +1934,11 @@
                                                 <div class="card_portfolio_plus_card">
                                                     <div class="card_portfolio_margin_top">
 
-                                                        {{-- <a href="#"><i
+                                                        <a href="#"><i
                                                                 class="bi bi-plus-circle-fill bill-card-icon"></i>
-                                                            <div class="bill-card-txt" id="addPortfolioBtn">Add Card</div>
-                                                        </a> --}}
-                                                        <button id="addPortfolioBtn" class="btn">+ Add New
-                                                            Portfolio
-                                                        </button>
+                                                            <div class="bill-card-txt" id="addPortfolioBtn">Add Card
+                                                            </div>
+                                                        </a>
                                                     </div>
                                                 </div>
 
@@ -2551,93 +1950,55 @@
                                 </div>
                             </div>
 
-                            {{-- //modeal --}}
+
                             <div id="transitionScreen" class="transition-screen">
                                 <div class="form-container">
-                                    <div style="height: 650px; overflow-y: auto;">
+                                    <div style="height: 600px; overflow-y: auto;">
                                         <form action="{{ route('portfolioSubmit') }}" method="post"
                                             id="portfolioForm" enctype="multipart/form-data">
                                             @csrf
                                             <label class="fa-2x fw-bold">Add a New
                                                 Portfolio</label><br>
-                                            <label class="fw-bold" style="font-size: 13px;padding-top:10px;">Share
-                                                Your Latest Existing
+                                            <label class="fw-bold">Share Your Latest Existing
                                                 Work</label><br>
-                                            <label class="fw-bold mt-4"style="font-size: 13px;">Client Details</label>
+                                            <label class="fw-bold mt-2">Client Details</label>
                                             <hr>
-
                                             <div class="row mt-3">
                                                 <div class="col">
-                                                    <label class="fw-bold mt-2" style="font-size: 13px;">Client
+                                                    <label class="fw-bold mt-2">Client
                                                         Name</label>
                                                     <input type="text" name="client_name" class="form-control"
-                                                        placeholder="Name"
-                                                        aria-label="Name"style="height:50px;margin-top:10px;">
+                                                        placeholder="Name" aria-label="Name">
                                                 </div>
                                                 <div class="col">
-                                                    <label class="fw-bold mt-2" style="font-size: 13px;">Client
+                                                    <label class="fw-bold mt-2">Client
                                                         Website</label>
                                                     <input type="text" name="client_website" class="form-control"
-                                                        placeholder="https://www.example.com" aria-label="Last name"
-                                                        style="height:50px;margin-top:10px;">
+                                                        placeholder="https://www.example.com" aria-label="Last name">
                                                 </div>
                                             </div>
-
-                                            <label class="fw-bold mt-4"style="font-size: 13px;">Portfolio
-                                                Item
+                                            <label class="fa-2x mt-2">Portfolio Item
                                                 Details</label>
                                             <hr>
-                                            <div class="row">
-
-                                                <div class="col-xl-6 col-lg-6 col-md-12 col-sm-12">
-
-                                                    <div>
-                                                        <label class="fa-2x mt-2" style="font-size: 13px;">Portfolio
-                                                            Item
-                                                            Details</label><br>
-
-
-                                                        <label class="fw-bold" style="font-size: 13px;">Title</label>
-                                                        <input type="text" name="portfolio_title"
-                                                            class="form-control" id="formGroupExampleInput"
-                                                            placeholder="Enter a title for this portfolio item"
-                                                            style="height:50px;margin-top:10px;">
-                                                    </div>
-                                                </div>
-
-                                                <div class="col-xl-6 col-lg-6 col-md-12 col-sm-12">
-
-                                                    <div>
-                                                        <label class="fa-2x mt-2" style="font-size: 13px;">Services
-                                                            Line
-                                                        </label><br>
-                                                        <label class="fw-bold" style="font-size: 13px;">Title</label>
-                                                        <input type="text" name="portfolio_title"
-                                                            class="form-control" id="formGroupExampleInput"
-                                                            placeholder="Enter a title for this portfolio item"
-                                                            style="height:50px;margin-top:10px;">
-                                                    </div>
-                                                </div>
-
+                                            <div>
+                                                <label class="fw-bold">Title</label>
+                                                <input type="text" name="portfolio_title" class="form-control"
+                                                    id="formGroupExampleInput"
+                                                    placeholder="Enter a title for this portfolio item">
                                             </div>
-
-                                            {{-- <div class="mb-3">
-                                                <label class="fw-bold mt-2" style="font-size: 13px;">Service
+                                            <div class="mb-3">
+                                                <label class="fw-bold mt-2">Service
                                                     Lines</label>
-
-                                                <hr>
                                                 <input type="text" name="portfolio_service_lines"
                                                     class="form-control" id="formGroupExampleInput2"
-                                                    placeholder="Search for Service"
-                                                    style="height:50px;margin-top:10px;">
-                                            </div> --}}
+                                                    placeholder="Search for Service">
+                                            </div>
                                             <div class="row mt-3">
                                                 <div class="col-md-6">
-                                                    <label for="inputState" class="form-label fw-bold"
-                                                        style="font-size: 13px;">Estimate
+                                                    <label for="inputState" class="form-label fw-bold">Estimate
                                                         Project Size</label>
                                                     <select id="inputState" name="portfolio_project_size"
-                                                        class="form-select" style="height:50px;margin-top:10px;">
+                                                        class="form-select">
                                                         <option selected>Select the estimate
                                                             project
                                                             size
@@ -2652,64 +2013,54 @@
                                                     </select>
                                                 </div>
                                                 <div class="col-md-3">
-                                                    <label for="input-start-date" class="form-label fw-bold"
-                                                        style="font-size: 13px;">Start
+                                                    <label for="input-start-date" class="form-label fw-bold">Start
                                                         Date
                                                         (optional)</label>
                                                     <input type="date" name="portfolio_start_date"
-                                                        class="form-control" id="start-date"
-                                                        style="height:50px;margin-top:10px;">
+                                                        class="form-control" id="start-date">
                                                 </div>
                                                 <div class="col-md-3">
-                                                    <label for="input-end-date" class="form-label fw-bold"
-                                                        style="font-size: 13px;">End Date
+                                                    <label for="input-end-date" class="form-label fw-bold">End Date
                                                         (optional)</label>
                                                     <input type="date" name="portfolio_end_date"
-                                                        class="form-control" id="end-date"
-                                                        style="height:50px;margin-top:10px;">
+                                                        class="form-control" id="end-date">
                                                 </div>
                                             </div>
                                             <div class="mb-3 mt-3">
-                                                <label for="exampleFormControlTextarea1" class="form-label  fw-bold"
-                                                    style="font-size: 13px;">Descriptions</label>
-                                                <textarea class="form-control" name="portfolio_description" id="exampleFormControlTextarea1" rows="3"
-                                                    style="height:150px;margin-top:10px;"></textarea>
+                                                <label for="exampleFormControlTextarea1"
+                                                    class="form-label  fw-bold">Descriptions</label>
+                                                <textarea class="form-control" name="portfolio_description" id="exampleFormControlTextarea1" rows="3"></textarea>
                                             </div>
                                             <div class="mb-3 mt-3">
-                                                <label for="exampleFormControlTextarea1" class="form-label fw-bold"
-                                                    style="font-size: 13px;">Add
+                                                <label for="exampleFormControlTextarea1"
+                                                    class="form-label fw-bold">Add
                                                     Video Link or
                                                     Image (Optional)</label><br>
                                                 <input type="radio" id="videoOption" name="option"
                                                     onclick="showInput('video')" checked>
-                                                <label for="videoOption" style="font-size: 13px;">Video
-                                                    Link</label><br>
+                                                <label for="videoOption">Video Link</label><br>
                                                 <input type="radio" id="imageOption" name="option"
                                                     onclick="showInput('image')">
-                                                <label for="imageOption"
-                                                    style="font-size: 13px;padding-top:5px;">Upload
+                                                <label for="imageOption">Upload
                                                     Image</label><br><br>
                                                 <div id="videoInput">
-                                                    <label for="videoLink" style="font-size: 14px;">Video
-                                                        Link:</label>
+                                                    <label for="videoLink">Video Link:</label>
                                                     <input class="form-control" type="text" id="videoLink"
-                                                        name="videoLink" style="height:50px;margin-top:10px;">
+                                                        name="videoLink">
                                                 </div>
                                                 <div id="imageInput" style="display:none;">
-                                                    <label for="imageUpload" style="font-size: 13px;">Upload
+                                                    <label for="imageUpload">Upload
                                                         Image:</label><br>
                                                     <input class="form-control" type="file" id="imageUpload"
                                                         name="imageUpload"><br><br>
                                                 </div>
-
-                                                <label class="fw-bold fa-2x mb-2 mt-4"
-                                                    style="font-size: 13px;">Privacy
+                                                <hr>
+                                                <label class="fw-bold fa-2x mb-2">Privacy
                                                     Setting</label>
                                                 <div class="form-check">
                                                     <input class="form-check-input" value="1" type="radio"
                                                         name="privacy" id="flexRadioDefault1">
-                                                    <label class="form-check-label fa-2x" for="flexRadioDefault1"
-                                                        style="font-size: 13px;">
+                                                    <label class="form-check-label fa-2x" for="flexRadioDefault1">
                                                         Show All
                                                     </label>
                                                     <p>All of the above content will be
@@ -2721,8 +2072,7 @@
                                                 <div class="form-check">
                                                     <input class="form-check-input" value="0" type="radio"
                                                         name="privacy" id="flexRadioDefault2">
-                                                    <label class="form-check-label fa-2x" for="flexRadioDefault2"
-                                                        style="font-size: 13px;">
+                                                    <label class="form-check-label fa-2x" for="flexRadioDefault2">
                                                         Confidential
                                                     </label>
                                                     <p>Only the following details for this
@@ -2739,14 +2089,9 @@
                                                     </p>
                                                 </div>
                                             </div>
-
-
-                                            <button type="button" id="cancelBtn" class="btn"
-                                                style=" background-color: #343A40;color:#fff;">Cancel
+                                            <button type="button" id="cancelBtn" class="btn">Cancel
                                             </button>
-
-                                            <button type="submit" id="saveBtn" class="btn"
-                                                style=" background-color: #343A40;color:#fff;">Save
+                                            <button type="submit" id="saveBtn" class="btn">Save
                                             </button>
                                         </form>
                                     </div>
@@ -2769,7 +2114,7 @@
                                                     services</p>
                                                 <select class="form-select" id="serviceSelect" name="service"
                                                     aria-label="Default select example"
-                                                    onchange="populateSubServices()" style="height:50px;">
+                                                    onchange="populateSubServices()">
                                                     <option selected disabled>Select a service
                                                     </option>
                                                     @isset($agencyServices)
@@ -2794,17 +2139,8 @@
                                                     add up
                                                     to
                                                     100%.</p>
-
-
-                                                <div
-                                                    style="display: block; box-sizing: border-box; height: 200px; width: 200px;">
-
-                                                    <div class="chart-container">
-
-                                                        <canvas id="specializationServiceChart"></canvas>
-
-                                                        {{-- <canvas id="specializationServiceChart"></canvas> --}}
-                                                    </div>
+                                                <div class="chart-container">
+                                                    <canvas id="specializationServiceChart"></canvas>
                                                 </div>
                                                 <div id="rangeContainer">
                                                     <!-- Range inputs go here -->
@@ -2814,21 +2150,10 @@
                                             </div>
                                         </div>
                                     </div>
-                                    <div class="row">
-                                        <div class="col-xl-6 col-lg-6 col-md-12 col-sm-12">
-
-                                        </div>
-
-                                        <div class="col-xl-6 col-lg-6 col-md-12 col-sm-12">
-                                            <button type="submit" id="submitSpecialization"
-                                                style="background-color: #343A40;padding: 12px 30px;color:#Fff;border-radius:4px;font-size:14px;margin-bottom:20px;">Save
-                                                Changes
-                                            </button>
-                                        </div>
-                                    </div>
+                                    <button type="submit" id="submitSpecialization">Save
+                                        Changes
+                                    </button>
                                 </div>
-
-
                             </form>
                             <div class="card mt-3">
                                 <h5 class="card-header">Clients</h5>
@@ -2852,8 +2177,8 @@
                                                     <label for="customRange1" class="form-label">Small
                                                         Business (< $10M)</label>
                                                             <input type="range" name="smallBusiness"
-                                                                class="form-range" id="customRange1"
-                                                                min="0" max="100"
+                                                                class="form-range" id="customRange1" min="0"
+                                                                max="100"
                                                                 value="<?= $agencyClient->smallBusiness ?? 0 ?>">
                                                             <output id="output1"></output>
                                                 </div>
@@ -2881,38 +2206,15 @@
                             </div>
                         </div>
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-                        <div class="tab-pane fade track-form" id="pills-contact" role="tabpanel"
+                        <div class="tab-pane fade" id="pills-contact" role="tabpanel"
                             aria-labelledby="pills-contact-tab" tabindex="0">
                             <div class="container">
                                 <div class="bordered-container">
-                                    <div class="row col-xl-12 col-lg-12 col-md-12 col-sm-12">
-                                        <div class="col-xl-6 col-lg-6 col-md-12 col-sm-12">
-                                            {{-- <h3 class="fa-2x">Compliance
-                                                and certificate
-                                                list</h3> --}}
-
-                                            <div class="Compliance_and_certificate_heading">
-                                                <h3>Compliance
-                                                    and certificate
-                                                    list</h3>
-                                            </div>
-
+                                    <div class="row col-12">
+                                        <div class="col-6">
+                                            <label class="fa-2x">Compliance and certificate
+                                                list</label>
+                                            <hr>
                                             <form action="{{ route('editOrDeleteCertificates') }}" method="POST"
                                                 id="certificateForm">
                                                 @csrf
@@ -2920,64 +2222,35 @@
                                                     @foreach ($certificateList as $certificate)
                                                         <div>
                                                             <input type="checkbox" class="certificateCheckbox"
-                                                                name="certificate_ids[]"
-                                                                value="{{ $certificate->id }}">
+                                                                name="certificate_ids[]" value="{{ $certificate->id }}">
                                                             <a
                                                                 href="{{ route('fileDownload', $certificate->id) }}">{{ $certificate->certificate_title }}</a>
                                                         </div>
                                                     @endforeach
                                                 @endisset
 
-                                                {{-- <button type="submit" name="action" value="delete"
+                                                <button type="submit" name="action" value="delete"
                                                     id="deleteButton" disabled>Delete Selected
                                                     Certificates
-                                                </button> --}}
-
-                                                <div style="font-size: 14px; margin-top:14px;">
-                                                    <input type="checkbox" id="deleteButton" /><span
-                                                        class="ms-2">Company
-                                                        certification
-                                                    </span>
-
-
-                                                </div>
-
-                                                <div style="font-size: 14px;" class="mt-2">
-
-                                                    <input type="checkbox" id="deleteButton" /><span
-                                                        class="ms-2">Marketing
-                                                        Certificate
-                                                    </span>
-                                                </div>
+                                                </button>
                                             </form>
-                                            {{-- <button type="submit" name="action" value="edit" id="editButton"
+                                            <button type="submit" name="action" value="edit" id="editButton"
                                                 disabled>Edit
                                                 Selected
                                                 Certificates
-                                            </button> --}}
-
-
-
+                                            </button>
                                         </div>
-                                        <div class="col-xl-6 col-lg-6 col-md-12 col-sm-12">
-
-                                            <div class="Compliance_and_certificate_heading">
-                                                <h3>Certification
-                                                    Details</h3>
-                                            </div>
-
-
+                                        <div class="col-6">
+                                            <label class="fa-2x">Certification Details</label>
+                                            <hr>
                                             <form action="{{ route('certificationsForm') }}" method="post"
-                                                style="margin-top:14px" style="margin-top:14px;"
                                                 enctype="multipart/form-data">
                                                 @csrf
                                                 <div class="mb-3">
-                                                    <label for="name" class="form-label"
-                                                        style="font-size: 14px;">Company
+                                                    <label for="name" class="form-label">Company
                                                         Certificate Title</label>
                                                     <input type="text" class="form-control" name="name"
-                                                        id="name" placeholder="Enter Certificate Title"
-                                                        style="height:50px">
+                                                        id="name" placeholder="Enter Certificate Title">
                                                     @error('name')
                                                         <div class="alert alert-danger">
                                                             {{ $message }}</div>
@@ -2985,33 +2258,28 @@
                                                 </div>
 
                                                 <div class="mb-3">
-                                                    <label for="url" class="form-label"
-                                                        style="font-size: 14px;">Company
+                                                    <label for="url" class="form-label">Company
                                                         URL</label>
                                                     <input type="url" class="form-control" name="url"
-                                                        id="url" placeholder="https://www.example.com"
-                                                        style="height:50px">
+                                                        id="url" placeholder="https://www.example.com">
                                                     @error('url')
                                                         <div class="alert alert-danger">
                                                             {{ $message }}</div>
                                                     @enderror
                                                 </div>
                                                 <div class="mb-3">
-                                                    <label for="attachment" class="form-label"
-                                                        style="font-size: 14px;">Upload
+                                                    <label for="attachment" class="form-label">Upload
                                                         Attachment</label>
                                                     <input type="file" class="form-control" name="attachment"
-                                                        id="attachment" style="height:50px;">
+                                                        id="attachment">
                                                     @error('attachment')
                                                         <div class="alert alert-danger">
                                                             {{ $message }}</div>
                                                     @enderror
                                                 </div>
-                                                <button type="submit" class="btn"
-                                                    style="background-color: #343A40;color:#fff;">Save
+                                                <button type="submit" class="btn btn-primary">Save
                                                 </button>
-                                                <button type="button" class="btn"
-                                                    style="background-color: #343A40;color:#fff;">
+                                                <button type="button" class="btn btn-secondary">
                                                     Cancel
                                                 </button>
                                             </form>
@@ -3085,10 +2353,8 @@
                 </div>
             </div>
         </div>
-
     </div>
 </div>
-
 
 
 
@@ -3721,7 +2987,6 @@
                 };
 
                 var label = document.createElement("label");
-                // label.className = "fonTT";
                 label.htmlFor = "subService_" + subService.id;
                 label.appendChild(document.createTextNode(subService.sub_service_name));
 
@@ -3729,10 +2994,9 @@
 
                 subServicesContainer.appendChild(checkbox);
                 subServicesContainer.appendChild(label);
-                // subServicesContainer.appendChild(br);
+                subServicesContainer.appendChild(br);
 
                 checkbox.style.display = "none";
-                label.classList.add("check");
 
                 if (specializationServiceRanges[subService.id] !== undefined) {
                     checkbox.checked = true;

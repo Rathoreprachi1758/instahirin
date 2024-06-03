@@ -9,18 +9,159 @@
         $('#Interview_schedule').DataTable();
     });
 </script>
+
+
+<style>
+    .tracking-table li {
+        list-style: none;
+    }
+
+    .tracking-table {
+        position: relative;
+    }
+
+    .tracking-table .dropdown:hover .dropdown-menu {
+        display: block;
+        max-width: 100px !important;
+        position: absolute;
+        left: 0;
+        top: 100%;
+    }
+
+
+    .table.dataTable thead td {
+        border-bottom: 1px solid #dee2e6 !important;
+    }
+
+
+    /* .tracking-table .dropdown-menu {
+        --bs-dropdown-min-width: 2rem !important;
+        --bs-border-radius: 0 !important;
+        padding: 0 !important;
+        text-align: start
+    } */
+
+    .table> :not(:last-child)> :last-child>* {
+        border-bottom-color: #dee2e6 !important;
+    }
+
+    .tracking-table .dropdown-menu .dropdown-item:hover {
+        background-color: #eff5f9 !important;
+        color: #000 !important;
+    }
+
+    .dropdown-menu {
+        min-width: auto !important;
+        border-radius: 0 !important;
+        padding: 0 !important;
+        border: 1px solid #dee2e6 !important;
+    }
+
+    .dropdown-item {
+        padding: 5px 15px !important;
+    }
+
+
+    .tracking-table .dropdown-menu .dropdown-item:first-child {
+        background-color: #000 !important;
+        color: #fff !important;
+    }
+
+    .table-responsive {
+        overflow-x: inherit !important;
+    }
+
+    @media (max-width:480px) {
+        .table-responsive {
+            overflow-x: auto !important;
+        }
+    }
+
+    .tracking-table thead td {
+        background-color: #eff5f9 !important;
+        font-size: 12px !important;
+    }
+
+
+    /* .tracking-table tbody td:nth-child(1) {
+        background-color: #eff5f9 !important;
+    } */
+
+    /* .tracking-table tbody td:nth-child(2) {
+        background-color: #eff5f9 !important;
+    } */
+
+    table.dataTable.no-footer {
+        border-bottom: none !important;
+    }
+
+    .activityTabs {
+        background-color: transparent !important;
+        padding: 0 !important;
+    }
+
+    /* .activityTable_data table thead th {
+
+        background-color: #eff5f9 !important;
+        ;
+
+        padding: 0.8rem 0.6rem !important;
+        border: 0.5px solid #dee2e6;
+
+    } */
+
+    /* .activityTable_data table thead td h6 {
+        color: #333 !important;
+    } */
+
+    .custom_tabs ul li a.active {
+
+        /* background-color: #dddddd; */
+        background-color: transparent !important;
+        color: #007bff !important;
+
+        border-bottom: 3px solid #007bff !important;
+    }
+
+    .custom_tabs ul li a:hover {
+        background-color: transparent !important;
+        /* background-color: #425056; */
+    }
+
+    .custom_tabs ul li a {
+        padding: 0 15px !important;
+        font-weight: 500 !important;
+        font-size: 15px !important;
+        color: #555 !important;
+    }
+
+
+    .custom_tittle h4 {
+        font-size: 24px;
+        padding-bottom: 10px;
+        font-family: "avenirmedium";
+        color: #343A40;
+    }
+
+    .description_small_text {
+        font-size: 13px;
+        color: #777;
+        line-height: 25px;
+
+    }
+</style>
 <div class="fr-section" style="margin-top: -72px">
     <div class="fr-section_detail">
         <div class="dashboard_innerPages">
             <div class="custom_tabs_section">
                 <div class="custom_tittle descriptionTxt">
                     <h4>Employer / Company</h4>
-                    <p>
+                    <p class="description_small_text">
                         <strong>Description:</strong> Keep track of all your
                         activities including job postings and job talents.
                         Details of shortlisted candidates will be scheduled
-                        <br />
-                        for interview. As well as track the status of Hired
+
+                        for interview. As well as track the <br /> status of Hired
                         details.
                     </p>
                 </div>
@@ -55,55 +196,53 @@
                     <div class="row">
                         <div class="col-xxl-12 col-xl-12 col-lg-12 col-md-12">
                             <div class="activityTable_data">
-                                <table class="table table-striped" id="Interview_schedule">
+                                <table class="table table-bordered text-center tracking-table" id="Interview_schedule">
                                     <thead>
                                         <tr>
-                                            <th>
-                                                <h6>Id</h6>
-                                            </th>
-                                            <th>
-                                                <h6>Name</h6>
-                                            </th>
-                                            <th>
-                                                <h6>Position Title</h6>
-                                            </th>
-                                            <th width="240">
-                                                <h6>Scheduled on Virtual-call-Assistance</h6>
-                                                <table>
-                                                    <thead>
-                                                        <th width="110">
-                                                            <h6>Date</h6>
-                                                        </th>
-                                                        <th width="60">
-                                                            <h6>From</h6>
-                                                        </th>
-                                                        <th width="60">
-                                                            <h6>To</h6>
-                                                        </th>
-                                                    </thead>
-                                                </table>
-                                            </th>
-                                            <th>
-                                                <h6>Company Name</h6>
-                                            </th>
-                                            <th>
-                                                <h6>Business Email</h6>
-                                            </th>
-                                            <th>
-                                                <h6>Hire Period</h6>
-                                            </th>
-                                            <th>
-                                                <h6>Meeting Link</h6>
-                                            </th>
-                                            <th>
-                                                <h6>Interviewer</h6>
-                                            </th>
-                                            <th>
-                                                <h6>Interview Coordinator</h6>
-                                            </th>
-                                            <th>
-                                                <h6>Action</h6>
-                                            </th>
+                                            <td rowspan="2" class="align-middle">
+                                                Id
+                                            </td>
+                                            <td rowspan="2" class="align-middle">
+                                                Name
+                                            </td>
+                                            <td rowspan="2" class="align-middle">
+                                                Position Title
+                                            </td>
+
+                                            <td colspan="3">
+                                                Scheduled on Virtual-call-Assistance
+                                            </td>
+
+
+
+
+                                            <td rowspan="2" class="align-middle">
+                                                Company Name
+                                            </td>
+                                            <td rowspan="2" class="align-middle">
+                                                Business Email
+                                            </td>
+                                            <td rowspan="2" class="align-middle">
+                                                Hire Period
+                                            </td>
+                                            <td rowspan="2" class="align-middle">
+                                                Meeting Link
+                                            </td>
+                                            <td rowspan="2" class="align-middle">
+                                                Interviewer
+                                            </td>
+                                            {{-- <td rowspan="2" class="align-middle">
+                                                Interview Coordinator
+                                            </td>
+                                            <td rowspan="2" class="align-middle">
+                                                Action
+                                            </td> --}}
+                                        </tr>
+
+                                        <tr>
+                                            <td>Date</td>
+                                            <td>From</td>
+                                            <td>To</td>
                                         </tr>
                                     </thead>
                                     <tbody>
@@ -131,17 +270,20 @@
                                                             <tr>
                                                                 <td width="110">
                                                                     <div class="tabletext">
-                                                                        <p>{{ $item['availability_date'] ?? 'From Hirerequest' }}</p>
+                                                                        <p>{{ $item['availability_date'] ?? 'From Hirerequest' }}
+                                                                        </p>
                                                                     </div>
                                                                 </td>
                                                                 <td width="60">
                                                                     <div class="tabletext">
-                                                                        <p>{{ $item['availability_time_from'] ?? null }}</p>
+                                                                        <p>{{ $item['availability_time_from'] ?? null }}
+                                                                        </p>
                                                                     </div>
                                                                 </td>
                                                                 <td width="60">
                                                                     <div class="tabletext">
-                                                                        <p>{{ $item['availability_time_to'] ?? null }}</p>
+                                                                        <p>{{ $item['availability_time_to'] ?? null }}
+                                                                        </p>
                                                                     </div>
                                                                 </td>
                                                             </tr>
@@ -150,7 +292,7 @@
                                                 </td>
                                                 <td>
                                                     <div class="tabletext">
-                                                        <p>{{$item['company'] ?? $item['last_company']}}</p>
+                                                        <p>{{ $item['company'] ?? $item['last_company'] }}</p>
                                                     </div>
                                                 </td>
                                                 <td>
@@ -160,7 +302,7 @@
                                                 </td>
                                                 <td>
                                                     <div class="tabletext">
-                                                        <p>{{$item['employment_type']?? $item['availability']}}</p>
+                                                        <p>{{ $item['employment_type'] ?? $item['availability'] }}</p>
                                                     </div>
                                                 </td>
                                                 <form method="POST" action="{{ route('interview_schedule') }}">
@@ -170,37 +312,37 @@
                                                     <input type="hidden" name="candidate_name"
                                                         value="{{ $item['name'] ?? $item['title'] }}">
                                                     <input type="hidden" name="candidate_email"
-                                                        value="{{ $item['email']?? null }}">
+                                                        value="{{ $item['email'] ?? null }}">
                                                     <input type="hidden" name="candidate_location"
-                                                        value="{{ $item['current_location']?? null }}">
+                                                        value="{{ $item['current_location'] ?? null }}">
                                                     <input type="hidden" name="current_title"
-                                                        value="{{ $item['current_title']??null }}">
+                                                        value="{{ $item['current_title'] ?? null }}">
                                                     <input type="hidden" name="experience_year"
-                                                        value="{{ $item['experience_year'].'.'.$item['experience_month']?? $item['experience']}}">
+                                                        value="{{ $item['experience_year'] . '.' . $item['experience_month'] ?? $item['experience'] }}">
 
                                                     <input type="hidden" name="availability_date"
                                                         value="{{ $item['availability_date'] ?? null }}">
                                                     <input type="hidden" name="availability_time_from"
                                                         value="{{ $item['availability_time_from'] ?? null }}">
                                                     <input type="hidden" name="availability_time_to"
-                                                        value="{{ $item['availability_time_to']??null }}">
+                                                        value="{{ $item['availability_time_to'] ?? null }}">
 
                                                     <input type="hidden" name="annual_salary"
-                                                        value="{{ $item['annual_salary_currency'].'.'.$item['annual_salary'] ?? null}}">
+                                                        value="{{ $item['annual_salary_currency'] . '.' . $item['annual_salary'] ?? null }}">
                                                     <input type="hidden" name="availability"
-                                                        value="{{ $item['availability']?? null }}">
+                                                        value="{{ $item['availability'] ?? null }}">
                                                     <input type="hidden" name="notice_period"
-                                                        value="{{ $item['notice_period']??null }}">
+                                                        value="{{ $item['notice_period'] ?? null }}">
                                                     <input type="hidden" name="contact_details"
-                                                        value="{{ $item['contact_details']?? null }}">
+                                                        value="{{ $item['contact_details'] ?? null }}">
                                                     <input type="hidden" name="highest_qualification"
-                                                        value="{{ $item['highest_qualification']??null }}">
+                                                        value="{{ $item['highest_qualification'] ?? null }}">
                                                     <td>
                                                         <div class="tabletext">
                                                             @if (isset($item['Meeting_link']))
                                                                 <a href="{{ $item['Meeting_link'] }}"
                                                                     target="_blank">{{ $item['Meeting_link'] }}</a>
-                                                                    {{-- <p>Hii</p> --}}
+                                                                {{-- <p>Hii</p> --}}
                                                             @else
                                                                 <p><input type="text" class="form-control"
                                                                         name="Meeting_link"
@@ -240,7 +382,8 @@
                                             </tr>
                                         @empty
                                             <tr>
-                                                <p style="color:red;margin-top: -120px">Oops ! No interview schedules found.
+                                                <p style="color:red;margin-top: -120px">Oops ! No interview schedules
+                                                    found.
                                                     <?xml version="1.0" standalone="no"?>
                                                     <!DOCTYPE svg
                                                         PUBLIC "-//W3C//DTD SVG 20010904//EN" "http://www.w3.org/TR/2001/REC-SVG-20010904/DTD/svg10.dtd">

@@ -46,6 +46,135 @@
         overflow: hidden;
         height: 514px !important;
     }
+
+
+    .custom_tabs {
+        width: 100%;
+        border: 0.5px solid #fff;
+    }
+
+    .custom_tabs ul li a.active {
+
+        /* background-color: #dddddd; */
+        background-color: transparent !important;
+        color: #007bff !important;
+
+        border-bottom: 3px solid #007bff !important;
+    }
+
+    .custom_tabs ul li a:hover {
+        background-color: transparent !important;
+        /* background-color: #425056; */
+    }
+
+    .custom_tabs ul li a {
+        padding: 0 11px !important;
+        font-weight: 500 !important;
+        font-size: 15px !important;
+        color: #555 !important;
+    }
+
+    .masterTab_bg {
+        background-color: #fff;
+        padding: 0px;
+        overflow: hidden;
+    }
+
+
+    .custom_tittle h4 {
+        font-size: 25px;
+        padding-bottom: 10px;
+        font-family: "avenirmedium";
+        color: #343A40;
+    }
+
+    .description_small_text {
+        font-size: 14px !important;
+        color: #777;
+        line-height: 25px;
+
+    }
+
+
+    /* table */
+
+    .tracking-table li {
+        list-style: none;
+    }
+
+    .tracking-table {
+        position: relative;
+    }
+
+    .tracking-table .dropdown:hover .dropdown-menu {
+        display: block;
+        max-width: 100px !important;
+        position: absolute;
+        left: 0;
+        top: 100%;
+    }
+
+
+
+    /* .tracking-table .dropdown-menu {
+        --bs-dropdown-min-width: 2rem !important;
+        --bs-border-radius: 0 !important;
+        padding: 0 !important;
+        text-align: start
+    } */
+
+    .table> :not(:last-child)> :last-child>* {
+        border-bottom-color: #dee2e6 !important;
+    }
+
+    .tracking-table .dropdown-menu .dropdown-item:hover {
+        background-color: #eff5f9 !important;
+        color: #000 !important;
+    }
+
+    .dropdown-menu {
+        min-width: auto !important;
+        border-radius: 0 !important;
+        padding: 0 !important;
+        border: 1px solid #dee2e6 !important;
+    }
+
+    .dropdown-item {
+        padding: 5px 15px !important;
+    }
+
+
+    .tracking-table .dropdown-menu .dropdown-item:first-child {
+        background-color: #000 !important;
+        color: #fff !important;
+    }
+
+    .table-responsive {
+        overflow-x: inherit !important;
+    }
+
+    @media (max-width:480px) {
+        .table-responsive {
+            overflow-x: auto !important;
+        }
+    }
+
+    .tracking-table thead td {
+        background-color: #eff5f9 !important;
+    }
+
+
+    .tracking-table tbody td:nth-child(1) {
+        background-color: #eff5f9 !important;
+    }
+
+    /* .tracking-table tbody td:nth-child(2) {
+        background-color: #eff5f9 !important;
+    } */
+
+    table.dataTable.no-footer {
+        border-bottom: 1px solid #eff5f9 !important;
+    }
 </style>
 <div class="fr-section" style="margin-top: -72px">
     <div class="fr-section_detail ">
@@ -53,9 +182,10 @@
             <div class="custom_tabs_section">
                 <div class="custom_tittle descriptionTxt">
                     <h4>Master</h4>
-                    <p><strong>Description:</strong> Keep track of all company master details including employee
-                        designations, shift information, category of employees, and <br> their configurations. Also
-                        able to oversee leave master with holiday details.</p>
+                    <p class="description_small_text"><strong style="color:#343A40;">Description:</strong> Keep track of
+                        all company master details including employee
+                        designations, shift information, category of employees, and their configurations. Also
+                        able to oversee <br> leave master with holiday details.</p>
                 </div>
                 <div class="custom_tabs">
                     <ul>
@@ -107,7 +237,7 @@
                             </div>
                             <div class="masterTable empMasterTable">
                                 <div class="row">
-                                    <div class="col-xxl-12" style="margin-top:44px">
+                                    <div class="col-xl-12">
                                         <div class="masterTable_data">
                                             <div class="sorting_nav" style="margin-left: 165px;margin-bottom: -46px">
                                                 <div class="showSort">
@@ -115,11 +245,13 @@
                                                         <strong class="entitiesSelect">Select Company</strong>
                                                         <div class="showSort_select seleComp">
                                                             <select id="companyName" name="company_desig"
-                                                                    aria-label="First select example" onchange="fetchDepartments()">
+                                                                aria-label="First select example"
+                                                                onchange="fetchDepartments()">
                                                                 <option selected disabled>Select Company</option>
                                                                 @isset($companies)
-                                                                    @foreach($companies as $company)
-                                                                        <option value="{{ $company->id }}">{{$company->company_name }}</option>
+                                                                    @foreach ($companies as $company)
+                                                                        <option value="{{ $company->id }}">
+                                                                            {{ $company->company_name }}</option>
                                                                     @endforeach
                                                                 @endisset
                                                             </select>
@@ -130,13 +262,13 @@
                                                         <strong class="entitiesSelect">Select Department</strong>
                                                         <div class="showSort_select seleComp">
                                                             <select id="departmentName" name="department"
-                                                                    aria-label="Second select example">
-                                                                @if(!isset($companies))
+                                                                aria-label="Second select example">
+                                                                @if (!isset($companies))
                                                                     disabled
                                                                 @endif>
                                                                 <option selected disabled>Select Department</option>
                                                                 @isset($departments)
-                                                                    @foreach($departments as $department)
+                                                                    @foreach ($departments as $department)
                                                                         <option value="{{ $department->id }}">
                                                                             {{ $department->department_name }}
                                                                         </option>
@@ -153,38 +285,39 @@
                                                 </div>
 
                                             </div>
-                                            <table class="table" id="employee_master">
+                                            <table class="table table-bordered text-center tracking-table"
+                                                id="employee_master">
                                                 <thead>
                                                     <tr>
-                                                        <th>
+                                                        <td class="align-middle">
                                                             <div class="tableCheckbox">
                                                                 <label class="checkbox-label">
                                                                     <input type="checkbox">
                                                                     <span class="checkbox-custom rectangular"></span>
                                                                 </label>
                                                             </div>
-                                                        </th>
-                                                        <th>
-                                                            <h6 class="text-left">Emp Code</h6>
-                                                        </th>
-                                                        <th>
-                                                            <h6>Enrolled Id</h6>
-                                                        </th>
-                                                        <th>
-                                                            <h6>Name</h6>
-                                                        </th>
-                                                        <th>
-                                                            <h6>Dept. Name</h6>
-                                                        </th>
-                                                        <th>
-                                                            <h6>Desg. Name</h6>
-                                                        </th>
-                                                        <th>
-                                                            <h6>Cat. Name</h6>
-                                                        </th>
-                                                        <th>
-                                                            <h6>Action</h6>
-                                                        </th>
+                                                        </td>
+                                                        <td class="align-middle" style="font-size: 13px;">
+                                                            Emp Code
+                                                        </td>
+                                                        <td class="align-middle" style="font-size: 13px;">
+                                                            Enrolled Id
+                                                        </td>
+                                                        <td class="align-middle" style="font-size: 13px;">
+                                                            Name
+                                                        </td>
+                                                        <td class="align-middle" style="font-size: 13px;">
+                                                            Dept. Name
+                                                        </td>
+                                                        <td class="align-middle" style="font-size: 13px;">
+                                                            Desg. Name
+                                                        </td>
+                                                        <td class="align-middle" style="font-size: 13px;">
+                                                            Cat. Name
+                                                        </td>
+                                                        <td class="align-middle" style="font-size: 13px;">
+                                                            Action
+                                                        </td>
                                                     </tr>
                                                 </thead>
                                                 <tbody>
@@ -261,7 +394,9 @@
                                                                     style="width: 220%;left: -305px">
                                                                     <div class="modal-header"
                                                                         style="background-color: #BCBCBC;">
-                                                                        <h6 style="padding-bottom: 0px;margin-left: 417px;">Edit Selected Employee Details Here</h6>
+                                                                        <h6
+                                                                            style="padding-bottom: 0px;margin-left: 417px;">
+                                                                            Edit Selected Employee Details Here</h6>
                                                                         <button type="button" class="close"
                                                                             data-dismiss="modal" aria-label="Close">
                                                                             <span aria-hidden="true">&times;</span>
@@ -289,7 +424,7 @@
                                                                                         <div class="popupForm_field">
                                                                                             <input type="text"
                                                                                                 name="employee_code"
-                                                                                                value="{{$emp->employee_code}}"
+                                                                                                value="{{ $emp->employee_code }}"
                                                                                                 placeholder="Enter Employee Code(If any)">
                                                                                         </div>
                                                                                     </div>
@@ -301,7 +436,7 @@
                                                                                         <div class="popupForm_field">
                                                                                             <input type="text"
                                                                                                 name="employee_name"
-                                                                                                value="{{$emp->employee_name}}"
+                                                                                                value="{{ $emp->employee_name }}"
                                                                                                 placeholder="Enter Employee Name">
                                                                                         </div>
                                                                                     </div>
@@ -315,7 +450,8 @@
                                                                                                 class="selective">
                                                                                                 @foreach ($companies as $id)
                                                                                                     <option
-                                                                                                        value="{{ $id->id }}" @if ($id->id === $emp->company_id) selected @endif >
+                                                                                                        value="{{ $id->id }}"
+                                                                                                        @if ($id->id === $emp->company_id) selected @endif>
                                                                                                         {{ $id->company_name }}
                                                                                                     </option>
                                                                                                 @endforeach
@@ -343,7 +479,8 @@
                                                                                                 class="selective">
                                                                                                 @foreach ($department as $id)
                                                                                                     <option
-                                                                                                        value="{{ $id->id }}" @if($id->id === $emp->department_id) selected @endif>
+                                                                                                        value="{{ $id->id }}"
+                                                                                                        @if ($id->id === $emp->department_id) selected @endif>
                                                                                                         {{ $id->department_name }}
                                                                                                     </option>
                                                                                                 @endforeach
@@ -358,7 +495,7 @@
                                                                                         <div class="popupForm_field">
                                                                                             <input type="text"
                                                                                                 name="emp_status"
-                                                                                                value="{{$emp->emp_status}}"
+                                                                                                value="{{ $emp->emp_status }}"
                                                                                                 placeholder="Enter Employee Status">
                                                                                         </div>
                                                                                     </div>
@@ -372,7 +509,8 @@
                                                                                                 class="selective">
                                                                                                 @foreach ($designation as $id)
                                                                                                     <option
-                                                                                                        value="{{ $id->id }}" @if($id->id == $emp->designation_id) selected @endif>
+                                                                                                        value="{{ $id->id }}"
+                                                                                                        @if ($id->id == $emp->designation_id) selected @endif>
                                                                                                         {{ $id->designation_name }}
                                                                                                     </option>
                                                                                                 @endforeach
@@ -389,12 +527,15 @@
                                                                                             <select name="Punch_Entry"
                                                                                                 class="selective">
                                                                                                 <option
-                                                                                                    value="No_option" @if ($emp->punch_enquirey_required == 'No_option') checked @endif>
+                                                                                                    value="No_option"
+                                                                                                    @if ($emp->punch_enquirey_required == 'No_option') checked @endif>
                                                                                                     Not required
                                                                                                 </option>
-                                                                                                <option value="Yes" @if ($emp->punch_enquirey_required == 'Yes') checked @endif>
+                                                                                                <option value="Yes"
+                                                                                                    @if ($emp->punch_enquirey_required == 'Yes') checked @endif>
                                                                                                     Yes</option>
-                                                                                                <option value="No" @if ($emp->punch_enquirey_required == 'No') checked @endif>
+                                                                                                <option value="No"
+                                                                                                    @if ($emp->punch_enquirey_required == 'No') checked @endif>
                                                                                                     No</option>
                                                                                             </select>
                                                                                         </div>
@@ -410,7 +551,8 @@
                                                                                                 class="selective">
                                                                                                 @foreach ($category as $id)
                                                                                                     <option
-                                                                                                        value="{{ $id->id }}" @if($id->id == $emp->category_id) selected @endif>
+                                                                                                        value="{{ $id->id }}"
+                                                                                                        @if ($id->id == $emp->category_id) selected @endif>
                                                                                                         {{ $id->category_name }}
                                                                                                     </option>
                                                                                                 @endforeach
@@ -432,7 +574,8 @@
                                                                                                 </option>
                                                                                                 @foreach ($countrycodes as $country)
                                                                                                     <option
-                                                                                                        value="+{{ $country->phone }}" @if($country->phone == $emp->country_code) selected @endif>
+                                                                                                        value="+{{ $country->phone }}"
+                                                                                                        @if ($country->phone == $emp->country_code) selected @endif>
                                                                                                         {{ $country->name . '+' . $country->phone }}
                                                                                                     </option>
                                                                                                 @endforeach
@@ -464,7 +607,8 @@
                                                                                                         </option>
                                                                                                         @foreach ($Shiftcode as $shift_code)
                                                                                                             <option
-                                                                                                                value="{{ $shift_code->shift_Name }}" @if($emp->shift_1 == $shift_code->shift_Name) selected @endif>
+                                                                                                                value="{{ $shift_code->shift_Name }}"
+                                                                                                                @if ($emp->shift_1 == $shift_code->shift_Name) selected @endif>
                                                                                                                 {{ $shift_code->shift_Name }}
                                                                                                             </option>
                                                                                                         @endforeach
@@ -483,7 +627,8 @@
                                                                                                         </option>
                                                                                                         @foreach ($Shiftcode as $shift_code)
                                                                                                             <option
-                                                                                                                value="{{ $shift_code->shift_Name }}" @if($emp->shift_2 == $shift_code->shift_Name) selected @endif>
+                                                                                                                value="{{ $shift_code->shift_Name }}"
+                                                                                                                @if ($emp->shift_2 == $shift_code->shift_Name) selected @endif>
                                                                                                                 {{ $shift_code->shift_Name }}
                                                                                                             </option>
                                                                                                         @endforeach
@@ -502,7 +647,8 @@
                                                                                                         </option>
                                                                                                         @foreach ($Shiftcode as $shift_code)
                                                                                                             <option
-                                                                                                                value="{{ $shift_code->shift_Name }}" @if($emp->shift_3 == $shift_code->shift_Name) selected @endif>
+                                                                                                                value="{{ $shift_code->shift_Name }}"
+                                                                                                                @if ($emp->shift_3 == $shift_code->shift_Name) selected @endif>
                                                                                                                 {{ $shift_code->shift_Name }}
                                                                                                             </option>
                                                                                                         @endforeach
@@ -521,7 +667,8 @@
                                                                                                         </option>
                                                                                                         @foreach ($Shiftcode as $shift_code)
                                                                                                             <option
-                                                                                                                value="{{ $shift_code->shift_Name }}" @if($emp->shift_4 == $shift_code->shift_Name) selected @endif>
+                                                                                                                value="{{ $shift_code->shift_Name }}"
+                                                                                                                @if ($emp->shift_4 == $shift_code->shift_Name) selected @endif>
                                                                                                                 {{ $shift_code->shift_Name }}
                                                                                                             </option>
                                                                                                         @endforeach
@@ -542,7 +689,9 @@
                                                                                                 <select
                                                                                                     name="week_off_1">
                                                                                                     @foreach ($weeks as $week)
-                                                                                                        <option value="{{$week->week_name}}" @if($week->week_name == $emp->weekoff1) selected @endif>
+                                                                                                        <option
+                                                                                                            value="{{ $week->week_name }}"
+                                                                                                            @if ($week->week_name == $emp->weekoff1) selected @endif>
                                                                                                             {{ $week->week_name }}
                                                                                                         </option>
                                                                                                     @endforeach
@@ -559,7 +708,9 @@
                                                                                                 <select
                                                                                                     name="week_off_2">
                                                                                                     @foreach ($weeks as $week)
-                                                                                                        <option value="{{$week->week_name}}" @if($week->week_name == $emp->weekoff2) selected @endif>
+                                                                                                        <option
+                                                                                                            value="{{ $week->week_name }}"
+                                                                                                            @if ($week->week_name == $emp->weekoff2) selected @endif>
                                                                                                             {{ $week->week_name }}
                                                                                                         </option>
                                                                                                     @endforeach
@@ -572,12 +723,13 @@
                                                                                         <div class="col-lg-6 col-md-6">
                                                                                             <div class="popupForm_col">
                                                                                                 <strong>Father/Husband
-                                                                                                    Name</strong>                                                                                                <div
+                                                                                                    Name</strong>
+                                                                                                <div
                                                                                                     class="popupForm_field">
                                                                                                     <input
                                                                                                         type="text"
                                                                                                         name="father_name"
-                                                                                                        value="{{$emp->father_or_husband_name}}"
+                                                                                                        value="{{ $emp->father_or_husband_name }}"
                                                                                                         placeholder="Enter Father/Husband Name Here">
                                                                                                 </div>
                                                                                             </div>
@@ -602,8 +754,9 @@
                                                                                         <div class="col-lg-6 col-md-6">
                                                                                             <div class="popupForm_col">
                                                                                                 <strong>Address</strong>
-                                                                                                <div class="popupForm_field">
-                                                                                                    <textarea name="address" placeholder="Enter Address">{{$emp->address}}</textarea>
+                                                                                                <div
+                                                                                                    class="popupForm_field">
+                                                                                                    <textarea name="address" placeholder="Enter Address">{{ $emp->address }}</textarea>
                                                                                                 </div>
                                                                                             </div>
                                                                                         </div>
@@ -615,7 +768,7 @@
                                                                                                     <input
                                                                                                         type="text"
                                                                                                         name="Email_address"
-                                                                                                        value="{{$emp->Email}}"
+                                                                                                        value="{{ $emp->Email }}"
                                                                                                         placeholder="Email-Address">
                                                                                                 </div>
                                                                                             </div>
@@ -1014,14 +1167,14 @@
         console.log(companyId);
         departmentSelect.innerHTML = ' <option selected disabled>Select Department</option>';
         fetch('/employee-master-company/' + companyId, {
-            method: 'GET',
-            headers: {
-                'Content-Type': 'application/json'
-            }
-        })
+                method: 'GET',
+                headers: {
+                    'Content-Type': 'application/json'
+                }
+            })
             .then(response => response.json())
             .then(data => {
-                data.forEach(function (department) {
+                data.forEach(function(department) {
                     var option = document.createElement('option');
                     option.value = department.id;
                     option.textContent = department.department_name;

@@ -10,14 +10,15 @@
         $("#leave_model").click(function() {
             $("#create_leave").modal("show");
         });
-         //
-    $('.edit_company').click(function() {
-        var companyId = $(this).data('dept-id');
-        let id_companyId = "#" + companyId;
-        console.log('companyId==', id_companyId);
-        $(id_companyId).modal('show');
+        //
+        $('.edit_company').click(function() {
+            var companyId = $(this).data('dept-id');
+            let id_companyId = "#" + companyId;
+            console.log('companyId==', id_companyId);
+            $(id_companyId).modal('show');
+        });
     });
-    });
+
     function showCustomAlert(button) {
 
         var DesId = button.getAttribute('data-hldy-id');
@@ -32,22 +33,164 @@
             confirmButtonText: 'OK'
         }).then((result) => {
             if (result.isConfirmed) {
-                var formAction = "{{ route('Leave.destroy',':DesId') }}".replace(':DesId', DesId);
+                var formAction = "{{ route('Leave.destroy', ':DesId') }}".replace(':DesId', DesId);
                 document.getElementById('deleteForm').action = formAction;
                 document.getElementById('deleteForm').submit();
             }
         });
     }
 </script>
+
+
+<style>
+    .custom_tabs {
+        width: 100%;
+        border: 0.5px solid #fff;
+    }
+
+    .custom_tabs ul li a.active {
+
+        /* background-color: #dddddd; */
+        background-color: transparent !important;
+        color: #007bff !important;
+
+        border-bottom: 3px solid #007bff !important;
+    }
+
+    .custom_tabs ul li a:hover {
+        background-color: transparent !important;
+        /* background-color: #425056; */
+    }
+
+    .custom_tabs ul li a {
+        padding: 0 11px !important;
+        font-weight: 500 !important;
+        font-size: 15px !important;
+        color: #555 !important;
+    }
+
+    .masterTab_bg {
+        background-color: #fff;
+        padding: 0px;
+
+    }
+
+
+    .custom_tittle h4 {
+        font-size: 25px;
+        padding-bottom: 10px;
+        font-family: "avenirmedium";
+        color: #343A40;
+    }
+
+    .description_small_text {
+        font-size: 14px !important;
+        color: #777;
+        line-height: 25px;
+
+    }
+
+
+
+    /* table */
+
+    .tracking-table li {
+        list-style: none;
+    }
+
+    .tracking-table {
+        position: relative;
+    }
+
+    .tracking-table .dropdown:hover .dropdown-menu {
+        display: block;
+        max-width: 100px !important;
+        position: absolute;
+        left: 0;
+        top: 100%;
+    }
+
+
+
+    /* .tracking-table .dropdown-menu {
+        --bs-dropdown-min-width: 2rem !important;
+        --bs-border-radius: 0 !important;
+        padding: 0 !important;
+        text-align: start
+    } */
+
+    .table> :not(:last-child)> :last-child>* {
+        border-bottom-color: #dee2e6 !important;
+    }
+
+    .tracking-table .dropdown-menu .dropdown-item:hover {
+        background-color: #eff5f9 !important;
+        color: #000 !important;
+    }
+
+    .dropdown-menu {
+        min-width: auto !important;
+        border-radius: 0 !important;
+        padding: 0 !important;
+        border: 1px solid #dee2e6 !important;
+    }
+
+    .dropdown-item {
+        padding: 5px 15px !important;
+    }
+
+
+    .tracking-table .dropdown-menu .dropdown-item:first-child {
+        background-color: #000 !important;
+        color: #fff !important;
+    }
+
+    .table-responsive {
+        overflow-x: inherit !important;
+    }
+
+    @media (max-width:480px) {
+        .table-responsive {
+            overflow-x: auto !important;
+        }
+    }
+
+    .tracking-table thead td {
+        background-color: #eff5f9 !important;
+    }
+
+
+    .tracking-table tbody td:nth-child(1) {
+        background-color: #eff5f9 !important;
+    }
+
+    /* .tracking-table tbody td:nth-child(2) {
+        background-color: #eff5f9 !important;
+    } */
+
+    table.dataTable.no-footer {
+        border-bottom: 1px solid #eff5f9 !important;
+    }
+
+    .masterTab_data {
+        width: 100%;
+        position: relative;
+        background-color: #fff;
+        box-shadow: 0px 0px 0px #cccccc96;
+        padding: 0px;
+        /* border: 1px solid #ebeaea; */
+    }
+</style>
 <div class="fr-section" style="margin-top: -72px">
     <div class="fr-section_detail ">
         <div class="dashboard_innerPages">
             <div class="custom_tabs_section">
                 <div class="custom_tittle descriptionTxt">
                     <h4>Master</h4>
-                    <p><strong>Description:</strong> Keep track of all company master details including employee
-                        designations, shift information, category of employees, and <br> their configurations. Also
-                        able to oversee leave master with holiday details.</p>
+                    <p class="description_small_text"><strong style="color:#343A40;">Description:</strong> Keep track of
+                        all company master details including employee
+                        designations, shift information, category of employees, and their configurations. Also
+                        able to oversee leave <br> master with holiday details.</p>
                 </div>
                 <div class="custom_tabs">
                     <ul>
@@ -82,7 +225,7 @@
                             </div>
                             <div class="masterTable">
                                 <div class="row">
-                                    <div class="col-xxl-12" style="margin-top:44px">
+                                    <div class="col-xxl-12">
                                         <div class="masterTable_data">
                                             <div class="sorting_nav" style="margin-left: 165px;margin-bottom: -46px">
                                                 <div class="showSort">
@@ -90,13 +233,13 @@
                                                         <strong class="entitiesSelect">Select Company</strong>
                                                         <div class="showSort_select seleComp">
                                                             <select id="companyName" class="form-select me-3"
-                                                                    name="company" aria-label="First select example"
-                                                                    onchange="fetchDepartments()">
+                                                                name="company" aria-label="First select example"
+                                                                onchange="fetchDepartments()">
                                                                 <option selected disabled>Select Company</option>
                                                                 @isset($companies)
-                                                                    @foreach($companies as $company)
-                                                                        <option
-                                                                            value="{{ $company->id }}">{{$company->company_name }}</option>
+                                                                    @foreach ($companies as $company)
+                                                                        <option value="{{ $company->id }}">
+                                                                            {{ $company->company_name }}</option>
                                                                     @endforeach
                                                                 @endisset
                                                             </select>
@@ -107,13 +250,13 @@
                                                         <strong class="entitiesSelect">Select Department</strong>
                                                         <div class="showSort_select seleComp">
                                                             <select id="departmentName" name="department"
-                                                                    aria-label="Second select example">
-                                                                @if(!isset($companies))
+                                                                aria-label="Second select example">
+                                                                @if (!isset($companies))
                                                                     disabled
                                                                 @endif>
                                                                 <option selected disabled>Select Department</option>
                                                                 @isset($departments)
-                                                                    @foreach($departments as $department)
+                                                                    @foreach ($departments as $department)
                                                                         <option value="{{ $department->id }}">
                                                                             {{ $department->department_name }}
                                                                         </option>
@@ -130,24 +273,25 @@
                                                 </div>
 
                                             </div>
-                                            <table class="table table-striped" id="leave_master">
+                                            <table class="table table-bordered text-center tracking-table"
+                                                id="leave_master">
                                                 <thead>
                                                     <tr>
-                                                        <th>
-                                                            <h6 class="text-left">Leave Code</h6>
-                                                        </th>
-                                                        <th>
-                                                            <h6 class="text-left">Leave Details</h6>
-                                                        </th>
-                                                        <th>
-                                                            <h6 class="text-left">Encash</h6>
-                                                        </th>
-                                                        <th>
-                                                            <h6>Annual Limit</h6>
-                                                        </th>
-                                                        <th width="140">
-                                                            <h6>Action</h6>
-                                                        </th>
+                                                        <td class="align-middle" style="font-size: 13px;">
+                                                            Leave Code
+                                                        </td>
+                                                        <td class="align-middle" style="font-size: 13px;">
+                                                            Leave Details
+                                                        </td>
+                                                        <td class="align-middle" style="font-size: 13px;">
+                                                            Encash
+                                                        </td>
+                                                        <td class="align-middle" style="font-size: 13px;">
+                                                            Annual Limit
+                                                        </td>
+                                                        <td class="align-middle" style="font-size: 13px;">
+                                                            Action
+                                                        </td>
                                                     </tr>
                                                 </thead>
                                                 <tbody>
@@ -155,22 +299,22 @@
                                                         <tr>
                                                             <td>
                                                                 <div class="tabletext">
-                                                                    <p>{{$leave->leave_code}}</p>
+                                                                    <p>{{ $leave->leave_code }}</p>
                                                                 </div>
                                                             </td>
                                                             <td>
                                                                 <div class="tabletext">
-                                                                    <p>{{$leave->leave_name}}</p>
+                                                                    <p>{{ $leave->leave_name }}</p>
                                                                 </div>
                                                             </td>
                                                             <td>
                                                                 <div class="tabletext">
-                                                                    <p>{{$leave->encash}}</p>
+                                                                    <p>{{ $leave->encash }}</p>
                                                                 </div>
                                                             </td>
                                                             <td>
                                                                 <div class="tabletext">
-                                                                    <p>{{$leave->annual_limit}}</p>
+                                                                    <p>{{ $leave->annual_limit }}</p>
                                                                 </div>
                                                             </td>
                                                             <td>
@@ -180,12 +324,13 @@
                                                                         data-dept-id="edit_leave_{{ $leave->id }}">
                                                                         <i class="fa fa-pencil-square-o"
                                                                             aria-hidden="true"></i>
-                                                                            <form id = "deleteForm"
-                                                                            action="{{ route('Leave.destroy',$leave->id) }}"
+                                                                        <form id = "deleteForm"
+                                                                            action="{{ route('Leave.destroy', $leave->id) }}"
                                                                             method="post">
                                                                             @csrf
                                                                             @method('delete')
-                                                                            <button type="button" class="actBtn" data-hldy-id="{{ $leave->id }}"
+                                                                            <button type="button" class="actBtn"
+                                                                                data-hldy-id="{{ $leave->id }}"
                                                                                 onclick="showCustomAlert(this)">
                                                                                 <i class="fa fa-trash"
                                                                                     aria-hidden="true"></i>
@@ -230,11 +375,16 @@
                                                                                     {{-- // --}}
                                                                                     <div class="col-lg-12">
                                                                                         <div class="popupForm_col">
-                                                                                            <strong>Company Name*</strong>
-                                                                                            <div class="popupForm_field">
-                                                                                                <select name="company_id" class="selective">
+                                                                                            <strong>Company
+                                                                                                Name*</strong>
+                                                                                            <div
+                                                                                                class="popupForm_field">
+                                                                                                <select
+                                                                                                    name="company_id"
+                                                                                                    class="selective">
                                                                                                     @foreach ($companies as $id)
-                                                                                                        <option value="{{ $id->id }}"@if($id->id == $leave->comapny_id) selected @endif>
+                                                                                                        <option
+                                                                                                            value="{{ $id->id }}"@if ($id->id == $leave->comapny_id) selected @endif>
                                                                                                             {{ $id->company_name }}
                                                                                                         </option>
                                                                                                     @endforeach
@@ -248,7 +398,7 @@
                                                                                             <div class="popupForm_field">
                                                                                                 <select name="dept_id" class="selective">
                                                                                                     @foreach ($department as $id)
-                                                                                                        <option value="{{ $id->id }}" @if($id->id == $leave->comapny_id) selected @endif>
+                                                                                                        <option value="{{ $id->id }}" @if ($id->id == $leave->comapny_id) selected @endif>
                                                                                                             {{ $id->department_name }}
                                                                                                         </option>
                                                                                                     @endforeach
@@ -259,11 +409,23 @@
                                                                                     <div class="col-lg-12">
                                                                                         <div class="popupForm_col">
                                                                                             <strong>Leave Code*</strong>
-                                                                                            <div class="popupForm_field">
-                                                                                                <select name="leave_code" class="selective">
-                                                                                                    <option value="CL" @if($leave->leave_code == 'CL') selected @endif>CL</option>
-                                                                                                    <option value="EL" @if($leave->leave_code == 'EL') selected @endif>EL</option>
-                                                                                                    <option value="SL" @if($leave->leave_code == 'SL') selected @endif>SL</option>
+                                                                                            <div
+                                                                                                class="popupForm_field">
+                                                                                                <select
+                                                                                                    name="leave_code"
+                                                                                                    class="selective">
+                                                                                                    <option
+                                                                                                        value="CL"
+                                                                                                        @if ($leave->leave_code == 'CL') selected @endif>
+                                                                                                        CL</option>
+                                                                                                    <option
+                                                                                                        value="EL"
+                                                                                                        @if ($leave->leave_code == 'EL') selected @endif>
+                                                                                                        EL</option>
+                                                                                                    <option
+                                                                                                        value="SL"
+                                                                                                        @if ($leave->leave_code == 'SL') selected @endif>
+                                                                                                        SL</option>
                                                                                                 </select>
                                                                                             </div>
                                                                                         </div>
@@ -272,8 +434,12 @@
                                                                                     <div class="col-lg-12">
                                                                                         <div class="popupForm_col">
                                                                                             <strong>Leave Name*</strong>
-                                                                                            <div class="popupForm_field">
-                                                                                                <input type="text" name="Leave_Name" value="{{$leave->leave_name}}" placeholder="ex:Casual Leave">
+                                                                                            <div
+                                                                                                class="popupForm_field">
+                                                                                                <input type="text"
+                                                                                                    name="Leave_Name"
+                                                                                                    value="{{ $leave->leave_name }}"
+                                                                                                    placeholder="ex:Casual Leave">
                                                                                             </div>
                                                                                         </div>
                                                                                     </div>
@@ -281,10 +447,19 @@
                                                                                     <div class="col-lg-12">
                                                                                         <div class="popupForm_col">
                                                                                             <strong>Encash</strong>
-                                                                                            <div class="popupForm_field">
-                                                                                                <select name="leave_encash" class="selective">
-                                                                                                    <option value="Yes" @if($leave->encash) selected @endif>Yes</option>
-                                                                                                    <option value="No" @if($leave->encash) selected @endif>No</option>
+                                                                                            <div
+                                                                                                class="popupForm_field">
+                                                                                                <select
+                                                                                                    name="leave_encash"
+                                                                                                    class="selective">
+                                                                                                    <option
+                                                                                                        value="Yes"
+                                                                                                        @if ($leave->encash) selected @endif>
+                                                                                                        Yes</option>
+                                                                                                    <option
+                                                                                                        value="No"
+                                                                                                        @if ($leave->encash) selected @endif>
+                                                                                                        No</option>
                                                                                                 </select>
                                                                                             </div>
                                                                                         </div>
@@ -292,11 +467,21 @@
                                                                                     {{-- // --}}
                                                                                     <div class="col-lg-12">
                                                                                         <div class="popupForm_col">
-                                                                                            <strong>Carry Forward</strong>
-                                                                                            <div class="popupForm_field">
-                                                                                                <select name="leave_carry_forward" class="selective">
-                                                                                                    <option value="Yes" @if($leave->carry_forward) selected @endif>Yes</option>
-                                                                                                    <option value="No" @if($leave->carry_forward) selected @endif>No</option>
+                                                                                            <strong>Carry
+                                                                                                Forward</strong>
+                                                                                            <div
+                                                                                                class="popupForm_field">
+                                                                                                <select
+                                                                                                    name="leave_carry_forward"
+                                                                                                    class="selective">
+                                                                                                    <option
+                                                                                                        value="Yes"
+                                                                                                        @if ($leave->carry_forward) selected @endif>
+                                                                                                        Yes</option>
+                                                                                                    <option
+                                                                                                        value="No"
+                                                                                                        @if ($leave->carry_forward) selected @endif>
+                                                                                                        No</option>
                                                                                                 </select>
                                                                                             </div>
                                                                                         </div>
@@ -304,9 +489,14 @@
                                                                                     {{-- // --}}
                                                                                     <div class="col-lg-12">
                                                                                         <div class="popupForm_col">
-                                                                                            <strong>Annual Limit(days)*</strong>
-                                                                                            <div class="popupForm_field">
-                                                                                                <input type="text" name="annual_limit" pattern="\d{2}" value="{{$leave->annual_limit}}">
+                                                                                            <strong>Annual
+                                                                                                Limit(days)*</strong>
+                                                                                            <div
+                                                                                                class="popupForm_field">
+                                                                                                <input type="text"
+                                                                                                    name="annual_limit"
+                                                                                                    pattern="\d{2}"
+                                                                                                    value="{{ $leave->annual_limit }}">
                                                                                             </div>
                                                                                         </div>
                                                                                     </div>
@@ -473,9 +663,12 @@
                                     <strong>Leave Code*</strong>
                                     <div class="popupForm_field">
                                         <select name="leave_code" class="selective">
-                                            <option value="CL" @if(old('leave_code') == 'CL') selected @endif>CL</option>
-                                            <option value="EL" @if(old('leave_code') == 'EL') selected @endif>EL</option>
-                                            <option value="SL" @if(old('leave_code') == 'SL') selected @endif>SL</option>
+                                            <option value="CL" @if (old('leave_code') == 'CL') selected @endif>
+                                                CL</option>
+                                            <option value="EL" @if (old('leave_code') == 'EL') selected @endif>
+                                                EL</option>
+                                            <option value="SL" @if (old('leave_code') == 'SL') selected @endif>
+                                                SL</option>
                                         </select>
                                     </div>
                                 </div>
@@ -485,7 +678,8 @@
                                 <div class="popupForm_col">
                                     <strong>Leave Name*</strong>
                                     <div class="popupForm_field">
-                                        <input type="text" name="Leave_Name" value="{{ old('Leave_Name') }}" placeholder="ex:Casual Leave">
+                                        <input type="text" name="Leave_Name" value="{{ old('Leave_Name') }}"
+                                            placeholder="ex:Casual Leave">
                                     </div>
                                 </div>
                             </div>
@@ -549,14 +743,14 @@
         console.log(companyId);
         departmentSelect.innerHTML = ' <option selected disabled>Select Department</option>';
         fetch('/leave-master-company/' + companyId, {
-            method: 'GET',
-            headers: {
-                'Content-Type': 'application/json'
-            }
-        })
+                method: 'GET',
+                headers: {
+                    'Content-Type': 'application/json'
+                }
+            })
             .then(response => response.json())
             .then(data => {
-                data.forEach(function (department) {
+                data.forEach(function(department) {
                     var option = document.createElement('option');
                     option.value = department.id;
                     option.textContent = department.department_name;

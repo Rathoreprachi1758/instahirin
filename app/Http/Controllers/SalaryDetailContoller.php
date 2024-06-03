@@ -28,8 +28,9 @@ class SalaryDetailContoller extends Controller
             $companiesId[] = $company->id;
         }
         $employees = Employee::whereIn('company_id', $companiesId)->get();
+        $employeesSalary = EmployeeSalary::whereIn('company_id', $companiesId);
 
-        return view('dashboard.salaryDetails.salary_details', compact('companies', 'employees'));
+        return view('dashboard.salaryDetails.salary_details', compact('companies', 'employees', 'employeesSalary'));
     }
 
     /**
@@ -59,9 +60,10 @@ class SalaryDetailContoller extends Controller
         } else {
             $employees = Employee::all();
         }
+        $employeesSalary = null;
         $companies = Company::where('user_id', Auth::id())->get();
 
-        return view('dashboard.salaryDetails.salary_details', compact('companies', 'employees'));
+        return view('dashboard.salaryDetails.salary_details', compact('companies', 'employees', 'employeesSalary'));
     }
 
     /**
@@ -75,7 +77,33 @@ class SalaryDetailContoller extends Controller
         $departmentId = $request->departmentId;
         $employeeId = $request->employeeId;
 
-        return view('dashboard.salaryDetails.salary_head_master', compact('companyId', 'departmentId', 'employeeId'));
+        $salaryHead = SalaryHeadMaster::where('employee_id', $employeeId)->first();
+        $existingData = null;
+
+        if ($salaryHead) {
+            $existingData = json_decode($salaryHead->additional_Head, true);
+        }
+        $employeeSalary = EmployeeSalary::where('employee_id', $employeeId)->latest()->first();
+        $salaryHeadMaster = SalaryHeadMaster::where('employee_id', $employeeId)->latest()->first();
+
+        $additionalHeads = json_decode($employeeSalary?->additional_head, true) ?? [];
+        $deductionHeads = json_decode($employeeSalary?->deduction_head, true) ?? [];
+
+
+        $additionalHeadLabels = json_decode($salaryHeadMaster?->additional_Head, true) ?? [];
+        $deductionHeadLabels = json_decode($salaryHeadMaster?->deduction_Head, true) ?? [];
+
+        // Mapping the values to labels
+        $mappedAdditionalHeads = [];
+        foreach ($additionalHeads as $key => $value) {
+            $mappedAdditionalHeads[$additionalHeadLabels[$key]] = $value;
+        }
+
+        $mappedDeductionHeads = [];
+        foreach ($deductionHeads as $key => $value) {
+            $mappedDeductionHeads[$deductionHeadLabels[$key]] = $value;
+        }
+        return view('dashboard.salaryDetails.salary_head_master', compact('companyId', 'departmentId', 'employeeId', 'salaryHead', 'mappedAdditionalHeads', 'mappedDeductionHeads'));
     }
 
     /**
@@ -91,12 +119,13 @@ class SalaryDetailContoller extends Controller
         $employees = Employee::whereIn('company_id', $companiesId)->get();
         $countries = Country::all();
         $salaryHead = null;
-        return view('dashboard.salaryDetails.normal_salary', compact('employees', 'countries' , 'salaryHead'));
+        $employeeSalary = null;
+        return view('dashboard.salaryDetails.normal_salary', compact('employees', 'countries', 'salaryHead', 'employeeSalary'));
     }
 
     /**
      * @param Request $request
-     * @return void
+     * @return \Illuminate\Http\RedirectResponse
      */
     public function submitSalaryMaster(Request $request)
     {
@@ -113,6 +142,7 @@ class SalaryDetailContoller extends Controller
         $salaryHeadMaster = new SalaryHeadMaster();
         $salaryHeadMaster->additional_Head = json_encode($headValues);
         $salaryHeadMaster->deduction_Head = json_encode($deductionValues);
+        $salaryHeadMaster->salary_type = $request->salary_type;
         $salaryHeadMaster->company_id = $request->company_id;
         $salaryHeadMaster->employee_id = $request->employee_id;;
         $salaryHeadMaster->department_id = $request->department_id;
@@ -121,8 +151,8 @@ class SalaryDetailContoller extends Controller
         $salaryHeadMaster->esi = $request->esi;
         $salaryHeadMaster->user_id = Auth::id();
         $salaryHeadMaster->save();
+        return redirect()->route('salaryDetails');
 
-        dd(json_encode($headValues), json_encode($deductionValues));
     }
 
     /**
@@ -140,31 +170,50 @@ class SalaryDetailContoller extends Controller
         $countries = Country::all();
         $employeeData = Employee::find($request->emp_code);
         $salaryHead = null;
+        $employeeSalary = null;
         if ($employeeData) {
-            $salaryHead = SalaryHeadMaster::where('employee_id', $request->emp_code)->first();
+            $salaryHead = SalaryHeadMaster::where('employee_id', $request->emp_code)->latest()->first();
+            $employeeSalary = employeeSalary::where('employee_id', $request->emp_code)->latest()->first();
+            $employeeSalaryAdditionalHeads = json_decode($employeeSalary?->additional_head, true);
+            $employeeSalaryDeductionHeads = json_decode($employeeSalary?->deduction_head, true);
         }
-        return view('dashboard.salaryDetails.normal_salary', compact('employees', 'employeeData', 'countries', 'salaryHead'));
+        return view('dashboard.salaryDetails.normal_salary', compact('employees', 'employeeData', 'countries', 'salaryHead', 'employeeSalary', 'employeeSalaryAdditionalHeads', 'employeeSalaryDeductionHeads'));
     }
 
     public function normalSalarySubmit(Request $request)
     {
+        $additionalValue = [];
+        $deductionValues = [];
+        foreach ($request->all() as $key => $value) {
+            if (strpos($key, 'addhead') === 0) {
+                $additionalValue[$key] = $value;
+            } elseif (strpos($key, 'dedhead') === 0) {
+                $deductionValues[$key] = $value;
+            }
+        }
+
         $employeeSalary = new employeeSalary();
 
-        $employeeSalary->employee_code = $request->emp_code;
+        $employeeSalary->employee_id = $request->employee_id;
         $employeeSalary->employee_name = $request->emp_name;
+        $employeeSalary->currency = $request->currency;
+        $employeeSalary->additional_head = json_encode($additionalValue);
+        $employeeSalary->deduction_head = json_encode($deductionValues);
         $employeeSalary->salary_type = $request->salaryType;
         $employeeSalary->per_hour = $request->perHour;
         $employeeSalary->total_hours = $request->totalHours;
-        $employeeSalary->total = $request->total;
-        $employeeSalary->basic_additional_head = $request->basic_additional_head;
-        $employeeSalary->medical_allowance_additional_head = $request->medical_allowance_additional_head;
-        $employeeSalary->profession_tax_deduction_head = $request->professional_tax;
-        $employeeSalary->total_hours = $request->pf_no;
+        $employeeSalary->pf_number = $request->pf_no;
         $employeeSalary->esi_number = $request->esi_no;
-        $employeeSalary->profession_tax_total_deduction_head = $request->sub_total_deduction_head;
-        $employeeSalary->subtotal_additional_head = $request->sub_total_addtional_head;
+        if (!is_null($request->total[0])) {
+            $employeeSalary->total = $request->total[0];
+        } elseif (!is_null($request->total[1])) {
+            $employeeSalary->total = $request->total[1];
+        }
+        $employeeSalary->sub_total_deduction_head = $request->sub_total_deduction_head;
+        $employeeSalary->subtotal_additional_head = $request->sub_total_additional_head;
         $employeeSalary->user_id = Auth::id();
+        $employeeSalary->company_id = $request->company_id;
         $employeeSalary->save();
-        dd($request);
+        return redirect()->route('salaryDetails');
     }
 }

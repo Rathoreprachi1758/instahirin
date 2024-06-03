@@ -1,5 +1,5 @@
 @phpuse Carbon\Carbon;
-@endphp ?> ?> ?> ?> ?>
+@endphp ?> ?> ?> ?> ?> ?> ?> ?> ?> ?> ?> ?>
 <x-header data="worklog" />
 <link rel="stylesheet" href="css/bootstrap.min.css">
 <!-- custom css -->
@@ -206,16 +206,15 @@
 
     .card {
         border-radius: 20px;
-        /* box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px; */
-        box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+        /* box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px; */
         margin-bottom: 20px;
         padding: 5px;
         height: 370px;
-        border: 1px solid #fff;
+        border: 1px solid #ccc;
 
     }
 </style>
-<div class="fr-section" style="margin-top: -72px">
+<div class="fr-section" style="margin-top: -100px">
     <div class="fr-section_detail">
         <div class="dashboard_innerPages">
             <div class="container-fluid">

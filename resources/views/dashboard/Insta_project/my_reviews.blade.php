@@ -1,4 +1,4 @@
-<x-header data="insta_project component"/>
+<x-header data="insta_project component" />
 <link rel="stylesheet" href="{{ asset('css/css/master_tab.css') }}">
 <link rel="stylesheet" href="https://cdn.datatables.net/1.11.5/css/jquery.dataTables.min.css">
 <script src="https://cdn.datatables.net/1.11.5/js/jquery.dataTables.min.js"></script>
@@ -12,6 +12,46 @@
         padding: 0px;
         font-family: "avenirmedium";
     }
+
+    .custom_tabs {
+        width: 100%;
+        border: 0.5px solid #fff;
+    }
+
+    .custom_tabs ul li a.active {
+
+        /* background-color: #dddddd; */
+        background-color: transparent !important;
+        color: #007bff !important;
+
+        border-bottom: 3px solid #007bff !important;
+    }
+
+    .custom_tabs ul li a:hover {
+        background-color: transparent !important;
+        /* background-color: #425056; */
+    }
+
+    .custom_tabs ul li a {
+        padding: 0 15px !important;
+        font-weight: 500 !important;
+        font-size: 15px !important;
+        color: #555 !important;
+    }
+
+    .custom_tittle h4 {
+        font-size: 25px;
+        padding-bottom: 10px;
+        font-family: "avenirmedium";
+        color: #343A40;
+    }
+
+    .description_small_text {
+        font-size: 14px !important;
+        color: #777;
+        line-height: 25px;
+
+    }
 </style>
 @include('sweetalert::alert')
 <div class="fr-section" style="margin-top: -72px">
@@ -20,7 +60,8 @@
             <div class="custom_tabs_section">
                 <div class="custom_tittle descriptionTxt">
                     <h4>Insta Project</h4>
-                    <p><strong>Description:</strong>To manage and track all agency/contractor specifications and
+                    <p class="description_small_text"><strong style="color:#343A40;">Description:</strong>To manage and
+                        track all agency/contractor specifications and
                         services render.Review of a agencies
                         render of agencies render it simpler to get in communication with the agency and seek out the
                         latest information upon
@@ -29,19 +70,19 @@
                 </div>
                 <div class="custom_tabs">
                     <ul>
-                        <li><a href="{{url('InstaProject')}}">Create Project</a></li>
-                        <li><a href="{{url('InstaProject/My-Projects')}}">My Project</a></li>
-                        <li><a href="{{url('InstaProject/My-Project-Bid')}}">My Project Bids</a></li>
-                        <li><a href="{{url('InstaProject/Post-Review')}}">Post Review</a></li>
-                        <li><a href="{{url('InstaProject/My-Review')}}" class="active">My Reviews</a></li>
+                        <li><a href="{{ url('InstaProject') }}">Create Project</a></li>
+                        <li><a href="{{ url('InstaProject/My-Projects') }}">My Project</a></li>
+                        <li><a href="{{ url('InstaProject/My-Project-Bid') }}">My Project Bids</a></li>
+                        <li><a href="{{ url('InstaProject/Post-Review') }}">Post Review</a></li>
+                        <li><a href="{{ url('InstaProject/My-Review') }}" class="active">My Reviews</a></li>
                     </ul>
                 </div>
                 <div class="row col-12 mt-5">
-                    @foreach($instaProjectReviews as $instaProjectReview)
+                    @foreach ($instaProjectReviews as $instaProjectReview)
                         <div class="col-4">
                             <div class="card mt-2" style="width: 18rem;">
                                 <div class="card-header">
-                                    {{$instaProjectReview->company->company_name}}
+                                    {{ $instaProjectReview->company->company_name }}
                                 </div>
                                 <ul class="list-group list-group-flush">
                                     <li class="list-group-item">Quality of service and deliverable:
@@ -84,7 +125,7 @@
                                         @php
                                             $overall_rating = $instaProjectReview->over_all_rating;
                                             $full_stars = floor($overall_rating);
-                                            $half_star = ($overall_rating - $full_stars) >= 0.5 ? true : false;
+                                            $half_star = $overall_rating - $full_stars >= 0.5 ? true : false;
                                         @endphp
                                         @for ($i = 1; $i <= 5; $i++)
                                             @if ($i <= $full_stars)

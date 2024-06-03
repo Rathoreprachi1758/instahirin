@@ -163,7 +163,8 @@ em {
 
 body {
     background: #fff;
-    color: linear-gradient(315deg, #2D3436 0%, #000000 74%);;
+    color: linear-gradient(315deg, #2D3436 0%, #000000 74%);
+    ;
     font-family: "avenir_regularregular";
     font-size: 10px !important;
     transition: all 0.2s ease;
@@ -310,6 +311,7 @@ h6 {
     max-width: 100px;
     display: block;
 }
+
 .logo a img {
     width: 100%;
     display: block;
@@ -383,6 +385,7 @@ h6 {
 .signup_btn:hover {
     text-decoration: underline !important;
 }
+
 .signin_btn:hover {
     text-decoration: none !important;
     background-color: #383333;
@@ -413,6 +416,7 @@ h6 {
     color: #000 !important;
     text-decoration: underline !important;
 }
+
 .footer_detail a:hover {
     text-decoration: none !important;
 }
@@ -461,6 +465,7 @@ h6 {
     border: 1px solid #dfdfdf;
     border-radius: 8px;
 }
+
 .auth_field_info textarea {
     width: 100%;
     padding: 10px 45px 10px 15px;
@@ -489,13 +494,16 @@ h6 {
 .auth_text {
     padding-top: 5px;
 }
+
 .auth_text p {
     font-size: 14px;
 }
+
 .auth_text p a {
     color: #000 !important;
     text-decoration: underline !important;
 }
+
 .auth_text a:hover {
     text-decoration: none !important;
 }
@@ -505,6 +513,7 @@ h6 {
     position: relative;
     padding-bottom: 20px;
 }
+
 .auth_sbmit input {
     width: 100%;
     border-radius: 50px;
@@ -516,13 +525,16 @@ h6 {
     justify-content: space-between;
     align-content: center;
 }
+
 .forgotPasswText p {
     font-size: 14px;
 }
+
 .forgotPasswText p a {
     color: #000 !important;
     text-decoration: underline !important;
 }
+
 .forgotPasswText a:hover {
     text-decoration: none !important;
 }
@@ -570,7 +582,7 @@ h6 {
     display: block;
 }
 
-.checkbox-label input:checked ~ .checkbox-custom {
+.checkbox-label input:checked~.checkbox-custom {
     background-color: #000;
     border-radius: 5px;
     -webkit-transform: rotate(0deg) scale(1);
@@ -601,7 +613,7 @@ h6 {
     -o-transition: all 0.3s ease-out;
 }
 
-.checkbox-label input:checked ~ .checkbox-custom::after {
+.checkbox-label input:checked~.checkbox-custom::after {
     -webkit-transform: rotate(45deg) scale(1);
     -ms-transform: rotate(45deg) scale(1);
     transform: rotate(45deg) scale(1);
@@ -659,6 +671,7 @@ h6 {
 .dashboardHeader .headerDetail {
     padding: 0px 0px;
 }
+
 .dashboardHeader .logo {
     padding: 15px 22px;
 }
@@ -674,18 +687,21 @@ h6 {
     display: flex;
     height: 100%;
 }
-.profile_dropdown ul > li {
+
+.profile_dropdown ul>li {
     position: relative;
     height: 100%;
 }
-.profile_dropdown ul li > a {
+
+.profile_dropdown ul li>a {
     color: #fff !important;
     position: relative;
     display: flex;
     align-items: center;
     height: 100%;
 }
-.profile_dropdown ul li > a img {
+
+.profile_dropdown ul li>a img {
     width: 40px;
     height: 40px;
     border-radius: 50%;
@@ -693,13 +709,14 @@ h6 {
     object-fit: cover;
 }
 
-.profile_dropdown ul li > a strong {
+.profile_dropdown ul li>a strong {
     position: relative;
     display: flex;
     align-items: center;
     margin-left: 10px;
 }
-.profile_dropdown ul li > a strong em {
+
+.profile_dropdown ul li>a strong em {
     display: block !important;
     color: #fff !important;
     position: static;
@@ -709,6 +726,7 @@ h6 {
 .profile_list {
     display: none;
 }
+
 .profile_dropList {
     position: absolute;
     background: #000;
@@ -725,15 +743,17 @@ h6 {
 .profile_dropList li {
     height: auto !important;
 }
+
 .profile_dropList li a {
     padding: 8px 20px;
     font-size: 14px;
 }
+
 .profile_dropList li a:hover {
     background-color: #333;
 }
 
-.profile_dropdown ul > li:hover .profile_list {
+.profile_dropdown ul>li:hover .profile_list {
     display: block !important;
 }
 
@@ -776,6 +796,7 @@ h6 {
     padding: 0px;
     font-size: 14px;
 }
+
 .db_tittle strong {
     padding: 0px;
     display: block;
@@ -826,6 +847,7 @@ h6 {
     width: 18px;
     display: block;
 }
+
 .db_nav ul li a:hover span svg {
     fill: #fff;
 }
@@ -834,6 +856,7 @@ h6 {
     background-color: #000;
     color: #fff;
 }
+
 .db_nav ul li a:hover .menu_icon {
     color: #fff;
 }
@@ -855,6 +878,7 @@ h6 {
     padding-left: 25px !important;
     display: none;
 }
+
 .has_list ul li a {
     font-size: 13px;
 }
@@ -903,6 +927,7 @@ h6 {
     padding-bottom: 8px;
     font-size: 20px;
 }
+
 .db-blocksHeadTittle p {
     color: #8b8b8b;
     font-size: 15px;
@@ -912,9 +937,11 @@ h6 {
     width: 30%;
     padding-top: 30px;
 }
+
 .db-blocksHeadAvatar span {
     display: block;
 }
+
 .db-blocksHeadAvatar span img {
     display: block;
     max-width: 120px;
@@ -947,18 +974,22 @@ h6 {
     border-radius: 50%;
     margin-right: 10px;
 }
+
 .gotoPage span i {
     transform: translateY(-1px);
 }
+
 .gotoPage:hover {
     color: #000 !important;
 }
+
 .gotoPage strong {
     display: block;
     line-height: 1.1;
     border-bottom: 1px solid transparent;
     font-size: 14px;
 }
+
 .gotoPage:hover strong {
     border-bottom: 1px solid#000;
 }
@@ -990,7 +1021,7 @@ h6 {
 
 .custom_tabs {
     width: 100%;
-    border: 0.5px solid rgba(112, 112, 112, 0.5);
+    /* border: 0.5px solid rgba(112, 112, 112, 0.5); */
 }
 
 .custom_tabs ul {
@@ -1001,6 +1032,7 @@ h6 {
 .custom_tabs ul li {
     position: relative;
 }
+
 .custom_tabs ul li a {
     font-size: 13px;
     padding: 12px 6px;
@@ -1010,13 +1042,21 @@ h6 {
 }
 
 .custom_tabs ul li a:hover {
-    background-color: #dddddd;
+    background-color: transparent !important;
     /* background-color: #425056; */
 }
+
 .custom_tabs ul li a.active {
-    background-color: #dddddd;
-    /* background-color: #55d0ff; */
+
+    /* background-color: #dddddd; */
+    background-color: transparent !important;
+    color: #007bff !important;
+    font-weight: 600 !important;
+    border-bottom: 3px solid #007bff !important;
 }
+
+
+
 
 .custom_tabs_detail {
     width: 100%;
@@ -1036,6 +1076,7 @@ h6 {
     position: relative;
     border-bottom: 0.5px solid rgba(112, 112, 112, 0.5);
 }
+
 .p_userInfo_head .row {
     align-items: center;
 }
@@ -1059,13 +1100,16 @@ h6 {
 .p_userInfo_list {
     width: 100%;
 }
-.p_userInfo_list ul > li {
+
+.p_userInfo_list ul>li {
     border-bottom: 0.5px solid rgba(112, 112, 112, 0.5);
 }
-.p_userInfo_list ul > li > .row {
+
+.p_userInfo_list ul>li>.row {
     align-items: center;
 }
-.p_userInfo_list ul > li:last-child {
+
+.p_userInfo_list ul>li:last-child {
     border: 0px;
 }
 
@@ -1103,12 +1147,14 @@ h6 {
     font-size: 12px;
     font-family: "avenirmedium";
 }
+
 .p_userInfo_editInput strong {
     position: relative;
     font-size: 13px;
     cursor: pointer;
     display: inline-block;
 }
+
 .p_userInfo_editInput strong i {
     cursor: pointer;
     display: inline-block;
@@ -1118,14 +1164,17 @@ h6 {
     /* Chrome/Opera/Safari */
     color: #000;
 }
+
 .p_userInfo_editInput input::-moz-placeholder {
     /* Firefox 19+ */
     color: #000;
 }
+
 .p_userInfo_editInput input:-ms-input-placeholder {
     /* IE 10+ */
     color: #000;
 }
+
 .p_userInfo_editInput input:-moz-placeholder {
     /* Firefox 18- */
     color: #000;
@@ -1198,14 +1247,17 @@ h6 {
     /* Chrome/Opera/Safari */
     color: rgba(0, 0, 0, 0.3);
 }
+
 .passwordCol .p_userInfo_editInput input::-moz-placeholder {
     /* Firefox 19+ */
     color: rgba(0, 0, 0, 0.3);
 }
+
 .passwordCol .p_userInfo_editInput input:-ms-input-placeholder {
     /* IE 10+ */
     color: rgba(0, 0, 0, 0.3);
 }
+
 .passwordCol .p_userInfo_editInput input:-moz-placeholder {
     /* Firefox 18- */
     color: rgba(0, 0, 0, 0.3);
@@ -1251,6 +1303,7 @@ h6 {
     display: block;
     padding-bottom: 3px;
 }
+
 .statusAlert_info strong {
     font-size: 14px;
     color: #fff;
@@ -1283,6 +1336,7 @@ h6 {
     font-size: 12px;
     text-transform: uppercase;
 }
+
 .kycForm_field p {
     font-size: 12px;
     padding: 0px;
@@ -1309,6 +1363,7 @@ h6 {
     border-radius: 8px;
     background-color: #f3f3f3;
 }
+
 .kycForm_field_info input:focus {
     border: 1px solid #a8a8a8;
     border-radius: 8px;
@@ -1339,6 +1394,7 @@ h6 {
     font-size: 12px;
     color: #b3b5b1;
 }
+
 .uploadFile [type="file"] {
     cursor: pointer !important;
     display: block;
@@ -1364,7 +1420,7 @@ h6 {
     vertical-align: middle;
     border-radius: 8px;
     zoom: 1;
-    *display: inline;
+    display: inline;
 }
 
 .kycForm_select select {
@@ -1374,8 +1430,10 @@ h6 {
     position: relative;
     background: transparent;
     padding: 10px 35px 10px 15px;
-    -webkit-box-sizing: border-box; /* Safari/Chrome, other WebKit */
-    -moz-box-sizing: border-box; /* Firefox, other Gecko */
+    -webkit-box-sizing: border-box;
+    /* Safari/Chrome, other WebKit */
+    -moz-box-sizing: border-box;
+    /* Firefox, other Gecko */
     box-sizing: border-box;
     /* Safari 3-4, iOS 1-3.2, Android 1.6- */
     -webkit-border-radius: 0px;
@@ -1412,6 +1470,7 @@ h6 {
     padding: 0px;
     background: none;
 }
+
 .kycSubmit .btndefault {
     min-width: 160px;
     padding: 5px 20px;
@@ -1428,6 +1487,7 @@ h6 {
 .creditReq_section .kycForm_field strong {
     text-transform: inherit;
 }
+
 .creditReq_section .kycForm_field_info input {
     background-color: #fff;
     border-color: #dfdfdf;
@@ -1453,6 +1513,7 @@ h6 {
     justify-content: flex-end;
     padding-bottom: 25px;
 }
+
 .facilityBtn .btndefault {
     border-radius: 50px;
     padding: 8px 25px;
@@ -1538,6 +1599,7 @@ h6 {
 .activityTabs {
     background-color: #f7f7f7;
     padding: 20px 15px;
+
 }
 
 .actTabSetting .auth_field_info input {
@@ -1585,9 +1647,14 @@ h6 {
 }
 
 .activityTable_data table thead th {
-    background-color: #7e7e7e;
+    /* background-color: #7e7e7e; */
+
+    background-color: #343A40;
+    ;
+
     padding: 0.8rem 0.6rem !important;
     border: 0.5px solid #707070;
+
 }
 
 .activityTable_data table {
@@ -1595,15 +1662,20 @@ h6 {
 }
 
 .activityTable_data table td {
-    border: 0.5px solid #707070;
+    /* border: 0.5px solid #707070; */
     padding: 0.8rem 0.4rem !important;
+
+
+
+
 }
 
 .activityTable_data table thead th h6 {
-    font-size: 11px;
+    font-size: 14px !important;
     text-align: center;
     padding: 0px;
     color: #fff;
+    border-radius: 10px;
 }
 
 .tabletext {
@@ -1623,9 +1695,11 @@ h6 {
     align-items: center;
     justify-content: center;
 }
+
 .tabletext_btn a {
     margin: 0px 2px;
 }
+
 .documentBtn {
     background-color: #e3e3e3;
     border: 1px solid #707070;
@@ -1683,9 +1757,11 @@ h6 {
     width: 100%;
     border-bottom: 1px solid #e2e2e2;
 }
+
 .statusDropdown ul li:last-child {
     border: 0px;
 }
+
 .statusDropdown ul li strong {
     font-size: 11px;
     display: flex;
@@ -1723,6 +1799,7 @@ h6 {
     display: block;
     font-family: "avenirblack";
 }
+
 .resumeDoc_text p {
     padding: 0px;
     color: #8e8e8e;
@@ -1735,6 +1812,7 @@ h6 {
     display: flex;
     justify-content: center;
 }
+
 .resumeDoc_action a {
     width: 28px;
     height: 28px;
@@ -1770,9 +1848,11 @@ h6 {
     transition: 0.2s;
     border-radius: 30px;
 }
+
 .file-drop-area.is-active {
     background-color: rgba(255, 255, 255, 0.05);
 }
+
 .fake-btn {
     flex-shrink: 0;
     background-color: rgba(255, 255, 255, 0.04);
@@ -1783,6 +1863,7 @@ h6 {
     font-size: 13px;
     color: #004f9f;
 }
+
 .file-msg {
     font-size: small;
     font-weight: 300;
@@ -1791,6 +1872,7 @@ h6 {
     overflow: hidden;
     text-overflow: ellipsis;
 }
+
 .file-input {
     position: absolute;
     left: 0;
@@ -1800,6 +1882,7 @@ h6 {
     cursor: pointer;
     opacity: 0;
 }
+
 .file-input:focus {
     outline: none;
 }
@@ -1863,6 +1946,7 @@ h6 {
 .employeementSec {
     width: 100%;
 }
+
 .employeementSecTittle {
     width: 100%;
     display: flex;
@@ -1875,6 +1959,7 @@ h6 {
     display: block;
     font-family: "avenirblack";
 }
+
 .employeementSecTittle a {
     font-size: 14px;
     display: block;
@@ -1924,6 +2009,7 @@ h6 {
 .personalDetail_info ul li ul li strong {
     color: #898989;
 }
+
 .personalDetail_info ul li ul li p {
     color: #000;
 }

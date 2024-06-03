@@ -390,164 +390,164 @@
             <div class="modal-body" style="background-color: #ededed">
                 <form method="post" id="skills" action="{{ route('shift_master.store') }}">
                     @csrf
-                        <div class="row">
-                            <div class="col-6">
-                                <div class="popupForm_col">
-                                    <strong>Company
-                                        Name*</strong>
-                                    <div class="popupForm_field">
-                                        <select name="company_id" class="selective">
-                                            @foreach ($comapnaies as $id)
-                                                <option value="{{ $id->id }}">
-                                                    {{ $id->company_name }}
-                                                </option>
-                                            @endforeach
-                                        </select>
-                                    </div>
+                    <div class="row">
+                        <div class="col-6">
+                            <div class="popupForm_col">
+                                <strong>Company
+                                    Name*</strong>
+                                <div class="popupForm_field">
+                                    <select name="company_id" class="selective">
+                                        @foreach ($comapnaies as $id)
+                                            <option value="{{ $id->id }}">
+                                                {{ $id->company_name }}
+                                            </option>
+                                        @endforeach
+                                    </select>
                                 </div>
                             </div>
-                            <div class="col-6">
-                                <div class="popupForm_col">
-                                    <strong>Department
-                                        Name*</strong>
-                                    <div class="popupForm_field">
-                                        <select name="dept_id" class="selective">
-                                            @foreach ($department as $id)
-                                                <option value="{{ $id->id }}">
-                                                    {{ $id->department_name }}
-                                                </option>
-                                            @endforeach
-                                        </select>
-                                    </div>
-                                </div>
-                            </div>
-                            {{-- // --}}
-                            <div class="col-6">
-                                <div class="popupForm_col">
-                                    <strong>Shift Code *</strong>
-                                    <div class="popupForm_field">
-                                        <select name="dept_id" class="selective">
-                                            @foreach ($department as $id)
-                                                <option value="{{ $id->id }}">
-                                                    {{ $id->department_name }}
-                                                </option>
-                                            @endforeach
-                                        </select>
-                                    </div>
-                                </div>
-                            </div>
-                            {{-- // --}}
-                            <div class="col-6">
-                                <div class="popupForm_col">
-                                    <strong>Shift Name*</strong>
-                                    <div class="popupForm_field">
-                                        <select name="dept_id" class="selective">
-                                            @foreach ($department as $id)
-                                                <option value="{{ $id->id }}">
-                                                    {{ $id->department_name }}
-                                                </option>
-                                            @endforeach
-                                        </select>
-                                    </div>
-                                </div>
-                            </div>
-                            {{-- // --}}
-                            <div class="col-6">
-                                <div class="popupForm_col">
-                                    <strong>Shift Day*</strong>
-                                    <div class="popupForm_field">
-                                        <select name="week_day" class="selective">
-                                            <option value="Monday">Monday</option>
-                                            <option value="Tuesday">Tuesday</option>
-                                            <option value="wednesday">Wednesday</option>
-                                            <option value="Thursday">Thursday</option>
-                                            <option value="Friday">Friday</option>
-                                            <option value="Saturday">Saturday</option>
-                                            <option value="Sunday">Sunday</option>
-                                            {{-- @endforeach --}}
-                                        </select>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="col-6">
-                                <div class="popupForm_col">
-                                    <strong>Time Zone</strong>
-                                    <div class="popupForm_field">
-                                        <select name="time_zone" class="selective">
-                                            @foreach ($timezones as $timezone)
-                                                <option value="{{ $timezone }}">{{ $timezone }}</option>
-                                            @endforeach
-                                        </select>
-                                    </div>
-                                </div>
-                            </div>
-                            {{-- // --}}
-                            <div class="col-lg-12">
-                                <div class="popupForm_col">
-                                    <strong>Shift In</strong>
-                                    <div class="popupForm_field">
-                                        <input type="time" id="shift_in">
-                                    </div>
-                                </div>
-                            </div>
-                            {{-- // --}}
-                            <div class="col-lg-12">
-                                <div class="popupForm_col">
-                                    <strong>Shift Out</strong>
-                                    <div class="popupForm_field">
-                                        <input type="time" id="shift_in">
-                                    </div>
-                                </div>
-                            </div>
-                            {{-- // --}}
-                            <div class="col-lg-12">
-                                <div class="popupForm_col">
-                                    <strong>Lunch In</strong>
-                                    <div class="popupForm_field">
-                                        <input type="time" id="shift_in">
-                                    </div>
-                                </div>
-                            </div>
-                            {{-- // --}}
-                            <div class="col-lg-12">
-                                <div class="popupForm_col">
-                                    <strong>Lunch Out</strong>
-                                    <div class="popupForm_field">
-                                        <input type="time" id="shift_in">
-                                    </div>
-                                </div>
-                            </div>
-                            {{-- // --}}
-                            <div class="col-lg-12">
-                                <div class="popupForm_col">
-                                    <strong>Ded.Full Lunch Hrs</strong>
-                                    <div class="popupForm_field" style="margin-right: 5px;">
-                                        <input type="checkbox" id="Dead_full_lunch">
-                                        <p style="margin-top:-17px">Deduct Hrs</p>
-                                    </div>
-                                </div>
-                            </div>
-                            {{-- // --}}
-                            <div class="col-lg-12">
-                                <div class="popupForm_col">
-                                    <strong>Extra day Hrs</strong>
-                                    <div class="popupForm_field">
-                                        <input type="checkbox" id="Dead_full_lunch">
-                                        <p style="margin-top:-17px">Extra Day Hrs</p>
-                                    </div>
-                                </div>
-                            </div>
-                            {{-- // --}}
-                            <div class="col-lg-12">
-                                <div class="popupForm_col">
-                                    <strong>Send SMS delay</strong>
-                                    <div class="popupForm_field">
-                                        <input type="text" id="Dead_full_lunch" placeholder="hh:mm" disabled>
-                                    </div>
-                                </div>
-                            </div>
-                            {{-- // --}}
                         </div>
+                        <div class="col-6">
+                            <div class="popupForm_col">
+                                <strong>Department
+                                    Name*</strong>
+                                <div class="popupForm_field">
+                                    <select name="dept_id" class="selective">
+                                        @foreach ($department as $id)
+                                            <option value="{{ $id->id }}">
+                                                {{ $id->department_name }}
+                                            </option>
+                                        @endforeach
+                                    </select>
+                                </div>
+                            </div>
+                        </div>
+                        {{-- // --}}
+                        <div class="col-6">
+                            <div class="popupForm_col">
+                                <strong>Shift Code *</strong>
+                                <div class="popupForm_field">
+                                    <select name="dept_id" class="selective">
+                                        @foreach ($department as $id)
+                                            <option value="{{ $id->id }}">
+                                                {{ $id->department_name }}
+                                            </option>
+                                        @endforeach
+                                    </select>
+                                </div>
+                            </div>
+                        </div>
+                        {{-- // --}}
+                        <div class="col-6">
+                            <div class="popupForm_col">
+                                <strong>Shift Name*</strong>
+                                <div class="popupForm_field">
+                                    <select name="dept_id" class="selective">
+                                        @foreach ($department as $id)
+                                            <option value="{{ $id->id }}">
+                                                {{ $id->department_name }}
+                                            </option>
+                                        @endforeach
+                                    </select>
+                                </div>
+                            </div>
+                        </div>
+                        {{-- // --}}
+                        <div class="col-6">
+                            <div class="popupForm_col">
+                                <strong>Shift Day*</strong>
+                                <div class="popupForm_field">
+                                    <select name="week_day" class="selective">
+                                        <option value="Monday">Monday</option>
+                                        <option value="Tuesday">Tuesday</option>
+                                        <option value="wednesday">Wednesday</option>
+                                        <option value="Thursday">Thursday</option>
+                                        <option value="Friday">Friday</option>
+                                        <option value="Saturday">Saturday</option>
+                                        <option value="Sunday">Sunday</option>
+                                        {{-- @endforeach --}}
+                                    </select>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-6">
+                            <div class="popupForm_col">
+                                <strong>Time Zone</strong>
+                                <div class="popupForm_field">
+                                    <select name="time_zone" class="selective">
+                                        @foreach ($timezones as $timezone)
+                                            <option value="{{ $timezone }}">{{ $timezone }}</option>
+                                        @endforeach
+                                    </select>
+                                </div>
+                            </div>
+                        </div>
+                        {{-- // --}}
+                        <div class="col-lg-12">
+                            <div class="popupForm_col">
+                                <strong>Shift In</strong>
+                                <div class="popupForm_field">
+                                    <input type="time" id="shift_in">
+                                </div>
+                            </div>
+                        </div>
+                        {{-- // --}}
+                        <div class="col-lg-12">
+                            <div class="popupForm_col">
+                                <strong>Shift Out</strong>
+                                <div class="popupForm_field">
+                                    <input type="time" id="shift_in">
+                                </div>
+                            </div>
+                        </div>
+                        {{-- // --}}
+                        <div class="col-lg-12">
+                            <div class="popupForm_col">
+                                <strong>Lunch In</strong>
+                                <div class="popupForm_field">
+                                    <input type="time" id="shift_in">
+                                </div>
+                            </div>
+                        </div>
+                        {{-- // --}}
+                        <div class="col-lg-12">
+                            <div class="popupForm_col">
+                                <strong>Lunch Out</strong>
+                                <div class="popupForm_field">
+                                    <input type="time" id="shift_in">
+                                </div>
+                            </div>
+                        </div>
+                        {{-- // --}}
+                        <div class="col-lg-12">
+                            <div class="popupForm_col">
+                                <strong>Ded.Full Lunch Hrs</strong>
+                                <div class="popupForm_field" style="margin-right: 5px;">
+                                    <input type="checkbox" id="Dead_full_lunch">
+                                    <p style="margin-top:-17px">Deduct Hrs</p>
+                                </div>
+                            </div>
+                        </div>
+                        {{-- // --}}
+                        <div class="col-lg-12">
+                            <div class="popupForm_col">
+                                <strong>Extra day Hrs</strong>
+                                <div class="popupForm_field">
+                                    <input type="checkbox" id="Dead_full_lunch">
+                                    <p style="margin-top:-17px">Extra Day Hrs</p>
+                                </div>
+                            </div>
+                        </div>
+                        {{-- // --}}
+                        <div class="col-lg-12">
+                            <div class="popupForm_col">
+                                <strong>Send SMS delay</strong>
+                                <div class="popupForm_field">
+                                    <input type="text" id="Dead_full_lunch" placeholder="hh:mm" disabled>
+                                </div>
+                            </div>
+                        </div>
+                        {{-- // --}}
+                    </div>
                     <br>
                     <div class="table_actions">
                         <div class="row align-items-center ">

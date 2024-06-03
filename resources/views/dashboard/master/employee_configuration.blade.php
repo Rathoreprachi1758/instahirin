@@ -1,18 +1,18 @@
-<x-header data="employee_config component"/>
+<x-header data="employee_config component" />
 <link rel="stylesheet" href="{{ asset('css/css/master_tab.css') }}">
 <link rel="stylesheet" href="https://cdn.datatables.net/1.11.5/css/jquery.dataTables.min.css">
 <script src="https://cdn.datatables.net/1.11.5/js/jquery.dataTables.min.js"></script>
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/sweetalert2@10.15.7/dist/sweetalert2.min.css">
 <script src="https://cdn.jsdelivr.net/npm/sweetalert2@10.15.7/dist/sweetalert2.all.min.js"></script>
 <script>
-    $(document).ready(function () {
+    $(document).ready(function() {
         $('#employee_config').DataTable();
         //
-        $('#emp_click_modal').click(function () {
+        $('#emp_click_modal').click(function() {
             $('#create_emp').modal('show');
         });
 
-        $('.edit_company').click(function () {
+        $('.edit_company').click(function() {
             var config_id = $(this).data('config-id');
             console.log('====', config_id);
             var dynamic_Id = '#' + config_id;
@@ -35,7 +35,8 @@
             confirmButtonText: 'OK'
         }).then((result) => {
             if (result.isConfirmed) {
-                var formAction = "{{ route('Employee-Configurations.destroy', ':shiftId') }}".replace(':shiftId',
+                var formAction = "{{ route('Employee-Configurations.destroy', ':shiftId') }}".replace(
+                    ':shiftId',
                     shiftId);
                 document.getElementById('deleteForm').action = formAction;
                 document.getElementById('deleteForm').submit();
@@ -43,15 +44,154 @@
         });
     }
 </script>
+
+<style>
+    .custom_tabs {
+        width: 100%;
+        border: 0.5px solid #fff;
+    }
+
+    .custom_tabs ul li a.active {
+
+        /* background-color: #dddddd; */
+        background-color: transparent !important;
+        color: #007bff !important;
+
+        border-bottom: 3px solid #007bff !important;
+    }
+
+    .custom_tabs ul li a:hover {
+        background-color: transparent !important;
+        /* background-color: #425056; */
+    }
+
+    .custom_tabs ul li a {
+        padding: 0 11px !important;
+        font-weight: 500 !important;
+        font-size: 15px !important;
+        color: #555 !important;
+    }
+
+    .masterTab_bg {
+        background-color: #fff;
+        padding: 0px;
+
+    }
+
+
+    .custom_tittle h4 {
+        font-size: 25px;
+        padding-bottom: 10px;
+        font-family: "avenirmedium";
+        color: #343A40;
+    }
+
+    .description_small_text {
+        font-size: 14px !important;
+        color: #777;
+        line-height: 25px;
+
+    }
+
+    .masterTab_data {
+        width: 100%;
+        position: relative;
+        background-color: #fff;
+        box-shadow: 0px 0px 0px #cccccc96;
+        padding: 0px;
+        /* border: 1px solid #ebeaea; */
+    }
+
+    /* table */
+
+    .tracking-table li {
+        list-style: none;
+    }
+
+    .tracking-table {
+        position: relative;
+    }
+
+    .tracking-table .dropdown:hover .dropdown-menu {
+        display: block;
+        max-width: 100px !important;
+        position: absolute;
+        left: 0;
+        top: 100%;
+    }
+
+
+
+    /* .tracking-table .dropdown-menu {
+        --bs-dropdown-min-width: 2rem !important;
+        --bs-border-radius: 0 !important;
+        padding: 0 !important;
+        text-align: start
+    } */
+
+    .table> :not(:last-child)> :last-child>* {
+        border-bottom-color: #dee2e6 !important;
+    }
+
+    .tracking-table .dropdown-menu .dropdown-item:hover {
+        background-color: #eff5f9 !important;
+        color: #000 !important;
+    }
+
+    .dropdown-menu {
+        min-width: auto !important;
+        border-radius: 0 !important;
+        padding: 0 !important;
+        border: 1px solid #dee2e6 !important;
+    }
+
+    .dropdown-item {
+        padding: 5px 15px !important;
+    }
+
+
+    .tracking-table .dropdown-menu .dropdown-item:first-child {
+        background-color: #000 !important;
+        color: #fff !important;
+    }
+
+    .table-responsive {
+        overflow-x: inherit !important;
+    }
+
+    @media (max-width:480px) {
+        .table-responsive {
+            overflow-x: auto !important;
+        }
+    }
+
+    .tracking-table thead td {
+        background-color: #eff5f9 !important;
+    }
+
+
+    .tracking-table tbody td:nth-child(1) {
+        background-color: #eff5f9 !important;
+    }
+
+    /* .tracking-table tbody td:nth-child(2) {
+        background-color: #eff5f9 !important;
+    } */
+
+    table.dataTable.no-footer {
+        border-bottom: 1px solid #eff5f9 !important;
+    }
+</style>
 <div class="fr-section" style="margin-top: -72px">
     <div class="fr-section_detail ">
         <div class="dashboard_innerPages">
             <div class="custom_tabs_section">
                 <div class="custom_tittle descriptionTxt">
                     <h4>Master</h4>
-                    <p><strong>Description:</strong> Keep track of all company master details including employee
-                        designations, shift information, category of employees, and <br> their configurations. Also
-                        able to oversee leave master with holiday details.</p>
+                    <p class="description_small_text"><strong style="color:#343A40;">Description:</strong> Keep track of
+                        all company master details including employee
+                        designations, shift information, category of employees, andtheir configurations. Also
+                        able to oversee <br>leave master with holiday details.</p>
                 </div>
                 <div class="custom_tabs">
                     <ul>
@@ -71,7 +211,7 @@
                 <div class="custom_tabs_data" id="tab7" style="display: block;">
                     <div class="masterTab_bg">
                         <div class="masterTab_data">
-                            <div class="custom_tittle">
+                            <div class="custom_tittle mt-4">
                                 <h5>Employee Configuration</h5>
                             </div>
                             <div class="masterTable empMasterTable empConfigTable">
@@ -89,13 +229,13 @@
                                                                 <option value="No">No</option>
                                                             </select> --}}
                                                             <select id="companyName" class="form-select me-3"
-                                                                    name="company" aria-label="First select example"
-                                                                    onchange="fetchDepartments()">
+                                                                name="company" aria-label="First select example"
+                                                                onchange="fetchDepartments()">
                                                                 <option selected disabled>Select Company</option>
                                                                 @isset($companies)
-                                                                    @foreach($companies as $company)
-                                                                        <option
-                                                                            value="{{ $company->id }}">{{$company->company_name }}</option>
+                                                                    @foreach ($companies as $company)
+                                                                        <option value="{{ $company->id }}">
+                                                                            {{ $company->company_name }}</option>
                                                                     @endforeach
                                                                 @endisset
                                                             </select>
@@ -109,17 +249,17 @@
                                                                 <option value="Yes">Yes</option>
                                                                 <option value="No">No</option>
                                                             </select> --}}
-                                                            <form id="departmentForm" action="{{ route('department') }}"
-                                                                  method="POST">
+                                                            <form id="departmentForm"
+                                                                action="{{ route('department') }}" method="POST">
                                                                 @csrf
                                                                 <select id="departmentName" name="department"
-                                                                        aria-label="Second select example">
-                                                                    @if(!isset($companies))
+                                                                    aria-label="Second select example">
+                                                                    @if (!isset($companies))
                                                                         disabled
                                                                     @endif>
                                                                     <option selected disabled>Select Department</option>
                                                                     @isset($departments)
-                                                                        @foreach($departments as $department)
+                                                                        @foreach ($departments as $department)
                                                                             <option value="{{ $department->id }}">
                                                                                 {{ $department->department_name }}
                                                                             </option>
@@ -137,129 +277,129 @@
                                                 </div>
 
                                             </div>
-                                            <table class="table table-striped" id="employee_config">
+                                            <table class="table table-bordered text-center tracking-table"
+                                                id="employee_config">
                                                 <thead>
-                                                <tr>
-                                                    <th>
-                                                        <h6 class="text-left">Emp Code</h6>
-                                                    </th>
-                                                    <th width="110">
-                                                        <h6>Name</h6>
-                                                    </th>
-                                                    <th width="150">
-                                                        <h6>Dept. Name</h6>
-                                                    </th>
-                                                    <th>
-                                                        <h6>SMS Allow</h6>
-                                                    </th>
-                                                    <th>
-                                                        <h6>ESS Allow</h6>
-                                                    </th>
-                                                    <th>
-                                                        <h6>Selfie Allow</h6>
-                                                    </th>
-                                                    <th>
-                                                        <h6>Auto Selfie Approval</h6>
-                                                    </th>
-                                                    <th>
-                                                        <h6>Noti. OWN</h6>
-                                                    </th>
-                                                    <th>
-                                                        <h6>Noti. Admin</h6>
-                                                    </th>
-                                                    <th>
-                                                        <h6>Action</h6>
-                                                    </th>
-                                                </tr>
+                                                    <tr>
+                                                        <td class="align-middle" style="font-size: 13px;">
+                                                            Emp Code
+                                                        </td>
+                                                        <td class="align-middle" style="font-size: 13px;">
+                                                            Name
+                                                        </td>
+                                                        <td class="align-middle" style="font-size: 13px;">
+                                                            Dept. Name
+                                                        </td>
+                                                        <td class="align-middle" style="font-size: 13px;">
+                                                            SMS Allow
+                                                        </td>
+                                                        <td class="align-middle" style="font-size: 13px;">
+                                                            ESS Allow
+                                                        </td>
+                                                        <td class="align-middle" style="font-size: 13px;">
+                                                            Selfie Allow
+                                                        </td>
+                                                        <td class="align-middle" style="font-size: 13px;">
+                                                            Auto Selfie Approval
+                                                        </td>
+                                                        <td class="align-middle" style="font-size: 13px;">
+                                                            Noti. OWN
+                                                        </td>
+                                                        <td class="align-middle" style="font-size: 13px;">
+                                                            Noti. Admin
+                                                        </td>
+                                                        <td class="align-middle" style="font-size: 13px;">
+                                                            Action
+                                                        </td>
+                                                    </tr>
                                                 </thead>
                                                 <tbody>
-                                                @forelse ($EmpConfig as $emp)
-                                                    <tr>
-                                                        <td>
-                                                            <div class="tabletext">
-                                                                <p>{{ $emp->Emp_code }}</p>
-                                                            </div>
-                                                        </td>
-                                                        <td>
-                                                            <div class="tabletext">
-                                                                <p>{{ $emp->Emp_name }}</p>
-                                                            </div>
-                                                        </td>
-                                                        <td>
-                                                            <div class="tabletext">
-                                                                <p>{{ $emp->department }}</p>
-                                                            </div>
-                                                        </td>
-                                                        <td>
-                                                            <div class="tabletext">
-                                                                <p>{{ $emp->send_sms_allow }}</p>
-                                                            </div>
-                                                        </td>
-                                                        <td>
-                                                            <div class="tabletext">
-                                                                <p>{{ $emp->employee_self_service_allow }}</p>
-                                                            </div>
-                                                        </td>
-                                                        <td>
-                                                            <div class="tabletext">
-                                                                <p>{{ $emp->selfie_punch_allow }}</p>
-                                                            </div>
-                                                        </td>
-                                                        <td>
-                                                            <div class="tabletext">
-                                                                <p>{{ $emp->approve_selfie_punch }}</p>
-                                                            </div>
-                                                        </td>
-                                                        <td>
-                                                            <div class="tabletext">
-                                                                <p>{{ $emp->notification_to_own }}</p>
-                                                            </div>
-                                                        </td>
-                                                        <td>
-                                                            <div class="tabletext">
-                                                                <p>{{ $emp->notification_to_admin }}</p>
-                                                            </div>
-                                                        </td>
-                                                        <td>
-                                                            <div class="actionBtns">
-                                                                <button class="actBtn edit_company"
+                                                    @forelse ($EmpConfig as $emp)
+                                                        <tr>
+                                                            <td>
+                                                                <div class="tabletext">
+                                                                    <p>{{ $emp->Emp_code }}</p>
+                                                                </div>
+                                                            </td>
+                                                            <td>
+                                                                <div class="tabletext">
+                                                                    <p>{{ $emp->Emp_name }}</p>
+                                                                </div>
+                                                            </td>
+                                                            <td>
+                                                                <div class="tabletext">
+                                                                    <p>{{ $emp->department }}</p>
+                                                                </div>
+                                                            </td>
+                                                            <td>
+                                                                <div class="tabletext">
+                                                                    <p>{{ $emp->send_sms_allow }}</p>
+                                                                </div>
+                                                            </td>
+                                                            <td>
+                                                                <div class="tabletext">
+                                                                    <p>{{ $emp->employee_self_service_allow }}</p>
+                                                                </div>
+                                                            </td>
+                                                            <td>
+                                                                <div class="tabletext">
+                                                                    <p>{{ $emp->selfie_punch_allow }}</p>
+                                                                </div>
+                                                            </td>
+                                                            <td>
+                                                                <div class="tabletext">
+                                                                    <p>{{ $emp->approve_selfie_punch }}</p>
+                                                                </div>
+                                                            </td>
+                                                            <td>
+                                                                <div class="tabletext">
+                                                                    <p>{{ $emp->notification_to_own }}</p>
+                                                                </div>
+                                                            </td>
+                                                            <td>
+                                                                <div class="tabletext">
+                                                                    <p>{{ $emp->notification_to_admin }}</p>
+                                                                </div>
+                                                            </td>
+                                                            <td>
+                                                                <div class="actionBtns">
+                                                                    <button class="actBtn edit_company"
                                                                         id="config_button" data-toggle="modal"
                                                                         data-target="#confg_id"
                                                                         data-config-id="config_id_{{ $emp->id }}"><i
-                                                                        class="fa fa-pencil-square-o"
-                                                                        aria-hidden="true"></i></button>
-                                                                {{-- <button class="actBtn"><i class="fa fa-trash"
+                                                                            class="fa fa-pencil-square-o"
+                                                                            aria-hidden="true"></i></button>
+                                                                    {{-- <button class="actBtn"><i class="fa fa-trash"
                                                                         aria-hidden="true"></i></button> --}}
-                                                                <form id="deleteForm"
-                                                                      action="{{ route('Employee-Configurations.destroy', $emp->id) }}"
-                                                                      method="post">
-                                                                    @csrf
-                                                                    @method('delete')
-                                                                    <button type="button"
+                                                                    <form id="deleteForm"
+                                                                        action="{{ route('Employee-Configurations.destroy', $emp->id) }}"
+                                                                        method="post">
+                                                                        @csrf
+                                                                        @method('delete')
+                                                                        <button type="button"
                                                                             class="actBtn delete_shift"
                                                                             data-conf-id="{{ $emp->id }}"
                                                                             onclick="showCustomAlert(this)">
-                                                                        <i class="fa fa-trash"
-                                                                           aria-hidden="true"></i>
-                                                                    </button>
-                                                                </form>
-                                                            </div>
-                                                        </td>
-                                                    </tr>
-                                                @empty
-                                                    <p style="color:red;margin-top: -120px">Oops ! No Records Found
+                                                                            <i class="fa fa-trash"
+                                                                                aria-hidden="true"></i>
+                                                                        </button>
+                                                                    </form>
+                                                                </div>
+                                                            </td>
+                                                        </tr>
+                                                    @empty
+                                                        <p style="color:red;margin-top: -120px">Oops ! No Records Found
                                                             <? xml version = "1.0" standalone = "no" ?>
-                                                        <!DOCTYPE svg
-                                                        PUBLIC "-//W3C//DTD SVG 20010904//EN"
-                                                        "http://www.w3.org/TR/2001/REC-SVG-20010904/DTD/svg10.dtd">
-                                                        <svg version="1.0" xmlns="http://www.w3.org/2000/svg"
-                                                             width="40.000000pt" height="40.000000pt"
-                                                             viewBox="0 0 240.000000 240.000000"
-                                                             preserveAspectRatio="xMidYMid meet">
+                                                            <!DOCTYPE svg
+                                                                PUBLIC "-//W3C//DTD SVG 20010904//EN" "http://www.w3.org/TR/2001/REC-SVG-20010904/DTD/svg10.dtd">
+                                                            <svg version="1.0" xmlns="http://www.w3.org/2000/svg"
+                                                                width="40.000000pt" height="40.000000pt"
+                                                                viewBox="0 0 240.000000 240.000000"
+                                                                preserveAspectRatio="xMidYMid meet">
 
-                                                            <g transform="translate(0.000000,240.000000) scale(0.100000,-0.100000)"
-                                                               fill="#000000" stroke="none">
-                                                                <path d="M920 1969 c-119 -11 -322 -45 -418 -69 -70 -17 -73 -17 -82 0 -13 24
+                                                                <g transform="translate(0.000000,240.000000) scale(0.100000,-0.100000)"
+                                                                    fill="#000000" stroke="none">
+                                                                    <path d="M920 1969 c-119 -11 -322 -45 -418 -69 -70 -17 -73 -17 -82 0 -13 24
                                                                 -50 16 -43 -10 4 -14 -2 -21 -21 -26 -14 -3 -26 -12 -26 -18 0 -7 27 -104 59
                                                                 -217 32 -112 64 -223 70 -246 11 -40 12 -41 42 -33 36 11 26 33 109 -251 56
                                                                 -196 64 -216 82 -211 12 3 18 11 15 21 -2 9 -32 114 -67 234 -52 178 -61 220
@@ -281,41 +421,41 @@
                                                                 121 -28 120 -26 140 16 165 43 27 90 26 122 -2z m839 -8 c4 -5 -5 -52 -20
                                                                 -107 -25 -84 -32 -98 -52 -101 -13 -2 -25 3 -28 12 -5 14 11 172 21 203 4 13
                                                                 62 8 79 -7z m-56 -249 c-2 -22 -8 -26 -33 -26 -21 0 -31 5 -33 18 -7 33 4 44
-                                                                38 39 27 -4 31 -8 28 -31z"/>
-                                                                <path d="M1015 1733 c8 -94 15 -136 23 -129 6 7 4 128 -4 174 -4 17 -11 32
-                                                                -16 32 -6 0 -7 -29 -3 -77z"/>
-                                                                <path d="M1250 1776 c0 -20 5 -36 10 -36 6 0 10 13 10 29 0 17 -4 33 -10 36
-                                                                -6 4 -10 -8 -10 -29z"/>
-                                                                <path d="M780 1756 c0 -28 28 -167 35 -175 15 -14 15 17 0 98 -16 88 -35 129
-                                                                -35 77z"/>
-                                                                <path d="M1050 1057 c-63 -33 -62 -51 2 -22 29 14 61 25 71 25 9 0 17 5 17 10
-                                                                0 17 -45 11 -90 -13z"/>
-                                                                <path d="M1260 1071 c0 -6 8 -11 18 -11 9 0 41 -11 70 -25 59 -27 70 -18 17
-                                                                15 -40 25 -105 38 -105 21z"/>
-                                                                <path d="M1061 994 c-40 -50 -17 -138 29 -114 27 14 40 42 40 82 0 60 -35 75
-                                                                -69 32z"/>
-                                                                <path d="M1282 1008 c-15 -15 -16 -72 -2 -98 6 -11 19 -24 30 -30 46 -24 69
-                                                                64 29 114 -22 28 -39 32 -57 14z"/>
-                                                                <path d="M1135 706 c-16 -7 -39 -23 -49 -35 l-19 -21 34 17 c46 24 152 24 198
-                                                                0 l34 -17 -19 21 c-40 46 -120 61 -179 35z"/>
-                                                            </g>
-                                                        </svg>
-                                                    </p>
-                                                @endforelse
+                                                                38 39 27 -4 31 -8 28 -31z" />
+                                                                    <path d="M1015 1733 c8 -94 15 -136 23 -129 6 7 4 128 -4 174 -4 17 -11 32
+                                                                -16 32 -6 0 -7 -29 -3 -77z" />
+                                                                    <path d="M1250 1776 c0 -20 5 -36 10 -36 6 0 10 13 10 29 0 17 -4 33 -10 36
+                                                                -6 4 -10 -8 -10 -29z" />
+                                                                    <path d="M780 1756 c0 -28 28 -167 35 -175 15 -14 15 17 0 98 -16 88 -35 129
+                                                                -35 77z" />
+                                                                    <path d="M1050 1057 c-63 -33 -62 -51 2 -22 29 14 61 25 71 25 9 0 17 5 17 10
+                                                                0 17 -45 11 -90 -13z" />
+                                                                    <path d="M1260 1071 c0 -6 8 -11 18 -11 9 0 41 -11 70 -25 59 -27 70 -18 17
+                                                                15 -40 25 -105 38 -105 21z" />
+                                                                    <path d="M1061 994 c-40 -50 -17 -138 29 -114 27 14 40 42 40 82 0 60 -35 75
+                                                                -69 32z" />
+                                                                    <path d="M1282 1008 c-15 -15 -16 -72 -2 -98 6 -11 19 -24 30 -30 46 -24 69
+                                                                64 29 114 -22 28 -39 32 -57 14z" />
+                                                                    <path d="M1135 706 c-16 -7 -39 -23 -49 -35 l-19 -21 34 17 c46 24 152 24 198
+                                                                0 l34 -17 -19 21 c-40 46 -120 61 -179 35z" />
+                                                                </g>
+                                                            </svg>
+                                                        </p>
+                                                    @endforelse
                                                 </tbody>
                                             </table>
                                             @foreach ($EmpConfig as $emp)
                                                 <div class="modal fade" id="config_id_{{ $emp->id }}"
-                                                     tabindex="-1" role="dialog" aria-hidden="true"
-                                                     style="top: 38px;left: -186px">
+                                                    tabindex="-1" role="dialog" aria-hidden="true"
+                                                    style="top: 38px;left: -186px">
                                                     <div class="modal-dialog" role="document">
                                                         <div class="modal-content" style="width: 173%;">
                                                             <div class="modal-header"
-                                                                 style="background-color: #BCBCBC;">
+                                                                style="background-color: #BCBCBC;">
                                                                 <h6 style="padding-bottom: 0px;margin-left: 310px;">
                                                                     Edit Selected Department</h6>
                                                                 <button type="button" class="close"
-                                                                        data-dismiss="modal" aria-label="Close">
+                                                                    data-dismiss="modal" aria-label="Close">
                                                                     <span aria-hidden="true">&times;</span>
                                                                 </button>
                                                                 @if ($errors->any())
@@ -330,7 +470,7 @@
                                                             </div>
                                                             <div class="modal-body" style="background-color: #ededed">
                                                                 <form method="post" id="skills"
-                                                                      action="{{ route('Employee-Configurations.update', $emp->id) }}">
+                                                                    action="{{ route('Employee-Configurations.update', $emp->id) }}">
                                                                     @csrf
                                                                     @method('patch')
                                                                     <div class="row">
@@ -340,7 +480,7 @@
                                                                                 <strong>Company Name*</strong>
                                                                                 <div class="popupForm_field">
                                                                                     <select name="company_id"
-                                                                                            class="selective">
+                                                                                        class="selective">
                                                                                         @foreach ($companies as $id)
                                                                                             <option
                                                                                                 value="{{ $id->id }}"
@@ -357,7 +497,7 @@
                                                                                 <strong>Department Name*</strong>
                                                                                 <div class="popupForm_field">
                                                                                     <select name="dept_id"
-                                                                                            class="selective">
+                                                                                        class="selective">
                                                                                         @foreach ($departments as $id)
                                                                                             <option
                                                                                                 value="{{ $id->id }}"
@@ -375,7 +515,7 @@
                                                                                 <strong>Employee code*</strong>
                                                                                 <div class="popupForm_field">
                                                                                     <select name="shift_code"
-                                                                                            class="selective">
+                                                                                        class="selective">
                                                                                         @foreach ($employees as $id)
                                                                                             <option
                                                                                                 value="{{ $id->id }}"
@@ -393,7 +533,7 @@
                                                                                 <strong>Employee Name*</strong>
                                                                                 <div class="popupForm_field">
                                                                                     <select name="shift_name"
-                                                                                            class="selective">
+                                                                                        class="selective">
                                                                                         @foreach ($employees as $shiftname)
                                                                                             <option
                                                                                                 value="{{ $shiftname->employee_name }}"
@@ -409,37 +549,37 @@
                                                                         <hr
                                                                             style="border: -1px solid black; width: 97%;">
                                                                         <div class="tabletext"
-                                                                             style="display:flex; margin-left:300px;">
+                                                                            style="display:flex; margin-left:300px;">
                                                                             <input type="checkbox" name="send_sms"
-                                                                                   value="{{ $emp->send_sms_allow }}"
-                                                                                   @if ($emp->send_sms_allow == 'on') checked @endif>
+                                                                                value="{{ $emp->send_sms_allow }}"
+                                                                                @if ($emp->send_sms_allow == 'on') checked @endif>
                                                                             <h8 class="pl-3">Send SMS Allow</h8>
                                                                         </div>
                                                                         <br>
                                                                         <div class="tabletext"
-                                                                             style="display:flex; margin-left:300px;">
+                                                                            style="display:flex; margin-left:300px;">
                                                                             <input type="checkbox" name="self_service"
-                                                                                   value="{{ $emp->employee_self_service_allow }}"
-                                                                                   @if ($emp->employee_self_service_allow == 'on') checked @endif>
+                                                                                value="{{ $emp->employee_self_service_allow }}"
+                                                                                @if ($emp->employee_self_service_allow == 'on') checked @endif>
                                                                             <h8 class="pl-3">Employee Self Service
                                                                                 Portal Allow
                                                                             </h8>
                                                                         </div>
                                                                         <br>
                                                                         <div class="tabletext"
-                                                                             style="display:flex; margin-left:300px;">
+                                                                            style="display:flex; margin-left:300px;">
                                                                             <input type="checkbox" name="selfie_punch"
-                                                                                   value="{{ $emp->selfie_punch_allow }}"
-                                                                                   @if ($emp->selfie_punch_allow == 'on') checked @endif>
+                                                                                value="{{ $emp->selfie_punch_allow }}"
+                                                                                @if ($emp->selfie_punch_allow == 'on') checked @endif>
                                                                             <h8 class="pl-3">Selfie Punch Allow</h8>
                                                                         </div>
                                                                         <br>
                                                                         <div class="tabletext"
-                                                                             style="display:flex; margin-left:300px;">
+                                                                            style="display:flex; margin-left:300px;">
                                                                             <input type="checkbox"
-                                                                                   name="selfie_approve"
-                                                                                   value="{{ $emp->approve_selfie_punch }}"
-                                                                                   @if ($emp->approve_selfie_punch == 'on') checked @endif>
+                                                                                name="selfie_approve"
+                                                                                value="{{ $emp->approve_selfie_punch }}"
+                                                                                @if ($emp->approve_selfie_punch == 'on') checked @endif>
                                                                             <h8 class="pl-3">Approve Selfie Punch
                                                                                 Auto
                                                                             </h8>
@@ -448,20 +588,20 @@
                                                                         <hr
                                                                             style="border: -1px solid black; width: 97%;">
                                                                         <div class="tabletext"
-                                                                             style="display:flex; margin-left:300px;">
+                                                                            style="display:flex; margin-left:300px;">
                                                                             <input type="checkbox"
-                                                                                   name="notification_allow"
-                                                                                   value="{{ $emp->notification_to_own }}"
-                                                                                   @if ($emp->notification_to_own == 'on') checked @endif>
+                                                                                name="notification_allow"
+                                                                                value="{{ $emp->notification_to_own }}"
+                                                                                @if ($emp->notification_to_own == 'on') checked @endif>
                                                                             <h8 class="pl-3">Notification to Own</h8>
                                                                         </div>
                                                                         <br>
                                                                         <div class="tabletext"
-                                                                             style="display:flex; margin-left:300px;">
+                                                                            style="display:flex; margin-left:300px;">
                                                                             <input type="checkbox"
-                                                                                   name="Notification_admin"
-                                                                                   value="{{ $emp->notification_to_admin }}"
-                                                                                   @if ($emp->notification_to_admin == 'on') checked @endif>
+                                                                                name="Notification_admin"
+                                                                                value="{{ $emp->notification_to_admin }}"
+                                                                                @if ($emp->notification_to_admin == 'on') checked @endif>
                                                                             <h8 class="pl-3">Notification to Admin
                                                                             </h8>
                                                                         </div>
@@ -471,17 +611,16 @@
                                                                     {{-- </div> --}}
                                                                     <br>
                                                                     <div class="table_actions"
-                                                                         style="margin-left: -105px">
+                                                                        style="margin-left: -105px">
                                                                         <div class="row align-items-center ">
                                                                             <div
                                                                                 class="col-xxl-6 col-xl-6 col-lg-6 col-md-6 m-auto ">
                                                                                 <div
                                                                                     class="table_actionsBtns justify-content-center">
-                                                                                    <button
-                                                                                        class="tb_actionBtn">Save
+                                                                                    <button class="tb_actionBtn">Save
                                                                                     </button>
                                                                                     <button class="tb_actionBtn"
-                                                                                            data-dismiss="modal">Exit
+                                                                                        data-dismiss="modal">Exit
                                                                                     </button>
                                                                                 </div>
                                                                             </div>
@@ -519,7 +658,7 @@
 </div>
 {{-- add_model --}}
 <div class="modal fade" id="create_emp" tabindex="-1" role="dialog" aria-hidden="true"
-     style="top: 38px;left: -186px">
+    style="top: 38px;left: -186px">
     <div class="modal-dialog" role="document">
         <div class="modal-content" style="width: 173%;">
             <div class="modal-header" style="background-color: #BCBCBC;">
@@ -609,32 +748,32 @@
                         <br>
                         <div class="tabletext" style="display:flex; margin-left:300px;">
                             <input type="checkbox" name="self_service"
-                                   @if (old('self_service')) checked @endif>
+                                @if (old('self_service')) checked @endif>
                             <h8 class="pl-3">Employee Self Service Portal Allow</h8>
                         </div>
                         <br>
                         <div class="tabletext" style="display:flex; margin-left:300px;">
                             <input type="checkbox" name="selfie_punch"
-                                   @if (old('selfie_punch')) checked @endif>
+                                @if (old('selfie_punch')) checked @endif>
                             <h8 class="pl-3">Selfie Punch Allow</h8>
                         </div>
                         <br>
                         <div class="tabletext" style="display:flex; margin-left:300px;">
                             <input type="checkbox" name="selfie_approve"
-                                   @if (old('selfie_approve')) checked @endif>
+                                @if (old('selfie_approve')) checked @endif>
                             <h8 class="pl-3">Approve Selfie Punch Auto</h8>
                         </div>
                         <br>
                         <hr style="border: -1px solid black; width: 97%;">
                         <div class="tabletext" style="display:flex; margin-left:300px;">
                             <input type="checkbox" name="notification_allow"
-                                   @if (old('notification_allow')) checked @endif>
+                                @if (old('notification_allow')) checked @endif>
                             <h8 class="pl-3">Notification to Own</h8>
                         </div>
                         <br>
                         <div class="tabletext" style="display:flex; margin-left:300px;">
                             <input type="checkbox" name="Notification_admin"
-                                   @if (old('Notification_admin')) checked @endif>
+                                @if (old('Notification_admin')) checked @endif>
                             <h8 class="pl-3">Notification to Admin</h8>
                         </div>
                         <br>
@@ -658,22 +797,20 @@
 </div>
 
 <script>
-
-
     function fetchDepartments() {
         var companyId = document.getElementById('companyName').value;
         var departmentSelect = document.getElementById('departmentName');
         console.log(companyId);
         departmentSelect.innerHTML = ' <option selected disabled>Select Department</option>';
         fetch('/employee-configuration-company/' + companyId, {
-            method: 'GET',
-            headers: {
-                'Content-Type': 'application/json'
-            }
-        })
+                method: 'GET',
+                headers: {
+                    'Content-Type': 'application/json'
+                }
+            })
             .then(response => response.json())
             .then(data => {
-                data.forEach(function (department) {
+                data.forEach(function(department) {
                     var option = document.createElement('option');
                     option.value = department.id;
                     option.textContent = department.department_name;

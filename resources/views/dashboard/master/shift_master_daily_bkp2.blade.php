@@ -193,8 +193,12 @@
                                                                             method="post">
                                                                             @csrf
                                                                             @method('delete')
-                                                                            <button type="button" class="actBtn delete_shift" data-shift-id="{{ $shift->id }}" onclick="showCustomAlert(this)">
-                                                                                <i class="fa fa-trash" aria-hidden="true"></i>
+                                                                            <button type="button"
+                                                                                class="actBtn delete_shift"
+                                                                                data-shift-id="{{ $shift->id }}"
+                                                                                onclick="showCustomAlert(this)">
+                                                                                <i class="fa fa-trash"
+                                                                                    aria-hidden="true"></i>
                                                                             </button>
                                                                         </form>
                                                                     </div>
@@ -229,10 +233,11 @@
                                                                     </div>
                                                                     <div class="modal-body"
                                                                         style="background-color: #ededed">
-                                                                        <form method="post" id="skills" action="{{ route('shift_master.update', $shift->id) }}">
+                                                                        <form method="post" id="skills"
+                                                                            action="{{ route('shift_master.update', $shift->id) }}">
                                                                             @csrf
                                                                             @method('patch')
-                                                                             {{ $shift->id }}
+                                                                            {{ $shift->id }}
                                                                             <br>
                                                                             <div class="table_actions">
                                                                                 <div class="row align-items-center ">
@@ -429,7 +434,7 @@
                                 <div class="popupForm_field">
                                     <select name="shift_name" class="selective">
                                         @foreach ($shiftCode as $shiftname)
-                                            <option value="{{ $shiftname->shift_Name}}">
+                                            <option value="{{ $shiftname->shift_Name }}">
                                                 {{ $shiftname->shift_Name }}
                                             </option>
                                         @endforeach
@@ -598,7 +603,8 @@
                             confirmButtonText: 'OK'
                         }).then((result) => {
                             if (result.isConfirmed) {
-                                var formAction = "{{ route('shift_master.destroy', ':shiftId') }}".replace(':shiftId', shiftId);
+                                var formAction = "{{ route('shift_master.destroy', ':shiftId') }}".replace(':shiftId',
+                                    shiftId);
                                 document.getElementById('deleteForm').action = formAction;
                                 document.getElementById('deleteForm').submit();
                             }

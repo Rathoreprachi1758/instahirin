@@ -16,17 +16,31 @@
 
 
     .track-form {
-        padding: 25px !important;
-        box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+        border: 1px solid #ebeaea;
+        padding: 25px;
         background-color: #Fff !important;
-        border-radius: 10px;
-        margin-top: 15px;
+        border-radius: 4px;
+
     }
 
     .container-fluid {
         width: 100%;
         padding-right: 0px;
         margin-left: -10px !important;
+
+    }
+
+    .custom_tittle h4 {
+        font-size: 25px;
+        padding-bottom: 10px;
+        font-family: "avenirmedium";
+        color: #343A40;
+    }
+
+    .description_small_text {
+        font-size: 14px !important;
+        color: #777;
+        line-height: 25px;
 
     }
 </style>
@@ -37,11 +51,12 @@
             <div class="custom_tabs_section  track-form">
                 <div class="custom_tittle descriptionTxt">
                     <h4>Salary Details</h4>
-                    <p><strong>Description:</strong> A comprehensive overview of an employee’s compensation package
+                    <p class="description_small_text"><strong style="color:#343A40;">Description:</strong> A
+                        comprehensive overview of an employee’s compensation package
                         including wages, bonuses, deductions, and benefits.
                     </p>
                 </div>
-                <h1>Normal Salary</h1>
+                <h1 style="font-size: 18px;">Normal Salary</h1>
                 @if (Session::has('message'))
                     <div class="alert alert-success" style="margin-top: 12px;" id="success-message">
                         <span>{{ Session::get('message') }}</span>
@@ -115,7 +130,7 @@
                             </div>
 
 
-                            <hr>
+
 
                             <div class="row">
                                 <div class="col-xl-4 col-lg-4 col-md-12 col-sm-12">
@@ -151,27 +166,26 @@
                                     <label class="text-center fw-bold mb-5">Deduction Head</label>
 
                                     @isset($deductionHeads)
-                                    @foreach ($deductionHeads as $key => $deductionHead)
-                                    <div class="row mt-2">
-                                        <div class="col-xl-2 col-lg-2 col-md-12 col-sm-12">{{ $deductionHead }}</div>
-                                        <div class="col-xl-10 col-lg-10 col-md-12 col-sm-12">
+                                        @foreach ($deductionHeads as $key => $deductionHead)
+                                            <div class="row mt-2">
+                                                <div class="col-xl-2 col-lg-2 col-md-12 col-sm-12">{{ $deductionHead }}</div>
+                                                <div class="col-xl-10 col-lg-10 col-md-12 col-sm-12">
                                                     <input type="text" name="{{ $key }}"
                                                         class="form-control deduction-input" id="{{ $key }}"
                                                         value="{{ isset($employeeSalaryDeductionHeads[$key]) ? $employeeSalaryDeductionHeads[$key] : '' }}"
                                                         aria-describedby="emailHelp">
 
-                                        </div>
-                                    </div>
-                                    @endforeach
+                                                </div>
+                                            </div>
+                                        @endforeach
                                     @endisset
                                     <label class="mt-5" for="head5"></label>
                                     <input type="text" class="form-control" name="sub_total_deduction_head"
-                                        id="deductionSubTotal"
-                                        value="{{ $employeeSalary?->sub_total_deduction_head }}"
+                                        id="deductionSubTotal" value="{{ $employeeSalary?->sub_total_deduction_head }}"
                                         aria-describedby="emailHelp">
                                 </div>
 
-                                
+
                                 <div class="col-xl-4 col-lg-4 col-md-12 col-sm-12">
                                     <label class="text-center fw-bold mb-5">Other Details</label>
 
@@ -179,8 +193,7 @@
                                         <div class="col-xl-2 col-lg-2 col-md-12 col-sm-12">PF No.</div>
                                         <div class="col-xl-10 col-lg-10 col-md-12 col-sm-12">
 
-                                            <input type="text" name="pf_no"
-                                                class="form-control" id="dedHead1"
+                                            <input type="text" name="pf_no" class="form-control" id="dedHead1"
                                                 value="{{ $employeeSalary?->pf_number }}" aria-describedby="emailHelp">
 
                                         </div>
@@ -191,8 +204,7 @@
                                         <div class="col-xl-2 col-lg-2 col-md-12 col-sm-12">ESI No.</div>
                                         <div class="col-xl-10 col-lg-10 col-md-12 col-sm-12">
 
-                                            <input type="text" name="esi_no"
-                                                class="form-control" id="dedHead2"
+                                            <input type="text" name="esi_no" class="form-control" id="dedHead2"
                                                 value="{{ $employeeSalary?->esi_number }}" aria-describedby="emailHelp">
 
                                         </div>

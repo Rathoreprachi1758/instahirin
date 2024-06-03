@@ -9,6 +9,40 @@
 <!-- bootstrap -->
 <script src="{{ asset('css/js/bootstrap.bundle.min.js') }}"></script>
 
+<style>
+    .custom_tabs {
+        width: 100%;
+        border: 0.5px solid #fff;
+    }
+
+    .custom_tabs ul li a.active {
+
+        /* background-color: #dddddd; */
+        background-color: transparent !important;
+        color: #007bff !important;
+
+        border-bottom: 3px solid #007bff !important;
+    }
+
+    .custom_tabs ul li a:hover {
+        background-color: transparent !important;
+        /* background-color: #425056; */
+    }
+
+    .custom_tabs ul li a {
+        padding: 0 11px !important;
+        font-weight: 500 !important;
+        font-size: 15px !important;
+        color: #555 !important;
+    }
+
+    .masterTab_bg {
+        background-color: #fff;
+        padding: 0px;
+        overflow: hidden;
+    }
+</style>
+
 <script type="text/javascript">
     function googleTranslateElementInit() {
         new google.translate.TranslateElement({
@@ -161,7 +195,8 @@
                                         * JPG, PNG, PDF and GIF formats are accepted with a file size not exceeding more
                                         than 25 MB.
                                     </p>
-                                    <div id="imagePreview" style="display: none; text-align: center; padding: 20px; background-color: #f4f4f4; border-radius: 10px; box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);">
+                                    <div id="imagePreview"
+                                        style="display: none; text-align: center; padding: 20px; background-color: #f4f4f4; border-radius: 10px; box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);">
                                         <img src="#" alt="Uploaded Image"
                                             style="max-width: 100%; max-height: 200px;">
                                     </div>

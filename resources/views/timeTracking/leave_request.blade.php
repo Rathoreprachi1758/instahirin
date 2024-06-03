@@ -4,58 +4,20 @@
 
 
 <style>
-    .leave_button_bg,
-    .leave_button_bg2 {
-        background-color: #Fff !important;
-        box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
-        padding: 16px 20px;
-        font-size: 14px;
-        position: relative;
-        border: none !important;
-        color: #343A40;
-        border-radius: 5px;
-    }
-
-    .leave_button_bg,
-    .leave_button_bg2:hover {
-
-        color: #343A40 !important;
-
-    }
-
-    .leave_button_bg2 {
-        position: relative;
-        left: 10px !important;
-        color: #343A40;
-    }
-
-    .leave_button_bg:hover {
-        border: none;
-    }
-
     .nav-tabs {
         border-bottom: none !important;
     }
 
-    .tab-content {
-        background-color: #Fff !important;
-        border-radius: 10px;
 
-
-    }
 
     .track-form {
-        padding: 25px !important;
-        box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+        border: 1px solid #ebeaea;
+        padding: 25px;
+        background-color: #Fff !important;
+        border-radius: 4px;
     }
 
-    .table-responsive {
-        box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
-        margin-top: 30px;
-        border-radius: 10px;
-        position: relative;
-        z-index: 0;
-    }
+
 
     .submit_from_bg_color {
         background-color: #343A40 !important;
@@ -72,6 +34,116 @@
   box-shadow: none !important;
   outline: none !important;
 } */
+
+
+
+    .nav-tabs .nav-item.show .nav-link,
+    .nav-tabs .nav-link.active {
+        color: #007bff !important;
+        border: none !important;
+        background-color: transparent !important;
+        border: 1px solid #ebeaea !important;
+        border-color: none !important;
+        padding: 10px !important;
+    }
+
+    .nav-tabs .nav-item.show .nav-link,
+    .nav-tabs .nav-link {
+        padding: 0 15px !important;
+        font-weight: 500 !important;
+        font-size: 15px !important;
+        color: #555 !important;
+    }
+
+    .nav-pills .nav-link.active,
+    .nav-pills .show>.nav-link {
+        color: #007bff !important;
+        background-color: transparent !important;
+        border-bottom: 3px solid #007bff !important;
+        border-radius: 0px !important;
+        font-size: 15px !important;
+    }
+
+    .nav-pills .nav-link {
+        color: #555 !important;
+        font-size: 15px !important;
+    }
+
+
+
+    .tracking-table li {
+        list-style: none;
+    }
+
+    .tracking-table {
+        position: relative;
+    }
+
+    .tracking-table .dropdown:hover .dropdown-menu {
+        display: block;
+        max-width: 100px !important;
+        position: absolute;
+        left: 0;
+        top: 100%;
+    }
+
+
+
+    /* .tracking-table .dropdown-menu {
+        --bs-dropdown-min-width: 2rem !important;
+        --bs-border-radius: 0 !important;
+        padding: 0 !important;
+        text-align: start
+    } */
+
+    .table> :not(:last-child)> :last-child>* {
+        border-bottom-color: #dee2e6 !important;
+    }
+
+    .tracking-table .dropdown-menu .dropdown-item:hover {
+        background-color: #eff5f9 !important;
+        color: #000 !important;
+    }
+
+    .dropdown-menu {
+        min-width: auto !important;
+        border-radius: 0 !important;
+        padding: 0 !important;
+        border: 1px solid #dee2e6 !important;
+    }
+
+    .dropdown-item {
+        padding: 5px 15px !important;
+    }
+
+
+    .tracking-table .dropdown-menu .dropdown-item:first-child {
+        background-color: #000 !important;
+        color: #fff !important;
+    }
+
+    .table-responsive {
+        overflow-x: inherit !important;
+    }
+
+    @media (max-width:480px) {
+        .table-responsive {
+            overflow-x: auto !important;
+        }
+    }
+
+    .tracking-table thead td {
+        background-color: #eff5f9 !important;
+    }
+
+
+    .tracking-table tbody td:nth-child(1) {
+        background-color: #eff5f9 !important;
+    }
+
+    .tracking-table tbody td:nth-child(2) {
+        background-color: #eff5f9 !important;
+    }
 </style>
 <div class="fr-section" style="margin-top: -72px">
 
@@ -333,36 +405,35 @@
 
                                     <div class="custom_tabs_data" style="display: block" id="tab5">
                                         <div class="row d-flex justify-content-center">
-                                            <div class="col-xl-12 col-sm-12 col-lg-12 col-md-12">
+                                            <div class="col-xl-12 col-sm-12 col-lg-12 col-md-12 mt-3">
                                                 <div class="table-responsive">
                                                     <div class="activityTable_data">
 
 
 
-                                                        <table class="table  table-striped"
-                                                            style="border-radius:10px;">
+                                                        <table class="table table-bordered text-center tracking-table">
 
                                                             <thead>
                                                                 <tr>
-                                                                    <th colspan="5"></th>
-                                                                    <th colspan="2">
-                                                                        <h6 style="color: #fff">Time Recorder</h6>
-                                                                    </th>
-                                                                    <th colspan="3"></th>
+                                                                    <td colspan="5"></td>
+                                                                    <td colspan="2">
+                                                                        Time Recorder
+                                                                    </td>
+                                                                    <td colspan="3"></td>
                                                                 </tr>
                                                                 <tr>
-                                                                    <th>
-                                                                        <h6>#</h6>
-                                                                    </th>
-                                                                    <th>
-                                                                        <h6>Company</h6>
-                                                                    </th>
-                                                                    <th>
-                                                                        <h6>Department</h6>
-                                                                    </th>
-                                                                    <th>
-                                                                        <h6>Emp Code</h6>
-                                                                    </th>
+                                                                    <td>
+                                                                        #
+                                                                    </td>
+                                                                    <td>
+                                                                        Company
+                                                                    </td>
+                                                                    <td>
+                                                                        Department
+                                                                    </td>
+                                                                    <td>
+                                                                        Emp Code
+                                                                    </td>
                                                                     {{-- <th width="180">
                                                                     <h6>Time Recorder</h6>
                                                                     <hr style="border: 1px">
@@ -377,25 +448,25 @@
                                                                         </thead>
                                                                     </table>
                                                                 </th> --}}
-                                                                    <th>
-                                                                        <h6>Calendar</h6>
-                                                                    </th>
-                                                                    <th>
-                                                                        <h6>Time In</h6>
-                                                                    </th>
-                                                                    <th>
-                                                                        <h6>Time Out</h6>
-                                                                    </th>
+                                                                    <td>
+                                                                        Calendar
+                                                                    </td>
+                                                                    <td>
+                                                                        Time In
+                                                                    </td>
+                                                                    <td>
+                                                                        Time Out
+                                                                    </td>
 
-                                                                    <th>
-                                                                        <h6>Total Hours</h6>
-                                                                    </th>
-                                                                    <th>
-                                                                        <h6>Ip Address</h6>
-                                                                    </th>
-                                                                    <th>
-                                                                        <h6>Action</h6>
-                                                                    </th>
+                                                                    <td>
+                                                                        Total Hours
+                                                                    </td>
+                                                                    <td>
+                                                                        Ip Address
+                                                                    </td>
+                                                                    <td>
+                                                                        Action
+                                                                    </td>
                                                                 </tr>
                                                             </thead>
 

@@ -30,11 +30,11 @@
                 </div>
                 <div class="custom_tabs">
                     <ul>
-                        <li><a href="{{url('InstaProject')}}" class="active">Create Project</a></li>
-                        <li><a href="{{url('InstaProject/My-Projects')}}">My Project</a></li>
-                        <li><a href="{{url('InstaProject/My-Project-Bid')}}">My Project Bids</a></li>
-                        <li><a href="{{url('InstaProject/Post-Review')}}">Post Review</a></li>
-                        <li><a href="{{url('InstaProject/My-Review')}}">My Reviews</a></li>
+                        <li><a href="{{ url('InstaProject') }}" class="active">Create Project</a></li>
+                        <li><a href="{{ url('InstaProject/My-Projects') }}">My Project</a></li>
+                        <li><a href="{{ url('InstaProject/My-Project-Bid') }}">My Project Bids</a></li>
+                        <li><a href="{{ url('InstaProject/Post-Review') }}">Post Review</a></li>
+                        <li><a href="{{ url('InstaProject/My-Review') }}">My Reviews</a></li>
                     </ul>
                 </div>
                 @if (Session::has('message'))
@@ -131,8 +131,9 @@
                                                 <div class="popupForm_col">
                                                     <strong>Location :</strong>
                                                     <div class="popupForm_field">
-                                                        <input type="text" placeholder="Enter Location" id="location"
-                                                            value="{{ old('location') }}" name="location">
+                                                        <input type="text" placeholder="Enter Location"
+                                                            id="location" value="{{ old('location') }}"
+                                                            name="location">
                                                         @error('location')
                                                             <div class="text-danger">{{ $message }}</div>
                                                         @enderror
@@ -184,7 +185,7 @@
                                                     <strong>Funding</strong>
                                                     <div class="popupForm_field">
                                                         <textarea name="funding" style="border:1px solid #ccc;width: 350px;height: 100px;"
-                                                            placeholder="Describe About Project Funding/Financing">{{old('funding')}}</textarea>
+                                                            placeholder="Describe About Project Funding/Financing">{{ old('funding') }}</textarea>
                                                     </div>
                                                 </div>
                                             </div>
@@ -193,7 +194,7 @@
                                                     <strong>Project Overview</strong>
                                                     <div class="popupForm_field">
                                                         <textarea name="Project_overview" style="border:1px solid #ccc;width: 350px;height: 100px;"
-                                                            placeholder="Description of the project">{{old('Project_overview')}}</textarea>
+                                                            placeholder="Description of the project">{{ old('Project_overview') }}</textarea>
                                                     </div>
                                                 </div>
                                             </div>
@@ -234,7 +235,7 @@
                                                     <div class="col-4 popupForm_field">
                                                         <input type="text" name="amount"
                                                             style="width: 250px; margin-left: -5rem"
-                                                            placeholder="Ex:$1000" value="{{old('amount')}}">
+                                                            placeholder="Ex:$1000" value="{{ old('amount') }}">
                                                     </div>
                                                 </div>
                                             </div>
@@ -275,7 +276,9 @@
         </div>
     </div>
 </div>
-<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCWCwDO2UDvwai9BBUyvxGS6t436Eot7Wc&libraries=places&callback=initAutocomplete" async defer></script>
+<script
+    src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCWCwDO2UDvwai9BBUyvxGS6t436Eot7Wc&libraries=places&callback=initAutocomplete"
+    async defer></script>
 <script>
     function initAutocomplete() {
         var locationInput = document.getElementById('location');

@@ -13,6 +13,142 @@
         $('#designation').DataTable();
     });
 </script>
+
+<style>
+    .custom_tabs {
+        width: 100%;
+        border: 0.5px solid #fff;
+    }
+
+    .custom_tabs ul li a.active {
+
+        /* background-color: #dddddd; */
+        background-color: transparent !important;
+        color: #007bff !important;
+
+        border-bottom: 3px solid #007bff !important;
+    }
+
+    .custom_tabs ul li a:hover {
+        background-color: transparent !important;
+        /* background-color: #425056; */
+    }
+
+    .custom_tabs ul li a {
+        padding: 0 11px !important;
+        font-weight: 500 !important;
+        font-size: 15px !important;
+        color: #555 !important;
+    }
+
+    .masterTab_bg {
+        background-color: #fff;
+        padding: 0px;
+        overflow: hidden;
+    }
+
+    .custom_tittle h4 {
+        font-size: 25px;
+        padding-bottom: 10px;
+        font-family: "avenirmedium";
+        color: #343A40;
+    }
+
+    .description_small_text {
+        font-size: 14px !important;
+        color: #777;
+        line-height: 25px;
+
+    }
+
+    .tracking-table li {
+        list-style: none;
+    }
+
+    .tracking-table {
+        position: relative;
+    }
+
+    .tracking-table .dropdown:hover .dropdown-menu {
+        display: block;
+        max-width: 100px !important;
+        position: absolute;
+        left: 0;
+        top: 100%;
+    }
+
+
+    .table.dataTable thead td {
+        border-bottom: 1px solid #dee2e6 !important;
+    }
+
+
+    /* .tracking-table .dropdown-menu {
+        --bs-dropdown-min-width: 2rem !important;
+        --bs-border-radius: 0 !important;
+        padding: 0 !important;
+        text-align: start
+    } */
+
+    .table> :not(:last-child)> :last-child>* {
+        border-bottom-color: #dee2e6 !important;
+    }
+
+    .tracking-table .dropdown-menu .dropdown-item:hover {
+        background-color: #eff5f9 !important;
+        color: #000 !important;
+    }
+
+    .dropdown-menu {
+        min-width: auto !important;
+        border-radius: 0 !important;
+        padding: 0 !important;
+        border: 1px solid #dee2e6 !important;
+    }
+
+    .dropdown-item {
+        padding: 5px 15px !important;
+    }
+
+
+    .tracking-table .dropdown-menu .dropdown-item:first-child {
+        background-color: #000 !important;
+        color: #fff !important;
+    }
+
+    .table-responsive {
+        overflow-x: inherit !important;
+    }
+
+    @media (max-width:480px) {
+        .table-responsive {
+            overflow-x: auto !important;
+        }
+    }
+
+    .tracking-table thead td {
+        background-color: #eff5f9 !important;
+        font-size: 12px !important;
+    }
+
+
+    .tracking-table tbody td:nth-child(1) {
+        background-color: #eff5f9 !important;
+    }
+
+    /* .tracking-table tbody td:nth-child(2) {
+        background-color: #eff5f9 !important;
+    } */
+
+    table.dataTable.no-footer {
+        border-bottom: none !important;
+    }
+
+    .activityTabs {
+        background-color: transparent !important;
+        padding: 0 !important;
+    }
+</style>
 <link rel="stylesheet" href="{{ asset('vendor/sweetalert2/sweetalert2.min.css') }}">
 <script src="{{ asset('vendor/sweetalert2/sweetalert2.min.js') }}"></script>
 @include('sweetalert::alert')
@@ -22,9 +158,11 @@
             <div class="custom_tabs_section">
                 <div class="custom_tittle descriptionTxt">
                     <h4>Master</h4>
-                    <p><strong>Description:</strong> Keep track of all company master details including employee
-                        designations, shift information, category of employees, and <br> their configurations. Also
-                        able to oversee leave master with holiday details.</p>
+                    <p class="description_small_text"><strong style="color:#343A40;">Description:</strong> Keep track of
+                        all company master
+                        details including employee
+                        designations, shift information, category of employees, and their configurations. Also
+                        able to oversee <br> leave master with holiday details.</p>
                 </div>
                 <div class="custom_tabs">
                     <ul>
@@ -59,7 +197,7 @@
                             </div>
                             <div class="masterTable">
                                 <div class="row">
-                                    <div class="col-xxl-12" style="margin-top:44px">
+                                    <div class="col-xl-12" style="margin-top:0px">
                                         <div class="masterTable_data">
                                             <div class="sorting_nav" style="margin-left: 165px;margin-bottom: -46px">
                                                 <div class="showSort">
@@ -67,11 +205,13 @@
                                                         <strong class="entitiesSelect">Select Company</strong>
                                                         <div class="showSort_select seleComp">
                                                             <select id="companyName" name="company_desig"
-                                                                    aria-label="First select example" onchange="fetchDepartments()">
+                                                                aria-label="First select example"
+                                                                onchange="fetchDepartments()">
                                                                 <option selected disabled>Select Company</option>
                                                                 @isset($companies)
-                                                                    @foreach($companies as $company)
-                                                                        <option value="{{ $company->id }}">{{$company->company_name }}</option>
+                                                                    @foreach ($companies as $company)
+                                                                        <option value="{{ $company->id }}">
+                                                                            {{ $company->company_name }}</option>
                                                                     @endforeach
                                                                 @endisset
                                                             </select>
@@ -82,13 +222,13 @@
                                                         <strong class="entitiesSelect">Select Department</strong>
                                                         <div class="showSort_select seleComp">
                                                             <select id="departmentName" name="department"
-                                                                    aria-label="Second select example">
-                                                                @if(!isset($companies))
+                                                                aria-label="Second select example">
+                                                                @if (!isset($companies))
                                                                     disabled
                                                                 @endif>
                                                                 <option selected disabled>Select Department</option>
                                                                 @isset($departments)
-                                                                    @foreach($departments as $department)
+                                                                    @foreach ($departments as $department)
                                                                         <option value="{{ $department->id }}">
                                                                             {{ $department->department_name }}
                                                                         </option>
@@ -99,18 +239,19 @@
                                                     </div>
                                                 </div>
                                             </div>
-                                            <table class="table" id="designation">
+                                            <table class="table table-bordered text-center tracking-table"
+                                                id="designation">
                                                 <thead>
                                                     <tr>
-                                                        <th>
-                                                            <h6 class="text-left">Designation ID</h6>
-                                                        </th>
-                                                        <th width="550">
-                                                            <h6>Designation Name</h6>
-                                                        </th>
-                                                        <th>
-                                                            <h6>Action</h6>
-                                                        </th>
+                                                        <td class="align-middle">
+                                                            Designation ID
+                                                        </td>
+                                                        <td class="align-middle">
+                                                            Designation Name
+                                                        </td>
+                                                        <td class="align-middle">
+                                                            Action
+                                                        </td>
                                                     </tr>
                                                 </thead>
                                                 <tbody>
@@ -140,7 +281,8 @@
                                                                         method="post">
                                                                         @csrf
                                                                         @method('delete')
-                                                                        <button type="button" class="actBtn" data-desg-id="{{ $dept->id }}"
+                                                                        <button type="button" class="actBtn"
+                                                                            data-desg-id="{{ $dept->id }}"
                                                                             onclick="showCustomAlert(this)">
                                                                             <i class="fa fa-trash"
                                                                                 aria-hidden="true"></i>
@@ -186,7 +328,8 @@
                                                                                     {{-- // --}}
                                                                                     <div class="col-lg-12">
                                                                                         <div class="popupForm_col">
-                                                                                            <strong>Company Name*</strong>
+                                                                                            <strong>Company
+                                                                                                Name*</strong>
                                                                                             <div
                                                                                                 class="popupForm_field">
                                                                                                 <select
@@ -205,7 +348,8 @@
                                                                                     </div>
                                                                                     <div class="col-lg-12">
                                                                                         <div class="popupForm_col">
-                                                                                            <strong>Department Name*</strong>
+                                                                                            <strong>Department
+                                                                                                Name*</strong>
                                                                                             <div
                                                                                                 class="popupForm_field">
                                                                                                 <select name="dept_id"
@@ -480,26 +624,27 @@
             confirmButtonText: 'OK'
         }).then((result) => {
             if (result.isConfirmed) {
-                var formAction = "{{ route('Designation.destroy',':DesId') }}".replace(':DesId', DesId);
+                var formAction = "{{ route('Designation.destroy', ':DesId') }}".replace(':DesId', DesId);
                 document.getElementById('deleteForm').action = formAction;
                 document.getElementById('deleteForm').submit();
             }
         });
     }
+
     function fetchDepartments() {
         var companyId = document.getElementById('companyName').value;
         var departmentSelect = document.getElementById('departmentName');
         console.log(companyId);
         departmentSelect.innerHTML = ' <option selected disabled>Select Department</option>';
         fetch('/designation-company/' + companyId, {
-            method: 'GET',
-            headers: {
-                'Content-Type': 'application/json'
-            }
-        })
+                method: 'GET',
+                headers: {
+                    'Content-Type': 'application/json'
+                }
+            })
             .then(response => response.json())
             .then(data => {
-                data.forEach(function (department) {
+                data.forEach(function(department) {
                     var option = document.createElement('option');
                     option.value = department.id;
                     option.textContent = department.department_name;

@@ -6,54 +6,20 @@
 
 
 <style>
-    .table-responsive {
-        box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
-        margin-top: 30px;
-        border-radius: 10px;
-        position: relative;
-        z-index: 0;
-    }
-
-    .leave_button_bg,
-    .leave_button_bg2 {
-        background-color: #Fff !important;
-        box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
-        padding: 16px 20px;
-        font-size: 14px;
-        position: relative;
-        border: none !important;
-        border-radius: 5px;
-        color: #343A40 !important;
-
-    }
-
-
-    .leave_button_bg,
-    .leave_button_bg2:hover {
-        color: #343A40 !important;
-    }
-
-    .leave_button_bg2 {
-        position: relative;
-        left: 10px !important;
-        color: #343A40 !important;
-    }
-
     .nav-tabs {
         border-bottom: none !important;
 
     }
 
-    .tab-content {
-        background-color: #Fff !important;
-        border-radius: 10px;
-        margin-top: 25px;
 
-    }
+
 
     .track-form {
-        padding: 25px !important;
-        box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+        border: 1px solid #ebeaea;
+        padding: 25px;
+        background-color: #Fff !important;
+        border-radius: 4px;
+
     }
 
     .submit_from_bg_color {
@@ -63,6 +29,114 @@
 
     .submit_from_bg_color:hover {
         color: #fff !important;
+    }
+
+
+    .nav-tabs .nav-item.show .nav-link,
+    .nav-tabs .nav-link.active {
+        color: #007bff !important;
+        border: none !important;
+        background-color: transparent !important;
+        border: 1px solid #ebeaea !important;
+        border-color: none !important;
+        padding: 10px !important;
+    }
+
+    .nav-tabs .nav-item.show .nav-link,
+    .nav-tabs .nav-link {
+        padding: 0 15px !important;
+        font-weight: 500 !important;
+        font-size: 15px !important;
+        color: #555 !important;
+    }
+
+    .nav-pills .nav-link.active,
+    .nav-pills .show>.nav-link {
+        color: #007bff !important;
+        background-color: transparent !important;
+        border-bottom: 3px solid #007bff !important;
+        border-radius: 0px !important;
+        font-size: 15px !important;
+    }
+
+    .nav-pills .nav-link {
+        color: #555 !important;
+        font-size: 15px !important;
+    }
+
+
+    .tracking-table li {
+        list-style: none;
+    }
+
+    .tracking-table {
+        position: relative;
+    }
+
+    .tracking-table .dropdown:hover .dropdown-menu {
+        display: block;
+        max-width: 100px !important;
+        position: absolute;
+        left: 0;
+        top: 100%;
+    }
+
+
+
+    /* .tracking-table .dropdown-menu {
+        --bs-dropdown-min-width: 2rem !important;
+        --bs-border-radius: 0 !important;
+        padding: 0 !important;
+        text-align: start
+    } */
+
+    .table> :not(:last-child)> :last-child>* {
+        border-bottom-color: #dee2e6 !important;
+    }
+
+    .tracking-table .dropdown-menu .dropdown-item:hover {
+        background-color: #eff5f9 !important;
+        color: #000 !important;
+    }
+
+    .dropdown-menu {
+        min-width: auto !important;
+        border-radius: 0 !important;
+        padding: 0 !important;
+        border: 1px solid #dee2e6 !important;
+    }
+
+    .dropdown-item {
+        padding: 5px 15px !important;
+    }
+
+
+    .tracking-table .dropdown-menu .dropdown-item:first-child {
+        background-color: #000 !important;
+        color: #fff !important;
+    }
+
+    .table-responsive {
+        overflow-x: inherit !important;
+    }
+
+    @media (max-width:480px) {
+        .table-responsive {
+            overflow-x: auto !important;
+        }
+    }
+
+    .tracking-table thead td {
+        background-color: #eff5f9 !important;
+    }
+
+
+    .tracking-table tbody td:nth-child(1) {
+        background-color: #eff5f9 !important;
+    }
+
+    .tracking-table tbody td:nth-child(2) {
+        background-color: #eff5f9 !important;
     }
 </style>
 
@@ -107,7 +181,7 @@
                                 @if (auth()->user()->roles != 'company')
                                     <div class="tab-pane fade show active" id="nav-home" role="tabpanel"
                                         aria-labelledby="nav-home-tab" tabindex="0">
-                                        <form class="row g-3 track-form" action="{{ route('lateRequestSubmit') }}"
+                                        <form class="row g-3 track-form mt-3" action="{{ route('lateRequestSubmit') }}"
                                             method="post">
                                             @csrf
 
@@ -213,7 +287,7 @@
                                         aria-labelledby="nav-profile-tab" tabindex="0">
                                         <div class="custom_tabs_data" style="display: block" id="tab5">
                                 @endif
-                                <form action="{{ route('lateRequestFilter') }}" method="post">
+                                <form action="{{ route('lateRequestFilter') }}" method="post" class="mt-3">
                                     @csrf
                                     <input type="hidden" value="lateRequest" name="lateRequest">
                                     <label for="company" style="font-size:14px;">Select Company:</label>
@@ -246,11 +320,11 @@
 
                                 <div class="custom_tabs_data" style="display: block" id="tab5">
                                     <div class="row d-flex justify-content-center">
-                                        <div class="col-xl-12 col-sm-12 col-lg-12 col-md-12">
+                                        <div class="col-xl-12 col-sm-12 col-lg-12 col-md-12 mt-3">
                                             <div class="table-responsive">
 
                                                 <div class="activityTable_data">
-                                                    <table class="table table-striped">
+                                                    <table class="table table-bordered text-center tracking-table">
 
 
                                                         <thead>
@@ -262,18 +336,18 @@
                                                                 <th colspan="3"></th>
                                                             </tr> --}}
                                                             <tr>
-                                                                <th>
-                                                                    <h6>#</h6>
-                                                                </th>
-                                                                <th>
-                                                                    <h6>Company</h6>
-                                                                </th>
-                                                                <th>
-                                                                    <h6>Department</h6>
-                                                                </th>
-                                                                <th>
-                                                                    <h6>Emp Code</h6>
-                                                                </th>
+                                                                <td class="align-middle">
+                                                                    #
+                                                                </td>
+                                                                <td class="align-middle">
+                                                                    Company
+                                                                </td>
+                                                                <td class="align-middle">
+                                                                    Department
+                                                                </td>
+                                                                <td class="align-middle">
+                                                                    Emp Code
+                                                                </td>
                                                                 {{-- <th width="180">
                                                                 <h6>Time Recorder</h6>
                                                                 <hr style="border: 1px">
@@ -288,25 +362,25 @@
                                                                     </thead>
                                                                 </table>
                                                             </th> --}}
-                                                                <th>
-                                                                    <h6>Calendar</h6>
-                                                                </th>
-                                                                <th>
-                                                                    <h6>Time In</h6>
-                                                                </th>
-                                                                <th>
-                                                                    <h6>Time Out</h6>
-                                                                </th>
+                                                                <td class="align-middle">
+                                                                    Calendar
+                                                                </td>
+                                                                <td class="align-middle">
+                                                                    Time In
+                                                                </td>
+                                                                <td class="align-middle">
+                                                                    Time Out
+                                                                </td>
 
-                                                                <th>
-                                                                    <h6>Total Hours</h6>
-                                                                </th>
-                                                                <th>
-                                                                    <h6>Ip Address</h6>
-                                                                </th>
-                                                                <th>
-                                                                    <h6>Action</h6>
-                                                                </th>
+                                                                <td class="align-middle">
+                                                                    Total Hours
+                                                                </td>
+                                                                <td class="align-middle">
+                                                                    Ip Address
+                                                                </td>
+                                                                <td class="align-middle">
+                                                                    Action
+                                                                </td>
                                                             </tr>
                                                         </thead>
 
@@ -360,9 +434,26 @@
                                                                 <td class="text-center">19:00</td>
                                                                 <td class="text-center">07:00 Hrs</td>
                                                                 <td class="text-center">192.172.100.1</td>
-                                                                <td class="text-center"><span
-                                                                        style="color:rgb(250, 86, 86)">Reject</span>
+                                                                <td>
+                                                                    <li class="nav-item dropdown">
+                                                                        <a class="nav-link " href="#"
+                                                                            id="navbarDropdown" role="button"
+                                                                            data-toggle="dropdown"
+                                                                            aria-haspopup="true"
+                                                                            aria-expanded="false">
+                                                                            <i class="bi bi-three-dots-vertical"></i>
+                                                                        </a>
+                                                                        <div class="dropdown-menu"
+                                                                            aria-labelledby="navbarDropdown">
+                                                                            <a class="dropdown-item"
+                                                                                href="#">&check;
+                                                                                Accept</a>
+                                                                            <a class="dropdown-item"
+                                                                                href="#">&#10005;
+                                                                                Reject</a>
 
+                                                                        </div>
+                                                                    </li>
                                                                 </td>
                                                             </tr>
 
