@@ -52,20 +52,6 @@
         border: 1px solid #dee2e6 !important;
     }
 
-
-    .activityTable_data table td {
-        border: 0.5px solid #dee2e6;
-        padding: 0.8rem 0.6rem !important;
-    }
-
-    table.dataTable.no-footer {
-        border-bottom: 1px solid #dee2e6;
-    }
-
-
-
-
-
     .dropdown-item {
         padding: 5px 15px !important;
     }
@@ -95,22 +81,38 @@
         background-color: #eff5f9 !important;
     }
 
-    .tracking-table tbody td:nth-child(2) {
+    /* .tracking-table tbody td:nth-child(2) {
         background-color: #eff5f9 !important;
+    } */
+
+    .activityTable_data table td {
+        border: 0.5px solid #dee2e6;
+
     }
 
+    table.dataTable.no-footer {
+        border-bottom: none !important;
+    }
+
+
     .custom_tittle h4 {
-        font-size: 25px;
+        font-size: 24px;
         padding-bottom: 10px;
         font-family: "avenirmedium";
         color: #343A40;
     }
 
     .description_small_text {
-        font-size: 14px !important;
+        font-size: 16px !important;
         color: #777;
         line-height: 25px;
 
+    }
+
+    h1 {
+        font-size: 20px !important;
+        padding-bottom: 20px;
+        font-family: "avenirmedium";
     }
 </style>
 
@@ -121,13 +123,13 @@
             <div class="custom_tabs_section">
                 <div class="custom_tittle descriptionTxt">
                     <h4>Salary Details</h4>
-                    <p class="description_small_text "><strong style="color:#343A40;">Description:</strong> A
+                    <p class="description_small_text"><strong style="color:#343A40;">Description:</strong> A
                         comprehensive overview of an
                         employee’s compensation package
                         including wages, bonuses, deductions, and benefits.
                     </p>
                 </div>
-                <h1 style="font-size:18px;">Employee Salary Details</h1>
+                <h1>Employee Salary Details</h1>
                 @if (Session::has('message'))
                     <div class="alert alert-success" style="margin-top: 12px;" id="success-message">
                         <span style="margin-left:330px">{{ Session::get('message') }}</span>
@@ -143,7 +145,8 @@
                         @csrf
                         <div class="col-auto">
                             <label for="companyName" class="form-label">Select Company:</label>
-                            <select id="companyName" name="company" class="form-select" onchange="fetchDepartments()">
+                            <select id="companyName" name="company" class="form-select" style="height:50px;"
+                                onchange="fetchDepartments()">
                                 <option selected disabled>Select Company</option>
                                 @isset($companies)
                                     @foreach ($companies as $company)
@@ -154,7 +157,7 @@
                         </div>
                         <div class="col-auto">
                             <label for="departmentName" class="form-label">Select Department:</label>
-                            <select id="departmentName" name="department" class="form-select"
+                            <select id="departmentName" name="department" class="form-select" style="height:50px;"
                                 @if (!isset($companies)) disabled @endif>
                                 <option selected disabled>Select Department</option>
                                 @isset($departments)
@@ -165,14 +168,14 @@
                             </select>
                         </div>
                         <div class="col-auto align-self-end">
-                            <button class="btn btn-secondary" type="submit">Apply Filter</button>
+                            <button class="btn btn-secondary" type="submit" style="height:50px;">Apply Filter</button>
                         </div>
                     </form>
                     <!-- End of 'from' and 'to' date inputs -->
                     <div class="custom_tabs_data mt-3" style="display: block" id="tab5">
-                        <div class="col-xl-12 col-xl-12 col-lg-12 col-md-12">
+                        <div class="col-xl-12 col-sm-12 col-lg-12 col-md-12">
                             <div class="activityTable_data">
-                                <table id="employeeTable" class="table table-bordered text-center tracking-table">
+                                <table class="table table-bordered text-center tracking-table" id="employeeTable">
                                     <thead>
                                         <tr>
                                             <td class="align-middle">Emp code</td>
@@ -189,15 +192,13 @@
                                                 <td>{{ $employee->employee_code }}</td>
                                                 <td>{{ $employee->employee_name }}</td>
                                                 <td>{{ $employee->department->department_name }}</td>
-
                                                 @php
                                                     $employeeSalary = $employeesSalary
                                                         ?->where('employee_id', $employee->id)
                                                         ->where('company_id', $employee->company->id)
-                                                        ->latest()
+                                                        ->sortByDesc('created_at')
                                                         ->first();
                                                 @endphp
-
                                                 @if ($employeeSalary)
                                                     <td>{{ $employeeSalary->total }}</td>
                                                     <td>{{ $employeeSalary->salary_type }}</td>

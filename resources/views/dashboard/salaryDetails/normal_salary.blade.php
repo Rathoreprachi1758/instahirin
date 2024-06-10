@@ -10,37 +10,36 @@
     /* .hidden {
         display: none;
     } */
+    .container {
+        max-width: 800px;
+        margin: 20px auto;
+    }
 
+    .form-group {
+        margin-bottom: 15px;
+    }
 
+    .form-control[readonly] {
+        background-color: #e9ecef;
+    }
 
-
+    .section-title {
+        margin-bottom: 20px;
+        font-weight: bold;
+    }
 
     .track-form {
-        border: 1px solid #ebeaea;
-        padding: 25px;
+        padding: 25px !important;
+        box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
         background-color: #Fff !important;
-        border-radius: 4px;
-
+        border-radius: 10px;
+        margin-top: 15px;
     }
 
     .container-fluid {
         width: 100%;
         padding-right: 0px;
         margin-left: -10px !important;
-
-    }
-
-    .custom_tittle h4 {
-        font-size: 25px;
-        padding-bottom: 10px;
-        font-family: "avenirmedium";
-        color: #343A40;
-    }
-
-    .description_small_text {
-        font-size: 14px !important;
-        color: #777;
-        line-height: 25px;
 
     }
 </style>
@@ -51,12 +50,11 @@
             <div class="custom_tabs_section  track-form">
                 <div class="custom_tittle descriptionTxt">
                     <h4>Salary Details</h4>
-                    <p class="description_small_text"><strong style="color:#343A40;">Description:</strong> A
-                        comprehensive overview of an employee’s compensation package
+                    <p><strong>Description:</strong> A comprehensive overview of an employee’s compensation package
                         including wages, bonuses, deductions, and benefits.
                     </p>
                 </div>
-                <h1 style="font-size: 18px;">Normal Salary</h1>
+                <h1>Normal Salary</h1>
                 @if (Session::has('message'))
                     <div class="alert alert-success" style="margin-top: 12px;" id="success-message">
                         <span>{{ Session::get('message') }}</span>
@@ -88,7 +86,6 @@
                         </div>
 
 
-
                         <div class="col-xl-6 col-lg-6 col-md-12 col-sm-12">
                             <form action="{{ route('normalSalarySubmit') }}" method="POST">
 
@@ -113,189 +110,101 @@
                         @php
                             $additionalHeads = json_decode($salaryHead?->additional_Head, true) ?? null;
                             $deductionHeads = json_decode($salaryHead?->deduction_Head, true) ?? null;
+                            $taxMatrices = json_decode($salaryHead?->tax_matrix, true) ?? null;
                         @endphp
-                        <div class="container-fluid">
+                        
+                        <div class="container">
+                            <form action="{{ route('normalSalarySubmit') }}" method="POST">
 
 
-                            <div class="d-flex" style="margin-top: 15px;">
-                                <label for="emp_name form-label"
-                                    style="background-color: #Fff !important;padding: 16px 20px;  color: #343A40;border-radius: 5px;font-size:14px;">Salary
-                                    Type</label>
-                                <div style="margin-top: 17px;"
-                                    style="background-color: #Fff !important;padding: 16px 20px;  color: #343A40;border-radius: 5px;font-size:14px;">
-                                    <input style="font-weight: bold;" type="text" name="salaryType"
-                                        value="{{ $salaryHead->salary_type }}" readonly>
-                                </div>
-
-                            </div>
-
-
-
-
-                            <div class="row">
-                                <div class="col-xl-4 col-lg-4 col-md-12 col-sm-12">
-                                    <label class="text-center fw-bold mb-5">Additional Head</label>
-
-                                    @isset($additionalHeads)
-                                        @foreach ($additionalHeads as $key => $additionalHead)
-                                            <div class="row mt-2">
-                                                <div class="col-xl-2 col-lg-2 col-md-12 col-sm-12">{{ $additionalHead }}</div>
-                                                <div class="col-xl-10 col-lg-10 col-md-12 col-sm-12">
-
-                                                    <input type="text" name="{{ $key }}"
-                                                        class="form-control additional-input" id="{{ $key }}"
-                                                        value="{{ isset($employeeSalaryAdditionalHeads[$key]) ? $employeeSalaryAdditionalHeads[$key] : '' }}"
-                                                        aria-describedby="emailHelp">
-
-                                                </div>
-                                            </div>
-                                        @endforeach
-                                    @endisset
-
-                                    <label class="mt-4" for="head5">Sub Total</label>
-                                    <input type="text" class="form-control" name="sub_total_additional_head"
-                                        id="additionSubTotal" value="{{ $employeeSalary?->subtotal_additional_head }}"
-                                        aria-describedby="emailHelp">
-                                </div>
-
-
-
-
-
-                                <div class="col-xl-4 col-lg-4 col-md-12 col-sm-12">
-                                    <label class="text-center fw-bold mb-5">Deduction Head</label>
-
-                                    @isset($deductionHeads)
-                                        @foreach ($deductionHeads as $key => $deductionHead)
-                                            <div class="row mt-2">
-                                                <div class="col-xl-2 col-lg-2 col-md-12 col-sm-12">{{ $deductionHead }}</div>
-                                                <div class="col-xl-10 col-lg-10 col-md-12 col-sm-12">
-                                                    <input type="text" name="{{ $key }}"
-                                                        class="form-control deduction-input" id="{{ $key }}"
-                                                        value="{{ isset($employeeSalaryDeductionHeads[$key]) ? $employeeSalaryDeductionHeads[$key] : '' }}"
-                                                        aria-describedby="emailHelp">
-
-                                                </div>
-                                            </div>
-                                        @endforeach
-                                    @endisset
-                                    <label class="mt-5" for="head5"></label>
-                                    <input type="text" class="form-control" name="sub_total_deduction_head"
-                                        id="deductionSubTotal" value="{{ $employeeSalary?->sub_total_deduction_head }}"
-                                        aria-describedby="emailHelp">
-                                </div>
-
-
-                                <div class="col-xl-4 col-lg-4 col-md-12 col-sm-12">
-                                    <label class="text-center fw-bold mb-5">Other Details</label>
-
-                                    <div class="row mt-2">
-                                        <div class="col-xl-2 col-lg-2 col-md-12 col-sm-12">PF No.</div>
-                                        <div class="col-xl-10 col-lg-10 col-md-12 col-sm-12">
-
-                                            <input type="text" name="pf_no" class="form-control" id="dedHead1"
-                                                value="{{ $employeeSalary?->pf_number }}" aria-describedby="emailHelp">
-
-                                        </div>
+                                <div class="d-flex" style="margin-top: 15px;">
+                                    <label for="emp_name form-label"
+                                        style="background-color: #Fff !important;padding: 16px 20px;  color: #343A40;border-radius: 5px;font-size:14px;">Salary
+                                        Type</label>
+                                    <div
+                                        style="background-color: #Fff !important;padding: 16px 20px;  color: #343A40;border-radius: 5px;font-size:14px;">
+                                        <input style="font-weight: bold;" type="text" name="salaryType"
+                                            value="{{ $salaryHead->salary_type }}" readonly>
                                     </div>
-
-
-                                    <div class="row mt-2">
-                                        <div class="col-xl-2 col-lg-2 col-md-12 col-sm-12">ESI No.</div>
-                                        <div class="col-xl-10 col-lg-10 col-md-12 col-sm-12">
-
-                                            <input type="text" name="esi_no" class="form-control" id="dedHead2"
-                                                value="{{ $employeeSalary?->esi_number }}" aria-describedby="emailHelp">
-
-                                        </div>
-                                    </div>
-                                    <label class="mt-5" for="head5">Total Amount</label>
-                                    <input type="text" class="form-control" name="total[]"
-                                        value="{{ $employeeSalary?->total }}" id="finalTotal"
-                                        aria-describedby="emailHelp">
                                 </div>
-                            </div>
-                            {{-- <div class="row">
-                                <div class="col-4">
-
-                                    <label class="text-center fw-bold mb-5">Additional Head</label>
-
-                                    @isset($additionalHeads)
-                                        @foreach ($additionalHeads as $key => $additionalHead)
-                                            <label class="mt-2" for="{{ $key }}"></label>
-                                            <input type="text" name="{{ $key }}"
-                                                class="form-control additional-input" id="{{ $key }}"
-                                                value="{{ isset($employeeSalaryAdditionalHeads[$key]) ? $employeeSalaryAdditionalHeads[$key] : '' }}"
-                                                aria-describedby="emailHelp">
-                                        @endforeach
-                                    @endisset
 
 
-
-                                    <label class="mt-4" for="head5">Sub Total</label>
-                                    <input type="text" class="form-control" name="sub_total_additional_head"
-                                        id="additionSubTotal" value="{{ $employeeSalary?->subtotal_additional_head }}"
-                                        aria-describedby="emailHelp">
-
-
-                                </div>
-                                <div class="col-4">
-                                    <label class="text-center fw-bold mb-5">Deduction Head</label>
-                                    <ul>
-                                        @isset($deductionHeads)
-                                            @foreach ($deductionHeads as $key => $deductionHead)
-                                                <li>
-                                                    <label class="mt-2"
-                                                        for="{{ $key }}">{{ $deductionHead }}</label>
-                                                    <input type="text" name="{{ $key }}"
-                                                        class="form-control deduction-input" id="{{ $key }}"
-                                                        value="{{ isset($employeeSalaryDeductionHeads[$key]) ? $employeeSalaryDeductionHeads[$key] : '' }}"
-                                                        aria-describedby="emailHelp">
-                                                </li>
+                                <hr>
+                                <div class="row">
+                                    <div class="col-xl-6 col-lg-6 col-md-12 col-sm-12">
+                                        <label class="text-center  fw-bold mb-5" style="padding-left: 180px;">Additional
+                                            Head</label>
+                                        @isset($additionalHeads)
+                                            @foreach ($additionalHeads as $key => $additionalHead)
+                                                <div class="row mt-4">
+                                                    <div class="col-4">{{ $additionalHead }}</div>
+                                                    <div class="col-8">
+                                                        <input type="text" name="{{ $key }}"
+                                                            class="form-control additional-input" id="{{ $key }}"
+                                                            aria-describedby="emailHelp">
+                                                    </div>
+                                                </div>
                                             @endforeach
                                         @endisset
-                                    </ul>
-                                    <ul>
-                                        <li>
-                                            <label class="mt-5" for="head5"></label>
-                                            <input type="text" class="form-control" name="sub_total_deduction_head"
-                                                id="deductionSubTotal"
-                                                value="{{ $employeeSalary?->sub_total_deduction_head }}"
-                                                aria-describedby="emailHelp">
-                                        </li>
-                                    </ul>
-                                </div>
-                                <div class="col-4">
-                                    <label class="text-center fw-bold mb-5">Other Details</label>
-                                    <ul>
-                                        <li><label for="dedHead1">PF No.</label> <input type="text" name="pf_no"
-                                                class="form-control" id="dedHead1"
-                                                value="{{ $employeeSalary?->pf_number }}" aria-describedby="emailHelp">
-                                        </li>
-                                        <li><label for="dedHead2">ESI No.</label> <input type="text" name="esi_no"
-                                                class="form-control" id="dedHead2"
-                                                value="{{ $employeeSalary?->esi_number }}" aria-describedby="emailHelp">
-                                        </li>
-                                    </ul>
 
-                                    <ul>
-                                        <li>
-                                            <label class="mt-5" for="head5">Total Amount</label>
-                                            <input type="text" class="form-control" name="total[]"
-                                                value="{{ $employeeSalary?->total }}" id="finalTotal"
-                                                aria-describedby="emailHelp">
-                                        </li>
-                                    </ul>
+                                    </div>
+                                    <div class="col-xl-6 col-lg-6 col-md-12 col-sm-12">
+                                        <label class="text-center fw-bold" style="padding-left: 180px;">Deduction
+                                            Head</label>
+                                        @isset($deductionHeads)
+                                            @foreach ($deductionHeads as $key => $deductionHead)
+                                                <div class="row mt-4">
+                                                    <div class="col-4">{{ $deductionHead }}</div>
+                                                    <div class="col-8">
+                                                        <input type="text" name="{{ $key }}"
+                                                            class="form-control deduction-input" id="{{ $key }}"
+                                                            aria-describedby="emailHelp">
+                                                    </div>
+                                                </div>
+                                            @endforeach
+                                        @endisset
+                                    </div>
+                                    {{--                                    <div class="col-xl-4 col-lg-4 col-md-12 col-sm-12"> --}}
+                                    {{--                                        <label class="text-center fw-bold mb-5" style="padding-left: 100px;">Other --}}
+                                    {{--                                            Details</label> --}}
+                                    {{--                                        @isset($taxMatrices) --}}
+                                    {{--                                            @foreach ($taxMatrices as $taxMatrix) --}}
+                                    {{--                                                <div class="row mt-4"> --}}
+                                    {{--                                                    <div class="col-4">{{$taxMatrix}}</div> --}}
+                                    {{--                                                    <div class="col-8"> --}}
+                                    {{--                                                        <input type="text" name="taxMatrices[{{$taxMatrix}}]" --}}
+                                    {{--                                                               class="form-control" id="{{$taxMatrix}}" --}}
+                                    {{--                                                               aria-describedby="emailHelp"> --}}
+                                    {{--                                                    </div> --}}
+                                    {{--                                                </div> --}}
+                                    {{--                                            @endforeach --}}
+                                    {{--                                        @endisset --}}
+
+                                    {{--                                    </div> --}}
                                 </div>
-                            </div> --}}
-                        @endisset
-                        @if ($salaryHead == null)
-                            <p>Please fill the head master</p>
-                        @endif
-                        <hr>
+                                <div class="row mt-4">
+                                    <div class="col-4">
+                                        <label class="mt-3" for="head5">Sub Total (Additional)</label>
+                                        <input type="text" class="form-control" name="sub_total_additional_head"
+                                            id="additionSubTotal" aria-describedby="emailHelp">
+                                    </div>
+                                    <div class="col-4">
+                                        <label class="mt-3" for="head5">Sub Total (Deduction)</label>
+                                        <input type="text" class="form-control" name="sub_total_deduction_head"
+                                            id="deductionSubTotal" aria-describedby="emailHelp">
+                                    </div>
+                                    <div class="col-4">
+                                        <label class="mt-3" for="head5">Total Amount</label>
+                                        <input type="text" class="form-control" name="total" id="finalTotal"
+                                            aria-describedby="emailHelp">
+                                    </div>
+                                </div>
+                            @endisset
+
+                            <hr>
+                            <button class="btn btn-secondary" type="submit">Save</button>
+                        </form>
                     </div>
-                    <button class="btn btn-secondary" type="submit">Save</button>
-                    </form>
                 </div>
             </div>
         </div>
